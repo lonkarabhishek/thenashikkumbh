@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback, useMemo } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Palette,
@@ -23,6 +24,7 @@ import {
   ArrowRight,
   Clock,
   ChevronRight,
+  Gamepad2,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
@@ -694,6 +696,52 @@ export default function GamesPage() {
             transition={{ duration: 1, delay: 0.5 }}
             className="gold-line-thick mx-auto mt-8 w-48 origin-center"
           />
+        </div>
+      </section>
+
+      {/* ═══════════════════ KUMBH RUN BANNER ═══════════════════ */}
+      <section className="section-dark relative py-10 md:py-14">
+        <div className="section-container relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            <Link href="/kumbhrun" className="group block">
+              <div className="relative overflow-hidden rounded-2xl border border-amber-500/30 bg-gradient-to-r from-amber-900/80 via-yellow-800/60 to-amber-900/80 p-6 md:p-8 shadow-xl shadow-amber-900/20 transition-all duration-500 hover:border-amber-400/50 hover:shadow-2xl hover:shadow-amber-500/20">
+                {/* Decorative background glow */}
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,215,0,0.1)_0%,transparent_70%)] opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full bg-amber-500/10 blur-3xl group-hover:bg-amber-400/15 transition-all duration-500" />
+                <div className="absolute -left-8 -bottom-8 h-32 w-32 rounded-full bg-yellow-500/10 blur-3xl group-hover:bg-yellow-400/15 transition-all duration-500" />
+
+                <div className="relative z-10 flex flex-col items-center gap-4 md:flex-row md:gap-6">
+                  {/* Icon */}
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-yellow-500 shadow-lg shadow-amber-500/30 group-hover:scale-110 transition-transform duration-500">
+                    <Gamepad2 className="h-8 w-8 text-white" />
+                  </div>
+
+                  {/* Text */}
+                  <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-xl md:text-2xl font-bold text-amber-100 tracking-wide group-hover:text-amber-50 transition-colors duration-300">
+                      {tq(translations.kumbhRunPage.title)}
+                    </h3>
+                    <p className="mt-1 text-sm md:text-base text-amber-200/60">
+                      {tq({ en: "Dodge obstacles and collect blessings in this endless runner!", hi: "इस एंडलेस रनर में बाधाओं से बचें और आशीर्वाद इकट्ठा करें!", mr: "या एंडलेस रनरमध्ये अडथळे टाळा आणि आशीर्वाद गोळा करा!" })}
+                    </p>
+                  </div>
+
+                  {/* CTA Button */}
+                  <div className="shrink-0">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-500 to-yellow-500 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-amber-500/25 group-hover:shadow-xl group-hover:shadow-amber-500/40 group-hover:scale-105 transition-all duration-300">
+                      {tq({ en: "Play Now", hi: "अभी खेलें", mr: "आता खेळा" })}
+                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
         </div>
       </section>
 

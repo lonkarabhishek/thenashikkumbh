@@ -78,6 +78,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     },
     {
+      url: `${baseUrl}/kumbhrun`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: {
+        languages: { en: `${baseUrl}/kumbhrun`, hi: `${baseUrl}/kumbhrun`, mr: `${baseUrl}/kumbhrun` },
+      },
+    },
+    {
       url: `${baseUrl}/businesses`,
       lastModified,
       changeFrequency: "weekly",

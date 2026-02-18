@@ -825,6 +825,29 @@ export const translations = {
     keepLearning: { en: "Keep exploring the sacred traditions!", hi: "पवित्र परंपराओं की खोज जारी रखें!", mr: "पवित्र परंपरा जाणून घ्या!" },
   },
 
+  // ─── KUMBH RUN GAME ────────────────────────────────────────
+  kumbhRunPage: {
+    title: { en: "Kumbh Run", hi: "कुंभ रन", mr: "कुंभ रन" },
+    tapToStart: { en: "Tap anywhere to start", hi: "शुरू करने के लिए टैप करें", mr: "सुरू करण्यासाठी टॅप करा" },
+    gameOver: { en: "Game Over", hi: "गेम ओवर", mr: "गेम ओव्हर" },
+    playAgain: { en: "Play Again", hi: "फिर खेलें", mr: "पुन्हा खेळा" },
+    share: { en: "Share Score", hi: "स्कोर शेयर करें", mr: "स्कोअर शेअर करा" },
+    newBest: { en: "New High Score!", hi: "नया सर्वश्रेष्ठ स्कोर!", mr: "नवा सर्वोत्तम स्कोअर!" },
+    backToGames: { en: "Games", hi: "खेल", mr: "खेळ" },
+    hint: { en: "Space / Tap to jump", hi: "Space / टैप = कूदो", mr: "Space / टॅप = उडी" },
+  },
+
+  // ─── BLOG NEWS ────────────────────────────────────────────
+  blogNews: {
+    latestNews: { en: "Latest News & Updates", hi: "ताज़ा समाचार और अपडेट", mr: "ताज्या बातम्या आणि अपडेट्स" },
+    newsSubtitle: { en: "Stay updated with the latest developments for Nashik Kumbh Mela 2027", hi: "नासिक कुंभ मेला 2027 के नवीनतम विकास से अपडेट रहें", mr: "नाशिक कुंभमेळा 2027 च्या ताज्या घडामोडींबद्दल माहिती मिळवा" },
+    source: { en: "Source", hi: "स्रोत", mr: "स्रोत" },
+    catKumbh: { en: "Kumbh Mela", hi: "कुंभ मेला", mr: "कुंभमेळा" },
+    catInfra: { en: "Infrastructure", hi: "बुनियादी ढांचा", mr: "पायाभूत सुविधा" },
+    catGovt: { en: "Government", hi: "सरकार", mr: "शासन" },
+    catCulture: { en: "Culture", hi: "संस्कृति", mr: "संस्कृती" },
+  },
+
   // ─── COMMON ────────────────────────────────────────────────
   common: {
     readMore: { en: "Read More", hi: "और पढ़ें", mr: "अधिक वाचा" },
