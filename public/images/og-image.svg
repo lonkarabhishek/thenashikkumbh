@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="rgba(255,165,0,0.12)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="50%" stop-color="rgba(255,215,0,0.5)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0D0906"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <text x="600" y="220" text-anchor="middle" font-size="120" font-family="serif" fill="#FFD700">ॐ</text>
+  <text x="600" y="340" text-anchor="middle" font-size="56" font-family="serif" fill="#FFD700" letter-spacing="2">नाशिक कुंभमेळा २०२७</text>
+  <rect x="350" y="370" width="500" height="1" fill="url(#line)"/>
+  <text x="600" y="420" text-anchor="middle" font-size="24" font-family="serif" fill="rgba(255,248,230,0.7)" letter-spacing="8" text-transform="uppercase">WHERE FAITH MEETS ETERNITY</text>
+  <text x="600" y="480" text-anchor="middle" font-size="18" font-family="sans-serif" fill="rgba(255,248,230,0.5)">thenashikkumbh.com</text>
+  <rect x="1" y="1" width="1198" height="628" fill="none" stroke="rgba(255,215,0,0.15)" stroke-width="1" rx="4"/>
+</svg>

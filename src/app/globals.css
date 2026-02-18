@@ -3,25 +3,240 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFAF5;
+  --foreground: #1A1510;
+  --gold: #D4A843;
+  --gold-light: #F5DEB3;
+  --sacred-dark: #0D0906;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-cream-50 text-temple-800 font-body antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: rgba(212, 168, 67, 0.3);
+    color: #1A1510;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* ─── Layout ─────────────────────────────────────────── */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* ─── Sacred Divider ─────────────────────────────────── */
+  .sacred-divider {
+    @apply flex items-center justify-center gap-4 my-8;
+  }
+
+  .sacred-divider::before,
+  .sacred-divider::after {
+    content: '';
+    @apply h-px flex-1;
+    background: linear-gradient(90deg, transparent, rgba(212,168,67,0.5), transparent);
+  }
+
+  /* ─── Buttons — Premium ──────────────────────────────── */
+  .btn-gold {
+    @apply inline-flex items-center justify-center px-8 py-3.5 font-semibold rounded-full
+           transition-all duration-500 tracking-wide text-sm uppercase;
+    background: linear-gradient(135deg, #D4A843 0%, #F5DEB3 50%, #D4A843 100%);
+    background-size: 200% 200%;
+    color: #1A1510;
+    box-shadow: 0 4px 20px rgba(212,168,67,0.3);
+  }
+  .btn-gold:hover {
+    background-position: 100% 100%;
+    box-shadow: 0 8px 40px rgba(212,168,67,0.5);
+    transform: translateY(-2px);
+  }
+  .btn-gold:active {
+    transform: translateY(0);
+  }
+
+  .btn-ghost-gold {
+    @apply inline-flex items-center justify-center px-8 py-3.5 font-semibold rounded-full
+           transition-all duration-500 tracking-wide text-sm uppercase;
+    border: 1.5px solid rgba(212,168,67,0.6);
+    color: #D4A843;
+  }
+  .btn-ghost-gold:hover {
+    background: rgba(212,168,67,0.1);
+    border-color: #D4A843;
+    box-shadow: 0 4px 20px rgba(212,168,67,0.2);
+    transform: translateY(-2px);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 bg-saffron-500 text-white font-semibold rounded-lg
+           hover:bg-saffron-600 transition-all duration-300 shadow-lg hover:shadow-xl
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3 border-2 border-saffron-500 text-saffron-700 font-semibold rounded-lg
+           hover:bg-saffron-50 transition-all duration-300;
+  }
+
+  /* ─── Cards — Premium ────────────────────────────────── */
+  .card-sacred {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500
+           border border-saffron-100 overflow-hidden;
+  }
+
+  .card-glass {
+    @apply rounded-2xl overflow-hidden transition-all duration-500;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(212,168,67,0.15);
+  }
+  .card-glass:hover {
+    background: rgba(255,255,255,0.85);
+    border-color: rgba(212,168,67,0.35);
+    box-shadow: 0 20px 60px rgba(212,168,67,0.12);
+    transform: translateY(-4px);
+  }
+
+  .card-dark {
+    @apply rounded-2xl overflow-hidden transition-all duration-500;
+    background: rgba(26,21,16,0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(212,168,67,0.12);
+  }
+  .card-dark:hover {
+    border-color: rgba(212,168,67,0.3);
+    box-shadow: 0 20px 60px rgba(212,168,67,0.08);
+  }
+
+  /* ─── Text Effects ───────────────────────────────────── */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #D4A843 0%, #FFD700 50%, #D4A843 100%);
+  }
+
+  .gradient-text-saffron {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-saffron-500 via-saffron-400 to-gold-500;
+  }
+
+  .text-gold-glow {
+    color: #D4A843;
+    text-shadow: 0 0 20px rgba(212,168,67,0.3);
+  }
+
+  .om-decoration {
+    @apply text-4xl font-devanagari;
+    color: #D4A843;
+    text-shadow: 0 0 30px rgba(212,168,67,0.4);
+  }
+
+  /* ─── Gold Line Decorations ──────────────────────────── */
+  .gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #D4A843, transparent);
+  }
+
+  .gold-line-thick {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #D4A843, transparent);
+  }
+
+  /* ─── Section Backgrounds ────────────────────────────── */
+  .section-light {
+    @apply bg-cream-50;
+  }
+
+  .section-dark {
+    background: linear-gradient(180deg, #1A1510 0%, #0D0906 100%);
+    @apply text-cream-100;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ─── Mandala Pattern ────────────────────────────────── */
+.mandala-bg {
+  background-image: radial-gradient(circle at 50% 50%, rgba(212,168,67,0.03) 0%, transparent 70%);
+  background-size: 200px 200px;
+}
+
+/* ─── Temple Pattern Overlay ─────────────────────────── */
+.temple-pattern {
+  background-image:
+    linear-gradient(30deg, rgba(212,168,67,0.015) 12%, transparent 12.5%, transparent 87%, rgba(212,168,67,0.015) 87.5%, rgba(212,168,67,0.015)),
+    linear-gradient(150deg, rgba(212,168,67,0.015) 12%, transparent 12.5%, transparent 87%, rgba(212,168,67,0.015) 87.5%, rgba(212,168,67,0.015)),
+    linear-gradient(30deg, rgba(212,168,67,0.015) 12%, transparent 12.5%, transparent 87%, rgba(212,168,67,0.015) 87.5%, rgba(212,168,67,0.015)),
+    linear-gradient(150deg, rgba(212,168,67,0.015) 12%, transparent 12.5%, transparent 87%, rgba(212,168,67,0.015) 87.5%, rgba(212,168,67,0.015)),
+    linear-gradient(60deg, rgba(212,168,67,0.015) 25%, transparent 25.5%, transparent 75%, rgba(212,168,67,0.015) 75%, rgba(212,168,67,0.015)),
+    linear-gradient(60deg, rgba(212,168,67,0.015) 25%, transparent 25.5%, transparent 75%, rgba(212,168,67,0.015) 75%, rgba(212,168,67,0.015));
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+
+/* ─── Premium Scrollbar ──────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1510;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #D4A843, #A08030);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #FFD700, #D4A843);
+}
+
+/* ─── Smooth page transitions ────────────────────────── */
+@keyframes pageReveal {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+main > * {
+  animation: pageReveal 0.6s ease-out;
+}
+
+/* ─── ndstudio-inspired utilities ────────────────────── */
+.section-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.heading-tight {
+  letter-spacing: -0.02em;
+}
+
+.hover-fast {
+  transition: all 150ms ease;
 }
