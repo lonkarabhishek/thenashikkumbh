@@ -828,13 +828,17 @@ export const translations = {
   // ─── KUMBH RUN GAME ────────────────────────────────────────
   kumbhRunPage: {
     title: { en: "Kumbh Run", hi: "कुंभ रन", mr: "कुंभ रन" },
+    subtitle: { en: "Run through the sacred places of Nashik Kumbh!", hi: "नासिक कुंभ के पवित्र स्थलों से दौड़ें!", mr: "नाशिक कुंभाच्या पवित्र स्थळांमधून धावा!" },
     tapToStart: { en: "Tap anywhere to start", hi: "शुरू करने के लिए टैप करें", mr: "सुरू करण्यासाठी टॅप करा" },
-    gameOver: { en: "Game Over", hi: "गेम ओवर", mr: "गेम ओव्हर" },
-    playAgain: { en: "Play Again", hi: "फिर खेलें", mr: "पुन्हा खेळा" },
-    share: { en: "Share Score", hi: "स्कोर शेयर करें", mr: "स्कोअर शेअर करा" },
+    gameOver: { en: "Yatra Over!", hi: "यात्रा समाप्त!", mr: "यात्रा संपली!" },
+    playAgain: { en: "Run Again", hi: "फिर दौड़ें", mr: "पुन्हा धावा" },
+    share: { en: "Share Yatra", hi: "यात्रा शेयर करें", mr: "यात्रा शेअर करा" },
     newBest: { en: "New High Score!", hi: "नया सर्वश्रेष्ठ स्कोर!", mr: "नवा सर्वोत्तम स्कोअर!" },
     backToGames: { en: "Games", hi: "खेल", mr: "खेळ" },
-    hint: { en: "Space / Tap to jump", hi: "Space / टैप = कूदो", mr: "Space / टॅप = उडी" },
+    hint: { en: "Space / Tap to jump over obstacles", hi: "Space / टैप = बाधाओं से कूदो", mr: "Space / टॅप = अडथळ्यांवरून उडी मारा" },
+    milestones: { en: "Sacred Stops", hi: "पवित्र पड़ाव", mr: "पवित्र थांबे" },
+    placesVisited: { en: "Places Visited", hi: "दर्शन किए स्थल", mr: "भेट दिलेली ठिकाणे" },
+    visitEncourage: { en: "Play again to visit more sacred places!", hi: "और पवित्र स्थलों के दर्शन के लिए फिर खेलें!", mr: "अधिक पवित्र ठिकाणे पाहण्यासाठी पुन्हा खेळा!" },
   },
 
   // ─── BLOG NEWS ────────────────────────────────────────────

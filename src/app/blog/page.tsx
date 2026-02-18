@@ -27,6 +27,7 @@ interface NewsArticle {
   source: string;
   category: NewsCategory;
   summary: TranslatedString;
+  image: string;
 }
 
 /* ───────────────────────────── news data ───────────────────────── */
@@ -42,6 +43,7 @@ const newsArticles: NewsArticle[] = [
     date: "2025-12-15",
     source: "Deccan Chronicle",
     category: "kumbh",
+    image: "/images/gallery/kumbh-1.jpg",
     summary: {
       en: "The Simhastha Kumbh Mela will officially commence on October 31, 2026. The three key Amrit Snan dates are August 2, August 31, and September 11-12, 2027.",
       hi: "सिंहस्थ कुंभ मेला आधिकारिक रूप से 31 अक्टूबर 2026 को शुरू होगा। तीन प्रमुख अमृत स्नान तिथियां 2 अगस्त, 31 अगस्त और 11-12 सितंबर 2027 हैं।",
@@ -58,6 +60,7 @@ const newsArticles: NewsArticle[] = [
     date: "2025-11-20",
     source: "Free Press Journal",
     category: "govt",
+    image: "/images/gallery/kumbh-4.jpg",
     summary: {
       en: "The Maharashtra government approved a massive Rs 25,055 crore development plan to transform Nashik into a world-class spiritual destination. An estimated 15-20 crore devotees are expected.",
       hi: "महाराष्ट्र सरकार ने नासिक को विश्व स्तरीय आध्यात्मिक स्थल में बदलने के लिए 25,055 करोड़ रुपये की विकास योजना को मंजूरी दी। अनुमानित 15-20 करोड़ भक्तों के आने की उम्मीद है।",
@@ -74,6 +77,7 @@ const newsArticles: NewsArticle[] = [
     date: "2025-10-08",
     source: "Swarajya Magazine",
     category: "infra",
+    image: "/images/gallery/kumbh-8.jpg",
     summary: {
       en: "CM Fadnavis set strict deadlines for infrastructure completion. The event is planned as the most technology-enabled Kumbh ever, with AI for crowd monitoring. Rs 4,000 crore worth of projects initiated.",
       hi: "मुख्यमंत्री फडणवीस ने बुनियादी ढांचे के पूरा होने के लिए सख्त समय सीमा निर्धारित की। यह अब तक का सबसे तकनीकी कुंभ होगा।",
@@ -90,6 +94,7 @@ const newsArticles: NewsArticle[] = [
     date: "2025-09-15",
     source: "Lokmat Times",
     category: "infra",
+    image: "/images/gallery/kumbh-5.jpg",
     summary: {
       en: "An ambitious 91-km ring road around Nashik city, estimated at Rs 8,000 crore, has been cleared. Rs 2,270 crore allocated for 289 km of road development.",
       hi: "नासिक शहर के चारों ओर 91 किमी का 8,000 करोड़ रुपये का रिंग रोड प्रोजेक्ट मंजूर हुआ। 289 किमी सड़कों के लिए 2,270 करोड़ आवंटित।",
@@ -106,6 +111,7 @@ const newsArticles: NewsArticle[] = [
     date: "2025-08-22",
     source: "All India Radio",
     category: "infra",
+    image: "/images/gallery/kumbh-9.jpg",
     summary: {
       en: "The Ministry of Railways commenced preparations with comprehensive infrastructure upgrades. 4,500 buses planned for pilgrim transport, 8-10 helipads for emergency access.",
       hi: "रेल मंत्रालय ने व्यापक बुनियादी ढांचा उन्नयन शुरू किया। 4,500 बसों और 8-10 हेलीपैड की योजना।",
@@ -122,6 +128,7 @@ const newsArticles: NewsArticle[] = [
     date: "2025-07-10",
     source: "Free Press Journal",
     category: "infra",
+    image: "/images/gallery/kumbh-6.jpg",
     summary: {
       en: "NTKMA approved Phase 2 development at Trimbakeshwar worth Rs 390 crore, including Darshan Path, ghats redevelopment, Shahi Marg reconstruction, and vendor zones.",
       hi: "एनटीकेएमए ने त्र्यंबकेश्वर में 390 करोड़ रुपये के चरण 2 विकास को मंजूरी दी, जिसमें दर्शन पथ, घाट पुनर्विकास और शाही मार्ग शामिल।",
@@ -138,6 +145,7 @@ const newsArticles: NewsArticle[] = [
     date: "2025-06-05",
     source: "Free Press Journal",
     category: "culture",
+    image: "/images/gallery/kumbh-7.jpg",
     summary: {
       en: "A 'Plastic to Fuel' campaign launched across 200 schools to make Nashik plastic-free before Kumbh. Rs 2,000 crore allocated for Godavari River cleaning.",
       hi: "कुंभ से पहले नासिक को प्लास्टिक-मुक्त बनाने के लिए 200 स्कूलों में 'प्लास्टिक से ईंधन' अभियान। गोदावरी सफाई के लिए 2,000 करोड़।",
@@ -154,6 +162,7 @@ const newsArticles: NewsArticle[] = [
     date: "2025-05-18",
     source: "Punekar News",
     category: "infra",
+    image: "/images/gallery/kumbh-10.jpg",
     summary: {
       en: "Comprehensive mobility plan with focus on rural Nashik-Trimbakeshwar connectivity. Major bus stations to be renovated. Ring road and helipads planned.",
       hi: "ग्रामीण नासिक-त्र्यंबकेश्वर कनेक्टिविटी पर केंद्रित व्यापक गतिशीलता योजना। प्रमुख बस स्टेशनों का नवीनीकरण।",
@@ -170,6 +179,7 @@ const newsArticles: NewsArticle[] = [
     date: "2025-04-25",
     source: "Free Press Journal",
     category: "kumbh",
+    image: "/images/ramkund.jpg",
     summary: {
       en: "Plans for tent cities and helicopter service connecting Jyotirlinga pilgrimage circuit. NMC to acquire 250+ acres for Sadhugram with full amenities.",
       hi: "ज्योतिर्लिंग सर्किट को जोड़ने वाली तंबू शहर और हेलीकॉप्टर सेवा की योजना। साधुग्राम के लिए 250+ एकड़ भूमि अधिग्रहण।",
@@ -186,6 +196,7 @@ const newsArticles: NewsArticle[] = [
     date: "2025-03-29",
     source: "ANI News",
     category: "govt",
+    image: "/images/gallery/kumbh-3.jpg",
     summary: {
       en: "CM Fadnavis announced this edition would be the most technologically advanced Kumbh Mela in history. The 21-month duration was planned to distribute crowds and improve safety.",
       hi: "मुख्यमंत्री फडणवीस ने घोषणा की कि यह इतिहास का सबसे तकनीकी रूप से उन्नत कुंभ होगा। 21 महीने की अवधि भीड़ वितरण और सुरक्षा सुधार के लिए।",
@@ -202,6 +213,7 @@ const newsArticles: NewsArticle[] = [
     date: "2026-02-12",
     source: "Punekar News",
     category: "kumbh",
+    image: "/images/gallery/kumbh-2.jpg",
     summary: {
       en: "NTKMA finalized climate-resilient tent city plans. Bamboo-based storm-proof structures designed for monsoon season. Commissioner aims to eliminate past service gaps.",
       hi: "एनटीकेएमए ने मानसून-तैयार तंबू शहर की योजना तैयार की। बांस-आधारित तूफान-रोधी संरचनाएं डिजाइन।",
@@ -218,6 +230,7 @@ const newsArticles: NewsArticle[] = [
     date: "2026-01-20",
     source: "Free Press Journal",
     category: "govt",
+    image: "/images/panchavati.jpg",
     summary: {
       en: "A Telangana government delegation visited Nashik to draw insights for Godavari Pushkaram 2027. They toured Ramkund, Panchavati, and Kalaram Temple to assess infrastructure.",
       hi: "तेलंगाना सरकार का प्रतिनिधिमंडल गोदावरी पुष्करम 2027 के लिए अंतर्दृष्टि प्राप्त करने हेतु नासिक आया। रामकुंड और पंचवटी का दौरा किया।",
@@ -536,7 +549,7 @@ export default function BlogPage() {
 
                     {/* Article Card */}
                     <article
-                      className="group relative overflow-hidden rounded-xl p-6 transition-all duration-500 hover:-translate-y-1 md:p-8"
+                      className="group relative overflow-hidden rounded-xl transition-all duration-500 hover:-translate-y-1"
                       style={{
                         background:
                           "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))",
@@ -551,44 +564,57 @@ export default function BlogPage() {
                         }}
                       />
 
-                      <div className="relative z-10">
-                        {/* Top Row: Category + Date */}
-                        <div className="mb-4 flex flex-wrap items-center gap-3">
-                          <span
-                            className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                            style={{
-                              background: colors.bg,
-                              color: colors.text,
-                              border: `1px solid ${colors.border}`,
-                            }}
-                          >
-                            {t(bn[categoryTranslationMap[article.category]])}
-                          </span>
-                          <span className="inline-flex items-center gap-1.5 text-xs text-cream-300/40">
-                            <Calendar className="h-3.5 w-3.5" />
-                            {formatDate(article.date, locale)}
-                          </span>
+                      <div className="relative z-10 flex flex-col md:flex-row">
+                        {/* Article Image */}
+                        <div className="relative h-48 w-full flex-shrink-0 overflow-hidden md:h-auto md:w-48 md:rounded-l-xl">
+                          <img
+                            src={article.image}
+                            alt={article.title[locale]}
+                            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[rgba(13,9,6,0.4)] md:bg-gradient-to-l md:from-transparent md:to-transparent" />
                         </div>
 
-                        {/* Title */}
-                        <h3 className="mb-3 font-heading text-lg font-bold leading-snug text-cream-100 md:text-xl">
-                          {article.title[locale]}
-                        </h3>
+                        <div className="flex-1 p-6 md:p-8">
+                          {/* Top Row: Category + Date */}
+                          <div className="mb-3 flex flex-wrap items-center gap-3">
+                            <span
+                              className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
+                              style={{
+                                background: colors.bg,
+                                color: colors.text,
+                                border: `1px solid ${colors.border}`,
+                              }}
+                            >
+                              {t(bn[categoryTranslationMap[article.category]])}
+                            </span>
+                            <span className="inline-flex items-center gap-1.5 text-xs text-cream-300/40">
+                              <Calendar className="h-3.5 w-3.5" />
+                              {formatDate(article.date, locale)}
+                            </span>
+                          </div>
 
-                        {/* Summary */}
-                        <p className="mb-4 leading-relaxed text-cream-300/55 text-sm md:text-base">
-                          {article.summary[locale]}
-                        </p>
+                          {/* Title */}
+                          <h3 className="mb-3 font-heading text-lg font-bold leading-snug text-cream-100 md:text-xl">
+                            {article.title[locale]}
+                          </h3>
 
-                        {/* Footer: Source */}
-                        <div className="flex items-center gap-2 text-sm">
-                          <ExternalLink className="h-3.5 w-3.5 text-cream-300/30" />
-                          <span className="text-cream-300/30">
-                            {t(bn.source)}:
-                          </span>
-                          <span style={{ color: "#D4A843" }} className="font-medium">
-                            {article.source}
-                          </span>
+                          {/* Summary */}
+                          <p className="mb-4 leading-relaxed text-cream-300/55 text-sm md:text-base">
+                            {article.summary[locale]}
+                          </p>
+
+                          {/* Footer: Source */}
+                          <div className="flex items-center gap-2 text-sm">
+                            <ExternalLink className="h-3.5 w-3.5 text-cream-300/30" />
+                            <span className="text-cream-300/30">
+                              {t(bn.source)}:
+                            </span>
+                            <span style={{ color: "#D4A843" }} className="font-medium">
+                              {article.source}
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </article>

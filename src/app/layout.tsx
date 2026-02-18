@@ -3,7 +3,7 @@ import { Inter, Playfair_Display, Noto_Serif_Devanagari } from "next/font/google
 import { LanguageProvider } from "@/context/LanguageContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+
 import LoadingScreen from "@/components/LoadingScreen";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import "./globals.css";
@@ -123,7 +123,7 @@ export default function RootLayout({
           <Navbar />
           <main>{children}</main>
           <Footer />
-          <WhatsAppButton />
+
         </LanguageProvider>
       </body>
     </html>

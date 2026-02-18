@@ -495,15 +495,27 @@ export default function GamesPage() {
   const [scrambleDone, setScrambleDone] = useState(false);
   const [scrambleCopied, setScrambleCopied] = useState(false);
 
-  const scrambledLetters = useMemo(() => {
+  const scrambleAnswer = useMemo(() => {
     if (!scrambleStarted || scrambleDone) return "";
-    const word = scrambleWords[scrambleIndex].answer;
-    return shuffleArray(word.split(""), dayNumber * 311 + scrambleIndex * 97 + 1).join("");
-  }, [scrambleStarted, scrambleDone, scrambleWords, scrambleIndex, dayNumber]);
+    return scrambleWords[scrambleIndex].word[locale as Locale] || scrambleWords[scrambleIndex].word.en;
+  }, [scrambleStarted, scrambleDone, scrambleWords, scrambleIndex, locale]);
+
+  const scrambledLetters = useMemo(() => {
+    if (!scrambleAnswer) return "";
+    // For Devanagari, segment properly using Intl.Segmenter if available
+    let chars: string[];
+    if ((locale === "hi" || locale === "mr") && typeof Intl !== "undefined" && Intl.Segmenter) {
+      const segmenter = new Intl.Segmenter(locale, { granularity: "grapheme" });
+      chars = Array.from(segmenter.segment(scrambleAnswer), (s) => s.segment);
+    } else {
+      chars = scrambleAnswer.split("");
+    }
+    return shuffleArray(chars, dayNumber * 311 + scrambleIndex * 97 + 1).join("");
+  }, [scrambleAnswer, dayNumber, scrambleIndex, locale]);
 
   const handleScrambleSubmit = () => {
     if (!scrambleInput.trim()) return;
-    const correct = scrambleInput.trim().toLowerCase() === scrambleWords[scrambleIndex].answer;
+    const correct = scrambleInput.trim().toLowerCase() === scrambleAnswer.toLowerCase();
     setScrambleCorrect(correct);
     if (correct) setScrambleScore((p) => p + 1);
   };
@@ -1238,7 +1250,7 @@ export default function GamesPage() {
                         </p>
                         {!scrambleCorrect && (
                           <p className="text-sm text-cream-300/50">
-                            {t(translations.gamesPage.dailyCorrectAnswer)}: <span className="font-semibold text-cream-100 uppercase">{scrambleWords[scrambleIndex].answer}</span>
+                            {t(translations.gamesPage.dailyCorrectAnswer)}: <span className="font-semibold text-cream-100">{scrambleAnswer}</span>
                           </p>
                         )}
                       </motion.div>
