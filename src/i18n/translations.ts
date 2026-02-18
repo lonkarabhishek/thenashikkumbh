@@ -837,8 +837,8 @@ export const translations = {
     backToGames: { en: "Games", hi: "खेल", mr: "खेळ" },
     hint: { en: "Space / Tap to jump over obstacles", hi: "Space / टैप = बाधाओं से कूदो", mr: "Space / टॅप = अडथळ्यांवरून उडी मारा" },
     milestones: { en: "Sacred Stops", hi: "पवित्र पड़ाव", mr: "पवित्र थांबे" },
-    placesVisited: { en: "Places Visited", hi: "दर्शन किए स्थल", mr: "भेट दिलेली ठिकाणे" },
-    visitEncourage: { en: "Play again to visit more sacred places!", hi: "और पवित्र स्थलों के दर्शन के लिए फिर खेलें!", mr: "अधिक पवित्र ठिकाणे पाहण्यासाठी पुन्हा खेळा!" },
+    placesVisited: { en: "Darshans Collected", hi: "दर्शन संग्रह", mr: "दर्शन संग्रह" },
+    visitEncourage: { en: "Play again to collect more Darshans!", hi: "और दर्शन करने के लिए फिर खेलें!", mr: "अधिक दर्शन घेण्यासाठी पुन्हा खेळा!" },
   },
 
   // ─── BLOG NEWS ────────────────────────────────────────────

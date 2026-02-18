@@ -22,9 +22,9 @@ const HUD_H = 70; // top area for score/milestone
 const PLAYER_X = 70;
 const PW = 30;
 const PH = 44;
-const GRAVITY = 0.6;
-const JUMP_VEL = -11.5;
-const DIYA_CHANCE = 0.4;
+const GRAVITY = 0.7;
+const JUMP_VEL = -12;
+const DARSHAN_CHANCE = 0.35;
 
 // ─── Milestone Data ─────────────────────────────────────────────────────────
 interface MilestoneData {
@@ -44,9 +44,9 @@ const MILESTONES: MilestoneData[] = [
     id: "ramkund",
     name: { en: "Ramkund", hi: "रामकुंड", mr: "रामकुंड" },
     distance: 0,
-    speed: 3.5,
-    spawnRate: 110,
-    maxObsH: 35,
+    speed: 4.0,
+    spawnRate: 90,
+    maxObsH: 38,
     emoji: "🛕",
     accentHue: 35,
     facts: [
@@ -58,10 +58,10 @@ const MILESTONES: MilestoneData[] = [
   {
     id: "kalaram",
     name: { en: "Kalaram Temple", hi: "कालाराम मंदिर", mr: "काळाराम मंदिर" },
-    distance: 200,
-    speed: 4.0,
-    spawnRate: 100,
-    maxObsH: 38,
+    distance: 150,
+    speed: 4.5,
+    spawnRate: 80,
+    maxObsH: 42,
     emoji: "🏛️",
     accentHue: 45,
     facts: [
@@ -73,10 +73,10 @@ const MILESTONES: MilestoneData[] = [
   {
     id: "sitagufaa",
     name: { en: "Sita Gufa", hi: "सीता गुफा", mr: "सीता गुफा" },
-    distance: 500,
-    speed: 4.5,
-    spawnRate: 90,
-    maxObsH: 42,
+    distance: 400,
+    speed: 5.0,
+    spawnRate: 72,
+    maxObsH: 46,
     emoji: "🕳️",
     accentHue: 25,
     facts: [
@@ -86,12 +86,27 @@ const MILESTONES: MilestoneData[] = [
     ],
   },
   {
+    id: "kapaleshwar",
+    name: { en: "Kapaleshwar Temple", hi: "कपालेश्वर मंदिर", mr: "कपालेश्वर मंदिर" },
+    distance: 700,
+    speed: 5.5,
+    spawnRate: 65,
+    maxObsH: 50,
+    emoji: "🔱",
+    accentHue: 310,
+    facts: [
+      { en: "Ancient Shiva temple near Ramkund on the Godavari bank", hi: "गोदावरी किनारे रामकुंड के पास प्राचीन शिव मंदिर", mr: "गोदावरी किनारी रामकुंडाजवळचे प्राचीन शिव मंदिर" },
+      { en: "One of the oldest temples in Nashik, dating to Hemadpanthi era", hi: "हेमाडपंती काल का नासिक का सबसे पुराना मंदिर", mr: "हेमाडपंथी काळातील नाशिकमधील सर्वात जुने मंदिर" },
+      { en: "Surrounded by other historic shrines at the riverbank", hi: "नदी किनारे अन्य ऐतिहासिक मंदिरों से घिरा", mr: "नदीकिनारी इतर ऐतिहासिक मंदिरांनी वेढलेले" },
+    ],
+  },
+  {
     id: "tapovan",
     name: { en: "Tapovan", hi: "तपोवन", mr: "तपोवन" },
-    distance: 900,
-    speed: 5.0,
-    spawnRate: 82,
-    maxObsH: 46,
+    distance: 1000,
+    speed: 6.0,
+    spawnRate: 60,
+    maxObsH: 52,
     emoji: "🧘",
     accentHue: 120,
     facts: [
@@ -104,9 +119,9 @@ const MILESTONES: MilestoneData[] = [
     id: "panchavati",
     name: { en: "Panchavati Ghat", hi: "पंचवटी घाट", mr: "पंचवटी घाट" },
     distance: 1400,
-    speed: 5.5,
-    spawnRate: 75,
-    maxObsH: 50,
+    speed: 6.5,
+    spawnRate: 55,
+    maxObsH: 55,
     emoji: "🌳",
     accentHue: 80,
     facts: [
@@ -116,12 +131,27 @@ const MILESTONES: MilestoneData[] = [
     ],
   },
   {
+    id: "sundarnarayan",
+    name: { en: "Sundar Narayan Temple", hi: "सुंदर नारायण मंदिर", mr: "सुंदर नारायण मंदिर" },
+    distance: 1900,
+    speed: 7.0,
+    spawnRate: 50,
+    maxObsH: 58,
+    emoji: "🙏",
+    accentHue: 60,
+    facts: [
+      { en: "Beautiful Vishnu temple with exquisite carvings near Ramkund", hi: "रामकुंड के पास सुंदर नक्काशी वाला विष्णु मंदिर", mr: "रामकुंडाजवळ सुंदर कोरीव विष्णू मंदिर" },
+      { en: "Known for its stunning stone architecture and sculptures", hi: "इसकी शानदार पत्थर वास्तुकला और मूर्तियों के लिए प्रसिद्ध", mr: "त्याच्या अप्रतिम दगडी वास्तुकला आणि शिल्पांसाठी प्रसिद्ध" },
+      { en: "One of the most photographed temples in Nashik", hi: "नासिक के सबसे अधिक फोटो खींचे जाने वाले मंदिरों में से एक", mr: "नाशिकमधील सर्वाधिक फोटो काढल्या जाणाऱ्या मंदिरांपैकी एक" },
+    ],
+  },
+  {
     id: "someshwar",
     name: { en: "Someshwar Temple", hi: "सोमेश्वर मंदिर", mr: "सोमेश्वर मंदिर" },
-    distance: 2000,
-    speed: 6.0,
-    spawnRate: 68,
-    maxObsH: 55,
+    distance: 2500,
+    speed: 7.5,
+    spawnRate: 46,
+    maxObsH: 60,
     emoji: "⛰️",
     accentHue: 200,
     facts: [
@@ -131,13 +161,28 @@ const MILESTONES: MilestoneData[] = [
     ],
   },
   {
+    id: "muktidham",
+    name: { en: "Muktidham Temple", hi: "मुक्तिधाम मंदिर", mr: "मुक्तिधाम मंदिर" },
+    distance: 3200,
+    speed: 8.0,
+    spawnRate: 42,
+    maxObsH: 62,
+    emoji: "🕌",
+    accentHue: 170,
+    facts: [
+      { en: "Made entirely of white marble, replica of 12 Jyotirlingas", hi: "पूरा सफेद संगमरमर से बना, 12 ज्योतिर्लिंगों की प्रतिकृति", mr: "संपूर्ण पांढऱ्या संगमरवराचे, 12 ज्योतिर्लिंगांची प्रतिकृती" },
+      { en: "Houses replicas of all 12 Jyotirlinga shrines under one roof", hi: "एक छत के नीचे सभी 12 ज्योतिर्लिंगों की प्रतिकृतियाँ", mr: "एकाच छताखाली सर्व 12 ज्योतिर्लिंगांच्या प्रतिकृती" },
+      { en: "Verses from the Bhagavad Gita are inscribed on the walls", hi: "दीवारों पर भगवद्गीता के श्लोक अंकित हैं", mr: "भिंतींवर भगवद्गीतेचे श्लोक कोरलेले आहेत" },
+    ],
+  },
+  {
     id: "trimbakeshwar",
     name: { en: "Trimbakeshwar", hi: "त्र्यंबकेश्वर", mr: "त्र्यंबकेश्वर" },
-    distance: 2800,
-    speed: 7.0,
-    spawnRate: 60,
-    maxObsH: 58,
-    emoji: "🙏",
+    distance: 4000,
+    speed: 8.5,
+    spawnRate: 38,
+    maxObsH: 65,
+    emoji: "🔥",
     accentHue: 280,
     facts: [
       { en: "One of the 12 sacred Jyotirlingas of Lord Shiva", hi: "भगवान शिव के 12 ज्योतिर्लिंगों में से एक", mr: "भगवान शिवांच्या 12 ज्योतिर्लिंगांपैकी एक" },
@@ -146,12 +191,27 @@ const MILESTONES: MilestoneData[] = [
     ],
   },
   {
+    id: "pandavleni",
+    name: { en: "Pandav Leni Caves", hi: "पांडव लेनी गुफाएं", mr: "पांडव लेणी गुफा" },
+    distance: 5000,
+    speed: 9.0,
+    spawnRate: 35,
+    maxObsH: 68,
+    emoji: "🏔️",
+    accentHue: 30,
+    facts: [
+      { en: "24 ancient Buddhist caves carved between 1st century BC and 2nd century AD", hi: "पहली शताब्दी ईसा पूर्व से दूसरी शताब्दी ई. के बीच की 24 प्राचीन बौद्ध गुफाएँ", mr: "इसवीसन पूर्व 1ल्या शतकापासून इसवीसन 2ऱ्या शतकापर्यंतच्या 24 प्राचीन बौद्ध लेणी" },
+      { en: "Also called Trirashmi Caves, located on a hilltop", hi: "त्रिरश्मी गुफाएँ भी कहा जाता है, पहाड़ी पर स्थित", mr: "त्रिरश्मी लेणी म्हणूनही ओळखल्या जातात, डोंगरमाथ्यावर" },
+      { en: "Panoramic views of Nashik city from the cave entrances", hi: "गुफा प्रवेश से नासिक शहर का विहंगम दृश्य", mr: "लेणी प्रवेशद्वारातून नाशिक शहराचे विहंगम दृश्य" },
+    ],
+  },
+  {
     id: "anjneri",
     name: { en: "Anjneri Hill", hi: "अंजनेरी पहाड़", mr: "अंजनेरी डोंगर" },
-    distance: 4000,
-    speed: 8.0,
-    spawnRate: 52,
-    maxObsH: 62,
+    distance: 6500,
+    speed: 10.0,
+    spawnRate: 32,
+    maxObsH: 72,
     emoji: "🐒",
     accentHue: 50,
     facts: [
@@ -169,7 +229,7 @@ interface Obs {
   h: number;
   passed: boolean;
 }
-interface Diya {
+interface Darshan {
   x: number;
   y: number;
   collected: boolean;
@@ -196,10 +256,10 @@ interface GS {
   pvy: number;
   jumping: boolean;
   obs: Obs[];
-  diyas: Diya[];
+  darshans: Darshan[];
   sparks: Spark[];
   distance: number;
-  diyaN: number;
+  darshanN: number;
   speed: number;
   frame: number;
   gOff: number;
@@ -228,10 +288,10 @@ function initState(): GS {
     pvy: 0,
     jumping: false,
     obs: [],
-    diyas: [],
+    darshans: [],
     sparks: [],
     distance: 0,
-    diyaN: 0,
+    darshanN: 0,
     speed: MILESTONES[0].speed,
     frame: 0,
     gOff: 0,
@@ -400,34 +460,33 @@ function drawObs(ctx: CanvasRenderingContext2D, obs: Obs) {
   ctx.fillRect(x + w / 2 - 1.5, y + 5, 3, h - 5);
 }
 
-function drawDiya(ctx: CanvasRenderingContext2D, diya: Diya, frame: number) {
-  if (diya.collected) return;
-  const x = diya.x;
-  const y = diya.y + Math.sin(frame * 0.06 + diya.x) * 4;
+function drawDarshan(ctx: CanvasRenderingContext2D, d: Darshan, frame: number) {
+  if (d.collected) return;
+  const x = d.x;
+  const y = d.y + Math.sin(frame * 0.06 + d.x) * 4;
 
+  // Glowing prayer circle
   ctx.save();
   ctx.shadowColor = "#FFD700";
-  ctx.shadowBlur = 12;
+  ctx.shadowBlur = 14;
   ctx.fillStyle = "#FFD700";
   ctx.beginPath();
-  ctx.arc(x, y, 7, 0, Math.PI * 2);
+  ctx.arc(x, y, 9, 0, Math.PI * 2);
   ctx.fill();
   ctx.restore();
 
-  ctx.fillStyle = "#FF6B00";
+  // Inner warm glow
+  ctx.fillStyle = "rgba(255,140,0,0.5)";
   ctx.beginPath();
-  ctx.moveTo(x - 2.5, y - 5);
-  ctx.quadraticCurveTo(x, y - 12 - Math.sin(frame * 0.15) * 2.5, x + 2.5, y - 5);
+  ctx.arc(x, y, 6, 0, Math.PI * 2);
   ctx.fill();
 
-  ctx.fillStyle = "#B8860B";
-  ctx.beginPath();
-  ctx.moveTo(x - 5, y + 2);
-  ctx.lineTo(x - 3, y + 7);
-  ctx.lineTo(x + 3, y + 7);
-  ctx.lineTo(x + 5, y + 2);
-  ctx.closePath();
-  ctx.fill();
+  // 🙏 Prayer hands drawn as simple icon
+  ctx.fillStyle = "#0D0906";
+  ctx.font = "bold 10px sans-serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText("🙏", x, y);
 }
 
 function drawSparks(ctx: CanvasRenderingContext2D, sparks: Spark[]) {
@@ -464,11 +523,11 @@ function drawHUD(ctx: CanvasRenderingContext2D, g: GS, locale: Locale) {
   ctx.fillText(`${Math.floor(g.distance)}m`, 12, 32);
   ctx.shadowBlur = 0;
 
-  // Diyas (left below distance)
-  if (g.diyaN > 0) {
+  // Darshans collected (left below distance)
+  if (g.darshanN > 0) {
     ctx.font = "bold 14px sans-serif";
     ctx.fillStyle = "#FFD700";
-    ctx.fillText(`🪔 ×${g.diyaN}`, 12, 52);
+    ctx.fillText(`🙏 ×${g.darshanN}`, 12, 52);
   }
 
   // Current place (right)
@@ -576,7 +635,7 @@ function drawFrame(ctx: CanvasRenderingContext2D, g: GS, locale: Locale) {
   drawGround(ctx, g);
 
   for (const o of g.obs) drawObs(ctx, o);
-  for (const d of g.diyas) drawDiya(ctx, d, g.frame);
+  for (const d of g.darshans) drawDarshan(ctx, d, g.frame);
   drawPlayer(ctx, g);
   drawSparks(ctx, g.sparks);
 
@@ -718,8 +777,8 @@ export default function KumbhRunPage() {
       const w = 20 + Math.random() * 16;
       g.obs.push({ x: LW + 30, w, h, passed: false });
 
-      if (Math.random() < DIYA_CHANCE) {
-        g.diyas.push({
+      if (Math.random() < DARSHAN_CHANCE) {
+        g.darshans.push({
           x: LW + 30 + w / 2,
           y: GROUND_Y - h - 25 - Math.random() * 35,
           collected: false,
@@ -732,11 +791,11 @@ export default function KumbhRunPage() {
       o.x -= g.speed;
       if (!o.passed && o.x + o.w < PLAYER_X) o.passed = true;
     }
-    for (const d of g.diyas) d.x -= g.speed;
+    for (const d of g.darshans) d.x -= g.speed;
 
     // Cleanup
     g.obs = g.obs.filter(o => o.x > -80);
-    g.diyas = g.diyas.filter(d => d.x > -50);
+    g.darshans = g.darshans.filter(d => d.x > -50);
 
     // Collision
     const px1 = PLAYER_X + 5;
@@ -764,7 +823,7 @@ export default function KumbhRunPage() {
           });
         }
 
-        const total = Math.floor(g.distance) + g.diyaN * 10;
+        const total = Math.floor(g.distance) + g.darshanN * 10;
         setFinalScore(total);
         setGameStatus("over");
 
@@ -779,8 +838,8 @@ export default function KumbhRunPage() {
       }
     }
 
-    // Diya collection
-    for (const d of g.diyas) {
+    // Darshan collection
+    for (const d of g.darshans) {
       if (d.collected) continue;
       const dy = d.y + Math.sin(g.frame * 0.06 + d.x) * 4;
       if (
@@ -790,7 +849,7 @@ export default function KumbhRunPage() {
         g.py + PH > dy - 12
       ) {
         d.collected = true;
-        g.diyaN++;
+        g.darshanN++;
         for (let i = 0; i < 6; i++) {
           g.sparks.push({
             x: d.x,
@@ -872,7 +931,13 @@ export default function KumbhRunPage() {
       ? `\n🎯 ${localeRef.current === "en" ? "Next" : localeRef.current === "hi" ? "अगला" : "पुढील"}: ${nextMs.name[localeRef.current]}`
       : "";
 
-    const text = `🏃 ${localeRef.current === "mr" ? "कुंभ रन — नाशिक यात्रा!" : localeRef.current === "hi" ? "कुंभ रन — नासिक यात्रा!" : "Kumbh Run — Nashik Yatra!"}\n📍 ${places}${nextText}\n🪔 ${localeRef.current === "en" ? "Score" : "स्कोअर"}: ${total} | 🪔 ×${g.diyaN}\n${localeRef.current === "en" ? "Can you beat my pilgrim run?" : localeRef.current === "hi" ? "क्या आप मेरी यात्रा को हरा सकते हैं?" : "तुम्ही माझी यात्रा पूर्ण करू शकता का?"}\nthenashikkumbh.com/kumbhrun`;
+    const darshanText = localeRef.current === "en"
+      ? `🙏 I collected ${g.darshanN} Darshans! How many can you collect?`
+      : localeRef.current === "hi"
+      ? `🙏 मैंने ${g.darshanN} दर्शन किए! आप कितने कर सकते हैं?`
+      : `🙏 मी ${g.darshanN} दर्शन घेतले! तुम्ही किती घेऊ शकता?`;
+
+    const text = `🏃 ${localeRef.current === "mr" ? "कुंभ रन — नाशिक यात्रा!" : localeRef.current === "hi" ? "कुंभ रन — नासिक यात्रा!" : "Kumbh Run — Nashik Yatra!"}\n📍 ${places}${nextText}\n${darshanText}\n🏆 ${localeRef.current === "en" ? "Score" : "स्कोअर"}: ${total}\nthenashikkumbh.com/kumbhrun`;
 
     if (navigator.share) {
       navigator.share({ text }).catch(() => {
@@ -1035,7 +1100,7 @@ export default function KumbhRunPage() {
                   {finalScore}
                 </p>
                 <p className="mb-1 text-sm text-cream-300/50">
-                  🪔 ×{gsRef.current.diyaN} | {Math.floor(gsRef.current.distance)}m
+                  🙏 {gsRef.current.darshanN} {locale === "en" ? "Darshans" : "दर्शन"} | {Math.floor(gsRef.current.distance)}m
                 </p>
                 {finalScore >= highScore && finalScore > 0 && (
                   <motion.p
