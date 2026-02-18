@@ -789,6 +789,40 @@ export const translations = {
     free: { en: "Free", hi: "निःशुल्क", mr: "विनामूल्य" },
     daily: { en: "Daily", hi: "प्रतिदिन", mr: "दररोज" },
     registration: { en: "Registration Open", hi: "पंजीकरण खुला", mr: "नोंदणी सुरू" },
+
+    // ── Daily Challenge (Wordle-style) ──
+    dailyTitle: { en: "Daily Kumbh Challenge", hi: "दैनिक कुंभ चुनौती", mr: "दैनिक कुंभ आव्हान" },
+    dailySubtitle: { en: "A new challenge every day — same for everyone!", hi: "हर दिन एक नई चुनौती — सबके लिए एक जैसी!", mr: "दररोज एक नवे आव्हान — सर्वांसाठी सारखेच!" },
+    dailyDay: { en: "Day", hi: "दिवस", mr: "दिवस" },
+    dailyCompleted: { en: "Today's Challenge Complete!", hi: "आज की चुनौती पूर्ण!", mr: "आजचे आव्हान पूर्ण!" },
+    dailyStreak: { en: "Streak", hi: "लगातार", mr: "सलग" },
+    dailyShare: { en: "Share Results", hi: "परिणाम शेयर करें", mr: "निकाल शेअर करा" },
+    dailyCopied: { en: "Copied to clipboard!", hi: "क्लिपबोर्ड पर कॉपी हो गया!", mr: "क्लिपबोर्डवर कॉपी झाले!" },
+    dailyPlay: { en: "Play Today's Challenge", hi: "आज की चुनौती खेलें", mr: "आजचे आव्हान खेळा" },
+    dailyNextIn: { en: "Next challenge in", hi: "अगली चुनौती", mr: "पुढील आव्हान" },
+    dailyHours: { en: "hours", hi: "घंटे", mr: "तास" },
+    dailyCorrectAnswer: { en: "Correct answer", hi: "सही उत्तर", mr: "बरोबर उत्तर" },
+
+    // ── Word Scramble ──
+    scrambleTitle: { en: "Word Scramble", hi: "शब्द पहेली", mr: "शब्द कोडे" },
+    scrambleSubtitle: { en: "Unscramble sacred words related to Kumbh Mela", hi: "कुंभ मेले से जुड़े पवित्र शब्दों को सुलझाएं", mr: "कुंभमेळ्याशी संबंधित पवित्र शब्द सोडवा" },
+    scrambleHint: { en: "Hint", hi: "संकेत", mr: "संकेत" },
+    scrambleCorrect: { en: "Correct!", hi: "सही!", mr: "बरोबर!" },
+    scrambleSkip: { en: "Skip", hi: "छोड़ें", mr: "वगळा" },
+    scrambleComplete: { en: "Word Scramble Complete!", hi: "शब्द पहेली पूर्ण!", mr: "शब्द कोडे पूर्ण!" },
+    scramblePlay: { en: "Start Scramble", hi: "शुरू करें", mr: "सुरू करा" },
+    scrambleNextWord: { en: "Next Word", hi: "अगला शब्द", mr: "पुढील शब्द" },
+    scrambleTypeAnswer: { en: "Type the word...", hi: "शब्द लिखें...", mr: "शब्द लिहा..." },
+    scrambleWordsLeft: { en: "words left", hi: "शब्द बाकी", mr: "शब्द बाकी" },
+    scrambleShareText: { en: "I unscrambled", hi: "मैंने सुलझाए", mr: "मी सोडवले" },
+    scrambleOf: { en: "of", hi: "में से", mr: "पैकी" },
+    scrambleWords: { en: "words", hi: "शब्द", mr: "शब्द" },
+
+    // ── Enhanced results / Share ──
+    perfectScore: { en: "Perfect! You are a true Kumbh devotee!", hi: "बिल्कुल सही! आप सच्चे कुंभ भक्त हैं!", mr: "अगदी बरोबर! तुम्ही खरे कुंभ भक्त आहात!" },
+    greatScore: { en: "Excellent knowledge of Kumbh traditions!", hi: "कुंभ परंपराओं का उत्कृष्ट ज्ञान!", mr: "कुंभ परंपरांचे उत्कृष्ट ज्ञान!" },
+    goodScore: { en: "Good effort! Keep learning about Kumbh.", hi: "अच्छा प्रयास! कुंभ के बारे में सीखते रहें।", mr: "चांगला प्रयत्न! कुंभाबद्दल शिकत राहा." },
+    keepLearning: { en: "Keep exploring the sacred traditions!", hi: "पवित्र परंपराओं की खोज जारी रखें!", mr: "पवित्र परंपरा जाणून घ्या!" },
   },
 
   // ─── COMMON ────────────────────────────────────────────────

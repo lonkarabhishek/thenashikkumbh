@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Palette,
@@ -15,6 +15,14 @@ import {
   RotateCcw,
   Send,
   Sparkles,
+  Share2,
+  Calendar,
+  Flame,
+  Shuffle,
+  Lightbulb,
+  ArrowRight,
+  Clock,
+  ChevronRight,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
@@ -31,7 +39,7 @@ const fadeUp = {
   }),
 };
 
-/* ───────────────────────────── activity data ───────────────────────────── */
+/* ───────────────────────────── types ───────────────────────────── */
 
 type TranslatedString = { en: string; hi: string; mr: string };
 
@@ -42,6 +50,52 @@ interface Activity {
   badgeKey: TranslatedString;
   badgeColor: string;
 }
+
+interface QuizQuestion {
+  question: TranslatedString;
+  options: TranslatedString[];
+  correctIndex: number;
+}
+
+interface ScrambleWord {
+  word: TranslatedString;
+  hint: TranslatedString;
+  answer: string; // English answer for matching
+}
+
+/* ───────────────────────────── seeded random ───────────────────────────── */
+
+function seededRandom(seed: number) {
+  let s = seed;
+  return () => {
+    s = (s * 16807 + 0) % 2147483647;
+    return (s - 1) / 2147483646;
+  };
+}
+
+function getDayNumber(): number {
+  const start = new Date("2025-01-01").getTime();
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+  return Math.floor((today - start) / 86400000) + 1;
+}
+
+function getTodayKey(): string {
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+}
+
+function shuffleArray<T>(arr: T[], seed: number): T[] {
+  const result = [...arr];
+  const rand = seededRandom(seed);
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
+/* ───────────────────────────── activity data ───────────────────────────── */
 
 const activities: Activity[] = [
   {
@@ -88,15 +142,9 @@ const activities: Activity[] = [
   },
 ];
 
-/* ───────────────────────────── quiz data ───────────────────────────── */
+/* ───────────────────────────── MASSIVE quiz question pool ───────────────────────────── */
 
-interface QuizQuestion {
-  question: TranslatedString;
-  options: TranslatedString[];
-  correctIndex: number;
-}
-
-const quizQuestions: QuizQuestion[] = [
+const allQuizQuestions: QuizQuestion[] = [
   {
     question: { en: "How many sacred cities host the Kumbh Mela?", hi: "कुंभ मेला कितने पवित्र शहरों में लगता है?", mr: "कुंभमेळा किती पवित्र शहरांत भरतो?" },
     options: [
@@ -147,38 +195,380 @@ const quizQuestions: QuizQuestion[] = [
     ],
     correctIndex: 1,
   },
+  {
+    question: { en: "Which ghat in Nashik is considered the holiest?", hi: "नासिक में कौन सा घाट सबसे पवित्र माना जाता है?", mr: "नाशिकमधील कोणता घाट सर्वात पवित्र मानला जातो?" },
+    options: [
+      { en: "Tapovan Ghat", hi: "तपोवन घाट", mr: "तपोवन घाट" },
+      { en: "Ram Kund", hi: "रामकुंड", mr: "रामकुंड" },
+      { en: "Kapila Ghat", hi: "कपिला घाट", mr: "कपिला घाट" },
+      { en: "Dutondya Ghat", hi: "दुतोंड्या घाट", mr: "दुतोंड्या घाट" },
+    ],
+    correctIndex: 1,
+  },
+  {
+    question: { en: "How many Shahi Snan dates are there in Nashik Kumbh 2027?", hi: "नासिक कुंभ 2027 में कितने शाही स्नान हैं?", mr: "नाशिक कुंभ 2027 मध्ये किती शाही स्नान आहेत?" },
+    options: [
+      { en: "3", hi: "३", mr: "३" },
+      { en: "5", hi: "५", mr: "५" },
+      { en: "7", hi: "७", mr: "७" },
+      { en: "4", hi: "४", mr: "४" },
+    ],
+    correctIndex: 1,
+  },
+  {
+    question: { en: "Which planet's position determines Nashik Kumbh?", hi: "कौन से ग्रह की स्थिति नासिक कुंभ निर्धारित करती है?", mr: "कोणत्या ग्रहाच्या स्थितीवरून नाशिक कुंभ ठरतो?" },
+    options: [
+      { en: "Mars", hi: "मंगल", mr: "मंगळ" },
+      { en: "Jupiter", hi: "बृहस्पति", mr: "बृहस्पती" },
+      { en: "Saturn", hi: "शनि", mr: "शनी" },
+      { en: "Venus", hi: "शुक्र", mr: "शुक्र" },
+    ],
+    correctIndex: 1,
+  },
+  {
+    question: { en: "Who carried the Kumbh (pot) of Amrit according to mythology?", hi: "पौराणिक कथा के अनुसार अमृत का कुंभ कौन ले गया?", mr: "पौराणिक कथेनुसार अमृताचा कुंभ कोण घेऊन गेला?" },
+    options: [
+      { en: "Lord Vishnu", hi: "भगवान विष्णु", mr: "भगवान विष्णू" },
+      { en: "Lord Shiva", hi: "भगवान शिव", mr: "भगवान शिव" },
+      { en: "Dhanvantari / Garuda", hi: "धनवंतरी / गरुड", mr: "धन्वंतरी / गरुड" },
+      { en: "Lord Brahma", hi: "भगवान ब्रह्मा", mr: "भगवान ब्रह्मा" },
+    ],
+    correctIndex: 2,
+  },
+  {
+    question: { en: "From which mountain does the Godavari river originate?", hi: "गोदावरी नदी किस पर्वत से निकलती है?", mr: "गोदावरी नदी कोणत्या पर्वतावरून उगम पावते?" },
+    options: [
+      { en: "Sahyadri (Trimbakeshwar)", hi: "सह्याद्री (त्र्यंबकेश्वर)", mr: "सह्याद्री (त्र्यंबकेश्वर)" },
+      { en: "Himalayas", hi: "हिमालय", mr: "हिमालय" },
+      { en: "Vindhya", hi: "विंध्य", mr: "विंध्य" },
+      { en: "Aravalli", hi: "अरावली", mr: "अरावली" },
+    ],
+    correctIndex: 0,
+  },
+  {
+    question: { en: "What is a Shahi Snan?", hi: "शाही स्नान क्या है?", mr: "शाही स्नान म्हणजे काय?" },
+    options: [
+      { en: "A royal bath", hi: "राजघराने का स्नान", mr: "राजघराण्याचे स्नान" },
+      { en: "Sacred bathing on auspicious dates", hi: "शुभ तिथियों पर पवित्र स्नान", mr: "शुभ तिथींवर पवित्र स्नान" },
+      { en: "Bathing in hot springs", hi: "गर्म पानी में स्नान", mr: "गरम पाण्यात स्नान" },
+      { en: "Swimming competition", hi: "तैराकी प्रतियोगिता", mr: "पोहण्याची स्पर्धा" },
+    ],
+    correctIndex: 1,
+  },
+  {
+    question: { en: "Which zodiac sign (Rashi) must Jupiter be in for Nashik Kumbh?", hi: "नासिक कुंभ के लिए बृहस्पति किस राशि में होना चाहिए?", mr: "नाशिक कुंभासाठी बृहस्पती कोणत्या राशीत असावा?" },
+    options: [
+      { en: "Aries", hi: "मेष", mr: "मेष" },
+      { en: "Leo (Simha)", hi: "सिंह", mr: "सिंह" },
+      { en: "Scorpio", hi: "वृश्चिक", mr: "वृश्चिक" },
+      { en: "Aquarius", hi: "कुंभ", mr: "कुंभ" },
+    ],
+    correctIndex: 1,
+  },
+  {
+    question: { en: "What is Panchavati famous for in Nashik?", hi: "नासिक में पंचवटी किस लिए प्रसिद्ध है?", mr: "नाशिकमधील पंचवटी कशासाठी प्रसिद्ध आहे?" },
+    options: [
+      { en: "Five banyan trees, Lord Ram's exile stay", hi: "पाँच बरगद के पेड़, भगवान राम का वनवास", mr: "पाच वडाची झाडे, भगवान रामाचा वनवास" },
+      { en: "Five temples", hi: "पाँच मंदिर", mr: "पाच मंदिरे" },
+      { en: "Five rivers meeting point", hi: "पाँच नदियों का संगम", mr: "पाच नद्यांचा संगम" },
+      { en: "Five mountain peaks", hi: "पाँच पर्वत शिखर", mr: "पाच पर्वत शिखरे" },
+    ],
+    correctIndex: 0,
+  },
+  {
+    question: { en: "Which Jyotirlinga is near Nashik?", hi: "नासिक के पास कौन सा ज्योतिर्लिंग है?", mr: "नाशिकजवळ कोणते ज्योतिर्लिंग आहे?" },
+    options: [
+      { en: "Bhimashankar", hi: "भीमाशंकर", mr: "भीमाशंकर" },
+      { en: "Trimbakeshwar", hi: "त्र्यंबकेश्वर", mr: "त्र्यंबकेश्वर" },
+      { en: "Grishneshwar", hi: "घृष्णेश्वर", mr: "घृष्णेश्वर" },
+      { en: "Aundha Nagnath", hi: "औंधा नागनाथ", mr: "औंधा नागनाथ" },
+    ],
+    correctIndex: 1,
+  },
+  {
+    question: { en: "Which four cities host Kumbh Mela?", hi: "कुंभ मेला किन चार शहरों में लगता है?", mr: "कुंभमेळा कोणत्या चार शहरांत भरतो?" },
+    options: [
+      { en: "Delhi, Mumbai, Kolkata, Chennai", hi: "दिल्ली, मुंबई, कोलकाता, चेन्नई", mr: "दिल्ली, मुंबई, कोलकाता, चेन्नई" },
+      { en: "Haridwar, Prayagraj, Nashik, Ujjain", hi: "हरिद्वार, प्रयागराज, नासिक, उज्जैन", mr: "हरिद्वार, प्रयागराज, नाशिक, उज्जैन" },
+      { en: "Varanasi, Mathura, Nashik, Haridwar", hi: "वाराणसी, मथुरा, नासिक, हरिद्वार", mr: "वाराणसी, मथुरा, नाशिक, हरिद्वार" },
+      { en: "Ayodhya, Dwarka, Puri, Nashik", hi: "अयोध्या, द्वारका, पुरी, नासिक", mr: "अयोध्या, द्वारका, पुरी, नाशिक" },
+    ],
+    correctIndex: 1,
+  },
+  {
+    question: { en: "What does 'Kumbh' literally mean?", hi: "'कुंभ' का शाब्दिक अर्थ क्या है?", mr: "'कुंभ' चा शाब्दिक अर्थ काय?" },
+    options: [
+      { en: "Holy water", hi: "पवित्र जल", mr: "पवित्र पाणी" },
+      { en: "Sacred river", hi: "पवित्र नदी", mr: "पवित्र नदी" },
+      { en: "Pot / Pitcher", hi: "घड़ा / कलश", mr: "घडा / कलश" },
+      { en: "Festival", hi: "उत्सव", mr: "उत्सव" },
+    ],
+    correctIndex: 2,
+  },
+  {
+    question: { en: "Who leads the Shahi Snan procession?", hi: "शाही स्नान जुलूस का नेतृत्व कौन करता है?", mr: "शाही स्नान मिरवणुकीचे नेतृत्व कोण करतो?" },
+    options: [
+      { en: "Politicians", hi: "राजनेता", mr: "राजकारणी" },
+      { en: "Akharas (Naga Sadhus)", hi: "अखाड़े (नागा साधु)", mr: "आखाडे (नागा साधू)" },
+      { en: "Temple priests", hi: "मंदिर के पुजारी", mr: "मंदिराचे पुजारी" },
+      { en: "Royal families", hi: "राजघराने", mr: "राजघराणे" },
+    ],
+    correctIndex: 1,
+  },
+  {
+    question: { en: "What is the estimated footfall at Nashik Kumbh Mela?", hi: "नासिक कुंभ मेले में अनुमानित भीड़ कितनी होती है?", mr: "नाशिक कुंभमेळ्यात अंदाजे किती गर्दी असते?" },
+    options: [
+      { en: "10 million", hi: "1 करोड़", mr: "1 कोटी" },
+      { en: "30 million", hi: "3 करोड़", mr: "3 कोटी" },
+      { en: "75 million+", hi: "7.5 करोड़+", mr: "7.5 कोटी+" },
+      { en: "100 million", hi: "10 करोड़", mr: "10 कोटी" },
+    ],
+    correctIndex: 2,
+  },
+  {
+    question: { en: "What is the significance of Tapovan in Nashik?", hi: "नासिक में तपोवन का क्या महत्व है?", mr: "नाशिकमधील तपोवनाचे काय महत्त्व आहे?" },
+    options: [
+      { en: "Market area", hi: "बाज़ार क्षेत्र", mr: "बाजार क्षेत्र" },
+      { en: "Where sages performed penance", hi: "जहाँ ऋषियों ने तपस्या की", mr: "जेथे ऋषींनी तपस्या केली" },
+      { en: "Modern city center", hi: "आधुनिक शहर केंद्र", mr: "आधुनिक शहर केंद्र" },
+      { en: "Railway station", hi: "रेलवे स्टेशन", mr: "रेल्वे स्थानक" },
+    ],
+    correctIndex: 1,
+  },
+  {
+    question: { en: "When is the next Nashik Kumbh Mela?", hi: "अगला नासिक कुंभ मेला कब है?", mr: "पुढचा नाशिक कुंभमेळा कधी आहे?" },
+    options: [
+      { en: "2025", hi: "२०२५", mr: "२०२५" },
+      { en: "2026", hi: "२०२६", mr: "२०२६" },
+      { en: "2027", hi: "२०२७", mr: "२०२७" },
+      { en: "2028", hi: "२०२८", mr: "२०२८" },
+    ],
+    correctIndex: 2,
+  },
 ];
 
-/* ───────────────────────────── page ───────────────────────────── */
+/* ───────────────────────────── word scramble data ───────────────────────────── */
+
+const allScrambleWords: ScrambleWord[] = [
+  { word: { en: "Godavari", hi: "गोदावरी", mr: "गोदावरी" }, hint: { en: "Sacred river of Nashik", hi: "नासिक की पवित्र नदी", mr: "नाशिकची पवित्र नदी" }, answer: "godavari" },
+  { word: { en: "Kumbh", hi: "कुंभ", mr: "कुंभ" }, hint: { en: "The sacred pot of nectar", hi: "अमृत का पवित्र पात्र", mr: "अमृताचे पवित्र पात्र" }, answer: "kumbh" },
+  { word: { en: "Nashik", hi: "नासिक", mr: "नाशिक" }, hint: { en: "City hosting Kumbh 2027", hi: "कुंभ 2027 का मेजबान शहर", mr: "कुंभ 2027 चे यजमान शहर" }, answer: "nashik" },
+  { word: { en: "Trimbak", hi: "त्रिंबक", mr: "त्र्यंबक" }, hint: { en: "Home of a famous Jyotirlinga", hi: "प्रसिद्ध ज्योतिर्लिंग का घर", mr: "प्रसिद्ध ज्योतिर्लिंगाचे ठिकाण" }, answer: "trimbak" },
+  { word: { en: "Sadhu", hi: "साधु", mr: "साधू" }, hint: { en: "Holy ascetic at Kumbh", hi: "कुंभ के पवित्र तपस्वी", mr: "कुंभातील पवित्र तपस्वी" }, answer: "sadhu" },
+  { word: { en: "Panchavati", hi: "पंचवटी", mr: "पंचवटी" }, hint: { en: "Five banyan trees, Ram's exile", hi: "पाँच बरगद, राम का वनवास", mr: "पाच वड, रामाचा वनवास" }, answer: "panchavati" },
+  { word: { en: "Amrit", hi: "अमृत", mr: "अमृत" }, hint: { en: "Nectar of immortality", hi: "अमरत्व का अमृत", mr: "अमरत्वाचे अमृत" }, answer: "amrit" },
+  { word: { en: "Snan", hi: "स्नान", mr: "स्नान" }, hint: { en: "Sacred bathing ritual", hi: "पवित्र स्नान अनुष्ठान", mr: "पवित्र स्नान विधी" }, answer: "snan" },
+  { word: { en: "Ramkund", hi: "रामकुंड", mr: "रामकुंड" }, hint: { en: "Holiest ghat in Nashik", hi: "नासिक का सबसे पवित्र घाट", mr: "नाशिकमधील सर्वात पवित्र घाट" }, answer: "ramkund" },
+  { word: { en: "Akhara", hi: "अखाड़ा", mr: "आखाडा" }, hint: { en: "Order of holy warriors", hi: "पवित्र योद्धाओं का संप्रदाय", mr: "पवित्र योद्ध्यांचा संप्रदाय" }, answer: "akhara" },
+  { word: { en: "Shahi", hi: "शाही", mr: "शाही" }, hint: { en: "Royal, as in ___ Snan", hi: "शाही, जैसे ___ स्नान", mr: "शाही, जसे ___ स्नान" }, answer: "shahi" },
+  { word: { en: "Simhastha", hi: "सिंहस्थ", mr: "सिंहस्थ" }, hint: { en: "Other name for Nashik Kumbh", hi: "नासिक कुंभ का दूसरा नाम", mr: "नाशिक कुंभाचे दुसरे नाव" }, answer: "simhastha" },
+  { word: { en: "Tapovan", hi: "तपोवन", mr: "तपोवन" }, hint: { en: "Forest of penance", hi: "तपस्या का वन", mr: "तपस्येचे वन" }, answer: "tapovan" },
+  { word: { en: "Garuda", hi: "गरुड", mr: "गरुड" }, hint: { en: "Vehicle of Lord Vishnu", hi: "भगवान विष्णु का वाहन", mr: "भगवान विष्णूचे वाहन" }, answer: "garuda" },
+  { word: { en: "Manthan", hi: "मंथन", mr: "मंथन" }, hint: { en: "Churning of the ocean", hi: "समुद्र का मंथन", mr: "समुद्राचे मंथन" }, answer: "manthan" },
+];
+
+/* ───────────────────────────── page component ───────────────────────────── */
 
 export default function GamesPage() {
   const { t, locale } = useLanguage();
+  const tq = useCallback((obj: TranslatedString): string => obj[locale as Locale] || obj.en, [locale]);
 
-  /* Quiz state */
+  /* ─── Daily Challenge state ─── */
+  const dayNumber = useMemo(() => getDayNumber(), []);
+  const todayKey = useMemo(() => getTodayKey(), []);
+
+  const dailyQuestions = useMemo(() => {
+    const shuffled = shuffleArray(allQuizQuestions, dayNumber * 7919);
+    return shuffled.slice(0, 5);
+  }, [dayNumber]);
+
+  const [dailyStarted, setDailyStarted] = useState(false);
+  const [dailyQ, setDailyQ] = useState(0);
+  const [dailySelected, setDailySelected] = useState<number | null>(null);
+  const [dailyAnswered, setDailyAnswered] = useState(false);
+  const [dailyResults, setDailyResults] = useState<boolean[]>([]);
+  const [dailyDone, setDailyDone] = useState(false);
+  const [dailyStreak, setDailyStreak] = useState(0);
+  const [dailyCopied, setDailyCopied] = useState(false);
+  const [dailyAlreadyPlayed, setDailyAlreadyPlayed] = useState(false);
+  const [dailySavedResults, setDailySavedResults] = useState<boolean[]>([]);
+  const [hoursLeft, setHoursLeft] = useState(0);
+
+  // Load daily state from localStorage
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(`kumbh_daily_${todayKey}`);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        setDailyAlreadyPlayed(true);
+        setDailySavedResults(parsed.results);
+        setDailyDone(true);
+      }
+      const streak = parseInt(localStorage.getItem("kumbh_daily_streak") || "0");
+      setDailyStreak(streak);
+    } catch { /* ignore */ }
+  }, [todayKey]);
+
+  // Calculate hours until next day
+  useEffect(() => {
+    const updateTimer = () => {
+      const now = new Date();
+      const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+      setHoursLeft(Math.ceil((tomorrow.getTime() - now.getTime()) / 3600000));
+    };
+    updateTimer();
+    const interval = setInterval(updateTimer, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleDailyOption = (idx: number) => {
+    if (dailyAnswered) return;
+    setDailySelected(idx);
+    setDailyAnswered(true);
+    const isCorrect = idx === dailyQuestions[dailyQ].correctIndex;
+    setDailyResults((prev) => [...prev, isCorrect]);
+  };
+
+  const handleDailyNext = () => {
+    if (dailyQ < 4) {
+      setDailyQ((prev) => prev + 1);
+      setDailySelected(null);
+      setDailyAnswered(false);
+    } else {
+      setDailyDone(true);
+      // Save to localStorage
+      const results = [...dailyResults];
+      try {
+        localStorage.setItem(`kumbh_daily_${todayKey}`, JSON.stringify({ results }));
+        // Update streak
+        const yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1);
+        const yKey = `${yesterday.getFullYear()}-${String(yesterday.getMonth() + 1).padStart(2, "0")}-${String(yesterday.getDate()).padStart(2, "0")}`;
+        const hadYesterday = localStorage.getItem(`kumbh_daily_${yKey}`);
+        const oldStreak = parseInt(localStorage.getItem("kumbh_daily_streak") || "0");
+        const newStreak = hadYesterday ? oldStreak + 1 : 1;
+        localStorage.setItem("kumbh_daily_streak", String(newStreak));
+        setDailyStreak(newStreak);
+        setDailySavedResults(results);
+      } catch { /* ignore */ }
+    }
+  };
+
+  const dailyScore = useMemo(() => {
+    const results = dailySavedResults.length > 0 ? dailySavedResults : dailyResults;
+    return results.filter(Boolean).length;
+  }, [dailySavedResults, dailyResults]);
+
+  const handleDailyShare = useCallback(() => {
+    const results = dailySavedResults.length > 0 ? dailySavedResults : dailyResults;
+    const emoji = results.map((r) => (r ? "🟢" : "🔴")).join("");
+    const score = results.filter(Boolean).length;
+    const text = `कुंभ Daily #${dayNumber} ${emoji} ${score}/5\nthenashikkumbh.com/games`;
+
+    if (navigator.share) {
+      navigator.share({ text }).catch(() => {
+        navigator.clipboard.writeText(text);
+        setDailyCopied(true);
+        setTimeout(() => setDailyCopied(false), 2500);
+      });
+    } else {
+      navigator.clipboard.writeText(text);
+      setDailyCopied(true);
+      setTimeout(() => setDailyCopied(false), 2500);
+    }
+  }, [dailySavedResults, dailyResults, dayNumber]);
+
+  /* ─── Word Scramble state ─── */
+  const scrambleWords = useMemo(() => {
+    const shuffled = shuffleArray(allScrambleWords, dayNumber * 1301);
+    return shuffled.slice(0, 5);
+  }, [dayNumber]);
+
+  const [scrambleStarted, setScrambleStarted] = useState(false);
+  const [scrambleIndex, setScrambleIndex] = useState(0);
+  const [scrambleInput, setScrambleInput] = useState("");
+  const [scrambleShowHint, setScrambleShowHint] = useState(false);
+  const [scrambleCorrect, setScrambleCorrect] = useState<boolean | null>(null);
+  const [scrambleScore, setScrambleScore] = useState(0);
+  const [scrambleDone, setScrambleDone] = useState(false);
+  const [scrambleCopied, setScrambleCopied] = useState(false);
+
+  const scrambledLetters = useMemo(() => {
+    if (!scrambleStarted || scrambleDone) return "";
+    const word = scrambleWords[scrambleIndex].answer;
+    return shuffleArray(word.split(""), dayNumber * 311 + scrambleIndex * 97 + 1).join("");
+  }, [scrambleStarted, scrambleDone, scrambleWords, scrambleIndex, dayNumber]);
+
+  const handleScrambleSubmit = () => {
+    if (!scrambleInput.trim()) return;
+    const correct = scrambleInput.trim().toLowerCase() === scrambleWords[scrambleIndex].answer;
+    setScrambleCorrect(correct);
+    if (correct) setScrambleScore((p) => p + 1);
+  };
+
+  const handleScrambleNext = () => {
+    if (scrambleIndex < 4) {
+      setScrambleIndex((p) => p + 1);
+      setScrambleInput("");
+      setScrambleCorrect(null);
+      setScrambleShowHint(false);
+    } else {
+      setScrambleDone(true);
+    }
+  };
+
+  const handleScrambleSkip = () => {
+    setScrambleCorrect(false);
+    setTimeout(handleScrambleNext, 800);
+  };
+
+  const handleScrambleShare = useCallback(() => {
+    const text = `${tq(translations.gamesPage.scrambleShareText)} ${scrambleScore} ${tq(translations.gamesPage.scrambleOf)} 5 ${tq(translations.gamesPage.scrambleWords)}! ${"⭐".repeat(scrambleScore)}${"☆".repeat(5 - scrambleScore)}\nthenashikkumbh.com/games`;
+    if (navigator.share) {
+      navigator.share({ text }).catch(() => {
+        navigator.clipboard.writeText(text);
+        setScrambleCopied(true);
+        setTimeout(() => setScrambleCopied(false), 2500);
+      });
+    } else {
+      navigator.clipboard.writeText(text);
+      setScrambleCopied(true);
+      setTimeout(() => setScrambleCopied(false), 2500);
+    }
+  }, [scrambleScore, tq]);
+
+  const handleScrambleRestart = () => {
+    setScrambleStarted(false);
+    setScrambleIndex(0);
+    setScrambleInput("");
+    setScrambleShowHint(false);
+    setScrambleCorrect(null);
+    setScrambleScore(0);
+    setScrambleDone(false);
+  };
+
+  /* ─── Quiz state (enhanced — random 5 from pool) ─── */
+  const quizQuestions = useMemo(() => {
+    const seed = Math.floor(Math.random() * 100000);
+    return shuffleArray(allQuizQuestions, seed).slice(0, 5);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const [quizStarted, setQuizStarted] = useState(false);
   const [currentQ, setCurrentQ] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [answered, setAnswered] = useState(false);
+  const [quizResults, setQuizResults] = useState<boolean[]>([]);
 
-  /* Form state */
-  const [formData, setFormData] = useState({
-    name: "",
-    organizer: "",
-    contact: "",
-    description: "",
-  });
-  const [formSubmitted, setFormSubmitted] = useState(false);
-
-  /* Quiz handlers */
   const handleOptionClick = (index: number) => {
     if (answered) return;
     setSelectedOption(index);
     setAnswered(true);
-    if (index === quizQuestions[currentQ].correctIndex) {
-      setScore((prev) => prev + 1);
-    }
+    const isCorrect = index === quizQuestions[currentQ].correctIndex;
+    if (isCorrect) setScore((prev) => prev + 1);
+    setQuizResults((prev) => [...prev, isCorrect]);
   };
 
   const handleNext = () => {
@@ -198,9 +588,30 @@ export default function GamesPage() {
     setScore(0);
     setShowResult(false);
     setAnswered(false);
+    setQuizResults([]);
   };
 
-  /* Form handlers */
+  const handleQuizShare = useCallback(() => {
+    const emoji = quizResults.map((r) => (r ? "🟢" : "🔴")).join("");
+    const text = `Kumbh Quiz ${emoji} ${score}/${quizQuestions.length}\nthenashikkumbh.com/games`;
+    if (navigator.share) {
+      navigator.share({ text }).catch(() => {
+        navigator.clipboard.writeText(text);
+      });
+    } else {
+      navigator.clipboard.writeText(text);
+    }
+  }, [quizResults, score, quizQuestions.length]);
+
+  /* ─── Form state ─── */
+  const [formData, setFormData] = useState({
+    name: "",
+    organizer: "",
+    contact: "",
+    description: "",
+  });
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
   const handleFormChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -214,8 +625,26 @@ export default function GamesPage() {
     setTimeout(() => setFormSubmitted(false), 5000);
   };
 
-  /* Helper to translate quiz strings */
-  const tq = (obj: TranslatedString): string => obj[locale as Locale] || obj.en;
+  /* ─── Result message helper ─── */
+  const getResultMessage = (s: number, total: number) => {
+    const pct = s / total;
+    if (pct === 1) return t(translations.gamesPage.perfectScore);
+    if (pct >= 0.6) return t(translations.gamesPage.greatScore);
+    if (pct >= 0.4) return t(translations.gamesPage.goodScore);
+    return t(translations.gamesPage.keepLearning);
+  };
+
+  /* ─── Shared card style ─── */
+  const cardStyle = {
+    background: "rgba(26,21,16,0.9)",
+    backdropFilter: "blur(20px)",
+    border: "1px solid rgba(212,168,67,0.15)",
+  };
+
+  const goldBtnStyle = {
+    background: "linear-gradient(135deg, #D4A843, #FFD700)",
+    boxShadow: "0 4px 20px rgba(212,168,67,0.3)",
+  };
 
   return (
     <>
@@ -226,18 +655,7 @@ export default function GamesPage() {
         <div
           aria-hidden="true"
           className="pointer-events-none absolute right-20 top-10 h-72 w-72 rounded-full"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(212,168,67,0.06) 0%, transparent 70%)",
-          }}
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute bottom-10 left-10 h-64 w-64 rounded-full"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(212,168,67,0.04) 0%, transparent 70%)",
-          }}
+          style={{ background: "radial-gradient(circle, rgba(212,168,67,0.06) 0%, transparent 70%)" }}
         />
 
         <div className="section-container relative z-10 text-center">
@@ -246,10 +664,7 @@ export default function GamesPage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             className="mb-4 inline-block font-devanagari text-5xl drop-shadow-lg"
-            style={{
-              color: "#D4A843",
-              textShadow: "0 0 30px rgba(212,168,67,0.4)",
-            }}
+            style={{ color: "#D4A843", textShadow: "0 0 30px rgba(212,168,67,0.4)" }}
             aria-hidden="true"
           >
             क्रीडा
@@ -282,11 +697,852 @@ export default function GamesPage() {
         </div>
       </section>
 
+      {/* ═══════════════════ DAILY KUMBH CHALLENGE ═══════════════════ */}
+      <section className="section-dark relative py-16 md:py-24">
+        <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full"
+          style={{ background: "radial-gradient(circle, rgba(212,168,67,0.06) 0%, transparent 70%)" }}
+        />
+        <div className="section-container relative z-10">
+          {/* Section Header */}
+          <motion.div
+            className="mb-12 text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={fadeUp}
+            custom={0}
+          >
+            <div className="mb-4 flex items-center justify-center gap-3">
+              <Calendar className="h-6 w-6" style={{ color: "#D4A843" }} />
+              <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#D4A843]">
+                {t(translations.gamesPage.dailyDay)} #{dayNumber}
+              </span>
+              {dailyStreak > 0 && (
+                <span className="inline-flex items-center gap-1 rounded-full bg-orange-500/10 border border-orange-500/20 px-3 py-1 text-xs font-medium text-orange-400">
+                  <Flame className="h-3.5 w-3.5" />
+                  {dailyStreak} {t(translations.gamesPage.dailyStreak)}
+                </span>
+              )}
+            </div>
+            <h2 className="font-heading text-3xl font-bold md:text-5xl">
+              <span className="gradient-text">
+                {t(translations.gamesPage.dailyTitle)}
+              </span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-cream-300/60">
+              {t(translations.gamesPage.dailySubtitle)}
+            </p>
+          </motion.div>
+
+          {/* Daily Challenge Card */}
+          <motion.div
+            className="mx-auto max-w-2xl overflow-hidden rounded-2xl"
+            style={cardStyle}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={1}
+          >
+            <div className="p-6 md:p-10">
+              <AnimatePresence mode="wait">
+                {/* Already played today */}
+                {dailyAlreadyPlayed && !dailyStarted && (
+                  <motion.div
+                    key="daily-done"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    className="text-center"
+                  >
+                    <div
+                      className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
+                      style={{
+                        background: "linear-gradient(135deg, rgba(34,197,94,0.2) 0%, rgba(34,197,94,0.05) 100%)",
+                        border: "2px solid rgba(34,197,94,0.3)",
+                      }}
+                    >
+                      <CheckCircle2 className="h-10 w-10 text-green-400" />
+                    </div>
+                    <h3 className="mb-4 text-xl font-bold text-cream-100">
+                      {t(translations.gamesPage.dailyCompleted)}
+                    </h3>
+
+                    {/* Emoji result grid */}
+                    <div className="mb-4 flex items-center justify-center gap-2">
+                      {dailySavedResults.map((r, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ delay: i * 0.1 }}
+                          className={`flex h-12 w-12 items-center justify-center rounded-xl text-xl font-bold ${
+                            r
+                              ? "bg-green-500/20 border border-green-500/40 text-green-400"
+                              : "bg-red-500/20 border border-red-500/40 text-red-400"
+                          }`}
+                        >
+                          {r ? "🟢" : "🔴"}
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    <p className="mb-2 font-heading text-4xl font-bold" style={{ color: "#D4A843" }}>
+                      {dailyScore}<span className="text-xl text-cream-300/40"> / 5</span>
+                    </p>
+                    <p className="mb-6 text-sm text-cream-300/50">
+                      {getResultMessage(dailyScore, 5)}
+                    </p>
+
+                    {/* Share + Timer */}
+                    <div className="flex flex-col items-center gap-4">
+                      <button
+                        onClick={handleDailyShare}
+                        className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                        style={goldBtnStyle}
+                      >
+                        {dailyCopied ? (
+                          <>
+                            <CheckCircle2 className="h-4 w-4" />
+                            {t(translations.gamesPage.dailyCopied)}
+                          </>
+                        ) : (
+                          <>
+                            <Share2 className="h-4 w-4" />
+                            {t(translations.gamesPage.dailyShare)}
+                          </>
+                        )}
+                      </button>
+                      <div className="flex items-center gap-2 text-sm text-cream-300/40">
+                        <Clock className="h-4 w-4" />
+                        {t(translations.gamesPage.dailyNextIn)} {hoursLeft} {t(translations.gamesPage.dailyHours)}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Start screen */}
+                {!dailyAlreadyPlayed && !dailyStarted && (
+                  <motion.div
+                    key="daily-start"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    className="text-center"
+                  >
+                    <div
+                      className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
+                      style={{
+                        background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
+                        border: "1px solid rgba(212,168,67,0.3)",
+                      }}
+                    >
+                      <Calendar className="h-10 w-10" style={{ color: "#D4A843" }} />
+                    </div>
+                    <p className="mb-2 text-lg font-semibold text-cream-100">
+                      {t(translations.gamesPage.dailyDay)} #{dayNumber}
+                    </p>
+                    <p className="mb-8 text-cream-300/60">
+                      {t(translations.gamesPage.dailySubtitle)}
+                    </p>
+                    <button
+                      onClick={() => setDailyStarted(true)}
+                      className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97]"
+                      style={goldBtnStyle}
+                    >
+                      <Sparkles className="h-4 w-4" />
+                      {t(translations.gamesPage.dailyPlay)}
+                    </button>
+                  </motion.div>
+                )}
+
+                {/* Question screen */}
+                {dailyStarted && !dailyDone && (
+                  <motion.div
+                    key={`daily-q-${dailyQ}`}
+                    initial={{ opacity: 0, x: 40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -40 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    {/* Progress dots */}
+                    <div className="mb-6 flex items-center justify-center gap-2">
+                      {[0, 1, 2, 3, 4].map((i) => (
+                        <div
+                          key={i}
+                          className={`h-2.5 w-8 rounded-full transition-all duration-300 ${
+                            i < dailyQ
+                              ? dailyResults[i]
+                                ? "bg-green-500"
+                                : "bg-red-500"
+                              : i === dailyQ
+                                ? "bg-[#D4A843]"
+                                : "bg-white/10"
+                          }`}
+                        />
+                      ))}
+                    </div>
+
+                    <div className="mb-2 text-center text-xs font-medium uppercase tracking-wider text-cream-300/40">
+                      {dailyQ + 1} / 5
+                    </div>
+
+                    <h3 className="mb-6 text-center text-xl font-bold text-cream-100 md:text-2xl">
+                      {tq(dailyQuestions[dailyQ].question)}
+                    </h3>
+
+                    <div className="space-y-3">
+                      {dailyQuestions[dailyQ].options.map((option, idx) => {
+                        const isSelected = dailySelected === idx;
+                        const isCorrect = idx === dailyQuestions[dailyQ].correctIndex;
+                        const showCorrect = dailyAnswered && isCorrect;
+                        const showWrong = dailyAnswered && isSelected && !isCorrect;
+
+                        let borderColor = "rgba(212,168,67,0.12)";
+                        let bgColor = "rgba(26,21,16,0.6)";
+                        if (showCorrect) {
+                          borderColor = "rgba(34,197,94,0.6)";
+                          bgColor = "rgba(34,197,94,0.1)";
+                        } else if (showWrong) {
+                          borderColor = "rgba(239,68,68,0.6)";
+                          bgColor = "rgba(239,68,68,0.1)";
+                        }
+
+                        return (
+                          <motion.button
+                            key={idx}
+                            onClick={() => handleDailyOption(idx)}
+                            className="flex w-full items-center gap-3 rounded-xl px-5 py-4 text-left transition-all duration-300"
+                            style={{ border: `1px solid ${borderColor}`, background: bgColor }}
+                            whileHover={!dailyAnswered ? { borderColor: "rgba(212,168,67,0.4)", background: "rgba(212,168,67,0.05)" } : {}}
+                            whileTap={!dailyAnswered ? { scale: 0.98 } : {}}
+                          >
+                            <span className="flex-1 text-cream-100">{tq(option)}</span>
+                            {showCorrect && <CheckCircle2 className="h-5 w-5 text-green-400" />}
+                            {showWrong && <XCircle className="h-5 w-5 text-red-400" />}
+                          </motion.button>
+                        );
+                      })}
+                    </div>
+
+                    <AnimatePresence>
+                      {dailyAnswered && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="mt-6 flex items-center justify-between"
+                        >
+                          <span className={`text-sm font-medium ${dailySelected === dailyQuestions[dailyQ].correctIndex ? "text-green-400" : "text-red-400"}`}>
+                            {dailySelected === dailyQuestions[dailyQ].correctIndex
+                              ? t(translations.gamesPage.correct)
+                              : t(translations.gamesPage.incorrect)}
+                          </span>
+                          <button
+                            onClick={handleDailyNext}
+                            className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                            style={{ background: "linear-gradient(135deg, #D4A843, #FFD700)" }}
+                          >
+                            {dailyQ < 4 ? t(translations.gamesPage.nextQuestion) : t(translations.gamesPage.seeResults)}
+                            <ChevronRight className="h-4 w-4" />
+                          </button>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                )}
+
+                {/* Results screen */}
+                {dailyDone && dailyStarted && (
+                  <motion.div
+                    key="daily-results"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="text-center"
+                  >
+                    <div
+                      className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full"
+                      style={{
+                        background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
+                        border: "2px solid rgba(212,168,67,0.3)",
+                      }}
+                    >
+                      <Trophy className="h-12 w-12" style={{ color: "#FFD700" }} />
+                    </div>
+
+                    <h3 className="mb-4 text-xl font-bold text-cream-100">
+                      {t(translations.gamesPage.dailyCompleted)}
+                    </h3>
+
+                    {/* Emoji result grid */}
+                    <div className="mb-4 flex items-center justify-center gap-2">
+                      {dailyResults.map((r, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ scale: 0, rotate: -180 }}
+                          animate={{ scale: 1, rotate: 0 }}
+                          transition={{ delay: i * 0.15, type: "spring" }}
+                          className={`flex h-14 w-14 items-center justify-center rounded-xl text-2xl font-bold ${
+                            r
+                              ? "bg-green-500/20 border border-green-500/40"
+                              : "bg-red-500/20 border border-red-500/40"
+                          }`}
+                        >
+                          {r ? "🟢" : "🔴"}
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    <p className="mb-2 font-heading text-5xl font-bold" style={{ color: "#D4A843" }}>
+                      {dailyScore}<span className="text-2xl text-cream-300/40"> / 5</span>
+                    </p>
+                    <p className="mb-8 text-sm text-cream-300/50">
+                      {getResultMessage(dailyScore, 5)}
+                    </p>
+
+                    <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                      <button
+                        onClick={handleDailyShare}
+                        className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                        style={goldBtnStyle}
+                      >
+                        {dailyCopied ? (
+                          <>
+                            <CheckCircle2 className="h-4 w-4" />
+                            {t(translations.gamesPage.dailyCopied)}
+                          </>
+                        ) : (
+                          <>
+                            <Share2 className="h-4 w-4" />
+                            {t(translations.gamesPage.dailyShare)}
+                          </>
+                        )}
+                      </button>
+                    </div>
+
+                    <div className="mt-6 flex items-center justify-center gap-2 text-sm text-cream-300/40">
+                      <Clock className="h-4 w-4" />
+                      {t(translations.gamesPage.dailyNextIn)} {hoursLeft} {t(translations.gamesPage.dailyHours)}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════════════════ SACRED DIVIDER ═══════════════════ */}
+      <div className="section-dark flex items-center justify-center py-4">
+        <div className="gold-line w-24" />
+        <span className="mx-4 font-devanagari text-2xl" style={{ color: "#D4A843", textShadow: "0 0 20px rgba(212,168,67,0.3)" }} aria-hidden="true">ॐ</span>
+        <div className="gold-line w-24" />
+      </div>
+
+      {/* ═══════════════════ WORD SCRAMBLE ═══════════════════ */}
+      <section className="section-dark relative py-16 md:py-24">
+        <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
+        <div className="section-container relative z-10">
+          <motion.div
+            className="mb-12 text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={fadeUp}
+            custom={0}
+          >
+            <div className="mb-4 flex items-center justify-center gap-2">
+              <Shuffle className="h-6 w-6" style={{ color: "#D4A843" }} />
+              <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#D4A843]">
+                {t(translations.gamesPage.scrambleTitle)}
+              </span>
+            </div>
+            <h2 className="font-heading text-3xl font-bold md:text-5xl">
+              <span className="gradient-text">{t(translations.gamesPage.scrambleTitle)}</span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-cream-300/60">
+              {t(translations.gamesPage.scrambleSubtitle)}
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="mx-auto max-w-2xl overflow-hidden rounded-2xl"
+            style={cardStyle}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={1}
+          >
+            <div className="p-6 md:p-10">
+              <AnimatePresence mode="wait">
+                {/* Start */}
+                {!scrambleStarted && !scrambleDone && (
+                  <motion.div
+                    key="scramble-start"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    className="text-center"
+                  >
+                    <div
+                      className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
+                      style={{
+                        background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
+                        border: "1px solid rgba(212,168,67,0.3)",
+                      }}
+                    >
+                      <Shuffle className="h-10 w-10" style={{ color: "#D4A843" }} />
+                    </div>
+                    <p className="mb-8 text-cream-300/60">
+                      {t(translations.gamesPage.scrambleSubtitle)}
+                    </p>
+                    <button
+                      onClick={() => setScrambleStarted(true)}
+                      className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                      style={goldBtnStyle}
+                    >
+                      <Sparkles className="h-4 w-4" />
+                      {t(translations.gamesPage.scramblePlay)}
+                    </button>
+                  </motion.div>
+                )}
+
+                {/* Playing */}
+                {scrambleStarted && !scrambleDone && (
+                  <motion.div
+                    key={`scramble-${scrambleIndex}`}
+                    initial={{ opacity: 0, x: 40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -40 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <div className="mb-6 flex items-center justify-between text-sm text-cream-300/40">
+                      <span>{scrambleIndex + 1} / 5</span>
+                      <span>{t(translations.gamesPage.yourScore)}: {scrambleScore}</span>
+                    </div>
+
+                    {/* Scrambled letters display */}
+                    <div className="mb-6 flex flex-wrap items-center justify-center gap-2">
+                      {scrambledLetters.split("").map((letter, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ scale: 0, rotate: -90 }}
+                          animate={{ scale: 1, rotate: 0 }}
+                          transition={{ delay: i * 0.05, type: "spring" }}
+                          className="flex h-12 w-12 items-center justify-center rounded-xl text-xl font-bold uppercase text-cream-100"
+                          style={{
+                            background: "rgba(212,168,67,0.1)",
+                            border: "1px solid rgba(212,168,67,0.25)",
+                          }}
+                        >
+                          {letter}
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    {/* Hint */}
+                    {scrambleShowHint && (
+                      <motion.p
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mb-4 text-center text-sm text-amber-400/80"
+                      >
+                        <Lightbulb className="mr-1 inline h-4 w-4" />
+                        {tq(scrambleWords[scrambleIndex].hint)}
+                      </motion.p>
+                    )}
+
+                    {/* Input */}
+                    {scrambleCorrect === null && (
+                      <div className="mb-4 flex gap-2">
+                        <input
+                          type="text"
+                          value={scrambleInput}
+                          onChange={(e) => setScrambleInput(e.target.value)}
+                          onKeyDown={(e) => e.key === "Enter" && handleScrambleSubmit()}
+                          placeholder={t(translations.gamesPage.scrambleTypeAnswer)}
+                          className="flex-1 rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all focus:border-[#D4A843]/50 focus:ring-1 focus:ring-[#D4A843]/30"
+                          style={{ borderColor: "rgba(212,168,67,0.15)" }}
+                          autoFocus
+                        />
+                        <button
+                          onClick={handleScrambleSubmit}
+                          className="rounded-xl px-6 py-3 text-sm font-semibold text-[#0D0906] transition-all hover:scale-[1.03] active:scale-[0.97]"
+                          style={{ background: "linear-gradient(135deg, #D4A843, #FFD700)" }}
+                        >
+                          <ArrowRight className="h-5 w-5" />
+                        </button>
+                      </div>
+                    )}
+
+                    {/* Correct/Wrong feedback */}
+                    {scrambleCorrect !== null && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mb-4 text-center"
+                      >
+                        <p className={`mb-1 text-lg font-bold ${scrambleCorrect ? "text-green-400" : "text-red-400"}`}>
+                          {scrambleCorrect ? t(translations.gamesPage.scrambleCorrect) : t(translations.gamesPage.incorrect)}
+                        </p>
+                        {!scrambleCorrect && (
+                          <p className="text-sm text-cream-300/50">
+                            {t(translations.gamesPage.dailyCorrectAnswer)}: <span className="font-semibold text-cream-100 uppercase">{scrambleWords[scrambleIndex].answer}</span>
+                          </p>
+                        )}
+                      </motion.div>
+                    )}
+
+                    {/* Action buttons */}
+                    <div className="flex items-center justify-between">
+                      {scrambleCorrect === null ? (
+                        <>
+                          <button
+                            onClick={() => setScrambleShowHint(true)}
+                            className="inline-flex items-center gap-1 text-sm text-amber-400/60 hover:text-amber-400 transition-colors"
+                            disabled={scrambleShowHint}
+                          >
+                            <Lightbulb className="h-4 w-4" />
+                            {t(translations.gamesPage.scrambleHint)}
+                          </button>
+                          <button
+                            onClick={handleScrambleSkip}
+                            className="text-sm text-cream-300/40 hover:text-cream-300/70 transition-colors"
+                          >
+                            {t(translations.gamesPage.scrambleSkip)} →
+                          </button>
+                        </>
+                      ) : (
+                        <div className="flex w-full justify-end">
+                          <button
+                            onClick={handleScrambleNext}
+                            className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0D0906] transition-all hover:scale-[1.03] active:scale-[0.97]"
+                            style={{ background: "linear-gradient(135deg, #D4A843, #FFD700)" }}
+                          >
+                            {scrambleIndex < 4 ? t(translations.gamesPage.scrambleNextWord) : t(translations.gamesPage.seeResults)}
+                            <ChevronRight className="h-4 w-4" />
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Scramble Results */}
+                {scrambleDone && (
+                  <motion.div
+                    key="scramble-results"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="text-center"
+                  >
+                    <div
+                      className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full"
+                      style={{
+                        background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
+                        border: "2px solid rgba(212,168,67,0.3)",
+                      }}
+                    >
+                      <Sparkles className="h-12 w-12" style={{ color: "#FFD700" }} />
+                    </div>
+
+                    <h3 className="mb-2 text-xl font-bold text-cream-100">
+                      {t(translations.gamesPage.scrambleComplete)}
+                    </h3>
+                    <p className="mb-2 font-heading text-5xl font-bold" style={{ color: "#D4A843" }}>
+                      {scrambleScore}<span className="text-2xl text-cream-300/40"> / 5</span>
+                    </p>
+                    {/* Star display */}
+                    <p className="mb-2 text-2xl">
+                      {"⭐".repeat(scrambleScore)}{"☆".repeat(5 - scrambleScore)}
+                    </p>
+                    <p className="mb-8 text-sm text-cream-300/50">
+                      {getResultMessage(scrambleScore, 5)}
+                    </p>
+
+                    <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+                      <button
+                        onClick={handleScrambleShare}
+                        className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all hover:scale-[1.03] active:scale-[0.97]"
+                        style={goldBtnStyle}
+                      >
+                        {scrambleCopied ? (
+                          <>
+                            <CheckCircle2 className="h-4 w-4" />
+                            {t(translations.gamesPage.dailyCopied)}
+                          </>
+                        ) : (
+                          <>
+                            <Share2 className="h-4 w-4" />
+                            {t(translations.gamesPage.dailyShare)}
+                          </>
+                        )}
+                      </button>
+                      <button
+                        onClick={handleScrambleRestart}
+                        className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium text-cream-100 transition-all hover:bg-white/5"
+                        style={{ borderColor: "rgba(212,168,67,0.3)" }}
+                      >
+                        <RotateCcw className="h-4 w-4" />
+                        {t(translations.gamesPage.tryAgain)}
+                      </button>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════════════════ SACRED DIVIDER ═══════════════════ */}
+      <div className="section-dark flex items-center justify-center py-4">
+        <div className="gold-line w-24" />
+        <span className="mx-4 font-devanagari text-2xl" style={{ color: "#D4A843", textShadow: "0 0 20px rgba(212,168,67,0.3)" }} aria-hidden="true">ॐ</span>
+        <div className="gold-line w-24" />
+      </div>
+
+      {/* ═══════════════════ SPIRITUAL QUIZ ═══════════════════ */}
+      <section className="section-dark relative py-16 md:py-24">
+        <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full"
+          style={{ background: "radial-gradient(circle, rgba(212,168,67,0.05) 0%, transparent 70%)" }}
+        />
+        <div className="section-container relative z-10">
+          <motion.div
+            className="mb-12 text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={fadeUp}
+            custom={0}
+          >
+            <div className="mb-4 flex items-center justify-center gap-2">
+              <Trophy className="h-6 w-6" style={{ color: "#D4A843" }} />
+              <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#D4A843]">Quiz</span>
+            </div>
+            <h2 className="font-heading text-3xl font-bold md:text-5xl">
+              <span className="gradient-text">{t(translations.gamesPage.quizTitle)}</span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-cream-300/60">
+              {t(translations.gamesPage.quizSubtitle)}
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="mx-auto max-w-2xl overflow-hidden rounded-2xl"
+            style={cardStyle}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={1}
+          >
+            <div className="p-6 md:p-10">
+              <AnimatePresence mode="wait">
+                {/* Start Screen */}
+                {!quizStarted && !showResult && (
+                  <motion.div
+                    key="start"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    className="text-center"
+                  >
+                    <div
+                      className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
+                      style={{
+                        background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
+                        border: "1px solid rgba(212,168,67,0.3)",
+                      }}
+                    >
+                      <Sparkles className="h-10 w-10" style={{ color: "#D4A843" }} />
+                    </div>
+                    <p className="mb-8 text-cream-300/60">{t(translations.gamesPage.quizSubtitle)}</p>
+                    <button
+                      onClick={() => setQuizStarted(true)}
+                      className="group relative inline-flex items-center overflow-hidden rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97]"
+                      style={goldBtnStyle}
+                    >
+                      {t(translations.gamesPage.startQuiz)}
+                    </button>
+                  </motion.div>
+                )}
+
+                {/* Question Screen */}
+                {quizStarted && !showResult && (
+                  <motion.div
+                    key={`q-${currentQ}`}
+                    initial={{ opacity: 0, x: 40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -40 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <div className="mb-6 flex items-center justify-between text-sm text-cream-300/40">
+                      <span>{currentQ + 1} / {quizQuestions.length}</span>
+                      <span>{t(translations.gamesPage.yourScore)}: {score}</span>
+                    </div>
+                    <div className="mb-8 h-1 w-full overflow-hidden rounded-full bg-white/5">
+                      <motion.div
+                        className="h-full rounded-full"
+                        style={{ background: "linear-gradient(90deg, #D4A843, #FFD700)" }}
+                        initial={{ width: 0 }}
+                        animate={{ width: `${((currentQ + 1) / quizQuestions.length) * 100}%` }}
+                        transition={{ duration: 0.5 }}
+                      />
+                    </div>
+
+                    <h3 className="mb-6 text-xl font-bold text-cream-100 md:text-2xl">
+                      {tq(quizQuestions[currentQ].question)}
+                    </h3>
+
+                    <div className="space-y-3">
+                      {quizQuestions[currentQ].options.map((option, idx) => {
+                        const isSelected = selectedOption === idx;
+                        const isCorrect = idx === quizQuestions[currentQ].correctIndex;
+                        const showCorrect = answered && isCorrect;
+                        const showWrong = answered && isSelected && !isCorrect;
+
+                        let borderColor = "rgba(212,168,67,0.12)";
+                        let bgColor = "rgba(26,21,16,0.6)";
+                        if (showCorrect) {
+                          borderColor = "rgba(34,197,94,0.6)";
+                          bgColor = "rgba(34,197,94,0.1)";
+                        } else if (showWrong) {
+                          borderColor = "rgba(239,68,68,0.6)";
+                          bgColor = "rgba(239,68,68,0.1)";
+                        }
+
+                        return (
+                          <motion.button
+                            key={idx}
+                            onClick={() => handleOptionClick(idx)}
+                            className="flex w-full items-center gap-3 rounded-xl px-5 py-4 text-left transition-all duration-300"
+                            style={{ border: `1px solid ${borderColor}`, background: bgColor }}
+                            whileHover={!answered ? { borderColor: "rgba(212,168,67,0.4)", background: "rgba(212,168,67,0.05)" } : {}}
+                            whileTap={!answered ? { scale: 0.98 } : {}}
+                          >
+                            <span className="flex-1 text-cream-100">{tq(option)}</span>
+                            {showCorrect && <CheckCircle2 className="h-5 w-5 text-green-400" />}
+                            {showWrong && <XCircle className="h-5 w-5 text-red-400" />}
+                          </motion.button>
+                        );
+                      })}
+                    </div>
+
+                    <AnimatePresence>
+                      {answered && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="mt-6 flex items-center justify-between"
+                        >
+                          <span className={`text-sm font-medium ${selectedOption === quizQuestions[currentQ].correctIndex ? "text-green-400" : "text-red-400"}`}>
+                            {selectedOption === quizQuestions[currentQ].correctIndex
+                              ? t(translations.gamesPage.correct)
+                              : t(translations.gamesPage.incorrect)}
+                          </span>
+                          <button
+                            onClick={handleNext}
+                            className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                            style={{ background: "linear-gradient(135deg, #D4A843, #FFD700)" }}
+                          >
+                            {currentQ < quizQuestions.length - 1 ? t(translations.gamesPage.nextQuestion) : t(translations.gamesPage.seeResults)}
+                          </button>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                )}
+
+                {/* Results Screen */}
+                {showResult && (
+                  <motion.div
+                    key="results"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="text-center"
+                  >
+                    <div
+                      className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full"
+                      style={{
+                        background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
+                        border: "2px solid rgba(212,168,67,0.3)",
+                      }}
+                    >
+                      <Trophy className="h-12 w-12" style={{ color: "#FFD700" }} />
+                    </div>
+
+                    <h3 className="mb-2 text-xl font-bold text-cream-100">{t(translations.gamesPage.yourScore)}</h3>
+
+                    {/* Emoji result grid */}
+                    <div className="mb-4 flex items-center justify-center gap-2">
+                      {quizResults.map((r, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          transition={{ delay: i * 0.1 }}
+                          className={`flex h-10 w-10 items-center justify-center rounded-lg text-lg ${
+                            r
+                              ? "bg-green-500/20 border border-green-500/40"
+                              : "bg-red-500/20 border border-red-500/40"
+                          }`}
+                        >
+                          {r ? "🟢" : "🔴"}
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    <p className="mb-2 font-heading text-6xl font-bold" style={{ color: "#D4A843" }}>
+                      {score}<span className="text-2xl text-cream-300/40"> / {quizQuestions.length}</span>
+                    </p>
+                    <p className="mb-8 text-sm text-cream-300/50">
+                      {getResultMessage(score, quizQuestions.length)}
+                    </p>
+
+                    <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+                      <button
+                        onClick={handleQuizShare}
+                        className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                        style={goldBtnStyle}
+                      >
+                        <Share2 className="h-4 w-4" />
+                        {t(translations.gamesPage.dailyShare)}
+                      </button>
+                      <button
+                        onClick={handleRestart}
+                        className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium text-cream-100 transition-all hover:bg-white/5"
+                        style={{ borderColor: "rgba(212,168,67,0.3)" }}
+                      >
+                        <RotateCcw className="h-4 w-4" />
+                        {t(translations.gamesPage.tryAgain)}
+                      </button>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════════════════ SACRED DIVIDER ═══════════════════ */}
+      <div className="section-dark flex items-center justify-center py-4">
+        <div className="gold-line w-24" />
+        <span className="mx-4 font-devanagari text-2xl" style={{ color: "#D4A843", textShadow: "0 0 20px rgba(212,168,67,0.3)" }} aria-hidden="true">ॐ</span>
+        <div className="gold-line w-24" />
+      </div>
+
       {/* ═══════════════════ FEATURED ACTIVITIES ═══════════════════ */}
       <section className="section-dark relative py-16 md:py-24">
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
         <div className="section-container relative z-10">
-          {/* Section Header */}
           <motion.div
             className="mb-16 text-center"
             initial="hidden"
@@ -295,20 +1551,15 @@ export default function GamesPage() {
             variants={fadeUp}
             custom={0}
           >
-            <span className="om-decoration mb-4 inline-block" aria-hidden="true">
-              ॐ
-            </span>
+            <span className="om-decoration mb-4 inline-block" aria-hidden="true">ॐ</span>
             <h2 className="font-heading text-3xl font-bold md:text-5xl">
-              <span className="gradient-text">
-                {t(translations.gamesPage.featuredTitle)}
-              </span>
+              <span className="gradient-text">{t(translations.gamesPage.featuredTitle)}</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-cream-300/60">
               {t(translations.gamesPage.featuredSubtitle)}
             </p>
           </motion.div>
 
-          {/* Activities Grid */}
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {activities.map((activity, index) => (
               <motion.div
@@ -330,44 +1581,25 @@ export default function GamesPage() {
                   y: -4,
                 }}
               >
-                {/* Card glow on hover */}
                 <div
                   className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                  style={{
-                    background:
-                      "radial-gradient(circle at 50% 0%, rgba(212,168,67,0.06) 0%, transparent 60%)",
-                  }}
+                  style={{ background: "radial-gradient(circle at 50% 0%, rgba(212,168,67,0.06) 0%, transparent 60%)" }}
                 />
-
                 <div className="relative p-6 md:p-8">
-                  {/* Icon */}
                   <div
                     className="mb-5 inline-flex items-center justify-center rounded-xl p-3"
                     style={{
-                      background:
-                        "linear-gradient(135deg, rgba(212,168,67,0.15) 0%, rgba(212,168,67,0.05) 100%)",
+                      background: "linear-gradient(135deg, rgba(212,168,67,0.15) 0%, rgba(212,168,67,0.05) 100%)",
                       border: "1px solid rgba(212,168,67,0.2)",
                     }}
                   >
                     <span style={{ color: "#D4A843" }}>{activity.icon}</span>
                   </div>
-
-                  {/* Badge */}
-                  <span
-                    className={`mb-4 inline-flex items-center rounded-full border bg-gradient-to-r px-3 py-1 text-xs font-medium ${activity.badgeColor}`}
-                  >
+                  <span className={`mb-4 inline-flex items-center rounded-full border bg-gradient-to-r px-3 py-1 text-xs font-medium ${activity.badgeColor}`}>
                     {t(activity.badgeKey)}
                   </span>
-
-                  {/* Title */}
-                  <h3 className="mb-2 text-lg font-bold text-cream-100 md:text-xl">
-                    {t(activity.titleKey)}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-sm leading-relaxed text-cream-300/60 md:text-base">
-                    {t(activity.descKey)}
-                  </p>
+                  <h3 className="mb-2 text-lg font-bold text-cream-100 md:text-xl">{t(activity.titleKey)}</h3>
+                  <p className="text-sm leading-relaxed text-cream-300/60 md:text-base">{t(activity.descKey)}</p>
                 </div>
               </motion.div>
             ))}
@@ -378,318 +1610,15 @@ export default function GamesPage() {
       {/* ═══════════════════ SACRED DIVIDER ═══════════════════ */}
       <div className="section-dark flex items-center justify-center py-4">
         <div className="gold-line w-24" />
-        <span
-          className="mx-4 font-devanagari text-2xl"
-          style={{ color: "#D4A843", textShadow: "0 0 20px rgba(212,168,67,0.3)" }}
-          aria-hidden="true"
-        >
-          ॐ
-        </span>
-        <div className="gold-line w-24" />
-      </div>
-
-      {/* ═══════════════════ SPIRITUAL QUIZ ═══════════════════ */}
-      <section className="section-dark relative py-16 md:py-24">
-        <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(212,168,67,0.05) 0%, transparent 70%)",
-          }}
-        />
-        <div className="section-container relative z-10">
-          {/* Section Header */}
-          <motion.div
-            className="mb-12 text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={fadeUp}
-            custom={0}
-          >
-            <div className="mb-4 flex items-center justify-center gap-2">
-              <Trophy className="h-6 w-6" style={{ color: "#D4A843" }} />
-              <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#D4A843]">
-                Quiz
-              </span>
-            </div>
-            <h2 className="font-heading text-3xl font-bold md:text-5xl">
-              <span className="gradient-text">
-                {t(translations.gamesPage.quizTitle)}
-              </span>
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-cream-300/60">
-              {t(translations.gamesPage.quizSubtitle)}
-            </p>
-          </motion.div>
-
-          {/* Quiz Card */}
-          <motion.div
-            className="mx-auto max-w-2xl overflow-hidden rounded-2xl"
-            style={{
-              background: "rgba(26,21,16,0.9)",
-              backdropFilter: "blur(20px)",
-              border: "1px solid rgba(212,168,67,0.15)",
-            }}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            custom={1}
-          >
-            <div className="p-6 md:p-10">
-              <AnimatePresence mode="wait">
-                {/* Start Screen */}
-                {!quizStarted && !showResult && (
-                  <motion.div
-                    key="start"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    className="text-center"
-                  >
-                    <div
-                      className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
-                        border: "1px solid rgba(212,168,67,0.3)",
-                      }}
-                    >
-                      <Sparkles className="h-10 w-10" style={{ color: "#D4A843" }} />
-                    </div>
-                    <p className="mb-8 text-cream-300/60">
-                      {t(translations.gamesPage.quizSubtitle)}
-                    </p>
-                    <button
-                      onClick={() => setQuizStarted(true)}
-                      className="group relative inline-flex items-center overflow-hidden rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97]"
-                      style={{
-                        background: "linear-gradient(135deg, #D4A843, #FFD700)",
-                        boxShadow: "0 4px 20px rgba(212,168,67,0.3)",
-                      }}
-                    >
-                      {t(translations.gamesPage.startQuiz)}
-                    </button>
-                  </motion.div>
-                )}
-
-                {/* Question Screen */}
-                {quizStarted && !showResult && (
-                  <motion.div
-                    key={`q-${currentQ}`}
-                    initial={{ opacity: 0, x: 40 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -40 }}
-                    transition={{ duration: 0.4 }}
-                  >
-                    {/* Progress */}
-                    <div className="mb-6 flex items-center justify-between text-sm text-cream-300/40">
-                      <span>
-                        {currentQ + 1} / {quizQuestions.length}
-                      </span>
-                      <span>
-                        {t(translations.gamesPage.yourScore)}: {score}
-                      </span>
-                    </div>
-                    <div className="mb-8 h-1 w-full overflow-hidden rounded-full bg-white/5">
-                      <motion.div
-                        className="h-full rounded-full"
-                        style={{
-                          background: "linear-gradient(90deg, #D4A843, #FFD700)",
-                        }}
-                        initial={{ width: 0 }}
-                        animate={{
-                          width: `${((currentQ + 1) / quizQuestions.length) * 100}%`,
-                        }}
-                        transition={{ duration: 0.5 }}
-                      />
-                    </div>
-
-                    {/* Question */}
-                    <h3 className="mb-6 text-xl font-bold text-cream-100 md:text-2xl">
-                      {tq(quizQuestions[currentQ].question)}
-                    </h3>
-
-                    {/* Options */}
-                    <div className="space-y-3">
-                      {quizQuestions[currentQ].options.map((option, idx) => {
-                        const isSelected = selectedOption === idx;
-                        const isCorrect =
-                          idx === quizQuestions[currentQ].correctIndex;
-                        const showCorrect = answered && isCorrect;
-                        const showWrong = answered && isSelected && !isCorrect;
-
-                        let borderColor = "rgba(212,168,67,0.12)";
-                        let bgColor = "rgba(26,21,16,0.6)";
-                        if (showCorrect) {
-                          borderColor = "rgba(34,197,94,0.6)";
-                          bgColor = "rgba(34,197,94,0.1)";
-                        } else if (showWrong) {
-                          borderColor = "rgba(239,68,68,0.6)";
-                          bgColor = "rgba(239,68,68,0.1)";
-                        }
-
-                        return (
-                          <motion.button
-                            key={idx}
-                            onClick={() => handleOptionClick(idx)}
-                            className="flex w-full items-center gap-3 rounded-xl px-5 py-4 text-left transition-all duration-300"
-                            style={{
-                              border: `1px solid ${borderColor}`,
-                              background: bgColor,
-                            }}
-                            whileHover={
-                              !answered
-                                ? {
-                                    borderColor: "rgba(212,168,67,0.4)",
-                                    background: "rgba(212,168,67,0.05)",
-                                  }
-                                : {}
-                            }
-                            whileTap={!answered ? { scale: 0.98 } : {}}
-                          >
-                            <span className="flex-1 text-cream-100">
-                              {tq(option)}
-                            </span>
-                            {showCorrect && (
-                              <CheckCircle2 className="h-5 w-5 text-green-400" />
-                            )}
-                            {showWrong && (
-                              <XCircle className="h-5 w-5 text-red-400" />
-                            )}
-                          </motion.button>
-                        );
-                      })}
-                    </div>
-
-                    {/* Feedback + Next */}
-                    <AnimatePresence>
-                      {answered && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          className="mt-6 flex items-center justify-between"
-                        >
-                          <span
-                            className={`text-sm font-medium ${
-                              selectedOption ===
-                              quizQuestions[currentQ].correctIndex
-                                ? "text-green-400"
-                                : "text-red-400"
-                            }`}
-                          >
-                            {selectedOption ===
-                            quizQuestions[currentQ].correctIndex
-                              ? t(translations.gamesPage.correct)
-                              : t(translations.gamesPage.incorrect)}
-                          </span>
-                          <button
-                            onClick={handleNext}
-                            className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
-                            style={{
-                              background:
-                                "linear-gradient(135deg, #D4A843, #FFD700)",
-                            }}
-                          >
-                            {currentQ < quizQuestions.length - 1
-                              ? t(translations.gamesPage.nextQuestion)
-                              : t(translations.gamesPage.seeResults)}
-                          </button>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                )}
-
-                {/* Results Screen */}
-                {showResult && (
-                  <motion.div
-                    key="results"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="text-center"
-                  >
-                    <div
-                      className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
-                        border: "2px solid rgba(212,168,67,0.3)",
-                      }}
-                    >
-                      <Trophy className="h-12 w-12" style={{ color: "#FFD700" }} />
-                    </div>
-
-                    <h3 className="mb-2 text-xl font-bold text-cream-100">
-                      {t(translations.gamesPage.yourScore)}
-                    </h3>
-                    <p
-                      className="mb-2 font-heading text-6xl font-bold"
-                      style={{ color: "#D4A843" }}
-                    >
-                      {score}
-                      <span className="text-2xl text-cream-300/40">
-                        {" "}
-                        / {quizQuestions.length}
-                      </span>
-                    </p>
-                    <p className="mb-8 text-cream-300/50">
-                      {score === quizQuestions.length
-                        ? "🙏"
-                        : score >= 3
-                          ? "✨"
-                          : "📿"}
-                    </p>
-
-                    <button
-                      onClick={handleRestart}
-                      className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
-                      style={{
-                        background: "linear-gradient(135deg, #D4A843, #FFD700)",
-                        boxShadow: "0 4px 20px rgba(212,168,67,0.3)",
-                      }}
-                    >
-                      <RotateCcw className="h-4 w-4" />
-                      {t(translations.gamesPage.tryAgain)}
-                    </button>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ═══════════════════ SACRED DIVIDER ═══════════════════ */}
-      <div className="section-dark flex items-center justify-center py-4">
-        <div className="gold-line w-24" />
-        <span
-          className="mx-4 font-devanagari text-2xl"
-          style={{ color: "#D4A843", textShadow: "0 0 20px rgba(212,168,67,0.3)" }}
-          aria-hidden="true"
-        >
-          ॐ
-        </span>
+        <span className="mx-4 font-devanagari text-2xl" style={{ color: "#D4A843", textShadow: "0 0 20px rgba(212,168,67,0.3)" }} aria-hidden="true">ॐ</span>
         <div className="gold-line w-24" />
       </div>
 
       {/* ═══════════════════ HOST YOUR OWN ACTIVITY ═══════════════════ */}
       <section className="section-dark relative py-16 md:py-24">
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute right-0 top-20 h-80 w-80 rounded-full"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(212,168,67,0.04) 0%, transparent 70%)",
-          }}
-        />
         <div className="section-container relative z-10">
           <div className="mx-auto max-w-3xl">
-            {/* Section Header */}
             <motion.div
               className="mb-12 text-center"
               initial="hidden"
@@ -698,31 +1627,19 @@ export default function GamesPage() {
               variants={fadeUp}
               custom={0}
             >
-              <span
-                className="om-decoration mb-4 inline-block"
-                aria-hidden="true"
-              >
-                ॐ
-              </span>
+              <span className="om-decoration mb-4 inline-block" aria-hidden="true">ॐ</span>
               <h2 className="font-heading text-3xl font-bold md:text-5xl">
-                <span className="gradient-text">
-                  {t(translations.gamesPage.hostTitle)}
-                </span>
+                <span className="gradient-text">{t(translations.gamesPage.hostTitle)}</span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-cream-300/60">
                 {t(translations.gamesPage.hostSubtitle)}
               </p>
             </motion.div>
 
-            {/* Form */}
             <motion.form
               onSubmit={handleFormSubmit}
               className="overflow-hidden rounded-2xl"
-              style={{
-                background: "rgba(26,21,16,0.9)",
-                backdropFilter: "blur(20px)",
-                border: "1px solid rgba(212,168,67,0.15)",
-              }}
+              style={cardStyle}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -730,101 +1647,59 @@ export default function GamesPage() {
               custom={1}
             >
               <div className="space-y-6 p-6 md:p-10">
-                {/* Activity Name */}
                 <div>
-                  <label
-                    htmlFor="name"
-                    className="mb-2 block text-sm font-medium text-cream-300/70"
-                  >
+                  <label htmlFor="name" className="mb-2 block text-sm font-medium text-cream-300/70">
                     {t(translations.gamesPage.formName)}
                   </label>
                   <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleFormChange}
+                    id="name" name="name" type="text" required
+                    value={formData.name} onChange={handleFormChange}
                     className="w-full rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all duration-300 focus:border-[#D4A843]/50 focus:ring-1 focus:ring-[#D4A843]/30"
                     style={{ borderColor: "rgba(212,168,67,0.15)" }}
                   />
                 </div>
-
-                {/* Organizer Name */}
                 <div>
-                  <label
-                    htmlFor="organizer"
-                    className="mb-2 block text-sm font-medium text-cream-300/70"
-                  >
+                  <label htmlFor="organizer" className="mb-2 block text-sm font-medium text-cream-300/70">
                     {t(translations.gamesPage.formOrganizer)}
                   </label>
                   <input
-                    id="organizer"
-                    name="organizer"
-                    type="text"
-                    required
-                    value={formData.organizer}
-                    onChange={handleFormChange}
+                    id="organizer" name="organizer" type="text" required
+                    value={formData.organizer} onChange={handleFormChange}
                     className="w-full rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all duration-300 focus:border-[#D4A843]/50 focus:ring-1 focus:ring-[#D4A843]/30"
                     style={{ borderColor: "rgba(212,168,67,0.15)" }}
                   />
                 </div>
-
-                {/* Contact Number */}
                 <div>
-                  <label
-                    htmlFor="contact"
-                    className="mb-2 block text-sm font-medium text-cream-300/70"
-                  >
+                  <label htmlFor="contact" className="mb-2 block text-sm font-medium text-cream-300/70">
                     {t(translations.gamesPage.formContact)}
                   </label>
                   <input
-                    id="contact"
-                    name="contact"
-                    type="text"
-                    required
-                    value={formData.contact}
-                    onChange={handleFormChange}
+                    id="contact" name="contact" type="text" required
+                    value={formData.contact} onChange={handleFormChange}
                     className="w-full rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all duration-300 focus:border-[#D4A843]/50 focus:ring-1 focus:ring-[#D4A843]/30"
                     style={{ borderColor: "rgba(212,168,67,0.15)" }}
                   />
                 </div>
-
-                {/* Activity Description */}
                 <div>
-                  <label
-                    htmlFor="description"
-                    className="mb-2 block text-sm font-medium text-cream-300/70"
-                  >
+                  <label htmlFor="description" className="mb-2 block text-sm font-medium text-cream-300/70">
                     {t(translations.gamesPage.formDescription)}
                   </label>
                   <textarea
-                    id="description"
-                    name="description"
-                    required
-                    rows={4}
-                    value={formData.description}
-                    onChange={handleFormChange}
+                    id="description" name="description" required rows={4}
+                    value={formData.description} onChange={handleFormChange}
                     className="w-full resize-none rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all duration-300 focus:border-[#D4A843]/50 focus:ring-1 focus:ring-[#D4A843]/30"
                     style={{ borderColor: "rgba(212,168,67,0.15)" }}
                   />
                 </div>
-
-                {/* Submit Button */}
                 <div className="flex items-center justify-between">
                   <button
                     type="submit"
                     className="group inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97]"
-                    style={{
-                      background: "linear-gradient(135deg, #D4A843, #FFD700)",
-                      boxShadow: "0 4px 20px rgba(212,168,67,0.3)",
-                    }}
+                    style={goldBtnStyle}
                   >
                     <Send className="h-4 w-4" />
                     {t(translations.gamesPage.formSubmit)}
                   </button>
-
-                  {/* Success message */}
                   <AnimatePresence>
                     {formSubmitted && (
                       <motion.span
