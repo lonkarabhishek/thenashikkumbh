@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -13,277 +14,16 @@ import {
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
 import type { Locale } from "@/i18n/translations";
+import { blogArticles } from "@/data/blogData";
 
 /* ───────────────────────────── types ───────────────────────────── */
 
-type TranslatedString = { en: string; hi: string; mr: string };
-
 type NewsCategory = "kumbh" | "infra" | "govt" | "culture";
 
-interface NewsArticle {
-  id: number;
-  title: TranslatedString;
-  date: string;
-  source: string;
-  category: NewsCategory;
-  summary: TranslatedString;
-  image: string;
-}
-
-/* ───────────────────────────── news data ───────────────────────── */
-
-const newsArticles: NewsArticle[] = [
-  {
-    id: 1,
-    title: {
-      en: "Nashik Kumbh Mela 2027 to Begin with Flag Hoisting on October 31, 2026",
-      hi: "नासिक कुंभ मेला 2027: 31 अक्टूबर 2026 को ध्वजारोहण से शुरुआत",
-      mr: "नाशिक कुंभमेळा 2027: 31 ऑक्टोबर 2026 रोजी ध्वजारोहणाने सुरुवात",
-    },
-    date: "2025-12-15",
-    source: "Deccan Chronicle",
-    category: "kumbh",
-    image: "/images/gallery/kumbh-1.jpg",
-    summary: {
-      en: "The Simhastha Kumbh Mela will officially commence on October 31, 2026. The three key Amrit Snan dates are August 2, August 31, and September 11-12, 2027.",
-      hi: "सिंहस्थ कुंभ मेला आधिकारिक रूप से 31 अक्टूबर 2026 को शुरू होगा। तीन प्रमुख अमृत स्नान तिथियां 2 अगस्त, 31 अगस्त और 11-12 सितंबर 2027 हैं।",
-      mr: "सिंहस्थ कुंभमेळा अधिकृतपणे 31 ऑक्टोबर 2026 रोजी सुरू होईल. तीन प्रमुख अमृत स्नान तिथी 2 ऑगस्ट, 31 ऑगस्ट आणि 11-12 सप्टेंबर 2027 आहेत.",
-    },
-  },
-  {
-    id: 2,
-    title: {
-      en: "Maharashtra Govt Approves Rs 25,055 Crore for 2027 Nashik Kumbh Mela",
-      hi: "महाराष्ट्र सरकार ने कुंभ 2027 के लिए 25,055 करोड़ मंजूर",
-      mr: "महाराष्ट्र शासनाने कुंभ 2027 साठी 25,055 कोटी मंजूर",
-    },
-    date: "2025-11-20",
-    source: "Free Press Journal",
-    category: "govt",
-    image: "/images/gallery/kumbh-4.jpg",
-    summary: {
-      en: "The Maharashtra government approved a massive Rs 25,055 crore development plan to transform Nashik into a world-class spiritual destination. An estimated 15-20 crore devotees are expected.",
-      hi: "महाराष्ट्र सरकार ने नासिक को विश्व स्तरीय आध्यात्मिक स्थल में बदलने के लिए 25,055 करोड़ रुपये की विकास योजना को मंजूरी दी। अनुमानित 15-20 करोड़ भक्तों के आने की उम्मीद है।",
-      mr: "महाराष्ट्र शासनाने नाशिकला जागतिक दर्जाचे आध्यात्मिक स्थळ बनवण्यासाठी 25,055 कोटी रुपयांच्या विकास योजनेला मंजुरी दिली. अंदाजे 15-20 कोटी भाविक अपेक्षित आहेत.",
-    },
-  },
-  {
-    id: 3,
-    title: {
-      en: "CM Fadnavis Sets Strict Deadlines for Kumbh Infrastructure",
-      hi: "मुख्यमंत्री फडणवीस ने कुंभ बुनियादी ढांचे के लिए सख्त समय सीमा",
-      mr: "मुख्यमंत्री फडणवीस यांनी कुंभ पायाभूत सुविधांसाठी कडक मुदत",
-    },
-    date: "2025-10-08",
-    source: "Swarajya Magazine",
-    category: "infra",
-    image: "/images/gallery/kumbh-8.jpg",
-    summary: {
-      en: "CM Fadnavis set strict deadlines for infrastructure completion. The event is planned as the most technology-enabled Kumbh ever, with AI for crowd monitoring. Rs 4,000 crore worth of projects initiated.",
-      hi: "मुख्यमंत्री फडणवीस ने बुनियादी ढांचे के पूरा होने के लिए सख्त समय सीमा निर्धारित की। यह अब तक का सबसे तकनीकी कुंभ होगा।",
-      mr: "मुख्यमंत्री फडणवीस यांनी पायाभूत सुविधा पूर्ण करण्यासाठी कडक मुदती ठरवल्या. हा आतापर्यंतचा सर्वात तंत्रज्ञानयुक्त कुंभ असेल.",
-    },
-  },
-  {
-    id: 4,
-    title: {
-      en: "Rs 8,000-Crore Ring Road Project Cleared for Nashik Kumbh",
-      hi: "नासिक कुंभ के लिए 8,000 करोड़ का रिंग रोड मंजूर",
-      mr: "नाशिक कुंभासाठी 8,000 कोटींचा रिंग रोड मंजूर",
-    },
-    date: "2025-09-15",
-    source: "Lokmat Times",
-    category: "infra",
-    image: "/images/gallery/kumbh-5.jpg",
-    summary: {
-      en: "An ambitious 91-km ring road around Nashik city, estimated at Rs 8,000 crore, has been cleared. Rs 2,270 crore allocated for 289 km of road development.",
-      hi: "नासिक शहर के चारों ओर 91 किमी का 8,000 करोड़ रुपये का रिंग रोड प्रोजेक्ट मंजूर हुआ। 289 किमी सड़कों के लिए 2,270 करोड़ आवंटित।",
-      mr: "नाशिक शहराभोवती 91 किमीचा 8,000 कोटींचा रिंग रोड प्रकल्प मंजूर. 289 किमी रस्त्यांसाठी 2,270 कोटी मंजूर.",
-    },
-  },
-  {
-    id: 5,
-    title: {
-      en: "Railways Begin Preparations for Nashik Simhastha 2027",
-      hi: "रेलवे ने नासिक सिंहस्थ 2027 की तैयारी शुरू की",
-      mr: "रेल्वेने नाशिक सिंहस्थ 2027 ची तयारी सुरू केली",
-    },
-    date: "2025-08-22",
-    source: "All India Radio",
-    category: "infra",
-    image: "/images/gallery/kumbh-9.jpg",
-    summary: {
-      en: "The Ministry of Railways commenced preparations with comprehensive infrastructure upgrades. 4,500 buses planned for pilgrim transport, 8-10 helipads for emergency access.",
-      hi: "रेल मंत्रालय ने व्यापक बुनियादी ढांचा उन्नयन शुरू किया। 4,500 बसों और 8-10 हेलीपैड की योजना।",
-      mr: "रेल्वे मंत्रालयाने सर्वसमावेशक पायाभूत सुविधा उन्नयन सुरू केले. 4,500 बसेस आणि 8-10 हेलिपॅडचे नियोजन.",
-    },
-  },
-  {
-    id: 6,
-    title: {
-      en: "NTKMA Approves Major Phase 2 Infrastructure at Trimbakeshwar",
-      hi: "एनटीकेएमए ने त्र्यंबकेश्वर में प्रमुख चरण 2 बुनियादी ढांचा मंजूर",
-      mr: "एनटीकेएमएने त्र्यंबकेश्वरमध्ये प्रमुख फेज 2 पायाभूत सुविधा मंजूर",
-    },
-    date: "2025-07-10",
-    source: "Free Press Journal",
-    category: "infra",
-    image: "/images/gallery/kumbh-6.jpg",
-    summary: {
-      en: "NTKMA approved Phase 2 development at Trimbakeshwar worth Rs 390 crore, including Darshan Path, ghats redevelopment, Shahi Marg reconstruction, and vendor zones.",
-      hi: "एनटीकेएमए ने त्र्यंबकेश्वर में 390 करोड़ रुपये के चरण 2 विकास को मंजूरी दी, जिसमें दर्शन पथ, घाट पुनर्विकास और शाही मार्ग शामिल।",
-      mr: "एनटीकेएमएने त्र्यंबकेश्वरमध्ये 390 कोटींच्या फेज 2 विकासाला मंजुरी दिली, ज्यात दर्शन पथ, घाट पुनर्विकास आणि शाही मार्ग यांचा समावेश.",
-    },
-  },
-  {
-    id: 7,
-    title: {
-      en: "Nashik Launches 'Plastic to Fuel' Drive in 200 Schools",
-      hi: "नासिक ने 200 स्कूलों में 'प्लास्टिक से ईंधन' अभियान शुरू",
-      mr: "नाशिकने 200 शाळांमध्ये 'प्लास्टिक ते इंधन' मोहीम सुरू केली",
-    },
-    date: "2025-06-05",
-    source: "Free Press Journal",
-    category: "culture",
-    image: "/images/gallery/kumbh-7.jpg",
-    summary: {
-      en: "A 'Plastic to Fuel' campaign launched across 200 schools to make Nashik plastic-free before Kumbh. Rs 2,000 crore allocated for Godavari River cleaning.",
-      hi: "कुंभ से पहले नासिक को प्लास्टिक-मुक्त बनाने के लिए 200 स्कूलों में 'प्लास्टिक से ईंधन' अभियान। गोदावरी सफाई के लिए 2,000 करोड़।",
-      mr: "कुंभापूर्वी नाशिक प्लास्टिकमुक्त करण्यासाठी 200 शाळांमध्ये 'प्लास्टिक ते इंधन' मोहीम. गोदावरी स्वच्छतेसाठी 2,000 कोटी.",
-    },
-  },
-  {
-    id: 8,
-    title: {
-      en: "Mobility Planning for Simhastha Focuses on Rural Connectivity",
-      hi: "सिंहस्थ गतिशीलता योजना ग्रामीण कनेक्टिविटी पर केंद्रित",
-      mr: "सिंहस्थ गतिशीलता योजना ग्रामीण जोडणीवर केंद्रित",
-    },
-    date: "2025-05-18",
-    source: "Punekar News",
-    category: "infra",
-    image: "/images/gallery/kumbh-10.jpg",
-    summary: {
-      en: "Comprehensive mobility plan with focus on rural Nashik-Trimbakeshwar connectivity. Major bus stations to be renovated. Ring road and helipads planned.",
-      hi: "ग्रामीण नासिक-त्र्यंबकेश्वर कनेक्टिविटी पर केंद्रित व्यापक गतिशीलता योजना। प्रमुख बस स्टेशनों का नवीनीकरण।",
-      mr: "ग्रामीण नाशिक-त्र्यंबकेश्वर जोडणीवर केंद्रित सर्वसमावेशक गतिशीलता योजना. प्रमुख बस स्थानकांचे नूतनीकरण.",
-    },
-  },
-  {
-    id: 9,
-    title: {
-      en: "Tent Cities and Helicopter Service Planned for Jyotirlinga Circuit",
-      hi: "ज्योतिर्लिंग सर्किट के लिए तंबू शहर और हेलीकॉप्टर सेवा",
-      mr: "ज्योतिर्लिंग परिक्रमेसाठी तंबू शहर आणि हेलिकॉप्टर सेवा",
-    },
-    date: "2025-04-25",
-    source: "Free Press Journal",
-    category: "kumbh",
-    image: "/images/ramkund.jpg",
-    summary: {
-      en: "Plans for tent cities and helicopter service connecting Jyotirlinga pilgrimage circuit. NMC to acquire 250+ acres for Sadhugram with full amenities.",
-      hi: "ज्योतिर्लिंग सर्किट को जोड़ने वाली तंबू शहर और हेलीकॉप्टर सेवा की योजना। साधुग्राम के लिए 250+ एकड़ भूमि अधिग्रहण।",
-      mr: "ज्योतिर्लिंग परिक्रमेला जोडणाऱ्या तंबू शहर आणि हेलिकॉप्टर सेवेची योजना. साधुग्रामसाठी 250+ एकर जमीन संपादन.",
-    },
-  },
-  {
-    id: 10,
-    title: {
-      en: "Maharashtra Government Gears Up for Nashik Kumbh Mela 2027",
-      hi: "महाराष्ट्र सरकार नासिक कुंभ मेला 2027 की तैयारी में जुटी",
-      mr: "महाराष्ट्र शासन नाशिक कुंभमेळा 2027 च्या तयारीला लागले",
-    },
-    date: "2025-03-29",
-    source: "ANI News",
-    category: "govt",
-    image: "/images/gallery/kumbh-3.jpg",
-    summary: {
-      en: "CM Fadnavis announced this edition would be the most technologically advanced Kumbh Mela in history. The 21-month duration was planned to distribute crowds and improve safety.",
-      hi: "मुख्यमंत्री फडणवीस ने घोषणा की कि यह इतिहास का सबसे तकनीकी रूप से उन्नत कुंभ होगा। 21 महीने की अवधि भीड़ वितरण और सुरक्षा सुधार के लिए।",
-      mr: "मुख्यमंत्री फडणवीस यांनी घोषणा केली की हा इतिहासातील सर्वात तंत्रज्ञानदृष्ट्या प्रगत कुंभ असेल. 21 महिन्यांचा कालावधी गर्दी वितरण आणि सुरक्षा सुधारणांसाठी.",
-    },
-  },
-  {
-    id: 11,
-    title: {
-      en: "Monsoon-Ready Tent City Plans Reviewed for Simhastha 2027",
-      hi: "सिंहस्थ 2027 के लिए मानसून-तैयार तंबू शहर की योजना",
-      mr: "सिंहस्थ 2027 साठी मान्सून-तयार तंबू शहराची योजना",
-    },
-    date: "2026-02-12",
-    source: "Punekar News",
-    category: "kumbh",
-    image: "/images/gallery/kumbh-2.jpg",
-    summary: {
-      en: "NTKMA finalized climate-resilient tent city plans. Bamboo-based storm-proof structures designed for monsoon season. Commissioner aims to eliminate past service gaps.",
-      hi: "एनटीकेएमए ने मानसून-तैयार तंबू शहर की योजना तैयार की। बांस-आधारित तूफान-रोधी संरचनाएं डिजाइन।",
-      mr: "एनटीकेएमएने मान्सून-तयार तंबू शहराची योजना तयार केली. बांबू-आधारित वादळरोधी संरचना डिझाइन.",
-    },
-  },
-  {
-    id: 12,
-    title: {
-      en: "Telangana Delegation Visits Nashik to Study Kumbh Preparations",
-      hi: "तेलंगाना प्रतिनिधिमंडल ने कुंभ तैयारियों का अध्ययन किया",
-      mr: "तेलंगाणा शिष्टमंडळाने कुंभ तयारीचा अभ्यास केला",
-    },
-    date: "2026-01-20",
-    source: "Free Press Journal",
-    category: "govt",
-    image: "/images/panchavati.jpg",
-    summary: {
-      en: "A Telangana government delegation visited Nashik to draw insights for Godavari Pushkaram 2027. They toured Ramkund, Panchavati, and Kalaram Temple to assess infrastructure.",
-      hi: "तेलंगाना सरकार का प्रतिनिधिमंडल गोदावरी पुष्करम 2027 के लिए अंतर्दृष्टि प्राप्त करने हेतु नासिक आया। रामकुंड और पंचवटी का दौरा किया।",
-      mr: "गोदावरी पुष्करम 2027 साठी अंतर्दृष्टी मिळवण्यासाठी तेलंगाणा शिष्टमंडळाने नाशिकला भेट दिली. रामकुंड आणि पंचवटीला भेट.",
-    },
-  },
-];
-
 /* sort newest first */
-const sortedArticles = [...newsArticles].sort(
+const sortedArticles = [...blogArticles].sort(
   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
 );
-
-/* ───────────────────────────── existing blog posts ───────────── */
-
-const placeholderPosts = [
-  {
-    slug: "what-is-kumbh-mela",
-    titleKey: "post1Title" as const,
-    excerptKey: "post1Excerpt" as const,
-    categoryKey: "catGuide" as const,
-  },
-  {
-    slug: "shahi-snan-significance",
-    titleKey: "post2Title" as const,
-    excerptKey: "post2Excerpt" as const,
-    categoryKey: "catSpirituality" as const,
-  },
-  {
-    slug: "nashik-ramayana-connection",
-    titleKey: "post3Title" as const,
-    excerptKey: "post3Excerpt" as const,
-    categoryKey: "catHeritage" as const,
-  },
-  {
-    slug: "godavari-river-significance",
-    titleKey: "post4Title" as const,
-    excerptKey: "post4Excerpt" as const,
-    categoryKey: "catSpirituality" as const,
-  },
-  {
-    slug: "packing-guide-kumbh",
-    titleKey: "post5Title" as const,
-    excerptKey: "post5Excerpt" as const,
-    categoryKey: "catTravel" as const,
-  },
-  {
-    slug: "akhada-tradition",
-    titleKey: "post6Title" as const,
-    excerptKey: "post6Excerpt" as const,
-    categoryKey: "catHeritage" as const,
-  },
-];
 
 /* ───────────────────────────── helpers ───────────────────────── */
 
@@ -316,26 +56,6 @@ const categoryColors: Record<string, { bg: string; text: string; border: string 
     bg: "rgba(139,92,246,0.12)",
     text: "#8B5CF6",
     border: "rgba(139,92,246,0.25)",
-  },
-  spirituality: {
-    bg: "rgba(244,63,94,0.12)",
-    text: "#F43F5E",
-    border: "rgba(244,63,94,0.25)",
-  },
-  heritage: {
-    bg: "rgba(249,115,22,0.12)",
-    text: "#F97316",
-    border: "rgba(249,115,22,0.25)",
-  },
-  travel: {
-    bg: "rgba(14,165,233,0.12)",
-    text: "#0EA5E9",
-    border: "rgba(14,165,233,0.25)",
-  },
-  guide: {
-    bg: "rgba(20,184,166,0.12)",
-    text: "#14B8A6",
-    border: "rgba(20,184,166,0.25)",
   },
 };
 
@@ -526,7 +246,8 @@ export default function BlogPage() {
 
             <div className="space-y-8">
               {filteredArticles.map((article, index) => {
-                const colors = categoryColors[article.category];
+                const colors = categoryColors[article.category] ?? categoryColors.kumbh;
+                const catKey = article.category as NewsCategory;
                 return (
                   <motion.div
                     key={article.id}
@@ -547,77 +268,89 @@ export default function BlogPage() {
                       }}
                     />
 
-                    {/* Article Card */}
-                    <article
-                      className="group relative overflow-hidden rounded-xl transition-all duration-500 hover:-translate-y-1"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))",
-                        border: "1px solid rgba(212,168,67,0.08)",
-                      }}
-                    >
-                      {/* Hover glow */}
-                      <div
-                        className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    {/* Article Card — wrapped in Link */}
+                    <Link href={`/blog/${article.slug}`} className="block">
+                      <article
+                        className="group relative overflow-hidden rounded-xl transition-all duration-500 hover:-translate-y-1"
                         style={{
-                          background: `radial-gradient(ellipse at top left, ${colors.bg}, transparent 70%)`,
+                          background:
+                            "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))",
+                          border: "1px solid rgba(212,168,67,0.08)",
                         }}
-                      />
+                      >
+                        {/* Hover glow */}
+                        <div
+                          className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                          style={{
+                            background: `radial-gradient(ellipse at top left, ${colors.bg}, transparent 70%)`,
+                          }}
+                        />
 
-                      <div className="relative z-10 flex flex-col md:flex-row">
-                        {/* Article Image */}
-                        <div className="relative h-48 w-full flex-shrink-0 overflow-hidden md:h-auto md:w-48 md:rounded-l-xl">
-                          <img
-                            src={article.image}
-                            alt={article.title[locale]}
-                            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            loading="lazy"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[rgba(13,9,6,0.4)] md:bg-gradient-to-l md:from-transparent md:to-transparent" />
-                        </div>
-
-                        <div className="flex-1 p-6 md:p-8">
-                          {/* Top Row: Category + Date */}
-                          <div className="mb-3 flex flex-wrap items-center gap-3">
-                            <span
-                              className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                              style={{
-                                background: colors.bg,
-                                color: colors.text,
-                                border: `1px solid ${colors.border}`,
-                              }}
-                            >
-                              {t(bn[categoryTranslationMap[article.category]])}
-                            </span>
-                            <span className="inline-flex items-center gap-1.5 text-xs text-cream-300/40">
-                              <Calendar className="h-3.5 w-3.5" />
-                              {formatDate(article.date, locale)}
-                            </span>
+                        <div className="relative z-10 flex flex-col md:flex-row">
+                          {/* Article Image */}
+                          <div className="relative h-48 w-full flex-shrink-0 overflow-hidden md:h-auto md:w-48 md:rounded-l-xl">
+                            <img
+                              src={article.image}
+                              alt={article.title[locale]}
+                              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                              loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[rgba(13,9,6,0.4)] md:bg-gradient-to-l md:from-transparent md:to-transparent" />
                           </div>
 
-                          {/* Title */}
-                          <h3 className="mb-3 font-heading text-lg font-bold leading-snug text-cream-100 md:text-xl">
-                            {article.title[locale]}
-                          </h3>
+                          <div className="flex-1 p-6 md:p-8">
+                            {/* Top Row: Category + Date */}
+                            <div className="mb-3 flex flex-wrap items-center gap-3">
+                              <span
+                                className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
+                                style={{
+                                  background: colors.bg,
+                                  color: colors.text,
+                                  border: `1px solid ${colors.border}`,
+                                }}
+                              >
+                                {categoryTranslationMap[catKey]
+                                  ? t(bn[categoryTranslationMap[catKey]])
+                                  : article.category}
+                              </span>
+                              <span className="inline-flex items-center gap-1.5 text-xs text-cream-300/40">
+                                <Calendar className="h-3.5 w-3.5" />
+                                {formatDate(article.date, locale)}
+                              </span>
+                            </div>
 
-                          {/* Summary */}
-                          <p className="mb-4 leading-relaxed text-cream-300/55 text-sm md:text-base">
-                            {article.summary[locale]}
-                          </p>
+                            {/* Title */}
+                            <h3 className="mb-3 font-heading text-lg font-bold leading-snug text-cream-100 md:text-xl">
+                              {article.title[locale]}
+                            </h3>
 
-                          {/* Footer: Source */}
-                          <div className="flex items-center gap-2 text-sm">
-                            <ExternalLink className="h-3.5 w-3.5 text-cream-300/30" />
-                            <span className="text-cream-300/30">
-                              {t(bn.source)}:
-                            </span>
-                            <span style={{ color: "#D4A843" }} className="font-medium">
-                              {article.source}
-                            </span>
+                            {/* Summary */}
+                            <p className="mb-4 leading-relaxed text-cream-300/55 text-sm md:text-base">
+                              {article.summary[locale]}
+                            </p>
+
+                            {/* Footer: Source + Read More */}
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center gap-2 text-sm">
+                                <ExternalLink className="h-3.5 w-3.5 text-cream-300/30" />
+                                <span className="text-cream-300/30">
+                                  {t(bn.source)}:
+                                </span>
+                                <span style={{ color: "#D4A843" }} className="font-medium">
+                                  {article.source}
+                                </span>
+                              </div>
+                              <span
+                                className="inline-flex items-center gap-1 text-sm font-semibold transition-transform duration-300 group-hover:translate-x-1"
+                                style={{ color: "#D4A843" }}
+                              >
+                                {t(bp.readMore)} <ArrowRight className="h-3.5 w-3.5" />
+                              </span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </article>
+                      </article>
+                    </Link>
                   </motion.div>
                 );
               })}
@@ -626,112 +359,12 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* ════════════════════ ARTICLES GRID ════════════════════ */}
+      {/* ════════════════════ NEWSLETTER CTA ════════════════════ */}
       <section className="section-dark relative py-8 md:py-16">
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
         <div className="section-container relative z-10">
-          {/* Section header for articles */}
           <motion.div
-            className="mb-12 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <h2 className="font-heading text-3xl font-bold text-cream-100 md:text-4xl">
-              {t(bp.heroTitle)}
-            </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-cream-300/60">
-              {t(bp.blogIntro)}
-            </p>
-            <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="gold-line-thick mx-auto mt-6 w-32 origin-center"
-            />
-          </motion.div>
-
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {placeholderPosts.map((post, index) => {
-              const catKey = post.categoryKey.replace("cat", "").toLowerCase();
-              const colors = categoryColors[catKey] ?? categoryColors.guide;
-
-              return (
-                <motion.article
-                  key={post.slug}
-                  className="card-dark group relative overflow-hidden p-6 transition-all duration-500 hover:-translate-y-2"
-                  style={{
-                    background: "rgba(255,255,255,0.03)",
-                    borderColor: "rgba(212,168,67,0.08)",
-                  }}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <div className="absolute inset-0 temple-pattern opacity-[0.02] pointer-events-none" />
-
-                  <div className="relative z-10">
-                    {/* Image Placeholder */}
-                    <div
-                      className="mb-4 flex h-48 items-center justify-center rounded-xl"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, rgba(212,168,67,0.08), rgba(212,168,67,0.03))",
-                        border: "1px solid rgba(212,168,67,0.1)",
-                      }}
-                    >
-                      <span
-                        className="font-heading text-lg"
-                        style={{ color: "rgba(212,168,67,0.4)" }}
-                      >
-                        {t(bp[post.categoryKey])}
-                      </span>
-                    </div>
-
-                    {/* Category Badge */}
-                    <span
-                      className="mb-3 inline-block rounded-full px-3 py-1 text-xs font-semibold"
-                      style={{
-                        background: colors.bg,
-                        color: colors.text,
-                        border: `1px solid ${colors.border}`,
-                      }}
-                    >
-                      {t(bp[post.categoryKey])}
-                    </span>
-
-                    {/* Title */}
-                    <h2 className="mb-2 font-heading text-lg font-bold text-cream-100 line-clamp-2">
-                      {t(bp[post.titleKey])}
-                    </h2>
-
-                    {/* Excerpt */}
-                    <p className="mb-4 text-sm leading-relaxed text-cream-300/50 line-clamp-3">
-                      {t(bp[post.excerptKey])}
-                    </p>
-
-                    {/* Footer */}
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-cream-300/30">{t(bp.comingSoon)}</span>
-                      <span
-                        className="inline-flex items-center gap-1 font-semibold transition-colors"
-                        style={{ color: "#D4A843" }}
-                      >
-                        {t(bp.readMore)} <ArrowRight className="h-3.5 w-3.5" />
-                      </span>
-                    </div>
-                  </div>
-                </motion.article>
-              );
-            })}
-          </div>
-
-          {/* ════════════════════ NEWSLETTER CTA ════════════════════ */}
-          <motion.div
-            className="mt-16 rounded-2xl p-8 text-center md:p-12"
+            className="rounded-2xl p-8 text-center md:p-12"
             style={{
               background:
                 "linear-gradient(135deg, rgba(212,168,67,0.08), rgba(212,168,67,0.03))",

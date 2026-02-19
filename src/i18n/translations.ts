@@ -11,6 +11,7 @@ export const translations = {
     events: { en: "Events & Akhadas", hi: "कार्यक्रम और अखाड़े", mr: "कार्यक्रम व अखाडे" },
     gallery: { en: "Gallery", hi: "गैलरी", mr: "गॅलरी" },
     games: { en: "Games", hi: "खेल", mr: "खेळ" },
+    news: { en: "News", hi: "समाचार", mr: "बातम्या" },
     businesses: { en: "Local Services", hi: "स्थानीय सेवाएँ", mr: "स्थानिक सेवा" },
     planVisit: { en: "Plan Your Visit", hi: "यात्रा की योजना बनाएं", mr: "भेटीचे नियोजन करा" },
   },
@@ -723,7 +724,7 @@ export const translations = {
 
   // ─── BLOG PAGE ───────────────────────────────────────────
   blogPage: {
-    heroTitle: { en: "Kumbh Blog", hi: "कुंभ ब्लॉग", mr: "कुंभ ब्लॉग" },
+    heroTitle: { en: "Kumbh News", hi: "कुंभ समाचार", mr: "कुंभ बातम्या" },
     heroSubtitle: { en: "Insights, stories, and guides for your sacred journey", hi: "आपकी पवित्र यात्रा के लिए अंतर्दृष्टि, कहानियाँ और मार्गदर्शिकाएँ", mr: "तुमच्या पवित्र यात्रेसाठी अंतर्दृष्टी, कथा आणि मार्गदर्शिका" },
     comingSoon: { en: "Coming Soon", hi: "जल्द आ रहा है", mr: "लवकरच येत आहे" },
     blogIntro: { en: "Our blog is being prepared with deeply researched articles about Kumbh Mela spirituality, travel guides, and cultural insights.", hi: "हमारा ब्लॉग कुंभ मेला आध्यात्मिकता, यात्रा गाइड और सांस्कृतिक अंतर्दृष्टि पर गहन शोध किए गए लेखों के साथ तैयार किया जा रहा है।", mr: "आमचा ब्लॉग कुंभमेळा आध्यात्मिकता, प्रवास मार्गदर्शिका आणि सांस्कृतिक अंतर्दृष्टी यावरील सखोल संशोधित लेखांसह तयार केला जात आहे." },
