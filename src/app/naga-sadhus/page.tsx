@@ -18,14 +18,25 @@ const fadeUp = {
   }),
 };
 
-const stagger = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } },
-};
+/* ─────────────── diagram annotation points ─────────────── */
 
-/* ─────────────── attire icons ─────────────── */
+interface DiagramPoint {
+  key: string;
+  top: number;
+  imgLeft: number;
+  side: "left" | "right";
+  titleKey: "att2Title" | "att3Title" | "att4Title" | "att1Title" | "att6Title" | "att5Title";
+  descKey: "att2Desc" | "att3Desc" | "att4Desc" | "att1Desc" | "att6Desc" | "att5Desc";
+}
 
-const attireIcons = ["🔥", "🕉️", "🔱", "📿", "☁️", "🪢"];
+const diagramPoints: DiagramPoint[] = [
+  { key: "jata", top: 8, imgLeft: 55, side: "right", titleKey: "att2Title", descKey: "att2Desc" },
+  { key: "trishul", top: 13, imgLeft: 36, side: "left", titleKey: "att3Title", descKey: "att3Desc" },
+  { key: "rudraksha", top: 25, imgLeft: 58, side: "right", titleKey: "att4Title", descKey: "att4Desc" },
+  { key: "vibhuti", top: 36, imgLeft: 36, side: "left", titleKey: "att1Title", descKey: "att1Desc" },
+  { key: "thread", top: 46, imgLeft: 60, side: "right", titleKey: "att6Title", descKey: "att6Desc" },
+  { key: "digambara", top: 58, imgLeft: 44, side: "left", titleKey: "att5Title", descKey: "att5Desc" },
+];
 
 /* ─────────────── order accent colors ─────────────── */
 
@@ -304,14 +315,22 @@ export default function NagaSadhusPage() {
         </div>
       </section>
 
-      {/* ════════════ SECTION 4: ATTIRE & MARKINGS ════════════ */}
-      <section className="relative bg-cream-50 py-20 md:py-28">
-        <div className="absolute inset-0 mandala-bg opacity-[0.03]" />
+      {/* ════════════ SECTION 4: ATTIRE DIAGRAM ════════════ */}
+      <section className="section-dark relative overflow-hidden py-20 md:py-28">
+        <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
+        {/* Top divider */}
+        <div
+          className="absolute left-0 right-0 top-0 h-px"
+          style={{
+            background:
+              "linear-gradient(to right, transparent, rgba(212,168,67,0.15), transparent)",
+          }}
+        />
 
         <div className="section-container relative z-10">
-          {/* Section header */}
+          {/* Header */}
           <motion.div
-            className="mb-4 text-center"
+            className="mb-12 text-center md:mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -321,58 +340,203 @@ export default function NagaSadhusPage() {
               className="mb-3 inline-block rounded-full px-4 py-1.5 text-sm font-semibold"
               style={{
                 background: "rgba(212,168,67,0.1)",
-                color: "#B8941F",
+                color: "#D4A843",
                 border: "1px solid rgba(212,168,67,0.2)",
               }}
             >
               {t(ns.attireSub)}
             </span>
-            <h2 className="mt-4 font-heading text-3xl font-bold text-[#1A1207] md:text-5xl">
+            <h2 className="mt-4 font-heading text-3xl font-bold text-cream-100 md:text-5xl">
               {t(ns.attireTitle)}
             </h2>
-            <p className="mx-auto mt-3 max-w-xl text-[#3D2E1A]/60">
+            <p className="mx-auto mt-3 max-w-xl text-cream-300/50">
               {t(ns.attireSubtitle)}
             </p>
           </motion.div>
 
-          {/* 3x2 grid */}
+          {/* ── Desktop: Annotated Image Diagram ── */}
           <motion.div
-            className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
+            className="relative mx-auto hidden overflow-visible lg:block"
+            style={{ maxWidth: "400px" }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >
-            {[
-              { title: ns.att1Title, desc: ns.att1Desc },
-              { title: ns.att2Title, desc: ns.att2Desc },
-              { title: ns.att3Title, desc: ns.att3Desc },
-              { title: ns.att4Title, desc: ns.att4Desc },
-              { title: ns.att5Title, desc: ns.att5Desc },
-              { title: ns.att6Title, desc: ns.att6Desc },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                custom={i}
-                variants={fadeUp}
-                className="group rounded-xl p-6 transition-all duration-500 hover:-translate-y-1"
+            {/* Image with cinematic frame */}
+            <div className="relative rounded-2xl">
+              <img
+                src="/images/naga-sadhu.png"
+                alt="Naga Sadhu Attire Diagram"
+                className="w-full rounded-2xl"
+              />
+              {/* Inner vignette */}
+              <div
+                className="pointer-events-none absolute inset-0 rounded-2xl"
                 style={{
-                  background: "rgba(255,255,255,0.7)",
-                  border: "1px solid rgba(212,168,67,0.12)",
-                  boxShadow: "0 2px 20px rgba(0,0,0,0.03)",
+                  boxShadow:
+                    "inset 0 0 80px rgba(0,0,0,0.5), 0 0 60px rgba(212,168,67,0.05)",
                 }}
+              />
+              {/* Subtle gold border */}
+              <div
+                className="pointer-events-none absolute inset-0 rounded-2xl"
+                style={{ border: "1px solid rgba(212,168,67,0.12)" }}
+              />
+            </div>
+
+            {/* Annotation points */}
+            {diagramPoints.map((pt, i) => (
+              <motion.div
+                key={pt.key}
+                className={`absolute flex -translate-y-1/2 items-center gap-2 ${
+                  pt.side === "left" ? "flex-row-reverse" : ""
+                }`}
+                style={{
+                  top: `${pt.top}%`,
+                  ...(pt.side === "left"
+                    ? { right: `${100 - pt.imgLeft}%` }
+                    : { left: `${pt.imgLeft}%` }),
+                }}
+                initial={{
+                  opacity: 0,
+                  x: pt.side === "left" ? -30 : 30,
+                }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 + i * 0.12 }}
               >
-                <span className="mb-4 block text-4xl">{attireIcons[i]}</span>
-                <h3 className="mb-2 font-heading text-lg font-bold text-[#1A1207]">
-                  {t(item.title)}
-                </h3>
-                <p className="text-sm leading-relaxed text-[#3D2E1A]/65">
-                  {t(item.desc)}
-                </p>
+                {/* Pulsing dot */}
+                <div className="relative flex-shrink-0">
+                  <div
+                    className="h-2.5 w-2.5 rounded-full"
+                    style={{
+                      background: "#D4A843",
+                      boxShadow: "0 0 10px rgba(212,168,67,0.6)",
+                    }}
+                  />
+                  <div
+                    className="absolute inset-[-3px] animate-ping rounded-full"
+                    style={{ background: "rgba(212,168,67,0.2)" }}
+                  />
+                </div>
+
+                {/* Connecting line */}
+                <div
+                  className="h-px w-10 flex-shrink-0 xl:w-16"
+                  style={{
+                    background:
+                      pt.side === "left"
+                        ? "linear-gradient(to left, rgba(212,168,67,0.5), rgba(212,168,67,0.05))"
+                        : "linear-gradient(to right, rgba(212,168,67,0.5), rgba(212,168,67,0.05))",
+                  }}
+                />
+
+                {/* Label */}
+                <div
+                  className={`flex-shrink-0 ${
+                    pt.side === "left" ? "text-right" : "text-left"
+                  }`}
+                >
+                  <span
+                    className="font-heading text-sm font-bold uppercase tracking-wide"
+                    style={{ color: "#D4A843" }}
+                  >
+                    {t(ns[pt.titleKey])}
+                  </span>
+                </div>
               </motion.div>
             ))}
           </motion.div>
+
+          {/* ── Mobile + Tablet: Image with numbered dots + list ── */}
+          <div className="lg:hidden">
+            <motion.div
+              className="relative mx-auto max-w-xs"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <img
+                src="/images/naga-sadhu.png"
+                alt="Naga Sadhu Attire"
+                className="w-full rounded-2xl"
+              />
+              <div
+                className="pointer-events-none absolute inset-0 rounded-2xl"
+                style={{
+                  boxShadow: "inset 0 0 60px rgba(0,0,0,0.4)",
+                  border: "1px solid rgba(212,168,67,0.1)",
+                }}
+              />
+              {/* Numbered dots */}
+              {diagramPoints.map((pt, i) => (
+                <div
+                  key={pt.key}
+                  className="absolute flex h-5 w-5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full text-[9px] font-bold"
+                  style={{
+                    top: `${pt.top}%`,
+                    left: `${pt.imgLeft}%`,
+                    background: "rgba(212,168,67,0.9)",
+                    color: "#0D0906",
+                    boxShadow: "0 0 10px rgba(212,168,67,0.5)",
+                  }}
+                >
+                  {i + 1}
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Numbered list */}
+            <div className="mx-auto mt-8 max-w-md space-y-3">
+              {diagramPoints.map((pt, i) => (
+                <motion.div
+                  key={pt.key}
+                  className="flex items-start gap-3 rounded-lg p-3"
+                  style={{
+                    background: "rgba(255,255,255,0.03)",
+                    border: "1px solid rgba(212,168,67,0.08)",
+                  }}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                >
+                  <span
+                    className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold"
+                    style={{
+                      background: "rgba(212,168,67,0.15)",
+                      color: "#D4A843",
+                    }}
+                  >
+                    {i + 1}
+                  </span>
+                  <div>
+                    <h4
+                      className="font-heading text-base font-bold"
+                      style={{ color: "#D4A843" }}
+                    >
+                      {t(ns[pt.titleKey])}
+                    </h4>
+                    <p className="mt-0.5 text-sm leading-relaxed text-cream-300/50">
+                      {t(ns[pt.descKey])}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
+
+        {/* Bottom divider */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-px"
+          style={{
+            background:
+              "linear-gradient(to right, transparent, rgba(212,168,67,0.15), transparent)",
+          }}
+        />
       </section>
 
       {/* ════════════ SECTION 5: ORDERS OF NAGA SADHUS ════════════ */}
