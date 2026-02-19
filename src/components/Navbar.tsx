@@ -19,6 +19,7 @@ const navItems = [
   { href: "/dates", labelKey: "dates" as const },
   { href: "/guide", labelKey: "guide" as const },
   { href: "/events", labelKey: "events" as const },
+  { href: "/naga-sadhus", labelKey: "nagaSadhus" as const },
   { href: "/gallery", labelKey: "gallery" as const },
   { href: "/games", labelKey: "games" as const },
   { href: "/blog", labelKey: "news" as const },

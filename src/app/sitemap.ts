@@ -60,6 +60,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     },
     {
+      url: `${baseUrl}/naga-sadhus`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.85,
+      alternates: {
+        languages: { en: `${baseUrl}/naga-sadhus`, hi: `${baseUrl}/naga-sadhus`, mr: `${baseUrl}/naga-sadhus` },
+      },
+    },
+    {
       url: `${baseUrl}/gallery`,
       lastModified,
       changeFrequency: "weekly",
