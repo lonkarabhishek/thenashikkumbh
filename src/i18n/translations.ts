@@ -313,6 +313,16 @@ export const translations = {
       hi: "सर्वाधिकार सुरक्षित।",
       mr: "सर्व हक्क राखीव.",
     },
+    madeBy: {
+      en: "Made with pride by a Nashikkar",
+      hi: "एक नाशिककर ने गर्व से बनाया",
+      mr: "एका नाशिककराने अभिमानाने बनवले",
+    },
+    disclaimer: {
+      en: "This is an independent community website, not affiliated with any government body. Built to help pilgrims and visitors.",
+      hi: "यह एक स्वतंत्र सामुदायिक वेबसाइट है, किसी सरकारी संस्था से संबद्ध नहीं। तीर्थयात्रियों और आगंतुकों की मदद के लिए बनाई गई।",
+      mr: "ही एक स्वतंत्र सामुदायिक वेबसाइट आहे, कोणत्याही सरकारी संस्थेशी संलग्न नाही. भाविक आणि पर्यटकांच्या मदतीसाठी बनवली.",
+    },
   },
 
   // ─── ABOUT PAGE ───────────────────────────────────────────

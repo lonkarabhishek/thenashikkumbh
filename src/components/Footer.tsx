@@ -210,6 +210,19 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Made by Nashikkar */}
+          <div className="text-center mb-10">
+            <p
+              className="text-sm font-semibold tracking-wide mb-1"
+              style={{ color: "#D4A843" }}
+            >
+              {t(translations.footer.madeBy)} ❤️
+            </p>
+            <p className="text-cream-300/50 text-xs max-w-md mx-auto leading-relaxed">
+              {t(translations.footer.disclaimer)}
+            </p>
+          </div>
+
           {/* Bottom bar */}
           <div className="gold-line mb-6" />
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
