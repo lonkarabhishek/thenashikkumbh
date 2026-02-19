@@ -3,7 +3,7 @@ import type { Locale } from "@/i18n/translations";
 type I18nText = Record<Locale, string>;
 
 /* ═══════════════════════════════════════════════════════════════════════════════
-   TRILINGUAL SITE DATA — Nashik Kumbh Mela 2027
+   TRILINGUAL SITE DATA - Nashik Kumbh Mela 2027
    Each text field uses { en, hi, mr } for English, Hindi, and Marathi.
    Non-translatable fields (dates, images, ids, booleans) remain as-is.
    ═══════════════════════════════════════════════════════════════════════════════ */
@@ -89,9 +89,9 @@ export const bathingDatesI18n: BathingDateI18n[] = [
       mr: "अश्विन अमावास्या",
     },
     significance: {
-      en: "A deeply auspicious bath coinciding with Mahalaya Amavasya — honoring ancestors and seeking their blessings.",
-      hi: "महालय अमावस्या के साथ मनाया जाने वाला अत्यंत शुभ स्नान — पूर्वजों का सम्मान और उनके आशीर्वाद की प्रार्थना।",
-      mr: "महालय अमावास्येशी जुळणारे अत्यंत शुभ स्नान — पूर्वजांचा सन्मान आणि त्यांच्या आशीर्वादाची प्रार्थना.",
+      en: "A deeply auspicious bath coinciding with Mahalaya Amavasya - honoring ancestors and seeking their blessings.",
+      hi: "महालय अमावस्या के साथ मनाया जाने वाला अत्यंत शुभ स्नान - पूर्वजों का सम्मान और उनके आशीर्वाद की प्रार्थना।",
+      mr: "महालय अमावास्येशी जुळणारे अत्यंत शुभ स्नान - पूर्वजांचा सन्मान आणि त्यांच्या आशीर्वादाची प्रार्थना.",
     },
     isMajor: true,
   },
@@ -108,18 +108,18 @@ export const bathingDatesI18n: BathingDateI18n[] = [
       mr: "अश्विन पौर्णिमा (शरद पौर्णिमा)",
     },
     significance: {
-      en: "The concluding royal bath under the luminous Sharad Purnima moon — a night of divine grace.",
-      hi: "चमकीले शरद पूर्णिमा चंद्रमा के नीचे अंतिम शाही स्नान — दिव्य कृपा की रात।",
-      mr: "तेजस्वी शरद पौर्णिमेच्या चंद्राखाली अंतिम शाही स्नान — दिव्य कृपेची रात्र.",
+      en: "The concluding royal bath under the luminous Sharad Purnima moon - a night of divine grace.",
+      hi: "चमकीले शरद पूर्णिमा चंद्रमा के नीचे अंतिम शाही स्नान - दिव्य कृपा की रात।",
+      mr: "तेजस्वी शरद पौर्णिमेच्या चंद्राखाली अंतिम शाही स्नान - दिव्य कृपेची रात्र.",
     },
     isMajor: true,
   },
   {
     date: "August 25, 2027",
     event: {
-      en: "Parva Snan — Krishna Janmashtami",
-      hi: "पर्व स्नान — कृष्ण जन्माष्टमी",
-      mr: "पर्व स्नान — कृष्ण जन्माष्टमी",
+      en: "Parva Snan - Krishna Janmashtami",
+      hi: "पर्व स्नान - कृष्ण जन्माष्टमी",
+      mr: "पर्व स्नान - कृष्ण जन्माष्टमी",
     },
     nakshatra: {
       en: "Shravan Krishna Ashtami",
@@ -136,9 +136,9 @@ export const bathingDatesI18n: BathingDateI18n[] = [
   {
     date: "September 7, 2027",
     event: {
-      en: "Parva Snan — Ganesh Chaturthi",
-      hi: "पर्व स्नान — गणेश चतुर्थी",
-      mr: "पर्व स्नान — गणेश चतुर्थी",
+      en: "Parva Snan - Ganesh Chaturthi",
+      hi: "पर्व स्नान - गणेश चतुर्थी",
+      mr: "पर्व स्नान - गणेश चतुर्थी",
     },
     nakshatra: {
       en: "Bhadrapad Shukla Chaturthi",
@@ -155,9 +155,9 @@ export const bathingDatesI18n: BathingDateI18n[] = [
   {
     date: "October 12, 2027",
     event: {
-      en: "Parva Snan — Navratri Begins",
-      hi: "पर्व स्नान — नवरात्रि प्रारंभ",
-      mr: "पर्व स्नान — नवरात्री प्रारंभ",
+      en: "Parva Snan - Navratri Begins",
+      hi: "पर्व स्नान - नवरात्रि प्रारंभ",
+      mr: "पर्व स्नान - नवरात्री प्रारंभ",
     },
     nakshatra: {
       en: "Ashwin Shukla Pratipada",
@@ -245,9 +245,9 @@ export const ghatsI18n: GhatI18n[] = [
     name: { en: "Panchavati", hi: "पंचवटी", mr: "पंचवटी" },
     subtitle: { en: "Where Rama Dwelt in Exile", hi: "जहाँ राम वनवास में रहे", mr: "जिथे राम वनवासात राहिले" },
     description: {
-      en: "Panchavati is the sacred grove of five banyan trees where Lord Rama, Sita, and Lakshmana lived during their exile. This hallowed ground houses the ancient Kalaram Temple (Black Rama Temple), Sita Gufa (Sita's Cave), and the Tapovan gardens — a living testament to the Ramayana.",
-      hi: "पंचवटी पाँच वट वृक्षों का पवित्र उपवन है जहाँ भगवान राम, सीता और लक्ष्मण वनवास में रहे। इस पवित्र भूमि में प्राचीन कालाराम मंदिर (काले राम का मंदिर), सीता गुफा और तपोवन उद्यान हैं — रामायण का जीवंत प्रमाण।",
-      mr: "पंचवटी हे पाच वडाच्या वृक्षांचे पवित्र उपवन आहे जिथे भगवान राम, सीता आणि लक्ष्मण वनवासात राहिले. या पवित्र भूमीत प्राचीन कालाराम मंदिर (काळ्या रामाचे मंदिर), सीता गुफा आणि तपोवन उद्याने आहेत — रामायणाचा जिवंत पुरावा.",
+      en: "Panchavati is the sacred grove of five banyan trees where Lord Rama, Sita, and Lakshmana lived during their exile. This hallowed ground houses the ancient Kalaram Temple (Black Rama Temple), Sita Gufa (Sita's Cave), and the Tapovan gardens - a living testament to the Ramayana.",
+      hi: "पंचवटी पाँच वट वृक्षों का पवित्र उपवन है जहाँ भगवान राम, सीता और लक्ष्मण वनवास में रहे। इस पवित्र भूमि में प्राचीन कालाराम मंदिर (काले राम का मंदिर), सीता गुफा और तपोवन उद्यान हैं - रामायण का जीवंत प्रमाण।",
+      mr: "पंचवटी हे पाच वडाच्या वृक्षांचे पवित्र उपवन आहे जिथे भगवान राम, सीता आणि लक्ष्मण वनवासात राहिले. या पवित्र भूमीत प्राचीन कालाराम मंदिर (काळ्या रामाचे मंदिर), सीता गुफा आणि तपोवन उद्याने आहेत - रामायणाचा जिवंत पुरावा.",
     },
     rituals: [
       { en: "Darshan at Kalaram Temple", hi: "कालाराम मंदिर में दर्शन", mr: "कालाराम मंदिरात दर्शन" },
@@ -341,7 +341,7 @@ export const eventsI18n: EventI18n[] = [
     },
   },
   {
-    title: { en: "Annakshetra — Free Bhandara", hi: "अन्नक्षेत्र — निःशुल्क भंडारा", mr: "अन्नक्षेत्र — विनामूल्य भंडारा" },
+    title: { en: "Annakshetra - Free Bhandara", hi: "अन्नक्षेत्र - निःशुल्क भंडारा", mr: "अन्नक्षेत्र - विनामूल्य भंडारा" },
     date: "Daily",
     category: { en: "Seva", hi: "सेवा", mr: "सेवा" },
     description: {

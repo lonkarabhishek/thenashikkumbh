@@ -3,7 +3,7 @@ export const siteConfig = {
   domain: "thenashikkumbh.com",
   url: "https://thenashikkumbh.com",
   description:
-    "Official guide to Nashik Kumbh Mela 2027 — sacred bathing dates, ghats, pilgrim guide, events, and spiritual heritage of the Simhastha Kumbh at the holy Godavari River.",
+    "Official guide to Nashik Kumbh Mela 2027 - sacred bathing dates, ghats, pilgrim guide, events, and spiritual heritage of the Simhastha Kumbh at the holy Godavari River.",
   tagline: "Where Faith Meets Eternity",
   whatsapp: "+919999999999",
   email: "info@thenashikkumbh.com",
@@ -56,7 +56,7 @@ export const bathingDates = [
     event: "Chaturtha Shahi Snan",
     nakshatra: "Ashwin Amavasya",
     significance:
-      "A deeply auspicious bath coinciding with Mahalaya Amavasya — honoring ancestors and seeking their blessings.",
+      "A deeply auspicious bath coinciding with Mahalaya Amavasya - honoring ancestors and seeking their blessings.",
     isMajor: true,
   },
   {
@@ -64,12 +64,12 @@ export const bathingDates = [
     event: "Panchama Shahi Snan",
     nakshatra: "Ashwin Purnima (Sharad Purnima)",
     significance:
-      "The concluding royal bath under the luminous Sharad Purnima moon — a night of divine grace.",
+      "The concluding royal bath under the luminous Sharad Purnima moon - a night of divine grace.",
     isMajor: true,
   },
   {
     date: "August 25, 2027",
-    event: "Parva Snan — Krishna Janmashtami",
+    event: "Parva Snan - Krishna Janmashtami",
     nakshatra: "Shravan Krishna Ashtami",
     significance:
       "Celebrating Lord Krishna's birth with sacred dips and devotional festivities along the river.",
@@ -77,7 +77,7 @@ export const bathingDates = [
   },
   {
     date: "September 7, 2027",
-    event: "Parva Snan — Ganesh Chaturthi",
+    event: "Parva Snan - Ganesh Chaturthi",
     nakshatra: "Bhadrapad Shukla Chaturthi",
     significance:
       "Honoring Lord Ganesha, the remover of obstacles. Special pujas and immersion ceremonies.",
@@ -85,7 +85,7 @@ export const bathingDates = [
   },
   {
     date: "October 12, 2027",
-    event: "Parva Snan — Navratri Begins",
+    event: "Parva Snan - Navratri Begins",
     nakshatra: "Ashwin Shukla Pratipada",
     significance:
       "The nine nights of Goddess Durga worship begin. Devotees seek shakti through sacred baths.",
@@ -144,7 +144,7 @@ export const ghats = [
     name: "Panchavati",
     subtitle: "Where Rama Dwelt in Exile",
     description:
-      "Panchavati is the sacred grove of five banyan trees where Lord Rama, Sita, and Lakshmana lived during their exile. This hallowed ground houses the ancient Kalaram Temple (Black Rama Temple), Sita Gufa (Sita's Cave), and the Tapovan gardens — a living testament to the Ramayana.",
+      "Panchavati is the sacred grove of five banyan trees where Lord Rama, Sita, and Lakshmana lived during their exile. This hallowed ground houses the ancient Kalaram Temple (Black Rama Temple), Sita Gufa (Sita's Cave), and the Tapovan gardens - a living testament to the Ramayana.",
     rituals: [
       "Darshan at Kalaram Temple",
       "Sita Gufa pilgrimage",
@@ -301,7 +301,7 @@ export const events = [
       "Soul-stirring devotional singing sessions featuring renowned bhajan artists from across India.",
   },
   {
-    title: "Annakshetra — Free Bhandara",
+    title: "Annakshetra - Free Bhandara",
     date: "Daily",
     category: "Seva",
     description:

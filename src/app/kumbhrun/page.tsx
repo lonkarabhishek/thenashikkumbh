@@ -9,7 +9,7 @@ import { translations } from "@/i18n/translations";
 import type { Locale } from "@/i18n/translations";
 
 /* ═══════════════════════════════════════════════════════════════════════════════
-   KUMBH RUN — Portrait Milestone Pilgrimage Runner
+   KUMBH RUN - Portrait Milestone Pilgrimage Runner
    Run through the sacred places of Nashik Kumbh Mela! Each milestone is a real
    pilgrimage spot. Difficulty increases as you progress. Learn about each place!
    ═══════════════════════════════════════════════════════════════════════════════ */
@@ -187,7 +187,7 @@ const MILESTONES: MilestoneData[] = [
     facts: [
       { en: "One of the 12 sacred Jyotirlingas of Lord Shiva", hi: "भगवान शिव के 12 ज्योतिर्लिंगों में से एक", mr: "भगवान शिवांच्या 12 ज्योतिर्लिंगांपैकी एक" },
       { en: "The source of the holy Godavari River", hi: "पवित्र गोदावरी नदी का उद्गम स्थल", mr: "पवित्र गोदावरी नदीचे उगमस्थान" },
-      { en: "30 km from Nashik — Shaiva Akhadas bathe here during Kumbh", hi: "नासिक से 30 किमी — कुंभ में शैव अखाड़े यहाँ स्नान करते हैं", mr: "नाशिकपासून 30 किमी — कुंभात शैव अखाडे येथे स्नान करतात" },
+      { en: "30 km from Nashik - Shaiva Akhadas bathe here during Kumbh", hi: "नासिक से 30 किमी - कुंभ में शैव अखाड़े यहाँ स्नान करते हैं", mr: "नाशिकपासून 30 किमी - कुंभात शैव अखाडे येथे स्नान करतात" },
     ],
   },
   {
@@ -322,7 +322,7 @@ function drawBg(ctx: CanvasRenderingContext2D, g: GS) {
   const ms = MILESTONES[g.currentMilestone];
   const hue = ms.accentHue;
 
-  // Sky gradient — subtle hue shift per milestone
+  // Sky gradient - subtle hue shift per milestone
   const grad = ctx.createLinearGradient(0, HUD_H, 0, GROUND_Y);
   grad.addColorStop(0, "#0D0906");
   grad.addColorStop(0.4, `hsl(${hue}, 15%, 6%)`);
@@ -544,7 +544,7 @@ function drawHUD(ctx: CanvasRenderingContext2D, g: GS, locale: Locale) {
     ctx.font = "11px sans-serif";
     ctx.fillStyle = "rgba(255,248,230,0.4)";
     ctx.fillText(
-      `${locale === "en" ? "Next" : locale === "hi" ? "अगला" : "पुढील"}: ${next.name[locale]} — ${remaining}m`,
+      `${locale === "en" ? "Next" : locale === "hi" ? "अगला" : "पुढील"}: ${next.name[locale]} - ${remaining}m`,
       LW - 12,
       46
     );
@@ -673,7 +673,7 @@ export default function KumbhRunPage() {
     } catch { /* */ }
   }, []);
 
-  // Setup canvas — portrait optimized
+  // Setup canvas - portrait optimized
   const setupCanvas = useCallback(() => {
     const canvas = canvasRef.current;
     const container = containerRef.current;
@@ -937,7 +937,7 @@ export default function KumbhRunPage() {
       ? `🙏 मैंने ${g.darshanN} दर्शन किए! आप कितने कर सकते हैं?`
       : `🙏 मी ${g.darshanN} दर्शन घेतले! तुम्ही किती घेऊ शकता?`;
 
-    const text = `🏃 ${localeRef.current === "mr" ? "कुंभ रन — नाशिक यात्रा!" : localeRef.current === "hi" ? "कुंभ रन — नासिक यात्रा!" : "Kumbh Run — Nashik Yatra!"}\n📍 ${places}${nextText}\n${darshanText}\n🏆 ${localeRef.current === "en" ? "Score" : "स्कोअर"}: ${total}\nthenashikkumbh.com/kumbhrun`;
+    const text = `🏃 ${localeRef.current === "mr" ? "कुंभ रन - नाशिक यात्रा!" : localeRef.current === "hi" ? "कुंभ रन - नासिक यात्रा!" : "Kumbh Run - Nashik Yatra!"}\n📍 ${places}${nextText}\n${darshanText}\n🏆 ${localeRef.current === "en" ? "Score" : "स्कोअर"}: ${total}\nthenashikkumbh.com/kumbhrun`;
 
     if (navigator.share) {
       navigator.share({ text }).catch(() => {
@@ -978,7 +978,7 @@ export default function KumbhRunPage() {
         </div>
       </div>
 
-      {/* Fact ticker — shows during gameplay */}
+      {/* Fact ticker - shows during gameplay */}
       <AnimatePresence mode="wait">
         {gameStatus === "playing" && currentFact && (
           <motion.div
@@ -998,7 +998,7 @@ export default function KumbhRunPage() {
         )}
       </AnimatePresence>
 
-      {/* Game Container — fills available space */}
+      {/* Game Container - fills available space */}
       <div
         ref={containerRef}
         className="relative flex flex-1 items-center justify-center bg-[#0D0906]"

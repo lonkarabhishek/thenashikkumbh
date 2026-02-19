@@ -71,7 +71,7 @@ const sacredCitiesGradients = [
 const importanceIcons = [Droplets, Users, Flame, Heart, BookOpen, Sun, Star, Sparkles];
 
 /* ═══════════════════════════════════════════════════════════════════════════════
-   ABOUT KUMBH MELA PAGE — Premium Dark Luxury Design
+   ABOUT KUMBH MELA PAGE - Premium Dark Luxury Design
    ═══════════════════════════════════════════════════════════════════════════════ */
 
 export default function AboutKumbhMelaPage() {
@@ -261,7 +261,7 @@ export default function AboutKumbhMelaPage() {
         </div>
       </section>
 
-      {/* ═══════════════ (c) SAMUDRA MANTHAN — MYTHOLOGICAL ORIGINS ══════════ */}
+      {/* ═══════════════ (c) SAMUDRA MANTHAN - MYTHOLOGICAL ORIGINS ══════════ */}
       <section className="section-dark relative py-20 md:py-28 overflow-hidden">
         {/* Background effects */}
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />

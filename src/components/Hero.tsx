@@ -103,7 +103,7 @@ export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
   const progressRef = useRef<HTMLDivElement>(null);
 
-  /* Golden particles — stable across re-renders */
+  /* Golden particles - stable across re-renders */
   const particles = useMemo(
     () =>
       Array.from({ length: 20 }, (_, i) => ({
@@ -284,7 +284,7 @@ export default function Hero() {
             }}
           />
 
-          {/* Sacred text — only on slide 1 */}
+          {/* Sacred text - only on slide 1 */}
           {slide.showSacred && (
             <motion.p
               variants={textItemVariants}
@@ -307,7 +307,7 @@ export default function Hero() {
             </span>
           </motion.h1>
 
-          {/* Year — only on slide 1 */}
+          {/* Year - only on slide 1 */}
           {slide.showYear && (
             <motion.p variants={textItemVariants} className="mb-6">
               <span

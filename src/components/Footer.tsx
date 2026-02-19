@@ -53,7 +53,7 @@ export default function Footer() {
         </div>
 
         <div className="relative section-container py-16 md:py-20">
-          {/* Top section — Logo & description */}
+          {/* Top section - Logo & description */}
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-16">
             {/* Brand */}
             <div className="lg:w-1/3">

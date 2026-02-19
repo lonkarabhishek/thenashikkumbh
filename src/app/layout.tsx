@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     template: "%s | Nashik Kumbh Mela 2027",
   },
   description:
-    "Your complete guide to Nashik Kumbh Mela 2027 (Simhastha Kumbh) — sacred bathing dates, Shahi Snan schedule, holy ghats of the Godavari River, pilgrim travel guide, spiritual events, Akhada processions, and the ancient heritage of one of Hinduism's most revered gatherings. नाशिक कुंभमेळा २०२७ मार्गदर्शिका.",
+    "Your complete guide to Nashik Kumbh Mela 2027 (Simhastha Kumbh) - sacred bathing dates, Shahi Snan schedule, holy ghats of the Godavari River, pilgrim travel guide, spiritual events, Akhada processions, and the ancient heritage of one of Hinduism's most revered gatherings. नाशिक कुंभमेळा २०२७ मार्गदर्शिका.",
   keywords: [
     "Nashik Kumbh Mela",
     "Kumbh Mela 2027",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Nashik Kumbh Mela 2027 | Sacred Pilgrimage at Godavari | नाशिक कुंभमेळा",
     description:
-      "Join millions at Nashik Kumbh Mela 2027. Sacred dates, holy ghats, pilgrim guide & spiritual events at the Godavari — the Ganga of the South. नाशिक कुंभमेळा २०२७.",
+      "Join millions at Nashik Kumbh Mela 2027. Sacred dates, holy ghats, pilgrim guide & spiritual events at the Godavari - the Ganga of the South. नाशिक कुंभमेळा २०२७.",
     url: "https://thenashikkumbh.com",
     siteName: "The Nashik Kumbh",
     locale: "en_IN",
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nashik Kumbh Mela 2027 | नाशिक कुंभमेळा",
     description:
-      "Complete guide to Nashik Kumbh Mela 2027 — sacred dates, holy ghats, pilgrim tips & spiritual events at the Godavari River.",
+      "Complete guide to Nashik Kumbh Mela 2027 - sacred dates, holy ghats, pilgrim tips & spiritual events at the Godavari River.",
   },
   alternates: {
     canonical: "https://thenashikkumbh.com",

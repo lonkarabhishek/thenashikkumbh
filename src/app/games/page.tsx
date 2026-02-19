@@ -561,7 +561,7 @@ export default function GamesPage() {
     setScrambleDone(false);
   };
 
-  /* ─── Quiz state (enhanced — random 5 from pool) ─── */
+  /* ─── Quiz state (enhanced - random 5 from pool) ─── */
   const quizQuestions = useMemo(() => {
     const seed = Math.floor(Math.random() * 100000);
     return shuffleArray(allQuizQuestions, seed).slice(0, 5);

@@ -10,7 +10,7 @@ import { translations } from "@/i18n/translations";
 import type { Locale } from "@/i18n/translations";
 
 /* ────────────────────────────────────────────────────────────
-   NAV ITEMS — driven by the i18n translation keys
+   NAV ITEMS - driven by the i18n translation keys
    ──────────────────────────────────────────────────────────── */
 const navItems = [
   { href: "/", labelKey: "home" as const },
@@ -215,7 +215,7 @@ export default function Navbar() {
             </div>
 
             {/* ═══════════════════════════════════════════════
-                RIGHT SIDE — LANGUAGE SWITCHER + CTA
+                RIGHT SIDE - LANGUAGE SWITCHER + CTA
                 ═══════════════════════════════════════════════ */}
             <div className="hidden items-center gap-4 lg:flex">
               {/* Language Switcher */}
@@ -257,7 +257,7 @@ export default function Navbar() {
             </div>
 
             {/* ═══════════════════════════════════════════════
-                MOBILE — HAMBURGER BUTTON
+                MOBILE - HAMBURGER BUTTON
                 ═══════════════════════════════════════════════ */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -327,7 +327,7 @@ export default function Navbar() {
       </nav>
 
       {/* ═══════════════════════════════════════════════════════
-          MOBILE MENU — FULL SCREEN OVERLAY + GLASS PANEL
+          MOBILE MENU - FULL SCREEN OVERLAY + GLASS PANEL
           ═══════════════════════════════════════════════════════ */}
       <AnimatePresence>
         {isMobileMenuOpen && (

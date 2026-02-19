@@ -99,7 +99,7 @@ export default function LoadingScreen() {
               </motion.span>
             </motion.div>
 
-            {/* DEVANAGARI TITLE — letter-by-letter staggered reveal */}
+            {/* DEVANAGARI TITLE - letter-by-letter staggered reveal */}
             <motion.div
               className="mt-10 flex flex-wrap items-center justify-center"
               initial="hidden"
@@ -172,7 +172,7 @@ export default function LoadingScreen() {
             />
           </div>
 
-          {/* Bottom progress — simple thin line, no dot */}
+          {/* Bottom progress - simple thin line, no dot */}
           <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-48 sm:w-64">
             <div
               className="relative h-px w-full overflow-hidden rounded-full"

@@ -578,7 +578,7 @@ export default function HomePage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Nashik Kumbh Mela Area Map — Ram Kund and Godavari Ghats"
+                title="Nashik Kumbh Mela Area Map - Ram Kund and Godavari Ghats"
                 className="w-full"
               />
             </motion.div>
@@ -597,10 +597,10 @@ export default function HomePage() {
               </div>
               <p className="text-temple-600 leading-relaxed">
                 {locale === "hi"
-                  ? "कुंभ मेला क्षेत्र गोदावरी नदी के किनारे पंचवटी के राम कुंड के आसपास फैला है। प्रमुख स्थल — त्र्यम्बकेश्वर मंदिर (28 किमी), तपोवन, और कालाराम मंदिर।"
+                  ? "कुंभ मेला क्षेत्र गोदावरी नदी के किनारे पंचवटी के राम कुंड के आसपास फैला है। प्रमुख स्थल - त्र्यम्बकेश्वर मंदिर (28 किमी), तपोवन, और कालाराम मंदिर।"
                   : locale === "mr"
-                    ? "कुंभमेळा क्षेत्र गोदावरी नदीच्या किनाऱ्यावर पंचवटीतील रामकुंडाभोवती पसरलेले आहे. प्रमुख स्थळे — त्र्यंबकेश्वर मंदिर (२८ किमी), तपोवन, आणि कालाराम मंदिर."
-                    : "The Kumbh Mela area stretches along the Godavari River, centered around Ram Kund in Panchavati. Key landmarks — Trimbakeshwar Temple (28 km), Tapovan, and the ancient Kalaram Temple."}
+                    ? "कुंभमेळा क्षेत्र गोदावरी नदीच्या किनाऱ्यावर पंचवटीतील रामकुंडाभोवती पसरलेले आहे. प्रमुख स्थळे - त्र्यंबकेश्वर मंदिर (२८ किमी), तपोवन, आणि कालाराम मंदिर."
+                    : "The Kumbh Mela area stretches along the Godavari River, centered around Ram Kund in Panchavati. Key landmarks - Trimbakeshwar Temple (28 km), Tapovan, and the ancient Kalaram Temple."}
               </p>
             </motion.div>
           </div>

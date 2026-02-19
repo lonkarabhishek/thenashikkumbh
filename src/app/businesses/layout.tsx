@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Local Businesses & Services — Hotels, Tours & Puja Services",
+  title: "Local Businesses & Services - Hotels, Tours & Puja Services",
   description:
-    "Find trusted local businesses near Nashik Kumbh Mela — hotels, dharamshalas, tour operators, puja services, restaurants, and transport. Support local communities during your pilgrimage.",
+    "Find trusted local businesses near Nashik Kumbh Mela - hotels, dharamshalas, tour operators, puja services, restaurants, and transport. Support local communities during your pilgrimage.",
   openGraph: {
     title: "Local Services for Kumbh Mela Pilgrims",
     description:

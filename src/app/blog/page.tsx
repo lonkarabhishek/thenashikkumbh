@@ -268,7 +268,7 @@ export default function BlogPage() {
                       }}
                     />
 
-                    {/* Article Card — wrapped in Link */}
+                    {/* Article Card - wrapped in Link */}
                     <Link href={`/blog/${article.slug}`} className="block">
                       <article
                         className="group relative overflow-hidden rounded-xl transition-all duration-500 hover:-translate-y-1"

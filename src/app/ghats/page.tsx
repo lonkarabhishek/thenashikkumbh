@@ -40,7 +40,7 @@ const staggerContainer = {
 const ghatDevanagari = ["रामकुण्ड", "गोदावरी", "कपालेश्वर", "पञ्चवटी"];
 
 /* ═══════════════════════════════════════════════════════════════════════════════
-   SACRED GHATS PAGE — Premium Dark Luxury Design
+   SACRED GHATS PAGE - Premium Dark Luxury Design
    ═══════════════════════════════════════════════════════════════════════════════ */
 
 export default function GhatsPage() {

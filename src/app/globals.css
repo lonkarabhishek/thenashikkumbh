@@ -51,7 +51,7 @@
     background: linear-gradient(90deg, transparent, rgba(212,168,67,0.5), transparent);
   }
 
-  /* ─── Buttons — Premium ──────────────────────────────── */
+  /* ─── Buttons -- Premium ──────────────────────────────── */
   .btn-gold {
     @apply inline-flex items-center justify-center px-8 py-3.5 font-semibold rounded-full
            transition-all duration-500 tracking-wide text-sm uppercase;
@@ -93,7 +93,7 @@
            hover:bg-saffron-50 transition-all duration-300;
   }
 
-  /* ─── Cards — Premium ────────────────────────────────── */
+  /* ─── Cards -- Premium ────────────────────────────────── */
   .card-sacred {
     @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500
            border border-saffron-100 overflow-hidden;

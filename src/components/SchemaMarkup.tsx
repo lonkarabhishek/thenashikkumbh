@@ -56,7 +56,7 @@ export default function SchemaMarkup() {
     alternateName: "नाशिक कुंभमेळा",
     url: "https://thenashikkumbh.com",
     description:
-      "Complete guide to Nashik Kumbh Mela 2027 — sacred dates, ghats, pilgrim tips, events, akhadas, and spiritual heritage. Available in English, Hindi, and Marathi.",
+      "Complete guide to Nashik Kumbh Mela 2027 - sacred dates, ghats, pilgrim tips, events, akhadas, and spiritual heritage. Available in English, Hindi, and Marathi.",
     inLanguage: ["en", "hi", "mr"],
     potentialAction: {
       "@type": "SearchAction",
@@ -79,7 +79,7 @@ export default function SchemaMarkup() {
     ],
   };
 
-  // FAQ Schema — critical for AEO (Answer Engine Optimization)
+  // FAQ Schema - critical for AEO (Answer Engine Optimization)
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
