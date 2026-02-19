@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 
 interface InfoCardProps {
   title: string;
@@ -17,10 +16,8 @@ export default function InfoCard({
   className = "",
 }: InfoCardProps) {
   return (
-    <motion.div
-      className={`bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 ${className}`}
-      whileHover={{ scale: 1.02, y: -4 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+    <div
+      className={`bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 ${className}`}
     >
       {/* Icon Circle */}
       <div className="w-14 h-14 rounded-full bg-saffron-100 flex items-center justify-center mb-5 text-saffron-500">
@@ -34,6 +31,6 @@ export default function InfoCard({
 
       {/* Description */}
       <p className="text-temple-600 leading-relaxed text-sm">{description}</p>
-    </motion.div>
+    </div>
   );
 }

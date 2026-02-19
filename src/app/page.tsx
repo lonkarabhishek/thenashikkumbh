@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   Scroll,
   Sparkles,
@@ -25,38 +24,7 @@ import { bathingDatesI18n, ghatsI18n, eventsI18n } from "@/data/siteDataI18n";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
 
-// ─── Animation Variants ───────────────────────────────────────────────────────
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0 },
-};
-
-const fadeInLeft = {
-  hidden: { opacity: 0, x: -40 },
-  visible: { opacity: 1, x: 0 },
-};
-
-const fadeInRight = {
-  hidden: { opacity: 0, x: 40 },
-  visible: { opacity: 1, x: 0 },
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const scaleIn = {
-  hidden: { opacity: 0, scale: 0.9 },
-  visible: { opacity: 1, scale: 1 },
-};
-
-// ─── Category Badge Colors ────────────────────────────────────────────────────
+// Category Badge Colors
 const categoryColors: Record<string, string> = {
   Ceremony: "bg-saffron-100 text-saffron-700",
   "Sacred Bathing": "bg-blue-100 text-blue-700",
@@ -77,7 +45,7 @@ const categoryDots: Record<string, string> = {
   Seva: "bg-teal-500",
 };
 
-// ─── Section Divider ──────────────────────────────────────────────────────────
+// Section Divider
 function GoldDivider() {
   return (
     <div className="mx-auto my-6 flex items-center justify-center gap-3">
@@ -88,10 +56,7 @@ function GoldDivider() {
   );
 }
 
-// ═══════════════════════════════════════════════════════════════════════════════
 // HOME PAGE
-// ═══════════════════════════════════════════════════════════════════════════════
-
 export default function HomePage() {
   const { t, locale, translations: tr } = useLanguage();
   const [email, setEmail] = useState("");
@@ -113,14 +78,10 @@ export default function HomePage() {
 
   return (
     <>
-      {/* ════════════════════════════════════════════════════════════════════════
-          1. HERO
-      ════════════════════════════════════════════════════════════════════════ */}
+      {/* 1. HERO */}
       <Hero />
 
-      {/* ════════════════════════════════════════════════════════════════════════
-          2. ABOUT KUMBH MELA
-      ════════════════════════════════════════════════════════════════════════ */}
+      {/* 2. ABOUT KUMBH MELA */}
       <section
         id="about-preview"
         className="relative overflow-hidden bg-cream-50 py-24 md:py-32"
@@ -130,46 +91,26 @@ export default function HomePage() {
 
         <div className="section-container relative z-10">
           {/* Section Header */}
-          <motion.div
-            className="mx-auto mb-6 text-center"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
+          <div className="mx-auto mb-6 text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
               {t(tr.home.aboutSubtitle)}
             </p>
             <h2 className="font-heading text-4xl font-bold text-temple-900 md:text-5xl">
               {t(tr.home.aboutTitle)}
             </h2>
-          </motion.div>
+          </div>
 
           <GoldDivider />
 
           {/* Description Paragraph */}
-          <motion.p
-            className="mx-auto mb-16 max-w-3xl text-center text-lg leading-relaxed text-temple-600"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-          >
+          <p className="mx-auto mb-16 max-w-3xl text-center text-lg leading-relaxed text-temple-600">
             {t(tr.home.aboutDescription)}
-          </motion.p>
+          </p>
 
           {/* Three Premium Cards */}
-          <motion.div
-            className="grid gap-8 md:grid-cols-3"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-          >
+          <div className="grid gap-8 md:grid-cols-3">
             {/* Ancient Origins */}
-            <motion.div variants={fadeInUp}>
+            <div>
               <div className="group h-full rounded-2xl border border-gold-200/50 border-t-2 border-t-gold-400 bg-white/70 p-8 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(196,164,75,0.25)]">
                 <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-gold-100 to-saffron-100 text-gold-600 transition-transform duration-300 group-hover:scale-110">
                   <Scroll className="h-7 w-7" />
@@ -181,10 +122,10 @@ export default function HomePage() {
                   {t(tr.home.originDesc)}
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Divine Significance */}
-            <motion.div variants={fadeInUp}>
+            <div>
               <div className="group h-full rounded-2xl border border-gold-200/50 border-t-2 border-t-gold-400 bg-white/70 p-8 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(196,164,75,0.25)]">
                 <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-gold-100 to-saffron-100 text-gold-600 transition-transform duration-300 group-hover:scale-110">
                   <Sparkles className="h-7 w-7" />
@@ -196,10 +137,10 @@ export default function HomePage() {
                   {t(tr.home.divineDesc)}
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Nashik's Sacred Bond */}
-            <motion.div variants={fadeInUp}>
+            <div>
               <div className="group h-full rounded-2xl border border-gold-200/50 border-t-2 border-t-gold-400 bg-white/70 p-8 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(196,164,75,0.25)]">
                 <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-gold-100 to-saffron-100 text-gold-600 transition-transform duration-300 group-hover:scale-110">
                   <MapPin className="h-7 w-7" />
@@ -211,18 +152,11 @@ export default function HomePage() {
                   {t(tr.home.nashikDesc)}
                 </p>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* Learn More Link */}
-          <motion.div
-            className="mt-12 text-center"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
+          <div className="mt-12 text-center">
             <Link
               href="/about"
               className="group inline-flex items-center gap-2 font-semibold text-gold-700 transition-colors hover:text-saffron-600"
@@ -230,13 +164,11 @@ export default function HomePage() {
               {t(tr.home.learnMore)}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════════════
-          3. WHY NASHIK IS SACRED
-      ════════════════════════════════════════════════════════════════════════ */}
+      {/* 3. WHY NASHIK IS SACRED */}
       <section id="why-nashik" className="relative overflow-hidden bg-temple-900 py-24 md:py-32">
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 temple-pattern opacity-10" />
@@ -245,13 +177,7 @@ export default function HomePage() {
         <div className="section-container relative z-10">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             {/* Left: Text Content */}
-            <motion.div
-              variants={fadeInLeft}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
+            <div>
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold-400">
                 {t(tr.home.whyNashikSubtitle)}
               </p>
@@ -264,22 +190,15 @@ export default function HomePage() {
               </p>
 
               {/* Stat Counters */}
-              <motion.div
-                className="grid grid-cols-2 gap-6 sm:grid-cols-4"
-                variants={staggerContainer}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-              >
+              <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
                 {[
                   { value: "2000+", label: locale === "hi" ? "वर्ष" : locale === "mr" ? "वर्षे" : "Years", icon: <Clock className="h-4 w-4" /> },
                   { value: "4", label: locale === "hi" ? "पवित्र नगर" : locale === "mr" ? "पवित्र शहरे" : "Sacred Cities", icon: <MapPin className="h-4 w-4" /> },
                   { value: "12", label: locale === "hi" ? "वर्ष चक्र" : locale === "mr" ? "वर्ष चक्र" : "Year Cycle", icon: <Star className="h-4 w-4" /> },
                   { value: "50M+", label: locale === "hi" ? "तीर्थयात्री" : locale === "mr" ? "तीर्थयात्री" : "Pilgrims", icon: <Users className="h-4 w-4" /> },
                 ].map((stat, i) => (
-                  <motion.div
+                  <div
                     key={i}
-                    variants={fadeInUp}
                     className="text-center"
                   >
                     <p className="font-heading text-3xl font-bold text-gold-400 md:text-4xl">
@@ -289,20 +208,13 @@ export default function HomePage() {
                       {stat.icon}
                       <span>{stat.label}</span>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
             {/* Right: Decorative Frame */}
-            <motion.div
-              variants={fadeInRight}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
+            <div className="relative">
               <div className="relative overflow-hidden rounded-2xl border-2 border-gold-500/40 bg-gradient-to-br from-temple-800 via-temple-700 to-temple-800 shadow-2xl">
                 {/* Inner golden frame */}
                 <div className="absolute inset-3 rounded-xl border border-gold-500/20" />
@@ -339,32 +251,23 @@ export default function HomePage() {
                   <div className="absolute bottom-6 right-6 h-8 w-8 border-b-2 border-r-2 border-gold-500/30" />
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════════════
-          4. SACRED BATHING DATES PREVIEW
-      ════════════════════════════════════════════════════════════════════════ */}
+      {/* 4. SACRED BATHING DATES PREVIEW */}
       <section id="dates-preview" className="relative bg-cream-50 py-24 md:py-32">
         <div className="section-container">
           {/* Section Header */}
-          <motion.div
-            className="mx-auto mb-6 text-center"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
+          <div className="mx-auto mb-6 text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
               {t(tr.home.datesSubtitle)}
             </p>
             <h2 className="font-heading text-4xl font-bold text-temple-900 md:text-5xl">
               {t(tr.home.datesTitle)}
             </h2>
-          </motion.div>
+          </div>
 
           <GoldDivider />
 
@@ -372,14 +275,9 @@ export default function HomePage() {
           <div className="mt-12">
             <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-3 md:overflow-x-visible md:pb-0 lg:grid-cols-5">
               {majorDates.map((item, index) => (
-                <motion.div
+                <div
                   key={item.date}
                   className="min-w-[280px] flex-shrink-0 snap-start md:min-w-0"
-                  variants={fadeInUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <div className="group relative h-full overflow-hidden rounded-2xl border-l-4 border-gold-500 bg-temple-800/90 p-6 shadow-lg transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_15px_40px_-10px_rgba(196,164,75,0.3)]">
                     {/* Shahi Snan badge */}
@@ -412,20 +310,13 @@ export default function HomePage() {
                       {t(item.significance)}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
 
           {/* View Complete Schedule */}
-          <motion.div
-            className="mt-12 text-center"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
+          <div className="mt-12 text-center">
             <Link
               href="/dates"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 px-8 py-3.5 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-5px_rgba(196,164,75,0.4)]"
@@ -433,44 +324,29 @@ export default function HomePage() {
               {t(tr.home.viewAllDates)}
               <ArrowRight className="h-4 w-4" />
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════════════
-          5. SACRED GHATS PREVIEW
-      ════════════════════════════════════════════════════════════════════════ */}
+      {/* 5. SACRED GHATS PREVIEW */}
       <section id="ghats-preview" className="relative bg-white py-24 md:py-32">
         <div className="section-container">
           {/* Section Header */}
-          <motion.div
-            className="mx-auto mb-6 text-center"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
+          <div className="mx-auto mb-6 text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
               {t(tr.home.ghatsSubtitle)}
             </p>
             <h2 className="font-heading text-4xl font-bold text-temple-900 md:text-5xl">
               {t(tr.home.ghatsTitle)}
             </h2>
-          </motion.div>
+          </div>
 
           <GoldDivider />
 
           {/* Two-column grid of ghat cards */}
-          <motion.div
-            className="mt-12 grid gap-8 sm:grid-cols-2"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-          >
+          <div className="mt-12 grid gap-8 sm:grid-cols-2">
             {previewGhats.map((ghat) => (
-              <motion.div key={ghat.id} variants={scaleIn}>
+              <div key={ghat.id}>
                 <div className="group relative h-[400px] overflow-hidden rounded-2xl shadow-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_25px_60px_-15px_rgba(196,164,75,0.35)]">
                   {/* Actual ghat image */}
                   <img
@@ -512,19 +388,12 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
 
           {/* Explore All Ghats */}
-          <motion.div
-            className="mt-12 text-center"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
+          <div className="mt-12 text-center">
             <Link
               href="/ghats"
               className="group inline-flex items-center gap-2 font-semibold text-gold-700 transition-colors hover:text-saffron-600"
@@ -532,44 +401,28 @@ export default function HomePage() {
               {t(tr.home.exploreGhats)}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════════════
-          6. MAP SECTION
-      ════════════════════════════════════════════════════════════════════════ */}
+      {/* 6. MAP SECTION */}
       <section id="map-preview" className="relative bg-cream-50 py-24 md:py-32">
         <div className="section-container">
           {/* Section Header */}
-          <motion.div
-            className="mx-auto mb-6 text-center"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
+          <div className="mx-auto mb-6 text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
               {t(tr.home.mapSubtitle)}
             </p>
             <h2 className="font-heading text-4xl font-bold text-temple-900 md:text-5xl">
               {t(tr.home.mapTitle)}
             </h2>
-          </motion.div>
+          </div>
 
           <GoldDivider />
 
           <div className="mx-auto mt-12 max-w-4xl">
             {/* Google Maps with golden border */}
-            <motion.div
-              className="overflow-hidden rounded-2xl border-2 border-gold-300/50 shadow-xl"
-              variants={scaleIn}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
+            <div className="overflow-hidden rounded-2xl border-2 border-gold-300/50 shadow-xl">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.0!2d73.7910!3d20.0063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb0c6f989e69%3A0x6c2f5f3e1edbd4e9!2sRam%20Kund!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                 width="100%"
@@ -581,17 +434,10 @@ export default function HomePage() {
                 title="Nashik Kumbh Mela Area Map - Ram Kund and Godavari Ghats"
                 className="w-full"
               />
-            </motion.div>
+            </div>
 
             {/* Navigation text below map */}
-            <motion.div
-              className="mt-8 flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left"
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
+            <div className="mt-8 flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gold-100 text-gold-600">
                 <Map className="h-6 w-6" />
               </div>
@@ -602,46 +448,31 @@ export default function HomePage() {
                     ? "कुंभमेळा क्षेत्र गोदावरी नदीच्या किनाऱ्यावर पंचवटीतील रामकुंडाभोवती पसरलेले आहे. प्रमुख स्थळे - त्र्यंबकेश्वर मंदिर (२८ किमी), तपोवन, आणि कालाराम मंदिर."
                     : "The Kumbh Mela area stretches along the Godavari River, centered around Ram Kund in Panchavati. Key landmarks - Trimbakeshwar Temple (28 km), Tapovan, and the ancient Kalaram Temple."}
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════════════
-          7. EVENTS PREVIEW
-      ════════════════════════════════════════════════════════════════════════ */}
+      {/* 7. EVENTS PREVIEW */}
       <section
         id="events-preview"
         className="relative bg-white py-24 md:py-32"
       >
         <div className="section-container">
           {/* Section Header */}
-          <motion.div
-            className="mx-auto mb-6 text-center"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
+          <div className="mx-auto mb-6 text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
               {t(tr.home.eventsSubtitle)}
             </p>
             <h2 className="font-heading text-4xl font-bold text-temple-900 md:text-5xl">
               {t(tr.home.eventsTitle)}
             </h2>
-          </motion.div>
+          </div>
 
           <GoldDivider />
 
           {/* 4-column event cards */}
-          <motion.div
-            className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-          >
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {previewEvents.map((evt, index) => {
               const categoryEn = evt.category.en;
               const colorClass =
@@ -650,7 +481,7 @@ export default function HomePage() {
                 categoryDots[categoryEn] || "bg-gray-500";
 
               return (
-                <motion.div key={index} variants={fadeInUp}>
+                <div key={index}>
                   <div className="group flex h-full flex-col rounded-2xl border border-gold-100 bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_-15px_rgba(196,164,75,0.2)]">
                     {/* Category Badge with dot */}
                     <span
@@ -676,20 +507,13 @@ export default function HomePage() {
                       {t(evt.description)}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
-          </motion.div>
+          </div>
 
           {/* View All Events */}
-          <motion.div
-            className="mt-12 text-center"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
+          <div className="mt-12 text-center">
             <Link
               href="/events"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 px-8 py-3.5 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-5px_rgba(196,164,75,0.4)]"
@@ -697,13 +521,11 @@ export default function HomePage() {
               {t(tr.home.viewAllEvents)}
               <ArrowRight className="h-4 w-4" />
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════════════
-          8. CTA BANNER
-      ════════════════════════════════════════════════════════════════════════ */}
+      {/* 8. CTA BANNER */}
       <section className="relative overflow-hidden bg-gradient-to-r from-[#1a0a00] via-temple-900 to-[#0D0906] py-20 md:py-28">
         {/* Particle dots background */}
         <div className="absolute inset-0">
@@ -721,12 +543,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gold-500/[0.03] to-transparent" />
 
         <div className="section-container relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <h2 className="mb-5 font-heading text-3xl font-bold text-gold-300 md:text-5xl">
               {t(tr.home.ctaTitle)}
             </h2>
@@ -740,54 +557,34 @@ export default function HomePage() {
               {t(tr.home.ctaButton)}
               <ArrowRight className="h-4 w-4" />
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════════════
-          9. NEWSLETTER
-      ════════════════════════════════════════════════════════════════════════ */}
+      {/* 9. NEWSLETTER */}
       <section id="newsletter" className="relative bg-cream-50 py-24 md:py-32">
         <div className="section-container">
           <div className="mx-auto max-w-xl text-center">
             {/* Section Header */}
-            <motion.div
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
+            <div>
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
                 {t(tr.home.newsletterSubtitle)}
               </p>
               <h2 className="mb-4 font-heading text-3xl font-bold text-temple-900 md:text-4xl">
                 {t(tr.home.newsletterTitle)}
               </h2>
-            </motion.div>
+            </div>
 
             <GoldDivider />
 
-            <motion.p
-              className="mb-8 text-temple-500 leading-relaxed"
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-            >
+            <p className="mb-8 text-temple-500 leading-relaxed">
               {t(tr.home.newsletterDesc)}
-            </motion.p>
+            </p>
 
             {/* Email Form */}
-            <motion.form
+            <form
               onSubmit={handleNewsletterSubmit}
               className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row"
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.15 }}
             >
               <label htmlFor="newsletter-email" className="sr-only">
                 {t(tr.home.emailPlaceholder)}
@@ -810,64 +607,40 @@ export default function HomePage() {
                 <Send className="h-4 w-4" />
                 {t(tr.home.subscribe)}
               </button>
-            </motion.form>
+            </form>
 
             {/* Success message */}
-            <AnimatePresence>
-              {isSubscribed && (
-                <motion.p
-                  className="mt-4 text-sm font-medium text-green-600"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  {locale === "hi"
-                    ? "सदस्यता के लिए धन्यवाद! आपको कुंभ मेला अपडेट शीघ्र प्राप्त होंगे।"
-                    : locale === "mr"
-                      ? "सदस्यता घेतल्याबद्दल धन्यवाद! तुम्हाला कुंभमेळा अपडेट लवकरच मिळतील."
-                      : "Thank you for subscribing! You will receive Kumbh Mela updates soon."}
-                </motion.p>
-              )}
-            </AnimatePresence>
+            {isSubscribed && (
+              <p className="mt-4 text-sm font-medium text-green-600">
+                {locale === "hi"
+                  ? "सदस्यता के लिए धन्यवाद! आपको कुंभ मेला अपडेट शीघ्र प्राप्त होंगे।"
+                  : locale === "mr"
+                    ? "सदस्यता घेतल्याबद्दल धन्यवाद! तुम्हाला कुंभमेळा अपडेट लवकरच मिळतील."
+                    : "Thank you for subscribing! You will receive Kumbh Mela updates soon."}
+              </p>
+            )}
 
             {/* Social proof */}
-            <motion.p
-              className="mt-5 text-xs text-temple-400"
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.25 }}
-            >
+            <p className="mt-5 text-xs text-temple-400">
               {locale === "hi"
                 ? "10,000+ भक्तों के साथ जुड़ें। कोई स्पैम नहीं, केवल पवित्र अपडेट।"
                 : locale === "mr"
                   ? "10,000+ भक्तांसोबत सहभागी व्हा. स्पॅम नाही, केवळ पवित्र अपडेट्स."
                   : "Join 10,000+ devotees. No spam, only sacred updates."}
-            </motion.p>
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════════════
-          10. FAQ SECTION (AEO Critical)
-      ════════════════════════════════════════════════════════════════════════ */}
+      {/* 10. FAQ SECTION (AEO Critical) */}
       <section id="faq" className="relative bg-white py-24 md:py-32">
         <div className="section-container">
           {/* Section Header */}
-          <motion.div
-            className="mx-auto mb-6 text-center"
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
+          <div className="mx-auto mb-6 text-center">
             <h2 className="font-heading text-4xl font-bold text-temple-900 md:text-5xl">
               {t(translations.faq.title)}
             </h2>
-          </motion.div>
+          </div>
 
           <GoldDivider />
 
@@ -877,14 +650,9 @@ export default function HomePage() {
               const isOpen = openFaq === index;
 
               return (
-                <motion.div
+                <div
                   key={index}
                   className="mb-4"
-                  variants={fadeInUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
                   {/* Question */}
                   <button
@@ -916,25 +684,21 @@ export default function HomePage() {
                     </span>
                   </button>
 
-                  {/* Answer */}
-                  <AnimatePresence initial={false}>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="overflow-hidden"
-                      >
-                        <div className="rounded-b-xl bg-cream-50/50 px-6 pb-5 pt-3">
-                          <p className="leading-relaxed text-temple-600">
-                            {t(item.a)}
-                          </p>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
+                  {/* Answer - CSS max-height transition */}
+                  <div
+                    className="overflow-hidden transition-all duration-300 ease-in-out"
+                    style={{
+                      maxHeight: isOpen ? "500px" : "0px",
+                      opacity: isOpen ? 1 : 0,
+                    }}
+                  >
+                    <div className="rounded-b-xl bg-cream-50/50 px-6 pb-5 pt-3">
+                      <p className="leading-relaxed text-temple-600">
+                        {t(item.a)}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               );
             })}
           </div>

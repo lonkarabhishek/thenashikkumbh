@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef, useEffect, useState, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Share2, RotateCcw, ArrowLeft, Trophy, MapPin } from "lucide-react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
@@ -481,7 +480,7 @@ function drawDarshan(ctx: CanvasRenderingContext2D, d: Darshan, frame: number) {
   ctx.arc(x, y, 6, 0, Math.PI * 2);
   ctx.fill();
 
-  // 🙏 Prayer hands drawn as simple icon
+  // Prayer hands drawn as simple icon
   ctx.fillStyle = "#0D0906";
   ctx.font = "bold 10px sans-serif";
   ctx.textAlign = "center";
@@ -614,7 +613,7 @@ function drawMilestoneArrival(ctx: CanvasRenderingContext2D, g: GS, locale: Loca
   ctx.font = "11px sans-serif";
   ctx.fillStyle = "rgba(255,248,230,0.6)";
   ctx.fillText(
-    locale === "en" ? "✨ Milestone Reached!" : locale === "hi" ? "✨ मील का पत्थर पहुँचे!" : "✨ टप्पा गाठला!",
+    locale === "en" ? "Milestone Reached!" : locale === "hi" ? "मील का पत्थर पहुँचे!" : "टप्पा गाठला!",
     0,
     32
   );
@@ -757,7 +756,7 @@ export default function KumbhRunPage() {
       setCurrentFact(ms.facts[g.factIndex][localeRef.current]);
     }
 
-    // Distance (1 frame ≈ speed * 0.3 meters)
+    // Distance (1 frame ~ speed * 0.3 meters)
     g.distance += g.speed * 0.3;
     g.gOff = (g.gOff + g.speed) % 30;
 
@@ -979,24 +978,18 @@ export default function KumbhRunPage() {
       </div>
 
       {/* Fact ticker - shows during gameplay */}
-      <AnimatePresence mode="wait">
-        {gameStatus === "playing" && currentFact && (
-          <motion.div
-            key={currentFact}
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            className="px-4 py-2 text-center text-xs leading-relaxed"
-            style={{
-              color: "rgba(255,248,230,0.55)",
-              background: "rgba(212,168,67,0.04)",
-              borderBottom: "1px solid rgba(212,168,67,0.06)",
-            }}
-          >
-            💡 {currentFact}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {gameStatus === "playing" && currentFact && (
+        <div
+          className="px-4 py-2 text-center text-xs leading-relaxed"
+          style={{
+            color: "rgba(255,248,230,0.55)",
+            background: "rgba(212,168,67,0.04)",
+            borderBottom: "1px solid rgba(212,168,67,0.06)",
+          }}
+        >
+          💡 {currentFact}
+        </div>
+      )}
 
       {/* Game Container - fills available space */}
       <div
@@ -1012,169 +1005,140 @@ export default function KumbhRunPage() {
         />
 
         {/* Idle Overlay */}
-        <AnimatePresence>
-          {gameStatus === "idle" && (
-            <motion.div
-              key="idle"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="absolute inset-0 flex flex-col items-center justify-center px-6"
-              style={{ background: "rgba(13,9,6,0.8)" }}
-              onPointerDown={(e) => { e.preventDefault(); startGame(); }}
-            >
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.1 }}
-                className="text-center"
+        {gameStatus === "idle" && (
+          <div
+            className="absolute inset-0 flex flex-col items-center justify-center px-6"
+            style={{ background: "rgba(13,9,6,0.8)" }}
+            onPointerDown={(e) => { e.preventDefault(); startGame(); }}
+          >
+            <div className="text-center">
+              <p
+                className="mb-1 font-devanagari text-3xl"
+                style={{ color: "#D4A843", textShadow: "0 0 20px rgba(212,168,67,0.4)" }}
               >
-                <p
-                  className="mb-1 font-devanagari text-3xl"
-                  style={{ color: "#D4A843", textShadow: "0 0 20px rgba(212,168,67,0.4)" }}
-                >
-                  कुंभ रन
-                </p>
-                <h2 className="mb-3 font-heading text-2xl font-bold" style={{ color: "#FFD700" }}>
-                  {t(kr.title)}
-                </h2>
-                <p className="mb-1 text-sm text-cream-300/50">
-                  {t(kr.subtitle)}
-                </p>
+                कुंभ रन
+              </p>
+              <h2 className="mb-3 font-heading text-2xl font-bold" style={{ color: "#FFD700" }}>
+                {t(kr.title)}
+              </h2>
+              <p className="mb-1 text-sm text-cream-300/50">
+                {t(kr.subtitle)}
+              </p>
 
-                {/* Milestone preview */}
-                <div className="mx-auto my-5 max-w-[280px] rounded-xl p-4"
-                  style={{
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(212,168,67,0.1)",
-                  }}
-                >
-                  <p className="mb-3 text-xs font-semibold uppercase tracking-wider" style={{ color: "#D4A843" }}>
-                    <MapPin className="mr-1 inline h-3 w-3" />
-                    {t(kr.milestones)}
-                  </p>
-                  <div className="space-y-1.5 text-left">
-                    {MILESTONES.map((ms, i) => (
-                      <div key={ms.id} className="flex items-center gap-2 text-xs text-cream-300/40">
-                        <span>{ms.emoji}</span>
-                        <span className="flex-1">{ms.name[locale]}</span>
-                        <span className="text-cream-300/20">{ms.distance}m</span>
-                        <span className="text-cream-300/15">{"●".repeat(Math.min(i + 1, 5))}</span>
-                      </div>
-                    ))}
-                  </div>
+              {/* Milestone preview */}
+              <div className="mx-auto my-5 max-w-[280px] rounded-xl p-4"
+                style={{
+                  background: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(212,168,67,0.1)",
+                }}
+              >
+                <p className="mb-3 text-xs font-semibold uppercase tracking-wider" style={{ color: "#D4A843" }}>
+                  <MapPin className="mr-1 inline h-3 w-3" />
+                  {t(kr.milestones)}
+                </p>
+                <div className="space-y-1.5 text-left">
+                  {MILESTONES.map((ms, i) => (
+                    <div key={ms.id} className="flex items-center gap-2 text-xs text-cream-300/40">
+                      <span>{ms.emoji}</span>
+                      <span className="flex-1">{ms.name[locale]}</span>
+                      <span className="text-cream-300/20">{ms.distance}m</span>
+                      <span className="text-cream-300/15">{"●".repeat(Math.min(i + 1, 5))}</span>
+                    </div>
+                  ))}
                 </div>
+              </div>
 
-                <motion.p
-                  className="text-base text-cream-300/60"
-                  animate={{ opacity: [0.4, 1, 0.4] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  {t(kr.tapToStart)}
-                </motion.p>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              <p className="text-base text-cream-300/60">
+                {t(kr.tapToStart)}
+              </p>
+            </div>
+          </div>
+        )}
 
         {/* Game Over Overlay */}
-        <AnimatePresence>
-          {gameStatus === "over" && (
-            <motion.div
-              key="over"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="absolute inset-0 flex flex-col items-center justify-center px-6"
-              style={{ background: "rgba(13,9,6,0.85)" }}
-            >
-              <motion.div
-                initial={{ scale: 0.8, y: 20 }}
-                animate={{ scale: 1, y: 0 }}
-                className="w-full max-w-[320px] text-center"
-              >
-                <h2 className="mb-1 font-heading text-2xl font-bold" style={{ color: "#FFD700" }}>
-                  {t(kr.gameOver)}
-                </h2>
-                <p className="mb-1 font-heading text-5xl font-bold" style={{ color: "#D4A843" }}>
-                  {finalScore}
+        {gameStatus === "over" && (
+          <div
+            className="absolute inset-0 flex flex-col items-center justify-center px-6"
+            style={{ background: "rgba(13,9,6,0.85)" }}
+          >
+            <div className="w-full max-w-[320px] text-center">
+              <h2 className="mb-1 font-heading text-2xl font-bold" style={{ color: "#FFD700" }}>
+                {t(kr.gameOver)}
+              </h2>
+              <p className="mb-1 font-heading text-5xl font-bold" style={{ color: "#D4A843" }}>
+                {finalScore}
+              </p>
+              <p className="mb-1 text-sm text-cream-300/50">
+                🙏 {gsRef.current.darshanN} {locale === "en" ? "Darshans" : "दर्शन"} | {Math.floor(gsRef.current.distance)}m
+              </p>
+              {finalScore >= highScore && finalScore > 0 && (
+                <p className="mb-2 text-sm font-bold text-amber-400">
+                  {t(kr.newBest)}
                 </p>
-                <p className="mb-1 text-sm text-cream-300/50">
-                  🙏 {gsRef.current.darshanN} {locale === "en" ? "Darshans" : "दर्शन"} | {Math.floor(gsRef.current.distance)}m
-                </p>
-                {finalScore >= highScore && finalScore > 0 && (
-                  <motion.p
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    className="mb-2 text-sm font-bold text-amber-400"
-                  >
-                    {t(kr.newBest)}
-                  </motion.p>
-                )}
+              )}
 
-                {/* Milestones visited */}
-                <div
-                  className="my-4 rounded-xl p-3 text-left"
+              {/* Milestones visited */}
+              <div
+                className="my-4 rounded-xl p-3 text-left"
+                style={{
+                  background: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(212,168,67,0.1)",
+                }}
+              >
+                <p className="mb-2 text-center text-xs font-semibold uppercase tracking-wider" style={{ color: "#D4A843" }}>
+                  <MapPin className="mr-1 inline h-3 w-3" />
+                  {t(kr.placesVisited)} ({placesVisited}/{totalPlaces})
+                </p>
+                <div className="space-y-1">
+                  {MILESTONES.map((ms, i) => {
+                    const visited = milestonesReached.includes(i);
+                    return (
+                      <div
+                        key={ms.id}
+                        className="flex items-center gap-2 text-xs"
+                        style={{ color: visited ? "rgba(255,248,230,0.7)" : "rgba(255,248,230,0.15)" }}
+                      >
+                        <span>{ms.emoji}</span>
+                        <span className="flex-1">{ms.name[locale]}</span>
+                        {visited
+                          ? <span style={{ color: "#D4A843" }}>✓</span>
+                          : <span className="text-cream-300/15">{ms.distance}m</span>
+                        }
+                      </div>
+                    );
+                  })}
+                </div>
+                {placesVisited < totalPlaces && (
+                  <p className="mt-2 text-center text-xs text-cream-300/30">
+                    {t(kr.visitEncourage)}
+                  </p>
+                )}
+              </div>
+
+              <div className="flex items-center justify-center gap-3">
+                <button
+                  onClick={startGame}
+                  className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-[#0D0906] transition-all hover:scale-[1.03] active:scale-[0.97]"
                   style={{
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(212,168,67,0.1)",
+                    background: "linear-gradient(135deg, #D4A843, #FFD700)",
+                    boxShadow: "0 4px 20px rgba(212,168,67,0.3)",
                   }}
                 >
-                  <p className="mb-2 text-center text-xs font-semibold uppercase tracking-wider" style={{ color: "#D4A843" }}>
-                    <MapPin className="mr-1 inline h-3 w-3" />
-                    {t(kr.placesVisited)} ({placesVisited}/{totalPlaces})
-                  </p>
-                  <div className="space-y-1">
-                    {MILESTONES.map((ms, i) => {
-                      const visited = milestonesReached.includes(i);
-                      return (
-                        <div
-                          key={ms.id}
-                          className="flex items-center gap-2 text-xs"
-                          style={{ color: visited ? "rgba(255,248,230,0.7)" : "rgba(255,248,230,0.15)" }}
-                        >
-                          <span>{ms.emoji}</span>
-                          <span className="flex-1">{ms.name[locale]}</span>
-                          {visited
-                            ? <span style={{ color: "#D4A843" }}>✓</span>
-                            : <span className="text-cream-300/15">{ms.distance}m</span>
-                          }
-                        </div>
-                      );
-                    })}
-                  </div>
-                  {placesVisited < totalPlaces && (
-                    <p className="mt-2 text-center text-xs text-cream-300/30">
-                      {t(kr.visitEncourage)}
-                    </p>
-                  )}
-                </div>
-
-                <div className="flex items-center justify-center gap-3">
-                  <button
-                    onClick={startGame}
-                    className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-[#0D0906] transition-all hover:scale-[1.03] active:scale-[0.97]"
-                    style={{
-                      background: "linear-gradient(135deg, #D4A843, #FFD700)",
-                      boxShadow: "0 4px 20px rgba(212,168,67,0.3)",
-                    }}
-                  >
-                    <RotateCcw className="h-4 w-4" />
-                    {t(kr.playAgain)}
-                  </button>
-                  <button
-                    onClick={handleShare}
-                    className="inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium text-cream-100 transition-all hover:bg-white/5"
-                    style={{ borderColor: "rgba(212,168,67,0.3)" }}
-                  >
-                    <Share2 className="h-4 w-4" />
-                    {copied ? t(translations.gamesPage.dailyCopied) : t(kr.share)}
-                  </button>
-                </div>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+                  <RotateCcw className="h-4 w-4" />
+                  {t(kr.playAgain)}
+                </button>
+                <button
+                  onClick={handleShare}
+                  className="inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium text-cream-100 transition-all hover:bg-white/5"
+                  style={{ borderColor: "rgba(212,168,67,0.3)" }}
+                >
+                  <Share2 className="h-4 w-4" />
+                  {copied ? t(translations.gamesPage.dailyCopied) : t(kr.share)}
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Bottom hint */}

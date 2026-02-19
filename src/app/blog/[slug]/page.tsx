@@ -3,7 +3,6 @@
 import React from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, ExternalLink, Share2 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import type { Locale } from "@/i18n/translations";
@@ -115,11 +114,8 @@ export default function BlogDetailPage() {
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
         <div className="section-container relative z-10 mx-auto max-w-3xl">
           {/* Meta row */}
-          <motion.div
+          <div
             className="-mt-16 relative z-20 mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
           >
             <div className="flex flex-wrap items-center gap-3 mb-4">
               <span
@@ -155,20 +151,14 @@ export default function BlogDetailPage() {
               {article.summary[locale]}
             </p>
 
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+            <div
               className="gold-line-thick mb-8 w-32 origin-left"
             />
-          </motion.div>
+          </div>
 
           {/* Body content */}
-          <motion.div
+          <div
             className="prose-dark"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
           >
             {article.content[locale].split("\n").map((paragraph, i) => (
               <p
@@ -178,15 +168,12 @@ export default function BlogDetailPage() {
                 {paragraph}
               </p>
             ))}
-          </motion.div>
+          </div>
 
           {/* Share button */}
-          <motion.div
+          <div
             className="mt-12 flex items-center justify-between border-t pt-8"
             style={{ borderColor: "rgba(212,168,67,0.1)" }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
           >
             <span className="text-sm text-cream-300/40">
               {article.source} &middot; {formatDate(article.date, locale)}
@@ -203,7 +190,7 @@ export default function BlogDetailPage() {
               <Share2 className="h-4 w-4" />
               {locale === "en" ? "Share" : locale === "hi" ? "शेयर करें" : "शेअर करा"}
             </button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -222,14 +209,13 @@ export default function BlogDetailPage() {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               {related.map((rel) => (
                 <Link key={rel.slug} href={`/blog/${rel.slug}`}>
-                  <motion.article
+                  <article
                     className="group relative overflow-hidden rounded-xl transition-all duration-500 hover:-translate-y-1"
                     style={{
                       background:
                         "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))",
                       border: "1px solid rgba(212,168,67,0.08)",
                     }}
-                    whileHover={{ scale: 1.02 }}
                   >
                     <div className="relative h-40 overflow-hidden">
                       <img
@@ -248,7 +234,7 @@ export default function BlogDetailPage() {
                         {formatDate(rel.date, locale)}
                       </span>
                     </div>
-                  </motion.article>
+                  </article>
                 </Link>
               ))}
             </div>

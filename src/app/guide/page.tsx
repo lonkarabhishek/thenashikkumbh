@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import {
   Train,
   Plane,
@@ -25,27 +24,6 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
-
-/* ───────────────────────────── animation variants ───────────────────────────── */
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.7, ease: "easeOut" as const },
-  }),
-};
-
-const staggerContainer = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.06 } },
-};
-
-const staggerChild = {
-  hidden: { opacity: 0, x: -16 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeOut" as const } },
-};
 
 /* ───────────────────────────── data ───────────────────────────── */
 
@@ -270,39 +248,27 @@ export default function PilgrimGuidePage() {
         />
 
         <div className="section-container relative z-10 text-center">
-          <motion.span
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+          <span
             className="mb-4 inline-block font-devanagari text-5xl drop-shadow-lg"
             style={{ color: "#D4A843", textShadow: "0 0 30px rgba(212,168,67,0.4)" }}
             aria-hidden="true"
           >
             तीर्थ यात्रा
-          </motion.span>
+          </span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
+          <h1
             className="font-heading text-4xl font-bold text-cream-100 drop-shadow-md md:text-6xl lg:text-7xl"
           >
             {t(translations.guidePage.heroTitle)}
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+          <p
             className="mx-auto mt-4 max-w-2xl text-lg text-cream-300/70 md:text-xl"
           >
             {t(translations.guidePage.heroSubtitle)}
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
+          <div
             className="gold-line-thick mx-auto mt-8 w-48 origin-center"
           />
         </div>
@@ -364,11 +330,7 @@ export default function PilgrimGuidePage() {
       <section id="how-to-reach" className="section-dark relative scroll-mt-32 py-16 md:py-24">
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
         <div className="section-container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7 }}
+          <div
             className="mb-16 text-center"
           >
             <h2 className="gradient-text font-heading text-3xl font-bold md:text-4xl">
@@ -382,17 +344,12 @@ export default function PilgrimGuidePage() {
             <p className="mx-auto mt-4 max-w-xl text-cream-300/60">
               {t(translations.guidePage.howToReachDesc)}
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-8 md:grid-cols-3">
-            {transportModes.map((mode, idx) => (
-              <motion.div
+            {transportModes.map((mode) => (
+              <div
                 key={t(mode.titleKey)}
-                custom={idx}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
                 className="card-glass flex flex-col p-8"
                 style={{
                   background: "rgba(255,255,255,0.04)",
@@ -430,7 +387,7 @@ export default function PilgrimGuidePage() {
                     {t(translations.guidePage.tip)} <span className="font-normal text-cream-300/60">{mode.tip}</span>
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -443,11 +400,7 @@ export default function PilgrimGuidePage() {
       >
         <div className="absolute inset-0 mandala-bg" />
         <div className="section-container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7 }}
+          <div
             className="mb-16 text-center"
           >
             <h2 className="gradient-text font-heading text-3xl font-bold md:text-4xl">
@@ -461,17 +414,12 @@ export default function PilgrimGuidePage() {
             <p className="mx-auto mt-4 max-w-xl text-temple-500">
               {t(translations.guidePage.whereToStayDesc)}
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {accommodationTypes.map((acc, idx) => (
-              <motion.div
+            {accommodationTypes.map((acc) => (
+              <div
                 key={t(acc.titleKey)}
-                custom={idx}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
                 className="card-glass flex flex-col p-6"
               >
                 <div
@@ -498,15 +446,11 @@ export default function PilgrimGuidePage() {
                 <p className="mt-3 text-xs text-temple-500">
                   <strong>{t(translations.guidePage.tip)}</strong> {acc.tip}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+          <div
             className="mx-auto mt-10 max-w-2xl rounded-2xl p-6 text-center"
             style={{
               background: "rgba(212,168,67,0.05)",
@@ -516,7 +460,7 @@ export default function PilgrimGuidePage() {
             <p className="text-sm leading-relaxed text-temple-600">
               {t(translations.guidePage.akhadaNote)}
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -524,11 +468,7 @@ export default function PilgrimGuidePage() {
       <section id="what-to-carry" className="section-dark relative scroll-mt-32 py-16 md:py-24">
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
         <div className="section-container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7 }}
+          <div
             className="mb-16 text-center"
           >
             <h2 className="gradient-text font-heading text-3xl font-bold md:text-4xl">
@@ -542,20 +482,15 @@ export default function PilgrimGuidePage() {
             <p className="mx-auto mt-4 max-w-xl text-cream-300/60">
               {t(translations.guidePage.whatToCarryDesc)}
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
+          <div
             className="mx-auto max-w-3xl"
           >
             <div className="grid gap-3 sm:grid-cols-2">
               {carryItems.map((item, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  variants={staggerChild}
                   className="flex items-start gap-3 rounded-xl p-4 transition-all duration-300 hover:-translate-y-0.5"
                   style={{
                     background: "rgba(255,255,255,0.03)",
@@ -564,10 +499,10 @@ export default function PilgrimGuidePage() {
                 >
                   <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0" style={{ color: "#D4A843" }} />
                   <span className="text-sm text-cream-300/80">{item}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -578,11 +513,7 @@ export default function PilgrimGuidePage() {
       >
         <div className="absolute inset-0 mandala-bg" />
         <div className="section-container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7 }}
+          <div
             className="mb-16 text-center"
           >
             <h2 className="gradient-text font-heading text-3xl font-bold md:text-4xl">
@@ -596,16 +527,11 @@ export default function PilgrimGuidePage() {
             <p className="mx-auto mt-4 max-w-xl text-temple-500">
               {t(translations.guidePage.dosAndDontsDesc)}
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-8 md:grid-cols-2">
             {/* Do's Column */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+            <div>
               <div className="mb-6 flex items-center gap-3">
                 <span
                   className="flex h-10 w-10 items-center justify-center rounded-full"
@@ -619,28 +545,19 @@ export default function PilgrimGuidePage() {
               </div>
               <div className="space-y-3">
                 {dos.map((item, idx) => (
-                  <motion.div
+                  <div
                     key={idx}
-                    initial={{ opacity: 0, x: -16 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.05, duration: 0.4 }}
                     className="card-glass flex items-start gap-3 p-4"
                   >
                     <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" />
                     <span className="text-sm text-temple-700">{item}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Don'ts Column */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+            <div>
               <div className="mb-6 flex items-center gap-3">
                 <span
                   className="flex h-10 w-10 items-center justify-center rounded-full"
@@ -654,20 +571,16 @@ export default function PilgrimGuidePage() {
               </div>
               <div className="space-y-3">
                 {donts.map((item, idx) => (
-                  <motion.div
+                  <div
                     key={idx}
-                    initial={{ opacity: 0, x: 16 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.05, duration: 0.4 }}
                     className="card-glass flex items-start gap-3 p-4"
                   >
                     <XCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-red-500" />
                     <span className="text-sm text-temple-700">{item}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -676,11 +589,7 @@ export default function PilgrimGuidePage() {
       <section id="essential-tips" className="section-dark relative scroll-mt-32 py-16 md:py-24">
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
         <div className="section-container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7 }}
+          <div
             className="mb-16 text-center"
           >
             <h2 className="gradient-text font-heading text-3xl font-bold md:text-4xl">
@@ -691,17 +600,12 @@ export default function PilgrimGuidePage() {
                 ॐ
               </span>
             </div>
-          </motion.div>
+          </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {essentialTips.map((tip, idx) => (
-              <motion.div
+            {essentialTips.map((tip) => (
+              <div
                 key={t(tip.titleKey)}
-                custom={idx}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
                 className="card-dark p-8"
               >
                 <div
@@ -730,7 +634,7 @@ export default function PilgrimGuidePage() {
                     {tip.content}
                   </p>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -746,11 +650,7 @@ export default function PilgrimGuidePage() {
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.06)_0%,transparent_70%)]" />
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+        <div
           className="section-container relative z-10 text-center"
         >
           <div className="sacred-divider mx-auto mb-8 max-w-xs">
@@ -772,7 +672,7 @@ export default function PilgrimGuidePage() {
             {t(translations.guidePage.ctaButton)}
             <ArrowRight className="h-5 w-5" />
           </Link>
-        </motion.div>
+        </div>
       </section>
 
 

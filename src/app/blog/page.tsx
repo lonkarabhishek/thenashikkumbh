@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import {
   ArrowRight,
   Send,
@@ -26,15 +25,6 @@ const sortedArticles = [...blogArticles].sort(
 );
 
 /* ───────────────────────────── helpers ───────────────────────── */
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, delay: i * 0.08 },
-  }),
-};
 
 const categoryColors: Record<string, { bg: string; text: string; border: string }> = {
   kumbh: {
@@ -125,10 +115,7 @@ export default function BlogPage() {
         />
 
         <div className="section-container relative z-10 text-center">
-          <motion.span
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+          <span
             className="mb-4 inline-block font-devanagari text-5xl drop-shadow-lg"
             style={{
               color: "#D4A843",
@@ -137,30 +124,21 @@ export default function BlogPage() {
             aria-hidden="true"
           >
             ज्ञान
-          </motion.span>
+          </span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
+          <h1
             className="font-heading text-4xl font-bold text-cream-100 drop-shadow-md md:text-6xl lg:text-7xl"
           >
             {t(bp.heroTitle)}
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+          <p
             className="mx-auto mt-4 max-w-2xl text-lg text-cream-300/70 md:text-xl"
           >
             {t(bp.heroSubtitle)}
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
+          <div
             className="gold-line-thick mx-auto mt-8 w-48 origin-center"
           />
         </div>
@@ -171,12 +149,8 @@ export default function BlogPage() {
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
         <div className="section-container relative z-10">
           {/* Section Header */}
-          <motion.div
+          <div
             className="mb-12 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
           >
             <div className="mb-4 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold"
               style={{
@@ -194,15 +168,11 @@ export default function BlogPage() {
             <p className="mx-auto mt-3 max-w-2xl text-cream-300/60">
               {t(bn.newsSubtitle)}
             </p>
-          </motion.div>
+          </div>
 
           {/* Category Filters */}
-          <motion.div
+          <div
             className="mb-12 flex flex-wrap items-center justify-center gap-3"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Filter className="mr-1 h-4 w-4 text-cream-300/40" />
             {filterOptions.map((opt) => {
@@ -231,7 +201,7 @@ export default function BlogPage() {
                 </button>
               );
             })}
-          </motion.div>
+          </div>
 
           {/* Timeline */}
           <div className="relative">
@@ -245,17 +215,12 @@ export default function BlogPage() {
             />
 
             <div className="space-y-8">
-              {filteredArticles.map((article, index) => {
+              {filteredArticles.map((article) => {
                 const colors = categoryColors[article.category] ?? categoryColors.kumbh;
                 const catKey = article.category as NewsCategory;
                 return (
-                  <motion.div
+                  <div
                     key={article.id}
-                    custom={index}
-                    variants={fadeUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-40px" }}
                     className="relative md:pl-16"
                   >
                     {/* Timeline dot */}
@@ -351,7 +316,7 @@ export default function BlogPage() {
                         </div>
                       </article>
                     </Link>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
@@ -363,17 +328,13 @@ export default function BlogPage() {
       <section className="section-dark relative py-8 md:py-16">
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
         <div className="section-container relative z-10">
-          <motion.div
+          <div
             className="rounded-2xl p-8 text-center md:p-12"
             style={{
               background:
                 "linear-gradient(135deg, rgba(212,168,67,0.08), rgba(212,168,67,0.03))",
               border: "1px solid rgba(212,168,67,0.15)",
             }}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
           >
             <h3 className="mb-4 font-heading text-2xl font-bold text-cream-100 md:text-3xl">
               {t(bp.newsletterTitle)}
@@ -399,7 +360,7 @@ export default function BlogPage() {
                 {t(bp.subscribe)}
               </button>
             </form>
-          </motion.div>
+          </div>
         </div>
       </section>
     </>

@@ -1,24 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { Calendar, Users, Filter, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { eventsI18n, akhadasI18n } from "@/data/siteDataI18n";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
-
-/* ───────────────────────────── animation helpers ───────────────────────────── */
-
-/* eslint-disable @typescript-eslint/no-unused-vars */
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, delay: i * 0.1, ease: "easeOut" as const },
-  }),
-};
 
 /* ───────────────────────────── color maps ───────────────────────────── */
 
@@ -88,41 +75,23 @@ export default function EventsPage() {
         />
 
         <div className="section-container relative z-10 text-center">
-          <motion.span
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+          <span
             className="mb-4 inline-block font-devanagari text-5xl drop-shadow-lg"
             style={{ color: "#D4A843", textShadow: "0 0 30px rgba(212,168,67,0.4)" }}
             aria-hidden="true"
           >
             हर हर महादेव
-          </motion.span>
+          </span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="font-heading text-4xl font-bold text-cream-100 drop-shadow-md md:text-6xl lg:text-7xl"
-          >
+          <h1 className="font-heading text-4xl font-bold text-cream-100 drop-shadow-md md:text-6xl lg:text-7xl">
             {t(translations.eventsPage.heroTitle)}
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="mx-auto mt-4 max-w-2xl text-lg text-cream-300/70 md:text-xl"
-          >
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-cream-300/70 md:text-xl">
             {t(translations.eventsPage.heroSubtitle)}
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="gold-line-thick mx-auto mt-8 w-48 origin-center"
-          />
+          <div className="gold-line-thick mx-auto mt-8 w-48 origin-center" />
         </div>
       </section>
 
@@ -130,13 +99,7 @@ export default function EventsPage() {
       <section className="section-dark relative py-16 md:py-24">
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
         <div className="section-container relative z-10">
-          <motion.div
-            className="mb-12 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7 }}
-          >
+          <div className="mb-12 text-center">
             <h2 className="gradient-text font-heading text-3xl font-bold md:text-4xl">
               {t(translations.eventsPage.eventsTitle)}
             </h2>
@@ -148,16 +111,10 @@ export default function EventsPage() {
                 ॐ
               </span>
             </div>
-          </motion.div>
+          </div>
 
           {/* Filter Tabs */}
-          <motion.div
-            className="mb-12 flex flex-wrap items-center justify-center gap-2 md:gap-3"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          <div className="mb-12 flex flex-wrap items-center justify-center gap-2 md:gap-3">
             <div className="mr-2 flex items-center gap-2 text-cream-300/40">
               <Filter className="h-4 w-4" />
               <span className="hidden text-sm font-medium sm:inline">{t(translations.eventsPage.filterLabel)}</span>
@@ -184,20 +141,16 @@ export default function EventsPage() {
                 {t(tab.labelKey)}
               </button>
             ))}
-          </motion.div>
+          </div>
 
           {/* Events Grid */}
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
-            {filteredEvents.map((event, index) => {
+            {filteredEvents.map((event) => {
               const colors = categoryColors[event.category.en] || categoryColors["Ceremony"];
               return (
-                <motion.div
+                <div
                   key={t(event.title)}
                   className="card-dark group relative p-6 transition-transform duration-500 hover:-translate-y-2"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   {/* Gold accent line at top */}
                   <div
@@ -230,19 +183,15 @@ export default function EventsPage() {
                   <p className="text-sm leading-relaxed text-cream-300/60">
                     {t(event.description)}
                   </p>
-                </motion.div>
+                </div>
               );
             })}
           </div>
 
           {filteredEvents.length === 0 && (
-            <motion.p
-              className="py-12 text-center text-lg text-cream-300/40"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-            >
+            <p className="py-12 text-center text-lg text-cream-300/40">
               {t(translations.eventsPage.noEvents)}
-            </motion.p>
+            </p>
           )}
         </div>
       </section>
@@ -251,13 +200,7 @@ export default function EventsPage() {
       <section className="relative bg-cream-50 py-16 md:py-24">
         <div className="absolute inset-0 mandala-bg" />
         <div className="section-container relative z-10">
-          <motion.div
-            className="mb-12 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7 }}
-          >
+          <div className="mb-12 text-center">
             <h2 className="gradient-text font-heading text-3xl font-bold md:text-4xl">
               {t(translations.eventsPage.akhadasTitle)}
             </h2>
@@ -269,21 +212,17 @@ export default function EventsPage() {
             <p className="mx-auto max-w-3xl text-lg leading-relaxed text-temple-500">
               {t(translations.eventsPage.akhadasSubtitle)}
             </p>
-          </motion.div>
+          </div>
 
-          {traditions.map((tradition, tradIndex) => {
+          {traditions.map((tradition) => {
             const tradAkhadas = groupedAkhadas[tradition];
             if (!tradAkhadas || tradAkhadas.length === 0) return null;
             const colors = traditionColors[tradition];
 
             return (
-              <motion.div
+              <div
                 key={tradition}
                 className="mb-16 last:mb-0"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.7, delay: tradIndex * 0.1 }}
               >
                 <div className="mb-8 flex items-center gap-3">
                   <Users className="h-6 w-6" style={{ color: colors.accent }} />
@@ -294,15 +233,11 @@ export default function EventsPage() {
                 </div>
 
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                  {tradAkhadas.map((akhada, index) => (
-                    <motion.div
+                  {tradAkhadas.map((akhada) => (
+                    <div
                       key={akhada.name}
                       className="card-glass group relative overflow-hidden p-6 transition-all duration-500 hover:-translate-y-2"
                       style={{ borderColor: `${colors.accent}20` }}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, margin: "-50px" }}
-                      transition={{ duration: 0.5, delay: index * 0.12 }}
                     >
                       {/* Gold border left */}
                       <div
@@ -338,10 +273,10 @@ export default function EventsPage() {
                           <span>{t(translations.eventsPage.established)} {akhada.established}</span>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>
@@ -357,13 +292,7 @@ export default function EventsPage() {
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.06)_0%,transparent_70%)]" />
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="section-container relative z-10 text-center"
-        >
+        <div className="section-container relative z-10 text-center">
           <div className="sacred-divider mx-auto mb-8 max-w-xs">
             <span className="font-devanagari text-sm" style={{ color: "#D4A843" }}>
               ॐ
@@ -386,7 +315,7 @@ export default function EventsPage() {
               <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
-        </motion.div>
+        </div>
       </section>
 
 

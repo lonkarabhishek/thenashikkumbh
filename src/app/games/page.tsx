@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   Palette,
   Music,
@@ -29,17 +28,6 @@ import {
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
 import type { Locale } from "@/i18n/translations";
-
-/* ───────────────────────────── animation helpers ───────────────────────────── */
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, delay: i * 0.1, ease: "easeOut" as const },
-  }),
-};
 
 /* ───────────────────────────── types ───────────────────────────── */
 
@@ -673,39 +661,27 @@ export default function GamesPage() {
         />
 
         <div className="section-container relative z-10 text-center">
-          <motion.span
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+          <span
             className="mb-4 inline-block font-devanagari text-5xl drop-shadow-lg"
             style={{ color: "#D4A843", textShadow: "0 0 30px rgba(212,168,67,0.4)" }}
             aria-hidden="true"
           >
             क्रीडा
-          </motion.span>
+          </span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
+          <h1
             className="font-heading text-4xl font-bold text-cream-100 drop-shadow-md md:text-6xl lg:text-7xl"
           >
             {t(translations.gamesPage.heroTitle)}
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+          <p
             className="mx-auto mt-4 max-w-2xl text-lg text-cream-300/70 md:text-xl"
           >
             {t(translations.gamesPage.heroSubtitle)}
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
+          <div
             className="gold-line-thick mx-auto mt-8 w-48 origin-center"
           />
         </div>
@@ -714,12 +690,7 @@ export default function GamesPage() {
       {/* ═══════════════════ KUMBH RUN BANNER ═══════════════════ */}
       <section className="section-dark relative py-10 md:py-14">
         <div className="section-container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-          >
+          <div>
             <Link href="/kumbhrun" className="group block">
               <div className="relative overflow-hidden rounded-2xl border border-amber-500/30 bg-gradient-to-r from-amber-900/80 via-yellow-800/60 to-amber-900/80 p-6 md:p-8 shadow-xl shadow-amber-900/20 transition-all duration-500 hover:border-amber-400/50 hover:shadow-2xl hover:shadow-amber-500/20">
                 {/* Decorative background glow */}
@@ -753,7 +724,7 @@ export default function GamesPage() {
                 </div>
               </div>
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -767,14 +738,7 @@ export default function GamesPage() {
         />
         <div className="section-container relative z-10">
           {/* Section Header */}
-          <motion.div
-            className="mb-12 text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={fadeUp}
-            custom={0}
-          >
+          <div className="mb-12 text-center">
             <div className="mb-4 flex items-center justify-center gap-3">
               <Calendar className="h-6 w-6" style={{ color: "#D4A843" }} />
               <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#D4A843]">
@@ -795,302 +759,258 @@ export default function GamesPage() {
             <p className="mx-auto mt-4 max-w-2xl text-cream-300/60">
               {t(translations.gamesPage.dailySubtitle)}
             </p>
-          </motion.div>
+          </div>
 
           {/* Daily Challenge Card */}
-          <motion.div
+          <div
             className="mx-auto max-w-2xl overflow-hidden rounded-2xl"
             style={cardStyle}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            custom={1}
           >
             <div className="p-6 md:p-10">
-              <AnimatePresence mode="wait">
-                {/* Already played today */}
-                {dailyAlreadyPlayed && !dailyStarted && (
-                  <motion.div
-                    key="daily-done"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    className="text-center"
+              {/* Already played today */}
+              {dailyAlreadyPlayed && !dailyStarted && (
+                <div className="text-center">
+                  <div
+                    className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
+                    style={{
+                      background: "linear-gradient(135deg, rgba(34,197,94,0.2) 0%, rgba(34,197,94,0.05) 100%)",
+                      border: "2px solid rgba(34,197,94,0.3)",
+                    }}
                   >
-                    <div
-                      className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
-                      style={{
-                        background: "linear-gradient(135deg, rgba(34,197,94,0.2) 0%, rgba(34,197,94,0.05) 100%)",
-                        border: "2px solid rgba(34,197,94,0.3)",
-                      }}
-                    >
-                      <CheckCircle2 className="h-10 w-10 text-green-400" />
-                    </div>
-                    <h3 className="mb-4 text-xl font-bold text-cream-100">
-                      {t(translations.gamesPage.dailyCompleted)}
-                    </h3>
+                    <CheckCircle2 className="h-10 w-10 text-green-400" />
+                  </div>
+                  <h3 className="mb-4 text-xl font-bold text-cream-100">
+                    {t(translations.gamesPage.dailyCompleted)}
+                  </h3>
 
-                    {/* Emoji result grid */}
-                    <div className="mb-4 flex items-center justify-center gap-2">
-                      {dailySavedResults.map((r, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: i * 0.1 }}
-                          className={`flex h-12 w-12 items-center justify-center rounded-xl text-xl font-bold ${
-                            r
-                              ? "bg-green-500/20 border border-green-500/40 text-green-400"
-                              : "bg-red-500/20 border border-red-500/40 text-red-400"
-                          }`}
-                        >
-                          {r ? "🟢" : "🔴"}
-                        </motion.div>
-                      ))}
-                    </div>
-
-                    <p className="mb-2 font-heading text-4xl font-bold" style={{ color: "#D4A843" }}>
-                      {dailyScore}<span className="text-xl text-cream-300/40"> / 5</span>
-                    </p>
-                    <p className="mb-6 text-sm text-cream-300/50">
-                      {getResultMessage(dailyScore, 5)}
-                    </p>
-
-                    {/* Share + Timer */}
-                    <div className="flex flex-col items-center gap-4">
-                      <button
-                        onClick={handleDailyShare}
-                        className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
-                        style={goldBtnStyle}
+                  {/* Emoji result grid */}
+                  <div className="mb-4 flex items-center justify-center gap-2">
+                    {dailySavedResults.map((r, i) => (
+                      <div
+                        key={i}
+                        className={`flex h-12 w-12 items-center justify-center rounded-xl text-xl font-bold ${
+                          r
+                            ? "bg-green-500/20 border border-green-500/40 text-green-400"
+                            : "bg-red-500/20 border border-red-500/40 text-red-400"
+                        }`}
                       >
-                        {dailyCopied ? (
-                          <>
-                            <CheckCircle2 className="h-4 w-4" />
-                            {t(translations.gamesPage.dailyCopied)}
-                          </>
-                        ) : (
-                          <>
-                            <Share2 className="h-4 w-4" />
-                            {t(translations.gamesPage.dailyShare)}
-                          </>
-                        )}
-                      </button>
-                      <div className="flex items-center gap-2 text-sm text-cream-300/40">
-                        <Clock className="h-4 w-4" />
-                        {t(translations.gamesPage.dailyNextIn)} {hoursLeft} {t(translations.gamesPage.dailyHours)}
+                        {r ? "🟢" : "🔴"}
                       </div>
-                    </div>
-                  </motion.div>
-                )}
+                    ))}
+                  </div>
 
-                {/* Start screen */}
-                {!dailyAlreadyPlayed && !dailyStarted && (
-                  <motion.div
-                    key="daily-start"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    className="text-center"
-                  >
-                    <div
-                      className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
-                      style={{
-                        background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
-                        border: "1px solid rgba(212,168,67,0.3)",
-                      }}
-                    >
-                      <Calendar className="h-10 w-10" style={{ color: "#D4A843" }} />
-                    </div>
-                    <p className="mb-2 text-lg font-semibold text-cream-100">
-                      {t(translations.gamesPage.dailyDay)} #{dayNumber}
-                    </p>
-                    <p className="mb-8 text-cream-300/60">
-                      {t(translations.gamesPage.dailySubtitle)}
-                    </p>
+                  <p className="mb-2 font-heading text-4xl font-bold" style={{ color: "#D4A843" }}>
+                    {dailyScore}<span className="text-xl text-cream-300/40"> / 5</span>
+                  </p>
+                  <p className="mb-6 text-sm text-cream-300/50">
+                    {getResultMessage(dailyScore, 5)}
+                  </p>
+
+                  {/* Share + Timer */}
+                  <div className="flex flex-col items-center gap-4">
                     <button
-                      onClick={() => setDailyStarted(true)}
-                      className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97]"
+                      onClick={handleDailyShare}
+                      className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
                       style={goldBtnStyle}
                     >
-                      <Sparkles className="h-4 w-4" />
-                      {t(translations.gamesPage.dailyPlay)}
-                    </button>
-                  </motion.div>
-                )}
-
-                {/* Question screen */}
-                {dailyStarted && !dailyDone && (
-                  <motion.div
-                    key={`daily-q-${dailyQ}`}
-                    initial={{ opacity: 0, x: 40 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -40 }}
-                    transition={{ duration: 0.4 }}
-                  >
-                    {/* Progress dots */}
-                    <div className="mb-6 flex items-center justify-center gap-2">
-                      {[0, 1, 2, 3, 4].map((i) => (
-                        <div
-                          key={i}
-                          className={`h-2.5 w-8 rounded-full transition-all duration-300 ${
-                            i < dailyQ
-                              ? dailyResults[i]
-                                ? "bg-green-500"
-                                : "bg-red-500"
-                              : i === dailyQ
-                                ? "bg-[#D4A843]"
-                                : "bg-white/10"
-                          }`}
-                        />
-                      ))}
-                    </div>
-
-                    <div className="mb-2 text-center text-xs font-medium uppercase tracking-wider text-cream-300/40">
-                      {dailyQ + 1} / 5
-                    </div>
-
-                    <h3 className="mb-6 text-center text-xl font-bold text-cream-100 md:text-2xl">
-                      {tq(dailyQuestions[dailyQ].question)}
-                    </h3>
-
-                    <div className="space-y-3">
-                      {dailyQuestions[dailyQ].options.map((option, idx) => {
-                        const isSelected = dailySelected === idx;
-                        const isCorrect = idx === dailyQuestions[dailyQ].correctIndex;
-                        const showCorrect = dailyAnswered && isCorrect;
-                        const showWrong = dailyAnswered && isSelected && !isCorrect;
-
-                        let borderColor = "rgba(212,168,67,0.12)";
-                        let bgColor = "rgba(26,21,16,0.6)";
-                        if (showCorrect) {
-                          borderColor = "rgba(34,197,94,0.6)";
-                          bgColor = "rgba(34,197,94,0.1)";
-                        } else if (showWrong) {
-                          borderColor = "rgba(239,68,68,0.6)";
-                          bgColor = "rgba(239,68,68,0.1)";
-                        }
-
-                        return (
-                          <motion.button
-                            key={idx}
-                            onClick={() => handleDailyOption(idx)}
-                            className="flex w-full items-center gap-3 rounded-xl px-5 py-4 text-left transition-all duration-300"
-                            style={{ border: `1px solid ${borderColor}`, background: bgColor }}
-                            whileHover={!dailyAnswered ? { borderColor: "rgba(212,168,67,0.4)", background: "rgba(212,168,67,0.05)" } : {}}
-                            whileTap={!dailyAnswered ? { scale: 0.98 } : {}}
-                          >
-                            <span className="flex-1 text-cream-100">{tq(option)}</span>
-                            {showCorrect && <CheckCircle2 className="h-5 w-5 text-green-400" />}
-                            {showWrong && <XCircle className="h-5 w-5 text-red-400" />}
-                          </motion.button>
-                        );
-                      })}
-                    </div>
-
-                    <AnimatePresence>
-                      {dailyAnswered && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          className="mt-6 flex items-center justify-between"
-                        >
-                          <span className={`text-sm font-medium ${dailySelected === dailyQuestions[dailyQ].correctIndex ? "text-green-400" : "text-red-400"}`}>
-                            {dailySelected === dailyQuestions[dailyQ].correctIndex
-                              ? t(translations.gamesPage.correct)
-                              : t(translations.gamesPage.incorrect)}
-                          </span>
-                          <button
-                            onClick={handleDailyNext}
-                            className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
-                            style={{ background: "linear-gradient(135deg, #D4A843, #FFD700)" }}
-                          >
-                            {dailyQ < 4 ? t(translations.gamesPage.nextQuestion) : t(translations.gamesPage.seeResults)}
-                            <ChevronRight className="h-4 w-4" />
-                          </button>
-                        </motion.div>
+                      {dailyCopied ? (
+                        <>
+                          <CheckCircle2 className="h-4 w-4" />
+                          {t(translations.gamesPage.dailyCopied)}
+                        </>
+                      ) : (
+                        <>
+                          <Share2 className="h-4 w-4" />
+                          {t(translations.gamesPage.dailyShare)}
+                        </>
                       )}
-                    </AnimatePresence>
-                  </motion.div>
-                )}
-
-                {/* Results screen */}
-                {dailyDone && dailyStarted && (
-                  <motion.div
-                    key="daily-results"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="text-center"
-                  >
-                    <div
-                      className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full"
-                      style={{
-                        background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
-                        border: "2px solid rgba(212,168,67,0.3)",
-                      }}
-                    >
-                      <Trophy className="h-12 w-12" style={{ color: "#FFD700" }} />
-                    </div>
-
-                    <h3 className="mb-4 text-xl font-bold text-cream-100">
-                      {t(translations.gamesPage.dailyCompleted)}
-                    </h3>
-
-                    {/* Emoji result grid */}
-                    <div className="mb-4 flex items-center justify-center gap-2">
-                      {dailyResults.map((r, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ scale: 0, rotate: -180 }}
-                          animate={{ scale: 1, rotate: 0 }}
-                          transition={{ delay: i * 0.15, type: "spring" }}
-                          className={`flex h-14 w-14 items-center justify-center rounded-xl text-2xl font-bold ${
-                            r
-                              ? "bg-green-500/20 border border-green-500/40"
-                              : "bg-red-500/20 border border-red-500/40"
-                          }`}
-                        >
-                          {r ? "🟢" : "🔴"}
-                        </motion.div>
-                      ))}
-                    </div>
-
-                    <p className="mb-2 font-heading text-5xl font-bold" style={{ color: "#D4A843" }}>
-                      {dailyScore}<span className="text-2xl text-cream-300/40"> / 5</span>
-                    </p>
-                    <p className="mb-8 text-sm text-cream-300/50">
-                      {getResultMessage(dailyScore, 5)}
-                    </p>
-
-                    <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                      <button
-                        onClick={handleDailyShare}
-                        className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
-                        style={goldBtnStyle}
-                      >
-                        {dailyCopied ? (
-                          <>
-                            <CheckCircle2 className="h-4 w-4" />
-                            {t(translations.gamesPage.dailyCopied)}
-                          </>
-                        ) : (
-                          <>
-                            <Share2 className="h-4 w-4" />
-                            {t(translations.gamesPage.dailyShare)}
-                          </>
-                        )}
-                      </button>
-                    </div>
-
-                    <div className="mt-6 flex items-center justify-center gap-2 text-sm text-cream-300/40">
+                    </button>
+                    <div className="flex items-center gap-2 text-sm text-cream-300/40">
                       <Clock className="h-4 w-4" />
                       {t(translations.gamesPage.dailyNextIn)} {hoursLeft} {t(translations.gamesPage.dailyHours)}
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                  </div>
+                </div>
+              )}
+
+              {/* Start screen */}
+              {!dailyAlreadyPlayed && !dailyStarted && (
+                <div className="text-center">
+                  <div
+                    className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
+                    style={{
+                      background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
+                      border: "1px solid rgba(212,168,67,0.3)",
+                    }}
+                  >
+                    <Calendar className="h-10 w-10" style={{ color: "#D4A843" }} />
+                  </div>
+                  <p className="mb-2 text-lg font-semibold text-cream-100">
+                    {t(translations.gamesPage.dailyDay)} #{dayNumber}
+                  </p>
+                  <p className="mb-8 text-cream-300/60">
+                    {t(translations.gamesPage.dailySubtitle)}
+                  </p>
+                  <button
+                    onClick={() => setDailyStarted(true)}
+                    className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97]"
+                    style={goldBtnStyle}
+                  >
+                    <Sparkles className="h-4 w-4" />
+                    {t(translations.gamesPage.dailyPlay)}
+                  </button>
+                </div>
+              )}
+
+              {/* Question screen */}
+              {dailyStarted && !dailyDone && (
+                <div>
+                  {/* Progress dots */}
+                  <div className="mb-6 flex items-center justify-center gap-2">
+                    {[0, 1, 2, 3, 4].map((i) => (
+                      <div
+                        key={i}
+                        className={`h-2.5 w-8 rounded-full transition-all duration-300 ${
+                          i < dailyQ
+                            ? dailyResults[i]
+                              ? "bg-green-500"
+                              : "bg-red-500"
+                            : i === dailyQ
+                              ? "bg-[#D4A843]"
+                              : "bg-white/10"
+                        }`}
+                      />
+                    ))}
+                  </div>
+
+                  <div className="mb-2 text-center text-xs font-medium uppercase tracking-wider text-cream-300/40">
+                    {dailyQ + 1} / 5
+                  </div>
+
+                  <h3 className="mb-6 text-center text-xl font-bold text-cream-100 md:text-2xl">
+                    {tq(dailyQuestions[dailyQ].question)}
+                  </h3>
+
+                  <div className="space-y-3">
+                    {dailyQuestions[dailyQ].options.map((option, idx) => {
+                      const isSelected = dailySelected === idx;
+                      const isCorrect = idx === dailyQuestions[dailyQ].correctIndex;
+                      const showCorrect = dailyAnswered && isCorrect;
+                      const showWrong = dailyAnswered && isSelected && !isCorrect;
+
+                      let borderColor = "rgba(212,168,67,0.12)";
+                      let bgColor = "rgba(26,21,16,0.6)";
+                      if (showCorrect) {
+                        borderColor = "rgba(34,197,94,0.6)";
+                        bgColor = "rgba(34,197,94,0.1)";
+                      } else if (showWrong) {
+                        borderColor = "rgba(239,68,68,0.6)";
+                        bgColor = "rgba(239,68,68,0.1)";
+                      }
+
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => handleDailyOption(idx)}
+                          className="flex w-full items-center gap-3 rounded-xl px-5 py-4 text-left transition-all duration-300"
+                          style={{ border: `1px solid ${borderColor}`, background: bgColor }}
+                        >
+                          <span className="flex-1 text-cream-100">{tq(option)}</span>
+                          {showCorrect && <CheckCircle2 className="h-5 w-5 text-green-400" />}
+                          {showWrong && <XCircle className="h-5 w-5 text-red-400" />}
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {dailyAnswered && (
+                    <div className="mt-6 flex items-center justify-between">
+                      <span className={`text-sm font-medium ${dailySelected === dailyQuestions[dailyQ].correctIndex ? "text-green-400" : "text-red-400"}`}>
+                        {dailySelected === dailyQuestions[dailyQ].correctIndex
+                          ? t(translations.gamesPage.correct)
+                          : t(translations.gamesPage.incorrect)}
+                      </span>
+                      <button
+                        onClick={handleDailyNext}
+                        className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                        style={{ background: "linear-gradient(135deg, #D4A843, #FFD700)" }}
+                      >
+                        {dailyQ < 4 ? t(translations.gamesPage.nextQuestion) : t(translations.gamesPage.seeResults)}
+                        <ChevronRight className="h-4 w-4" />
+                      </button>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Results screen */}
+              {dailyDone && dailyStarted && (
+                <div className="text-center">
+                  <div
+                    className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full"
+                    style={{
+                      background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
+                      border: "2px solid rgba(212,168,67,0.3)",
+                    }}
+                  >
+                    <Trophy className="h-12 w-12" style={{ color: "#FFD700" }} />
+                  </div>
+
+                  <h3 className="mb-4 text-xl font-bold text-cream-100">
+                    {t(translations.gamesPage.dailyCompleted)}
+                  </h3>
+
+                  {/* Emoji result grid */}
+                  <div className="mb-4 flex items-center justify-center gap-2">
+                    {dailyResults.map((r, i) => (
+                      <div
+                        key={i}
+                        className={`flex h-14 w-14 items-center justify-center rounded-xl text-2xl font-bold ${
+                          r
+                            ? "bg-green-500/20 border border-green-500/40"
+                            : "bg-red-500/20 border border-red-500/40"
+                        }`}
+                      >
+                        {r ? "🟢" : "🔴"}
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="mb-2 font-heading text-5xl font-bold" style={{ color: "#D4A843" }}>
+                    {dailyScore}<span className="text-2xl text-cream-300/40"> / 5</span>
+                  </p>
+                  <p className="mb-8 text-sm text-cream-300/50">
+                    {getResultMessage(dailyScore, 5)}
+                  </p>
+
+                  <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                    <button
+                      onClick={handleDailyShare}
+                      className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                      style={goldBtnStyle}
+                    >
+                      {dailyCopied ? (
+                        <>
+                          <CheckCircle2 className="h-4 w-4" />
+                          {t(translations.gamesPage.dailyCopied)}
+                        </>
+                      ) : (
+                        <>
+                          <Share2 className="h-4 w-4" />
+                          {t(translations.gamesPage.dailyShare)}
+                        </>
+                      )}
+                    </button>
+                  </div>
+
+                  <div className="mt-6 flex items-center justify-center gap-2 text-sm text-cream-300/40">
+                    <Clock className="h-4 w-4" />
+                    {t(translations.gamesPage.dailyNextIn)} {hoursLeft} {t(translations.gamesPage.dailyHours)}
+                  </div>
+                </div>
+              )}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -1105,14 +1025,7 @@ export default function GamesPage() {
       <section className="section-dark relative py-16 md:py-24">
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
         <div className="section-container relative z-10">
-          <motion.div
-            className="mb-12 text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={fadeUp}
-            custom={0}
-          >
+          <div className="mb-12 text-center">
             <div className="mb-4 flex items-center justify-center gap-2">
               <Shuffle className="h-6 w-6" style={{ color: "#D4A843" }} />
               <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#D4A843]">
@@ -1125,236 +1038,201 @@ export default function GamesPage() {
             <p className="mx-auto mt-4 max-w-2xl text-cream-300/60">
               {t(translations.gamesPage.scrambleSubtitle)}
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             className="mx-auto max-w-2xl overflow-hidden rounded-2xl"
             style={cardStyle}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            custom={1}
           >
             <div className="p-6 md:p-10">
-              <AnimatePresence mode="wait">
-                {/* Start */}
-                {!scrambleStarted && !scrambleDone && (
-                  <motion.div
-                    key="scramble-start"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    className="text-center"
+              {/* Start */}
+              {!scrambleStarted && !scrambleDone && (
+                <div className="text-center">
+                  <div
+                    className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
+                    style={{
+                      background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
+                      border: "1px solid rgba(212,168,67,0.3)",
+                    }}
                   >
-                    <div
-                      className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
-                      style={{
-                        background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
-                        border: "1px solid rgba(212,168,67,0.3)",
-                      }}
-                    >
-                      <Shuffle className="h-10 w-10" style={{ color: "#D4A843" }} />
-                    </div>
-                    <p className="mb-8 text-cream-300/60">
-                      {t(translations.gamesPage.scrambleSubtitle)}
-                    </p>
-                    <button
-                      onClick={() => setScrambleStarted(true)}
-                      className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
-                      style={goldBtnStyle}
-                    >
-                      <Sparkles className="h-4 w-4" />
-                      {t(translations.gamesPage.scramblePlay)}
-                    </button>
-                  </motion.div>
-                )}
-
-                {/* Playing */}
-                {scrambleStarted && !scrambleDone && (
-                  <motion.div
-                    key={`scramble-${scrambleIndex}`}
-                    initial={{ opacity: 0, x: 40 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -40 }}
-                    transition={{ duration: 0.4 }}
+                    <Shuffle className="h-10 w-10" style={{ color: "#D4A843" }} />
+                  </div>
+                  <p className="mb-8 text-cream-300/60">
+                    {t(translations.gamesPage.scrambleSubtitle)}
+                  </p>
+                  <button
+                    onClick={() => setScrambleStarted(true)}
+                    className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                    style={goldBtnStyle}
                   >
-                    <div className="mb-6 flex items-center justify-between text-sm text-cream-300/40">
-                      <span>{scrambleIndex + 1} / 5</span>
-                      <span>{t(translations.gamesPage.yourScore)}: {scrambleScore}</span>
-                    </div>
+                    <Sparkles className="h-4 w-4" />
+                    {t(translations.gamesPage.scramblePlay)}
+                  </button>
+                </div>
+              )}
 
-                    {/* Scrambled letters display */}
-                    <div className="mb-6 flex flex-wrap items-center justify-center gap-2">
-                      {scrambledLetters.split("").map((letter, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ scale: 0, rotate: -90 }}
-                          animate={{ scale: 1, rotate: 0 }}
-                          transition={{ delay: i * 0.05, type: "spring" }}
-                          className="flex h-12 w-12 items-center justify-center rounded-xl text-xl font-bold uppercase text-cream-100"
-                          style={{
-                            background: "rgba(212,168,67,0.1)",
-                            border: "1px solid rgba(212,168,67,0.25)",
-                          }}
-                        >
-                          {letter}
-                        </motion.div>
-                      ))}
-                    </div>
+              {/* Playing */}
+              {scrambleStarted && !scrambleDone && (
+                <div>
+                  <div className="mb-6 flex items-center justify-between text-sm text-cream-300/40">
+                    <span>{scrambleIndex + 1} / 5</span>
+                    <span>{t(translations.gamesPage.yourScore)}: {scrambleScore}</span>
+                  </div>
 
-                    {/* Hint */}
-                    {scrambleShowHint && (
-                      <motion.p
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="mb-4 text-center text-sm text-amber-400/80"
+                  {/* Scrambled letters display */}
+                  <div className="mb-6 flex flex-wrap items-center justify-center gap-2">
+                    {scrambledLetters.split("").map((letter, i) => (
+                      <div
+                        key={i}
+                        className="flex h-12 w-12 items-center justify-center rounded-xl text-xl font-bold uppercase text-cream-100"
+                        style={{
+                          background: "rgba(212,168,67,0.1)",
+                          border: "1px solid rgba(212,168,67,0.25)",
+                        }}
                       >
-                        <Lightbulb className="mr-1 inline h-4 w-4" />
-                        {tq(scrambleWords[scrambleIndex].hint)}
-                      </motion.p>
-                    )}
+                        {letter}
+                      </div>
+                    ))}
+                  </div>
 
-                    {/* Input */}
-                    {scrambleCorrect === null && (
-                      <div className="mb-4 flex gap-2">
-                        <input
-                          type="text"
-                          value={scrambleInput}
-                          onChange={(e) => setScrambleInput(e.target.value)}
-                          onKeyDown={(e) => e.key === "Enter" && handleScrambleSubmit()}
-                          placeholder={t(translations.gamesPage.scrambleTypeAnswer)}
-                          className="flex-1 rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all focus:border-[#D4A843]/50 focus:ring-1 focus:ring-[#D4A843]/30"
-                          style={{ borderColor: "rgba(212,168,67,0.15)" }}
-                          autoFocus
-                        />
+                  {/* Hint */}
+                  {scrambleShowHint && (
+                    <p className="mb-4 text-center text-sm text-amber-400/80">
+                      <Lightbulb className="mr-1 inline h-4 w-4" />
+                      {tq(scrambleWords[scrambleIndex].hint)}
+                    </p>
+                  )}
+
+                  {/* Input */}
+                  {scrambleCorrect === null && (
+                    <div className="mb-4 flex gap-2">
+                      <input
+                        type="text"
+                        value={scrambleInput}
+                        onChange={(e) => setScrambleInput(e.target.value)}
+                        onKeyDown={(e) => e.key === "Enter" && handleScrambleSubmit()}
+                        placeholder={t(translations.gamesPage.scrambleTypeAnswer)}
+                        className="flex-1 rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all focus:border-[#D4A843]/50 focus:ring-1 focus:ring-[#D4A843]/30"
+                        style={{ borderColor: "rgba(212,168,67,0.15)" }}
+                        autoFocus
+                      />
+                      <button
+                        onClick={handleScrambleSubmit}
+                        className="rounded-xl px-6 py-3 text-sm font-semibold text-[#0D0906] transition-all hover:scale-[1.03] active:scale-[0.97]"
+                        style={{ background: "linear-gradient(135deg, #D4A843, #FFD700)" }}
+                      >
+                        <ArrowRight className="h-5 w-5" />
+                      </button>
+                    </div>
+                  )}
+
+                  {/* Correct/Wrong feedback */}
+                  {scrambleCorrect !== null && (
+                    <div className="mb-4 text-center">
+                      <p className={`mb-1 text-lg font-bold ${scrambleCorrect ? "text-green-400" : "text-red-400"}`}>
+                        {scrambleCorrect ? t(translations.gamesPage.scrambleCorrect) : t(translations.gamesPage.incorrect)}
+                      </p>
+                      {!scrambleCorrect && (
+                        <p className="text-sm text-cream-300/50">
+                          {t(translations.gamesPage.dailyCorrectAnswer)}: <span className="font-semibold text-cream-100">{scrambleAnswer}</span>
+                        </p>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Action buttons */}
+                  <div className="flex items-center justify-between">
+                    {scrambleCorrect === null ? (
+                      <>
                         <button
-                          onClick={handleScrambleSubmit}
-                          className="rounded-xl px-6 py-3 text-sm font-semibold text-[#0D0906] transition-all hover:scale-[1.03] active:scale-[0.97]"
+                          onClick={() => setScrambleShowHint(true)}
+                          className="inline-flex items-center gap-1 text-sm text-amber-400/60 hover:text-amber-400 transition-colors"
+                          disabled={scrambleShowHint}
+                        >
+                          <Lightbulb className="h-4 w-4" />
+                          {t(translations.gamesPage.scrambleHint)}
+                        </button>
+                        <button
+                          onClick={handleScrambleSkip}
+                          className="text-sm text-cream-300/40 hover:text-cream-300/70 transition-colors"
+                        >
+                          {t(translations.gamesPage.scrambleSkip)} →
+                        </button>
+                      </>
+                    ) : (
+                      <div className="flex w-full justify-end">
+                        <button
+                          onClick={handleScrambleNext}
+                          className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0D0906] transition-all hover:scale-[1.03] active:scale-[0.97]"
                           style={{ background: "linear-gradient(135deg, #D4A843, #FFD700)" }}
                         >
-                          <ArrowRight className="h-5 w-5" />
+                          {scrambleIndex < 4 ? t(translations.gamesPage.scrambleNextWord) : t(translations.gamesPage.seeResults)}
+                          <ChevronRight className="h-4 w-4" />
                         </button>
                       </div>
                     )}
+                  </div>
+                </div>
+              )}
 
-                    {/* Correct/Wrong feedback */}
-                    {scrambleCorrect !== null && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="mb-4 text-center"
-                      >
-                        <p className={`mb-1 text-lg font-bold ${scrambleCorrect ? "text-green-400" : "text-red-400"}`}>
-                          {scrambleCorrect ? t(translations.gamesPage.scrambleCorrect) : t(translations.gamesPage.incorrect)}
-                        </p>
-                        {!scrambleCorrect && (
-                          <p className="text-sm text-cream-300/50">
-                            {t(translations.gamesPage.dailyCorrectAnswer)}: <span className="font-semibold text-cream-100">{scrambleAnswer}</span>
-                          </p>
-                        )}
-                      </motion.div>
-                    )}
+              {/* Scramble Results */}
+              {scrambleDone && (
+                <div className="text-center">
+                  <div
+                    className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full"
+                    style={{
+                      background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
+                      border: "2px solid rgba(212,168,67,0.3)",
+                    }}
+                  >
+                    <Sparkles className="h-12 w-12" style={{ color: "#FFD700" }} />
+                  </div>
 
-                    {/* Action buttons */}
-                    <div className="flex items-center justify-between">
-                      {scrambleCorrect === null ? (
+                  <h3 className="mb-2 text-xl font-bold text-cream-100">
+                    {t(translations.gamesPage.scrambleComplete)}
+                  </h3>
+                  <p className="mb-2 font-heading text-5xl font-bold" style={{ color: "#D4A843" }}>
+                    {scrambleScore}<span className="text-2xl text-cream-300/40"> / 5</span>
+                  </p>
+                  {/* Star display */}
+                  <p className="mb-2 text-2xl">
+                    {"⭐".repeat(scrambleScore)}{"☆".repeat(5 - scrambleScore)}
+                  </p>
+                  <p className="mb-8 text-sm text-cream-300/50">
+                    {getResultMessage(scrambleScore, 5)}
+                  </p>
+
+                  <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+                    <button
+                      onClick={handleScrambleShare}
+                      className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all hover:scale-[1.03] active:scale-[0.97]"
+                      style={goldBtnStyle}
+                    >
+                      {scrambleCopied ? (
                         <>
-                          <button
-                            onClick={() => setScrambleShowHint(true)}
-                            className="inline-flex items-center gap-1 text-sm text-amber-400/60 hover:text-amber-400 transition-colors"
-                            disabled={scrambleShowHint}
-                          >
-                            <Lightbulb className="h-4 w-4" />
-                            {t(translations.gamesPage.scrambleHint)}
-                          </button>
-                          <button
-                            onClick={handleScrambleSkip}
-                            className="text-sm text-cream-300/40 hover:text-cream-300/70 transition-colors"
-                          >
-                            {t(translations.gamesPage.scrambleSkip)} →
-                          </button>
+                          <CheckCircle2 className="h-4 w-4" />
+                          {t(translations.gamesPage.dailyCopied)}
                         </>
                       ) : (
-                        <div className="flex w-full justify-end">
-                          <button
-                            onClick={handleScrambleNext}
-                            className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0D0906] transition-all hover:scale-[1.03] active:scale-[0.97]"
-                            style={{ background: "linear-gradient(135deg, #D4A843, #FFD700)" }}
-                          >
-                            {scrambleIndex < 4 ? t(translations.gamesPage.scrambleNextWord) : t(translations.gamesPage.seeResults)}
-                            <ChevronRight className="h-4 w-4" />
-                          </button>
-                        </div>
+                        <>
+                          <Share2 className="h-4 w-4" />
+                          {t(translations.gamesPage.dailyShare)}
+                        </>
                       )}
-                    </div>
-                  </motion.div>
-                )}
-
-                {/* Scramble Results */}
-                {scrambleDone && (
-                  <motion.div
-                    key="scramble-results"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="text-center"
-                  >
-                    <div
-                      className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full"
-                      style={{
-                        background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
-                        border: "2px solid rgba(212,168,67,0.3)",
-                      }}
+                    </button>
+                    <button
+                      onClick={handleScrambleRestart}
+                      className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium text-cream-100 transition-all hover:bg-white/5"
+                      style={{ borderColor: "rgba(212,168,67,0.3)" }}
                     >
-                      <Sparkles className="h-12 w-12" style={{ color: "#FFD700" }} />
-                    </div>
-
-                    <h3 className="mb-2 text-xl font-bold text-cream-100">
-                      {t(translations.gamesPage.scrambleComplete)}
-                    </h3>
-                    <p className="mb-2 font-heading text-5xl font-bold" style={{ color: "#D4A843" }}>
-                      {scrambleScore}<span className="text-2xl text-cream-300/40"> / 5</span>
-                    </p>
-                    {/* Star display */}
-                    <p className="mb-2 text-2xl">
-                      {"⭐".repeat(scrambleScore)}{"☆".repeat(5 - scrambleScore)}
-                    </p>
-                    <p className="mb-8 text-sm text-cream-300/50">
-                      {getResultMessage(scrambleScore, 5)}
-                    </p>
-
-                    <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-                      <button
-                        onClick={handleScrambleShare}
-                        className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all hover:scale-[1.03] active:scale-[0.97]"
-                        style={goldBtnStyle}
-                      >
-                        {scrambleCopied ? (
-                          <>
-                            <CheckCircle2 className="h-4 w-4" />
-                            {t(translations.gamesPage.dailyCopied)}
-                          </>
-                        ) : (
-                          <>
-                            <Share2 className="h-4 w-4" />
-                            {t(translations.gamesPage.dailyShare)}
-                          </>
-                        )}
-                      </button>
-                      <button
-                        onClick={handleScrambleRestart}
-                        className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium text-cream-100 transition-all hover:bg-white/5"
-                        style={{ borderColor: "rgba(212,168,67,0.3)" }}
-                      >
-                        <RotateCcw className="h-4 w-4" />
-                        {t(translations.gamesPage.tryAgain)}
-                      </button>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                      <RotateCcw className="h-4 w-4" />
+                      {t(translations.gamesPage.tryAgain)}
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -1374,14 +1252,7 @@ export default function GamesPage() {
           style={{ background: "radial-gradient(circle, rgba(212,168,67,0.05) 0%, transparent 70%)" }}
         />
         <div className="section-container relative z-10">
-          <motion.div
-            className="mb-12 text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={fadeUp}
-            custom={0}
-          >
+          <div className="mb-12 text-center">
             <div className="mb-4 flex items-center justify-center gap-2">
               <Trophy className="h-6 w-6" style={{ color: "#D4A843" }} />
               <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#D4A843]">Quiz</span>
@@ -1392,203 +1263,169 @@ export default function GamesPage() {
             <p className="mx-auto mt-4 max-w-2xl text-cream-300/60">
               {t(translations.gamesPage.quizSubtitle)}
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             className="mx-auto max-w-2xl overflow-hidden rounded-2xl"
             style={cardStyle}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            custom={1}
           >
             <div className="p-6 md:p-10">
-              <AnimatePresence mode="wait">
-                {/* Start Screen */}
-                {!quizStarted && !showResult && (
-                  <motion.div
-                    key="start"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    className="text-center"
+              {/* Start Screen */}
+              {!quizStarted && !showResult && (
+                <div className="text-center">
+                  <div
+                    className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
+                    style={{
+                      background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
+                      border: "1px solid rgba(212,168,67,0.3)",
+                    }}
                   >
+                    <Sparkles className="h-10 w-10" style={{ color: "#D4A843" }} />
+                  </div>
+                  <p className="mb-8 text-cream-300/60">{t(translations.gamesPage.quizSubtitle)}</p>
+                  <button
+                    onClick={() => setQuizStarted(true)}
+                    className="group relative inline-flex items-center overflow-hidden rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97]"
+                    style={goldBtnStyle}
+                  >
+                    {t(translations.gamesPage.startQuiz)}
+                  </button>
+                </div>
+              )}
+
+              {/* Question Screen */}
+              {quizStarted && !showResult && (
+                <div>
+                  <div className="mb-6 flex items-center justify-between text-sm text-cream-300/40">
+                    <span>{currentQ + 1} / {quizQuestions.length}</span>
+                    <span>{t(translations.gamesPage.yourScore)}: {score}</span>
+                  </div>
+                  <div className="mb-8 h-1 w-full overflow-hidden rounded-full bg-white/5">
                     <div
-                      className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
+                      className="h-full rounded-full"
                       style={{
-                        background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
-                        border: "1px solid rgba(212,168,67,0.3)",
+                        background: "linear-gradient(90deg, #D4A843, #FFD700)",
+                        width: `${((currentQ + 1) / quizQuestions.length) * 100}%`,
+                        transition: "width 0.5s",
                       }}
-                    >
-                      <Sparkles className="h-10 w-10" style={{ color: "#D4A843" }} />
+                    />
+                  </div>
+
+                  <h3 className="mb-6 text-xl font-bold text-cream-100 md:text-2xl">
+                    {tq(quizQuestions[currentQ].question)}
+                  </h3>
+
+                  <div className="space-y-3">
+                    {quizQuestions[currentQ].options.map((option, idx) => {
+                      const isSelected = selectedOption === idx;
+                      const isCorrect = idx === quizQuestions[currentQ].correctIndex;
+                      const showCorrect = answered && isCorrect;
+                      const showWrong = answered && isSelected && !isCorrect;
+
+                      let borderColor = "rgba(212,168,67,0.12)";
+                      let bgColor = "rgba(26,21,16,0.6)";
+                      if (showCorrect) {
+                        borderColor = "rgba(34,197,94,0.6)";
+                        bgColor = "rgba(34,197,94,0.1)";
+                      } else if (showWrong) {
+                        borderColor = "rgba(239,68,68,0.6)";
+                        bgColor = "rgba(239,68,68,0.1)";
+                      }
+
+                      return (
+                        <button
+                          key={idx}
+                          onClick={() => handleOptionClick(idx)}
+                          className="flex w-full items-center gap-3 rounded-xl px-5 py-4 text-left transition-all duration-300"
+                          style={{ border: `1px solid ${borderColor}`, background: bgColor }}
+                        >
+                          <span className="flex-1 text-cream-100">{tq(option)}</span>
+                          {showCorrect && <CheckCircle2 className="h-5 w-5 text-green-400" />}
+                          {showWrong && <XCircle className="h-5 w-5 text-red-400" />}
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {answered && (
+                    <div className="mt-6 flex items-center justify-between">
+                      <span className={`text-sm font-medium ${selectedOption === quizQuestions[currentQ].correctIndex ? "text-green-400" : "text-red-400"}`}>
+                        {selectedOption === quizQuestions[currentQ].correctIndex
+                          ? t(translations.gamesPage.correct)
+                          : t(translations.gamesPage.incorrect)}
+                      </span>
+                      <button
+                        onClick={handleNext}
+                        className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                        style={{ background: "linear-gradient(135deg, #D4A843, #FFD700)" }}
+                      >
+                        {currentQ < quizQuestions.length - 1 ? t(translations.gamesPage.nextQuestion) : t(translations.gamesPage.seeResults)}
+                      </button>
                     </div>
-                    <p className="mb-8 text-cream-300/60">{t(translations.gamesPage.quizSubtitle)}</p>
+                  )}
+                </div>
+              )}
+
+              {/* Results Screen */}
+              {showResult && (
+                <div className="text-center">
+                  <div
+                    className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full"
+                    style={{
+                      background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
+                      border: "2px solid rgba(212,168,67,0.3)",
+                    }}
+                  >
+                    <Trophy className="h-12 w-12" style={{ color: "#FFD700" }} />
+                  </div>
+
+                  <h3 className="mb-2 text-xl font-bold text-cream-100">{t(translations.gamesPage.yourScore)}</h3>
+
+                  {/* Emoji result grid */}
+                  <div className="mb-4 flex items-center justify-center gap-2">
+                    {quizResults.map((r, i) => (
+                      <div
+                        key={i}
+                        className={`flex h-10 w-10 items-center justify-center rounded-lg text-lg ${
+                          r
+                            ? "bg-green-500/20 border border-green-500/40"
+                            : "bg-red-500/20 border border-red-500/40"
+                        }`}
+                      >
+                        {r ? "🟢" : "🔴"}
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="mb-2 font-heading text-6xl font-bold" style={{ color: "#D4A843" }}>
+                    {score}<span className="text-2xl text-cream-300/40"> / {quizQuestions.length}</span>
+                  </p>
+                  <p className="mb-8 text-sm text-cream-300/50">
+                    {getResultMessage(score, quizQuestions.length)}
+                  </p>
+
+                  <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
                     <button
-                      onClick={() => setQuizStarted(true)}
-                      className="group relative inline-flex items-center overflow-hidden rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97]"
+                      onClick={handleQuizShare}
+                      className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
                       style={goldBtnStyle}
                     >
-                      {t(translations.gamesPage.startQuiz)}
+                      <Share2 className="h-4 w-4" />
+                      {t(translations.gamesPage.dailyShare)}
                     </button>
-                  </motion.div>
-                )}
-
-                {/* Question Screen */}
-                {quizStarted && !showResult && (
-                  <motion.div
-                    key={`q-${currentQ}`}
-                    initial={{ opacity: 0, x: 40 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -40 }}
-                    transition={{ duration: 0.4 }}
-                  >
-                    <div className="mb-6 flex items-center justify-between text-sm text-cream-300/40">
-                      <span>{currentQ + 1} / {quizQuestions.length}</span>
-                      <span>{t(translations.gamesPage.yourScore)}: {score}</span>
-                    </div>
-                    <div className="mb-8 h-1 w-full overflow-hidden rounded-full bg-white/5">
-                      <motion.div
-                        className="h-full rounded-full"
-                        style={{ background: "linear-gradient(90deg, #D4A843, #FFD700)" }}
-                        initial={{ width: 0 }}
-                        animate={{ width: `${((currentQ + 1) / quizQuestions.length) * 100}%` }}
-                        transition={{ duration: 0.5 }}
-                      />
-                    </div>
-
-                    <h3 className="mb-6 text-xl font-bold text-cream-100 md:text-2xl">
-                      {tq(quizQuestions[currentQ].question)}
-                    </h3>
-
-                    <div className="space-y-3">
-                      {quizQuestions[currentQ].options.map((option, idx) => {
-                        const isSelected = selectedOption === idx;
-                        const isCorrect = idx === quizQuestions[currentQ].correctIndex;
-                        const showCorrect = answered && isCorrect;
-                        const showWrong = answered && isSelected && !isCorrect;
-
-                        let borderColor = "rgba(212,168,67,0.12)";
-                        let bgColor = "rgba(26,21,16,0.6)";
-                        if (showCorrect) {
-                          borderColor = "rgba(34,197,94,0.6)";
-                          bgColor = "rgba(34,197,94,0.1)";
-                        } else if (showWrong) {
-                          borderColor = "rgba(239,68,68,0.6)";
-                          bgColor = "rgba(239,68,68,0.1)";
-                        }
-
-                        return (
-                          <motion.button
-                            key={idx}
-                            onClick={() => handleOptionClick(idx)}
-                            className="flex w-full items-center gap-3 rounded-xl px-5 py-4 text-left transition-all duration-300"
-                            style={{ border: `1px solid ${borderColor}`, background: bgColor }}
-                            whileHover={!answered ? { borderColor: "rgba(212,168,67,0.4)", background: "rgba(212,168,67,0.05)" } : {}}
-                            whileTap={!answered ? { scale: 0.98 } : {}}
-                          >
-                            <span className="flex-1 text-cream-100">{tq(option)}</span>
-                            {showCorrect && <CheckCircle2 className="h-5 w-5 text-green-400" />}
-                            {showWrong && <XCircle className="h-5 w-5 text-red-400" />}
-                          </motion.button>
-                        );
-                      })}
-                    </div>
-
-                    <AnimatePresence>
-                      {answered && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          className="mt-6 flex items-center justify-between"
-                        >
-                          <span className={`text-sm font-medium ${selectedOption === quizQuestions[currentQ].correctIndex ? "text-green-400" : "text-red-400"}`}>
-                            {selectedOption === quizQuestions[currentQ].correctIndex
-                              ? t(translations.gamesPage.correct)
-                              : t(translations.gamesPage.incorrect)}
-                          </span>
-                          <button
-                            onClick={handleNext}
-                            className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
-                            style={{ background: "linear-gradient(135deg, #D4A843, #FFD700)" }}
-                          >
-                            {currentQ < quizQuestions.length - 1 ? t(translations.gamesPage.nextQuestion) : t(translations.gamesPage.seeResults)}
-                          </button>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                )}
-
-                {/* Results Screen */}
-                {showResult && (
-                  <motion.div
-                    key="results"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="text-center"
-                  >
-                    <div
-                      className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full"
-                      style={{
-                        background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
-                        border: "2px solid rgba(212,168,67,0.3)",
-                      }}
+                    <button
+                      onClick={handleRestart}
+                      className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium text-cream-100 transition-all hover:bg-white/5"
+                      style={{ borderColor: "rgba(212,168,67,0.3)" }}
                     >
-                      <Trophy className="h-12 w-12" style={{ color: "#FFD700" }} />
-                    </div>
-
-                    <h3 className="mb-2 text-xl font-bold text-cream-100">{t(translations.gamesPage.yourScore)}</h3>
-
-                    {/* Emoji result grid */}
-                    <div className="mb-4 flex items-center justify-center gap-2">
-                      {quizResults.map((r, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: i * 0.1 }}
-                          className={`flex h-10 w-10 items-center justify-center rounded-lg text-lg ${
-                            r
-                              ? "bg-green-500/20 border border-green-500/40"
-                              : "bg-red-500/20 border border-red-500/40"
-                          }`}
-                        >
-                          {r ? "🟢" : "🔴"}
-                        </motion.div>
-                      ))}
-                    </div>
-
-                    <p className="mb-2 font-heading text-6xl font-bold" style={{ color: "#D4A843" }}>
-                      {score}<span className="text-2xl text-cream-300/40"> / {quizQuestions.length}</span>
-                    </p>
-                    <p className="mb-8 text-sm text-cream-300/50">
-                      {getResultMessage(score, quizQuestions.length)}
-                    </p>
-
-                    <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-                      <button
-                        onClick={handleQuizShare}
-                        className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
-                        style={goldBtnStyle}
-                      >
-                        <Share2 className="h-4 w-4" />
-                        {t(translations.gamesPage.dailyShare)}
-                      </button>
-                      <button
-                        onClick={handleRestart}
-                        className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium text-cream-100 transition-all hover:bg-white/5"
-                        style={{ borderColor: "rgba(212,168,67,0.3)" }}
-                      >
-                        <RotateCcw className="h-4 w-4" />
-                        {t(translations.gamesPage.tryAgain)}
-                      </button>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                      <RotateCcw className="h-4 w-4" />
+                      {t(translations.gamesPage.tryAgain)}
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -1603,14 +1440,7 @@ export default function GamesPage() {
       <section className="section-dark relative py-16 md:py-24">
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
         <div className="section-container relative z-10">
-          <motion.div
-            className="mb-16 text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={fadeUp}
-            custom={0}
-          >
+          <div className="mb-16 text-center">
             <span className="om-decoration mb-4 inline-block" aria-hidden="true">ॐ</span>
             <h2 className="font-heading text-3xl font-bold md:text-5xl">
               <span className="gradient-text">{t(translations.gamesPage.featuredTitle)}</span>
@@ -1618,27 +1448,17 @@ export default function GamesPage() {
             <p className="mx-auto mt-4 max-w-2xl text-cream-300/60">
               {t(translations.gamesPage.featuredSubtitle)}
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {activities.map((activity, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="group relative overflow-hidden rounded-2xl transition-all duration-500"
+                className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-1"
                 style={{
                   background: "rgba(26,21,16,0.85)",
                   backdropFilter: "blur(20px)",
                   border: "1px solid rgba(212,168,67,0.12)",
-                }}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
-                variants={fadeUp}
-                custom={index}
-                whileHover={{
-                  borderColor: "rgba(212,168,67,0.4)",
-                  boxShadow: "0 20px 60px rgba(212,168,67,0.12)",
-                  y: -4,
                 }}
               >
                 <div
@@ -1661,7 +1481,7 @@ export default function GamesPage() {
                   <h3 className="mb-2 text-lg font-bold text-cream-100 md:text-xl">{t(activity.titleKey)}</h3>
                   <p className="text-sm leading-relaxed text-cream-300/60 md:text-base">{t(activity.descKey)}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -1679,14 +1499,7 @@ export default function GamesPage() {
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
         <div className="section-container relative z-10">
           <div className="mx-auto max-w-3xl">
-            <motion.div
-              className="mb-12 text-center"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
-              variants={fadeUp}
-              custom={0}
-            >
+            <div className="mb-12 text-center">
               <span className="om-decoration mb-4 inline-block" aria-hidden="true">ॐ</span>
               <h2 className="font-heading text-3xl font-bold md:text-5xl">
                 <span className="gradient-text">{t(translations.gamesPage.hostTitle)}</span>
@@ -1694,17 +1507,12 @@ export default function GamesPage() {
               <p className="mx-auto mt-4 max-w-2xl text-cream-300/60">
                 {t(translations.gamesPage.hostSubtitle)}
               </p>
-            </motion.div>
+            </div>
 
-            <motion.form
+            <form
               onSubmit={handleFormSubmit}
               className="overflow-hidden rounded-2xl"
               style={cardStyle}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeUp}
-              custom={1}
             >
               <div className="space-y-6 p-6 md:p-10">
                 <div>
@@ -1760,22 +1568,15 @@ export default function GamesPage() {
                     <Send className="h-4 w-4" />
                     {t(translations.gamesPage.formSubmit)}
                   </button>
-                  <AnimatePresence>
-                    {formSubmitted && (
-                      <motion.span
-                        initial={{ opacity: 0, x: 10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: 10 }}
-                        className="flex items-center gap-2 text-sm font-medium text-green-400"
-                      >
-                        <CheckCircle2 className="h-4 w-4" />
-                        {t(translations.gamesPage.formSuccess)}
-                      </motion.span>
-                    )}
-                  </AnimatePresence>
+                  {formSubmitted && (
+                    <span className="flex items-center gap-2 text-sm font-medium text-green-400">
+                      <CheckCircle2 className="h-4 w-4" />
+                      {t(translations.gamesPage.formSuccess)}
+                    </span>
+                  )}
                 </div>
               </div>
-            </motion.form>
+            </form>
           </div>
         </div>
       </section>

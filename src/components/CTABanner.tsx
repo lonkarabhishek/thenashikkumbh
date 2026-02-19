@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 interface CTABannerProps {
@@ -19,13 +18,7 @@ export default function CTABanner({
   variant = "dark",
 }: CTABannerProps) {
   return (
-    <motion.section
-      className="relative w-full overflow-hidden"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.8 }}
-    >
+    <section className="relative w-full overflow-hidden">
       <div
         className="relative py-20 md:py-28"
         style={{
@@ -42,12 +35,7 @@ export default function CTABanner({
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.06)_0%,transparent_70%)]" />
 
         <div className="relative section-container text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-          >
+          <div>
             <div className="sacred-divider max-w-xs mx-auto mb-8">
               <span className="text-sm font-devanagari" style={{ color: "#D4A843" }}>
                 ॐ
@@ -80,9 +68,9 @@ export default function CTABanner({
             >
               {buttonText}
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

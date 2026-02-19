@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import {
   Hotel,
   Building,
@@ -94,39 +93,27 @@ export default function BusinessesPage() {
         />
 
         <div className="section-container relative z-10 text-center">
-          <motion.span
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+          <span
             className="mb-4 inline-block font-devanagari text-5xl drop-shadow-lg"
             style={{ color: "#D4A843", textShadow: "0 0 30px rgba(212,168,67,0.4)" }}
             aria-hidden="true"
           >
             सेवा
-          </motion.span>
+          </span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
+          <h1
             className="font-heading text-4xl font-bold text-cream-100 drop-shadow-md md:text-6xl lg:text-7xl"
           >
             {t(bp.heroTitle)}
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+          <p
             className="mx-auto mt-4 max-w-2xl text-lg text-cream-300/70 md:text-xl"
           >
             {t(bp.heroSubtitle)}
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
+          <div
             className="gold-line-thick mx-auto mt-8 w-48 origin-center"
           />
         </div>
@@ -135,33 +122,25 @@ export default function BusinessesPage() {
       {/* ═══════════════════ INTRO ═══════════════════ */}
       <section className="section-dark relative py-12 md:py-16">
         <div className="section-container relative z-10">
-          <motion.div
+          <div
             className="mx-auto max-w-3xl text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
           >
             <p className="text-lg leading-relaxed text-cream-300/60">
               {t(bp.introText)}
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* ═══════════════════ AD SPACE - TOP ═══════════════════ */}
       <div className="section-dark">
         <div className="section-container pb-8">
-          <motion.div
+          <div
             className="rounded-2xl px-6 py-8 text-center"
             style={{
               border: "2px dashed rgba(212,168,67,0.15)",
               background: "rgba(212,168,67,0.03)",
             }}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
           >
             <Megaphone className="mx-auto mb-2 h-8 w-8" style={{ color: "rgba(212,168,67,0.3)" }} />
             <p className="text-sm font-medium" style={{ color: "rgba(212,168,67,0.5)" }}>
@@ -170,7 +149,7 @@ export default function BusinessesPage() {
             <p className="mt-1 text-xs" style={{ color: "rgba(212,168,67,0.3)" }}>
               {t(bp.adSpaceDesc)}
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -178,12 +157,8 @@ export default function BusinessesPage() {
       <section className="section-dark relative py-8 md:py-12">
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
         <div className="section-container relative z-10">
-          <motion.div
+          <div
             className="mb-10 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
           >
             <h2 className="gradient-text font-heading text-3xl font-bold md:text-4xl">
               {t(bp.browseByCategory)}
@@ -193,15 +168,11 @@ export default function BusinessesPage() {
                 ॐ
               </span>
             </div>
-          </motion.div>
+          </div>
 
           {/* Category Tabs */}
-          <motion.div
+          <div
             className="mb-12 flex flex-wrap justify-center gap-3"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
           >
             {businessCategories.map((cat) => (
               <button
@@ -226,15 +197,12 @@ export default function BusinessesPage() {
                 <span className="hidden sm:inline">{cat.label}</span>
               </button>
             ))}
-          </motion.div>
+          </div>
 
           {/* Active Category Header */}
-          <motion.div
+          <div
             className="mb-8 flex items-center gap-3"
             key={activeCategory}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4 }}
           >
             <span style={{ color: currentCategory.accent }}>{currentCategory.icon}</span>
             <h3 className="font-heading text-2xl font-bold text-cream-100">
@@ -244,22 +212,18 @@ export default function BusinessesPage() {
               className="h-px flex-1"
               style={{ background: `linear-gradient(90deg, ${currentCategory.accent}40, transparent)` }}
             />
-          </motion.div>
+          </div>
 
           {/* Business Cards Grid */}
           <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {placeholderBusinesses.map((business, index) => (
-              <motion.div
+              <div
                 key={`${activeCategory}-${index}`}
                 className="card-glass group relative overflow-hidden p-6 transition-all duration-500 hover:-translate-y-2"
                 style={{
                   background: "rgba(255,255,255,0.03)",
                   borderColor: "rgba(212,168,67,0.08)",
                 }}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="absolute inset-0 temple-pattern opacity-[0.02] pointer-events-none" />
 
@@ -329,7 +293,7 @@ export default function BusinessesPage() {
                     {t(bp.claimListing)}
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -339,16 +303,12 @@ export default function BusinessesPage() {
       <section className="relative bg-cream-50 py-8">
         <div className="absolute inset-0 mandala-bg" />
         <div className="section-container relative z-10">
-          <motion.div
+          <div
             className="rounded-2xl px-6 py-10 text-center"
             style={{
               border: "2px dashed rgba(212,168,67,0.2)",
               background: "rgba(212,168,67,0.03)",
             }}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
           >
             <Building className="mx-auto mb-3 h-10 w-10" style={{ color: "rgba(212,168,67,0.3)" }} />
             <p className="font-medium" style={{ color: "rgba(212,168,67,0.7)" }}>
@@ -363,7 +323,7 @@ export default function BusinessesPage() {
             >
               {t(bp.learnMore)} <ChevronRight className="h-4 w-4" />
             </button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -374,12 +334,7 @@ export default function BusinessesPage() {
         <div className="section-container relative z-10">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
             {/* Left: Info */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
+            <div>
               <h2 className="gradient-text font-heading text-3xl font-bold md:text-4xl">
                 {t(bp.listYourBusiness)}
               </h2>
@@ -427,15 +382,10 @@ export default function BusinessesPage() {
                   Stand out from the crowd and maximize your visibility during Kumbh Mela.
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right: Form */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-            >
+            <div>
               <div
                 className="card-dark p-8"
                 style={{ borderColor: "rgba(212,168,67,0.15)" }}
@@ -552,7 +502,7 @@ export default function BusinessesPage() {
                   </p>
                 </form>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -561,16 +511,12 @@ export default function BusinessesPage() {
       <section className="relative bg-cream-50 py-8">
         <div className="absolute inset-0 mandala-bg" />
         <div className="section-container relative z-10">
-          <motion.div
+          <div
             className="rounded-2xl px-6 py-10 text-center"
             style={{
               background: "linear-gradient(135deg, rgba(212,168,67,0.05), rgba(212,168,67,0.02))",
               border: "2px dashed rgba(212,168,67,0.2)",
             }}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
           >
             <div className="mb-3 flex items-center justify-center gap-2">
               <Megaphone className="h-8 w-8" style={{ color: "rgba(212,168,67,0.4)" }} />
@@ -588,7 +534,7 @@ export default function BusinessesPage() {
             >
               {t(bp.contactForAds)} <ChevronRight className="h-4 w-4" />
             </a>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -602,11 +548,7 @@ export default function BusinessesPage() {
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.06)_0%,transparent_70%)]" />
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+        <div
           className="section-container relative z-10 text-center"
         >
           <div className="sacred-divider mx-auto mb-8 max-w-xs">
@@ -631,7 +573,7 @@ export default function BusinessesPage() {
               <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
-        </motion.div>
+        </div>
       </section>
 
 

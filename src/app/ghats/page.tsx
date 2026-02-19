@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import {
   Clock,
@@ -15,25 +14,6 @@ import {
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { ghatsI18n } from "@/data/siteDataI18n";
-
-/* ───────────────────────────── animation variants ───────────────────────────── */
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, delay: i * 0.12, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
-  }),
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.12, delayChildren: 0.2 },
-  },
-};
 
 /* ───────────────── Warm gradient palettes for each ghat ───────────────────── */
 
@@ -57,89 +37,62 @@ export default function GhatsPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.08)_0%,transparent_70%)]" />
 
         {/* Floating Devanagari decorations */}
-        <motion.div
+        <div
           className="absolute top-20 right-12 font-devanagari text-[130px] text-[#D4A843]/[0.04] select-none pointer-events-none"
-          animate={{ y: [0, -16, 0] }}
-          transition={{ duration: 6, ease: "easeInOut", repeat: Infinity }}
           aria-hidden="true"
         >
           गोदावरी
-        </motion.div>
-        <motion.div
+        </div>
+        <div
           className="absolute bottom-16 left-8 font-devanagari text-[100px] text-[#D4A843]/[0.03] select-none pointer-events-none"
-          animate={{ y: [0, 12, 0] }}
-          transition={{ duration: 7, ease: "easeInOut", repeat: Infinity }}
           aria-hidden="true"
         >
           घाट
-        </motion.div>
-        <motion.div
+        </div>
+        <div
           className="absolute top-1/3 left-1/4 font-devanagari text-[70px] text-[#D4A843]/[0.03] select-none pointer-events-none"
-          animate={{ y: [0, -8, 0], rotate: [0, 2, 0] }}
-          transition={{ duration: 9, ease: "easeInOut", repeat: Infinity }}
           aria-hidden="true"
         >
           ॐ
-        </motion.div>
+        </div>
 
         <div className="relative z-10 section-container text-center py-32 pt-44">
           {/* Sacred Devanagari text */}
-          <motion.p
+          <p
             className="font-devanagari text-lg md:text-xl tracking-[0.3em] mb-6"
             style={{ color: "#D4A843" }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             ॥ जय गोदावरी मैया ॥
-          </motion.p>
+          </p>
 
           {/* Decorative gold line above */}
-          <motion.div
-            className="flex items-center justify-center gap-4 mb-8"
-            initial={{ opacity: 0, scaleX: 0 }}
-            animate={{ opacity: 1, scaleX: 1 }}
-            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-          >
+          <div className="flex items-center justify-center gap-4 mb-8">
             <span className="h-px w-20 md:w-32 bg-gradient-to-r from-transparent to-[#D4A843]/60" />
             <span className="w-2 h-2 rounded-full bg-[#D4A843]/40" />
             <span className="h-px w-20 md:w-32 bg-gradient-to-l from-transparent to-[#D4A843]/60" />
-          </motion.div>
+          </div>
 
           {/* Title */}
-          <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-cream-100 mb-5 drop-shadow-[0_4px_32px_rgba(0,0,0,0.5)]"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          >
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-cream-100 mb-5 drop-shadow-[0_4px_32px_rgba(0,0,0,0.5)]">
             {t(translations.ghatsPage.heroTitle)}
-          </motion.h1>
+          </h1>
 
           {/* Subtitle */}
-          <motion.p
+          <p
             className="text-lg md:text-2xl font-heading italic max-w-2xl mx-auto tracking-wide"
             style={{ color: "rgba(212, 168, 67, 0.7)" }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
           >
             {t(translations.ghatsPage.heroSubtitle)}
-          </motion.p>
+          </p>
 
           {/* Decorative gold line below */}
-          <motion.div
-            className="mt-8 flex items-center justify-center gap-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-          >
+          <div className="mt-8 flex items-center justify-center gap-4">
             <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#D4A843]/50" />
             <span className="font-devanagari text-sm tracking-[0.2em]" style={{ color: "#D4A843" }}>
               जय गोदावरी
             </span>
             <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#D4A843]/50" />
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -149,13 +102,7 @@ export default function GhatsPage() {
 
         <div className="relative section-container">
           {/* Section header */}
-          <motion.div
-            className="text-center mb-14"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
+          <div className="text-center mb-14">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D4A843] mb-3">
               {t(translations.ghatsPage.introSub)}
             </p>
@@ -170,41 +117,23 @@ export default function GhatsPage() {
                 ॐ
               </span>
             </div>
-          </motion.div>
+          </div>
 
           <div className="max-w-4xl mx-auto space-y-7">
-            <motion.p
-              className="text-lg md:text-xl leading-relaxed text-temple-700"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-            >
+            <p className="text-lg md:text-xl leading-relaxed text-temple-700">
               <span className="text-5xl float-left mr-3 mt-1 font-heading font-bold leading-none" style={{ color: "#D4A843" }}>
                 {t(translations.ghatsPage.introP1).charAt(0).toUpperCase()}
               </span>
               {t(translations.ghatsPage.introP1).slice(1)}
-            </motion.p>
+            </p>
 
-            <motion.p
-              className="text-base md:text-lg leading-relaxed text-temple-600"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-            >
+            <p className="text-base md:text-lg leading-relaxed text-temple-600">
               {t(translations.ghatsPage.introP2)}
-            </motion.p>
+            </p>
 
-            <motion.p
-              className="text-base md:text-lg leading-relaxed text-temple-600"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-            >
+            <p className="text-base md:text-lg leading-relaxed text-temple-600">
               {t(translations.ghatsPage.introP3)}
-            </motion.p>
+            </p>
           </div>
         </div>
       </section>
@@ -234,16 +163,12 @@ export default function GhatsPage() {
             )}
 
             <div className="relative section-container">
-              <motion.div
+              <div
                 className={`flex flex-col ${
                   isEven ? "lg:flex-row" : "lg:flex-row-reverse"
                 } gap-10 lg:gap-16 items-stretch`}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                {/* ── Ghat Image ── */}
+                {/* -- Ghat Image -- */}
                 <div className="lg:w-1/2">
                   <div
                     className="relative w-full h-[420px] md:h-[480px] rounded-2xl overflow-hidden group"
@@ -263,14 +188,12 @@ export default function GhatsPage() {
 
                     {/* Ghat name + Devanagari overlay */}
                     <div className="absolute inset-0 flex flex-col items-center justify-end z-10 p-6 pb-8">
-                      <motion.div
+                      <div
                         className="font-devanagari text-6xl md:text-7xl mb-4 select-none"
                         style={{ color: "rgba(212,168,67,0.4)" }}
-                        animate={{ y: [0, -6, 0] }}
-                        transition={{ duration: 5, ease: "easeInOut", repeat: Infinity }}
                       >
                         {ghatDevanagari[index % ghatDevanagari.length]}
-                      </motion.div>
+                      </div>
                       <Waves className="w-10 h-10 mb-3" style={{ color: "rgba(212,168,67,0.6)" }} />
                       <h3 className="text-3xl md:text-4xl font-heading font-bold text-cream-100 text-center drop-shadow-lg">
                         {t(ghat.name)}
@@ -285,23 +208,19 @@ export default function GhatsPage() {
                   </div>
                 </div>
 
-                {/* ── Content ── */}
+                {/* -- Content -- */}
                 <div className="lg:w-1/2 flex flex-col justify-center">
                   {/* Ghat number badge */}
-                  <motion.span
+                  <span
                     className="inline-block w-fit text-xs font-bold px-3 py-1 rounded-full uppercase tracking-[0.15em] mb-4 border"
                     style={{
                       color: "#D4A843",
                       borderColor: isDark ? "rgba(212,168,67,0.2)" : "rgba(212,168,67,0.3)",
                       backgroundColor: isDark ? "rgba(212,168,67,0.06)" : "rgba(212,168,67,0.08)",
                     }}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
                   >
                     {t(translations.ghatsPage.ghatOf)} {index + 1} {t(translations.ghatsPage.of)} {ghatsI18n.length}
-                  </motion.span>
+                  </span>
 
                   <h3
                     className={`text-2xl md:text-4xl font-heading font-bold mb-1 ${
@@ -337,18 +256,11 @@ export default function GhatsPage() {
                       </h4>
                       <ul className="space-y-2.5">
                         {ghat.rituals.map((ritual, i) => (
-                          <motion.li
+                          <li
                             key={i}
                             className={`flex items-start gap-3 ${
                               isDark ? "text-cream-300/50" : "text-temple-600"
                             }`}
-                            initial={{ opacity: 0, x: -10 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{
-                              duration: 0.4,
-                              delay: 0.3 + i * 0.08,
-                            }}
                           >
                             <span
                               className="mt-2 w-2 h-2 rounded-full shrink-0"
@@ -358,7 +270,7 @@ export default function GhatsPage() {
                               }}
                             />
                             <span className="text-base">{t(ritual)}</span>
-                          </motion.li>
+                          </li>
                         ))}
                       </ul>
                     </div>
@@ -392,7 +304,7 @@ export default function GhatsPage() {
                     <span>{t(translations.ghatsPage.viewOnMap)}</span>
                   </a>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </section>
         );
@@ -404,13 +316,7 @@ export default function GhatsPage() {
 
         <div className="relative section-container">
           {/* Section header */}
-          <motion.div
-            className="text-center mb-14"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
+          <div className="text-center mb-14">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D4A843] mb-3">
               {t(translations.ghatsPage.howToReachSub)}
             </p>
@@ -425,15 +331,9 @@ export default function GhatsPage() {
                 ॐ
               </span>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               {
                 icon: Car,
@@ -453,10 +353,8 @@ export default function GhatsPage() {
             ].map((item, i) => {
               const Icon = item.icon;
               return (
-                <motion.div
+                <div
                   key={i}
-                  variants={fadeUp}
-                  custom={i}
                   className="relative rounded-2xl p-7 border border-[#D4A843]/10 bg-white group hover:border-[#D4A843]/25 hover:shadow-lg transition-all duration-500 overflow-hidden"
                 >
                   {/* Subtle hover gradient */}
@@ -476,21 +374,17 @@ export default function GhatsPage() {
                       {t(item.description)}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
-          </motion.div>
+          </div>
 
           {/* Pilgrim Tip callout */}
-          <motion.div
+          <div
             className="max-w-3xl mx-auto mt-10 relative overflow-hidden rounded-2xl p-7 border border-[#D4A843]/20"
             style={{
               background: "linear-gradient(135deg, rgba(212,168,67,0.06) 0%, rgba(212,168,67,0.02) 100%)",
             }}
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.4 }}
           >
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#D4A843] to-[#D4A843]/30" />
             <p className="text-temple-700 leading-relaxed">
@@ -499,7 +393,7 @@ export default function GhatsPage() {
               </span>{" "}
               {t(translations.ghatsPage.pilgrimTip)}
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -516,12 +410,7 @@ export default function GhatsPage() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.06)_0%,transparent_70%)]" />
 
           <div className="relative section-container text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
+            <div>
               {/* Decorative divider */}
               <div className="flex items-center justify-center gap-4 mb-8">
                 <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#D4A843]/40" />
@@ -542,7 +431,7 @@ export default function GhatsPage() {
                 {t(translations.ghatsPage.ctaButton)}
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

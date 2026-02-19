@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { Clock, MapPin } from "lucide-react";
 
 interface GhatCardProps {
@@ -26,13 +25,7 @@ export default function GhatCard({
   const isEven = index % 2 === 0;
 
   return (
-    <motion.div
-      className="card-sacred mb-12"
-      initial={{ opacity: 0, x: isEven ? -80 : 80 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-    >
+    <div className="card-sacred mb-12">
       <div
         className={`flex flex-col ${
           isEven ? "md:flex-row" : "md:flex-row-reverse"
@@ -106,6 +99,6 @@ export default function GhatCard({
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

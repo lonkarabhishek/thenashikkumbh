@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
 
 interface TimelineItem {
@@ -27,17 +26,9 @@ export default function Timeline({ items }: TimelineProps) {
           const isLeft = index % 2 === 0;
 
           return (
-            <motion.div
+            <div
               key={index}
               className="relative flex items-start md:items-center"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.1,
-                ease: "easeOut",
-              }}
             >
               {/* Circle marker */}
               <div
@@ -109,7 +100,7 @@ export default function Timeline({ items }: TimelineProps) {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           );
         })}
       </div>

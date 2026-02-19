@@ -1,30 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { Clock, Users, ShieldCheck, ArrowRight, Star, Calendar, Sparkles } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { bathingDatesI18n } from "@/data/siteDataI18n";
-
-/* ───────────────────────────── helpers ───────────────────────────── */
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.12, duration: 0.7, ease: "easeOut" as const },
-  }),
-};
-
-const lineGrow = {
-  hidden: { scaleY: 0 },
-  visible: {
-    scaleY: 1,
-    transition: { duration: 1.2, ease: "easeOut" as const },
-  },
-};
 
 /* ───────────────────────────── page ─────────────────────────────── */
 
@@ -56,53 +36,30 @@ export default function ImportantDatesPage() {
         />
 
         <div className="section-container relative z-10 text-center">
-          <motion.span
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
+          <span
             className="mb-4 inline-block font-devanagari text-5xl drop-shadow-lg"
             style={{ color: "#D4A843", textShadow: "0 0 30px rgba(212,168,67,0.4)" }}
             aria-hidden="true"
           >
             पवित्र तिथियाँ
-          </motion.span>
+          </span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="font-heading text-4xl font-bold text-cream-100 drop-shadow-md md:text-6xl lg:text-7xl"
-          >
+          <h1 className="font-heading text-4xl font-bold text-cream-100 drop-shadow-md md:text-6xl lg:text-7xl">
             {t(translations.datesPage.heroTitle)}
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="mx-auto mt-4 max-w-2xl text-lg text-cream-300/70 md:text-xl"
-          >
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-cream-300/70 md:text-xl">
             {t(translations.datesPage.heroSubtitle)}
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="gold-line-thick mx-auto mt-8 w-48 origin-center"
-          />
+          <div className="gold-line-thick mx-auto mt-8 w-48 origin-center" />
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7, duration: 0.5 }}
-            className="mt-6 flex items-center justify-center gap-3"
-          >
+          <div className="mt-6 flex items-center justify-center gap-3">
             <Calendar className="h-5 w-5" style={{ color: "#D4A843" }} />
             <span className="text-sm font-medium uppercase tracking-[0.2em] text-cream-300/50">
               {t(translations.datesPage.periodLabel)}
             </span>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -110,13 +67,7 @@ export default function ImportantDatesPage() {
       <section className="relative bg-cream-50 py-16 md:py-24">
         <div className="absolute inset-0 mandala-bg" />
         <div className="section-container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7 }}
-            className="mx-auto max-w-3xl text-center"
-          >
+          <div className="mx-auto max-w-3xl text-center">
             <h2 className="gradient-text font-heading text-3xl font-bold md:text-4xl">
               {t(translations.datesPage.whySacredTitle)}
             </h2>
@@ -133,7 +84,7 @@ export default function ImportantDatesPage() {
             <p className="mt-4 text-base leading-relaxed text-temple-500">
               {t(translations.datesPage.whySacredP2)}
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -143,13 +94,7 @@ export default function ImportantDatesPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.04)_0%,transparent_60%)]" />
 
         <div className="section-container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7 }}
-            className="mb-16 text-center"
-          >
+          <div className="mb-16 text-center">
             <h2 className="gradient-text font-heading text-3xl font-bold md:text-4xl">
               {t(translations.datesPage.scheduleTitle)}
             </h2>
@@ -161,21 +106,17 @@ export default function ImportantDatesPage() {
             <p className="mx-auto mt-4 max-w-xl text-cream-300/60">
               {t(translations.datesPage.scheduleDesc)}
             </p>
-          </motion.div>
+          </div>
 
-          {/* ── vertical timeline ── */}
+          {/* -- vertical timeline -- */}
           <div className="relative">
             {/* center line -- desktop; left line -- mobile */}
-            <motion.div
+            <div
               aria-hidden="true"
               className="absolute left-4 top-0 h-full w-0.5 origin-top md:left-1/2 md:-translate-x-1/2"
               style={{
                 background: "linear-gradient(180deg, transparent, #D4A843, #D4A843, transparent)",
               }}
-              variants={lineGrow}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
             />
 
             <div className="space-y-12 md:space-y-16">
@@ -183,16 +124,11 @@ export default function ImportantDatesPage() {
                 const isLeft = idx % 2 === 0;
 
                 return (
-                  <motion.div
+                  <div
                     key={item.date}
-                    custom={idx}
-                    variants={fadeUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-60px" }}
                     className="relative"
                   >
-                    {/* ── node / circle ── */}
+                    {/* -- node / circle -- */}
                     <div
                       className={`absolute left-4 z-10 -translate-x-1/2 md:left-1/2 ${
                         item.isMajor ? "-mt-1" : "mt-0.5"
@@ -219,7 +155,7 @@ export default function ImportantDatesPage() {
                       )}
                     </div>
 
-                    {/* ── card ── */}
+                    {/* -- card -- */}
                     <div
                       className={`ml-14 md:ml-0 md:w-[calc(50%-3rem)] ${
                         isLeft
@@ -283,7 +219,7 @@ export default function ImportantDatesPage() {
                         </p>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
@@ -295,13 +231,7 @@ export default function ImportantDatesPage() {
       <section className="relative bg-cream-50 py-16 md:py-24">
         <div className="absolute inset-0 mandala-bg" />
         <div className="section-container relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7 }}
-            className="mb-16 text-center"
-          >
+          <div className="mb-16 text-center">
             <h2 className="gradient-text font-heading text-3xl font-bold md:text-4xl">
               {t(translations.datesPage.goodToKnow)}
             </h2>
@@ -310,7 +240,7 @@ export default function ImportantDatesPage() {
                 ॐ
               </span>
             </div>
-          </motion.div>
+          </div>
 
           <div className="grid gap-8 md:grid-cols-3">
             {[
@@ -330,13 +260,8 @@ export default function ImportantDatesPage() {
                 text: translations.datesPage.safetyDesc,
               },
             ].map((card, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                custom={idx}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
                 className="card-glass p-8"
               >
                 <div
@@ -351,7 +276,7 @@ export default function ImportantDatesPage() {
                 <p className="mt-3 leading-relaxed text-temple-600">
                   {t(card.text)}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -367,13 +292,7 @@ export default function ImportantDatesPage() {
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.06)_0%,transparent_70%)]" />
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="section-container relative z-10 text-center"
-        >
+        <div className="section-container relative z-10 text-center">
           <div className="sacred-divider mx-auto mb-8 max-w-xs">
             <span className="font-devanagari text-sm" style={{ color: "#D4A843" }}>
               ॐ
@@ -393,7 +312,7 @@ export default function ImportantDatesPage() {
             {t(translations.datesPage.ctaButton)}
             <ArrowRight className="h-5 w-5" />
           </Link>
-        </motion.div>
+        </div>
       </section>
 
 
