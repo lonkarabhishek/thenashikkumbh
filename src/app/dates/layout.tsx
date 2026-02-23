@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Important Dates 2027 - Shahi Snan Schedule & Sacred Bathing Calendar",
   description:
     "Complete schedule of Shahi Snan dates, Parva Snan days, and sacred bathing calendar for Nashik Kumbh Mela 2027. Plan your pilgrimage around the most auspicious days.",
+  alternates: {
+    canonical: "https://thenashikkumbh.com/dates",
+  },
   openGraph: {
     title: "Nashik Kumbh Mela 2027 - Important Dates & Shahi Snan Schedule",
     description:

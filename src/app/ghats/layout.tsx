@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Sacred Ghats of Nashik - Ram Kund, Godavari & Panchavati",
   description:
     "Explore the holy bathing ghats of Nashik including Ram Kund, Godavari Ghats, Kapaleshwar Temple, and Panchavati - where Lord Rama walked during his exile.",
+  alternates: {
+    canonical: "https://thenashikkumbh.com/ghats",
+  },
   openGraph: {
     title: "Sacred Ghats of Nashik - Holy Bathing Sites",
     description:

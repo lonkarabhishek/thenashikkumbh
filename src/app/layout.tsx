@@ -66,6 +66,14 @@ export const metadata: Metadata = {
     "गोदावरी नदी",
     "पंचवटी नाशिक",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     title: "Nashik Kumbh Mela 2027 | Sacred Pilgrimage at Godavari | नाशिक कुंभमेळा",
     description:
@@ -74,7 +82,6 @@ export const metadata: Metadata = {
     siteName: "The Nashik Kumbh",
     locale: "en_IN",
     type: "website",
-    alternateLocale: ["hi_IN", "mr_IN"],
     images: [
       {
         url: "/images/og-image.svg",

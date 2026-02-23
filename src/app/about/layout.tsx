@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "About Kumbh Mela - History, Origins & Spiritual Significance",
   description:
     "Discover the ancient origins of Kumbh Mela, the Samudra Manthan legend, and why Nashik is one of four sacred cities chosen for this divine gathering at the Godavari River.",
+  alternates: {
+    canonical: "https://thenashikkumbh.com/about",
+  },
   openGraph: {
     title: "About Kumbh Mela - History & Spiritual Significance",
     description:
