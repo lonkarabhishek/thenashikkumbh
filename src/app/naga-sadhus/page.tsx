@@ -49,7 +49,7 @@ export default function NagaSadhusPage() {
         {/* Background image */}
         <div className="absolute inset-0">
           <img
-            src="/images/naga-sadhu.png"
+            src="/images/naga-sadhu.webp"
             alt="Naga Sadhu"
             className="h-full w-full object-cover"
           />
@@ -292,7 +292,7 @@ export default function NagaSadhusPage() {
             {/* Image with cinematic frame */}
             <div className="relative rounded-2xl">
               <img
-                src="/images/naga-sadhu.png"
+                src="/images/naga-sadhu.webp"
                 alt="Naga Sadhu Attire Diagram"
                 className="w-full rounded-2xl"
               />
@@ -372,7 +372,7 @@ export default function NagaSadhusPage() {
           <div className="lg:hidden">
             <div className="relative mx-auto max-w-xs">
               <img
-                src="/images/naga-sadhu.png"
+                src="/images/naga-sadhu.webp"
                 alt="Naga Sadhu Attire"
                 className="w-full rounded-2xl"
               />

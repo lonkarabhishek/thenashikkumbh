@@ -25,7 +25,7 @@ export const blogArticles: BlogArticle[] = [
     date: "2025-12-15",
     source: "Deccan Chronicle",
     category: "kumbh",
-    image: "/images/gallery/kumbh-1.jpg",
+    image: "/images/gallery/kumbh-1.webp",
     summary: {
       en: "The Simhastha Kumbh Mela in Nashik will officially commence with a flag hoisting ceremony on October 31, 2026. Three sacred Amrit Snan dates have been announced: August 2, August 31, and September 11-12, 2027.",
       hi: "नासिक में सिंहस्थ कुंभ मेला आधिकारिक रूप से 31 अक्टूबर 2026 को ध्वजारोहण समारोह से शुरू होगा। तीन पवित्र अमृत स्नान तिथियाँ घोषित की गई हैं: 2 अगस्त, 31 अगस्त और 11-12 सितंबर 2027।",
@@ -48,7 +48,7 @@ export const blogArticles: BlogArticle[] = [
     date: "2025-11-20",
     source: "Free Press Journal",
     category: "govt",
-    image: "/images/gallery/kumbh-4.jpg",
+    image: "/images/gallery/kumbh-4.webp",
     summary: {
       en: "The Maharashtra government has sanctioned a massive Rs 25,055 crore development plan for the 2027 Nashik Kumbh Mela, with 15-20 crore devotees expected to attend the sacred gathering.",
       hi: "महाराष्ट्र सरकार ने 2027 नासिक कुंभ मेले के लिए 25,055 करोड़ रुपये की विशाल विकास योजना को मंजूरी दी है, जिसमें 15-20 करोड़ श्रद्धालुओं के आने की उम्मीद है।",
@@ -71,7 +71,7 @@ export const blogArticles: BlogArticle[] = [
     date: "2025-10-08",
     source: "Swarajya Magazine",
     category: "infra",
-    image: "/images/gallery/kumbh-8.jpg",
+    image: "/images/gallery/kumbh-8.webp",
     summary: {
       en: "Chief Minister Devendra Fadnavis has set strict deadlines for Kumbh infrastructure projects, including AI-powered crowd monitoring and Rs 4,000 crore worth of technology-driven initiatives.",
       hi: "मुख्यमंत्री देवेंद्र फडणवीस ने कुंभ बुनियादी ढाँचा परियोजनाओं के लिए सख्त समय सीमा निर्धारित की है, जिसमें AI-संचालित भीड़ निगरानी और 4,000 करोड़ रुपये की प्रौद्योगिकी-आधारित पहल शामिल हैं।",
@@ -94,7 +94,7 @@ export const blogArticles: BlogArticle[] = [
     date: "2025-09-15",
     source: "Lokmat Times",
     category: "infra",
-    image: "/images/gallery/kumbh-5.jpg",
+    image: "/images/gallery/kumbh-5.webp",
     summary: {
       en: "A 91-kilometer ring road project worth Rs 8,000 crore has been cleared for Nashik, along with Rs 2,270 crore for upgrading 289 km of roads connecting pilgrimage sites.",
       hi: "नासिक के लिए 91 किलोमीटर की 8,000 करोड़ रुपये की रिंग रोड परियोजना को मंजूरी दी गई है, साथ ही तीर्थ स्थलों को जोड़ने वाली 289 किमी सड़कों के उन्नयन के लिए 2,270 करोड़ रुपये।",
@@ -117,7 +117,7 @@ export const blogArticles: BlogArticle[] = [
     date: "2025-08-22",
     source: "All India Radio",
     category: "infra",
-    image: "/images/gallery/kumbh-9.jpg",
+    image: "/images/gallery/kumbh-9.webp",
     summary: {
       en: "Indian Railways has begun large-scale preparations for Simhastha 2027, including station upgrades, special trains, 4,500 buses, and 8-10 helipads for emergency services.",
       hi: "भारतीय रेलवे ने सिंहस्थ 2027 के लिए बड़े पैमाने पर तैयारियाँ शुरू कर दी हैं, जिसमें स्टेशन उन्नयन, विशेष ट्रेनें, 4,500 बसें और आपातकालीन सेवाओं के लिए 8-10 हेलीपैड शामिल हैं।",
@@ -140,7 +140,7 @@ export const blogArticles: BlogArticle[] = [
     date: "2025-07-10",
     source: "Free Press Journal",
     category: "infra",
-    image: "/images/gallery/kumbh-6.jpg",
+    image: "/images/gallery/kumbh-6.webp",
     summary: {
       en: "The NTKMA has approved Phase 2 infrastructure at Trimbakeshwar worth Rs 390 crore, including the Darshan Path, renovated ghats, and improved pilgrim amenities near the Jyotirlinga temple.",
       hi: "NTKMA ने त्र्यंबकेश्वर में 390 करोड़ रुपये की चरण 2 बुनियादी ढाँचे को मंजूरी दी है, जिसमें दर्शन पथ, नवीनीकृत घाट और ज्योतिर्लिंग मंदिर के पास बेहतर तीर्थयात्री सुविधाएँ शामिल हैं।",
@@ -163,7 +163,7 @@ export const blogArticles: BlogArticle[] = [
     date: "2025-06-05",
     source: "Free Press Journal",
     category: "culture",
-    image: "/images/gallery/kumbh-7.jpg",
+    image: "/images/gallery/kumbh-7.webp",
     summary: {
       en: "Nashik has launched a massive plastic-free campaign across 200 schools as part of a broader Rs 2,000 crore initiative to clean and restore the Godavari River before the Kumbh Mela 2027.",
       hi: "नासिक ने कुंभ मेला 2027 से पहले गोदावरी नदी को स्वच्छ और पुनर्स्थापित करने की 2,000 करोड़ रुपये की व्यापक पहल के तहत 200 स्कूलों में बड़े पैमाने पर प्लास्टिक-मुक्त अभियान शुरू किया है।",
@@ -186,7 +186,7 @@ export const blogArticles: BlogArticle[] = [
     date: "2025-05-18",
     source: "Punekar News",
     category: "infra",
-    image: "/images/gallery/kumbh-10.jpg",
+    image: "/images/gallery/kumbh-10.webp",
     summary: {
       en: "A comprehensive rural connectivity plan has been unveiled for Simhastha 2027, including bus station renovations and new routes connecting remote villages to Kumbh sites.",
       hi: "सिंहस्थ 2027 के लिए एक व्यापक ग्रामीण कनेक्टिविटी योजना का अनावरण किया गया है, जिसमें बस स्टेशन नवीनीकरण और दूरदराज के गाँवों को कुंभ स्थलों से जोड़ने वाले नए मार्ग शामिल हैं।",
@@ -209,7 +209,7 @@ export const blogArticles: BlogArticle[] = [
     date: "2025-04-25",
     source: "Free Press Journal",
     category: "kumbh",
-    image: "/images/ramkund.jpg",
+    image: "/images/ramkund.webp",
     summary: {
       en: "Luxurious tent cities and helicopter darshan services are being planned for the Jyotirlinga circuit during Kumbh 2027, with a 250+ acre Sadhugram to house saints and their followers.",
       hi: "कुंभ 2027 के दौरान ज्योतिर्लिंग सर्किट के लिए शानदार टेंट सिटी और हेलीकॉप्टर दर्शन सेवाओं की योजना बनाई जा रही है, संतों और उनके अनुयायियों के लिए 250+ एकड़ का साधुग्राम।",
@@ -232,7 +232,7 @@ export const blogArticles: BlogArticle[] = [
     date: "2025-03-29",
     source: "ANI News",
     category: "govt",
-    image: "/images/gallery/kumbh-3.jpg",
+    image: "/images/gallery/kumbh-3.webp",
     summary: {
       en: "The Maharashtra government is positioning Nashik Kumbh 2027 as the most technologically advanced Kumbh Mela in history, with the 21-month festival integrating AI, IoT, and smart city solutions.",
       hi: "महाराष्ट्र सरकार नासिक कुंभ 2027 को इतिहास में सबसे तकनीकी रूप से उन्नत कुंभ मेले के रूप में स्थापित कर रही है, 21 महीने का महोत्सव AI, IoT और स्मार्ट सिटी समाधानों को एकीकृत करेगा।",
@@ -255,7 +255,7 @@ export const blogArticles: BlogArticle[] = [
     date: "2026-02-12",
     source: "Punekar News",
     category: "kumbh",
-    image: "/images/gallery/kumbh-2.jpg",
+    image: "/images/gallery/kumbh-2.webp",
     summary: {
       en: "Climate-resilient bamboo tent structures have been designed for the Simhastha 2027 Kumbh Mela, engineered to withstand heavy monsoon rains while maintaining comfort and safety for pilgrims.",
       hi: "सिंहस्थ 2027 कुंभ मेले के लिए जलवायु-लचीले बाँस तंबू संरचनाओं को डिज़ाइन किया गया है, जो भारी मानसून बारिश का सामना करते हुए श्रद्धालुओं के आराम और सुरक्षा बनाए रखने के लिए इंजीनियर किए गए हैं।",
@@ -278,7 +278,7 @@ export const blogArticles: BlogArticle[] = [
     date: "2026-01-20",
     source: "Free Press Journal",
     category: "govt",
-    image: "/images/panchavati.jpg",
+    image: "/images/panchavati.webp",
     summary: {
       en: "A high-level delegation from Telangana visited Nashik to study Kumbh Mela preparations and explore coordination opportunities for the Godavari Pushkaram festival.",
       hi: "तेलंगाना से एक उच्चस्तरीय प्रतिनिधिमंडल ने कुंभ मेला की तैयारियों का अध्ययन करने और गोदावरी पुष्करम उत्सव के लिए समन्वय के अवसरों का पता लगाने के लिए नासिक का दौरा किया।",

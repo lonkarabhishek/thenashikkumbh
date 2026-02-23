@@ -107,7 +107,7 @@ export const ghats = [
       "Pind daan for ancestors",
     ],
     timings: "Open 24 hours (Aarti: 6:00 AM & 7:00 PM)",
-    image: "/images/ramkund.jpg",
+    image: "/images/ramkund.webp",
   },
   {
     id: "godavari-ghats",
@@ -122,7 +122,7 @@ export const ghats = [
       "Devotional kirtans",
     ],
     timings: "Open 24 hours",
-    image: "/images/godavari-ghats.jpg",
+    image: "/images/godavari-ghats.webp",
   },
   {
     id: "kapaleshwar",
@@ -137,7 +137,7 @@ export const ghats = [
       "Meditation and dhyana",
     ],
     timings: "5:00 AM – 9:00 PM",
-    image: "/images/kapaleshwar.jpg",
+    image: "/images/kapaleshwar.webp",
   },
   {
     id: "panchavati",
@@ -152,7 +152,7 @@ export const ghats = [
       "Circumambulation of sacred trees",
     ],
     timings: "6:00 AM – 9:00 PM",
-    image: "/images/panchavati.jpg",
+    image: "/images/panchavati.webp",
   },
 ];
 
@@ -310,16 +310,16 @@ export const events = [
 ];
 
 export const galleryImages = [
-  { src: "/images/gallery/kumbh-1.jpg", alt: "Millions of devotees at the Godavari ghats during Shahi Snan", category: "Shahi Snan" },
-  { src: "/images/gallery/kumbh-2.jpg", alt: "Naga sadhus in grand procession", category: "Processions" },
-  { src: "/images/gallery/kumbh-3.jpg", alt: "Evening Ganga Aarti at the Godavari", category: "Aarti" },
-  { src: "/images/gallery/kumbh-4.jpg", alt: "Aerial view of the Kumbh Mela grounds", category: "Aerial" },
-  { src: "/images/gallery/kumbh-5.jpg", alt: "Devotees performing sacred rituals", category: "Rituals" },
-  { src: "/images/gallery/kumbh-6.jpg", alt: "Ancient Kalaram Temple in Panchavati", category: "Temples" },
-  { src: "/images/gallery/kumbh-7.jpg", alt: "Sunrise over the Godavari River", category: "Nature" },
-  { src: "/images/gallery/kumbh-8.jpg", alt: "Sadhus in meditation along the riverbank", category: "Spiritual" },
-  { src: "/images/gallery/kumbh-9.jpg", alt: "Grand decorated elephants in procession", category: "Processions" },
-  { src: "/images/gallery/kumbh-10.jpg", alt: "Cultural dance performances at Kumbh", category: "Cultural" },
-  { src: "/images/gallery/kumbh-11.jpg", alt: "Flower offerings at Ram Kund", category: "Rituals" },
-  { src: "/images/gallery/kumbh-12.jpg", alt: "Night view of illuminated ghats", category: "Night" },
+  { src: "/images/gallery/kumbh-1.webp", alt: "Millions of devotees at the Godavari ghats during Shahi Snan", category: "Shahi Snan" },
+  { src: "/images/gallery/kumbh-2.webp", alt: "Naga sadhus in grand procession", category: "Processions" },
+  { src: "/images/gallery/kumbh-3.webp", alt: "Evening Ganga Aarti at the Godavari", category: "Aarti" },
+  { src: "/images/gallery/kumbh-4.webp", alt: "Aerial view of the Kumbh Mela grounds", category: "Aerial" },
+  { src: "/images/gallery/kumbh-5.webp", alt: "Devotees performing sacred rituals", category: "Rituals" },
+  { src: "/images/gallery/kumbh-6.webp", alt: "Ancient Kalaram Temple in Panchavati", category: "Temples" },
+  { src: "/images/gallery/kumbh-7.webp", alt: "Sunrise over the Godavari River", category: "Nature" },
+  { src: "/images/gallery/kumbh-8.webp", alt: "Sadhus in meditation along the riverbank", category: "Spiritual" },
+  { src: "/images/gallery/kumbh-9.webp", alt: "Grand decorated elephants in procession", category: "Processions" },
+  { src: "/images/gallery/kumbh-10.webp", alt: "Cultural dance performances at Kumbh", category: "Cultural" },
+  { src: "/images/gallery/kumbh-11.webp", alt: "Flower offerings at Ram Kund", category: "Rituals" },
+  { src: "/images/gallery/kumbh-12.webp", alt: "Night view of illuminated ghats", category: "Night" },
 ];

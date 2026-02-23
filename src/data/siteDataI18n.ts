@@ -202,7 +202,7 @@ export const ghatsI18n: GhatI18n[] = [
       { en: "Pind daan for ancestors", hi: "पूर्वजों के लिए पिंडदान", mr: "पूर्वजांसाठी पिंडदान" },
     ],
     timings: { en: "Open 24 hours (Aarti: 6:00 AM & 7:00 PM)", hi: "24 घंटे खुला (आरती: सुबह 6:00 और शाम 7:00)", mr: "२४ तास खुले (आरती: सकाळी ६:०० व संध्याकाळी ७:००)" },
-    image: "/images/ramkund.jpg",
+    image: "/images/ramkund.webp",
   },
   {
     id: "godavari-ghats",
@@ -220,7 +220,7 @@ export const ghatsI18n: GhatI18n[] = [
       { en: "Devotional kirtans", hi: "भक्ति कीर्तन", mr: "भक्ती कीर्तन" },
     ],
     timings: { en: "Open 24 hours", hi: "24 घंटे खुला", mr: "२४ तास खुले" },
-    image: "/images/godavari-ghats.jpg",
+    image: "/images/godavari-ghats.webp",
   },
   {
     id: "kapaleshwar",
@@ -238,7 +238,7 @@ export const ghatsI18n: GhatI18n[] = [
       { en: "Meditation and dhyana", hi: "ध्यान और साधना", mr: "ध्यान आणि साधना" },
     ],
     timings: { en: "5:00 AM – 9:00 PM", hi: "सुबह 5:00 – रात 9:00", mr: "सकाळी ५:०० – रात्री ९:००" },
-    image: "/images/kapaleshwar.jpg",
+    image: "/images/kapaleshwar.webp",
   },
   {
     id: "panchavati",
@@ -256,7 +256,7 @@ export const ghatsI18n: GhatI18n[] = [
       { en: "Circumambulation of sacred trees", hi: "पवित्र वृक्षों की परिक्रमा", mr: "पवित्र वृक्षांची परिक्रमा" },
     ],
     timings: { en: "6:00 AM – 9:00 PM", hi: "सुबह 6:00 – रात 9:00", mr: "सकाळी ६:०० – रात्री ९:००" },
-    image: "/images/panchavati.jpg",
+    image: "/images/panchavati.webp",
   },
 ];
 
@@ -503,16 +503,16 @@ export interface GalleryImageI18n {
 }
 
 export const galleryImagesI18n: GalleryImageI18n[] = [
-  { src: "/images/gallery/kumbh-1.jpg", alt: { en: "Millions of devotees at the Godavari ghats during Shahi Snan", hi: "शाही स्नान के दौरान गोदावरी घाट पर लाखों श्रद्धालु", mr: "शाही स्नानादरम्यान गोदावरी घाटावर लाखो भाविक" }, category: { en: "Shahi Snan", hi: "शाही स्नान", mr: "शाही स्नान" } },
-  { src: "/images/gallery/kumbh-2.jpg", alt: { en: "Naga sadhus in grand procession", hi: "भव्य जुलूस में नागा साधु", mr: "भव्य मिरवणुकीत नागा साधू" }, category: { en: "Processions", hi: "जुलूस", mr: "मिरवणुका" } },
-  { src: "/images/gallery/kumbh-3.jpg", alt: { en: "Evening Ganga Aarti at the Godavari", hi: "गोदावरी पर संध्या गंगा आरती", mr: "गोदावरीवर संध्याकाळची गंगा आरती" }, category: { en: "Aarti", hi: "आरती", mr: "आरती" } },
-  { src: "/images/gallery/kumbh-4.jpg", alt: { en: "Aerial view of the Kumbh Mela grounds", hi: "कुंभ मेला मैदान का हवाई दृश्य", mr: "कुंभमेळा मैदानाचे हवाई दृश्य" }, category: { en: "Aerial", hi: "हवाई दृश्य", mr: "हवाई दृश्य" } },
-  { src: "/images/gallery/kumbh-5.jpg", alt: { en: "Devotees performing sacred rituals", hi: "पवित्र अनुष्ठान करते श्रद्धालु", mr: "पवित्र विधी करणारे भाविक" }, category: { en: "Rituals", hi: "अनुष्ठान", mr: "विधी" } },
-  { src: "/images/gallery/kumbh-6.jpg", alt: { en: "Ancient Kalaram Temple in Panchavati", hi: "पंचवटी का प्राचीन कालाराम मंदिर", mr: "पंचवटीतील प्राचीन कालाराम मंदिर" }, category: { en: "Temples", hi: "मंदिर", mr: "मंदिरे" } },
-  { src: "/images/gallery/kumbh-7.jpg", alt: { en: "Sunrise over the Godavari River", hi: "गोदावरी नदी पर सूर्योदय", mr: "गोदावरी नदीवरील सूर्योदय" }, category: { en: "Nature", hi: "प्रकृति", mr: "निसर्ग" } },
-  { src: "/images/gallery/kumbh-8.jpg", alt: { en: "Sadhus in meditation along the riverbank", hi: "नदी किनारे ध्यान करते साधु", mr: "नदी किनाऱ्यावर ध्यान करणारे साधू" }, category: { en: "Spiritual", hi: "आध्यात्मिक", mr: "आध्यात्मिक" } },
-  { src: "/images/gallery/kumbh-9.jpg", alt: { en: "Grand decorated elephants in procession", hi: "जुलूस में भव्य सजे हाथी", mr: "मिरवणुकीत भव्य सजवलेले हत्ती" }, category: { en: "Processions", hi: "जुलूस", mr: "मिरवणुका" } },
-  { src: "/images/gallery/kumbh-10.jpg", alt: { en: "Cultural dance performances at Kumbh", hi: "कुंभ में सांस्कृतिक नृत्य प्रदर्शन", mr: "कुंभातील सांस्कृतिक नृत्य प्रदर्शन" }, category: { en: "Cultural", hi: "सांस्कृतिक", mr: "सांस्कृतिक" } },
-  { src: "/images/gallery/kumbh-11.jpg", alt: { en: "Flower offerings at Ram Kund", hi: "रामकुंड पर पुष्प अर्पण", mr: "रामकुंडावर पुष्पार्पण" }, category: { en: "Rituals", hi: "अनुष्ठान", mr: "विधी" } },
-  { src: "/images/gallery/kumbh-12.jpg", alt: { en: "Night view of illuminated ghats", hi: "प्रकाशित घाटों का रात्रि दृश्य", mr: "प्रकाशित घाटांचे रात्रीचे दृश्य" }, category: { en: "Night", hi: "रात्रि", mr: "रात्र" } },
+  { src: "/images/gallery/kumbh-1.webp", alt: { en: "Millions of devotees at the Godavari ghats during Shahi Snan", hi: "शाही स्नान के दौरान गोदावरी घाट पर लाखों श्रद्धालु", mr: "शाही स्नानादरम्यान गोदावरी घाटावर लाखो भाविक" }, category: { en: "Shahi Snan", hi: "शाही स्नान", mr: "शाही स्नान" } },
+  { src: "/images/gallery/kumbh-2.webp", alt: { en: "Naga sadhus in grand procession", hi: "भव्य जुलूस में नागा साधु", mr: "भव्य मिरवणुकीत नागा साधू" }, category: { en: "Processions", hi: "जुलूस", mr: "मिरवणुका" } },
+  { src: "/images/gallery/kumbh-3.webp", alt: { en: "Evening Ganga Aarti at the Godavari", hi: "गोदावरी पर संध्या गंगा आरती", mr: "गोदावरीवर संध्याकाळची गंगा आरती" }, category: { en: "Aarti", hi: "आरती", mr: "आरती" } },
+  { src: "/images/gallery/kumbh-4.webp", alt: { en: "Aerial view of the Kumbh Mela grounds", hi: "कुंभ मेला मैदान का हवाई दृश्य", mr: "कुंभमेळा मैदानाचे हवाई दृश्य" }, category: { en: "Aerial", hi: "हवाई दृश्य", mr: "हवाई दृश्य" } },
+  { src: "/images/gallery/kumbh-5.webp", alt: { en: "Devotees performing sacred rituals", hi: "पवित्र अनुष्ठान करते श्रद्धालु", mr: "पवित्र विधी करणारे भाविक" }, category: { en: "Rituals", hi: "अनुष्ठान", mr: "विधी" } },
+  { src: "/images/gallery/kumbh-6.webp", alt: { en: "Ancient Kalaram Temple in Panchavati", hi: "पंचवटी का प्राचीन कालाराम मंदिर", mr: "पंचवटीतील प्राचीन कालाराम मंदिर" }, category: { en: "Temples", hi: "मंदिर", mr: "मंदिरे" } },
+  { src: "/images/gallery/kumbh-7.webp", alt: { en: "Sunrise over the Godavari River", hi: "गोदावरी नदी पर सूर्योदय", mr: "गोदावरी नदीवरील सूर्योदय" }, category: { en: "Nature", hi: "प्रकृति", mr: "निसर्ग" } },
+  { src: "/images/gallery/kumbh-8.webp", alt: { en: "Sadhus in meditation along the riverbank", hi: "नदी किनारे ध्यान करते साधु", mr: "नदी किनाऱ्यावर ध्यान करणारे साधू" }, category: { en: "Spiritual", hi: "आध्यात्मिक", mr: "आध्यात्मिक" } },
+  { src: "/images/gallery/kumbh-9.webp", alt: { en: "Grand decorated elephants in procession", hi: "जुलूस में भव्य सजे हाथी", mr: "मिरवणुकीत भव्य सजवलेले हत्ती" }, category: { en: "Processions", hi: "जुलूस", mr: "मिरवणुका" } },
+  { src: "/images/gallery/kumbh-10.webp", alt: { en: "Cultural dance performances at Kumbh", hi: "कुंभ में सांस्कृतिक नृत्य प्रदर्शन", mr: "कुंभातील सांस्कृतिक नृत्य प्रदर्शन" }, category: { en: "Cultural", hi: "सांस्कृतिक", mr: "सांस्कृतिक" } },
+  { src: "/images/gallery/kumbh-11.webp", alt: { en: "Flower offerings at Ram Kund", hi: "रामकुंड पर पुष्प अर्पण", mr: "रामकुंडावर पुष्पार्पण" }, category: { en: "Rituals", hi: "अनुष्ठान", mr: "विधी" } },
+  { src: "/images/gallery/kumbh-12.webp", alt: { en: "Night view of illuminated ghats", hi: "प्रकाशित घाटों का रात्रि दृश्य", mr: "प्रकाशित घाटांचे रात्रीचे दृश्य" }, category: { en: "Night", hi: "रात्रि", mr: "रात्र" } },
 ];
