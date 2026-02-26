@@ -233,6 +233,22 @@ export default function Footer() {
               ॐ नमो भगवते वासुदेवाय ॥
             </p>
           </div>
+
+          {/* Creator credit */}
+          <div className="mt-6 text-center">
+            <p className="text-cream-300/30 text-xs">
+              {t(translations.footer.madeByCreator)}{" "}
+              <a
+                href="https://workwithabhi.online"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors duration-300 hover:text-cream-100"
+                style={{ color: "rgba(212,168,67,0.5)" }}
+              >
+                workwithabhi.online
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

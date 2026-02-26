@@ -318,6 +318,11 @@ export const translations = {
       hi: "एक नाशिककर ने गर्व से बनाया",
       mr: "एका नाशिककराने अभिमानाने बनवले",
     },
+    madeByCreator: {
+      en: "Built by Abhishek, a proud Nashikkar.",
+      hi: "अभिषेक द्वारा निर्मित, एक गर्वित नाशिककर।",
+      mr: "अभिषेक, एक अभिमानी नाशिककर याने बनवले.",
+    },
     disclaimer: {
       en: "This is an independent community website, not affiliated with any government body. Built to help pilgrims and visitors.",
       hi: "यह एक स्वतंत्र सामुदायिक वेबसाइट है, किसी सरकारी संस्था से संबद्ध नहीं। तीर्थयात्रियों और आगंतुकों की मदद के लिए बनाई गई।",
