@@ -4,6 +4,16 @@ export const metadata: Metadata = {
   title: "Naga Sadhus - Warrior Ascetics of Kumbh Mela",
   description:
     "Learn about the Naga Sadhus, the ancient warrior-monks of Hindu tradition. Their history, sacred attire, Akhada orders, and their powerful role at Nashik Kumbh Mela 2027.",
+  keywords: [
+    "Naga Sadhu",
+    "warrior monks India",
+    "Akhada orders",
+    "Naga Baba Kumbh Mela",
+    "ash-smeared ascetics",
+    "Naga Sadhu procession",
+    "नागा साधु",
+    "नागा साधू कुंभमेळा",
+  ],
   alternates: {
     canonical: "https://thenashikkumbh.com/naga-sadhus",
   },
@@ -13,7 +23,7 @@ export const metadata: Metadata = {
       "Discover the Naga Sadhus - ash-smeared warrior ascetics who lead the grand Shahi Snan processions at Kumbh Mela. History, attire, orders, and their role at Nashik Kumbh 2027.",
     images: [
       {
-        url: "/images/naga-sadhu.png",
+        url: "/images/naga-sadhu.webp",
         width: 1200,
         height: 630,
         alt: "Naga Sadhu at Kumbh Mela",

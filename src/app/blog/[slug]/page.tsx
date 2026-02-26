@@ -7,6 +7,7 @@ import { ArrowLeft, Calendar, ExternalLink, Share2 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import type { Locale } from "@/i18n/translations";
 import { blogArticles, getArticleBySlug } from "@/data/blogData";
+import BlogArticleSchema from "@/components/BlogArticleSchema";
 
 /* ───────────── category colors ───────────── */
 
@@ -82,6 +83,14 @@ export default function BlogDetailPage() {
 
   return (
     <>
+      <BlogArticleSchema
+        title={article.title.en}
+        description={article.summary.en}
+        slug={article.slug}
+        image={article.image}
+        datePublished={article.date}
+        source={article.source}
+      />
       {/* ═══════ HERO IMAGE ═══════ */}
       <section className="section-dark relative overflow-hidden pt-24">
         <div className="relative h-[40vh] min-h-[320px] w-full md:h-[50vh]">

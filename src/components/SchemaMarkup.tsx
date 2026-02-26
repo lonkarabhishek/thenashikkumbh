@@ -132,6 +132,62 @@ export default function SchemaMarkup() {
           text: "Essential items include: valid ID proof (Aadhaar/Passport), comfortable cotton clothes, towel, water bottle, personal medications, sufficient cash, mobile phone with power bank, comfortable walking shoes, umbrella/raincoat (monsoon season), sacred items like flowers and incense for puja, and a reusable bag.",
         },
       },
+      {
+        "@type": "Question",
+        name: "Who are the Naga Sadhus at Kumbh Mela?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Naga Sadhus are warrior-monks of the Hindu tradition who have renounced worldly life. They are known for their ash-smeared bodies and role as protectors of Hindu dharma. At Kumbh Mela, Naga Sadhus lead the grand Shahi Snan processions. They belong to Akhada orders such as Juna Akhada, Niranjani Akhada, and Mahanirvani Akhada. There are 13 recognized Akhadas in total.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the significance of bathing in the Godavari River during Kumbh Mela?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The Godavari River is called Dakshin Ganga (Ganga of the South) and is one of the holiest rivers in Hinduism. During Kumbh Mela, bathing in the Godavari at Nashik is believed to wash away sins and help the soul achieve moksha (spiritual liberation). The planetary alignment of Jupiter in Leo (Simha Rashi) is said to charge the river waters with divine energy during the Kumbh period.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Where can I stay during Nashik Kumbh Mela 2027?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Pilgrims visiting Nashik Kumbh Mela 2027 have several accommodation options. These include hotels and guesthouses in Nashik city, dharamshalas (pilgrim rest houses) near the ghats, government-organized tent cities along the Godavari, Akhada camps that offer free accommodation to devotees, and private homestays. Booking early is strongly recommended as rooms fill up months before the main Shahi Snan dates.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the history of Kumbh Mela at Nashik?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Kumbh Mela at Nashik dates back thousands of years to the legend of Samudra Manthan (churning of the ocean). When gods and demons churned the cosmic ocean, a pot (kumbh) of Amrit (nectar of immortality) emerged. During a 12-day celestial battle, drops of Amrit fell at four places on earth: Nashik, Prayagraj, Haridwar, and Ujjain. Nashik is where the Godavari River became sacred, and the Kumbh is held here every 12 years when Jupiter enters Leo.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How many visitors are expected at Nashik Kumbh Mela 2027?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Nashik Kumbh Mela 2027 is expected to receive between 15 and 20 crore (150 to 200 million) visitors over its duration. The Maharashtra government has sanctioned Rs 25,055 crore for infrastructure and preparations. Key developments include a 91-kilometer ring road, AI-powered crowd management, 5G connectivity across the Kumbh zone, and extensive healthcare and sanitation facilities.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the main events and rituals at Nashik Kumbh Mela?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The main events at Nashik Kumbh Mela include Shahi Snan (Royal Bath) processions led by Naga Sadhus and Akhadas, spiritual discourses (satsangs) by saints, Ganga Aarti at the Godavari ghats, yoga camps and meditation sessions, cultural performances including devotional music, and Bhandara (free community meals) organized by various Akhadas and religious groups.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is Nashik Kumbh Mela safe for solo travelers and families?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, Nashik Kumbh Mela is generally safe for solo travelers and families. The 2027 edition will feature AI-powered CCTV surveillance across all major areas, a dedicated Kumbh War Room for emergency response, mobile hospitals and trauma centers, free Wi-Fi and a Kumbh mobile app for navigation, and a large police deployment. Pilgrims should keep ID proof, stay hydrated, follow official crowd guidelines, and keep children close during peak bathing hours.",
+        },
+      },
     ],
   };
 
