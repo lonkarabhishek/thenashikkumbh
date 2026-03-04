@@ -3,6 +3,9 @@ import { Inter, Playfair_Display, Noto_Serif_Devanagari } from "next/font/google
 import { LanguageProvider } from "@/context/LanguageContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import KumbhSahayak from "@/components/KumbhSahayak";
+import SOSButton from "@/components/SOSButton";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 import { Analytics } from "@vercel/analytics/next";
 import LoadingScreen from "@/components/LoadingScreen";
@@ -131,6 +134,9 @@ export default function RootLayout({
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <KumbhSahayak />
+          <SOSButton />
+          <WhatsAppButton />
           <Analytics />
         </LanguageProvider>
       </body>
