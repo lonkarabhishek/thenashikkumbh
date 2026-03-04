@@ -19,4 +19,44 @@ export const sosUI: Record<string, I18nText> = {
     hi: "निकटतम पुलिस बूथ (नीले झंडे) की ओर जाएं। प्रत्येक प्रमुख घाट पर चिकित्सा शिविर हैं। शांत रहें और भीड़ निर्देशों का पालन करें।",
     mr: "जवळच्या पोलीस बूथकडे जा (निळे झेंडे). प्रत्येक प्रमुख घाटावर वैद्यकीय शिबिरे आहेत. शांत रहा आणि गर्दीच्या सूचनांचे पालन करा.",
   },
+  findNearestExit: {
+    en: "Find Nearest Exit",
+    hi: "निकटतम निकास खोजें",
+    mr: "जवळचा निर्गम शोधा",
+  },
+  exitRoutesTitle: {
+    en: "Evacuation Routes",
+    hi: "निकासी मार्ग",
+    mr: "निर्गम मार्ग",
+  },
+  nearestZone: {
+    en: "Nearest zone",
+    hi: "निकटतम क्षेत्र",
+    mr: "जवळचा विभाग",
+  },
+  walkTime: {
+    en: "min walk",
+    hi: "मिनट पैदल",
+    mr: "मिनिट चालणे",
+  },
+  navigate: {
+    en: "Navigate",
+    hi: "नेविगेट करें",
+    mr: "मार्गदर्शन करा",
+  },
+  locatingGps: {
+    en: "Getting your location...",
+    hi: "आपका स्थान प्राप्त कर रहे हैं...",
+    mr: "तुमचे स्थान मिळवत आहोत...",
+  },
+  exitRouteError: {
+    en: "Could not find nearby exits. Please try again.",
+    hi: "निकटतम निकास नहीं मिल सका। कृपया पुन: प्रयास करें।",
+    mr: "जवळचा निर्गम सापडला नाही. कृपया पुन्हा प्रयत्न करा.",
+  },
+  exitDisclaimer: {
+    en: "Routes are approximate. Follow police and volunteer directions on the ground.",
+    hi: "मार्ग अनुमानित हैं। मैदान पर पुलिस और स्वयंसेवकों के निर्देशों का पालन करें।",
+    mr: "मार्ग अंदाजे आहेत. मैदानावर पोलीस आणि स्वयंसेवकांच्या सूचनांचे पालन करा.",
+  },
 };

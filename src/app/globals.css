@@ -226,7 +226,13 @@
 /* ─── Kumbh Sahayak Chat Panel Animation ─────────────── */
 .chat-panel-enter {
   animation: chatPanelSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  transform-origin: bottom left;
+  transform-origin: bottom center;
+}
+
+@media (min-width: 640px) {
+  .chat-panel-enter {
+    transform-origin: bottom left;
+  }
 }
 
 @keyframes chatPanelSlideIn {

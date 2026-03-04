@@ -177,7 +177,7 @@ export default function KumbhSahayak() {
       {/* ================================================================= */}
       {isOpen && (
         <div
-          className="chat-panel-enter fixed bottom-24 left-6 z-50 flex flex-col w-[calc(100vw-24px)] sm:w-[380px] max-h-[70vh] sm:max-h-[520px] rounded-2xl overflow-hidden"
+          className="chat-panel-enter fixed inset-x-3 bottom-3 z-50 flex flex-col max-h-[80vh] rounded-2xl overflow-hidden sm:inset-x-auto sm:left-6 sm:bottom-24 sm:w-[380px] sm:max-h-[520px]"
           style={{
             background: "rgba(26,21,16,0.98)",
             border: "1px solid rgba(212,168,67,0.2)",
