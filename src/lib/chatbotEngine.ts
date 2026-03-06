@@ -13,6 +13,7 @@ export interface ChatResponse {
   relatedTopics: string[];
   pageLink?: string;
   emoji?: string;
+  image?: string;
 }
 
 function escapeRegex(str: string): string {
@@ -77,6 +78,7 @@ export async function getResponse(
       relatedTopics: best.relatedTopics,
       pageLink: best.pageLink,
       emoji: best.emoji,
+      image: best.image,
     };
   }
 
@@ -102,5 +104,6 @@ export function getTopicById(
     relatedTopics: topic.relatedTopics,
     pageLink: topic.pageLink,
     emoji: topic.emoji,
+    image: topic.image,
   };
 }

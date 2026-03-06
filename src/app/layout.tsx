@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display, Noto_Serif_Devanagari } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { ChatProvider } from "@/context/ChatContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import KumbhSahayak from "@/components/KumbhSahayak";
@@ -130,14 +131,16 @@ export default function RootLayout({
         className={`${inter.variable} ${playfairDisplay.variable} ${notoSerifDevanagari.variable} antialiased`}
       >
         <LanguageProvider>
-          <LoadingScreen />
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <KumbhSahayak />
-          <SOSButton />
-          <WhatsAppButton />
-          <Analytics />
+          <ChatProvider>
+            <LoadingScreen />
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+            <KumbhSahayak />
+            <SOSButton />
+            <WhatsAppButton />
+            <Analytics />
+          </ChatProvider>
         </LanguageProvider>
       </body>
     </html>

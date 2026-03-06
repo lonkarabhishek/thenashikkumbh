@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { Sparkles } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { useChat } from "@/context/ChatContext";
 import { translations } from "@/i18n/translations";
 import type { Locale } from "@/i18n/translations";
 
@@ -41,6 +43,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const { locale, setLocale, t } = useLanguage();
+  const { open: openChat } = useChat();
 
   /* -- Scroll listener ------------------------------------------ */
   useEffect(() => {
@@ -196,6 +199,20 @@ export default function Navbar() {
                 ))}
               </div>
 
+              {/* AI Chat Button */}
+              <button
+                onClick={openChat}
+                aria-label="Open AI Assistant"
+                className={`flex items-center gap-1.5 rounded-full border px-3 py-2 text-xs font-semibold tracking-wide transition-all duration-300 cursor-pointer ${
+                  isScrolled
+                    ? "text-amber-600 hover:bg-amber-50 border-amber-200"
+                    : "text-amber-300 hover:bg-white/10 border-white/20"
+                }`}
+              >
+                <Sparkles className="w-4 h-4" />
+                <span className="hidden xl:inline">AI</span>
+              </button>
+
               {/* Plan Visit CTA */}
               <Link
                 href="/guide"
@@ -320,6 +337,18 @@ export default function Navbar() {
               </button>
             ))}
           </div>
+
+          {/* AI Chat Button (Mobile) */}
+          <button
+            onClick={() => {
+              openChat();
+              setIsMobileMenuOpen(false);
+            }}
+            className="mb-4 flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-medium text-amber-400 transition-all duration-300 hover:bg-amber-500/10 cursor-pointer"
+          >
+            <Sparkles className="w-5 h-5" />
+            {t(translations.nav.aiAssistant)}
+          </button>
 
           {/* Navigation Links */}
           <div className="flex flex-col gap-1 flex-1 overflow-y-auto">

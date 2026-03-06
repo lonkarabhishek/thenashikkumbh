@@ -14,6 +14,7 @@ export const translations = {
     news: { en: "News", hi: "समाचार", mr: "बातम्या" },
     nagaSadhus: { en: "Naga Sadhus", hi: "नागा साधु", mr: "नागा साधू" },
     businesses: { en: "Local Services", hi: "स्थानीय सेवाएँ", mr: "स्थानिक सेवा" },
+    aiAssistant: { en: "AI Assistant", hi: "AI सहायक", mr: "AI सहायक" },
     planVisit: { en: "Plan Your Visit", hi: "यात्रा की योजना बनाएं", mr: "भेटीचे नियोजन करा" },
   },
 
