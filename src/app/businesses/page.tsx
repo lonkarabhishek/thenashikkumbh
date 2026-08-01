@@ -27,7 +27,7 @@ import { translations } from "@/i18n/translations";
 
 const businessCategoriesData = [
   { id: "hotels",       labelKey: "catHotels" as const,       icon: <Hotel className="h-5 w-5" />,            accent: "#60A5FA" },
-  { id: "dharamshalas", labelKey: "catDharamshalas" as const,  icon: <Landmark className="h-5 w-5" />,        accent: "#D4A843" },
+  { id: "dharamshalas", labelKey: "catDharamshalas" as const,  icon: <Landmark className="h-5 w-5" />,        accent: "#C9A227" },
   { id: "tours",        labelKey: "catTours" as const,        icon: <Compass className="h-5 w-5" />,         accent: "#34D399" },
   { id: "puja",         labelKey: "catPuja" as const,         icon: <Sparkles className="h-5 w-5" />,        accent: "#A78BFA" },
   { id: "restaurants",  labelKey: "catRestaurants" as const,  icon: <UtensilsCrossed className="h-5 w-5" />, accent: "#F87171" },
@@ -80,22 +80,22 @@ export default function BusinessesPage() {
       {/* ═══════════════════ HERO BANNER ═══════════════════ */}
       <section className="section-dark relative overflow-hidden py-32 pt-40">
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,168,67,0.08)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,162,39,0.08)_0%,transparent_60%)]" />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute left-20 top-20 h-72 w-72 rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(212,168,67,0.06) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(201,162,39,0.06) 0%, transparent 70%)" }}
         />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute bottom-10 right-20 h-64 w-64 rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(212,168,67,0.04) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(201,162,39,0.04) 0%, transparent 70%)" }}
         />
 
         <div className="section-container relative z-10 text-center">
           <span
             className="mb-4 inline-block font-devanagari text-5xl drop-shadow-lg"
-            style={{ color: "#D4A843", textShadow: "0 0 30px rgba(212,168,67,0.4)" }}
+            style={{ color: "#C9A227", textShadow: "0 0 30px rgba(201,162,39,0.4)" }}
             aria-hidden="true"
           >
             सेवा
@@ -138,15 +138,15 @@ export default function BusinessesPage() {
           <div
             className="rounded-2xl px-6 py-8 text-center"
             style={{
-              border: "2px dashed rgba(212,168,67,0.15)",
-              background: "rgba(212,168,67,0.03)",
+              border: "2px dashed rgba(201,162,39,0.15)",
+              background: "rgba(201,162,39,0.03)",
             }}
           >
-            <Megaphone className="mx-auto mb-2 h-8 w-8" style={{ color: "rgba(212,168,67,0.3)" }} />
-            <p className="text-sm font-medium" style={{ color: "rgba(212,168,67,0.5)" }}>
+            <Megaphone className="mx-auto mb-2 h-8 w-8" style={{ color: "rgba(201,162,39,0.3)" }} />
+            <p className="text-sm font-medium" style={{ color: "rgba(201,162,39,0.5)" }}>
               {t(bp.adSpaceTitle)}
             </p>
-            <p className="mt-1 text-xs" style={{ color: "rgba(212,168,67,0.3)" }}>
+            <p className="mt-1 text-xs" style={{ color: "rgba(201,162,39,0.3)" }}>
               {t(bp.adSpaceDesc)}
             </p>
           </div>
@@ -182,14 +182,14 @@ export default function BusinessesPage() {
                 style={
                   activeCategory === cat.id
                     ? {
-                        background: "linear-gradient(135deg, #D4A843, #B8922D)",
-                        color: "#0D0906",
-                        boxShadow: "0 4px 20px rgba(212,168,67,0.3)",
+                        background: "linear-gradient(135deg, #C9A227, #B8922D)",
+                        color: "#0B1220",
+                        boxShadow: "0 4px 20px rgba(201,162,39,0.3)",
                       }
                     : {
                         background: "transparent",
-                        color: "rgba(212,168,67,0.6)",
-                        border: "1px solid rgba(212,168,67,0.15)",
+                        color: "rgba(201,162,39,0.6)",
+                        border: "1px solid rgba(201,162,39,0.15)",
                       }
                 }
               >
@@ -222,7 +222,7 @@ export default function BusinessesPage() {
                 className="card-glass group relative overflow-hidden p-6 transition-all duration-500 hover:-translate-y-2"
                 style={{
                   background: "rgba(255,255,255,0.03)",
-                  borderColor: "rgba(212,168,67,0.08)",
+                  borderColor: "rgba(201,162,39,0.08)",
                 }}
               >
                 <div className="absolute inset-0 temple-pattern opacity-[0.02] pointer-events-none" />
@@ -249,9 +249,9 @@ export default function BusinessesPage() {
                     <span
                       className="rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider"
                       style={{
-                        background: "rgba(212,168,67,0.15)",
-                        color: "#D4A843",
-                        border: "1px solid rgba(212,168,67,0.2)",
+                        background: "rgba(201,162,39,0.15)",
+                        color: "#C9A227",
+                        border: "1px solid rgba(201,162,39,0.2)",
                       }}
                     >
                       {t(bp.comingSoon)}
@@ -265,7 +265,7 @@ export default function BusinessesPage() {
                         key={s}
                         className="h-4 w-4"
                         fill="currentColor"
-                        style={{ color: "rgba(212,168,67,0.15)" }}
+                        style={{ color: "rgba(201,162,39,0.15)" }}
                       />
                     ))}
                     <span className="ml-1 text-xs text-cream-300/30">{t(bp.noRatings)}</span>
@@ -274,15 +274,15 @@ export default function BusinessesPage() {
                   {/* Contact Placeholder */}
                   <div className="mb-5 space-y-2 text-sm text-cream-300/40">
                     <div className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4" style={{ color: "rgba(212,168,67,0.4)" }} />
+                      <MapPin className="h-4 w-4" style={{ color: "rgba(201,162,39,0.4)" }} />
                       <span>{t(bp.addressPlaceholder)}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Phone className="h-4 w-4" style={{ color: "rgba(212,168,67,0.4)" }} />
+                      <Phone className="h-4 w-4" style={{ color: "rgba(201,162,39,0.4)" }} />
                       <span>{t(bp.contactPending)}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Globe className="h-4 w-4" style={{ color: "rgba(212,168,67,0.4)" }} />
+                      <Globe className="h-4 w-4" style={{ color: "rgba(201,162,39,0.4)" }} />
                       <span>{t(bp.websiteSoon)}</span>
                     </div>
                   </div>
@@ -306,12 +306,12 @@ export default function BusinessesPage() {
           <div
             className="rounded-2xl px-6 py-10 text-center"
             style={{
-              border: "2px dashed rgba(212,168,67,0.2)",
-              background: "rgba(212,168,67,0.03)",
+              border: "2px dashed rgba(201,162,39,0.2)",
+              background: "rgba(201,162,39,0.03)",
             }}
           >
-            <Building className="mx-auto mb-3 h-10 w-10" style={{ color: "rgba(212,168,67,0.3)" }} />
-            <p className="font-medium" style={{ color: "rgba(212,168,67,0.7)" }}>
+            <Building className="mx-auto mb-3 h-10 w-10" style={{ color: "rgba(201,162,39,0.3)" }} />
+            <p className="font-medium" style={{ color: "rgba(201,162,39,0.7)" }}>
               {t(bp.sponsoredTitle)}
             </p>
             <p className="mx-auto mt-1 max-w-md text-sm text-temple-400">
@@ -319,7 +319,7 @@ export default function BusinessesPage() {
             </p>
             <button
               className="mt-4 inline-flex items-center gap-1 text-sm font-medium transition-colors"
-              style={{ color: "#D4A843" }}
+              style={{ color: "#C9A227" }}
             >
               {t(bp.learnMore)} <ChevronRight className="h-4 w-4" />
             </button>
@@ -330,7 +330,7 @@ export default function BusinessesPage() {
       {/* ═══════════════════ LIST YOUR BUSINESS ═══════════════════ */}
       <section className="section-dark relative py-16 md:py-24">
         <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(212,168,67,0.04)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(201,162,39,0.04)_0%,transparent_60%)]" />
         <div className="section-container relative z-10">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
             {/* Left: Info */}
@@ -351,9 +351,9 @@ export default function BusinessesPage() {
                   <div key={item.title} className="flex items-start gap-3">
                     <div
                       className="mt-0.5 rounded-full p-2"
-                      style={{ background: "rgba(212,168,67,0.1)" }}
+                      style={{ background: "rgba(201,162,39,0.1)" }}
                     >
-                      <item.Icon className="h-5 w-5" style={{ color: "#D4A843" }} />
+                      <item.Icon className="h-5 w-5" style={{ color: "#C9A227" }} />
                     </div>
                     <div>
                       <h4 className="font-semibold text-cream-100">{item.title}</h4>
@@ -366,13 +366,13 @@ export default function BusinessesPage() {
               <div
                 className="mt-8 rounded-xl p-5"
                 style={{
-                  background: "linear-gradient(135deg, rgba(212,168,67,0.08), rgba(212,168,67,0.03))",
-                  border: "1px solid rgba(212,168,67,0.15)",
+                  background: "linear-gradient(135deg, rgba(201,162,39,0.08), rgba(201,162,39,0.03))",
+                  border: "1px solid rgba(201,162,39,0.15)",
                 }}
               >
                 <div className="mb-2 flex items-center gap-2">
-                  <Sparkles className="h-5 w-5" style={{ color: "#D4A843" }} />
-                  <span className="font-heading font-bold" style={{ color: "#D4A843" }}>
+                  <Sparkles className="h-5 w-5" style={{ color: "#C9A227" }} />
+                  <span className="font-heading font-bold" style={{ color: "#C9A227" }}>
                     {t(bp.premiumUpgrade)}
                   </span>
                 </div>
@@ -388,7 +388,7 @@ export default function BusinessesPage() {
             <div>
               <div
                 className="card-dark p-8"
-                style={{ borderColor: "rgba(212,168,67,0.15)" }}
+                style={{ borderColor: "rgba(201,162,39,0.15)" }}
               >
                 <h3 className="font-heading text-2xl font-bold text-cream-100 mb-6">
                   {t(bp.registerTitle)}
@@ -411,9 +411,9 @@ export default function BusinessesPage() {
                       className="w-full rounded-lg px-4 py-3 text-cream-100 placeholder-cream-300/30 transition-all focus:outline-none focus:ring-2"
                       style={{
                         background: "rgba(255,255,255,0.04)",
-                        border: "1px solid rgba(212,168,67,0.12)",
+                        border: "1px solid rgba(201,162,39,0.12)",
                         // @ts-expect-error -- ring color
-                        "--tw-ring-color": "rgba(212,168,67,0.4)",
+                        "--tw-ring-color": "rgba(201,162,39,0.4)",
                       }}
                     />
                   </div>
@@ -433,12 +433,12 @@ export default function BusinessesPage() {
                       className="w-full rounded-lg px-4 py-3 text-cream-100 transition-all focus:outline-none focus:ring-2"
                       style={{
                         background: "rgba(255,255,255,0.04)",
-                        border: "1px solid rgba(212,168,67,0.12)",
+                        border: "1px solid rgba(201,162,39,0.12)",
                       }}
                     >
-                      <option value="" style={{ background: "#1A1510" }}>{t(bp.formSelectCategory)}</option>
+                      <option value="" style={{ background: "#121D31" }}>{t(bp.formSelectCategory)}</option>
                       {businessCategories.map((cat) => (
-                        <option key={cat.id} value={cat.id} style={{ background: "#1A1510" }}>
+                        <option key={cat.id} value={cat.id} style={{ background: "#121D31" }}>
                           {cat.label}
                         </option>
                       ))}
@@ -462,7 +462,7 @@ export default function BusinessesPage() {
                       className="w-full rounded-lg px-4 py-3 text-cream-100 placeholder-cream-300/30 transition-all focus:outline-none focus:ring-2"
                       style={{
                         background: "rgba(255,255,255,0.04)",
-                        border: "1px solid rgba(212,168,67,0.12)",
+                        border: "1px solid rgba(201,162,39,0.12)",
                       }}
                     />
                   </div>
@@ -484,7 +484,7 @@ export default function BusinessesPage() {
                       className="w-full resize-none rounded-lg px-4 py-3 text-cream-100 placeholder-cream-300/30 transition-all focus:outline-none focus:ring-2"
                       style={{
                         background: "rgba(255,255,255,0.04)",
-                        border: "1px solid rgba(212,168,67,0.12)",
+                        border: "1px solid rgba(201,162,39,0.12)",
                       }}
                     />
                   </div>
@@ -514,14 +514,14 @@ export default function BusinessesPage() {
           <div
             className="rounded-2xl px-6 py-10 text-center"
             style={{
-              background: "linear-gradient(135deg, rgba(212,168,67,0.05), rgba(212,168,67,0.02))",
-              border: "2px dashed rgba(212,168,67,0.2)",
+              background: "linear-gradient(135deg, rgba(201,162,39,0.05), rgba(201,162,39,0.02))",
+              border: "2px dashed rgba(201,162,39,0.2)",
             }}
           >
             <div className="mb-3 flex items-center justify-center gap-2">
-              <Megaphone className="h-8 w-8" style={{ color: "rgba(212,168,67,0.4)" }} />
+              <Megaphone className="h-8 w-8" style={{ color: "rgba(201,162,39,0.4)" }} />
             </div>
-            <p className="font-heading text-lg font-bold" style={{ color: "#D4A843" }}>
+            <p className="font-heading text-lg font-bold" style={{ color: "#C9A227" }}>
               {t(bp.advertisingTitle)}
             </p>
             <p className="mx-auto mt-2 max-w-lg text-sm text-temple-400">
@@ -530,7 +530,7 @@ export default function BusinessesPage() {
             <a
               href="mailto:info@thenashikkumbh.com"
               className="mt-4 inline-flex items-center gap-2 text-sm font-semibold transition-colors"
-              style={{ color: "#D4A843" }}
+              style={{ color: "#C9A227" }}
             >
               {t(bp.contactForAds)} <ChevronRight className="h-4 w-4" />
             </a>
@@ -542,17 +542,17 @@ export default function BusinessesPage() {
       <section
         className="relative overflow-hidden py-20 md:py-28"
         style={{
-          background: "linear-gradient(135deg, #1a0a00 0%, #0D0906 50%, #1a0a00 100%)",
+          background: "linear-gradient(135deg, #1a0a00 0%, #0B1220 50%, #1a0a00 100%)",
         }}
       >
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.06)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,162,39,0.06)_0%,transparent_70%)]" />
 
         <div
           className="section-container relative z-10 text-center"
         >
           <div className="sacred-divider mx-auto mb-8 max-w-xs">
-            <span className="font-devanagari text-sm" style={{ color: "#D4A843" }}>
+            <span className="font-devanagari text-sm" style={{ color: "#C9A227" }}>
               ॐ
             </span>
           </div>

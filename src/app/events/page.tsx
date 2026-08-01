@@ -10,7 +10,7 @@ import { translations } from "@/i18n/translations";
 /* ───────────────────────────── color maps ───────────────────────────── */
 
 const categoryColors: Record<string, { bg: string; text: string; border: string }> = {
-  Ceremony:        { bg: "rgba(212,168,67,0.15)", text: "#D4A843", border: "rgba(212,168,67,0.3)" },
+  Ceremony:        { bg: "rgba(201,162,39,0.15)", text: "#C9A227", border: "rgba(201,162,39,0.3)" },
   "Sacred Bathing": { bg: "rgba(96,165,250,0.15)", text: "#60A5FA", border: "rgba(96,165,250,0.3)" },
   Spiritual:       { bg: "rgba(167,139,250,0.15)", text: "#A78BFA", border: "rgba(167,139,250,0.3)" },
   Devotional:      { bg: "rgba(248,113,113,0.15)", text: "#F87171", border: "rgba(248,113,113,0.3)" },
@@ -20,7 +20,7 @@ const categoryColors: Record<string, { bg: string; text: string; border: string 
 };
 
 const traditionColors: Record<string, { accent: string; bg: string }> = {
-  Shaiva:    { accent: "#D4A843", bg: "rgba(212,168,67,0.1)" },
+  Shaiva:    { accent: "#C9A227", bg: "rgba(201,162,39,0.1)" },
   Vaishnava: { accent: "#60A5FA", bg: "rgba(96,165,250,0.1)" },
   Udasin:    { accent: "#A78BFA", bg: "rgba(167,139,250,0.1)" },
   Nirmal:    { accent: "#34D399", bg: "rgba(52,211,153,0.1)" },
@@ -62,22 +62,22 @@ export default function EventsPage() {
       {/* ═══════════════════ HERO BANNER ═══════════════════ */}
       <section className="section-dark relative overflow-hidden py-32 pt-40">
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,168,67,0.08)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,162,39,0.08)_0%,transparent_60%)]" />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -left-40 -top-40 h-[30rem] w-[30rem] rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(212,168,67,0.06) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(201,162,39,0.06) 0%, transparent 70%)" }}
         />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -bottom-40 -right-40 h-[30rem] w-[30rem] rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(212,168,67,0.04) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(201,162,39,0.04) 0%, transparent 70%)" }}
         />
 
         <div className="section-container relative z-10 text-center">
           <span
             className="mb-4 inline-block font-devanagari text-5xl drop-shadow-lg"
-            style={{ color: "#D4A843", textShadow: "0 0 30px rgba(212,168,67,0.4)" }}
+            style={{ color: "#C9A227", textShadow: "0 0 30px rgba(201,162,39,0.4)" }}
             aria-hidden="true"
           >
             हर हर महादेव
@@ -127,14 +127,14 @@ export default function EventsPage() {
                 style={
                   activeFilter === tab.key
                     ? {
-                        background: "linear-gradient(135deg, #D4A843, #B8922D)",
-                        color: "#0D0906",
-                        boxShadow: "0 4px 20px rgba(212,168,67,0.3)",
+                        background: "linear-gradient(135deg, #C9A227, #B8922D)",
+                        color: "#0B1220",
+                        boxShadow: "0 4px 20px rgba(201,162,39,0.3)",
                       }
                     : {
                         background: "transparent",
-                        color: "rgba(212,168,67,0.6)",
-                        border: "1px solid rgba(212,168,67,0.15)",
+                        color: "rgba(201,162,39,0.6)",
+                        border: "1px solid rgba(201,162,39,0.15)",
                       }
                 }
               >
@@ -171,12 +171,12 @@ export default function EventsPage() {
                     </span>
                   </div>
 
-                  <h3 className="font-heading text-xl font-bold text-cream-100 transition-colors group-hover:text-[#D4A843]">
+                  <h3 className="font-heading text-xl font-bold text-cream-100 transition-colors group-hover:text-[#C9A227]">
                     {t(event.title)}
                   </h3>
 
                   <div className="mb-3 mt-3 flex items-center gap-2 text-sm text-cream-300/40">
-                    <Calendar className="h-4 w-4" style={{ color: "#D4A843" }} />
+                    <Calendar className="h-4 w-4" style={{ color: "#C9A227" }} />
                     <span>{event.date}</span>
                   </div>
 
@@ -246,7 +246,7 @@ export default function EventsPage() {
                       />
 
                       <div className="relative z-10 pl-3">
-                        <h4 className="font-heading text-lg font-bold text-temple-800 transition-colors group-hover:text-[#D4A843]">
+                        <h4 className="font-heading text-lg font-bold text-temple-800 transition-colors group-hover:text-[#C9A227]">
                           {akhada.name}
                         </h4>
 
@@ -286,15 +286,15 @@ export default function EventsPage() {
       <section
         className="relative overflow-hidden py-20 md:py-28"
         style={{
-          background: "linear-gradient(135deg, #1a0a00 0%, #0D0906 50%, #1a0a00 100%)",
+          background: "linear-gradient(135deg, #1a0a00 0%, #0B1220 50%, #1a0a00 100%)",
         }}
       >
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.06)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,162,39,0.06)_0%,transparent_70%)]" />
 
         <div className="section-container relative z-10 text-center">
           <div className="sacred-divider mx-auto mb-8 max-w-xs">
-            <span className="font-devanagari text-sm" style={{ color: "#D4A843" }}>
+            <span className="font-devanagari text-sm" style={{ color: "#C9A227" }}>
               ॐ
             </span>
           </div>

@@ -59,4 +59,36 @@ export const sosUI: Record<string, I18nText> = {
     hi: "मार्ग अनुमानित हैं। मैदान पर पुलिस और स्वयंसेवकों के निर्देशों का पालन करें।",
     mr: "मार्ग अंदाजे आहेत. मैदानावर पोलीस आणि स्वयंसेवकांच्या सूचनांचे पालन करा.",
   },
+
+  /* ── Added by the redesign ─────────────────────────────── */
+  callNow: { en: "Call 112 now", hi: "अभी 112 पर कॉल करें", mr: "आता ११२ वर कॉल करा" },
+  callNowHint: {
+    en: "One number for police, ambulance and fire",
+    hi: "पुलिस, एम्बुलेंस और अग्निशमन — एक ही नंबर",
+    mr: "पोलीस, रुग्णवाहिका आणि अग्निशमन — एकच क्रमांक",
+  },
+  otherNumbers: { en: "Other helplines", hi: "अन्य हेल्पलाइन", mr: "इतर हेल्पलाइन" },
+  onThisPhone: { en: "On this phone", hi: "इसी फ़ोन पर", mr: "याच फोनवर" },
+  close: { en: "Close", hi: "बंद करें", mr: "बंद करा" },
+  keepCalm: {
+    en: "Stay where you are if you can. Help is closer than it feels.",
+    hi: "यदि संभव हो तो वहीं रुकें। सहायता जितनी लगती है उससे पास है।",
+    mr: "शक्य असल्यास जिथे आहात तिथेच थांबा. मदत वाटते त्यापेक्षा जवळ आहे.",
+  },
+  lostTitle: { en: "Lost someone?", hi: "कोई बिछड़ गया?", mr: "कोणी हरवले?" },
+  lostBody: {
+    en: "Go to the nearest police booth — they have blue flags and a public address system, and every lost-person report goes out across the whole mela within minutes.",
+    hi: "निकटतम पुलिस बूथ पर जाएँ — वहाँ नीले झंडे और उद्घोषणा प्रणाली है, और गुमशुदगी की सूचना कुछ ही मिनटों में पूरे मेले में प्रसारित हो जाती है।",
+    mr: "जवळच्या पोलीस बूथवर जा — तिथे निळे झेंडे आणि उद्घोषणा यंत्रणा आहे, आणि हरवल्याची नोंद काही मिनिटांत संपूर्ण मेळ्यात प्रसारित होते.",
+  },
+  sharingHint: {
+    en: "Sends your exact coordinates to anyone you choose",
+    hi: "आपके सटीक निर्देशांक आपके चुने हुए व्यक्ति को भेजता है",
+    mr: "तुमचे अचूक स्थान तुम्ही निवडलेल्या व्यक्तीला पाठवते",
+  },
+  exitHint: {
+    en: "Uses your location to find the way out of the crowd",
+    hi: "भीड़ से बाहर निकलने का रास्ता आपके स्थान से खोजता है",
+    mr: "गर्दीतून बाहेर पडण्याचा मार्ग तुमच्या स्थानावरून शोधते",
+  },
 };

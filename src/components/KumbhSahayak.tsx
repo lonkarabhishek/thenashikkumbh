@@ -20,7 +20,7 @@ interface ChatMessage {
 
 export default function KumbhSahayak() {
   const { locale } = useLanguage();
-  const { isOpen, close } = useChat();
+  const { isOpen, close, pendingTopicId, clearPendingTopic } = useChat();
 
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState("");
@@ -125,6 +125,13 @@ export default function KumbhSahayak() {
     [locale]
   );
 
+  // A question handed over from the landing page is asked as soon as we open.
+  useEffect(() => {
+    if (!isOpen || !pendingTopicId) return;
+    handleQuickReply(pendingTopicId);
+    clearPendingTopic();
+  }, [isOpen, pendingTopicId, handleQuickReply, clearPendingTopic]);
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
@@ -147,8 +154,8 @@ export default function KumbhSahayak() {
         <div
           className="relative w-full h-full sm:max-w-2xl sm:max-h-[85vh] sm:rounded-2xl flex flex-col overflow-hidden"
           style={{
-            background: "rgba(13, 9, 6, 0.98)",
-            border: "1px solid rgba(212,168,67,0.15)",
+            background: "rgba(11,18,32, 0.98)",
+            border: "1px solid rgba(201,162,39,0.15)",
             boxShadow: "0 25px 80px rgba(0,0,0,0.7)",
           }}
         >
@@ -158,10 +165,10 @@ export default function KumbhSahayak() {
               <div
                 className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
                 style={{
-                  background: "linear-gradient(135deg, #D4A843, #FFD700)",
+                  background: "linear-gradient(135deg, #C9A227, #D2B94F)",
                 }}
               >
-                <Bot className="w-5 h-5 text-[#0D0906]" />
+                <Bot className="w-5 h-5 text-[#0B1220]" />
               </div>
               <div className="flex flex-col">
                 <span className="font-heading text-cream-100 text-base leading-tight">
@@ -169,7 +176,7 @@ export default function KumbhSahayak() {
                 </span>
                 <span
                   className="text-xs leading-tight"
-                  style={{ color: "rgba(212,168,67,0.5)" }}
+                  style={{ color: "rgba(201,162,39,0.5)" }}
                 >
                   {chatbotUI.subtitle[locale]}
                 </span>
@@ -190,7 +197,7 @@ export default function KumbhSahayak() {
             className="h-px flex-shrink-0"
             style={{
               background:
-                "linear-gradient(90deg, transparent, rgba(212,168,67,0.4), transparent)",
+                "linear-gradient(90deg, transparent, rgba(201,162,39,0.4), transparent)",
             }}
           />
 
@@ -202,8 +209,8 @@ export default function KumbhSahayak() {
                 <div
                   className="max-w-[90%] sm:max-w-[80%] rounded-xl rounded-tl-sm px-4 py-3 text-sm sm:text-base text-cream-100 leading-relaxed"
                   style={{
-                    background: "rgba(212,168,67,0.08)",
-                    borderLeft: "3px solid #D4A843",
+                    background: "rgba(201,162,39,0.08)",
+                    borderLeft: "3px solid #C9A227",
                   }}
                 >
                   {chatbotUI.welcome[locale]}
@@ -216,22 +223,22 @@ export default function KumbhSahayak() {
                       onClick={() => handleQuickReply(chip.topicId)}
                       className="px-3 py-1.5 rounded-full text-xs sm:text-sm cursor-pointer transition-all duration-150"
                       style={{
-                        border: "1px solid rgba(212,168,67,0.3)",
-                        color: "rgba(212,168,67,0.7)",
+                        border: "1px solid rgba(201,162,39,0.3)",
+                        color: "rgba(201,162,39,0.7)",
                         background: "transparent",
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.background =
-                          "rgba(212,168,67,0.1)";
+                          "rgba(201,162,39,0.1)";
                         e.currentTarget.style.borderColor =
-                          "rgba(212,168,67,0.5)";
-                        e.currentTarget.style.color = "rgba(212,168,67,0.9)";
+                          "rgba(201,162,39,0.5)";
+                        e.currentTarget.style.color = "rgba(201,162,39,0.9)";
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.background = "transparent";
                         e.currentTarget.style.borderColor =
-                          "rgba(212,168,67,0.3)";
-                        e.currentTarget.style.color = "rgba(212,168,67,0.7)";
+                          "rgba(201,162,39,0.3)";
+                        e.currentTarget.style.color = "rgba(201,162,39,0.7)";
                       }}
                     >
                       {chip.label[locale]}
@@ -262,8 +269,8 @@ export default function KumbhSahayak() {
                     <div
                       className="max-w-[90%] sm:max-w-[80%] rounded-xl rounded-tl-sm px-4 py-3 text-sm sm:text-base text-cream-100 leading-relaxed"
                       style={{
-                        background: "rgba(212,168,67,0.08)",
-                        borderLeft: "3px solid #D4A843",
+                        background: "rgba(201,162,39,0.08)",
+                        borderLeft: "3px solid #C9A227",
                       }}
                     >
                       {msg.content}
@@ -276,14 +283,14 @@ export default function KumbhSahayak() {
                           href={msg.pageLink}
                           onClick={close}
                           className="inline-flex items-center gap-1.5 text-xs sm:text-sm transition-colors duration-150"
-                          style={{ color: "rgba(212,168,67,0.6)" }}
+                          style={{ color: "rgba(201,162,39,0.6)" }}
                           onMouseEnter={(e) => {
                             e.currentTarget.style.color =
-                              "rgba(212,168,67,0.9)";
+                              "rgba(201,162,39,0.9)";
                           }}
                           onMouseLeave={(e) => {
                             e.currentTarget.style.color =
-                              "rgba(212,168,67,0.6)";
+                              "rgba(201,162,39,0.6)";
                           }}
                         >
                           <ArrowRight className="w-3 h-3" />
@@ -306,25 +313,25 @@ export default function KumbhSahayak() {
                               onClick={() => handleQuickReply(topicId)}
                               className="px-3 py-1.5 rounded-full text-xs cursor-pointer transition-all duration-150"
                               style={{
-                                border: "1px solid rgba(212,168,67,0.3)",
-                                color: "rgba(212,168,67,0.7)",
+                                border: "1px solid rgba(201,162,39,0.3)",
+                                color: "rgba(201,162,39,0.7)",
                                 background: "transparent",
                               }}
                               onMouseEnter={(e) => {
                                 e.currentTarget.style.background =
-                                  "rgba(212,168,67,0.1)";
+                                  "rgba(201,162,39,0.1)";
                                 e.currentTarget.style.borderColor =
-                                  "rgba(212,168,67,0.5)";
+                                  "rgba(201,162,39,0.5)";
                                 e.currentTarget.style.color =
-                                  "rgba(212,168,67,0.9)";
+                                  "rgba(201,162,39,0.9)";
                               }}
                               onMouseLeave={(e) => {
                                 e.currentTarget.style.background =
                                   "transparent";
                                 e.currentTarget.style.borderColor =
-                                  "rgba(212,168,67,0.3)";
+                                  "rgba(201,162,39,0.3)";
                                 e.currentTarget.style.color =
-                                  "rgba(212,168,67,0.7)";
+                                  "rgba(201,162,39,0.7)";
                               }}
                             >
                               {topic.question[locale]}
@@ -339,7 +346,7 @@ export default function KumbhSahayak() {
                     <div
                       className="max-w-[90%] sm:max-w-[80%] rounded-xl rounded-tr-sm px-4 py-3 text-sm sm:text-base text-cream-100 leading-relaxed"
                       style={{
-                        background: "rgba(212,168,67,0.15)",
+                        background: "rgba(201,162,39,0.15)",
                       }}
                     >
                       {msg.content}
@@ -354,21 +361,21 @@ export default function KumbhSahayak() {
               <div
                 className="max-w-[90%] sm:max-w-[80%] rounded-xl rounded-tl-sm px-4 py-3 flex items-center gap-1.5"
                 style={{
-                  background: "rgba(212,168,67,0.08)",
-                  borderLeft: "3px solid #D4A843",
+                  background: "rgba(201,162,39,0.08)",
+                  borderLeft: "3px solid #C9A227",
                 }}
               >
                 <span
                   className="typing-dot w-2 h-2 rounded-full"
-                  style={{ background: "rgba(212,168,67,0.5)" }}
+                  style={{ background: "rgba(201,162,39,0.5)" }}
                 />
                 <span
                   className="typing-dot w-2 h-2 rounded-full"
-                  style={{ background: "rgba(212,168,67,0.5)" }}
+                  style={{ background: "rgba(201,162,39,0.5)" }}
                 />
                 <span
                   className="typing-dot w-2 h-2 rounded-full"
-                  style={{ background: "rgba(212,168,67,0.5)" }}
+                  style={{ background: "rgba(201,162,39,0.5)" }}
                 />
               </div>
             )}
@@ -381,7 +388,7 @@ export default function KumbhSahayak() {
             className="h-px flex-shrink-0"
             style={{
               background:
-                "linear-gradient(90deg, transparent, rgba(212,168,67,0.4), transparent)",
+                "linear-gradient(90deg, transparent, rgba(201,162,39,0.4), transparent)",
             }}
           />
 
@@ -397,13 +404,13 @@ export default function KumbhSahayak() {
               className="flex-1 rounded-xl px-4 py-3 text-sm sm:text-base text-cream-100 placeholder:text-cream-300/40 outline-none transition-colors duration-150"
               style={{
                 background: "rgba(255,255,255,0.05)",
-                border: "1px solid rgba(212,168,67,0.15)",
+                border: "1px solid rgba(201,162,39,0.15)",
               }}
               onFocus={(e) => {
-                e.currentTarget.style.borderColor = "rgba(212,168,67,0.4)";
+                e.currentTarget.style.borderColor = "rgba(201,162,39,0.4)";
               }}
               onBlur={(e) => {
-                e.currentTarget.style.borderColor = "rgba(212,168,67,0.15)";
+                e.currentTarget.style.borderColor = "rgba(201,162,39,0.15)";
               }}
             />
             <button
@@ -412,12 +419,12 @@ export default function KumbhSahayak() {
               aria-label="Send message"
               className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-150 cursor-pointer"
               style={{
-                background: "linear-gradient(135deg, #D4A843, #FFD700)",
+                background: "linear-gradient(135deg, #C9A227, #D2B94F)",
                 opacity: inputValue.trim() ? 1 : 0.5,
                 pointerEvents: inputValue.trim() ? "auto" : "none",
               }}
             >
-              <Send className="w-4 h-4 text-[#0D0906]" />
+              <Send className="w-4 h-4 text-[#0B1220]" />
             </button>
           </div>
 

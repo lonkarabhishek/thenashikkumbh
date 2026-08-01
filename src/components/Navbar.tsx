@@ -1,197 +1,212 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { Sparkles } from "lucide-react";
+import { ChevronDown, Headphones, Menu, Sparkles, X } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useChat } from "@/context/ChatContext";
 import { translations } from "@/i18n/translations";
+import { navExtra } from "@/i18n/navExtra";
 import type { Locale } from "@/i18n/translations";
 
-/* ----------------------------------------------------------------
-   NAV ITEMS - driven by the i18n translation keys
-   ---------------------------------------------------------------- */
-const navItems = [
-  { href: "/", labelKey: "home" as const },
-  { href: "/about", labelKey: "about" as const },
-  { href: "/ghats", labelKey: "ghats" as const },
-  { href: "/dates", labelKey: "dates" as const },
-  { href: "/guide", labelKey: "guide" as const },
-  { href: "/events", labelKey: "events" as const },
-  { href: "/naga-sadhus", labelKey: "nagaSadhus" as const },
-  { href: "/gallery", labelKey: "gallery" as const },
-  { href: "/games", labelKey: "games" as const },
-  { href: "/blog", labelKey: "news" as const },
-  { href: "/businesses", labelKey: "businesses" as const },
+/**
+ * Eleven flat links was too many to scan, especially for the older half of the
+ * audience. The bar now shows the five things a visitor actually needs on the
+ * day, and everything else lives under one grouped menu.
+ */
+type NavItem = {
+  href: string;
+  label: Record<Locale, string>;
+  highlight?: boolean;
+};
+
+const PRIMARY: NavItem[] = [
+  { href: "/yatra", label: navExtra.yatra, highlight: true },
+  { href: "/dates", label: translations.nav.dates },
+  { href: "/ghats", label: translations.nav.ghats },
+  { href: "/guide", label: translations.nav.guide },
+  { href: "/events", label: translations.nav.events },
 ];
 
-/* ----------------------------------------------------------------
-   LANGUAGE OPTIONS
-   ---------------------------------------------------------------- */
-const languageOptions: { code: Locale; label: string }[] = [
-  { code: "en", label: "EN" },
-  { code: "hi", label: "हिं" },
-  { code: "mr", label: "मरा" },
+const GROUPS = [
+  {
+    label: navExtra.groupLearn,
+    links: [
+      { href: "/about", label: translations.nav.about },
+      { href: "/naga-sadhus", label: translations.nav.nagaSadhus },
+      { href: "/blog", label: translations.nav.news },
+    ],
+  },
+  {
+    label: navExtra.groupExplore,
+    links: [
+      { href: "/gallery", label: translations.nav.gallery },
+      { href: "/games", label: translations.nav.games },
+      { href: "/kumbhrun", label: { en: "Kumbh Run", hi: "कुंभ रन", mr: "कुंभ रन" } },
+    ],
+  },
+  {
+    label: navExtra.groupPlan,
+    links: [{ href: "/businesses", label: translations.nav.businesses }],
+  },
+] as const;
+
+const LANGUAGES: { code: Locale; label: string; full: string }[] = [
+  { code: "mr", label: "मरा", full: "मराठी" },
+  { code: "hi", label: "हिं", full: "हिंदी" },
+  { code: "en", label: "EN", full: "English" },
 ];
 
-/* ================================================================
-   NAVBAR COMPONENT
-   ================================================================ */
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
+  const moreRef = useRef<HTMLDivElement>(null);
+
   const pathname = usePathname();
   const { locale, setLocale, t } = useLanguage();
   const { open: openChat } = useChat();
 
-  /* -- Scroll listener ------------------------------------------ */
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 30);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  /* -- Close menu on route change ------------------------------- */
   useEffect(() => {
-    setIsMobileMenuOpen(false);
+    setMobileOpen(false);
+    setMoreOpen(false);
   }, [pathname]);
 
-  /* -- Lock body scroll when menu is open ----------------------- */
   useEffect(() => {
-    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isMobileMenuOpen]);
+  }, [mobileOpen]);
 
-  /* ------------------------------------------------------------- */
+  // Close the "More" menu on an outside click or Escape.
+  useEffect(() => {
+    if (!moreOpen) return;
+    const onDown = (e: MouseEvent) => {
+      if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
+        setMoreOpen(false);
+      }
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMoreOpen(false);
+    };
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [moreOpen]);
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out ${
-          isScrolled
-            ? "bg-white/80 backdrop-blur-xl shadow-[0_1px_30px_rgba(0,0,0,0.06)] border-b border-amber-300/40"
-            : "bg-transparent border-b border-transparent"
+        className={`fixed inset-x-0 top-0 z-50 bg-cream-50 transition-shadow duration-300 ${
+          scrolled ? "border-b border-temple-100 shadow-soft" : "border-b border-temple-100/60"
         }`}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-18 items-center justify-between lg:h-20">
-            {/* =============================================
-                LOGO AREA
-                ============================================= */}
-            <Link
-              href="/"
-              className="group relative flex items-center gap-3 transition-transform duration-300 hover:scale-[1.03]"
-            >
-              {/* Om symbol with golden glow */}
-              <span className="relative flex items-center justify-center">
-                <span
-                  className={`absolute inset-0 rounded-full blur-lg transition-all duration-500 ${
-                    isScrolled
-                      ? "bg-amber-400/20 scale-150"
-                      : "bg-amber-300/30 scale-[1.8] group-hover:scale-[2]"
-                  }`}
-                />
-                <span
-                  className={`relative font-serif text-3xl lg:text-4xl transition-all duration-500 ${
-                    isScrolled
-                      ? "text-amber-600 drop-shadow-[0_0_8px_rgba(217,170,60,0.4)]"
-                      : "text-amber-300 drop-shadow-[0_0_14px_rgba(255,215,0,0.6)]"
-                  }`}
-                >
-                  ॐ
-                </span>
-              </span>
-
-              {/* Text block */}
-              <div className="flex flex-col leading-none">
-                <span
-                  className={`font-serif text-lg font-semibold tracking-[0.08em] transition-colors duration-500 lg:text-xl ${
-                    isScrolled
-                      ? "text-stone-800"
-                      : "text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"
-                  }`}
-                >
+        <div className="section-container">
+          <div className="flex h-16 items-center justify-between gap-4 lg:h-20">
+            {/* Wordmark */}
+            <Link href="/" className="flex shrink-0 items-center gap-2.5">
+              <span className="font-devanagari text-2xl leading-none text-saffron-600">ॐ</span>
+              <span className="leading-tight">
+                <span className="block font-heading text-lg font-semibold tracking-tight text-temple-900">
                   Nashik Kumbh
                 </span>
-                <span
-                  className={`text-[10px] font-medium tracking-[0.25em] uppercase transition-colors duration-500 lg:text-[11px] ${
-                    isScrolled
-                      ? "text-amber-600/80"
-                      : "text-amber-300/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.3)]"
-                  }`}
-                >
-                  2027
+                <span className="block text-[0.625rem] font-semibold uppercase tracking-[0.22em] text-temple-400">
+                  Simhastha 2027
                 </span>
-              </div>
+              </span>
             </Link>
 
-            {/* =============================================
-                DESKTOP NAVIGATION (CENTER)
-                ============================================= */}
-            <div className="hidden items-center gap-0.5 lg:flex">
-              {navItems.map((item) => {
-                const isActive = pathname === item.href;
-                const label = t(translations.nav[item.labelKey]);
+            {/* Desktop links */}
+            <div className="hidden items-center gap-1 lg:flex">
+              {PRIMARY.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`relative rounded-full px-3.5 py-2 text-sm font-semibold transition-colors ${
+                    isActive(item.href)
+                      ? "text-saffron-700"
+                      : "text-temple-600 hover:text-temple-900"
+                  }`}
+                >
+                  <span className="flex items-center gap-1.5">
+                    {item.highlight && <Headphones className="h-3.5 w-3.5" />}
+                    {t(item.label)}
+                  </span>
+                  {isActive(item.href) && (
+                    <span className="absolute inset-x-3.5 -bottom-0.5 h-0.5 rounded-full bg-saffron-500" />
+                  )}
+                </Link>
+              ))}
 
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`relative px-3 py-2 text-[13px] font-medium tracking-wide transition-all duration-300 xl:px-4 ${
-                      isActive
-                        ? isScrolled
-                          ? "text-amber-700"
-                          : "text-amber-300"
-                        : isScrolled
-                          ? "text-stone-600 hover:text-amber-600"
-                          : "text-white/85 hover:text-amber-200"
-                    }`}
-                  >
-                    {label}
+              <div className="relative" ref={moreRef}>
+                <button
+                  onClick={() => setMoreOpen((o) => !o)}
+                  aria-expanded={moreOpen}
+                  aria-haspopup="true"
+                  className="flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-semibold text-temple-600 transition-colors hover:text-temple-900"
+                >
+                  {t(navExtra.more)}
+                  <ChevronDown
+                    className={`h-3.5 w-3.5 transition-transform ${moreOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
 
-                    {/* Golden dot indicator for active link */}
-                    {isActive && (
-                      <span
-                        className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-1 w-1 rounded-full ${
-                          isScrolled ? "bg-amber-500" : "bg-amber-300"
-                        }`}
-                        style={{
-                          boxShadow: isScrolled
-                            ? "0 0 6px 1px rgba(217,170,60,0.5)"
-                            : "0 0 8px 2px rgba(255,215,0,0.6)",
-                        }}
-                      />
-                    )}
-                  </Link>
-                );
-              })}
+                {moreOpen && (
+                  <div className="absolute right-0 top-full mt-2 w-64 rounded-card border border-temple-100 bg-cream-50 p-2 shadow-lift">
+                    {GROUPS.map((group) => (
+                      <div key={group.label.en} className="px-2 py-2">
+                        <p className="px-1 pb-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-temple-400">
+                          {t(group.label)}
+                        </p>
+                        {group.links.map((link) => (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            className="block rounded-lg px-2.5 py-2 text-sm font-medium text-temple-700 transition-colors hover:bg-cream-200 hover:text-temple-900"
+                          >
+                            {t(link.label)}
+                          </Link>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
 
-            {/* =============================================
-                RIGHT SIDE - LANGUAGE SWITCHER + CTA
-                ============================================= */}
-            <div className="hidden items-center gap-4 lg:flex">
-              {/* Language Switcher */}
+            {/* Right cluster */}
+            <div className="flex items-center gap-2">
+              {/* Language — a real segmented control, big enough to tap */}
               <div
-                className={`flex items-center rounded-full border px-1 py-0.5 transition-all duration-500 ${
-                  isScrolled
-                    ? "border-stone-200 bg-stone-50/80"
-                    : "border-white/20 bg-white/10 backdrop-blur-sm"
-                }`}
+                role="group"
+                aria-label={t(navExtra.language)}
+                className="flex items-center rounded-full border border-temple-100 bg-cream-100 p-0.5"
               >
-                {languageOptions.map((lang) => (
+                {LANGUAGES.map((lang) => (
                   <button
                     key={lang.code}
                     onClick={() => setLocale(lang.code)}
-                    className={`relative px-2.5 py-1 text-xs font-medium tracking-wide rounded-full transition-all duration-300 ${
+                    aria-pressed={locale === lang.code}
+                    title={lang.full}
+                    className={`rounded-full px-2.5 py-1.5 text-xs font-semibold transition-colors ${
                       locale === lang.code
-                        ? "bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-sm shadow-amber-500/30"
-                        : isScrolled
-                          ? "text-stone-500 hover:text-amber-600"
-                          : "text-white/70 hover:text-white"
+                        ? "bg-temple-800 text-cream-50"
+                        : "text-temple-500 hover:text-temple-800"
                     }`}
                   >
                     {lang.label}
@@ -199,208 +214,112 @@ export default function Navbar() {
                 ))}
               </div>
 
-              {/* AI Chat Button */}
               <button
                 onClick={openChat}
-                aria-label="Open AI Assistant"
-                className={`flex items-center gap-1.5 rounded-full border px-3 py-2 text-xs font-semibold tracking-wide transition-all duration-300 cursor-pointer ${
-                  isScrolled
-                    ? "text-amber-600 hover:bg-amber-50 border-amber-200"
-                    : "text-amber-300 hover:bg-white/10 border-white/20"
-                }`}
+                aria-label={t(translations.nav.aiAssistant)}
+                className="hidden h-9 items-center gap-1.5 rounded-full border border-temple-100 px-3 text-xs font-semibold text-temple-700 transition-colors hover:border-saffron-300 hover:text-saffron-700 sm:flex"
               >
-                <Sparkles className="w-4 h-4" />
-                <span className="hidden xl:inline">AI</span>
+                <Sparkles className="h-3.5 w-3.5" />
+                AI
               </button>
 
-              {/* Plan Visit CTA */}
-              <Link
-                href="/guide"
-                className="group relative inline-flex items-center overflow-hidden rounded-full bg-gradient-to-r from-amber-500 via-amber-500 to-yellow-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-amber-500/25 transition-all duration-500 hover:shadow-xl hover:shadow-amber-500/40 hover:scale-[1.03] active:scale-[0.97]"
+              <button
+                onClick={() => setMobileOpen(true)}
+                aria-label={t(navExtra.menu)}
+                className="flex h-10 w-10 items-center justify-center rounded-full text-temple-800 transition-colors hover:bg-cream-200 lg:hidden"
               >
-                {/* Hover glow layer */}
-                <span className="absolute inset-0 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-400 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                <span className="relative">
-                  {t(translations.nav.planVisit)}
-                </span>
-              </Link>
+                <Menu className="h-5 w-5" />
+              </button>
             </div>
-
-            {/* =============================================
-                MOBILE - HAMBURGER BUTTON
-                ============================================= */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`relative z-[60] flex h-10 w-10 items-center justify-center rounded-xl transition-all duration-300 lg:hidden ${
-                isMobileMenuOpen
-                  ? "text-white"
-                  : isScrolled
-                    ? "text-stone-700 hover:bg-amber-50"
-                    : "text-white hover:bg-white/10"
-              }`}
-              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={isMobileMenuOpen}
-            >
-              {/* Animated hamburger -> X via CSS transitions */}
-              <div className="relative h-5 w-5">
-                {/* Top bar */}
-                <span
-                  className={`absolute left-0 h-[1.5px] w-5 rounded-full transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-                    isMobileMenuOpen
-                      ? "bg-white top-1/2 -translate-y-1/2 rotate-45"
-                      : `top-[15%] rotate-0 ${
-                          isScrolled ? "bg-stone-700" : "bg-white"
-                        }`
-                  }`}
-                  style={{ transformOrigin: "center" }}
-                />
-                {/* Middle bar */}
-                <span
-                  className={`absolute left-0 top-1/2 h-[1.5px] w-5 -translate-y-1/2 rounded-full transition-all duration-200 ${
-                    isMobileMenuOpen
-                      ? "bg-white opacity-0 scale-x-0"
-                      : `opacity-100 scale-x-100 ${
-                          isScrolled ? "bg-stone-700" : "bg-white"
-                        }`
-                  }`}
-                />
-                {/* Bottom bar */}
-                <span
-                  className={`absolute left-0 h-[1.5px] w-5 rounded-full transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-                    isMobileMenuOpen
-                      ? "bg-white top-1/2 -translate-y-1/2 -rotate-45"
-                      : `bottom-[15%] top-auto rotate-0 ${
-                          isScrolled ? "bg-stone-700" : "bg-white"
-                        }`
-                  }`}
-                  style={{ transformOrigin: "center" }}
-                />
-              </div>
-            </button>
           </div>
         </div>
       </nav>
 
-      {/* =========================================================
-          MOBILE MENU - OVERLAY + SLIDING PANEL (always in DOM)
-          ========================================================= */}
+      {/* ── Mobile menu ──────────────────────────────────── */}
+      {mobileOpen && (
+        <div className="fixed inset-0 z-[60] lg:hidden">
+          <div
+            className="absolute inset-0 bg-temple-900/40"
+            onClick={() => setMobileOpen(false)}
+          />
 
-      {/* Dark backdrop overlay */}
-      <div
-        className={`fixed inset-0 z-[55] bg-black/60 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${
-          isMobileMenuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
-        onClick={() => setIsMobileMenuOpen(false)}
-      />
+          <div className="absolute inset-y-0 right-0 flex w-full max-w-sm flex-col bg-cream-50 shadow-lift">
+            <div className="flex h-16 shrink-0 items-center justify-between border-b border-temple-100 px-5">
+              <span className="font-heading text-lg font-semibold text-temple-900">
+                {t(navExtra.menu)}
+              </span>
+              <button
+                onClick={() => setMobileOpen(false)}
+                aria-label={t(navExtra.close)}
+                className="flex h-10 w-10 items-center justify-center rounded-full text-temple-700 hover:bg-cream-200"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
 
-      {/* Sliding panel from right */}
-      <div
-        className={`fixed top-0 right-0 bottom-0 z-[58] w-[85%] max-w-sm bg-stone-900/95 backdrop-blur-md border-l border-amber-500/20 lg:hidden transition-transform duration-300 ease-out ${
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        {/* Inner content */}
-        <div className="flex h-full flex-col px-6 pt-24 pb-8">
-          {/* Mobile Logo (subtle) */}
-          <div className="mb-8 flex items-center gap-3">
-            <span className="text-2xl text-amber-400 drop-shadow-[0_0_10px_rgba(255,215,0,0.4)]">
-              ॐ
-            </span>
-            <div>
-              <span className="font-serif text-lg font-semibold text-white tracking-wide">
-                Nashik Kumbh
-              </span>
-              <span className="ml-2 text-[10px] font-medium text-amber-400/80 tracking-[0.2em] uppercase">
-                2027
-              </span>
+            <div className="flex-1 overflow-y-auto px-5 py-6">
+              <Link
+                href="/yatra"
+                className="flex items-center gap-3 rounded-card bg-saffron-600 px-5 py-4 text-cream-50"
+              >
+                <Headphones className="h-5 w-5 shrink-0" />
+                <span>
+                  <span className="block font-semibold">{t(navExtra.yatra)}</span>
+                  <span className="block text-xs text-cream-100/80">
+                    {t({ en: "Free · 12 stories", hi: "नि:शुल्क · 12 कहानियाँ", mr: "मोफत · १२ गोष्टी" })}
+                  </span>
+                </span>
+              </Link>
+
+              <div className="mt-7 space-y-1">
+                {PRIMARY.filter((i) => i.href !== "/yatra").map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`block rounded-lg px-3 py-3 text-base font-semibold transition-colors ${
+                      isActive(item.href)
+                        ? "bg-cream-200 text-saffron-800"
+                        : "text-temple-800 hover:bg-cream-100"
+                    }`}
+                  >
+                    {t(item.label)}
+                  </Link>
+                ))}
+              </div>
+
+              {GROUPS.map((group) => (
+                <div key={group.label.en} className="mt-7">
+                  <p className="px-3 pb-2 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-temple-400">
+                    {t(group.label)}
+                  </p>
+                  <div className="space-y-1">
+                    {group.links.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="block rounded-lg px-3 py-2.5 font-medium text-temple-700 transition-colors hover:bg-cream-100"
+                      >
+                        {t(link.label)}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+
+              <button
+                onClick={() => {
+                  setMobileOpen(false);
+                  openChat();
+                }}
+                className="mt-8 flex w-full items-center gap-2 rounded-card border border-temple-100 px-4 py-3.5 text-sm font-semibold text-temple-800"
+              >
+                <Sparkles className="h-4 w-4 text-saffron-600" />
+                {t(translations.nav.aiAssistant)}
+              </button>
             </div>
           </div>
-
-          {/* Divider */}
-          <div className="mb-6 h-px bg-gradient-to-r from-amber-500/40 via-amber-500/10 to-transparent" />
-
-          {/* Language Switcher (Mobile) */}
-          <div className="mb-8 flex items-center gap-2">
-            {languageOptions.map((lang) => (
-              <button
-                key={lang.code}
-                onClick={() => setLocale(lang.code)}
-                className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-300 ${
-                  locale === lang.code
-                    ? "bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-lg shadow-amber-500/30"
-                    : "text-white/50 border border-white/10 hover:text-white hover:border-amber-500/30"
-                }`}
-              >
-                {lang.label}
-              </button>
-            ))}
-          </div>
-
-          {/* AI Chat Button (Mobile) */}
-          <button
-            onClick={() => {
-              openChat();
-              setIsMobileMenuOpen(false);
-            }}
-            className="mb-4 flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-medium text-amber-400 transition-all duration-300 hover:bg-amber-500/10 cursor-pointer"
-          >
-            <Sparkles className="w-5 h-5" />
-            {t(translations.nav.aiAssistant)}
-          </button>
-
-          {/* Navigation Links */}
-          <div className="flex flex-col gap-1 flex-1 overflow-y-auto">
-            {navItems.map((item) => {
-              const isActive = pathname === item.href;
-              const label = t(translations.nav[item.labelKey]);
-
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`group flex items-center gap-3 rounded-xl px-4 py-3.5 text-base font-medium transition-all duration-300 ${
-                    isActive
-                      ? "bg-amber-500/10 text-amber-400"
-                      : "text-white/70 hover:bg-white/5 hover:text-white"
-                  }`}
-                >
-                  {/* Golden dot for active */}
-                  <span
-                    className={`h-1.5 w-1.5 rounded-full transition-all duration-300 ${
-                      isActive
-                        ? "bg-amber-400 shadow-[0_0_8px_2px_rgba(255,215,0,0.4)]"
-                        : "bg-white/20 group-hover:bg-white/40"
-                    }`}
-                  />
-                  {label}
-                </Link>
-              );
-            })}
-          </div>
-
-          {/* Mobile CTA */}
-          <div className="mt-6">
-            <Link
-              href="/guide"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="group relative flex w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-r from-amber-500 via-amber-500 to-yellow-500 px-6 py-4 text-base font-semibold text-white shadow-xl shadow-amber-500/20 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/30 active:scale-[0.97]"
-            >
-              <span className="absolute inset-0 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-400 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              <span className="relative">
-                {t(translations.nav.planVisit)}
-              </span>
-            </Link>
-          </div>
-
-          {/* Bottom flourish */}
-          <p className="mt-6 text-center text-[11px] text-white/20 tracking-[0.3em] uppercase">
-            {t(translations.hero.tagline)}
-          </p>
         </div>
-      </div>
+      )}
     </>
   );
 }

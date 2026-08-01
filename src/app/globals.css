@@ -3,11 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --background: #FFFAF5;
-  --foreground: #1A1510;
-  --gold: #D4A843;
-  --gold-light: #F5DEB3;
-  --sacred-dark: #0D0906;
+  --background: #fefcf8;
+  --foreground: #16110d;
+  --paper: #fefcf8;
+  --paper-2: #fbf6ec;
+  --paper-3: #f5ecdc;
+  --ink: #16110d;
+  --ink-soft: #4a3b2e;
+  --ink-muted: #6b5847;
+  --saffron: #e07b14;
+  --saffron-deep: #9e4f09;
+  --gold: #c9a227;
+  --gold-line: rgba(201, 162, 39, 0.28);
+  --indigo: #1a2b48;
+  --indigo-deep: #0b1220;
+  --river: #2e8b87;
+  --vermillion: #c1272d;
+  --rule: rgba(52, 39, 30, 0.1);
+  --rule-dark: rgba(245, 236, 220, 0.14);
 }
 
 @layer base {
@@ -15,157 +28,264 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-padding-top: 5.5rem;
   }
 
   body {
-    @apply bg-cream-50 text-temple-800 font-body antialiased;
+    @apply bg-cream-50 text-temple-700 font-body antialiased;
     text-rendering: optimizeLegibility;
+    font-size: 1rem;
+    line-height: 1.65;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-temple-900;
     text-rendering: optimizeLegibility;
+    font-weight: 600;
+  }
+
+  /* Fraunces has no Devanagari, so headings switch to the Noto serif and take
+     a little more leading. UI text keeps the sans and falls back to the
+     platform's Devanagari face. */
+  :lang(hi) h1,
+  :lang(hi) h2,
+  :lang(hi) h3,
+  :lang(hi) h4,
+  :lang(mr) h1,
+  :lang(mr) h2,
+  :lang(mr) h3,
+  :lang(mr) h4 {
+    @apply font-devanagari;
+    line-height: 1.28;
+    letter-spacing: 0;
+  }
+
+  /* Devanagari does not take wide tracking the way small-caps Latin does */
+  :lang(hi) .eyebrow,
+  :lang(hi) .eyebrow-center,
+  :lang(hi) .text-eyebrow,
+  :lang(mr) .eyebrow,
+  :lang(mr) .eyebrow-center,
+  :lang(mr) .text-eyebrow {
+    letter-spacing: 0.04em;
   }
 
   ::selection {
-    background: rgba(212, 168, 67, 0.3);
-    color: #1A1510;
+    background: rgba(224, 123, 20, 0.22);
+    color: #16110d;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--saffron);
+    outline-offset: 3px;
+    border-radius: 4px;
   }
 }
 
 @layer components {
   /* ─── Layout ─────────────────────────────────────────── */
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-6xl mx-auto px-5 sm:px-8;
   }
 
-  /* ─── Sacred Divider ─────────────────────────────────── */
+  .section-narrow {
+    @apply max-w-3xl mx-auto px-5 sm:px-8;
+  }
+
+  .section-y {
+    @apply py-20 sm:py-28;
+  }
+
+  /* ─── Eyebrow label ──────────────────────────────────── */
+  .eyebrow {
+    @apply inline-flex items-center gap-2.5 text-eyebrow font-semibold uppercase text-saffron-700;
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply w-6 h-px bg-saffron-600;
+  }
+
+  .eyebrow-center {
+    @apply inline-flex items-center gap-2.5 text-eyebrow font-semibold uppercase text-saffron-700;
+  }
+
+  .eyebrow-center::before,
+  .eyebrow-center::after {
+    content: "";
+    @apply w-6 h-px bg-gold-400;
+  }
+
+  /* ─── Sacred divider — a thin gold rule with a diamond ── */
   .sacred-divider {
-    @apply flex items-center justify-center gap-4 my-8;
+    @apply flex items-center justify-center gap-4 my-10;
   }
 
   .sacred-divider::before,
   .sacred-divider::after {
-    content: '';
-    @apply h-px flex-1;
-    background: linear-gradient(90deg, transparent, rgba(212,168,67,0.5), transparent);
+    content: "";
+    @apply h-px flex-1 max-w-[7rem];
+    background: linear-gradient(90deg, transparent, var(--gold-line), transparent);
   }
 
-  /* ─── Buttons -- Premium ──────────────────────────────── */
-  .btn-gold {
-    @apply inline-flex items-center justify-center px-8 py-3.5 font-semibold rounded-full
-           transition-all duration-300 tracking-wide text-sm uppercase;
-    background: linear-gradient(135deg, #D4A843 0%, #F5DEB3 50%, #D4A843 100%);
-    background-size: 200% 200%;
-    color: #1A1510;
-    box-shadow: 0 4px 20px rgba(212,168,67,0.3);
+  /* ─── Buttons ─────────────────────────────────────────── */
+  .btn-gold,
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 font-semibold rounded-full
+           text-[0.9375rem] tracking-tight transition-all duration-200
+           bg-saffron-600 text-cream-50 border border-saffron-700;
+    box-shadow: 0 1px 2px rgba(120, 58, 8, 0.18), 0 8px 22px -10px rgba(158, 79, 9, 0.5);
   }
-  .btn-gold:hover {
-    background-position: 100% 100%;
-    box-shadow: 0 8px 40px rgba(212,168,67,0.5);
-    transform: translateY(-2px);
+  .btn-gold:hover,
+  .btn-primary:hover {
+    @apply bg-saffron-700;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(120, 58, 8, 0.2), 0 14px 30px -12px rgba(158, 79, 9, 0.55);
   }
-  .btn-gold:active {
+  .btn-gold:active,
+  .btn-primary:active {
     transform: translateY(0);
   }
 
-  .btn-ghost-gold {
-    @apply inline-flex items-center justify-center px-8 py-3.5 font-semibold rounded-full
-           transition-all duration-300 tracking-wide text-sm uppercase;
-    border: 1.5px solid rgba(212,168,67,0.6);
-    color: #D4A843;
-  }
-  .btn-ghost-gold:hover {
-    background: rgba(212,168,67,0.1);
-    border-color: #D4A843;
-    box-shadow: 0 4px 20px rgba(212,168,67,0.2);
-    transform: translateY(-2px);
-  }
-
-  .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-3 bg-saffron-500 text-white font-semibold rounded-lg
-           hover:bg-saffron-600 transition-all duration-300 shadow-lg hover:shadow-xl
-           hover:-translate-y-0.5 active:translate-y-0;
-  }
-
+  .btn-ghost-gold,
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-3 border-2 border-saffron-500 text-saffron-700 font-semibold rounded-lg
-           hover:bg-saffron-50 transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 font-semibold rounded-full
+           text-[0.9375rem] tracking-tight transition-all duration-200
+           border border-temple-200 text-temple-800 bg-cream-50/70;
+  }
+  .btn-ghost-gold:hover,
+  .btn-secondary:hover {
+    @apply border-saffron-300 text-saffron-800 bg-saffron-50;
+    transform: translateY(-1px);
   }
 
-  /* ─── Cards -- Premium ────────────────────────────────── */
-  .card-sacred {
-    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300
-           border border-saffron-100 overflow-hidden;
+  /* On indigo sections */
+  .btn-on-dark {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 font-semibold rounded-full
+           text-[0.9375rem] tracking-tight transition-all duration-200;
+    border: 1px solid rgba(245, 236, 220, 0.25);
+    color: #ebe3d8;
+    background: rgba(254, 252, 248, 0.05);
+  }
+  .btn-on-dark:hover {
+    background: rgba(254, 252, 248, 0.12);
+    border-color: rgba(245, 236, 220, 0.4);
+    transform: translateY(-1px);
   }
 
+  /* ─── Cards ───────────────────────────────────────────── */
+  .card-sacred,
   .card-glass {
-    @apply rounded-2xl overflow-hidden transition-all duration-300;
-    background: rgba(255,255,255,0.85);
-    border: 1px solid rgba(212,168,67,0.15);
+    @apply bg-cream-50 rounded-card overflow-hidden transition-all duration-300
+           border border-temple-100;
+    box-shadow: 0 1px 2px rgba(52, 39, 30, 0.04), 0 6px 20px -8px rgba(52, 39, 30, 0.1);
   }
+  .card-sacred:hover,
   .card-glass:hover {
-    border-color: rgba(212,168,67,0.35);
-    box-shadow: 0 10px 30px rgba(212,168,67,0.1);
+    @apply border-gold-300;
     transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(52, 39, 30, 0.05), 0 14px 36px -12px rgba(52, 39, 30, 0.16);
   }
 
   .card-dark {
-    @apply rounded-2xl overflow-hidden transition-all duration-300;
-    background: rgba(26,21,16,0.95);
-    border: 1px solid rgba(212,168,67,0.12);
+    @apply rounded-card overflow-hidden transition-all duration-300 bg-indigo-800 text-cream-100;
+    border: 1px solid rgba(245, 236, 220, 0.1);
   }
   .card-dark:hover {
-    border-color: rgba(212,168,67,0.3);
-    box-shadow: 0 10px 30px rgba(212,168,67,0.06);
+    border-color: rgba(201, 162, 39, 0.4);
   }
 
-  /* ─── Text Effects ───────────────────────────────────── */
-  .gradient-text {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #D4A843 0%, #FFD700 50%, #D4A843 100%);
+  .card-flat {
+    @apply rounded-card border border-temple-100 bg-cream-50 p-6 sm:p-7;
   }
 
+  /* ─── Text treatments ─────────────────────────────────── */
+  .gradient-text,
   .gradient-text-saffron {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-saffron-500 via-saffron-400 to-gold-500;
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(100deg, #c4650b 0%, #e07b14 45%, #c9a227 100%);
   }
 
   .text-gold-glow {
-    color: #D4A843;
-    text-shadow: 0 0 20px rgba(212,168,67,0.3);
+    color: var(--gold);
   }
 
   .om-decoration {
-    @apply text-4xl font-devanagari;
-    color: #D4A843;
-    text-shadow: 0 0 30px rgba(212,168,67,0.4);
+    @apply text-3xl font-devanagari text-gold-600;
   }
 
-  /* ─── Gold Line Decorations ──────────────────────────── */
+  .lede {
+    @apply text-lede text-temple-500 max-w-prose;
+  }
+
+  /* ─── Rules ───────────────────────────────────────────── */
   .gold-line {
     height: 1px;
-    background: linear-gradient(90deg, transparent, #D4A843, transparent);
+    background: linear-gradient(90deg, transparent, var(--gold-line), transparent);
   }
 
   .gold-line-thick {
     height: 2px;
-    background: linear-gradient(90deg, transparent, #D4A843, transparent);
+    background: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.45), transparent);
   }
 
-  /* ─── Section Backgrounds ────────────────────────────── */
+  .hairline {
+    @apply border-t border-temple-100;
+  }
+
+  /* ─── Section backgrounds ─────────────────────────────── */
   .section-light {
     @apply bg-cream-50;
   }
 
+  .section-paper {
+    @apply bg-cream-100;
+  }
+
   .section-dark {
-    background: linear-gradient(180deg, #1A1510 0%, #0D0906 100%);
     @apply text-cream-100;
+    background: linear-gradient(175deg, #1a2b48 0%, #121d31 55%, #0b1220 100%);
+  }
+
+  .section-dark h1,
+  .section-dark h2,
+  .section-dark h3,
+  .section-dark h4 {
+    @apply text-cream-50;
+  }
+
+  .section-dark .eyebrow,
+  .section-dark .eyebrow-center {
+    @apply text-gold-300;
+  }
+  .section-dark .eyebrow::before {
+    @apply bg-gold-500;
+  }
+
+  /* ─── Pill / tag ──────────────────────────────────────── */
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold
+           bg-saffron-50 text-saffron-800 border border-saffron-200;
+  }
+
+  .pill-quiet {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold
+           bg-cream-200 text-temple-600 border border-temple-100;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
   }
 
   .scrollbar-hide {
@@ -175,44 +295,73 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  /* Fine paper grain — gives flat cream sections a printed feel */
+  .paper-grain {
+    position: relative;
+  }
+  .paper-grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  }
 }
 
-/* ─── Mandala Pattern ────────────────────────────────── */
+/* ─── Decorative backgrounds ───────────────────────────── */
 .mandala-bg {
-  background-image: radial-gradient(circle at 50% 50%, rgba(212,168,67,0.03) 0%, transparent 70%);
-  background-size: 200px 200px;
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(201, 162, 39, 0.035) 0%,
+    transparent 68%
+  );
+  background-size: 260px 260px;
 }
 
-/* ─── Temple Pattern Overlay (simplified) ─────────────── */
+/* Woven folk pattern — subtle diagonal weave */
 .temple-pattern {
-  background-image:
-    linear-gradient(30deg, rgba(212,168,67,0.015) 12%, transparent 12.5%, transparent 87%, rgba(212,168,67,0.015) 87.5%),
-    linear-gradient(150deg, rgba(212,168,67,0.015) 12%, transparent 12.5%, transparent 87%, rgba(212,168,67,0.015) 87.5%);
-  background-size: 80px 140px;
+  background-image: linear-gradient(
+      45deg,
+      rgba(201, 162, 39, 0.035) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(201, 162, 39, 0.035) 75%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(201, 162, 39, 0.035) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(201, 162, 39, 0.035) 75%
+    );
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
 }
 
-/* ─── Premium Scrollbar ──────────────────────────────── */
+/* ─── Scrollbar ────────────────────────────────────────── */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1A1510;
+  background: #f5ecdc;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #D4A843, #A08030);
+  background: #d6c9b8;
   border-radius: 10px;
+  border: 3px solid #f5ecdc;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #FFD700, #D4A843);
+  background: #b3a28c;
 }
 
-
-/* ─── ndstudio-inspired utilities ────────────────────── */
+/* ─── Legacy helpers still referenced by pages ─────────── */
 .section-divider {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid var(--rule);
 }
 
 .heading-tight {
@@ -223,7 +372,7 @@
   transition: all 150ms ease;
 }
 
-/* ─── Kumbh Sahayak Chat Overlay Animation ───────────── */
+/* ─── Kumbh Sahayak chat ───────────────────────────────── */
 .chat-overlay-enter {
   animation: chatOverlayFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -231,7 +380,7 @@
 @keyframes chatOverlayFadeIn {
   0% {
     opacity: 0;
-    transform: scale(0.96);
+    transform: scale(0.97);
   }
   100% {
     opacity: 1;
@@ -239,25 +388,23 @@
   }
 }
 
-/* ─── Typing Indicator Dots ──────────────────────────── */
 .typing-dot {
   animation: typingBounce 1.4s ease-in-out infinite;
 }
-
 .typing-dot:nth-child(1) {
   animation-delay: 0s;
 }
-
 .typing-dot:nth-child(2) {
   animation-delay: 0.2s;
 }
-
 .typing-dot:nth-child(3) {
   animation-delay: 0.4s;
 }
 
 @keyframes typingBounce {
-  0%, 60%, 100% {
+  0%,
+  60%,
+  100% {
     opacity: 0.3;
     transform: translateY(0);
   }
@@ -267,12 +414,70 @@
   }
 }
 
-/* SOS pulse animation */
+/* ─── SOS ──────────────────────────────────────────────── */
 .sos-pulse {
   animation: sosPulse 3s ease-in-out infinite;
 }
 
+/* A white ring, since the pulse sits inside the red trigger */
 @keyframes sosPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(220,38,38,0.4); }
-  50% { box-shadow: 0 0 0 8px rgba(220,38,38,0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.55);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 13px rgba(255, 255, 255, 0);
+  }
+}
+
+/* ─── Yatra audio player ───────────────────────────────── */
+.audio-bar {
+  animation: audioBar 1.1s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+.audio-bar:nth-child(2) {
+  animation-delay: 0.18s;
+}
+.audio-bar:nth-child(3) {
+  animation-delay: 0.36s;
+}
+.audio-bar:nth-child(4) {
+  animation-delay: 0.54s;
+}
+
+@keyframes audioBar {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+/* Reveal-on-scroll base state, driven by AnimatedSection */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }

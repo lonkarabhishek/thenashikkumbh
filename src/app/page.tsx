@@ -1,707 +1,445 @@
 "use client";
 
-import React, { useState } from "react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import {
-  Scroll,
-  Sparkles,
-  MapPin,
-  Calendar,
   ArrowRight,
-  Star,
-  Send,
-  Map,
-  Droplets,
-  Users,
-  ChevronDown,
-  ChevronUp,
-  Clock,
+  CalendarDays,
+  Headphones,
+  LifeBuoy,
+  MapPin,
+  Navigation,
+  Phone,
+  Waves,
 } from "lucide-react";
-
-import Hero from "@/components/Hero";
-// CTABanner available at @/components/CTABanner
-import { bathingDatesI18n, ghatsI18n, eventsI18n } from "@/data/siteDataI18n";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
+import { yatraUI } from "@/i18n/yatraTranslations";
+import { bathingDatesI18n, ghatsI18n } from "@/data/siteDataI18n";
+import { trails } from "@/data/yatraData";
+import Reveal from "@/components/Reveal";
+import AskSahayak from "@/components/AskSahayak";
+import {
+  GhatPanorama,
+  ProcessionBand,
+  RiverBand,
+  SamudraManthan,
+  WalkingPilgrim,
+} from "@/components/art/Scenes";
+import { BorderStrip, Diya, Kalash, Lotus, Trishul } from "@/components/art/Motifs";
 
-// Category Badge Colors
-const categoryColors: Record<string, string> = {
-  Ceremony: "bg-saffron-100 text-saffron-700",
-  "Sacred Bathing": "bg-blue-100 text-blue-700",
-  Spiritual: "bg-purple-100 text-purple-700",
-  Devotional: "bg-rose-100 text-rose-700",
-  Cultural: "bg-amber-100 text-amber-700",
-  Wellness: "bg-green-100 text-green-700",
-  Seva: "bg-teal-100 text-teal-700",
+/** First Shahi Snan — the date the whole calendar hangs off. */
+const FIRST_SNAN = new Date("2027-08-20T04:00:00+05:30");
+
+const HOME_COPY = {
+  heroKicker: {
+    en: "Simhastha Kumbh Mela · Nashik & Trimbakeshwar",
+    hi: "सिंहस्थ कुंभ मेला · नाशिक व त्र्यंबकेश्वर",
+    mr: "सिंहस्थ कुंभमेळा · नाशिक व त्र्यंबकेश्वर",
+  },
+  heroLede: {
+    en: "Once in twelve years, Jupiter enters Leo and the Godavari is said to carry amrit. Millions come to stand in that water. This is your guide to what it means, where to go, and how to stay safe.",
+    hi: "हर बारह वर्ष में एक बार बृहस्पति सिंह राशि में आते हैं और कहा जाता है कि गोदावरी अमृत लेकर बहती है। करोड़ों लोग उस जल में खड़े होने आते हैं। यह मार्गदर्शिका बताती है कि इसका अर्थ क्या है, कहाँ जाना है, और सुरक्षित कैसे रहना है।",
+    mr: "दर बारा वर्षांनी एकदा बृहस्पती सिंह राशीत येतो आणि गोदावरी अमृत वाहते असे म्हणतात. कोट्यवधी लोक त्या पाण्यात उभे राहायला येतात. ही मार्गदर्शिका सांगते की याचा अर्थ काय, कुठे जायचे, आणि सुरक्षित कसे राहायचे.",
+  },
+  countdownLabel: {
+    en: "until the first Shahi Snan",
+    hi: "प्रथम शाही स्नान में शेष",
+    mr: "पहिल्या शाही स्नानाला बाकी",
+  },
+  days: { en: "days", hi: "दिन", mr: "दिवस" },
+
+  storyKicker: { en: "Why it happens", hi: "यह क्यों होता है", mr: "हे का घडते" },
+  storyTitle: {
+    en: "A pot of amrit, and four drops that fell",
+    hi: "अमृत का एक कलश, और गिरी हुई चार बूँदें",
+    mr: "अमृताचा एक कलश, आणि पडलेले चार थेंब",
+  },
+  beat1Title: { en: "The ocean was churned", hi: "समुद्र मथा गया", mr: "समुद्र घुसळला गेला" },
+  beat1Body: {
+    en: "Devas and asuras used a mountain as the rod and a serpent as the rope, and churned the ocean of milk for a thousand years to draw out amrit — the nectar that ends death.",
+    hi: "देवों और असुरों ने पर्वत को मथानी और नाग को रस्सी बनाकर हज़ार वर्ष तक क्षीरसागर मथा, ताकि अमृत निकले — वह जो मृत्यु समाप्त कर दे।",
+    mr: "देव आणि असुरांनी पर्वताची रवी आणि नागाची दोरी करून हजार वर्षे क्षीरसागर घुसळला, अमृत निघावे म्हणून — जे मृत्यू संपवते.",
+  },
+  beat2Title: { en: "Four drops fell to earth", hi: "चार बूँदें धरती पर गिरीं", mr: "चार थेंब पृथ्वीवर पडले" },
+  beat2Body: {
+    en: "In the chase that followed, four drops spilled from the kalash — at Prayagraj, Haridwar, Ujjain and here, on the Godavari at Nashik. Each place became a Kumbh.",
+    hi: "उसके बाद हुए संघर्ष में कलश से चार बूँदें छलकीं — प्रयागराज, हरिद्वार, उज्जैन और यहाँ, नाशिक की गोदावरी पर। हर स्थान कुंभ बन गया।",
+    mr: "त्यानंतरच्या झटापटीत कलशातून चार थेंब सांडले — प्रयागराज, हरिद्वार, उज्जैन आणि इथे, नाशिकच्या गोदावरीवर. प्रत्येक ठिकाण कुंभ झाले.",
+  },
+  beat3Title: { en: "Twelve years, twelve days", hi: "बारह वर्ष, बारह दिन", mr: "बारा वर्षे, बारा दिवस" },
+  beat3Body: {
+    en: "The churning is said to have lasted twelve divine days — and one divine day is one human year. That is why the Kumbh returns to each city every twelve years.",
+    hi: "कहा जाता है कि मंथन बारह दिव्य दिन चला — और एक दिव्य दिन मनुष्य का एक वर्ष है। इसीलिए कुंभ हर नगर में बारह वर्ष बाद लौटता है।",
+    mr: "मंथन बारा दिव्य दिवस चालले असे म्हणतात — आणि एक दिव्य दिवस म्हणजे माणसाचे एक वर्ष. म्हणूनच कुंभ प्रत्येक शहरात बारा वर्षांनी परततो.",
+  },
+
+  safetyKicker: {
+    en: "Before you go down to the water",
+    hi: "जल तक जाने से पहले",
+    mr: "पाण्यापर्यंत जाण्याआधी",
+  },
+  safetyTitle: {
+    en: "Three things that matter more than darshan",
+    hi: "दर्शन से अधिक महत्वपूर्ण तीन बातें",
+    mr: "दर्शनापेक्षा महत्त्वाच्या तीन गोष्टी",
+  },
+  safety1: {
+    en: "Know your way out before you go in. The SOS button on this site finds your nearest exit route from wherever you are standing.",
+    hi: "भीतर जाने से पहले निकास जान लें। इस साइट का SOS बटन आप जहाँ खड़े हैं वहीं से निकटतम निकास मार्ग खोज देता है।",
+    mr: "आत जाण्यापूर्वी बाहेर पडण्याचा मार्ग माहीत करून घ्या. या साइटवरचे SOS बटण तुम्ही जिथे उभे आहात तिथून जवळचा मार्ग शोधून देते.",
+  },
+  safety2: {
+    en: "Agree a meeting point with your family that is a place, not a person. Phones lose signal in a crowd of millions.",
+    hi: "परिवार से मिलने की जगह तय करें — कोई व्यक्ति नहीं, कोई स्थान। लाखों की भीड़ में फ़ोन का नेटवर्क चला जाता है।",
+    mr: "कुटुंबाशी भेटण्याची जागा ठरवा — कोणी माणूस नव्हे, एखादे ठिकाण. लाखोंच्या गर्दीत फोनचे नेटवर्क जाते.",
+  },
+  safety3: {
+    en: "Emergency numbers work without internet: 112 police, 108 ambulance, 101 fire. Save them before you leave your room.",
+    hi: "आपातकालीन नंबर बिना इंटरनेट काम करते हैं: 112 पुलिस, 108 एम्बुलेंस, 101 अग्निशमन। कमरे से निकलने से पहले सहेज लें।",
+    mr: "आपत्कालीन क्रमांक इंटरनेटशिवाय चालतात: ११२ पोलीस, १०८ रुग्णवाहिका, १०१ अग्निशमन. खोलीतून निघण्यापूर्वी जतन करा.",
+  },
+
+  akhadaKicker: { en: "The orders", hi: "अखाड़े", mr: "आखाडे" },
+  akhadaTitle: {
+    en: "Thirteen akhadas lead the way to the water",
+    hi: "तेरह अखाड़े जल तक का मार्ग ले जाते हैं",
+    mr: "तेरा आखाडे पाण्यापर्यंतचा मार्ग नेतात",
+  },
+  akhadaBody: {
+    en: "Monastic orders that were once fighting bodies, they still march in a precedence agreed centuries ago. On Shahi Snan mornings they bathe first, and the public follows.",
+    hi: "वे मठीय संप्रदाय जो कभी लड़ाकू संगठन थे, आज भी सदियों पहले तय क्रम में चलते हैं। शाही स्नान की सुबह वे पहले स्नान करते हैं, फिर जनता।",
+    mr: "एकेकाळी लढाऊ संघटना असलेले हे मठीय संप्रदाय आजही शतकांपूर्वी ठरलेल्या क्रमाने चालतात. शाही स्नानाच्या सकाळी ते आधी स्नान करतात, मग सामान्य लोक.",
+  },
 };
 
-const categoryDots: Record<string, string> = {
-  Ceremony: "bg-saffron-500",
-  "Sacred Bathing": "bg-blue-500",
-  Spiritual: "bg-purple-500",
-  Devotional: "bg-rose-500",
-  Cultural: "bg-amber-500",
-  Wellness: "bg-green-500",
-  Seva: "bg-teal-500",
-};
+function useDaysUntil(target: Date) {
+  const [days, setDays] = useState<number | null>(null);
 
-// Section Divider
-function GoldDivider() {
-  return (
-    <div className="mx-auto my-6 flex items-center justify-center gap-3">
-      <div className="h-px w-12 bg-gradient-to-r from-transparent to-gold-400" />
-      <div className="h-1.5 w-1.5 rotate-45 bg-gold-400" />
-      <div className="h-px w-12 bg-gradient-to-l from-transparent to-gold-400" />
-    </div>
-  );
+  useEffect(() => {
+    const compute = () =>
+      setDays(Math.max(0, Math.ceil((target.getTime() - Date.now()) / 86_400_000)));
+    compute();
+    const id = setInterval(compute, 60_000);
+    return () => clearInterval(id);
+  }, [target]);
+
+  return days;
 }
 
-// HOME PAGE
-export default function HomePage() {
-  const { t, locale, translations: tr } = useLanguage();
-  const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+export default function Home() {
+  const { t, locale } = useLanguage();
+  const days = useDaysUntil(FIRST_SNAN);
 
-  // Data slices
-  const majorDates = bathingDatesI18n.filter((d) => d.isMajor).slice(0, 5);
-  const previewGhats = ghatsI18n.slice(0, 4);
-  const previewEvents = eventsI18n.slice(0, 4);
+  const majorDates = bathingDatesI18n.filter((d) => d.isMajor);
+  const featuredGhats = ghatsI18n.slice(0, 3);
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setIsSubscribed(true);
-      setEmail("");
-    }
-  };
+  const storyBeats = [
+    { icon: Waves, title: HOME_COPY.beat1Title, body: HOME_COPY.beat1Body },
+    { icon: Kalash, title: HOME_COPY.beat2Title, body: HOME_COPY.beat2Body },
+    { icon: Lotus, title: HOME_COPY.beat3Title, body: HOME_COPY.beat3Body },
+  ];
 
   return (
     <>
-      {/* 1. HERO */}
-      <Hero />
-
-      {/* 2. ABOUT KUMBH MELA */}
-      <section
-        id="about-preview"
-        className="relative overflow-hidden bg-cream-50 py-24 md:py-32"
-      >
-        {/* Subtle mandala background pattern */}
-        <div className="absolute inset-0 mandala-bg opacity-[0.03]" />
-
-        <div className="section-container relative z-10">
-          {/* Section Header */}
-          <div className="mx-auto mb-6 text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
-              {t(tr.home.aboutSubtitle)}
+      {/* ═══ Hero ═══════════════════════════════════════════ */}
+      <section className="relative overflow-hidden bg-cream-100 paper-grain">
+        <div className="section-container relative z-10 pt-28 pb-8 text-center sm:pt-36">
+          <Reveal>
+            <p className="font-devanagari text-sm text-gold-600">॥ श्री गणेशाय नमः ॥</p>
+            <p className="mt-6 text-eyebrow font-semibold uppercase text-saffron-700">
+              {t(HOME_COPY.heroKicker)}
             </p>
-            <h2 className="font-heading text-4xl font-bold text-temple-900 md:text-5xl">
-              {t(tr.home.aboutTitle)}
-            </h2>
-          </div>
-
-          <GoldDivider />
-
-          {/* Description Paragraph */}
-          <p className="mx-auto mb-16 max-w-3xl text-center text-lg leading-relaxed text-temple-600">
-            {t(tr.home.aboutDescription)}
-          </p>
-
-          {/* Three Premium Cards */}
-          <div className="grid gap-8 md:grid-cols-3">
-            {/* Ancient Origins */}
-            <div>
-              <div className="group h-full rounded-2xl border border-gold-200/50 border-t-2 border-t-gold-400 bg-white/70 p-8 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(196,164,75,0.25)]">
-                <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-gold-100 to-saffron-100 text-gold-600 transition-transform duration-300 group-hover:scale-110">
-                  <Scroll className="h-7 w-7" />
-                </div>
-                <h3 className="mb-3 font-heading text-xl font-bold text-temple-900">
-                  {t(tr.home.originTitle)}
-                </h3>
-                <p className="leading-relaxed text-temple-600">
-                  {t(tr.home.originDesc)}
-                </p>
-              </div>
-            </div>
-
-            {/* Divine Significance */}
-            <div>
-              <div className="group h-full rounded-2xl border border-gold-200/50 border-t-2 border-t-gold-400 bg-white/70 p-8 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(196,164,75,0.25)]">
-                <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-gold-100 to-saffron-100 text-gold-600 transition-transform duration-300 group-hover:scale-110">
-                  <Sparkles className="h-7 w-7" />
-                </div>
-                <h3 className="mb-3 font-heading text-xl font-bold text-temple-900">
-                  {t(tr.home.divineTitle)}
-                </h3>
-                <p className="leading-relaxed text-temple-600">
-                  {t(tr.home.divineDesc)}
-                </p>
-              </div>
-            </div>
-
-            {/* Nashik's Sacred Bond */}
-            <div>
-              <div className="group h-full rounded-2xl border border-gold-200/50 border-t-2 border-t-gold-400 bg-white/70 p-8 backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(196,164,75,0.25)]">
-                <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-gold-100 to-saffron-100 text-gold-600 transition-transform duration-300 group-hover:scale-110">
-                  <MapPin className="h-7 w-7" />
-                </div>
-                <h3 className="mb-3 font-heading text-xl font-bold text-temple-900">
-                  {t(tr.home.nashikTitle)}
-                </h3>
-                <p className="leading-relaxed text-temple-600">
-                  {t(tr.home.nashikDesc)}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Learn More Link */}
-          <div className="mt-12 text-center">
-            <Link
-              href="/about"
-              className="group inline-flex items-center gap-2 font-semibold text-gold-700 transition-colors hover:text-saffron-600"
-            >
-              {t(tr.home.learnMore)}
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. WHY NASHIK IS SACRED */}
-      <section id="why-nashik" className="relative overflow-hidden bg-temple-900 py-24 md:py-32">
-        {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 temple-pattern opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-temple-900/50 via-transparent to-temple-900/50" />
-
-        <div className="section-container relative z-10">
-          <div className="grid items-center gap-16 lg:grid-cols-2">
-            {/* Left: Text Content */}
-            <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold-400">
-                {t(tr.home.whyNashikSubtitle)}
-              </p>
-              <h2 className="mb-8 font-heading text-4xl font-bold text-cream-100 md:text-5xl">
-                {t(tr.home.whyNashikTitle)}
-              </h2>
-
-              <p className="mb-8 text-lg leading-relaxed text-cream-300/90">
-                {t(tr.home.whyNashikText)}
-              </p>
-
-              {/* Stat Counters */}
-              <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
-                {[
-                  { value: "2000+", label: locale === "hi" ? "वर्ष" : locale === "mr" ? "वर्षे" : "Years", icon: <Clock className="h-4 w-4" /> },
-                  { value: "4", label: locale === "hi" ? "पवित्र नगर" : locale === "mr" ? "पवित्र शहरे" : "Sacred Cities", icon: <MapPin className="h-4 w-4" /> },
-                  { value: "12", label: locale === "hi" ? "वर्ष चक्र" : locale === "mr" ? "वर्ष चक्र" : "Year Cycle", icon: <Star className="h-4 w-4" /> },
-                  { value: "50M+", label: locale === "hi" ? "तीर्थयात्री" : locale === "mr" ? "तीर्थयात्री" : "Pilgrims", icon: <Users className="h-4 w-4" /> },
-                ].map((stat, i) => (
-                  <div
-                    key={i}
-                    className="text-center"
-                  >
-                    <p className="font-heading text-3xl font-bold text-gold-400 md:text-4xl">
-                      {stat.value}
-                    </p>
-                    <div className="mt-1 flex items-center justify-center gap-1.5 text-sm text-cream-400">
-                      {stat.icon}
-                      <span>{stat.label}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right: Decorative Frame */}
-            <div className="relative">
-              <div className="relative overflow-hidden rounded-2xl border-2 border-gold-500/40 bg-gradient-to-br from-temple-800 via-temple-700 to-temple-800 shadow-2xl">
-                {/* Inner golden frame */}
-                <div className="absolute inset-3 rounded-xl border border-gold-500/20" />
-
-                <div className="flex min-h-[420px] flex-col items-center justify-center p-12 text-center lg:min-h-[500px]">
-                  {/* Decorative mandala ring */}
-                  <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-gold-400/30 bg-gradient-to-br from-gold-500/10 to-saffron-500/10">
-                    <Droplets className="h-12 w-12 text-gold-400" />
-                  </div>
-
-                  <h3 className="mb-3 font-heading text-3xl font-bold text-gold-300">
-                    {locale === "hi" ? "गोदावरी" : locale === "mr" ? "गोदावरी" : "Godavari"}
-                  </h3>
-                  <div className="mb-4 h-px w-20 bg-gradient-to-r from-transparent via-gold-400 to-transparent" />
-                  <p className="text-lg font-medium italic text-cream-300/80">
-                    {locale === "hi"
-                      ? "दक्षिण गंगा"
-                      : locale === "mr"
-                        ? "दक्षिणची गंगा"
-                        : "Dakshin Ganga"}
-                  </p>
-                  <p className="mt-2 max-w-xs text-sm text-cream-400/60">
-                    {locale === "hi"
-                      ? "भारत की सात पवित्र नदियों में से एक"
-                      : locale === "mr"
-                        ? "भारतातील सात पवित्र नद्यांपैकी एक"
-                        : "One of the seven sacred rivers of India"}
-                  </p>
-
-                  {/* Decorative corner elements */}
-                  <div className="absolute left-6 top-6 h-8 w-8 border-l-2 border-t-2 border-gold-500/30" />
-                  <div className="absolute right-6 top-6 h-8 w-8 border-r-2 border-t-2 border-gold-500/30" />
-                  <div className="absolute bottom-6 left-6 h-8 w-8 border-b-2 border-l-2 border-gold-500/30" />
-                  <div className="absolute bottom-6 right-6 h-8 w-8 border-b-2 border-r-2 border-gold-500/30" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. SACRED BATHING DATES PREVIEW */}
-      <section id="dates-preview" className="relative bg-cream-50 py-24 md:py-32">
-        <div className="section-container">
-          {/* Section Header */}
-          <div className="mx-auto mb-6 text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
-              {t(tr.home.datesSubtitle)}
+            <h1 className="mt-5 text-display text-balance">{t(translations.hero.title)}</h1>
+            <p className="mt-3 font-heading text-4xl text-saffron-600 sm:text-5xl">
+              {t(translations.hero.year)}
             </p>
-            <h2 className="font-heading text-4xl font-bold text-temple-900 md:text-5xl">
-              {t(tr.home.datesTitle)}
-            </h2>
-          </div>
+          </Reveal>
 
-          <GoldDivider />
-
-          {/* Horizontal scroll on mobile, 3-col grid on desktop */}
-          <div className="mt-12">
-            <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-3 md:overflow-x-visible md:pb-0 lg:grid-cols-5">
-              {majorDates.map((item, index) => (
-                <div
-                  key={item.date}
-                  className="min-w-[280px] flex-shrink-0 snap-start md:min-w-0"
-                >
-                  <div className="group relative h-full overflow-hidden rounded-2xl border-l-4 border-gold-500 bg-temple-800/90 p-6 shadow-lg transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_15px_40px_-10px_rgba(196,164,75,0.3)]">
-                    {/* Shahi Snan badge */}
-                    <div className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-gold-500/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-gold-400">
-                      <Star className="h-3 w-3" />
-                      {locale === "hi"
-                        ? `शाही स्नान ${index + 1}`
-                        : locale === "mr"
-                          ? `शाही स्नान ${index + 1}`
-                          : `Shahi Snan ${index + 1}`}
-                    </div>
-
-                    {/* Date */}
-                    <p className="mb-2 font-heading text-lg font-bold text-gold-400">
-                      {item.date}
-                    </p>
-
-                    {/* Event Name */}
-                    <h3 className="mb-1 font-heading text-lg font-bold text-white">
-                      {t(item.event)}
-                    </h3>
-
-                    {/* Nakshatra */}
-                    <p className="mb-3 text-sm font-medium text-cream-300">
-                      {t(item.nakshatra)}
-                    </p>
-
-                    {/* Significance */}
-                    <p className="text-sm leading-relaxed text-cream-400/80">
-                      {t(item.significance)}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* View Complete Schedule */}
-          <div className="mt-12 text-center">
-            <Link
-              href="/dates"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 px-8 py-3.5 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-5px_rgba(196,164,75,0.4)]"
-            >
-              {t(tr.home.viewAllDates)}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. SACRED GHATS PREVIEW */}
-      <section id="ghats-preview" className="relative bg-white py-24 md:py-32">
-        <div className="section-container">
-          {/* Section Header */}
-          <div className="mx-auto mb-6 text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
-              {t(tr.home.ghatsSubtitle)}
+          <Reveal delay={90}>
+            <p className="mx-auto mt-7 max-w-2xl text-lede text-temple-500">
+              {t(HOME_COPY.heroLede)}
             </p>
-            <h2 className="font-heading text-4xl font-bold text-temple-900 md:text-5xl">
-              {t(tr.home.ghatsTitle)}
-            </h2>
-          </div>
+          </Reveal>
 
-          <GoldDivider />
-
-          {/* Two-column grid of ghat cards */}
-          <div className="mt-12 grid gap-8 sm:grid-cols-2">
-            {previewGhats.map((ghat) => (
-              <div key={ghat.id}>
-                <div className="group relative h-[400px] overflow-hidden rounded-2xl shadow-xl transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_25px_60px_-15px_rgba(196,164,75,0.35)]">
-                  {/* Actual ghat image */}
-                  <img
-                    src={ghat.image}
-                    alt={t(ghat.name)}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading="lazy"
-                  />
-
-                  {/* Dark overlay gradient from bottom */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-                  {/* Ghat name overlay - centered */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                    <span className="mb-2 inline-block rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-medium uppercase tracking-widest text-white/90 backdrop-blur-sm">
-                      {t(ghat.subtitle)}
-                    </span>
-                    <h3 className="font-heading text-3xl font-bold text-white drop-shadow-lg md:text-4xl">
-                      {t(ghat.name)}
-                    </h3>
-                  </div>
-
-                  {/* Glass-morphism info bar at bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 border-t border-white/10 bg-black/30 p-5 backdrop-blur-md">
-                    <p className="mb-2 text-sm leading-relaxed text-white/80 line-clamp-2">
-                      {t(ghat.description)}
-                    </p>
-                    <div className="flex items-center gap-2 text-xs text-gold-300">
-                      <MapPin className="h-3.5 w-3.5" />
-                      <span>
-                        {ghat.id === "ramkund"
-                          ? "Panchavati, Nashik"
-                          : ghat.id === "godavari-ghats"
-                            ? "Godavari River, Nashik"
-                            : ghat.id === "kapaleshwar"
-                              ? "Near Ramkund, Nashik"
-                              : "Panchavati, Nashik"}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Explore All Ghats */}
-          <div className="mt-12 text-center">
-            <Link
-              href="/ghats"
-              className="group inline-flex items-center gap-2 font-semibold text-gold-700 transition-colors hover:text-saffron-600"
-            >
-              {t(tr.home.exploreGhats)}
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. MAP SECTION */}
-      <section id="map-preview" className="relative bg-cream-50 py-24 md:py-32">
-        <div className="section-container">
-          {/* Section Header */}
-          <div className="mx-auto mb-6 text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
-              {t(tr.home.mapSubtitle)}
-            </p>
-            <h2 className="font-heading text-4xl font-bold text-temple-900 md:text-5xl">
-              {t(tr.home.mapTitle)}
-            </h2>
-          </div>
-
-          <GoldDivider />
-
-          <div className="mx-auto mt-12 max-w-4xl">
-            {/* Google Maps with golden border */}
-            <div className="overflow-hidden rounded-2xl border-2 border-gold-300/50 shadow-xl">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.0!2d73.7910!3d20.0063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb0c6f989e69%3A0x6c2f5f3e1edbd4e9!2sRam%20Kund!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Nashik Kumbh Mela Area Map - Ram Kund and Godavari Ghats"
-                className="w-full"
-              />
+          <Reveal delay={160}>
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+              <Link href="/yatra" className="btn-primary">
+                <Headphones className="h-4 w-4" />
+                {t(yatraUI.homeTeaser)}
+              </Link>
+              <Link href="/dates" className="btn-secondary">
+                <CalendarDays className="h-4 w-4" />
+                {t(translations.hero.exploreDates)}
+              </Link>
             </div>
 
-            {/* Navigation text below map */}
-            <div className="mt-8 flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gold-100 text-gold-600">
-                <Map className="h-6 w-6" />
-              </div>
-              <p className="text-temple-600 leading-relaxed">
-                {locale === "hi"
-                  ? "कुंभ मेला क्षेत्र गोदावरी नदी के किनारे पंचवटी के राम कुंड के आसपास फैला है। प्रमुख स्थल - त्र्यम्बकेश्वर मंदिर (28 किमी), तपोवन, और कालाराम मंदिर।"
-                  : locale === "mr"
-                    ? "कुंभमेळा क्षेत्र गोदावरी नदीच्या किनाऱ्यावर पंचवटीतील रामकुंडाभोवती पसरलेले आहे. प्रमुख स्थळे - त्र्यंबकेश्वर मंदिर (२८ किमी), तपोवन, आणि कालाराम मंदिर."
-                    : "The Kumbh Mela area stretches along the Godavari River, centered around Ram Kund in Panchavati. Key landmarks - Trimbakeshwar Temple (28 km), Tapovan, and the ancient Kalaram Temple."}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. EVENTS PREVIEW */}
-      <section
-        id="events-preview"
-        className="relative bg-white py-24 md:py-32"
-      >
-        <div className="section-container">
-          {/* Section Header */}
-          <div className="mx-auto mb-6 text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
-              {t(tr.home.eventsSubtitle)}
-            </p>
-            <h2 className="font-heading text-4xl font-bold text-temple-900 md:text-5xl">
-              {t(tr.home.eventsTitle)}
-            </h2>
-          </div>
-
-          <GoldDivider />
-
-          {/* 4-column event cards */}
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {previewEvents.map((evt, index) => {
-              const categoryEn = evt.category.en;
-              const colorClass =
-                categoryColors[categoryEn] || "bg-gray-100 text-gray-700";
-              const dotColor =
-                categoryDots[categoryEn] || "bg-gray-500";
-
-              return (
-                <div key={index}>
-                  <div className="group flex h-full flex-col rounded-2xl border border-gold-100 bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_-15px_rgba(196,164,75,0.2)]">
-                    {/* Category Badge with dot */}
-                    <span
-                      className={`mb-4 inline-flex w-fit items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold ${colorClass}`}
-                    >
-                      <span className={`h-2 w-2 rounded-full ${dotColor}`} />
-                      {t(evt.category)}
-                    </span>
-
-                    {/* Title */}
-                    <h3 className="mb-2 font-heading text-lg font-bold text-temple-900">
-                      {t(evt.title)}
-                    </h3>
-
-                    {/* Date */}
-                    <div className="mb-3 flex items-center gap-2 text-sm text-gold-600">
-                      <Calendar className="h-3.5 w-3.5" />
-                      <span>{evt.date}</span>
-                    </div>
-
-                    {/* Description */}
-                    <p className="flex-1 text-sm leading-relaxed text-temple-500">
-                      {t(evt.description)}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* View All Events */}
-          <div className="mt-12 text-center">
-            <Link
-              href="/events"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 px-8 py-3.5 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-5px_rgba(196,164,75,0.4)]"
-            >
-              {t(tr.home.viewAllEvents)}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. CTA BANNER */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-[#1a0a00] via-temple-900 to-[#0D0906] py-20 md:py-28">
-        {/* Particle dots background */}
-        <div className="absolute inset-0">
-          {[...Array(30)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute h-1 w-1 rounded-full bg-gold-400/20"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-              }}
-            />
-          ))}
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gold-500/[0.03] to-transparent" />
-
-        <div className="section-container relative z-10 text-center">
-          <div>
-            <h2 className="mb-5 font-heading text-3xl font-bold text-gold-300 md:text-5xl">
-              {t(tr.home.ctaTitle)}
-            </h2>
-            <p className="mx-auto mb-10 max-w-2xl text-lg text-cream-300/80 leading-relaxed">
-              {t(tr.home.ctaDesc)}
-            </p>
-            <Link
-              href="/guide"
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-gold-400 bg-gold-500/10 px-10 py-4 font-semibold text-gold-300 backdrop-blur-sm transition-all duration-300 hover:bg-gold-500 hover:text-white hover:shadow-[0_0_40px_rgba(196,164,75,0.3)]"
-            >
-              {t(tr.home.ctaButton)}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 9. NEWSLETTER */}
-      <section id="newsletter" className="relative bg-cream-50 py-24 md:py-32">
-        <div className="section-container">
-          <div className="mx-auto max-w-xl text-center">
-            {/* Section Header */}
-            <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
-                {t(tr.home.newsletterSubtitle)}
-              </p>
-              <h2 className="mb-4 font-heading text-3xl font-bold text-temple-900 md:text-4xl">
-                {t(tr.home.newsletterTitle)}
-              </h2>
-            </div>
-
-            <GoldDivider />
-
-            <p className="mb-8 text-temple-500 leading-relaxed">
-              {t(tr.home.newsletterDesc)}
-            </p>
-
-            {/* Email Form */}
-            <form
-              onSubmit={handleNewsletterSubmit}
-              className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row"
-            >
-              <label htmlFor="newsletter-email" className="sr-only">
-                {t(tr.home.emailPlaceholder)}
-              </label>
-              <input
-                id="newsletter-email"
-                name="email"
-                type="email"
-                required
-                autoComplete="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder={t(tr.home.emailPlaceholder)}
-                className="flex-1 rounded-full border border-gold-200 bg-white px-6 py-3.5 text-temple-800 placeholder-temple-300 outline-none transition-all duration-300 focus:border-gold-400 focus:ring-2 focus:ring-gold-200/50"
-              />
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 px-6 py-3.5 font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                <Send className="h-4 w-4" />
-                {t(tr.home.subscribe)}
-              </button>
-            </form>
-
-            {/* Success message */}
-            {isSubscribed && (
-              <p className="mt-4 text-sm font-medium text-green-600">
-                {locale === "hi"
-                  ? "सदस्यता के लिए धन्यवाद! आपको कुंभ मेला अपडेट शीघ्र प्राप्त होंगे।"
-                  : locale === "mr"
-                    ? "सदस्यता घेतल्याबद्दल धन्यवाद! तुम्हाला कुंभमेळा अपडेट लवकरच मिळतील."
-                    : "Thank you for subscribing! You will receive Kumbh Mela updates soon."}
+            {days !== null && (
+              <p className="mt-8 text-sm text-temple-400">
+                <span className="font-heading text-3xl text-temple-900">
+                  {days.toLocaleString(locale === "en" ? "en-IN" : "hi-IN")}
+                </span>{" "}
+                {t(HOME_COPY.days)} {t(HOME_COPY.countdownLabel)}
               </p>
             )}
+          </Reveal>
+        </div>
 
-            {/* Social proof */}
-            <p className="mt-5 text-xs text-temple-400">
-              {locale === "hi"
-                ? "10,000+ भक्तों के साथ जुड़ें। कोई स्पैम नहीं, केवल पवित्र अपडेट।"
-                : locale === "mr"
-                  ? "10,000+ भक्तांसोबत सहभागी व्हा. स्पॅम नाही, केवळ पवित्र अपडेट्स."
-                  : "Join 10,000+ devotees. No spam, only sacred updates."}
-            </p>
+        {/* the ghats, drawn */}
+        <GhatPanorama className="mt-4 w-full" />
+      </section>
+
+      {/* ═══ Ask Sahayak — first thing after the hero ═══════ */}
+      <AskSahayak />
+
+      {/* ═══ Why it happens ═════════════════════════════════ */}
+      <section className="section-container section-y">
+        <div className="grid gap-14 lg:grid-cols-2 lg:items-center lg:gap-20">
+          <Reveal>
+            <SamudraManthan className="w-full rounded-card border border-temple-100" />
+          </Reveal>
+
+          <div>
+            <Reveal>
+              <span className="eyebrow">{t(HOME_COPY.storyKicker)}</span>
+              <h2 className="mt-5 text-title text-balance">{t(HOME_COPY.storyTitle)}</h2>
+            </Reveal>
+
+            <div className="mt-9 space-y-8">
+              {storyBeats.map(({ icon: Icon, title, body }, i) => (
+                <Reveal key={i} delay={i * 80}>
+                  <div className="flex gap-5">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-cream-200 text-saffron-700">
+                      <Icon className="h-5 w-5" />
+                    </span>
+                    <div>
+                      <h3 className="font-heading text-xl text-temple-900">{t(title)}</h3>
+                      <p className="mt-1.5 leading-relaxed text-temple-500">{t(body)}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+
+            <Reveal delay={240}>
+              <Link
+                href="/about"
+                className="mt-9 inline-flex items-center gap-1.5 text-sm font-semibold text-saffron-700 hover:text-saffron-800"
+              >
+                {t(translations.home.learnMore)}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Reveal>
           </div>
         </div>
       </section>
 
-      {/* 10. FAQ SECTION (AEO Critical) */}
-      <section id="faq" className="relative bg-white py-24 md:py-32">
-        <div className="section-container">
-          {/* Section Header */}
-          <div className="mx-auto mb-6 text-center">
-            <h2 className="font-heading text-4xl font-bold text-temple-900 md:text-5xl">
-              {t(translations.faq.title)}
-            </h2>
+      {/* ═══ Yatra — the headline feature ═══════════════════ */}
+      <section className="section-dark relative overflow-hidden">
+        <div className="section-container grid gap-12 py-20 sm:py-28 lg:grid-cols-[1fr_0.85fr] lg:items-center">
+          <div>
+            <Reveal>
+              <span className="eyebrow">{t(yatraUI.eyebrow)}</span>
+              <h2 className="mt-5 text-title text-balance text-cream-50">
+                {t(yatraUI.homeTeaser)}
+              </h2>
+              <p className="mt-5 max-w-prose text-lede text-cream-200/75">
+                {t(yatraUI.homeTeaserBody)}
+              </p>
+            </Reveal>
+
+            <Reveal delay={100}>
+              <ul className="mt-9 grid gap-4 sm:grid-cols-3">
+                {trails.map((trail) => (
+                  <li key={trail.id}>
+                    <Link
+                      href={`/yatra/${trail.id}`}
+                      className="group block rounded-xl border border-cream-200/10 p-4 transition-colors hover:border-gold-500/45"
+                    >
+                      <span className="block font-heading text-lg text-cream-50">
+                        {t(trail.name)}
+                      </span>
+                      <span className="mt-1 block text-xs text-cream-200/55">
+                        {trail.stops.length} {t(yatraUI.stops)} · {trail.totalMinutes}{" "}
+                        {t(yatraUI.minutes)}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+
+            <Reveal delay={180}>
+              <Link href="/yatra" className="btn-primary mt-9">
+                <Headphones className="h-4 w-4" />
+                {t(yatraUI.chooseTrail)}
+              </Link>
+            </Reveal>
           </div>
 
-          <GoldDivider />
+          <Reveal delay={120}>
+            <WalkingPilgrim className="mx-auto w-full max-w-sm opacity-95" />
+          </Reveal>
+        </div>
+      </section>
 
-          {/* FAQ Accordion */}
-          <div className="mx-auto mt-12 max-w-3xl">
-            {translations.faq.items.map((item, index) => {
-              const isOpen = openFaq === index;
+      {/* ═══ Sacred dates ═══════════════════════════════════ */}
+      <section className="section-container section-y">
+        <Reveal className="max-w-2xl">
+          <span className="eyebrow">{t(translations.home.datesTitle)}</span>
+          <h2 className="mt-5 text-title">{t(translations.home.datesSubtitle)}</h2>
+        </Reveal>
 
-              return (
-                <div
-                  key={index}
-                  className="mb-4"
-                >
-                  {/* Question */}
-                  <button
-                    onClick={() => setOpenFaq(isOpen ? null : index)}
-                    className={`flex w-full items-center justify-between rounded-xl px-6 py-5 text-left transition-all duration-300 ${
-                      isOpen
-                        ? "border-l-4 border-gold-500 bg-gold-50 shadow-sm"
-                        : "border-l-4 border-transparent bg-cream-50 hover:bg-cream-100"
-                    }`}
-                    aria-expanded={isOpen}
-                  >
-                    <h3
-                      className={`pr-4 font-heading text-base font-bold md:text-lg ${
-                        isOpen ? "text-gold-700" : "text-temple-800"
-                      }`}
-                    >
-                      {t(item.q)}
-                    </h3>
-                    <span
-                      className={`flex-shrink-0 transition-colors ${
-                        isOpen ? "text-gold-500" : "text-temple-400"
-                      }`}
-                    >
-                      {isOpen ? (
-                        <ChevronUp className="h-5 w-5" />
-                      ) : (
-                        <ChevronDown className="h-5 w-5" />
-                      )}
-                    </span>
-                  </button>
-
-                  {/* Answer - CSS max-height transition */}
-                  <div
-                    className="overflow-hidden transition-all duration-300 ease-in-out"
-                    style={{
-                      maxHeight: isOpen ? "500px" : "0px",
-                      opacity: isOpen ? 1 : 0,
-                    }}
-                  >
-                    <div className="rounded-b-xl bg-cream-50/50 px-6 pb-5 pt-3">
-                      <p className="leading-relaxed text-temple-600">
-                        {t(item.a)}
-                      </p>
-                    </div>
+        <ol className="mt-12 overflow-hidden rounded-card border border-temple-100">
+          {majorDates.map((date, i) => (
+            <Reveal as="li" key={date.date} delay={i * 60}>
+              <div className="flex flex-col gap-4 border-b border-temple-100 bg-cream-50 p-6 last:border-b-0 sm:flex-row sm:items-center sm:gap-8 sm:p-7">
+                <div className="flex shrink-0 items-center gap-4 sm:w-52">
+                  <Diya className="h-7 w-7 shrink-0 text-saffron-600" />
+                  <div>
+                    <p className="font-heading text-lg leading-tight text-temple-900">
+                      {date.date}
+                    </p>
+                    <p className="mt-0.5 text-xs text-temple-400">{t(date.nakshatra)}</p>
                   </div>
                 </div>
-              );
-            })}
+
+                <div className="min-w-0 flex-1">
+                  <p className="font-semibold text-temple-900">{t(date.event)}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-temple-500">
+                    {t(date.significance)}
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </ol>
+
+        <Reveal delay={120}>
+          <Link
+            href="/dates"
+            className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-saffron-700 hover:text-saffron-800"
+          >
+            {t(translations.home.viewAllDates)}
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </Reveal>
+      </section>
+
+      {/* ═══ Ghats ══════════════════════════════════════════ */}
+      <section className="section-paper py-20 sm:py-28">
+        <div className="section-container">
+          <Reveal className="max-w-2xl">
+            <span className="eyebrow">{t(translations.home.ghatsTitle)}</span>
+            <h2 className="mt-5 text-title">{t(translations.home.ghatsSubtitle)}</h2>
+          </Reveal>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {featuredGhats.map((ghat, i) => (
+              <Reveal key={ghat.id} delay={i * 80} className="h-full">
+                <Link href="/ghats" className="card-sacred group flex h-full flex-col p-7">
+                  <MapPin className="h-7 w-7 text-river-600" />
+                  <h3 className="mt-5 font-heading text-xl text-temple-900">{t(ghat.name)}</h3>
+                  <p className="mt-1 text-sm font-medium text-saffron-700">{t(ghat.subtitle)}</p>
+                  <p className="mt-4 flex-1 text-sm leading-relaxed text-temple-500">
+                    {t(ghat.description)}
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-temple-800">
+                    {t(translations.home.exploreGhats)}
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
           </div>
+        </div>
+      </section>
+
+      <RiverBand className="w-full" />
+
+      {/* ═══ Safety ═════════════════════════════════════════ */}
+      <section className="section-container section-y">
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+          <Reveal>
+            <span className="eyebrow">{t(HOME_COPY.safetyKicker)}</span>
+            <h2 className="mt-5 text-title text-balance">{t(HOME_COPY.safetyTitle)}</h2>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="tel:112" className="btn-secondary">
+                <Phone className="h-4 w-4" />
+                112
+              </a>
+              <a href="tel:108" className="btn-secondary">
+                <LifeBuoy className="h-4 w-4" />
+                108
+              </a>
+              <Link href="/guide" className="btn-secondary">
+                <Navigation className="h-4 w-4" />
+                {t(translations.nav.guide)}
+              </Link>
+            </div>
+          </Reveal>
+
+          <ol>
+            {[HOME_COPY.safety1, HOME_COPY.safety2, HOME_COPY.safety3].map((item, i) => (
+              <Reveal as="li" key={i} delay={i * 80}>
+                <div className="flex gap-5 border-b border-temple-100 py-6 first:pt-0">
+                  <span className="font-heading text-3xl leading-none text-temple-200">
+                    0{i + 1}
+                  </span>
+                  <p className="leading-relaxed text-temple-600">{t(item)}</p>
+                </div>
+              </Reveal>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* ═══ Akhadas ════════════════════════════════════════ */}
+      <section className="section-dark overflow-hidden">
+        <div className="section-container pt-20 sm:pt-28">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-end">
+            <Reveal>
+              <span className="eyebrow">{t(HOME_COPY.akhadaKicker)}</span>
+              <h2 className="mt-5 text-title text-balance text-cream-50">
+                {t(HOME_COPY.akhadaTitle)}
+              </h2>
+            </Reveal>
+            <Reveal delay={80}>
+              <p className="text-lede text-cream-200/70">{t(HOME_COPY.akhadaBody)}</p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <Link href="/events" className="btn-on-dark">
+                  <Trishul className="h-4 w-4" />
+                  {t(translations.home.viewAllEvents)}
+                </Link>
+                <Link href="/naga-sadhus" className="btn-on-dark">
+                  {t(translations.nav.nagaSadhus)}
+                </Link>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+
+        <div className="mt-14 text-cream-200/70">
+          <ProcessionBand className="w-full" />
+        </div>
+      </section>
+
+      {/* ═══ Closing ════════════════════════════════════════ */}
+      <section className="section-container py-20 text-center sm:py-28">
+        <Reveal>
+          <div className="mx-auto max-w-xl">
+            <Kalash className="mx-auto h-12 w-12 text-gold-600" />
+            <h2 className="mt-7 text-title text-balance">{t(translations.home.ctaTitle)}</h2>
+            <p className="mt-4 text-lede text-temple-500">{t(translations.home.ctaDesc)}</p>
+            <Link href="/guide" className="btn-primary mt-8">
+              {t(translations.home.ctaButton)}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </Reveal>
+
+        <div className="mt-16 text-gold-500/40">
+          <BorderStrip className="h-4 w-full" />
         </div>
       </section>
     </>

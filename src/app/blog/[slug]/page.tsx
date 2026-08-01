@@ -54,7 +54,7 @@ export default function BlogDetailPage() {
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-semibold"
-            style={{ color: "#D4A843" }}
+            style={{ color: "#C9A227" }}
           >
             <ArrowLeft className="h-4 w-4" />
             Back to News
@@ -99,16 +99,16 @@ export default function BlogDetailPage() {
             alt={article.title[locale]}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0D0906] via-[#0D0906]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-[#0B1220]/60 to-transparent" />
 
           {/* Back button overlay */}
           <div className="absolute left-0 top-0 z-10 p-6">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-cream-100 backdrop-blur-md transition-colors hover:text-[#D4A843]"
+              className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-cream-100 backdrop-blur-md transition-colors hover:text-[#C9A227]"
               style={{
-                background: "rgba(13,9,6,0.6)",
-                border: "1px solid rgba(212,168,67,0.15)",
+                background: "rgba(11,18,32,0.6)",
+                border: "1px solid rgba(201,162,39,0.15)",
               }}
             >
               <ArrowLeft className="h-4 w-4" />
@@ -155,7 +155,7 @@ export default function BlogDetailPage() {
             {/* Summary */}
             <p
               className="mb-8 text-lg leading-relaxed md:text-xl"
-              style={{ color: "rgba(212,168,67,0.7)" }}
+              style={{ color: "rgba(201,162,39,0.7)" }}
             >
               {article.summary[locale]}
             </p>
@@ -182,7 +182,7 @@ export default function BlogDetailPage() {
           {/* Share button */}
           <div
             className="mt-12 flex items-center justify-between border-t pt-8"
-            style={{ borderColor: "rgba(212,168,67,0.1)" }}
+            style={{ borderColor: "rgba(201,162,39,0.1)" }}
           >
             <span className="text-sm text-cream-300/40">
               {article.source} &middot; {formatDate(article.date, locale)}
@@ -191,9 +191,9 @@ export default function BlogDetailPage() {
               onClick={handleShare}
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all hover:scale-105"
               style={{
-                background: "rgba(212,168,67,0.1)",
-                color: "#D4A843",
-                border: "1px solid rgba(212,168,67,0.2)",
+                background: "rgba(201,162,39,0.1)",
+                color: "#C9A227",
+                border: "1px solid rgba(201,162,39,0.2)",
               }}
             >
               <Share2 className="h-4 w-4" />
@@ -223,7 +223,7 @@ export default function BlogDetailPage() {
                     style={{
                       background:
                         "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))",
-                      border: "1px solid rgba(212,168,67,0.08)",
+                      border: "1px solid rgba(201,162,39,0.08)",
                     }}
                   >
                     <div className="relative h-40 overflow-hidden">
@@ -233,7 +233,7 @@ export default function BlogDetailPage() {
                         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                         loading="lazy"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0D0906] to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] to-transparent" />
                     </div>
                     <div className="p-4">
                       <h3 className="mb-2 font-heading text-sm font-bold leading-snug text-cream-100 line-clamp-2">

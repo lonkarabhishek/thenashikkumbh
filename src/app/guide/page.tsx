@@ -196,7 +196,7 @@ const essentialTips = [
   {
     Icon: ShieldCheck,
     titleKey: translations.guidePage.generalSafetyTitle,
-    color: "#D4A843",
+    color: "#C9A227",
     content:
       "Set a meeting point with your group in case you get separated. Wear comfortable, non-slippery footwear \u2014 ghat steps can be wet and slippery. Avoid carrying large bags or expensive jewelry. Use the lost-and-found centers set up by the administration.",
   },
@@ -235,22 +235,22 @@ export default function PilgrimGuidePage() {
       {/* ═══════════════════ HERO BANNER ═══════════════════ */}
       <section className="section-dark relative overflow-hidden py-32 pt-40">
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,168,67,0.08)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,162,39,0.08)_0%,transparent_60%)]" />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -left-40 -top-40 h-[30rem] w-[30rem] rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(212,168,67,0.06) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(201,162,39,0.06) 0%, transparent 70%)" }}
         />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -bottom-40 -right-40 h-[30rem] w-[30rem] rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(212,168,67,0.04) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(201,162,39,0.04) 0%, transparent 70%)" }}
         />
 
         <div className="section-container relative z-10 text-center">
           <span
             className="mb-4 inline-block font-devanagari text-5xl drop-shadow-lg"
-            style={{ color: "#D4A843", textShadow: "0 0 30px rgba(212,168,67,0.4)" }}
+            style={{ color: "#C9A227", textShadow: "0 0 30px rgba(201,162,39,0.4)" }}
             aria-hidden="true"
           >
             तीर्थ यात्रा
@@ -278,10 +278,10 @@ export default function PilgrimGuidePage() {
       <nav
         className="sticky top-16 z-40 border-b lg:top-20"
         style={{
-          background: "rgba(13,9,6,0.92)",
+          background: "rgba(11,18,32,0.92)",
           backdropFilter: "blur(20px)",
           WebkitBackdropFilter: "blur(20px)",
-          borderColor: "rgba(212,168,67,0.12)",
+          borderColor: "rgba(201,162,39,0.12)",
         }}
       >
         <div className="section-container">
@@ -297,23 +297,23 @@ export default function PilgrimGuidePage() {
                   style={
                     isActive
                       ? {
-                          background: "linear-gradient(135deg, #D4A843, #B8922D)",
-                          color: "#0D0906",
-                          boxShadow: "0 4px 20px rgba(212,168,67,0.3)",
+                          background: "linear-gradient(135deg, #C9A227, #B8922D)",
+                          color: "#0B1220",
+                          boxShadow: "0 4px 20px rgba(201,162,39,0.3)",
                         }
                       : {
-                          color: "rgba(212,168,67,0.6)",
+                          color: "rgba(201,162,39,0.6)",
                         }
                   }
                   onMouseEnter={(e) => {
                     if (!isActive) {
-                      (e.target as HTMLElement).style.color = "#D4A843";
-                      (e.target as HTMLElement).style.background = "rgba(212,168,67,0.08)";
+                      (e.target as HTMLElement).style.color = "#C9A227";
+                      (e.target as HTMLElement).style.background = "rgba(201,162,39,0.08)";
                     }
                   }}
                   onMouseLeave={(e) => {
                     if (!isActive) {
-                      (e.target as HTMLElement).style.color = "rgba(212,168,67,0.6)";
+                      (e.target as HTMLElement).style.color = "rgba(201,162,39,0.6)";
                       (e.target as HTMLElement).style.background = "transparent";
                     }
                   }}
@@ -353,14 +353,14 @@ export default function PilgrimGuidePage() {
                 className="card-glass flex flex-col p-8"
                 style={{
                   background: "rgba(255,255,255,0.04)",
-                  borderColor: "rgba(212,168,67,0.1)",
+                  borderColor: "rgba(201,162,39,0.1)",
                 }}
               >
                 <div
                   className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl"
-                  style={{ background: "rgba(212,168,67,0.1)" }}
+                  style={{ background: "rgba(201,162,39,0.1)" }}
                 >
-                  <mode.Icon className="h-7 w-7" style={{ color: "#D4A843" }} />
+                  <mode.Icon className="h-7 w-7" style={{ color: "#C9A227" }} />
                 </div>
                 <h3 className="font-heading text-xl font-bold text-cream-100">
                   {t(mode.titleKey)}
@@ -374,16 +374,16 @@ export default function PilgrimGuidePage() {
                       key={i}
                       className="flex items-start gap-2 text-sm text-cream-300/60"
                     >
-                      <ChevronRight className="mt-0.5 h-4 w-4 flex-shrink-0" style={{ color: "#D4A843" }} />
+                      <ChevronRight className="mt-0.5 h-4 w-4 flex-shrink-0" style={{ color: "#C9A227" }} />
                       <span>{detail}</span>
                     </li>
                   ))}
                 </ul>
                 <div
                   className="mt-5 rounded-xl p-3"
-                  style={{ background: "rgba(212,168,67,0.06)", border: "1px solid rgba(212,168,67,0.1)" }}
+                  style={{ background: "rgba(201,162,39,0.06)", border: "1px solid rgba(201,162,39,0.1)" }}
                 >
-                  <p className="text-xs font-semibold" style={{ color: "#D4A843" }}>
+                  <p className="text-xs font-semibold" style={{ color: "#C9A227" }}>
                     {t(translations.guidePage.tip)} <span className="font-normal text-cream-300/60">{mode.tip}</span>
                   </p>
                 </div>
@@ -424,9 +424,9 @@ export default function PilgrimGuidePage() {
               >
                 <div
                   className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl"
-                  style={{ background: "rgba(212,168,67,0.1)" }}
+                  style={{ background: "rgba(201,162,39,0.1)" }}
                 >
-                  <acc.Icon className="h-6 w-6" style={{ color: "#D4A843" }} />
+                  <acc.Icon className="h-6 w-6" style={{ color: "#C9A227" }} />
                 </div>
                 <h3 className="font-heading text-lg font-bold text-temple-800">
                   {t(acc.titleKey)}
@@ -436,9 +436,9 @@ export default function PilgrimGuidePage() {
                 </p>
                 <div
                   className="mt-4 flex items-center gap-2 rounded-lg px-3 py-2"
-                  style={{ background: "rgba(212,168,67,0.08)", border: "1px solid rgba(212,168,67,0.15)" }}
+                  style={{ background: "rgba(201,162,39,0.08)", border: "1px solid rgba(201,162,39,0.15)" }}
                 >
-                  <Wallet className="h-4 w-4" style={{ color: "#D4A843" }} />
+                  <Wallet className="h-4 w-4" style={{ color: "#C9A227" }} />
                   <span className="text-xs font-semibold" style={{ color: "#B8922D" }}>
                     {acc.priceRange}
                   </span>
@@ -453,8 +453,8 @@ export default function PilgrimGuidePage() {
           <div
             className="mx-auto mt-10 max-w-2xl rounded-2xl p-6 text-center"
             style={{
-              background: "rgba(212,168,67,0.05)",
-              border: "1px solid rgba(212,168,67,0.2)",
+              background: "rgba(201,162,39,0.05)",
+              border: "1px solid rgba(201,162,39,0.2)",
             }}
           >
             <p className="text-sm leading-relaxed text-temple-600">
@@ -494,10 +494,10 @@ export default function PilgrimGuidePage() {
                   className="flex items-start gap-3 rounded-xl p-4 transition-all duration-300 hover:-translate-y-0.5"
                   style={{
                     background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(212,168,67,0.1)",
+                    border: "1px solid rgba(201,162,39,0.1)",
                   }}
                 >
-                  <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0" style={{ color: "#D4A843" }} />
+                  <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0" style={{ color: "#C9A227" }} />
                   <span className="text-sm text-cream-300/80">{item}</span>
                 </div>
               ))}
@@ -644,17 +644,17 @@ export default function PilgrimGuidePage() {
       <section
         className="relative overflow-hidden py-20 md:py-28"
         style={{
-          background: "linear-gradient(135deg, #1a0a00 0%, #0D0906 50%, #1a0a00 100%)",
+          background: "linear-gradient(135deg, #1a0a00 0%, #0B1220 50%, #1a0a00 100%)",
         }}
       >
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.06)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,162,39,0.06)_0%,transparent_70%)]" />
 
         <div
           className="section-container relative z-10 text-center"
         >
           <div className="sacred-divider mx-auto mb-8 max-w-xs">
-            <span className="font-devanagari text-sm" style={{ color: "#D4A843" }}>
+            <span className="font-devanagari text-sm" style={{ color: "#C9A227" }}>
               ॐ
             </span>
           </div>

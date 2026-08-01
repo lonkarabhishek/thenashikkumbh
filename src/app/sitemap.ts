@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { blogArticles } from "@/data/blogData";
+import { trails } from "@/data/yatraData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://thenashikkumbh.com";
@@ -11,6 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "weekly",
       priority: 1,
+    },
+    {
+      url: `${baseUrl}/yatra`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/about`,
@@ -80,6 +87,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  const trailPages: MetadataRoute.Sitemap = trails.map((trail) => ({
+    url: `${baseUrl}/yatra/${trail.id}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }));
+
   const blogPages: MetadataRoute.Sitemap = blogArticles.map((article) => ({
     url: `${baseUrl}/blog/${article.slug}`,
     lastModified: new Date(article.date),
@@ -87,5 +101,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...blogPages];
+  return [...staticPages, ...trailPages, ...blogPages];
 }

@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Noto_Serif_Devanagari } from "next/font/google";
+import { Inter, Fraunces, Noto_Serif_Devanagari } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { ChatProvider } from "@/context/ChatContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import KumbhSahayak from "@/components/KumbhSahayak";
 import SOSButton from "@/components/SOSButton";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 import { Analytics } from "@vercel/analytics/next";
-import LoadingScreen from "@/components/LoadingScreen";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import "./globals.css";
 
@@ -19,10 +17,12 @@ const inter = Inter({
   display: "swap",
 });
 
-const playfairDisplay = Playfair_Display({
+// Optical sizing keeps the display cuts tight and the small sizes readable.
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-fraunces",
   display: "swap",
+  axes: ["SOFT", "WONK", "opsz"],
 });
 
 const notoSerifDevanagari = Noto_Serif_Devanagari({
@@ -128,17 +128,15 @@ export default function RootLayout({
         <SchemaMarkup />
       </head>
       <body
-        className={`${inter.variable} ${playfairDisplay.variable} ${notoSerifDevanagari.variable} antialiased`}
+        className={`${inter.variable} ${fraunces.variable} ${notoSerifDevanagari.variable} antialiased`}
       >
         <LanguageProvider>
           <ChatProvider>
-            <LoadingScreen />
             <Navbar />
             <main>{children}</main>
             <Footer />
             <KumbhSahayak />
             <SOSButton />
-            <WhatsAppButton />
             <Analytics />
           </ChatProvider>
         </LanguageProvider>

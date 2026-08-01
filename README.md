@@ -5,11 +5,34 @@ A premium, Hindu-first, devotional + informational website for the Nashik Kumbh 
 ## Tech Stack
 
 - **Framework:** Next.js 14 (App Router)
-- **Styling:** Tailwind CSS with custom sacred color palette
-- **Animations:** Framer Motion
+- **Styling:** Tailwind CSS, folk-art design system (`tailwind.config.ts` + `src/app/globals.css`)
+- **Illustration:** hand-built SVG in `src/components/art` — no photography needed
 - **Icons:** Lucide React
-- **Fonts:** Playfair Display (headings), Inter (body), Tiro Devanagari Hindi (Sanskrit/Hindi)
-- **Deployment:** Vercel-ready
+- **Fonts:** Fraunces (Latin headings), Inter (body), Noto Serif Devanagari (Hindi/Marathi headings)
+- **Deployment:** Vercel, auto-deploys from `main`
+
+## Yatra — the walking audio guide
+
+`/yatra` is a free, self-guided walking tour of Nashik and Trimbakeshwar. Three
+trails, twelve stops, narrated in Marathi, Hindi and English. With **Flow** on,
+the browser watches GPS and starts a stop's story when the walker arrives.
+
+Playback prefers the recorded MP3s in `public/audio/yatra/`, and falls back to
+the device's own speech synthesis if a file is missing or will not play.
+
+### Regenerating the narration
+
+Story copy lives in `src/data/yatraData.ts`. After editing it:
+
+```bash
+pip3 install edge-tts --break-system-packages
+node_modules/.bin/sucrase-node scripts/export-narration.ts   # copy -> scripts/narration.json
+python3 scripts/generate_voiceover.py                        # narration.json -> public/audio
+```
+
+`generate_voiceover.py` skips files that already exist; pass `--force` to
+re-render everything, or `--locale mr` to redo one language. Voices are
+`en-IN-Neerja`, `hi-IN-Swara` and `mr-IN-Aarohi`.
 
 ## Pages
 

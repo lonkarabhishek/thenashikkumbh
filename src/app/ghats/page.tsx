@@ -27,30 +27,30 @@ export default function GhatsPage() {
   const { t } = useLanguage();
 
   return (
-    <main className="min-h-screen bg-[#0D0906]">
+    <main className="min-h-screen bg-[#0B1220]">
       {/* ════════════════════════ (a) HERO BANNER ════════════════════════════ */}
-      <section className="relative overflow-hidden min-h-[60vh] flex items-center justify-center bg-gradient-to-b from-[#1a0a00] via-[#110804] to-[#0D0906]">
+      <section className="relative overflow-hidden min-h-[60vh] flex items-center justify-center bg-gradient-to-b from-[#1a0a00] via-[#110804] to-[#0B1220]">
         {/* Pattern overlay */}
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
 
         {/* Radial gold glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.08)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,162,39,0.08)_0%,transparent_70%)]" />
 
         {/* Floating Devanagari decorations */}
         <div
-          className="absolute top-20 right-12 font-devanagari text-[130px] text-[#D4A843]/[0.04] select-none pointer-events-none"
+          className="absolute top-20 right-12 font-devanagari text-[130px] text-[#C9A227]/[0.04] select-none pointer-events-none"
           aria-hidden="true"
         >
           गोदावरी
         </div>
         <div
-          className="absolute bottom-16 left-8 font-devanagari text-[100px] text-[#D4A843]/[0.03] select-none pointer-events-none"
+          className="absolute bottom-16 left-8 font-devanagari text-[100px] text-[#C9A227]/[0.03] select-none pointer-events-none"
           aria-hidden="true"
         >
           घाट
         </div>
         <div
-          className="absolute top-1/3 left-1/4 font-devanagari text-[70px] text-[#D4A843]/[0.03] select-none pointer-events-none"
+          className="absolute top-1/3 left-1/4 font-devanagari text-[70px] text-[#C9A227]/[0.03] select-none pointer-events-none"
           aria-hidden="true"
         >
           ॐ
@@ -60,16 +60,16 @@ export default function GhatsPage() {
           {/* Sacred Devanagari text */}
           <p
             className="font-devanagari text-lg md:text-xl tracking-[0.3em] mb-6"
-            style={{ color: "#D4A843" }}
+            style={{ color: "#C9A227" }}
           >
             ॥ जय गोदावरी मैया ॥
           </p>
 
           {/* Decorative gold line above */}
           <div className="flex items-center justify-center gap-4 mb-8">
-            <span className="h-px w-20 md:w-32 bg-gradient-to-r from-transparent to-[#D4A843]/60" />
-            <span className="w-2 h-2 rounded-full bg-[#D4A843]/40" />
-            <span className="h-px w-20 md:w-32 bg-gradient-to-l from-transparent to-[#D4A843]/60" />
+            <span className="h-px w-20 md:w-32 bg-gradient-to-r from-transparent to-[#C9A227]/60" />
+            <span className="w-2 h-2 rounded-full bg-[#C9A227]/40" />
+            <span className="h-px w-20 md:w-32 bg-gradient-to-l from-transparent to-[#C9A227]/60" />
           </div>
 
           {/* Title */}
@@ -80,18 +80,18 @@ export default function GhatsPage() {
           {/* Subtitle */}
           <p
             className="text-lg md:text-2xl font-heading italic max-w-2xl mx-auto tracking-wide"
-            style={{ color: "rgba(212, 168, 67, 0.7)" }}
+            style={{ color: "rgba(201,162,39, 0.7)" }}
           >
             {t(translations.ghatsPage.heroSubtitle)}
           </p>
 
           {/* Decorative gold line below */}
           <div className="mt-8 flex items-center justify-center gap-4">
-            <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#D4A843]/50" />
-            <span className="font-devanagari text-sm tracking-[0.2em]" style={{ color: "#D4A843" }}>
+            <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#C9A227]/50" />
+            <span className="font-devanagari text-sm tracking-[0.2em]" style={{ color: "#C9A227" }}>
               जय गोदावरी
             </span>
-            <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#D4A843]/50" />
+            <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#C9A227]/50" />
           </div>
         </div>
       </section>
@@ -103,7 +103,7 @@ export default function GhatsPage() {
         <div className="relative section-container">
           {/* Section header */}
           <div className="text-center mb-14">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D4A843] mb-3">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A227] mb-3">
               {t(translations.ghatsPage.introSub)}
             </p>
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-[#1a0a00] mb-4">
@@ -121,7 +121,7 @@ export default function GhatsPage() {
 
           <div className="max-w-4xl mx-auto space-y-7">
             <p className="text-lg md:text-xl leading-relaxed text-temple-700">
-              <span className="text-5xl float-left mr-3 mt-1 font-heading font-bold leading-none" style={{ color: "#D4A843" }}>
+              <span className="text-5xl float-left mr-3 mt-1 font-heading font-bold leading-none" style={{ color: "#C9A227" }}>
                 {t(translations.ghatsPage.introP1).charAt(0).toUpperCase()}
               </span>
               {t(translations.ghatsPage.introP1).slice(1)}
@@ -155,7 +155,7 @@ export default function GhatsPage() {
             {isDark && (
               <>
                 <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.04)_0%,transparent_60%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,162,39,0.04)_0%,transparent_60%)]" />
               </>
             )}
             {!isDark && (
@@ -184,21 +184,21 @@ export default function GhatsPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
 
                     {/* Gold border accent */}
-                    <div className="absolute inset-0 rounded-2xl border border-[#D4A843]/20" />
+                    <div className="absolute inset-0 rounded-2xl border border-[#C9A227]/20" />
 
                     {/* Ghat name + Devanagari overlay */}
                     <div className="absolute inset-0 flex flex-col items-center justify-end z-10 p-6 pb-8">
                       <div
                         className="font-devanagari text-6xl md:text-7xl mb-4 select-none"
-                        style={{ color: "rgba(212,168,67,0.4)" }}
+                        style={{ color: "rgba(201,162,39,0.4)" }}
                       >
                         {ghatDevanagari[index % ghatDevanagari.length]}
                       </div>
-                      <Waves className="w-10 h-10 mb-3" style={{ color: "rgba(212,168,67,0.6)" }} />
+                      <Waves className="w-10 h-10 mb-3" style={{ color: "rgba(201,162,39,0.6)" }} />
                       <h3 className="text-3xl md:text-4xl font-heading font-bold text-cream-100 text-center drop-shadow-lg">
                         {t(ghat.name)}
                       </h3>
-                      <p className="text-sm mt-2 tracking-[0.2em] uppercase" style={{ color: "rgba(212,168,67,0.7)" }}>
+                      <p className="text-sm mt-2 tracking-[0.2em] uppercase" style={{ color: "rgba(201,162,39,0.7)" }}>
                         {t(ghat.subtitle)}
                       </p>
                     </div>
@@ -214,9 +214,9 @@ export default function GhatsPage() {
                   <span
                     className="inline-block w-fit text-xs font-bold px-3 py-1 rounded-full uppercase tracking-[0.15em] mb-4 border"
                     style={{
-                      color: "#D4A843",
-                      borderColor: isDark ? "rgba(212,168,67,0.2)" : "rgba(212,168,67,0.3)",
-                      backgroundColor: isDark ? "rgba(212,168,67,0.06)" : "rgba(212,168,67,0.08)",
+                      color: "#C9A227",
+                      borderColor: isDark ? "rgba(201,162,39,0.2)" : "rgba(201,162,39,0.3)",
+                      backgroundColor: isDark ? "rgba(201,162,39,0.06)" : "rgba(201,162,39,0.08)",
                     }}
                   >
                     {t(translations.ghatsPage.ghatOf)} {index + 1} {t(translations.ghatsPage.of)} {ghatsI18n.length}
@@ -231,7 +231,7 @@ export default function GhatsPage() {
                   </h3>
                   <p
                     className="font-heading font-medium italic text-lg mb-6"
-                    style={{ color: "#D4A843" }}
+                    style={{ color: "#C9A227" }}
                   >
                     {t(ghat.subtitle)}
                   </p>
@@ -265,8 +265,8 @@ export default function GhatsPage() {
                             <span
                               className="mt-2 w-2 h-2 rounded-full shrink-0"
                               style={{
-                                background: "linear-gradient(135deg, #D4A843, #B8922D)",
-                                boxShadow: "0 0 6px rgba(212,168,67,0.3)",
+                                background: "linear-gradient(135deg, #C9A227, #B8922D)",
+                                boxShadow: "0 0 6px rgba(201,162,39,0.3)",
                               }}
                             />
                             <span className="text-base">{t(ritual)}</span>
@@ -281,10 +281,10 @@ export default function GhatsPage() {
                     className={`flex items-center gap-3 pt-5 mb-4 border-t ${
                       isDark
                         ? "border-white/[0.06] text-cream-300/50"
-                        : "border-[#D4A843]/10 text-temple-500"
+                        : "border-[#C9A227]/10 text-temple-500"
                     }`}
                   >
-                    <Clock className="w-5 h-5 shrink-0" style={{ color: "#D4A843" }} />
+                    <Clock className="w-5 h-5 shrink-0" style={{ color: "#C9A227" }} />
                     <span className="text-base font-medium">
                       {t(ghat.timings)}
                     </span>
@@ -298,7 +298,7 @@ export default function GhatsPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 font-semibold transition-all duration-300 group w-fit hover:gap-3"
-                    style={{ color: "#D4A843" }}
+                    style={{ color: "#C9A227" }}
                   >
                     <Navigation className="w-4 h-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                     <span>{t(translations.ghatsPage.viewOnMap)}</span>
@@ -317,7 +317,7 @@ export default function GhatsPage() {
         <div className="relative section-container">
           {/* Section header */}
           <div className="text-center mb-14">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#D4A843] mb-3">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A227] mb-3">
               {t(translations.ghatsPage.howToReachSub)}
             </p>
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-[#1a0a00] mb-4">
@@ -355,17 +355,17 @@ export default function GhatsPage() {
               return (
                 <div
                   key={i}
-                  className="relative rounded-2xl p-7 border border-[#D4A843]/10 bg-white group hover:border-[#D4A843]/25 hover:shadow-lg transition-all duration-500 overflow-hidden"
+                  className="relative rounded-2xl p-7 border border-[#C9A227]/10 bg-white group hover:border-[#C9A227]/25 hover:shadow-lg transition-all duration-500 overflow-hidden"
                 >
                   {/* Subtle hover gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#D4A843]/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#C9A227]/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   <div className="relative z-10">
                     <div
-                      className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 border border-[#D4A843]/15 group-hover:border-[#D4A843]/30 transition-all duration-500"
-                      style={{ background: "rgba(212,168,67,0.06)" }}
+                      className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 border border-[#C9A227]/15 group-hover:border-[#C9A227]/30 transition-all duration-500"
+                      style={{ background: "rgba(201,162,39,0.06)" }}
                     >
-                      <Icon className="w-7 h-7" style={{ color: "#D4A843" }} />
+                      <Icon className="w-7 h-7" style={{ color: "#C9A227" }} />
                     </div>
                     <h3 className="font-heading font-bold text-[#1a0a00] text-xl mb-3">
                       {t(item.title)}
@@ -381,14 +381,14 @@ export default function GhatsPage() {
 
           {/* Pilgrim Tip callout */}
           <div
-            className="max-w-3xl mx-auto mt-10 relative overflow-hidden rounded-2xl p-7 border border-[#D4A843]/20"
+            className="max-w-3xl mx-auto mt-10 relative overflow-hidden rounded-2xl p-7 border border-[#C9A227]/20"
             style={{
-              background: "linear-gradient(135deg, rgba(212,168,67,0.06) 0%, rgba(212,168,67,0.02) 100%)",
+              background: "linear-gradient(135deg, rgba(201,162,39,0.06) 0%, rgba(201,162,39,0.02) 100%)",
             }}
           >
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#D4A843] to-[#D4A843]/30" />
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#C9A227] to-[#C9A227]/30" />
             <p className="text-temple-700 leading-relaxed">
-              <span className="font-heading font-bold" style={{ color: "#D4A843" }}>
+              <span className="font-heading font-bold" style={{ color: "#C9A227" }}>
                 {t(translations.ghatsPage.pilgrimTipLabel)}
               </span>{" "}
               {t(translations.ghatsPage.pilgrimTip)}
@@ -402,22 +402,22 @@ export default function GhatsPage() {
         <div
           className="relative py-24 md:py-32"
           style={{
-            background: "linear-gradient(135deg, #1a0a00 0%, #0D0906 50%, #1a0a00 100%)",
+            background: "linear-gradient(135deg, #1a0a00 0%, #0B1220 50%, #1a0a00 100%)",
           }}
         >
           {/* Subtle pattern */}
           <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.06)_0%,transparent_70%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,162,39,0.06)_0%,transparent_70%)]" />
 
           <div className="relative section-container text-center">
             <div>
               {/* Decorative divider */}
               <div className="flex items-center justify-center gap-4 mb-8">
-                <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#D4A843]/40" />
-                <span className="font-devanagari text-sm" style={{ color: "#D4A843" }}>
+                <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#C9A227]/40" />
+                <span className="font-devanagari text-sm" style={{ color: "#C9A227" }}>
                   ॐ
                 </span>
-                <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#D4A843]/40" />
+                <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#C9A227]/40" />
               </div>
 
               <h2 className="text-3xl md:text-5xl font-heading font-bold text-cream-100 mb-6 leading-tight">

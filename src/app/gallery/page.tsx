@@ -89,22 +89,22 @@ export default function GalleryPage() {
       {/* ═══════════════════ HERO BANNER ═══════════════════ */}
       <section className="section-dark relative overflow-hidden py-32 pt-40">
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,168,67,0.08)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,162,39,0.08)_0%,transparent_60%)]" />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute right-20 top-10 h-72 w-72 rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(212,168,67,0.06) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(201,162,39,0.06) 0%, transparent 70%)" }}
         />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute bottom-10 left-10 h-64 w-64 rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(212,168,67,0.04) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(201,162,39,0.04) 0%, transparent 70%)" }}
         />
 
         <div className="section-container relative z-10 text-center">
           <span
             className="mb-4 inline-block font-devanagari text-5xl drop-shadow-lg"
-            style={{ color: "#D4A843", textShadow: "0 0 30px rgba(212,168,67,0.4)" }}
+            style={{ color: "#C9A227", textShadow: "0 0 30px rgba(201,162,39,0.4)" }}
             aria-hidden="true"
           >
             दर्शन
@@ -148,14 +148,14 @@ export default function GalleryPage() {
                 style={
                   activeFilter === cat.key
                     ? {
-                        background: "linear-gradient(135deg, #D4A843, #B8922D)",
-                        color: "#0D0906",
-                        boxShadow: "0 4px 20px rgba(212,168,67,0.3)",
+                        background: "linear-gradient(135deg, #C9A227, #B8922D)",
+                        color: "#0B1220",
+                        boxShadow: "0 4px 20px rgba(201,162,39,0.3)",
                       }
                     : {
                         background: "transparent",
-                        color: "rgba(212,168,67,0.6)",
-                        border: "1px solid rgba(212,168,67,0.15)",
+                        color: "rgba(201,162,39,0.6)",
+                        border: "1px solid rgba(201,162,39,0.15)",
                       }
                 }
               >
@@ -176,8 +176,8 @@ export default function GalleryPage() {
                   onClick={() => openLightbox(index)}
                 >
                   <div
-                    className={`relative ${heightClasses[heightIndex]} overflow-hidden rounded-2xl shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-[#D4A843]/10 group-hover:-translate-y-1`}
-                    style={{ border: "1px solid rgba(212,168,67,0.08)" }}
+                    className={`relative ${heightClasses[heightIndex]} overflow-hidden rounded-2xl shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-[#C9A227]/10 group-hover:-translate-y-1`}
+                    style={{ border: "1px solid rgba(201,162,39,0.08)" }}
                   >
                     {/* Actual image */}
                     <img
@@ -192,9 +192,9 @@ export default function GalleryPage() {
                       <span
                         className="mb-2 inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold backdrop-blur-sm"
                         style={{
-                          background: "rgba(212,168,67,0.15)",
-                          color: "#D4A843",
-                          border: "1px solid rgba(212,168,67,0.2)",
+                          background: "rgba(201,162,39,0.15)",
+                          color: "#C9A227",
+                          border: "1px solid rgba(201,162,39,0.2)",
                         }}
                       >
                         {t(image.category)}
@@ -209,8 +209,8 @@ export default function GalleryPage() {
                       <div
                         className="rounded-full p-3 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
                         style={{
-                          background: "rgba(212,168,67,0.2)",
-                          border: "1px solid rgba(212,168,67,0.3)",
+                          background: "rgba(201,162,39,0.2)",
+                          border: "1px solid rgba(201,162,39,0.3)",
                         }}
                       >
                         <Search className="h-6 w-6 text-white" />
@@ -245,7 +245,7 @@ export default function GalleryPage() {
           {/* Dark overlay */}
           <div
             className="absolute inset-0"
-            style={{ background: "rgba(13,9,6,0.95)", backdropFilter: "blur(20px)" }}
+            style={{ background: "rgba(11,18,32,0.95)", backdropFilter: "blur(20px)" }}
             onClick={closeLightbox}
           />
 
@@ -253,9 +253,9 @@ export default function GalleryPage() {
           <button
             onClick={closeLightbox}
             className="absolute right-6 top-6 z-10 rounded-full p-2 transition-colors"
-            style={{ color: "rgba(212,168,67,0.6)" }}
-            onMouseEnter={(e) => { (e.target as HTMLElement).style.color = "#D4A843"; }}
-            onMouseLeave={(e) => { (e.target as HTMLElement).style.color = "rgba(212,168,67,0.6)"; }}
+            style={{ color: "rgba(201,162,39,0.6)" }}
+            onMouseEnter={(e) => { (e.target as HTMLElement).style.color = "#C9A227"; }}
+            onMouseLeave={(e) => { (e.target as HTMLElement).style.color = "rgba(201,162,39,0.6)"; }}
             aria-label="Close lightbox"
           >
             <X className="h-8 w-8" />
@@ -265,14 +265,14 @@ export default function GalleryPage() {
           <button
             onClick={goToPrev}
             className="absolute left-4 z-10 rounded-full p-3 transition-all md:left-8"
-            style={{ color: "rgba(212,168,67,0.6)", background: "rgba(212,168,67,0.05)" }}
+            style={{ color: "rgba(201,162,39,0.6)", background: "rgba(201,162,39,0.05)" }}
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.color = "#D4A843";
-              (e.currentTarget as HTMLElement).style.background = "rgba(212,168,67,0.1)";
+              (e.currentTarget as HTMLElement).style.color = "#C9A227";
+              (e.currentTarget as HTMLElement).style.background = "rgba(201,162,39,0.1)";
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.color = "rgba(212,168,67,0.6)";
-              (e.currentTarget as HTMLElement).style.background = "rgba(212,168,67,0.05)";
+              (e.currentTarget as HTMLElement).style.color = "rgba(201,162,39,0.6)";
+              (e.currentTarget as HTMLElement).style.background = "rgba(201,162,39,0.05)";
             }}
             aria-label="Previous image"
           >
@@ -283,14 +283,14 @@ export default function GalleryPage() {
           <button
             onClick={goToNext}
             className="absolute right-4 z-10 rounded-full p-3 transition-all md:right-8"
-            style={{ color: "rgba(212,168,67,0.6)", background: "rgba(212,168,67,0.05)" }}
+            style={{ color: "rgba(201,162,39,0.6)", background: "rgba(201,162,39,0.05)" }}
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.color = "#D4A843";
-              (e.currentTarget as HTMLElement).style.background = "rgba(212,168,67,0.1)";
+              (e.currentTarget as HTMLElement).style.color = "#C9A227";
+              (e.currentTarget as HTMLElement).style.background = "rgba(201,162,39,0.1)";
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.color = "rgba(212,168,67,0.6)";
-              (e.currentTarget as HTMLElement).style.background = "rgba(212,168,67,0.05)";
+              (e.currentTarget as HTMLElement).style.color = "rgba(201,162,39,0.6)";
+              (e.currentTarget as HTMLElement).style.background = "rgba(201,162,39,0.05)";
             }}
             aria-label="Next image"
           >
@@ -304,7 +304,7 @@ export default function GalleryPage() {
           >
             <div
               className="relative h-[60vh] w-full overflow-hidden rounded-2xl md:h-[70vh]"
-              style={{ border: "1px solid rgba(212,168,67,0.15)", background: "#0D0906" }}
+              style={{ border: "1px solid rgba(201,162,39,0.15)", background: "#0B1220" }}
             >
               {filteredImages[selectedIndex] && (
                 <img
@@ -320,8 +320,8 @@ export default function GalleryPage() {
               <span
                 className="mb-2 inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold backdrop-blur-sm"
                 style={{
-                  background: "rgba(212,168,67,0.15)",
-                  color: "#D4A843",
+                  background: "rgba(201,162,39,0.15)",
+                  color: "#C9A227",
                 }}
               >
                 {filteredImages[selectedIndex] && t(filteredImages[selectedIndex].category)}
@@ -341,20 +341,20 @@ export default function GalleryPage() {
       <section
         className="relative overflow-hidden py-20 md:py-28"
         style={{
-          background: "linear-gradient(135deg, #1a0a00 0%, #0D0906 50%, #1a0a00 100%)",
+          background: "linear-gradient(135deg, #1a0a00 0%, #0B1220 50%, #1a0a00 100%)",
         }}
       >
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,67,0.06)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,162,39,0.06)_0%,transparent_70%)]" />
 
         <div
           className="section-container relative z-10 text-center"
         >
           <div
             className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full"
-            style={{ background: "rgba(212,168,67,0.1)", border: "1px solid rgba(212,168,67,0.2)" }}
+            style={{ background: "rgba(201,162,39,0.1)", border: "1px solid rgba(201,162,39,0.2)" }}
           >
-            <Share2 className="h-8 w-8" style={{ color: "#D4A843" }} />
+            <Share2 className="h-8 w-8" style={{ color: "#C9A227" }} />
           </div>
 
           <h2 className="font-heading text-3xl font-bold text-cream-100 md:text-5xl">
@@ -373,7 +373,7 @@ export default function GalleryPage() {
               <Camera className="h-5 w-5" />
               {t(translations.galleryPage.shareOnInstagram)}
             </a>
-            <span className="text-sm" style={{ color: "rgba(212,168,67,0.5)" }}>
+            <span className="text-sm" style={{ color: "rgba(201,162,39,0.5)" }}>
               #NashikKumbh2027
             </span>
           </div>

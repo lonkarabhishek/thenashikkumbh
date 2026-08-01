@@ -96,13 +96,13 @@ export default function BlogPage() {
       {/* ════════════════════ HERO BANNER ════════════════════ */}
       <section className="section-dark relative overflow-hidden py-32 pt-40">
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,168,67,0.08)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,162,39,0.08)_0%,transparent_60%)]" />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute left-20 top-20 h-72 w-72 rounded-full"
           style={{
             background:
-              "radial-gradient(circle, rgba(212,168,67,0.06) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(201,162,39,0.06) 0%, transparent 70%)",
           }}
         />
         <div
@@ -110,7 +110,7 @@ export default function BlogPage() {
           className="pointer-events-none absolute bottom-10 right-20 h-64 w-64 rounded-full"
           style={{
             background:
-              "radial-gradient(circle, rgba(212,168,67,0.04) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(201,162,39,0.04) 0%, transparent 70%)",
           }}
         />
 
@@ -118,8 +118,8 @@ export default function BlogPage() {
           <span
             className="mb-4 inline-block font-devanagari text-5xl drop-shadow-lg"
             style={{
-              color: "#D4A843",
-              textShadow: "0 0 30px rgba(212,168,67,0.4)",
+              color: "#C9A227",
+              textShadow: "0 0 30px rgba(201,162,39,0.4)",
             }}
             aria-hidden="true"
           >
@@ -154,9 +154,9 @@ export default function BlogPage() {
           >
             <div className="mb-4 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold"
               style={{
-                background: "rgba(212,168,67,0.1)",
-                color: "#D4A843",
-                border: "1px solid rgba(212,168,67,0.2)",
+                background: "rgba(201,162,39,0.1)",
+                color: "#C9A227",
+                border: "1px solid rgba(201,162,39,0.2)",
               }}
             >
               <Newspaper className="h-4 w-4" />
@@ -186,9 +186,9 @@ export default function BlogPage() {
                   style={
                     isActive
                       ? {
-                          background: colors?.bg ?? "rgba(212,168,67,0.15)",
-                          color: colors?.text ?? "#D4A843",
-                          border: `1px solid ${colors?.border ?? "rgba(212,168,67,0.3)"}`,
+                          background: colors?.bg ?? "rgba(201,162,39,0.15)",
+                          color: colors?.text ?? "#C9A227",
+                          border: `1px solid ${colors?.border ?? "rgba(201,162,39,0.3)"}`,
                         }
                       : {
                           background: "rgba(255,255,255,0.04)",
@@ -210,7 +210,7 @@ export default function BlogPage() {
               className="absolute left-6 top-0 hidden h-full w-px md:block"
               style={{
                 background:
-                  "linear-gradient(to bottom, transparent, rgba(212,168,67,0.3) 5%, rgba(212,168,67,0.3) 95%, transparent)",
+                  "linear-gradient(to bottom, transparent, rgba(201,162,39,0.3) 5%, rgba(201,162,39,0.3) 95%, transparent)",
               }}
             />
 
@@ -240,7 +240,7 @@ export default function BlogPage() {
                         style={{
                           background:
                             "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))",
-                          border: "1px solid rgba(212,168,67,0.08)",
+                          border: "1px solid rgba(201,162,39,0.08)",
                         }}
                       >
                         {/* Hover glow */}
@@ -260,7 +260,7 @@ export default function BlogPage() {
                               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                               loading="lazy"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[rgba(13,9,6,0.4)] md:bg-gradient-to-l md:from-transparent md:to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[rgba(11,18,32,0.4)] md:bg-gradient-to-l md:from-transparent md:to-transparent" />
                           </div>
 
                           <div className="flex-1 p-6 md:p-8">
@@ -301,13 +301,13 @@ export default function BlogPage() {
                                 <span className="text-cream-300/30">
                                   {t(bn.source)}:
                                 </span>
-                                <span style={{ color: "#D4A843" }} className="font-medium">
+                                <span style={{ color: "#C9A227" }} className="font-medium">
                                   {article.source}
                                 </span>
                               </div>
                               <span
                                 className="inline-flex items-center gap-1 text-sm font-semibold transition-transform duration-300 group-hover:translate-x-1"
-                                style={{ color: "#D4A843" }}
+                                style={{ color: "#C9A227" }}
                               >
                                 {t(bp.readMore)} <ArrowRight className="h-3.5 w-3.5" />
                               </span>
@@ -332,8 +332,8 @@ export default function BlogPage() {
             className="rounded-2xl p-8 text-center md:p-12"
             style={{
               background:
-                "linear-gradient(135deg, rgba(212,168,67,0.08), rgba(212,168,67,0.03))",
-              border: "1px solid rgba(212,168,67,0.15)",
+                "linear-gradient(135deg, rgba(201,162,39,0.08), rgba(201,162,39,0.03))",
+              border: "1px solid rgba(201,162,39,0.15)",
             }}
           >
             <h3 className="mb-4 font-heading text-2xl font-bold text-cream-100 md:text-3xl">
@@ -349,7 +349,7 @@ export default function BlogPage() {
                 className="flex-1 rounded-lg px-4 py-3 text-cream-100 placeholder-cream-300/30 transition-all focus:outline-none focus:ring-2"
                 style={{
                   background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(212,168,67,0.12)",
+                  border: "1px solid rgba(201,162,39,0.12)",
                 }}
               />
               <button

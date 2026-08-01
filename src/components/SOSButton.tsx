@@ -1,110 +1,123 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
-  ShieldAlert,
-  Phone,
+  AlertTriangle,
+  Check,
+  Clock,
   Flame,
   Heart,
-  MapPin,
-  X,
-  AlertTriangle,
-  Siren,
-  Navigation,
   LogOut,
   Loader2,
-  Clock,
+  MapPin,
+  Navigation,
+  Phone,
+  PhoneCall,
+  ShieldAlert,
+  Siren,
+  Users,
+  X,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { sosUI } from "@/i18n/sosTranslations";
 import { kumbhZones, KumbhZone, ExitPoint } from "@/data/exitRoutes";
 import { haversineKm, googleMapsWalkUrl } from "@/lib/geo";
 
-interface EmergencyContact {
-  key: string;
-  number: string;
-  icon: React.ReactNode;
-  color: string;
-}
+/**
+ * Emergency panel.
+ *
+ * Designed for the worst case: one hand, bright sunlight, no patience, possibly
+ * panicking. So there is exactly one thing at the top — call 112 — and
+ * everything else is secondary. Every action works without a data connection
+ * except the two that explicitly need GPS.
+ */
+
+const SECONDARY_CONTACTS = [
+  { key: "ambulance", number: "108", Icon: Heart, tone: "#F08A7E" },
+  { key: "fire", number: "101", Icon: Flame, tone: "#F4B36C" },
+  { key: "womenHelpline", number: "1091", Icon: Users, tone: "#C4A5E8" },
+  { key: "kumbhControl", number: "0253-2305555", Icon: Siren, tone: "#DFCC78" },
+  { key: "disasterMgmt", number: "0253-2571202", Icon: AlertTriangle, tone: "#A6D8D4" },
+] as const;
 
 export default function SOSButton() {
   const { locale } = useLanguage();
   const [open, setOpen] = useState(false);
-  const [show, setShow] = useState(false);
-  const [locationMsg, setLocationMsg] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  const [locationState, setLocationState] = useState<"idle" | "sharing" | "shared" | "error">(
+    "idle"
+  );
   const [exitLoading, setExitLoading] = useState(false);
-  const [nearestZone, setNearestZone] = useState<KumbhZone | null>(null);
-  const [userCoords, setUserCoords] = useState<{
-    lat: number;
-    lng: number;
-  } | null>(null);
   const [exitError, setExitError] = useState(false);
+  const [nearestZone, setNearestZone] = useState<KumbhZone | null>(null);
+  const [userCoords, setUserCoords] = useState<{ lat: number; lng: number } | null>(null);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(true), 2000);
+    const timer = setTimeout(() => setMounted(true), 1200);
     return () => clearTimeout(timer);
   }, []);
 
-  const toggle = useCallback(() => {
-    setOpen((prev) => !prev);
-    setLocationMsg(null);
-  }, []);
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [open]);
 
   const closePanel = useCallback(() => {
     setOpen(false);
-    setLocationMsg(null);
+    setLocationState("idle");
     setNearestZone(null);
     setUserCoords(null);
     setExitError(false);
     setExitLoading(false);
   }, []);
 
-  const handleCall = useCallback((number: string) => {
-    window.location.href = `tel:${number}`;
-  }, []);
-
-  const handleShareLocation = useCallback(() => {
+  const shareLocation = useCallback(() => {
     if (!navigator.geolocation) {
-      setLocationMsg(sosUI.locationError[locale]);
+      setLocationState("error");
       return;
     }
 
+    setLocationState("sharing");
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         const { latitude, longitude } = position.coords;
-        const locationText = `Emergency! My location: https://maps.google.com/?q=${latitude},${longitude}`;
+        const text = `Emergency! My location: https://maps.google.com/?q=${latitude},${longitude}`;
 
         if (navigator.share) {
           try {
-            await navigator.share({
-              title: "SOS Location",
-              text: locationText,
-            });
-            setLocationMsg(sosUI.locationShared[locale]);
+            await navigator.share({ title: "SOS Location", text });
+            setLocationState("shared");
+            return;
           } catch {
-            try {
-              await navigator.clipboard.writeText(locationText);
-              setLocationMsg(sosUI.locationShared[locale]);
-            } catch {
-              setLocationMsg(sosUI.locationError[locale]);
-            }
-          }
-        } else {
-          try {
-            await navigator.clipboard.writeText(locationText);
-            setLocationMsg(sosUI.locationShared[locale]);
-          } catch {
-            setLocationMsg(sosUI.locationError[locale]);
+            // Share sheet dismissed — fall through to the clipboard.
           }
         }
-      },
-      () => {
-        setLocationMsg(sosUI.locationError[locale]);
-      }
-    );
-  }, [locale]);
 
-  const handleFindExit = useCallback(() => {
+        try {
+          await navigator.clipboard.writeText(text);
+          setLocationState("shared");
+        } catch {
+          setLocationState("error");
+        }
+      },
+      () => setLocationState("error"),
+      { enableHighAccuracy: true, timeout: 12000 }
+    );
+  }, []);
+
+  const findExit = useCallback(() => {
     if (!navigator.geolocation) {
       setExitError(true);
       return;
@@ -121,14 +134,8 @@ export default function SOSButton() {
 
         let minDist = Infinity;
         let closest: KumbhZone | null = null;
-
         for (const zone of kumbhZones) {
-          const dist = haversineKm(
-            latitude,
-            longitude,
-            zone.centerLat,
-            zone.centerLng
-          );
+          const dist = haversineKm(latitude, longitude, zone.centerLat, zone.centerLng);
           if (dist < minDist) {
             minDist = dist;
             closest = zone;
@@ -142,313 +149,163 @@ export default function SOSButton() {
         setExitError(true);
         setExitLoading(false);
       },
-      { enableHighAccuracy: true, timeout: 10000 }
+      { enableHighAccuracy: true, timeout: 12000 }
     );
   }, []);
 
-  const contacts: EmergencyContact[] = [
-    {
-      key: "police",
-      number: "112",
-      icon: <ShieldAlert className="w-5 h-5" />,
-      color: "#3B82F6",
-    },
-    {
-      key: "ambulance",
-      number: "108",
-      icon: <Heart className="w-5 h-5" />,
-      color: "#EF4444",
-    },
-    {
-      key: "fire",
-      number: "101",
-      icon: <Flame className="w-5 h-5" />,
-      color: "#F59E0B",
-    },
-    {
-      key: "womenHelpline",
-      number: "1091",
-      icon: <Phone className="w-5 h-5" />,
-      color: "#A855F7",
-    },
-    {
-      key: "kumbhControl",
-      number: "0253-2305555",
-      icon: <Siren className="w-5 h-5" />,
-      color: "#D4A843",
-    },
-    {
-      key: "disasterMgmt",
-      number: "0253-2571202",
-      icon: <AlertTriangle className="w-5 h-5" />,
-      color: "#EAB308",
-    },
-  ];
-
-  if (!show) return null;
+  if (!mounted) return null;
 
   return (
     <>
-      {/* SOS Trigger Button */}
+      {/* ── Trigger ──────────────────────────────────────── */}
       <button
-        onClick={toggle}
-        aria-label="SOS Emergency"
-        className="sos-pulse fixed top-20 right-4 z-40 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-white font-bold text-xs uppercase shadow-lg transition-transform duration-200 hover:scale-105 active:scale-95 cursor-pointer"
+        onClick={() => setOpen(true)}
+        aria-label={sosUI.title[locale]}
+        className="group fixed bottom-5 right-4 z-40 flex items-center gap-2.5 rounded-full pl-4 pr-5 py-3.5 font-bold uppercase tracking-wide text-white transition-transform duration-200 hover:scale-[1.04] active:scale-95 sm:bottom-7 sm:right-7"
         style={{
-          background: "linear-gradient(135deg, #DC2626, #EF4444)",
-          boxShadow: "0 4px 20px rgba(220, 38, 38, 0.5)",
+          background: "linear-gradient(140deg, #D9432F 0%, #C1272D 55%, #7C1D1A 100%)",
+          boxShadow: "0 8px 30px -6px rgba(193, 39, 45, 0.6), 0 2px 6px rgba(124, 29, 26, 0.4)",
         }}
       >
-        <ShieldAlert className="w-4 h-4" />
-        SOS
+        <span className="relative flex h-6 w-6 items-center justify-center">
+          <span className="sos-pulse absolute inset-0 rounded-full" />
+          <ShieldAlert className="relative h-5 w-5" />
+        </span>
+        <span className="text-sm">SOS</span>
       </button>
 
-      {/* Emergency Panel */}
+      {/* ── Panel ────────────────────────────────────────── */}
       {open && (
-        <>
-          {/* Backdrop */}
+        <div className="fixed inset-0 z-[70]" role="dialog" aria-modal="true" aria-label={sosUI.title[locale]}>
           <div
-            className="fixed inset-0 z-[59] transition-opacity duration-300"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+            className="absolute inset-0 bg-indigo-900/75 backdrop-blur-sm"
             onClick={closePanel}
           />
 
-          {/* Panel */}
-          <div
-            className="fixed z-[60] w-[calc(100%-2rem)] max-w-sm max-h-[80vh] rounded-2xl overflow-hidden flex flex-col transition-all duration-300"
-            style={{
-              background: "rgba(26, 21, 16, 0.98)",
-              border: "1px solid rgba(220, 38, 38, 0.3)",
-              boxShadow: "0 25px 60px rgba(0, 0, 0, 0.6)",
-              left: "50%",
-              transform: "translateX(-50%)",
-              bottom: "1rem",
-            }}
-          >
+          <div className="absolute inset-x-0 bottom-0 flex max-h-[92vh] flex-col overflow-hidden rounded-t-3xl bg-indigo-800 text-cream-100 shadow-lift sm:inset-y-0 sm:left-auto sm:right-0 sm:max-h-none sm:w-[26rem] sm:rounded-none sm:rounded-l-3xl">
             {/* Header */}
-            <div className="flex items-start justify-between px-5 pt-5 pb-3 flex-shrink-0">
+            <div className="flex shrink-0 items-start justify-between gap-4 border-b border-cream-200/10 px-6 pb-5 pt-6">
               <div>
-                <h3
-                  className="text-lg font-bold"
-                  style={{ color: "#EF4444" }}
-                >
-                  {sosUI.title[locale]}
-                </h3>
-                <p
-                  className="text-sm mt-0.5"
-                  style={{ color: "rgba(255, 255, 255, 0.6)" }}
-                >
-                  {sosUI.subtitle[locale]}
-                </p>
+                <h2 className="font-heading text-2xl text-cream-50">{sosUI.title[locale]}</h2>
+                <p className="mt-1 text-sm text-cream-200/60">{sosUI.keepCalm[locale]}</p>
               </div>
               <button
                 onClick={closePanel}
-                aria-label="Close"
-                className="p-1 rounded-lg transition-colors duration-200 hover:bg-white/10 cursor-pointer"
+                aria-label={sosUI.close[locale]}
+                className="-mr-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-cream-200/60 transition-colors hover:bg-cream-50/10 hover:text-cream-50"
               >
-                <X
-                  className="w-5 h-5"
-                  style={{ color: "rgba(255, 255, 255, 0.5)" }}
-                />
+                <X className="h-5 w-5" />
               </button>
             </div>
 
-            {/* Red Divider */}
-            <div
-              className="mx-5 h-px flex-shrink-0"
-              style={{
-                background:
-                  "linear-gradient(90deg, transparent, #DC2626, transparent)",
-              }}
-            />
+            <div className="flex-1 overflow-y-auto scrollbar-hide px-6 py-6">
+              {/* The one action that matters */}
+              <a
+                href="tel:112"
+                className="flex items-center gap-4 rounded-2xl px-5 py-4 text-white transition-transform duration-150 active:scale-[0.98]"
+                style={{
+                  background: "linear-gradient(140deg, #D9432F, #C1272D)",
+                  boxShadow: "0 10px 30px -10px rgba(193, 39, 45, 0.8)",
+                }}
+              >
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/15">
+                  <PhoneCall className="h-6 w-6" />
+                </span>
+                <span className="min-w-0">
+                  <span className="block font-heading text-xl leading-tight">
+                    {sosUI.callNow[locale]}
+                  </span>
+                  <span className="mt-0.5 block text-xs text-white/75">
+                    {sosUI.callNowHint[locale]}
+                  </span>
+                </span>
+              </a>
 
-            {/* Scrollable content */}
-            <div className="flex-1 overflow-y-auto scrollbar-hide">
-              {/* Emergency Contacts Grid */}
-              <div className="grid grid-cols-2 gap-2.5 px-5 py-4">
-                {contacts.map((contact) => (
-                  <button
-                    key={contact.key}
-                    onClick={() => handleCall(contact.number)}
-                    className="flex flex-col items-center gap-1.5 p-3 rounded-xl transition-all duration-200 hover:scale-[1.03] active:scale-95 cursor-pointer"
-                    style={{
-                      background: "rgba(255, 255, 255, 0.04)",
-                      border: "1px solid rgba(255, 255, 255, 0.08)",
-                    }}
-                  >
-                    <div
-                      className="w-10 h-10 rounded-full flex items-center justify-center"
-                      style={{
-                        backgroundColor: `${contact.color}20`,
-                        color: contact.color,
-                      }}
-                    >
-                      {contact.icon}
-                    </div>
-                    <span
-                      className="text-xs font-semibold text-center leading-tight"
-                      style={{ color: "rgba(255, 255, 255, 0.9)" }}
-                    >
-                      {sosUI[contact.key][locale]}
-                    </span>
-                    <span
-                      className="text-[11px] font-mono"
-                      style={{ color: "rgba(255, 255, 255, 0.45)" }}
-                    >
-                      {contact.number}
-                    </span>
-                  </button>
-                ))}
-              </div>
-
-              {/* Share My Location Button */}
-              <div className="px-5 pb-3">
+              {/* Location + exit */}
+              <div className="mt-5 space-y-3">
                 <button
-                  onClick={handleShareLocation}
-                  className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-[1.02] active:scale-95 cursor-pointer"
-                  style={{
-                    background: "linear-gradient(135deg, #D4A843, #B8922E)",
-                    color: "#0D0906",
-                    boxShadow: "0 4px 15px rgba(212, 168, 67, 0.3)",
-                  }}
+                  onClick={shareLocation}
+                  disabled={locationState === "sharing"}
+                  className="flex w-full items-center gap-3.5 rounded-2xl border border-gold-500/30 bg-gold-500/10 px-4 py-3.5 text-left transition-colors hover:bg-gold-500/15 disabled:opacity-60"
                 >
-                  <MapPin className="w-4 h-4" />
-                  {sosUI.shareLocation[locale]}
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold-500/20 text-gold-300">
+                    {locationState === "sharing" ? (
+                      <Loader2 className="h-5 w-5 animate-spin" />
+                    ) : locationState === "shared" ? (
+                      <Check className="h-5 w-5" />
+                    ) : (
+                      <MapPin className="h-5 w-5" />
+                    )}
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block font-semibold text-cream-50">
+                      {locationState === "shared"
+                        ? sosUI.locationShared[locale]
+                        : sosUI.shareLocation[locale]}
+                    </span>
+                    <span className="mt-0.5 block text-xs text-cream-200/55">
+                      {locationState === "error"
+                        ? sosUI.locationError[locale]
+                        : sosUI.sharingHint[locale]}
+                    </span>
+                  </span>
                 </button>
 
-                {locationMsg && (
-                  <p
-                    className="text-xs text-center mt-2 transition-opacity duration-300"
-                    style={{
-                      color:
-                        locationMsg === sosUI.locationShared[locale]
-                          ? "#4ADE80"
-                          : "#EF4444",
-                    }}
-                  >
-                    {locationMsg}
-                  </p>
-                )}
-              </div>
-
-              {/* Find Nearest Exit Button */}
-              <div className="px-5 pb-3">
                 <button
-                  onClick={handleFindExit}
+                  onClick={findExit}
                   disabled={exitLoading}
-                  className="w-full flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-[1.02] active:scale-95 cursor-pointer"
-                  style={{
-                    background: exitLoading
-                      ? "rgba(34, 197, 94, 0.3)"
-                      : "linear-gradient(135deg, #22C55E, #16A34A)",
-                    color: "#FFFFFF",
-                    boxShadow: exitLoading
-                      ? "none"
-                      : "0 4px 15px rgba(34, 197, 94, 0.3)",
-                  }}
+                  className="flex w-full items-center gap-3.5 rounded-2xl border border-river-400/30 bg-river-500/10 px-4 py-3.5 text-left transition-colors hover:bg-river-500/15 disabled:opacity-60"
                 >
-                  {exitLoading ? (
-                    <Loader2 className="w-4 h-4 animate-spin" />
-                  ) : (
-                    <LogOut className="w-4 h-4" />
-                  )}
-                  {exitLoading
-                    ? sosUI.locatingGps[locale]
-                    : sosUI.findNearestExit[locale]}
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-river-500/20 text-river-200">
+                    {exitLoading ? (
+                      <Loader2 className="h-5 w-5 animate-spin" />
+                    ) : (
+                      <LogOut className="h-5 w-5" />
+                    )}
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block font-semibold text-cream-50">
+                      {exitLoading ? sosUI.locatingGps[locale] : sosUI.findNearestExit[locale]}
+                    </span>
+                    <span className="mt-0.5 block text-xs text-cream-200/55">
+                      {exitError ? sosUI.exitRouteError[locale] : sosUI.exitHint[locale]}
+                    </span>
+                  </span>
                 </button>
-
-                {exitError && (
-                  <p
-                    className="text-xs text-center mt-2"
-                    style={{ color: "#EF4444" }}
-                  >
-                    {sosUI.exitRouteError[locale]}
-                  </p>
-                )}
               </div>
 
-              {/* Exit Route Cards */}
+              {/* Exit routes */}
               {nearestZone && userCoords && (
-                <div className="px-5 pb-4">
-                  {/* Zone heading */}
-                  <div className="flex items-center gap-2 mb-3">
-                    <div
-                      className="w-2 h-2 rounded-full"
-                      style={{ background: "#22C55E" }}
-                    />
-                    <p
-                      className="text-xs font-semibold"
-                      style={{ color: "#22C55E" }}
-                    >
-                      {sosUI.nearestZone[locale]}:{" "}
-                      {nearestZone.name[locale]}
+                <div className="mt-6">
+                  <div className="flex items-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-river-300" />
+                    <p className="text-xs font-semibold text-river-200">
+                      {sosUI.nearestZone[locale]}: {nearestZone.name[locale]}
                     </p>
                   </div>
 
-                  {/* Section title */}
-                  <p
-                    className="text-sm font-bold mb-2"
-                    style={{ color: "rgba(255,255,255,0.9)" }}
-                  >
+                  <h3 className="mt-3 font-heading text-lg text-cream-50">
                     {sosUI.exitRoutesTitle[locale]}
-                  </p>
+                  </h3>
 
-                  {/* Exit cards */}
-                  <div className="space-y-2">
+                  <ul className="mt-3 space-y-2.5">
                     {nearestZone.exits.map((exit: ExitPoint) => (
-                      <div
+                      <li
                         key={exit.id}
-                        className="rounded-xl p-3"
-                        style={{
-                          background: "rgba(34, 197, 94, 0.06)",
-                          border: "1px solid rgba(34, 197, 94, 0.15)",
-                        }}
+                        className="rounded-xl border border-river-400/20 bg-river-500/[0.07] p-4"
                       >
-                        <p
-                          className="text-sm font-semibold mb-1"
-                          style={{ color: "rgba(255,255,255,0.9)" }}
-                        >
-                          {exit.name[locale]}
-                        </p>
-
-                        <p
-                          className="text-xs mb-1"
-                          style={{ color: "rgba(255,255,255,0.6)" }}
-                        >
-                          {exit.direction[locale]}
-                        </p>
-
-                        <p
-                          className="text-xs mb-2"
-                          style={{ color: "rgba(255,255,255,0.45)" }}
-                        >
-                          <MapPin
-                            className="w-3 h-3 inline mr-1"
-                            style={{ color: "#D4A843" }}
-                          />
+                        <p className="font-semibold text-cream-50">{exit.name[locale]}</p>
+                        <p className="mt-1 text-xs text-cream-200/60">{exit.direction[locale]}</p>
+                        <p className="mt-1.5 flex items-center gap-1.5 text-xs text-cream-200/45">
+                          <MapPin className="h-3 w-3 text-gold-400" />
                           {exit.landmark[locale]}
                         </p>
 
-                        {/* Walk time + Navigate */}
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-1">
-                            <Clock
-                              className="w-3 h-3"
-                              style={{
-                                color: "rgba(255,255,255,0.5)",
-                              }}
-                            />
-                            <span
-                              className="text-xs"
-                              style={{
-                                color: "rgba(255,255,255,0.5)",
-                              }}
-                            >
-                              ~{exit.walkMinutes}{" "}
-                              {sosUI.walkTime[locale]}
-                            </span>
-                          </div>
-
+                        <div className="mt-3 flex items-center justify-between">
+                          <span className="flex items-center gap-1.5 text-xs text-cream-200/55">
+                            <Clock className="h-3 w-3" />~{exit.walkMinutes}{" "}
+                            {sosUI.walkTime[locale]}
+                          </span>
                           <a
                             href={googleMapsWalkUrl(
                               userCoords.lat,
@@ -458,44 +315,65 @@ export default function SOSButton() {
                             )}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 hover:scale-105 active:scale-95"
-                            style={{
-                              background: "rgba(34, 197, 94, 0.15)",
-                              color: "#22C55E",
-                              border:
-                                "1px solid rgba(34, 197, 94, 0.3)",
-                            }}
+                            className="flex items-center gap-1.5 rounded-full border border-river-400/40 bg-river-500/15 px-3 py-1.5 text-xs font-semibold text-river-100 transition-colors hover:bg-river-500/25"
                           >
-                            <Navigation className="w-3 h-3" />
+                            <Navigation className="h-3 w-3" />
                             {sosUI.navigate[locale]}
                           </a>
                         </div>
-                      </div>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
 
-                  {/* Disclaimer */}
-                  <p
-                    className="text-[10px] mt-3 leading-relaxed"
-                    style={{ color: "rgba(255,255,255,0.35)" }}
-                  >
+                  <p className="mt-3 text-[0.6875rem] leading-relaxed text-cream-200/40">
                     {sosUI.exitDisclaimer[locale]}
                   </p>
                 </div>
               )}
 
-              {/* Help Text */}
-              <div className="px-5 pb-5 pt-1">
-                <p
-                  className="text-xs leading-relaxed"
-                  style={{ color: "rgba(255, 255, 255, 0.4)" }}
-                >
-                  {sosUI.helpText[locale]}
+              {/* Other helplines */}
+              <h3 className="mt-8 text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-cream-200/45">
+                {sosUI.otherNumbers[locale]}
+              </h3>
+              <ul className="mt-3 space-y-1.5">
+                {SECONDARY_CONTACTS.map(({ key, number, Icon, tone }) => (
+                  <li key={key}>
+                    <a
+                      href={`tel:${number}`}
+                      className="flex items-center gap-3.5 rounded-xl px-3 py-3 transition-colors hover:bg-cream-50/[0.06]"
+                    >
+                      <span
+                        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full"
+                        style={{ backgroundColor: `${tone}22`, color: tone }}
+                      >
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-sm font-medium text-cream-100">
+                          {sosUI[key][locale]}
+                        </span>
+                      </span>
+                      <span className="shrink-0 font-mono text-sm text-cream-200/60">{number}</span>
+                      <Phone className="h-3.5 w-3.5 shrink-0 text-cream-200/35" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Lost someone */}
+              <div className="mt-8 rounded-2xl border border-cream-200/10 bg-cream-50/[0.04] p-5">
+                <h3 className="font-heading text-lg text-cream-50">{sosUI.lostTitle[locale]}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-cream-200/60">
+                  {sosUI.lostBody[locale]}
                 </p>
               </div>
+
+              <p className="mt-6 text-xs leading-relaxed text-cream-200/40">
+                {sosUI.helpText[locale]}
+              </p>
             </div>
           </div>
-        </>
+        </div>
       )}
     </>
   );

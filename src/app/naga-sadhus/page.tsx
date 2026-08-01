@@ -29,7 +29,7 @@ const diagramPoints: DiagramPoint[] = [
 /* ─────────────── order accent colors ─────────────── */
 
 const orderColors = [
-  { border: "#D4A843", bg: "rgba(212,168,67,0.08)", glow: "rgba(212,168,67,0.15)" },
+  { border: "#C9A227", bg: "rgba(201,162,39,0.08)", glow: "rgba(201,162,39,0.15)" },
   { border: "#3B82F6", bg: "rgba(59,130,246,0.08)", glow: "rgba(59,130,246,0.15)" },
   { border: "#8B5CF6", bg: "rgba(139,92,246,0.08)", glow: "rgba(139,92,246,0.15)" },
 ];
@@ -56,20 +56,20 @@ export default function NagaSadhusPage() {
         </div>
 
         {/* Dark gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0D0906] via-[#0D0906]/70 to-[#0D0906]/30" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0D0906]/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-[#0B1220]/70 to-[#0B1220]/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1220]/60 to-transparent" />
 
         {/* Floating Devanagari watermarks */}
         <span
           className="pointer-events-none absolute right-[10%] top-[20%] select-none font-devanagari text-[8rem] font-bold leading-none md:text-[12rem]"
-          style={{ color: "rgba(212,168,67,0.04)" }}
+          style={{ color: "rgba(201,162,39,0.04)" }}
           aria-hidden="true"
         >
           नागा
         </span>
         <span
           className="pointer-events-none absolute bottom-[25%] left-[5%] select-none font-devanagari text-[6rem] font-bold leading-none md:text-[9rem]"
-          style={{ color: "rgba(212,168,67,0.03)" }}
+          style={{ color: "rgba(201,162,39,0.03)" }}
           aria-hidden="true"
         >
           त्रिशूल
@@ -81,7 +81,7 @@ export default function NagaSadhusPage() {
             {/* Sacred text */}
             <p
               className="mb-4 font-devanagari text-lg tracking-widest md:text-xl"
-              style={{ color: "rgba(212,168,67,0.7)" }}
+              style={{ color: "rgba(201,162,39,0.7)" }}
             >
               {t(ns.heroSacred)}
             </p>
@@ -129,9 +129,9 @@ export default function NagaSadhusPage() {
             <span
               className="mb-3 inline-block rounded-full px-4 py-1.5 text-sm font-semibold"
               style={{
-                background: "rgba(212,168,67,0.1)",
+                background: "rgba(201,162,39,0.1)",
                 color: "#B8941F",
-                border: "1px solid rgba(212,168,67,0.2)",
+                border: "1px solid rgba(201,162,39,0.2)",
               }}
             >
               {t(ns.whoSub)}
@@ -143,7 +143,7 @@ export default function NagaSadhusPage() {
 
           {/* Paragraphs with drop cap on first */}
           <div>
-            <p className="mb-6 text-lg leading-relaxed text-[#3D2E1A]/80 first-letter:float-left first-letter:mr-3 first-letter:font-heading first-letter:text-5xl first-letter:font-bold first-letter:leading-none first-letter:text-[#D4A843] md:text-xl">
+            <p className="mb-6 text-lg leading-relaxed text-[#3D2E1A]/80 first-letter:float-left first-letter:mr-3 first-letter:font-heading first-letter:text-5xl first-letter:font-bold first-letter:leading-none first-letter:text-[#C9A227] md:text-xl">
               {t(ns.whoP1)}
             </p>
             <p className="mb-8 text-lg leading-relaxed text-[#3D2E1A]/70 md:text-xl">
@@ -156,9 +156,9 @@ export default function NagaSadhusPage() {
             className="rounded-xl p-6 md:p-8"
             style={{
               background:
-                "linear-gradient(135deg, rgba(212,168,67,0.08), rgba(212,168,67,0.03))",
-              border: "1px solid rgba(212,168,67,0.2)",
-              borderLeft: "4px solid #D4A843",
+                "linear-gradient(135deg, rgba(201,162,39,0.08), rgba(201,162,39,0.03))",
+              border: "1px solid rgba(201,162,39,0.2)",
+              borderLeft: "4px solid #C9A227",
             }}
           >
             <p className="font-devanagari text-xl font-semibold italic text-[#B8941F] md:text-2xl">
@@ -178,9 +178,9 @@ export default function NagaSadhusPage() {
             <span
               className="mb-3 inline-block rounded-full px-4 py-1.5 text-sm font-semibold"
               style={{
-                background: "rgba(212,168,67,0.1)",
-                color: "#D4A843",
-                border: "1px solid rgba(212,168,67,0.2)",
+                background: "rgba(201,162,39,0.1)",
+                color: "#C9A227",
+                border: "1px solid rgba(201,162,39,0.2)",
               }}
             >
               {t(ns.historySub)}
@@ -197,7 +197,7 @@ export default function NagaSadhusPage() {
               className="absolute left-6 top-0 hidden h-full w-px md:block"
               style={{
                 background:
-                  "linear-gradient(to bottom, transparent, rgba(212,168,67,0.4) 10%, rgba(212,168,67,0.4) 90%, transparent)",
+                  "linear-gradient(to bottom, transparent, rgba(201,162,39,0.4) 10%, rgba(201,162,39,0.4) 90%, transparent)",
               }}
             />
 
@@ -214,9 +214,9 @@ export default function NagaSadhusPage() {
                 <div
                   className="absolute left-4 top-2 hidden h-5 w-5 -translate-x-1/2 rounded-full md:block"
                   style={{
-                    background: "rgba(212,168,67,0.15)",
-                    border: "2px solid #D4A843",
-                    boxShadow: "0 0 16px rgba(212,168,67,0.3)",
+                    background: "rgba(201,162,39,0.15)",
+                    border: "2px solid #C9A227",
+                    boxShadow: "0 0 16px rgba(201,162,39,0.3)",
                   }}
                 />
 
@@ -226,14 +226,14 @@ export default function NagaSadhusPage() {
                   style={{
                     background:
                       "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))",
-                    border: "1px solid rgba(212,168,67,0.1)",
+                    border: "1px solid rgba(201,162,39,0.1)",
                   }}
                 >
                   <span
                     className="mb-2 inline-block rounded-full px-3 py-1 text-xs font-bold"
                     style={{
-                      background: "rgba(212,168,67,0.12)",
-                      color: "#D4A843",
+                      background: "rgba(201,162,39,0.12)",
+                      color: "#C9A227",
                     }}
                   >
                     {t(era.label)}
@@ -259,7 +259,7 @@ export default function NagaSadhusPage() {
           className="absolute left-0 right-0 top-0 h-px"
           style={{
             background:
-              "linear-gradient(to right, transparent, rgba(212,168,67,0.15), transparent)",
+              "linear-gradient(to right, transparent, rgba(201,162,39,0.15), transparent)",
           }}
         />
 
@@ -269,9 +269,9 @@ export default function NagaSadhusPage() {
             <span
               className="mb-3 inline-block rounded-full px-4 py-1.5 text-sm font-semibold"
               style={{
-                background: "rgba(212,168,67,0.1)",
-                color: "#D4A843",
-                border: "1px solid rgba(212,168,67,0.2)",
+                background: "rgba(201,162,39,0.1)",
+                color: "#C9A227",
+                border: "1px solid rgba(201,162,39,0.2)",
               }}
             >
               {t(ns.attireSub)}
@@ -301,13 +301,13 @@ export default function NagaSadhusPage() {
                 className="pointer-events-none absolute inset-0 rounded-2xl"
                 style={{
                   boxShadow:
-                    "inset 0 0 80px rgba(0,0,0,0.5), 0 0 60px rgba(212,168,67,0.05)",
+                    "inset 0 0 80px rgba(0,0,0,0.5), 0 0 60px rgba(201,162,39,0.05)",
                 }}
               />
               {/* Subtle gold border */}
               <div
                 className="pointer-events-none absolute inset-0 rounded-2xl"
-                style={{ border: "1px solid rgba(212,168,67,0.12)" }}
+                style={{ border: "1px solid rgba(201,162,39,0.12)" }}
               />
             </div>
 
@@ -330,13 +330,13 @@ export default function NagaSadhusPage() {
                   <div
                     className="h-2.5 w-2.5 rounded-full"
                     style={{
-                      background: "#D4A843",
-                      boxShadow: "0 0 10px rgba(212,168,67,0.6)",
+                      background: "#C9A227",
+                      boxShadow: "0 0 10px rgba(201,162,39,0.6)",
                     }}
                   />
                   <div
                     className="absolute inset-[-3px] animate-ping rounded-full"
-                    style={{ background: "rgba(212,168,67,0.2)" }}
+                    style={{ background: "rgba(201,162,39,0.2)" }}
                   />
                 </div>
 
@@ -346,8 +346,8 @@ export default function NagaSadhusPage() {
                   style={{
                     background:
                       pt.side === "left"
-                        ? "linear-gradient(to left, rgba(212,168,67,0.5), rgba(212,168,67,0.05))"
-                        : "linear-gradient(to right, rgba(212,168,67,0.5), rgba(212,168,67,0.05))",
+                        ? "linear-gradient(to left, rgba(201,162,39,0.5), rgba(201,162,39,0.05))"
+                        : "linear-gradient(to right, rgba(201,162,39,0.5), rgba(201,162,39,0.05))",
                   }}
                 />
 
@@ -359,7 +359,7 @@ export default function NagaSadhusPage() {
                 >
                   <span
                     className="font-heading text-sm font-bold uppercase tracking-wide"
-                    style={{ color: "#D4A843" }}
+                    style={{ color: "#C9A227" }}
                   >
                     {t(ns[pt.titleKey])}
                   </span>
@@ -380,7 +380,7 @@ export default function NagaSadhusPage() {
                 className="pointer-events-none absolute inset-0 rounded-2xl"
                 style={{
                   boxShadow: "inset 0 0 60px rgba(0,0,0,0.4)",
-                  border: "1px solid rgba(212,168,67,0.1)",
+                  border: "1px solid rgba(201,162,39,0.1)",
                 }}
               />
               {/* Numbered dots */}
@@ -391,9 +391,9 @@ export default function NagaSadhusPage() {
                   style={{
                     top: `${pt.top}%`,
                     left: `${pt.imgLeft}%`,
-                    background: "rgba(212,168,67,0.9)",
-                    color: "#0D0906",
-                    boxShadow: "0 0 10px rgba(212,168,67,0.5)",
+                    background: "rgba(201,162,39,0.9)",
+                    color: "#0B1220",
+                    boxShadow: "0 0 10px rgba(201,162,39,0.5)",
                   }}
                 >
                   {i + 1}
@@ -409,14 +409,14 @@ export default function NagaSadhusPage() {
                   className="flex items-start gap-3 rounded-lg p-3"
                   style={{
                     background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(212,168,67,0.08)",
+                    border: "1px solid rgba(201,162,39,0.08)",
                   }}
                 >
                   <span
                     className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold"
                     style={{
-                      background: "rgba(212,168,67,0.15)",
-                      color: "#D4A843",
+                      background: "rgba(201,162,39,0.15)",
+                      color: "#C9A227",
                     }}
                   >
                     {i + 1}
@@ -424,7 +424,7 @@ export default function NagaSadhusPage() {
                   <div>
                     <h4
                       className="font-heading text-base font-bold"
-                      style={{ color: "#D4A843" }}
+                      style={{ color: "#C9A227" }}
                     >
                       {t(ns[pt.titleKey])}
                     </h4>
@@ -443,7 +443,7 @@ export default function NagaSadhusPage() {
           className="absolute bottom-0 left-0 right-0 h-px"
           style={{
             background:
-              "linear-gradient(to right, transparent, rgba(212,168,67,0.15), transparent)",
+              "linear-gradient(to right, transparent, rgba(201,162,39,0.15), transparent)",
           }}
         />
       </section>
@@ -458,9 +458,9 @@ export default function NagaSadhusPage() {
             <span
               className="mb-3 inline-block rounded-full px-4 py-1.5 text-sm font-semibold"
               style={{
-                background: "rgba(212,168,67,0.1)",
-                color: "#D4A843",
-                border: "1px solid rgba(212,168,67,0.2)",
+                background: "rgba(201,162,39,0.1)",
+                color: "#C9A227",
+                border: "1px solid rgba(201,162,39,0.2)",
               }}
             >
               {t(ns.ordersSub)}
@@ -529,9 +529,9 @@ export default function NagaSadhusPage() {
             <span
               className="mb-3 inline-block rounded-full px-4 py-1.5 text-sm font-semibold"
               style={{
-                background: "rgba(212,168,67,0.1)",
+                background: "rgba(201,162,39,0.1)",
                 color: "#B8941F",
-                border: "1px solid rgba(212,168,67,0.2)",
+                border: "1px solid rgba(201,162,39,0.2)",
               }}
             >
               {t(ns.roleSub)}
@@ -553,14 +553,14 @@ export default function NagaSadhusPage() {
                 className="relative rounded-xl p-6 transition-all duration-500 hover:-translate-y-1 md:p-8"
                 style={{
                   background: "rgba(255,255,255,0.7)",
-                  border: "1px solid rgba(212,168,67,0.12)",
+                  border: "1px solid rgba(201,162,39,0.12)",
                   boxShadow: "0 2px 20px rgba(0,0,0,0.03)",
                 }}
               >
                 {/* Big number */}
                 <span
                   className="mb-4 block font-heading text-5xl font-bold"
-                  style={{ color: "rgba(212,168,67,0.2)" }}
+                  style={{ color: "rgba(201,162,39,0.2)" }}
                 >
                   0{i + 1}
                 </span>
@@ -584,8 +584,8 @@ export default function NagaSadhusPage() {
             className="rounded-2xl p-8 text-center md:p-14"
             style={{
               background:
-                "linear-gradient(135deg, rgba(212,168,67,0.1), rgba(212,168,67,0.03))",
-              border: "1px solid rgba(212,168,67,0.2)",
+                "linear-gradient(135deg, rgba(201,162,39,0.1), rgba(201,162,39,0.03))",
+              border: "1px solid rgba(201,162,39,0.2)",
             }}
           >
             <h3 className="mb-4 font-heading text-2xl font-bold text-cream-100 md:text-4xl">

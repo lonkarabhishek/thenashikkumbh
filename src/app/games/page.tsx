@@ -638,14 +638,14 @@ export default function GamesPage() {
 
   /* ─── Shared card style ─── */
   const cardStyle = {
-    background: "rgba(26,21,16,0.9)",
+    background: "rgba(18,29,49,0.9)",
     backdropFilter: "blur(20px)",
-    border: "1px solid rgba(212,168,67,0.15)",
+    border: "1px solid rgba(201,162,39,0.15)",
   };
 
   const goldBtnStyle = {
-    background: "linear-gradient(135deg, #D4A843, #FFD700)",
-    boxShadow: "0 4px 20px rgba(212,168,67,0.3)",
+    background: "linear-gradient(135deg, #C9A227, #D2B94F)",
+    boxShadow: "0 4px 20px rgba(201,162,39,0.3)",
   };
 
   return (
@@ -653,17 +653,17 @@ export default function GamesPage() {
       {/* ═══════════════════ HERO BANNER ═══════════════════ */}
       <section className="section-dark relative overflow-hidden py-32 pt-40">
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,168,67,0.08)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,162,39,0.08)_0%,transparent_60%)]" />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute right-20 top-10 h-72 w-72 rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(212,168,67,0.06) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(201,162,39,0.06) 0%, transparent 70%)" }}
         />
 
         <div className="section-container relative z-10 text-center">
           <span
             className="mb-4 inline-block font-devanagari text-5xl drop-shadow-lg"
-            style={{ color: "#D4A843", textShadow: "0 0 30px rgba(212,168,67,0.4)" }}
+            style={{ color: "#C9A227", textShadow: "0 0 30px rgba(201,162,39,0.4)" }}
             aria-hidden="true"
           >
             क्रीडा
@@ -694,7 +694,7 @@ export default function GamesPage() {
             <Link href="/kumbhrun" className="group block">
               <div className="relative overflow-hidden rounded-2xl border border-amber-500/30 bg-gradient-to-r from-amber-900/80 via-yellow-800/60 to-amber-900/80 p-6 md:p-8 shadow-xl shadow-amber-900/20 transition-all duration-500 hover:border-amber-400/50 hover:shadow-2xl hover:shadow-amber-500/20">
                 {/* Decorative background glow */}
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,215,0,0.1)_0%,transparent_70%)] opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(210,185,79,0.1)_0%,transparent_70%)] opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full bg-amber-500/10 blur-3xl group-hover:bg-amber-400/15 transition-all duration-500" />
                 <div className="absolute -left-8 -bottom-8 h-32 w-32 rounded-full bg-yellow-500/10 blur-3xl group-hover:bg-yellow-400/15 transition-all duration-500" />
 
@@ -734,14 +734,14 @@ export default function GamesPage() {
         <div
           aria-hidden="true"
           className="pointer-events-none absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(212,168,67,0.06) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(201,162,39,0.06) 0%, transparent 70%)" }}
         />
         <div className="section-container relative z-10">
           {/* Section Header */}
           <div className="mb-12 text-center">
             <div className="mb-4 flex items-center justify-center gap-3">
-              <Calendar className="h-6 w-6" style={{ color: "#D4A843" }} />
-              <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#D4A843]">
+              <Calendar className="h-6 w-6" style={{ color: "#C9A227" }} />
+              <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#C9A227]">
                 {t(translations.gamesPage.dailyDay)} #{dayNumber}
               </span>
               {dailyStreak > 0 && (
@@ -799,7 +799,7 @@ export default function GamesPage() {
                     ))}
                   </div>
 
-                  <p className="mb-2 font-heading text-4xl font-bold" style={{ color: "#D4A843" }}>
+                  <p className="mb-2 font-heading text-4xl font-bold" style={{ color: "#C9A227" }}>
                     {dailyScore}<span className="text-xl text-cream-300/40"> / 5</span>
                   </p>
                   <p className="mb-6 text-sm text-cream-300/50">
@@ -810,7 +810,7 @@ export default function GamesPage() {
                   <div className="flex flex-col items-center gap-4">
                     <button
                       onClick={handleDailyShare}
-                      className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                      className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0B1220] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
                       style={goldBtnStyle}
                     >
                       {dailyCopied ? (
@@ -839,11 +839,11 @@ export default function GamesPage() {
                   <div
                     className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
                     style={{
-                      background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
-                      border: "1px solid rgba(212,168,67,0.3)",
+                      background: "linear-gradient(135deg, rgba(201,162,39,0.2) 0%, rgba(201,162,39,0.05) 100%)",
+                      border: "1px solid rgba(201,162,39,0.3)",
                     }}
                   >
-                    <Calendar className="h-10 w-10" style={{ color: "#D4A843" }} />
+                    <Calendar className="h-10 w-10" style={{ color: "#C9A227" }} />
                   </div>
                   <p className="mb-2 text-lg font-semibold text-cream-100">
                     {t(translations.gamesPage.dailyDay)} #{dayNumber}
@@ -853,7 +853,7 @@ export default function GamesPage() {
                   </p>
                   <button
                     onClick={() => setDailyStarted(true)}
-                    className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97]"
+                    className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full px-8 py-3 text-sm font-semibold text-[#0B1220] shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97]"
                     style={goldBtnStyle}
                   >
                     <Sparkles className="h-4 w-4" />
@@ -876,7 +876,7 @@ export default function GamesPage() {
                               ? "bg-green-500"
                               : "bg-red-500"
                             : i === dailyQ
-                              ? "bg-[#D4A843]"
+                              ? "bg-[#C9A227]"
                               : "bg-white/10"
                         }`}
                       />
@@ -898,8 +898,8 @@ export default function GamesPage() {
                       const showCorrect = dailyAnswered && isCorrect;
                       const showWrong = dailyAnswered && isSelected && !isCorrect;
 
-                      let borderColor = "rgba(212,168,67,0.12)";
-                      let bgColor = "rgba(26,21,16,0.6)";
+                      let borderColor = "rgba(201,162,39,0.12)";
+                      let bgColor = "rgba(18,29,49,0.6)";
                       if (showCorrect) {
                         borderColor = "rgba(34,197,94,0.6)";
                         bgColor = "rgba(34,197,94,0.1)";
@@ -932,8 +932,8 @@ export default function GamesPage() {
                       </span>
                       <button
                         onClick={handleDailyNext}
-                        className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
-                        style={{ background: "linear-gradient(135deg, #D4A843, #FFD700)" }}
+                        className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0B1220] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                        style={{ background: "linear-gradient(135deg, #C9A227, #D2B94F)" }}
                       >
                         {dailyQ < 4 ? t(translations.gamesPage.nextQuestion) : t(translations.gamesPage.seeResults)}
                         <ChevronRight className="h-4 w-4" />
@@ -949,11 +949,11 @@ export default function GamesPage() {
                   <div
                     className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full"
                     style={{
-                      background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
-                      border: "2px solid rgba(212,168,67,0.3)",
+                      background: "linear-gradient(135deg, rgba(201,162,39,0.2) 0%, rgba(201,162,39,0.05) 100%)",
+                      border: "2px solid rgba(201,162,39,0.3)",
                     }}
                   >
-                    <Trophy className="h-12 w-12" style={{ color: "#FFD700" }} />
+                    <Trophy className="h-12 w-12" style={{ color: "#D2B94F" }} />
                   </div>
 
                   <h3 className="mb-4 text-xl font-bold text-cream-100">
@@ -976,7 +976,7 @@ export default function GamesPage() {
                     ))}
                   </div>
 
-                  <p className="mb-2 font-heading text-5xl font-bold" style={{ color: "#D4A843" }}>
+                  <p className="mb-2 font-heading text-5xl font-bold" style={{ color: "#C9A227" }}>
                     {dailyScore}<span className="text-2xl text-cream-300/40"> / 5</span>
                   </p>
                   <p className="mb-8 text-sm text-cream-300/50">
@@ -986,7 +986,7 @@ export default function GamesPage() {
                   <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                     <button
                       onClick={handleDailyShare}
-                      className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                      className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0B1220] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
                       style={goldBtnStyle}
                     >
                       {dailyCopied ? (
@@ -1017,7 +1017,7 @@ export default function GamesPage() {
       {/* ═══════════════════ SACRED DIVIDER ═══════════════════ */}
       <div className="section-dark flex items-center justify-center py-4">
         <div className="gold-line w-24" />
-        <span className="mx-4 font-devanagari text-2xl" style={{ color: "#D4A843", textShadow: "0 0 20px rgba(212,168,67,0.3)" }} aria-hidden="true">ॐ</span>
+        <span className="mx-4 font-devanagari text-2xl" style={{ color: "#C9A227", textShadow: "0 0 20px rgba(201,162,39,0.3)" }} aria-hidden="true">ॐ</span>
         <div className="gold-line w-24" />
       </div>
 
@@ -1027,8 +1027,8 @@ export default function GamesPage() {
         <div className="section-container relative z-10">
           <div className="mb-12 text-center">
             <div className="mb-4 flex items-center justify-center gap-2">
-              <Shuffle className="h-6 w-6" style={{ color: "#D4A843" }} />
-              <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#D4A843]">
+              <Shuffle className="h-6 w-6" style={{ color: "#C9A227" }} />
+              <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#C9A227]">
                 {t(translations.gamesPage.scrambleTitle)}
               </span>
             </div>
@@ -1051,18 +1051,18 @@ export default function GamesPage() {
                   <div
                     className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
                     style={{
-                      background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
-                      border: "1px solid rgba(212,168,67,0.3)",
+                      background: "linear-gradient(135deg, rgba(201,162,39,0.2) 0%, rgba(201,162,39,0.05) 100%)",
+                      border: "1px solid rgba(201,162,39,0.3)",
                     }}
                   >
-                    <Shuffle className="h-10 w-10" style={{ color: "#D4A843" }} />
+                    <Shuffle className="h-10 w-10" style={{ color: "#C9A227" }} />
                   </div>
                   <p className="mb-8 text-cream-300/60">
                     {t(translations.gamesPage.scrambleSubtitle)}
                   </p>
                   <button
                     onClick={() => setScrambleStarted(true)}
-                    className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                    className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0B1220] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
                     style={goldBtnStyle}
                   >
                     <Sparkles className="h-4 w-4" />
@@ -1086,8 +1086,8 @@ export default function GamesPage() {
                         key={i}
                         className="flex h-12 w-12 items-center justify-center rounded-xl text-xl font-bold uppercase text-cream-100"
                         style={{
-                          background: "rgba(212,168,67,0.1)",
-                          border: "1px solid rgba(212,168,67,0.25)",
+                          background: "rgba(201,162,39,0.1)",
+                          border: "1px solid rgba(201,162,39,0.25)",
                         }}
                       >
                         {letter}
@@ -1112,14 +1112,14 @@ export default function GamesPage() {
                         onChange={(e) => setScrambleInput(e.target.value)}
                         onKeyDown={(e) => e.key === "Enter" && handleScrambleSubmit()}
                         placeholder={t(translations.gamesPage.scrambleTypeAnswer)}
-                        className="flex-1 rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all focus:border-[#D4A843]/50 focus:ring-1 focus:ring-[#D4A843]/30"
-                        style={{ borderColor: "rgba(212,168,67,0.15)" }}
+                        className="flex-1 rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all focus:border-[#C9A227]/50 focus:ring-1 focus:ring-[#C9A227]/30"
+                        style={{ borderColor: "rgba(201,162,39,0.15)" }}
                         autoFocus
                       />
                       <button
                         onClick={handleScrambleSubmit}
-                        className="rounded-xl px-6 py-3 text-sm font-semibold text-[#0D0906] transition-all hover:scale-[1.03] active:scale-[0.97]"
-                        style={{ background: "linear-gradient(135deg, #D4A843, #FFD700)" }}
+                        className="rounded-xl px-6 py-3 text-sm font-semibold text-[#0B1220] transition-all hover:scale-[1.03] active:scale-[0.97]"
+                        style={{ background: "linear-gradient(135deg, #C9A227, #D2B94F)" }}
                       >
                         <ArrowRight className="h-5 w-5" />
                       </button>
@@ -1163,8 +1163,8 @@ export default function GamesPage() {
                       <div className="flex w-full justify-end">
                         <button
                           onClick={handleScrambleNext}
-                          className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0D0906] transition-all hover:scale-[1.03] active:scale-[0.97]"
-                          style={{ background: "linear-gradient(135deg, #D4A843, #FFD700)" }}
+                          className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0B1220] transition-all hover:scale-[1.03] active:scale-[0.97]"
+                          style={{ background: "linear-gradient(135deg, #C9A227, #D2B94F)" }}
                         >
                           {scrambleIndex < 4 ? t(translations.gamesPage.scrambleNextWord) : t(translations.gamesPage.seeResults)}
                           <ChevronRight className="h-4 w-4" />
@@ -1181,17 +1181,17 @@ export default function GamesPage() {
                   <div
                     className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full"
                     style={{
-                      background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
-                      border: "2px solid rgba(212,168,67,0.3)",
+                      background: "linear-gradient(135deg, rgba(201,162,39,0.2) 0%, rgba(201,162,39,0.05) 100%)",
+                      border: "2px solid rgba(201,162,39,0.3)",
                     }}
                   >
-                    <Sparkles className="h-12 w-12" style={{ color: "#FFD700" }} />
+                    <Sparkles className="h-12 w-12" style={{ color: "#D2B94F" }} />
                   </div>
 
                   <h3 className="mb-2 text-xl font-bold text-cream-100">
                     {t(translations.gamesPage.scrambleComplete)}
                   </h3>
-                  <p className="mb-2 font-heading text-5xl font-bold" style={{ color: "#D4A843" }}>
+                  <p className="mb-2 font-heading text-5xl font-bold" style={{ color: "#C9A227" }}>
                     {scrambleScore}<span className="text-2xl text-cream-300/40"> / 5</span>
                   </p>
                   {/* Star display */}
@@ -1205,7 +1205,7 @@ export default function GamesPage() {
                   <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
                     <button
                       onClick={handleScrambleShare}
-                      className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all hover:scale-[1.03] active:scale-[0.97]"
+                      className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0B1220] transition-all hover:scale-[1.03] active:scale-[0.97]"
                       style={goldBtnStyle}
                     >
                       {scrambleCopied ? (
@@ -1223,7 +1223,7 @@ export default function GamesPage() {
                     <button
                       onClick={handleScrambleRestart}
                       className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium text-cream-100 transition-all hover:bg-white/5"
-                      style={{ borderColor: "rgba(212,168,67,0.3)" }}
+                      style={{ borderColor: "rgba(201,162,39,0.3)" }}
                     >
                       <RotateCcw className="h-4 w-4" />
                       {t(translations.gamesPage.tryAgain)}
@@ -1239,7 +1239,7 @@ export default function GamesPage() {
       {/* ═══════════════════ SACRED DIVIDER ═══════════════════ */}
       <div className="section-dark flex items-center justify-center py-4">
         <div className="gold-line w-24" />
-        <span className="mx-4 font-devanagari text-2xl" style={{ color: "#D4A843", textShadow: "0 0 20px rgba(212,168,67,0.3)" }} aria-hidden="true">ॐ</span>
+        <span className="mx-4 font-devanagari text-2xl" style={{ color: "#C9A227", textShadow: "0 0 20px rgba(201,162,39,0.3)" }} aria-hidden="true">ॐ</span>
         <div className="gold-line w-24" />
       </div>
 
@@ -1249,13 +1249,13 @@ export default function GamesPage() {
         <div
           aria-hidden="true"
           className="pointer-events-none absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(212,168,67,0.05) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(201,162,39,0.05) 0%, transparent 70%)" }}
         />
         <div className="section-container relative z-10">
           <div className="mb-12 text-center">
             <div className="mb-4 flex items-center justify-center gap-2">
-              <Trophy className="h-6 w-6" style={{ color: "#D4A843" }} />
-              <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#D4A843]">Quiz</span>
+              <Trophy className="h-6 w-6" style={{ color: "#C9A227" }} />
+              <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#C9A227]">Quiz</span>
             </div>
             <h2 className="font-heading text-3xl font-bold md:text-5xl">
               <span className="gradient-text">{t(translations.gamesPage.quizTitle)}</span>
@@ -1276,16 +1276,16 @@ export default function GamesPage() {
                   <div
                     className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full"
                     style={{
-                      background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
-                      border: "1px solid rgba(212,168,67,0.3)",
+                      background: "linear-gradient(135deg, rgba(201,162,39,0.2) 0%, rgba(201,162,39,0.05) 100%)",
+                      border: "1px solid rgba(201,162,39,0.3)",
                     }}
                   >
-                    <Sparkles className="h-10 w-10" style={{ color: "#D4A843" }} />
+                    <Sparkles className="h-10 w-10" style={{ color: "#C9A227" }} />
                   </div>
                   <p className="mb-8 text-cream-300/60">{t(translations.gamesPage.quizSubtitle)}</p>
                   <button
                     onClick={() => setQuizStarted(true)}
-                    className="group relative inline-flex items-center overflow-hidden rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97]"
+                    className="group relative inline-flex items-center overflow-hidden rounded-full px-8 py-3 text-sm font-semibold text-[#0B1220] shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97]"
                     style={goldBtnStyle}
                   >
                     {t(translations.gamesPage.startQuiz)}
@@ -1304,7 +1304,7 @@ export default function GamesPage() {
                     <div
                       className="h-full rounded-full"
                       style={{
-                        background: "linear-gradient(90deg, #D4A843, #FFD700)",
+                        background: "linear-gradient(90deg, #C9A227, #D2B94F)",
                         width: `${((currentQ + 1) / quizQuestions.length) * 100}%`,
                         transition: "width 0.5s",
                       }}
@@ -1322,8 +1322,8 @@ export default function GamesPage() {
                       const showCorrect = answered && isCorrect;
                       const showWrong = answered && isSelected && !isCorrect;
 
-                      let borderColor = "rgba(212,168,67,0.12)";
-                      let bgColor = "rgba(26,21,16,0.6)";
+                      let borderColor = "rgba(201,162,39,0.12)";
+                      let bgColor = "rgba(18,29,49,0.6)";
                       if (showCorrect) {
                         borderColor = "rgba(34,197,94,0.6)";
                         bgColor = "rgba(34,197,94,0.1)";
@@ -1356,8 +1356,8 @@ export default function GamesPage() {
                       </span>
                       <button
                         onClick={handleNext}
-                        className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
-                        style={{ background: "linear-gradient(135deg, #D4A843, #FFD700)" }}
+                        className="inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold text-[#0B1220] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                        style={{ background: "linear-gradient(135deg, #C9A227, #D2B94F)" }}
                       >
                         {currentQ < quizQuestions.length - 1 ? t(translations.gamesPage.nextQuestion) : t(translations.gamesPage.seeResults)}
                       </button>
@@ -1372,11 +1372,11 @@ export default function GamesPage() {
                   <div
                     className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full"
                     style={{
-                      background: "linear-gradient(135deg, rgba(212,168,67,0.2) 0%, rgba(212,168,67,0.05) 100%)",
-                      border: "2px solid rgba(212,168,67,0.3)",
+                      background: "linear-gradient(135deg, rgba(201,162,39,0.2) 0%, rgba(201,162,39,0.05) 100%)",
+                      border: "2px solid rgba(201,162,39,0.3)",
                     }}
                   >
-                    <Trophy className="h-12 w-12" style={{ color: "#FFD700" }} />
+                    <Trophy className="h-12 w-12" style={{ color: "#D2B94F" }} />
                   </div>
 
                   <h3 className="mb-2 text-xl font-bold text-cream-100">{t(translations.gamesPage.yourScore)}</h3>
@@ -1397,7 +1397,7 @@ export default function GamesPage() {
                     ))}
                   </div>
 
-                  <p className="mb-2 font-heading text-6xl font-bold" style={{ color: "#D4A843" }}>
+                  <p className="mb-2 font-heading text-6xl font-bold" style={{ color: "#C9A227" }}>
                     {score}<span className="text-2xl text-cream-300/40"> / {quizQuestions.length}</span>
                   </p>
                   <p className="mb-8 text-sm text-cream-300/50">
@@ -1407,7 +1407,7 @@ export default function GamesPage() {
                   <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
                     <button
                       onClick={handleQuizShare}
-                      className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                      className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0B1220] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
                       style={goldBtnStyle}
                     >
                       <Share2 className="h-4 w-4" />
@@ -1416,7 +1416,7 @@ export default function GamesPage() {
                     <button
                       onClick={handleRestart}
                       className="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium text-cream-100 transition-all hover:bg-white/5"
-                      style={{ borderColor: "rgba(212,168,67,0.3)" }}
+                      style={{ borderColor: "rgba(201,162,39,0.3)" }}
                     >
                       <RotateCcw className="h-4 w-4" />
                       {t(translations.gamesPage.tryAgain)}
@@ -1432,7 +1432,7 @@ export default function GamesPage() {
       {/* ═══════════════════ SACRED DIVIDER ═══════════════════ */}
       <div className="section-dark flex items-center justify-center py-4">
         <div className="gold-line w-24" />
-        <span className="mx-4 font-devanagari text-2xl" style={{ color: "#D4A843", textShadow: "0 0 20px rgba(212,168,67,0.3)" }} aria-hidden="true">ॐ</span>
+        <span className="mx-4 font-devanagari text-2xl" style={{ color: "#C9A227", textShadow: "0 0 20px rgba(201,162,39,0.3)" }} aria-hidden="true">ॐ</span>
         <div className="gold-line w-24" />
       </div>
 
@@ -1456,24 +1456,24 @@ export default function GamesPage() {
                 key={index}
                 className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-1"
                 style={{
-                  background: "rgba(26,21,16,0.85)",
+                  background: "rgba(18,29,49,0.85)",
                   backdropFilter: "blur(20px)",
-                  border: "1px solid rgba(212,168,67,0.12)",
+                  border: "1px solid rgba(201,162,39,0.12)",
                 }}
               >
                 <div
                   className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                  style={{ background: "radial-gradient(circle at 50% 0%, rgba(212,168,67,0.06) 0%, transparent 60%)" }}
+                  style={{ background: "radial-gradient(circle at 50% 0%, rgba(201,162,39,0.06) 0%, transparent 60%)" }}
                 />
                 <div className="relative p-6 md:p-8">
                   <div
                     className="mb-5 inline-flex items-center justify-center rounded-xl p-3"
                     style={{
-                      background: "linear-gradient(135deg, rgba(212,168,67,0.15) 0%, rgba(212,168,67,0.05) 100%)",
-                      border: "1px solid rgba(212,168,67,0.2)",
+                      background: "linear-gradient(135deg, rgba(201,162,39,0.15) 0%, rgba(201,162,39,0.05) 100%)",
+                      border: "1px solid rgba(201,162,39,0.2)",
                     }}
                   >
-                    <span style={{ color: "#D4A843" }}>{activity.icon}</span>
+                    <span style={{ color: "#C9A227" }}>{activity.icon}</span>
                   </div>
                   <span className={`mb-4 inline-flex items-center rounded-full border bg-gradient-to-r px-3 py-1 text-xs font-medium ${activity.badgeColor}`}>
                     {t(activity.badgeKey)}
@@ -1490,7 +1490,7 @@ export default function GamesPage() {
       {/* ═══════════════════ SACRED DIVIDER ═══════════════════ */}
       <div className="section-dark flex items-center justify-center py-4">
         <div className="gold-line w-24" />
-        <span className="mx-4 font-devanagari text-2xl" style={{ color: "#D4A843", textShadow: "0 0 20px rgba(212,168,67,0.3)" }} aria-hidden="true">ॐ</span>
+        <span className="mx-4 font-devanagari text-2xl" style={{ color: "#C9A227", textShadow: "0 0 20px rgba(201,162,39,0.3)" }} aria-hidden="true">ॐ</span>
         <div className="gold-line w-24" />
       </div>
 
@@ -1522,8 +1522,8 @@ export default function GamesPage() {
                   <input
                     id="name" name="name" type="text" required
                     value={formData.name} onChange={handleFormChange}
-                    className="w-full rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all duration-300 focus:border-[#D4A843]/50 focus:ring-1 focus:ring-[#D4A843]/30"
-                    style={{ borderColor: "rgba(212,168,67,0.15)" }}
+                    className="w-full rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all duration-300 focus:border-[#C9A227]/50 focus:ring-1 focus:ring-[#C9A227]/30"
+                    style={{ borderColor: "rgba(201,162,39,0.15)" }}
                   />
                 </div>
                 <div>
@@ -1533,8 +1533,8 @@ export default function GamesPage() {
                   <input
                     id="organizer" name="organizer" type="text" required
                     value={formData.organizer} onChange={handleFormChange}
-                    className="w-full rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all duration-300 focus:border-[#D4A843]/50 focus:ring-1 focus:ring-[#D4A843]/30"
-                    style={{ borderColor: "rgba(212,168,67,0.15)" }}
+                    className="w-full rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all duration-300 focus:border-[#C9A227]/50 focus:ring-1 focus:ring-[#C9A227]/30"
+                    style={{ borderColor: "rgba(201,162,39,0.15)" }}
                   />
                 </div>
                 <div>
@@ -1544,8 +1544,8 @@ export default function GamesPage() {
                   <input
                     id="contact" name="contact" type="text" required
                     value={formData.contact} onChange={handleFormChange}
-                    className="w-full rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all duration-300 focus:border-[#D4A843]/50 focus:ring-1 focus:ring-[#D4A843]/30"
-                    style={{ borderColor: "rgba(212,168,67,0.15)" }}
+                    className="w-full rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all duration-300 focus:border-[#C9A227]/50 focus:ring-1 focus:ring-[#C9A227]/30"
+                    style={{ borderColor: "rgba(201,162,39,0.15)" }}
                   />
                 </div>
                 <div>
@@ -1555,14 +1555,14 @@ export default function GamesPage() {
                   <textarea
                     id="description" name="description" required rows={4}
                     value={formData.description} onChange={handleFormChange}
-                    className="w-full resize-none rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all duration-300 focus:border-[#D4A843]/50 focus:ring-1 focus:ring-[#D4A843]/30"
-                    style={{ borderColor: "rgba(212,168,67,0.15)" }}
+                    className="w-full resize-none rounded-xl border bg-transparent px-4 py-3 text-cream-100 placeholder-cream-300/30 outline-none transition-all duration-300 focus:border-[#C9A227]/50 focus:ring-1 focus:ring-[#C9A227]/30"
+                    style={{ borderColor: "rgba(201,162,39,0.15)" }}
                   />
                 </div>
                 <div className="flex items-center justify-between">
                   <button
                     type="submit"
-                    className="group inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0D0906] shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97]"
+                    className="group inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-[#0B1220] shadow-lg transition-all duration-500 hover:shadow-xl hover:scale-[1.03] active:scale-[0.97]"
                     style={goldBtnStyle}
                   >
                     <Send className="h-4 w-4" />

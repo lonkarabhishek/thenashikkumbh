@@ -323,7 +323,7 @@ function drawBg(ctx: CanvasRenderingContext2D, g: GS) {
 
   // Sky gradient - subtle hue shift per milestone
   const grad = ctx.createLinearGradient(0, HUD_H, 0, GROUND_Y);
-  grad.addColorStop(0, "#0D0906");
+  grad.addColorStop(0, "#0B1220");
   grad.addColorStop(0.4, `hsl(${hue}, 15%, 6%)`);
   grad.addColorStop(1, `hsl(${hue}, 20%, 8%)`);
   ctx.fillStyle = grad;
@@ -332,7 +332,7 @@ function drawBg(ctx: CanvasRenderingContext2D, g: GS) {
   // Stars
   for (const s of g.stars) {
     const alpha = 0.25 + 0.25 * Math.sin(g.frame * 0.02 + s.flicker);
-    ctx.fillStyle = `rgba(255,215,0,${alpha})`;
+    ctx.fillStyle = `rgba(210,185,79,${alpha})`;
     ctx.beginPath();
     ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
     ctx.fill();
@@ -374,16 +374,16 @@ function drawGround(ctx: CanvasRenderingContext2D, g: GS) {
 
   const grad = ctx.createLinearGradient(0, GROUND_Y + 16, 0, LH);
   grad.addColorStop(0, `hsl(${hue}, 25%, 12%)`);
-  grad.addColorStop(1, "#0D0906");
+  grad.addColorStop(1, "#0B1220");
   ctx.fillStyle = grad;
   ctx.fillRect(0, GROUND_Y + 16, LW, LH - GROUND_Y - 16);
 
   // Ground top line
-  ctx.fillStyle = "rgba(212,168,67,0.12)";
+  ctx.fillStyle = "rgba(201,162,39,0.12)";
   ctx.fillRect(0, GROUND_Y + 15, LW, 2);
 
   // Ground dashes
-  ctx.fillStyle = "rgba(212,168,67,0.05)";
+  ctx.fillStyle = "rgba(201,162,39,0.05)";
   for (let i = 0; i < 15; i++) {
     const dx = ((i * 30 - g.gOff) % (LW + 30) + LW + 30) % (LW + 30) - 15;
     ctx.fillRect(dx, GROUND_Y + 26, 15, 2);
@@ -425,7 +425,7 @@ function drawPlayer(ctx: CanvasRenderingContext2D, g: GS) {
   ctx.fill();
 
   // Tilak
-  ctx.fillStyle = "#D4A843";
+  ctx.fillStyle = "#C9A227";
   ctx.fillRect(PW / 2 - 1.5, 5, 3, 5);
 
   // Legs
@@ -449,13 +449,13 @@ function drawObs(ctx: CanvasRenderingContext2D, obs: Obs) {
   ctx.fillRect(x, y, w, h);
   ctx.fillStyle = "#5a4530";
   ctx.fillRect(x - 2, y, w + 4, 5);
-  ctx.fillStyle = "#D4A843";
+  ctx.fillStyle = "#C9A227";
   ctx.beginPath();
   ctx.moveTo(x - 1, y);
   ctx.lineTo(x + w / 2, y - 8);
   ctx.lineTo(x + w + 1, y);
   ctx.fill();
-  ctx.fillStyle = "rgba(212,168,67,0.25)";
+  ctx.fillStyle = "rgba(201,162,39,0.25)";
   ctx.fillRect(x + w / 2 - 1.5, y + 5, 3, h - 5);
 }
 
@@ -466,9 +466,9 @@ function drawDarshan(ctx: CanvasRenderingContext2D, d: Darshan, frame: number) {
 
   // Glowing prayer circle
   ctx.save();
-  ctx.shadowColor = "#FFD700";
+  ctx.shadowColor = "#D2B94F";
   ctx.shadowBlur = 14;
-  ctx.fillStyle = "#FFD700";
+  ctx.fillStyle = "#D2B94F";
   ctx.beginPath();
   ctx.arc(x, y, 9, 0, Math.PI * 2);
   ctx.fill();
@@ -481,7 +481,7 @@ function drawDarshan(ctx: CanvasRenderingContext2D, d: Darshan, frame: number) {
   ctx.fill();
 
   // Prayer hands drawn as simple icon
-  ctx.fillStyle = "#0D0906";
+  ctx.fillStyle = "#0B1220";
   ctx.font = "bold 10px sans-serif";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
@@ -491,8 +491,8 @@ function drawDarshan(ctx: CanvasRenderingContext2D, d: Darshan, frame: number) {
 function drawSparks(ctx: CanvasRenderingContext2D, sparks: Spark[]) {
   for (const s of sparks) {
     const a = s.life / 30;
-    ctx.fillStyle = s.color === "#FFD700"
-      ? `rgba(255,215,0,${a})`
+    ctx.fillStyle = s.color === "#D2B94F"
+      ? `rgba(210,185,79,${a})`
       : `rgba(255,100,0,${a})`;
     ctx.beginPath();
     ctx.arc(s.x, s.y, s.size * a, 0, Math.PI * 2);
@@ -506,18 +506,18 @@ function drawHUD(ctx: CanvasRenderingContext2D, g: GS, locale: Locale) {
 
   // HUD background
   const hGrad = ctx.createLinearGradient(0, 0, 0, HUD_H);
-  hGrad.addColorStop(0, "rgba(13,9,6,0.95)");
-  hGrad.addColorStop(1, "rgba(13,9,6,0.7)");
+  hGrad.addColorStop(0, "rgba(11,18,32,0.95)");
+  hGrad.addColorStop(1, "rgba(11,18,32,0.7)");
   ctx.fillStyle = hGrad;
   ctx.fillRect(0, 0, LW, HUD_H);
-  ctx.fillStyle = "rgba(212,168,67,0.1)";
+  ctx.fillStyle = "rgba(201,162,39,0.1)";
   ctx.fillRect(0, HUD_H - 1, LW, 1);
 
   // Distance (left)
   ctx.font = "bold 22px sans-serif";
-  ctx.fillStyle = "#FFD700";
+  ctx.fillStyle = "#D2B94F";
   ctx.textAlign = "left";
-  ctx.shadowColor = "rgba(255,215,0,0.3)";
+  ctx.shadowColor = "rgba(210,185,79,0.3)";
   ctx.shadowBlur = 8;
   ctx.fillText(`${Math.floor(g.distance)}m`, 12, 32);
   ctx.shadowBlur = 0;
@@ -525,13 +525,13 @@ function drawHUD(ctx: CanvasRenderingContext2D, g: GS, locale: Locale) {
   // Darshans collected (left below distance)
   if (g.darshanN > 0) {
     ctx.font = "bold 14px sans-serif";
-    ctx.fillStyle = "#FFD700";
+    ctx.fillStyle = "#D2B94F";
     ctx.fillText(`🙏 ×${g.darshanN}`, 12, 52);
   }
 
   // Current place (right)
   ctx.font = "bold 13px sans-serif";
-  ctx.fillStyle = "#D4A843";
+  ctx.fillStyle = "#C9A227";
   ctx.textAlign = "right";
   ctx.fillText(`📍 ${ms.name[locale]}`, LW - 12, 28);
 
@@ -554,16 +554,16 @@ function drawHUD(ctx: CanvasRenderingContext2D, g: GS, locale: Locale) {
     const barY = 54;
     ctx.fillStyle = "rgba(255,255,255,0.06)";
     ctx.fillRect(barX, barY, barW, 4);
-    ctx.fillStyle = "rgba(212,168,67,0.5)";
+    ctx.fillStyle = "rgba(201,162,39,0.5)";
     ctx.fillRect(barX, barY, barW * progress, 4);
     // Glow dot at progress end
-    ctx.fillStyle = "#D4A843";
+    ctx.fillStyle = "#C9A227";
     ctx.beginPath();
     ctx.arc(barX + barW * progress, barY + 2, 3, 0, Math.PI * 2);
     ctx.fill();
   } else {
     ctx.font = "11px sans-serif";
-    ctx.fillStyle = "rgba(212,168,67,0.5)";
+    ctx.fillStyle = "rgba(201,162,39,0.5)";
     ctx.fillText(
       locale === "en" ? "Final Milestone!" : locale === "hi" ? "अंतिम मील का पत्थर!" : "अंतिम टप्पा!",
       LW - 12,
@@ -591,11 +591,11 @@ function drawMilestoneArrival(ctx: CanvasRenderingContext2D, g: GS, locale: Loca
   ctx.scale(scale, scale);
 
   // Glow backdrop
-  ctx.fillStyle = "rgba(13,9,6,0.6)";
+  ctx.fillStyle = "rgba(11,18,32,0.6)";
   ctx.beginPath();
   ctx.roundRect(-110, -40, 220, 80, 12);
   ctx.fill();
-  ctx.strokeStyle = "rgba(212,168,67,0.3)";
+  ctx.strokeStyle = "rgba(201,162,39,0.3)";
   ctx.lineWidth = 1;
   ctx.stroke();
 
@@ -606,7 +606,7 @@ function drawMilestoneArrival(ctx: CanvasRenderingContext2D, g: GS, locale: Loca
 
   // Name
   ctx.font = "bold 16px sans-serif";
-  ctx.fillStyle = "#FFD700";
+  ctx.fillStyle = "#D2B94F";
   ctx.fillText(ms.name[locale], 0, 16);
 
   // Arrived text
@@ -742,7 +742,7 @@ export default function KumbhRunPage() {
           vx: (Math.random() - 0.5) * 6,
           vy: (Math.random() - 0.5) * 6,
           life: 30 + Math.random() * 20,
-          color: "#FFD700",
+          color: "#D2B94F",
           size: 3 + Math.random() * 4,
         });
       }
@@ -856,7 +856,7 @@ export default function KumbhRunPage() {
             vx: (Math.random() - 0.5) * 4,
             vy: (Math.random() - 0.5) * 4 - 2,
             life: 18 + Math.random() * 10,
-            color: "#FFD700",
+            color: "#D2B94F",
             size: 2 + Math.random() * 2,
           });
         }
@@ -959,20 +959,20 @@ export default function KumbhRunPage() {
       {/* Header */}
       <div
         className="flex items-center justify-between px-4 py-3"
-        style={{ borderBottom: "1px solid rgba(212,168,67,0.1)" }}
+        style={{ borderBottom: "1px solid rgba(201,162,39,0.1)" }}
       >
         <Link
           href="/games"
-          className="inline-flex items-center gap-1 text-sm font-medium text-cream-300/60 hover:text-[#D4A843] transition-colors"
+          className="inline-flex items-center gap-1 text-sm font-medium text-cream-300/60 hover:text-[#C9A227] transition-colors"
         >
           <ArrowLeft className="h-4 w-4" />
           {t(kr.backToGames)}
         </Link>
-        <h1 className="font-heading text-lg font-bold" style={{ color: "#D4A843" }}>
+        <h1 className="font-heading text-lg font-bold" style={{ color: "#C9A227" }}>
           {t(kr.title)}
         </h1>
         <div className="flex items-center gap-1 text-sm text-cream-300/40">
-          <Trophy className="h-3.5 w-3.5" style={{ color: "#D4A843" }} />
+          <Trophy className="h-3.5 w-3.5" style={{ color: "#C9A227" }} />
           {highScore}
         </div>
       </div>
@@ -983,8 +983,8 @@ export default function KumbhRunPage() {
           className="px-4 py-2 text-center text-xs leading-relaxed"
           style={{
             color: "rgba(255,248,230,0.55)",
-            background: "rgba(212,168,67,0.04)",
-            borderBottom: "1px solid rgba(212,168,67,0.06)",
+            background: "rgba(201,162,39,0.04)",
+            borderBottom: "1px solid rgba(201,162,39,0.06)",
           }}
         >
           💡 {currentFact}
@@ -994,7 +994,7 @@ export default function KumbhRunPage() {
       {/* Game Container - fills available space */}
       <div
         ref={containerRef}
-        className="relative flex flex-1 items-center justify-center bg-[#0D0906]"
+        className="relative flex flex-1 items-center justify-center bg-[#0B1220]"
         style={{ minHeight: 0 }}
       >
         <canvas
@@ -1008,17 +1008,17 @@ export default function KumbhRunPage() {
         {gameStatus === "idle" && (
           <div
             className="absolute inset-0 flex flex-col items-center justify-center px-6"
-            style={{ background: "rgba(13,9,6,0.8)" }}
+            style={{ background: "rgba(11,18,32,0.8)" }}
             onPointerDown={(e) => { e.preventDefault(); startGame(); }}
           >
             <div className="text-center">
               <p
                 className="mb-1 font-devanagari text-3xl"
-                style={{ color: "#D4A843", textShadow: "0 0 20px rgba(212,168,67,0.4)" }}
+                style={{ color: "#C9A227", textShadow: "0 0 20px rgba(201,162,39,0.4)" }}
               >
                 कुंभ रन
               </p>
-              <h2 className="mb-3 font-heading text-2xl font-bold" style={{ color: "#FFD700" }}>
+              <h2 className="mb-3 font-heading text-2xl font-bold" style={{ color: "#D2B94F" }}>
                 {t(kr.title)}
               </h2>
               <p className="mb-1 text-sm text-cream-300/50">
@@ -1029,10 +1029,10 @@ export default function KumbhRunPage() {
               <div className="mx-auto my-5 max-w-[280px] rounded-xl p-4"
                 style={{
                   background: "rgba(255,255,255,0.03)",
-                  border: "1px solid rgba(212,168,67,0.1)",
+                  border: "1px solid rgba(201,162,39,0.1)",
                 }}
               >
-                <p className="mb-3 text-xs font-semibold uppercase tracking-wider" style={{ color: "#D4A843" }}>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-wider" style={{ color: "#C9A227" }}>
                   <MapPin className="mr-1 inline h-3 w-3" />
                   {t(kr.milestones)}
                 </p>
@@ -1059,13 +1059,13 @@ export default function KumbhRunPage() {
         {gameStatus === "over" && (
           <div
             className="absolute inset-0 flex flex-col items-center justify-center px-6"
-            style={{ background: "rgba(13,9,6,0.85)" }}
+            style={{ background: "rgba(11,18,32,0.85)" }}
           >
             <div className="w-full max-w-[320px] text-center">
-              <h2 className="mb-1 font-heading text-2xl font-bold" style={{ color: "#FFD700" }}>
+              <h2 className="mb-1 font-heading text-2xl font-bold" style={{ color: "#D2B94F" }}>
                 {t(kr.gameOver)}
               </h2>
-              <p className="mb-1 font-heading text-5xl font-bold" style={{ color: "#D4A843" }}>
+              <p className="mb-1 font-heading text-5xl font-bold" style={{ color: "#C9A227" }}>
                 {finalScore}
               </p>
               <p className="mb-1 text-sm text-cream-300/50">
@@ -1082,10 +1082,10 @@ export default function KumbhRunPage() {
                 className="my-4 rounded-xl p-3 text-left"
                 style={{
                   background: "rgba(255,255,255,0.03)",
-                  border: "1px solid rgba(212,168,67,0.1)",
+                  border: "1px solid rgba(201,162,39,0.1)",
                 }}
               >
-                <p className="mb-2 text-center text-xs font-semibold uppercase tracking-wider" style={{ color: "#D4A843" }}>
+                <p className="mb-2 text-center text-xs font-semibold uppercase tracking-wider" style={{ color: "#C9A227" }}>
                   <MapPin className="mr-1 inline h-3 w-3" />
                   {t(kr.placesVisited)} ({placesVisited}/{totalPlaces})
                 </p>
@@ -1101,7 +1101,7 @@ export default function KumbhRunPage() {
                         <span>{ms.emoji}</span>
                         <span className="flex-1">{ms.name[locale]}</span>
                         {visited
-                          ? <span style={{ color: "#D4A843" }}>✓</span>
+                          ? <span style={{ color: "#C9A227" }}>✓</span>
                           : <span className="text-cream-300/15">{ms.distance}m</span>
                         }
                       </div>
@@ -1118,10 +1118,10 @@ export default function KumbhRunPage() {
               <div className="flex items-center justify-center gap-3">
                 <button
                   onClick={startGame}
-                  className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-[#0D0906] transition-all hover:scale-[1.03] active:scale-[0.97]"
+                  className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-[#0B1220] transition-all hover:scale-[1.03] active:scale-[0.97]"
                   style={{
-                    background: "linear-gradient(135deg, #D4A843, #FFD700)",
-                    boxShadow: "0 4px 20px rgba(212,168,67,0.3)",
+                    background: "linear-gradient(135deg, #C9A227, #D2B94F)",
+                    boxShadow: "0 4px 20px rgba(201,162,39,0.3)",
                   }}
                 >
                   <RotateCcw className="h-4 w-4" />
@@ -1130,7 +1130,7 @@ export default function KumbhRunPage() {
                 <button
                   onClick={handleShare}
                   className="inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium text-cream-100 transition-all hover:bg-white/5"
-                  style={{ borderColor: "rgba(212,168,67,0.3)" }}
+                  style={{ borderColor: "rgba(201,162,39,0.3)" }}
                 >
                   <Share2 className="h-4 w-4" />
                   {copied ? t(translations.gamesPage.dailyCopied) : t(kr.share)}
