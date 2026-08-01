@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
-import { Send, X, ArrowRight, Bot } from "lucide-react";
+import { ArrowRight, Send, Sparkles, X } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useChat } from "@/context/ChatContext";
 import { chatbotUI } from "@/i18n/chatbotTranslations";
@@ -141,304 +141,199 @@ export default function KumbhSahayak() {
 
   if (!isOpen) return null;
 
+  const deva = locale !== "en";
+
   return (
     <>
-      {/* Dark backdrop */}
       <div
-        className="fixed inset-0 z-[70] bg-black/60 backdrop-blur-sm"
+        className="fixed inset-0 z-[70] bg-indigo-900/70 backdrop-blur-sm"
         onClick={close}
       />
 
-      {/* Chat overlay */}
-      <div className="chat-overlay-enter fixed inset-0 z-[71] flex items-end sm:items-center justify-center p-0 sm:p-6">
+      <div className="chat-overlay-enter fixed inset-0 z-[71] flex items-end justify-center sm:items-center sm:p-6">
         <div
-          className="relative w-full h-full sm:max-w-2xl sm:max-h-[85vh] sm:rounded-2xl flex flex-col overflow-hidden"
-          style={{
-            background: "rgba(11,18,32, 0.98)",
-            border: "1px solid rgba(201,162,39,0.15)",
-            boxShadow: "0 25px 80px rgba(0,0,0,0.7)",
-          }}
+          role="dialog"
+          aria-modal="true"
+          aria-label={chatbotUI.title[locale]}
+          className="relative flex h-full w-full flex-col overflow-hidden bg-cream-50 sm:h-auto sm:max-h-[86vh] sm:max-w-2xl sm:rounded-card sm:border sm:border-temple-100 sm:shadow-lift"
         >
-          {/* Header */}
-          <div className="h-16 flex items-center justify-between px-5 flex-shrink-0">
-            <div className="flex items-center gap-3">
-              <div
-                className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
-                style={{
-                  background: "linear-gradient(135deg, #C9A227, #D2B94F)",
-                }}
-              >
-                <Bot className="w-5 h-5 text-[#0B1220]" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading text-cream-100 text-base leading-tight">
-                  {chatbotUI.title[locale]}
-                </span>
-                <span
-                  className="text-xs leading-tight"
-                  style={{ color: "rgba(201,162,39,0.5)" }}
-                >
-                  {chatbotUI.subtitle[locale]}
-                </span>
-              </div>
-            </div>
+          {/* ── Header ─────────────────────────────────── */}
+          <header className="flex flex-shrink-0 items-center gap-3 border-b border-temple-100 bg-cream-100 px-4 py-3.5 sm:px-6">
+            <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-saffron-600 text-cream-50">
+              <Sparkles className="h-5 w-5" />
+            </span>
+
+            <span className="min-w-0 flex-1">
+              <span className="block font-heading text-lg leading-tight text-temple-900">
+                {chatbotUI.title[locale]}
+              </span>
+              <span className="mt-0.5 flex items-center gap-1.5 text-xs text-temple-400">
+                <span className="h-1.5 w-1.5 rounded-full bg-river-500" />
+                {chatbotUI.subtitle[locale]}
+              </span>
+            </span>
 
             <button
               onClick={close}
-              aria-label="Close chat"
-              className="w-9 h-9 flex items-center justify-center rounded-lg transition-colors duration-150 hover:bg-[rgba(255,255,255,0.05)] cursor-pointer"
+              aria-label="Close"
+              className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-temple-500 transition-colors hover:bg-cream-200 hover:text-temple-900"
             >
-              <X className="w-5 h-5 text-cream-300/60" />
+              <X className="h-5 w-5" />
             </button>
-          </div>
+          </header>
 
-          {/* Gold divider */}
-          <div
-            className="h-px flex-shrink-0"
-            style={{
-              background:
-                "linear-gradient(90deg, transparent, rgba(201,162,39,0.4), transparent)",
-            }}
-          />
-
-          {/* Messages area */}
-          <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 scrollbar-hide">
-            {/* Welcome + quick start chips */}
+          {/* ── Conversation ───────────────────────────── */}
+          <div className="scrollbar-hide flex-1 space-y-5 overflow-y-auto px-4 py-5 sm:px-6 sm:py-6">
             {messages.length === 0 && (
-              <div className="space-y-4">
-                <div
-                  className="max-w-[90%] sm:max-w-[80%] rounded-xl rounded-tl-sm px-4 py-3 text-sm sm:text-base text-cream-100 leading-relaxed"
-                  style={{
-                    background: "rgba(201,162,39,0.08)",
-                    borderLeft: "3px solid #C9A227",
-                  }}
-                >
-                  {chatbotUI.welcome[locale]}
-                </div>
+              <div className="space-y-5">
+                <Bubble deva={deva}>{chatbotUI.welcome[locale]}</Bubble>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="grid gap-2 sm:grid-cols-2">
                   {quickStartChips.map((chip) => (
                     <button
                       key={chip.topicId}
                       onClick={() => handleQuickReply(chip.topicId)}
-                      className="px-3 py-1.5 rounded-full text-xs sm:text-sm cursor-pointer transition-all duration-150"
-                      style={{
-                        border: "1px solid rgba(201,162,39,0.3)",
-                        color: "rgba(201,162,39,0.7)",
-                        background: "transparent",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.background =
-                          "rgba(201,162,39,0.1)";
-                        e.currentTarget.style.borderColor =
-                          "rgba(201,162,39,0.5)";
-                        e.currentTarget.style.color = "rgba(201,162,39,0.9)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.background = "transparent";
-                        e.currentTarget.style.borderColor =
-                          "rgba(201,162,39,0.3)";
-                        e.currentTarget.style.color = "rgba(201,162,39,0.7)";
-                      }}
+                      className="group flex items-center justify-between gap-2 rounded-xl border border-temple-100 bg-cream-50 px-4 py-3 text-left text-sm font-medium text-temple-800 transition-colors hover:border-saffron-300 hover:bg-saffron-50"
                     >
                       {chip.label[locale]}
+                      <ArrowRight className="h-3.5 w-3.5 flex-shrink-0 text-temple-300 transition-all group-hover:translate-x-0.5 group-hover:text-saffron-600" />
                     </button>
                   ))}
                 </div>
               </div>
             )}
 
-            {/* Messages */}
-            {messages.map((msg) => (
-              <div key={msg.id}>
-                {msg.role === "assistant" ? (
-                  <div className="space-y-2">
-                    {/* Image */}
-                    {msg.image && (
-                      <div className="max-w-[90%] sm:max-w-[80%] rounded-xl overflow-hidden">
-                        <img
-                          src={msg.image}
-                          alt=""
-                          className="w-full h-40 sm:h-48 object-cover"
-                          loading="lazy"
-                        />
-                      </div>
-                    )}
-
-                    {/* Text bubble */}
-                    <div
-                      className="max-w-[90%] sm:max-w-[80%] rounded-xl rounded-tl-sm px-4 py-3 text-sm sm:text-base text-cream-100 leading-relaxed"
-                      style={{
-                        background: "rgba(201,162,39,0.08)",
-                        borderLeft: "3px solid #C9A227",
-                      }}
-                    >
-                      {msg.content}
+            {messages.map((msg) =>
+              msg.role === "assistant" ? (
+                <div key={msg.id} className="space-y-2.5">
+                  {msg.image && (
+                    <div className="ml-11 max-w-[85%] overflow-hidden rounded-xl border border-temple-100">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={msg.image}
+                        alt=""
+                        className="h-40 w-full object-cover sm:h-48"
+                        loading="lazy"
+                      />
                     </div>
+                  )}
 
-                    {/* Page link */}
-                    {msg.pageLink && (
-                      <div className="ml-1">
-                        <Link
-                          href={msg.pageLink}
-                          onClick={close}
-                          className="inline-flex items-center gap-1.5 text-xs sm:text-sm transition-colors duration-150"
-                          style={{ color: "rgba(201,162,39,0.6)" }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.color =
-                              "rgba(201,162,39,0.9)";
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.color =
-                              "rgba(201,162,39,0.6)";
-                          }}
-                        >
-                          <ArrowRight className="w-3 h-3" />
-                          {chatbotUI.readMore[locale]}
-                        </Link>
-                      </div>
-                    )}
+                  <Bubble deva={deva}>{msg.content}</Bubble>
 
-                    {/* Quick reply chips */}
-                    {msg.quickReplies && msg.quickReplies.length > 0 && (
-                      <div className="flex flex-wrap gap-2 mt-1">
-                        {msg.quickReplies.map((topicId) => {
-                          const topic = chatTopics.find(
-                            (t) => t.id === topicId
-                          );
-                          if (!topic) return null;
-                          return (
-                            <button
-                              key={topicId}
-                              onClick={() => handleQuickReply(topicId)}
-                              className="px-3 py-1.5 rounded-full text-xs cursor-pointer transition-all duration-150"
-                              style={{
-                                border: "1px solid rgba(201,162,39,0.3)",
-                                color: "rgba(201,162,39,0.7)",
-                                background: "transparent",
-                              }}
-                              onMouseEnter={(e) => {
-                                e.currentTarget.style.background =
-                                  "rgba(201,162,39,0.1)";
-                                e.currentTarget.style.borderColor =
-                                  "rgba(201,162,39,0.5)";
-                                e.currentTarget.style.color =
-                                  "rgba(201,162,39,0.9)";
-                              }}
-                              onMouseLeave={(e) => {
-                                e.currentTarget.style.background =
-                                  "transparent";
-                                e.currentTarget.style.borderColor =
-                                  "rgba(201,162,39,0.3)";
-                                e.currentTarget.style.color =
-                                  "rgba(201,162,39,0.7)";
-                              }}
-                            >
-                              {topic.question[locale]}
-                            </button>
-                          );
-                        })}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <div className="flex justify-end">
-                    <div
-                      className="max-w-[90%] sm:max-w-[80%] rounded-xl rounded-tr-sm px-4 py-3 text-sm sm:text-base text-cream-100 leading-relaxed"
-                      style={{
-                        background: "rgba(201,162,39,0.15)",
-                      }}
-                    >
-                      {msg.content}
+                  {msg.pageLink && (
+                    <div className="ml-11">
+                      <Link
+                        href={msg.pageLink}
+                        onClick={close}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-temple-100 px-3.5 py-1.5 text-xs font-semibold text-temple-700 transition-colors hover:border-saffron-300 hover:text-saffron-700"
+                      >
+                        {chatbotUI.readMore[locale]}
+                        <ArrowRight className="h-3 w-3" />
+                      </Link>
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
 
-            {/* Typing indicator */}
+                  {msg.quickReplies && msg.quickReplies.length > 0 && (
+                    <div className="ml-11 flex flex-wrap gap-2">
+                      {msg.quickReplies.map((topicId) => {
+                        const topic = chatTopics.find((t) => t.id === topicId);
+                        if (!topic) return null;
+                        return (
+                          <button
+                            key={topicId}
+                            onClick={() => handleQuickReply(topicId)}
+                            className="rounded-full border border-saffron-200 bg-saffron-50 px-3.5 py-1.5 text-xs font-medium text-saffron-800 transition-colors hover:border-saffron-400 hover:bg-saffron-100"
+                          >
+                            {topic.question[locale]}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div key={msg.id} className="flex justify-end">
+                  <p
+                    className={`max-w-[85%] rounded-2xl rounded-br-sm bg-saffron-600 px-4 py-3 leading-relaxed text-cream-50 ${
+                      deva ? "font-devanagari" : ""
+                    }`}
+                  >
+                    {msg.content}
+                  </p>
+                </div>
+              )
+            )}
+
             {isTyping && (
-              <div
-                className="max-w-[90%] sm:max-w-[80%] rounded-xl rounded-tl-sm px-4 py-3 flex items-center gap-1.5"
-                style={{
-                  background: "rgba(201,162,39,0.08)",
-                  borderLeft: "3px solid #C9A227",
-                }}
-              >
-                <span
-                  className="typing-dot w-2 h-2 rounded-full"
-                  style={{ background: "rgba(201,162,39,0.5)" }}
-                />
-                <span
-                  className="typing-dot w-2 h-2 rounded-full"
-                  style={{ background: "rgba(201,162,39,0.5)" }}
-                />
-                <span
-                  className="typing-dot w-2 h-2 rounded-full"
-                  style={{ background: "rgba(201,162,39,0.5)" }}
-                />
+              <div className="flex items-end gap-3">
+                <Avatar />
+                <span className="flex items-center gap-1.5 rounded-2xl rounded-bl-sm border border-temple-100 bg-cream-100 px-4 py-4">
+                  {[0, 1, 2].map((i) => (
+                    <span
+                      key={i}
+                      className="typing-dot h-2 w-2 rounded-full bg-saffron-500"
+                    />
+                  ))}
+                </span>
               </div>
             )}
 
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Gold divider */}
-          <div
-            className="h-px flex-shrink-0"
-            style={{
-              background:
-                "linear-gradient(90deg, transparent, rgba(201,162,39,0.4), transparent)",
-            }}
-          />
+          {/* ── Composer ───────────────────────────────── */}
+          <div className="flex-shrink-0 border-t border-temple-100 bg-cream-100 px-4 py-3.5 sm:px-6">
+            <div className="flex items-center gap-2.5">
+              <input
+                ref={inputRef}
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                onKeyDown={handleKeyDown}
+                placeholder={chatbotUI.placeholder[locale]}
+                aria-label={chatbotUI.placeholder[locale]}
+                className="min-w-0 flex-1 rounded-full border border-temple-200 bg-cream-50 px-5 py-3 text-temple-900 outline-none transition-colors placeholder:text-temple-300 focus:border-saffron-400"
+              />
+              <button
+                onClick={handleSend}
+                disabled={!inputValue.trim()}
+                aria-label="Send"
+                className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-saffron-600 text-cream-50 transition-all hover:bg-saffron-700 disabled:cursor-not-allowed disabled:bg-temple-200 disabled:text-temple-400"
+              >
+                <Send className="h-4 w-4 -translate-x-px" />
+              </button>
+            </div>
 
-          {/* Input area */}
-          <div className="p-3 sm:p-4 flex gap-2 flex-shrink-0">
-            <input
-              ref={inputRef}
-              type="text"
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
-              onKeyDown={handleKeyDown}
-              placeholder={chatbotUI.placeholder[locale]}
-              className="flex-1 rounded-xl px-4 py-3 text-sm sm:text-base text-cream-100 placeholder:text-cream-300/40 outline-none transition-colors duration-150"
-              style={{
-                background: "rgba(255,255,255,0.05)",
-                border: "1px solid rgba(201,162,39,0.15)",
-              }}
-              onFocus={(e) => {
-                e.currentTarget.style.borderColor = "rgba(201,162,39,0.4)";
-              }}
-              onBlur={(e) => {
-                e.currentTarget.style.borderColor = "rgba(201,162,39,0.15)";
-              }}
-            />
-            <button
-              onClick={handleSend}
-              disabled={!inputValue.trim()}
-              aria-label="Send message"
-              className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-150 cursor-pointer"
-              style={{
-                background: "linear-gradient(135deg, #C9A227, #D2B94F)",
-                opacity: inputValue.trim() ? 1 : 0.5,
-                pointerEvents: inputValue.trim() ? "auto" : "none",
-              }}
-            >
-              <Send className="w-4 h-4 text-[#0B1220]" />
-            </button>
-          </div>
-
-          {/* Powered by footer */}
-          <div className="px-4 pb-3 flex-shrink-0">
-            <p
-              className="text-[10px] text-center"
-              style={{ color: "rgba(255,249,235,0.3)" }}
-            >
+            <p className="mt-2.5 text-center text-[0.6875rem] text-temple-300">
               {chatbotUI.poweredBy[locale]}
             </p>
           </div>
         </div>
       </div>
     </>
+  );
+}
+
+function Avatar() {
+  return (
+    <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-saffron-100 text-saffron-700">
+      <Sparkles className="h-4 w-4" />
+    </span>
+  );
+}
+
+/** An assistant message, with the avatar rail the quick replies align to. */
+function Bubble({ children, deva }: { children: React.ReactNode; deva: boolean }) {
+  return (
+    <div className="flex items-end gap-3">
+      <Avatar />
+      <p
+        className={`max-w-[85%] rounded-2xl rounded-bl-sm border border-temple-100 bg-cream-100 px-4 py-3 leading-relaxed text-temple-800 ${
+          deva ? "font-devanagari" : ""
+        }`}
+      >
+        {children}
+      </p>
+    </div>
   );
 }

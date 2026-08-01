@@ -11,22 +11,16 @@ import { navExtra } from "@/i18n/navExtra";
 import type { Locale } from "@/i18n/translations";
 
 /**
- * Eleven flat links was too many to scan, especially for the older half of the
- * audience. The bar now shows the five things a visitor actually needs on the
- * day, and everything else lives under one grouped menu.
+ * The two things this site does that no other Kumbh page does — the assistant
+ * and the audio walks — get real buttons. Everything else is a plain link, and
+ * the long tail lives under one grouped menu.
  */
-type NavItem = {
-  href: string;
-  label: Record<Locale, string>;
-  highlight?: boolean;
-};
+type NavItem = { href: string; label: Record<Locale, string> };
 
 const PRIMARY: NavItem[] = [
-  { href: "/yatra", label: navExtra.yatra, highlight: true },
   { href: "/dates", label: translations.nav.dates },
   { href: "/ghats", label: translations.nav.ghats },
   { href: "/guide", label: translations.nav.guide },
-  { href: "/events", label: translations.nav.events },
 ];
 
 const GROUPS = [
@@ -34,6 +28,7 @@ const GROUPS = [
     label: navExtra.groupLearn,
     links: [
       { href: "/about", label: translations.nav.about },
+      { href: "/events", label: translations.nav.events },
       { href: "/naga-sadhus", label: translations.nav.nagaSadhus },
       { href: "/blog", label: translations.nav.news },
     ],
@@ -52,10 +47,10 @@ const GROUPS = [
   },
 ] as const;
 
-const LANGUAGES: { code: Locale; label: string; full: string }[] = [
-  { code: "mr", label: "मरा", full: "मराठी" },
-  { code: "hi", label: "हिं", full: "हिंदी" },
-  { code: "en", label: "EN", full: "English" },
+const LANGUAGES: { code: Locale; short: string; full: string }[] = [
+  { code: "mr", short: "मरा", full: "मराठी" },
+  { code: "hi", short: "हिं", full: "हिंदी" },
+  { code: "en", short: "EN", full: "English" },
 ];
 
 export default function Navbar() {
@@ -87,7 +82,6 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
-  // Close the "More" menu on an outside click or Escape.
   useEffect(() => {
     if (!moreOpen) return;
     const onDown = (e: MouseEvent) => {
@@ -109,6 +103,8 @@ export default function Navbar() {
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
+  const walksActive = isActive("/yatra");
+
   return (
     <>
       <nav
@@ -117,22 +113,22 @@ export default function Navbar() {
         }`}
       >
         <div className="section-container">
-          <div className="flex h-16 items-center justify-between gap-4 lg:h-20">
+          <div className="flex h-16 items-center justify-between gap-3 lg:h-20 lg:gap-6">
             {/* Wordmark */}
             <Link href="/" className="flex shrink-0 items-center gap-2.5">
               <span className="font-devanagari text-2xl leading-none text-saffron-600">ॐ</span>
               <span className="leading-tight">
-                <span className="block font-heading text-lg font-semibold tracking-tight text-temple-900">
+                <span className="block font-heading text-base font-semibold tracking-tight text-temple-900 sm:text-lg">
                   Nashik Kumbh
                 </span>
-                <span className="block text-[0.625rem] font-semibold uppercase tracking-[0.22em] text-temple-400">
+                <span className="hidden text-[0.625rem] font-semibold uppercase tracking-[0.22em] text-temple-400 sm:block">
                   Simhastha 2027
                 </span>
               </span>
             </Link>
 
-            {/* Desktop links */}
-            <div className="hidden items-center gap-1 lg:flex">
+            {/* Desktop: plain links */}
+            <div className="hidden flex-1 items-center gap-1 lg:flex">
               {PRIMARY.map((item) => (
                 <Link
                   key={item.href}
@@ -143,10 +139,7 @@ export default function Navbar() {
                       : "text-temple-600 hover:text-temple-900"
                   }`}
                 >
-                  <span className="flex items-center gap-1.5">
-                    {item.highlight && <Headphones className="h-3.5 w-3.5" />}
-                    {t(item.label)}
-                  </span>
+                  {t(item.label)}
                   {isActive(item.href) && (
                     <span className="absolute inset-x-3.5 -bottom-0.5 h-0.5 rounded-full bg-saffron-500" />
                   )}
@@ -167,7 +160,7 @@ export default function Navbar() {
                 </button>
 
                 {moreOpen && (
-                  <div className="absolute right-0 top-full mt-2 w-64 rounded-card border border-temple-100 bg-cream-50 p-2 shadow-lift">
+                  <div className="absolute left-0 top-full mt-2 w-64 rounded-card border border-temple-100 bg-cream-50 p-2 shadow-lift">
                     {GROUPS.map((group) => (
                       <div key={group.label.en} className="px-2 py-2">
                         <p className="px-1 pb-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-temple-400">
@@ -189,13 +182,40 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Right cluster */}
-            <div className="flex items-center gap-2">
-              {/* Language — a real segmented control, big enough to tap */}
+            {/* Right cluster — the two headline actions live here */}
+            <div className="flex shrink-0 items-center gap-2">
+              {/* Ask the assistant */}
+              <button
+                onClick={openChat}
+                aria-label={t(translations.nav.aiAssistant)}
+                className="flex h-11 items-center gap-2 rounded-full bg-saffron-600 px-3 font-semibold text-cream-50 transition-all duration-200 hover:bg-saffron-700 sm:px-4"
+                style={{ boxShadow: "0 6px 18px -8px rgba(158, 79, 9, 0.7)" }}
+              >
+                <Sparkles className="h-4 w-4 shrink-0" />
+                <span className="hidden text-sm sm:inline">
+                  {t(translations.nav.aiAssistant)}
+                </span>
+              </button>
+
+              {/* Audio walks */}
+              <Link
+                href="/yatra"
+                aria-label={t(navExtra.yatra)}
+                className={`flex h-11 items-center gap-2 rounded-full border px-3 font-semibold transition-colors sm:px-4 ${
+                  walksActive
+                    ? "border-saffron-300 bg-saffron-50 text-saffron-800"
+                    : "border-temple-200 text-temple-800 hover:border-saffron-300 hover:bg-saffron-50 hover:text-saffron-800"
+                }`}
+              >
+                <Headphones className="h-4 w-4 shrink-0" />
+                <span className="hidden text-sm sm:inline">{t(navExtra.yatra)}</span>
+              </Link>
+
+              {/* Language — full control on desktop, inside the menu on phones */}
               <div
                 role="group"
                 aria-label={t(navExtra.language)}
-                className="flex items-center rounded-full border border-temple-100 bg-cream-100 p-0.5"
+                className="hidden items-center rounded-full border border-temple-100 bg-cream-100 p-0.5 lg:flex"
               >
                 {LANGUAGES.map((lang) => (
                   <button
@@ -209,24 +229,15 @@ export default function Navbar() {
                         : "text-temple-500 hover:text-temple-800"
                     }`}
                   >
-                    {lang.label}
+                    {lang.short}
                   </button>
                 ))}
               </div>
 
               <button
-                onClick={openChat}
-                aria-label={t(translations.nav.aiAssistant)}
-                className="hidden h-9 items-center gap-1.5 rounded-full border border-temple-100 px-3 text-xs font-semibold text-temple-700 transition-colors hover:border-saffron-300 hover:text-saffron-700 sm:flex"
-              >
-                <Sparkles className="h-3.5 w-3.5" />
-                AI
-              </button>
-
-              <button
                 onClick={() => setMobileOpen(true)}
                 aria-label={t(navExtra.menu)}
-                className="flex h-10 w-10 items-center justify-center rounded-full text-temple-800 transition-colors hover:bg-cream-200 lg:hidden"
+                className="flex h-11 w-11 items-center justify-center rounded-full text-temple-800 transition-colors hover:bg-cream-200 lg:hidden"
               >
                 <Menu className="h-5 w-5" />
               </button>
@@ -258,21 +269,70 @@ export default function Navbar() {
             </div>
 
             <div className="flex-1 overflow-y-auto px-5 py-6">
-              <Link
-                href="/yatra"
-                className="flex items-center gap-3 rounded-card bg-saffron-600 px-5 py-4 text-cream-50"
-              >
-                <Headphones className="h-5 w-5 shrink-0" />
-                <span>
-                  <span className="block font-semibold">{t(navExtra.yatra)}</span>
-                  <span className="block text-xs text-cream-100/80">
-                    {t({ en: "Free · 12 stories", hi: "नि:शुल्क · 12 कहानियाँ", mr: "मोफत · १२ गोष्टी" })}
+              {/* Language first — one tap, full names */}
+              <p className="pb-2 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-temple-400">
+                {t(navExtra.language)}
+              </p>
+              <div className="grid grid-cols-3 gap-2">
+                {LANGUAGES.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => setLocale(lang.code)}
+                    aria-pressed={locale === lang.code}
+                    className={`rounded-xl border px-3 py-2.5 text-sm font-semibold transition-colors ${
+                      locale === lang.code
+                        ? "border-temple-800 bg-temple-800 text-cream-50"
+                        : "border-temple-100 text-temple-700 hover:bg-cream-100"
+                    }`}
+                  >
+                    {lang.full}
+                  </button>
+                ))}
+              </div>
+
+              <div className="mt-7 space-y-2.5">
+                <button
+                  onClick={() => {
+                    setMobileOpen(false);
+                    openChat();
+                  }}
+                  className="flex w-full items-center gap-3 rounded-card bg-saffron-600 px-5 py-4 text-left text-cream-50"
+                >
+                  <Sparkles className="h-5 w-5 shrink-0" />
+                  <span>
+                    <span className="block font-semibold">
+                      {t(translations.nav.aiAssistant)}
+                    </span>
+                    <span className="block text-xs text-cream-100/80">
+                      {t({
+                        en: "Ask anything, in your language",
+                        hi: "कुछ भी पूछें, अपनी भाषा में",
+                        mr: "काहीही विचारा, तुमच्या भाषेत",
+                      })}
+                    </span>
                   </span>
-                </span>
-              </Link>
+                </button>
+
+                <Link
+                  href="/yatra"
+                  className="flex items-center gap-3 rounded-card border border-temple-200 px-5 py-4 text-temple-900"
+                >
+                  <Headphones className="h-5 w-5 shrink-0 text-saffron-700" />
+                  <span>
+                    <span className="block font-semibold">{t(navExtra.yatra)}</span>
+                    <span className="block text-xs text-temple-400">
+                      {t({
+                        en: "Free · 12 stories",
+                        hi: "नि:शुल्क · 12 कहानियाँ",
+                        mr: "मोफत · १२ गोष्टी",
+                      })}
+                    </span>
+                  </span>
+                </Link>
+              </div>
 
               <div className="mt-7 space-y-1">
-                {PRIMARY.filter((i) => i.href !== "/yatra").map((item) => (
+                {PRIMARY.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
@@ -305,17 +365,6 @@ export default function Navbar() {
                   </div>
                 </div>
               ))}
-
-              <button
-                onClick={() => {
-                  setMobileOpen(false);
-                  openChat();
-                }}
-                className="mt-8 flex w-full items-center gap-2 rounded-card border border-temple-100 px-4 py-3.5 text-sm font-semibold text-temple-800"
-              >
-                <Sparkles className="h-4 w-4 text-saffron-600" />
-                {t(translations.nav.aiAssistant)}
-              </button>
             </div>
           </div>
         </div>

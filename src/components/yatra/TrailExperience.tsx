@@ -76,6 +76,9 @@ export default function TrailExperience({ trail }: { trail: Trail }) {
 
   // Recorded narration is the primary path; `mode` records which one is live.
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  /** True while we are clearing the element on purpose, so its `error` event
+      is not mistaken for a missing file. */
+  const teardownRef = useRef(false);
   const [mode, setMode] = useState<"audio" | "speech">("audio");
   const [audio, setAudio] = useState<{
     status: "idle" | "playing" | "paused";
@@ -160,9 +163,11 @@ export default function TrailExperience({ trail }: { trail: Trail }) {
       }
 
       setAudio({ status: "playing", current: 0, duration: 0 });
+      // Assigning src rewinds the element; setting currentTime here would throw
+      // because no metadata has loaded yet.
+      teardownRef.current = false;
       audio.src = stopAudioUrl(trail.id, stop, locale);
       audio.playbackRate = rate;
-      audio.currentTime = 0;
 
       audio
         .play()
@@ -191,6 +196,7 @@ export default function TrailExperience({ trail }: { trail: Trail }) {
     narratorRef.current?.stop();
     const audio = audioRef.current;
     if (audio) {
+      teardownRef.current = true;
       audio.pause();
       audio.removeAttribute("src");
       audio.load();
@@ -310,14 +316,23 @@ export default function TrailExperience({ trail }: { trail: Trail }) {
           setAudio((a) => (a.status === "idle" ? a : { ...a, status: "paused" }))
         }
         onEnded={() => setAudio((a) => ({ ...a, status: "idle" }))}
-        onLoadedMetadata={(e) =>
-          setAudio((a) => ({ ...a, duration: e.currentTarget.duration || 0 }))
-        }
-        onTimeUpdate={(e) =>
-          setAudio((a) => ({ ...a, current: e.currentTarget.currentTime }))
-        }
+        onLoadedMetadata={(e) => {
+          // Read off the element now: React nulls `currentTarget` before the
+          // state updater below is invoked.
+          const duration = e.currentTarget.duration;
+          setAudio((a) => ({
+            ...a,
+            duration: Number.isFinite(duration) ? duration : 0,
+          }));
+        }}
+        onTimeUpdate={(e) => {
+          const current = e.currentTarget.currentTime;
+          setAudio((a) => ({ ...a, current }));
+        }}
         onError={() => {
-          // Missing or unplayable file — hand over to the device voice.
+          // Tearing down deliberately also fires `error`; only a real failure
+          // on a stop we are trying to play should reach for the device voice.
+          if (teardownRef.current) return;
           const stop = trail.stops.find((s) => s.id === activeStopId);
           if (stop) speakStop(stop);
         }}

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import {
   ArrowRight,
   CalendarDays,
@@ -18,6 +17,7 @@ import { yatraUI } from "@/i18n/yatraTranslations";
 import { bathingDatesI18n, ghatsI18n } from "@/data/siteDataI18n";
 import { trails } from "@/data/yatraData";
 import Reveal from "@/components/Reveal";
+import Countdown from "@/components/Countdown";
 import AskSahayak from "@/components/AskSahayak";
 import {
   GhatPanorama,
@@ -42,12 +42,11 @@ const HOME_COPY = {
     hi: "हर बारह वर्ष में एक बार बृहस्पति सिंह राशि में आते हैं और कहा जाता है कि गोदावरी अमृत लेकर बहती है। करोड़ों लोग उस जल में खड़े होने आते हैं। यह मार्गदर्शिका बताती है कि इसका अर्थ क्या है, कहाँ जाना है, और सुरक्षित कैसे रहना है।",
     mr: "दर बारा वर्षांनी एकदा बृहस्पती सिंह राशीत येतो आणि गोदावरी अमृत वाहते असे म्हणतात. कोट्यवधी लोक त्या पाण्यात उभे राहायला येतात. ही मार्गदर्शिका सांगते की याचा अर्थ काय, कुठे जायचे, आणि सुरक्षित कसे राहायचे.",
   },
-  countdownLabel: {
-    en: "until the first Shahi Snan",
-    hi: "प्रथम शाही स्नान में शेष",
-    mr: "पहिल्या शाही स्नानाला बाकी",
+  countdownCaption: {
+    en: "until the first Shahi Snan — 20 August 2027",
+    hi: "प्रथम शाही स्नान तक — 20 अगस्त 2027",
+    mr: "पहिल्या शाही स्नानापर्यंत — २० ऑगस्ट २०२७",
   },
-  days: { en: "days", hi: "दिन", mr: "दिवस" },
 
   storyKicker: { en: "Why it happens", hi: "यह क्यों होता है", mr: "हे का घडते" },
   storyTitle: {
@@ -113,23 +112,8 @@ const HOME_COPY = {
   },
 };
 
-function useDaysUntil(target: Date) {
-  const [days, setDays] = useState<number | null>(null);
-
-  useEffect(() => {
-    const compute = () =>
-      setDays(Math.max(0, Math.ceil((target.getTime() - Date.now()) / 86_400_000)));
-    compute();
-    const id = setInterval(compute, 60_000);
-    return () => clearInterval(id);
-  }, [target]);
-
-  return days;
-}
-
 export default function Home() {
-  const { t, locale } = useLanguage();
-  const days = useDaysUntil(FIRST_SNAN);
+  const { t } = useLanguage();
 
   const majorDates = bathingDatesI18n.filter((d) => d.isMajor);
   const featuredGhats = ghatsI18n.slice(0, 3);
@@ -151,9 +135,12 @@ export default function Home() {
               {t(HOME_COPY.heroKicker)}
             </p>
             <h1 className="mt-5 text-display text-balance">{t(translations.hero.title)}</h1>
-            <p className="mt-3 font-heading text-4xl text-saffron-600 sm:text-5xl">
-              {t(translations.hero.year)}
-            </p>
+          </Reveal>
+
+          <Reveal delay={70}>
+            <div className="mt-8">
+              <Countdown target={FIRST_SNAN} caption={t(HOME_COPY.countdownCaption)} />
+            </div>
           </Reveal>
 
           <Reveal delay={90}>
@@ -174,14 +161,6 @@ export default function Home() {
               </Link>
             </div>
 
-            {days !== null && (
-              <p className="mt-8 text-sm text-temple-400">
-                <span className="font-heading text-3xl text-temple-900">
-                  {days.toLocaleString(locale === "en" ? "en-IN" : "hi-IN")}
-                </span>{" "}
-                {t(HOME_COPY.days)} {t(HOME_COPY.countdownLabel)}
-              </p>
-            )}
           </Reveal>
         </div>
 
