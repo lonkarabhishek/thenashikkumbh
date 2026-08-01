@@ -9,9 +9,11 @@ import {
   MapPin,
   Navigation,
   Phone,
+  Sparkles,
   Waves,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { useChat } from "@/context/ChatContext";
 import { translations } from "@/i18n/translations";
 import { yatraUI } from "@/i18n/yatraTranslations";
 import { bathingDatesI18n, ghatsI18n } from "@/data/siteDataI18n";
@@ -42,6 +44,7 @@ const HOME_COPY = {
     hi: "हर बारह वर्ष में एक बार बृहस्पति सिंह राशि में आते हैं और कहा जाता है कि गोदावरी अमृत लेकर बहती है। करोड़ों लोग उस जल में खड़े होने आते हैं। यह मार्गदर्शिका बताती है कि इसका अर्थ क्या है, कहाँ जाना है, और सुरक्षित कैसे रहना है।",
     mr: "दर बारा वर्षांनी एकदा बृहस्पती सिंह राशीत येतो आणि गोदावरी अमृत वाहते असे म्हणतात. कोट्यवधी लोक त्या पाण्यात उभे राहायला येतात. ही मार्गदर्शिका सांगते की याचा अर्थ काय, कुठे जायचे, आणि सुरक्षित कसे राहायचे.",
   },
+  askCta: { en: "Ask Sahayak", hi: "सहायक से पूछें", mr: "सहायकाला विचारा" },
   countdownCaption: {
     en: "until the first Shahi Snan — 20 August 2027",
     hi: "प्रथम शाही स्नान तक — 20 अगस्त 2027",
@@ -114,6 +117,7 @@ const HOME_COPY = {
 
 export default function Home() {
   const { t } = useLanguage();
+  const { open: openChat } = useChat();
 
   const majorDates = bathingDatesI18n.filter((d) => d.isMajor);
   const featuredGhats = ghatsI18n.slice(0, 3);
@@ -151,7 +155,11 @@ export default function Home() {
 
           <Reveal delay={160}>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <Link href="/yatra" className="btn-primary">
+              <button onClick={openChat} className="btn-primary">
+                <Sparkles className="h-4 w-4" />
+                {t(HOME_COPY.askCta)}
+              </button>
+              <Link href="/yatra" className="btn-secondary">
                 <Headphones className="h-4 w-4" />
                 {t(yatraUI.homeTeaser)}
               </Link>
@@ -160,7 +168,6 @@ export default function Home() {
                 {t(translations.hero.exploreDates)}
               </Link>
             </div>
-
           </Reveal>
         </div>
 

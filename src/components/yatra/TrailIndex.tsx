@@ -7,6 +7,7 @@ import { yatraUI } from "@/i18n/yatraTranslations";
 import { trails } from "@/data/yatraData";
 import { WalkingPilgrim } from "@/components/art/Scenes";
 import { BorderStrip, Kalash, Lotus, Trishul } from "@/components/art/Motifs";
+import { StopArt } from "@/components/art/StopScenes";
 
 const ACCENT = {
   saffron: { rule: "bg-saffron-500", text: "text-saffron-700", soft: "bg-saffron-50" },
@@ -92,11 +93,18 @@ export default function TrailIndex() {
                 <Link
                   key={trail.id}
                   href={`/yatra/${trail.id}`}
-                  className="card-sacred group flex flex-col p-7"
+                  className="card-sacred group flex flex-col overflow-hidden"
                 >
-                  <span className={`h-1 w-12 rounded-full ${accent.rule}`} />
+                  {/* the first stop stands as the walk's cover */}
+                  <span className="relative block aspect-[5/3] w-full overflow-hidden">
+                    <StopArt stopId={trail.stops[0].id} className="block h-full w-full" />
+                    <span
+                      className={`absolute bottom-0 left-0 h-1 w-16 ${accent.rule}`}
+                    />
+                  </span>
 
-                  <Icon className={`mt-6 h-9 w-9 ${accent.text}`} />
+                  <span className="flex flex-1 flex-col p-7">
+                  <Icon className={`h-9 w-9 ${accent.text}`} />
 
                   <h3 className="mt-5 font-heading text-2xl text-temple-900">
                     {t(trail.name)}
@@ -129,6 +137,7 @@ export default function TrailIndex() {
                   >
                     {t(yatraUI.startWalk)}
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
                   </span>
                 </Link>
               );

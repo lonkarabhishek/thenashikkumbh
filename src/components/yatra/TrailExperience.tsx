@@ -30,6 +30,7 @@ import {
 import { googleMapsWalkUrl, haversineKm } from "@/lib/geo";
 import { Kalash, WaveRule } from "@/components/art/Motifs";
 import TrailMap from "@/components/yatra/TrailMap";
+import { StopArt } from "@/components/art/StopScenes";
 
 const ACCENT: Record<Trail["accent"], { line: string; dot: string; chip: string; text: string }> = {
   saffron: {
@@ -500,7 +501,7 @@ export default function TrailExperience({ trail }: { trail: Trail }) {
                 )}
 
                 <article
-                  className={`rounded-card border transition-colors ${
+                  className={`overflow-hidden rounded-card border transition-colors ${
                     isActive
                       ? "border-gold-300 bg-cream-100"
                       : "border-temple-100 bg-cream-50"
@@ -509,49 +510,59 @@ export default function TrailExperience({ trail }: { trail: Trail }) {
                   <button
                     onClick={() => setOpenStopId(isOpen ? null : stop.id)}
                     aria-expanded={isOpen}
-                    className="flex w-full items-start justify-between gap-4 p-5 text-left sm:p-6"
+                    className="flex w-full flex-col text-left sm:flex-row sm:items-stretch"
                   >
-                    <span className="min-w-0">
-                      <span className="flex flex-wrap items-center gap-2">
-                        <span className="text-eyebrow font-semibold uppercase text-temple-400">
-                          {t(yatraUI.stopNumber)} {index + 1}
-                        </span>
-                        {arrived && (
+                    {/* the story's own illustration */}
+                    <span className="relative block aspect-[5/3] w-full shrink-0 overflow-hidden rounded-t-card sm:aspect-auto sm:w-[38%] sm:rounded-l-card sm:rounded-tr-none">
+                      <StopArt stopId={stop.id} className="block h-full w-full" />
+                      {arrived && (
+                        <span className="absolute left-3 top-3">
                           <span className={`pill ${accent.chip}`}>
                             {t(yatraUI.flowArrived)}
                           </span>
-                        )}
-                      </span>
-                      <span className="mt-1.5 block font-heading text-subtitle text-temple-900">
-                        {t(stop.name)}
-                      </span>
-                      <span className="mt-1 block text-sm text-temple-500">
-                        {t(stop.subtitle)}
-                      </span>
-                      {index > 0 && (
-                        <span className="mt-3 flex items-center gap-1.5 text-xs text-temple-400">
-                          <Footprints className="h-3.5 w-3.5" />
-                          {stop.walkMinutes} {t(yatraUI.minutes)} {t(yatraUI.walkFromPrev)}
                         </span>
                       )}
                     </span>
 
-                    <span
-                      className={`mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full transition-colors ${
-                        isActive && isPlaying
-                          ? `${accent.dot} text-cream-50`
-                          : "bg-cream-200 text-temple-700"
-                      }`}
-                    >
-                      {isActive && isPlaying ? (
-                        <span className="flex h-4 items-end gap-[3px]">
-                          {[0, 1, 2, 3].map((i) => (
-                            <span key={i} className="audio-bar block h-4 w-[3px] rounded-full bg-current" />
-                          ))}
+                    <span className="flex min-w-0 flex-1 items-start justify-between gap-4 p-5 sm:p-6">
+                      <span className="min-w-0">
+                        <span className="text-eyebrow font-semibold uppercase text-temple-400">
+                          {t(yatraUI.stopNumber)} {index + 1}
                         </span>
-                      ) : (
-                        <Play className="h-5 w-5 translate-x-[1px]" />
-                      )}
+                        <span className="mt-1.5 block font-heading text-subtitle text-temple-900">
+                          {t(stop.name)}
+                        </span>
+                        <span className="mt-1 block text-sm text-temple-500">
+                          {t(stop.subtitle)}
+                        </span>
+                        {index > 0 && (
+                          <span className="mt-3 flex items-center gap-1.5 text-xs text-temple-400">
+                            <Footprints className="h-3.5 w-3.5" />
+                            {stop.walkMinutes} {t(yatraUI.minutes)} {t(yatraUI.walkFromPrev)}
+                          </span>
+                        )}
+                      </span>
+
+                      <span
+                        className={`mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full transition-colors ${
+                          isActive && isPlaying
+                            ? `${accent.dot} text-cream-50`
+                            : "bg-cream-200 text-temple-700"
+                        }`}
+                      >
+                        {isActive && isPlaying ? (
+                          <span className="flex h-4 items-end gap-[3px]">
+                            {[0, 1, 2, 3].map((i) => (
+                              <span
+                                key={i}
+                                className="audio-bar block h-4 w-[3px] rounded-full bg-current"
+                              />
+                            ))}
+                          </span>
+                        ) : (
+                          <Play className="h-5 w-5 translate-x-[1px]" />
+                        )}
+                      </span>
                     </span>
                   </button>
 
