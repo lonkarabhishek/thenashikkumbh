@@ -163,13 +163,17 @@ const essentialTips = [
     Icon: Phone,
     titleKey: translations.guidePage.emergencyTitle,
     color: "#F87171",
+    // Sourced from the content registry (src/data/verified/index.ts). The
+    // "Kumbh Mela Helpline" line that lived here as `1800-XXX-XXXX` was a
+    // placeholder shipped as fact; it and the unverified 0253 numbers are
+    // gone until an official NTKMA helpline is published.
     contacts: [
-      { label: "Kumbh Mela Helpline", number: "1800-XXX-XXXX (toll free)" },
-      { label: "Police Control Room", number: "0253-2305555" },
-      { label: "Ambulance", number: "108" },
-      { label: "Fire Brigade", number: "101" },
-      { label: "Women Helpline", number: "1091" },
-      { label: "Disaster Management", number: "0253-2571202" },
+      { label: "All emergencies (ERSS)", number: "112" },
+      { label: "Ambulance (MEMS 108)", number: "108" },
+      { label: "Fire", number: "101" },
+      { label: "Women helpline", number: "1091" },
+      { label: "Child helpline", number: "1098" },
+      { label: "NTKMA — Divisional Commissioner, Nashik", number: "0253-2461909" },
     ],
   },
   {
@@ -177,14 +181,14 @@ const essentialTips = [
     titleKey: translations.guidePage.medicalTitle,
     color: "#34D399",
     content:
-      "The Kumbh Mela administration sets up temporary medical camps and first-aid centers at every major ghat and along procession routes. Nashik also has well-equipped hospitals including Nashik Civil Hospital, Wockhardt Hospital, and Bytco Hospital.",
+      "The Kumbh administration typically operates temporary medical camps and first-aid posts along ghats and procession routes; the official 2027 list has not yet been published. In the meantime, dial 108 for an ambulance or 112 for any emergency.",
   },
   {
     Icon: Smartphone,
     titleKey: translations.guidePage.mobileTitle,
     color: "#A78BFA",
     content:
-      "During peak Shahi Snan days, mobile networks can become heavily congested. Pre-download offline maps of Nashik and the ghat areas. Save important contacts as physical notes. Jio and Airtel generally have the best coverage.",
+      "During peak Amrit Snan days, mobile networks can become heavily congested. Pre-download offline maps of the ghat areas and save important numbers on paper. We do not recommend a specific carrier — network performance at the mela has not been independently measured.",
   },
   {
     Icon: Wallet,

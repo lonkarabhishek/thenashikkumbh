@@ -20,7 +20,15 @@ export interface KumbhZone {
   exits: ExitPoint[];
 }
 
-// Placeholder data - to be updated once Nashik government approves final routes
+// ============================================================================
+// !!! DO NOT USE IN THE UI !!!
+// This file contains placeholder geodata. It was previously wired into the SOS
+// panel's "find nearest exit" feature, which showed pilgrims made-up walking
+// routes in an emergency. On the P0 sweep the SOS feature was gated behind an
+// honest awaiting-confirmation state. This file is kept for the day NTKMA
+// publishes real exit-route geodata, at which point the structure below can
+// carry it. Until then: no page, component, or chatbot answer may import this.
+// ============================================================================
 export const kumbhZones: KumbhZone[] = [
   {
     id: "ramkund",

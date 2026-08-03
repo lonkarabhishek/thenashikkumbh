@@ -6,6 +6,9 @@ import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { navExtra } from "@/i18n/navExtra";
 import { BorderStrip } from "@/components/art/Motifs";
+import { offices, siteAttribution } from "@/data/verified";
+
+const ntkma = offices.find((o) => o.id === "ntkma")!;
 
 const COLUMNS = [
   {
@@ -140,23 +143,51 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
-        <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-cream-200/60">
-          <a
-            href="mailto:info@thenashikkumbh.com"
-            className="flex items-center gap-2 transition-colors hover:text-cream-50"
-          >
-            <Mail className="h-4 w-4 text-gold-400" />
-            info@thenashikkumbh.com
-          </a>
-          <a
-            href="tel:02532305555"
-            className="flex items-center gap-2 transition-colors hover:text-cream-50"
-          >
-            <Phone className="h-4 w-4 text-gold-400" />
-            0253-2305555
-          </a>
+        {/* Official Kumbh contact — sourced from the content registry. Previous
+            entries here (info@thenashikkumbh.com, 0253-2305555) were placeholders. */}
+        <div className="mt-10 rounded-card border border-cream-200/12 bg-cream-50/[0.04] p-5">
+          <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-gold-300">
+            {t({
+              en: "Official Kumbh contact",
+              hi: "आधिकारिक कुंभ संपर्क",
+              mr: "अधिकृत कुंभ संपर्क",
+            })}
+          </p>
+          <p className="mt-2 text-sm text-cream-100">
+            {t(ntkma.name)}
+          </p>
+          <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm text-cream-200/70">
+            {ntkma.phone && (
+              <a
+                href={`tel:${ntkma.phone.replace(/[^0-9+]/g, "")}`}
+                className="flex items-center gap-2 hover:text-cream-50"
+              >
+                <Phone className="h-4 w-4 text-gold-400" />
+                {ntkma.phone}
+              </a>
+            )}
+            {ntkma.email && (
+              <a
+                href={`mailto:${ntkma.email}`}
+                className="flex items-center gap-2 hover:text-cream-50"
+              >
+                <Mail className="h-4 w-4 text-gold-400" />
+                {ntkma.email}
+              </a>
+            )}
+          </div>
+          <p className="mt-3 text-xs text-cream-200/45">
+            {t({
+              en: "Source: Divisional Commissioner Office, Nashik. Verified " + ntkma.verifiedAt + ".",
+              hi: "स्रोत: विभागीय आयुक्त कार्यालय, नाशिक। सत्यापन " + ntkma.verifiedAt + "।",
+              mr: "स्रोत: विभागीय आयुक्त कार्यालय, नाशिक. सत्यापन " + ntkma.verifiedAt + ".",
+            })}
+          </p>
         </div>
+
+        <p className="mt-6 text-xs leading-relaxed text-cream-200/55">
+          {t(siteAttribution)}
+        </p>
 
         {/* Legal */}
         <div className="mt-12 border-t border-cream-200/10 pt-8">

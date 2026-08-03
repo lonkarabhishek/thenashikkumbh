@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Languages, Send, Sparkles, WifiOff, Zap } from "lucide-react";
+import { ArrowUpRight, Languages, Send, Sparkles, Zap } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useChat } from "@/context/ChatContext";
 import { quickStartChips } from "@/data/chatbotKnowledgeBase";
@@ -20,17 +20,17 @@ const COPY = {
   },
   cta: { en: "Ask Sahayak", hi: "सहायक से पूछें", mr: "सहायकाला विचारा" },
   popular: { en: "People are asking", hi: "लोग पूछ रहे हैं", mr: "लोक विचारत आहेत" },
-  offline: {
-    en: "Works without a signal",
-    hi: "बिना नेटवर्क भी चलता है",
-    mr: "नेटवर्कशिवायही चालते",
-  },
   languages: {
     en: "Marathi · Hindi · English",
     hi: "मराठी · हिंदी · अंग्रेज़ी",
     mr: "मराठी · हिंदी · इंग्रजी",
   },
   instant: { en: "Answers instantly", hi: "तुरंत उत्तर", mr: "लगेच उत्तर" },
+  sourced: {
+    en: "Sourced answers",
+    hi: "स्रोत-सहित उत्तर",
+    mr: "स्रोतासह उत्तरे",
+  },
 };
 
 /** Placeholder questions that cycle through the input, in the user's language. */
@@ -115,8 +115,9 @@ export default function AskSahayak() {
             <ul className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-sm text-cream-200/60">
               {[
                 { Icon: Languages, text: COPY.languages },
-                { Icon: WifiOff, text: COPY.offline },
+                // "Works without a signal" removed until a real PWA ships (Phase 7).
                 { Icon: Zap, text: COPY.instant },
+                { Icon: Sparkles, text: COPY.sourced },
               ].map(({ Icon, text }) => (
                 <li key={text.en} className="flex items-center gap-2">
                   <Icon className="h-3.5 w-3.5 shrink-0 text-gold-400" />

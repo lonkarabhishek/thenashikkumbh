@@ -2,15 +2,12 @@
 
 import { useCallback, useEffect, useState } from "react";
 import {
-  AlertTriangle,
   Check,
-  Clock,
   Flame,
   Heart,
-  LogOut,
   Loader2,
+  LogOut,
   MapPin,
-  Navigation,
   Phone,
   PhoneCall,
   ShieldAlert,
@@ -20,8 +17,6 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { sosUI } from "@/i18n/sosTranslations";
-import { kumbhZones, KumbhZone, ExitPoint } from "@/data/exitRoutes";
-import { haversineKm, googleMapsWalkUrl } from "@/lib/geo";
 
 /**
  * Emergency panel.
@@ -32,12 +27,18 @@ import { haversineKm, googleMapsWalkUrl } from "@/lib/geo";
  * except the two that explicitly need GPS.
  */
 
+/**
+ * Numbers here are sourced. The previous list carried "Police Control Room
+ * 0253-2305555" and "Disaster Management 0253-2571202" without a citation —
+ * both removed. The NTKMA landline is from the Divisional Commissioner's own
+ * contact page (verified 2026-08-01); the rest are national ERSS numbers.
+ */
 const SECONDARY_CONTACTS = [
   { key: "ambulance", number: "108", Icon: Heart, tone: "#F08A7E" },
   { key: "fire", number: "101", Icon: Flame, tone: "#F4B36C" },
   { key: "womenHelpline", number: "1091", Icon: Users, tone: "#C4A5E8" },
-  { key: "kumbhControl", number: "0253-2305555", Icon: Siren, tone: "#DFCC78" },
-  { key: "disasterMgmt", number: "0253-2571202", Icon: AlertTriangle, tone: "#A6D8D4" },
+  { key: "childHelpline", number: "1098", Icon: Users, tone: "#A6D8D4" },
+  { key: "kumbhControl", number: "0253-2461909", Icon: Siren, tone: "#DFCC78" },
 ] as const;
 
 export default function SOSButton() {
@@ -48,10 +49,6 @@ export default function SOSButton() {
   const [locationState, setLocationState] = useState<"idle" | "sharing" | "shared" | "error">(
     "idle"
   );
-  const [exitLoading, setExitLoading] = useState(false);
-  const [exitError, setExitError] = useState(false);
-  const [nearestZone, setNearestZone] = useState<KumbhZone | null>(null);
-  const [userCoords, setUserCoords] = useState<{ lat: number; lng: number } | null>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setMounted(true), 1200);
@@ -77,10 +74,6 @@ export default function SOSButton() {
   const closePanel = useCallback(() => {
     setOpen(false);
     setLocationState("idle");
-    setNearestZone(null);
-    setUserCoords(null);
-    setExitError(false);
-    setExitLoading(false);
   }, []);
 
   const shareLocation = useCallback(() => {
@@ -117,41 +110,9 @@ export default function SOSButton() {
     );
   }, []);
 
-  const findExit = useCallback(() => {
-    if (!navigator.geolocation) {
-      setExitError(true);
-      return;
-    }
-
-    setExitLoading(true);
-    setExitError(false);
-    setNearestZone(null);
-
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const { latitude, longitude } = position.coords;
-        setUserCoords({ lat: latitude, lng: longitude });
-
-        let minDist = Infinity;
-        let closest: KumbhZone | null = null;
-        for (const zone of kumbhZones) {
-          const dist = haversineKm(latitude, longitude, zone.centerLat, zone.centerLng);
-          if (dist < minDist) {
-            minDist = dist;
-            closest = zone;
-          }
-        }
-
-        setNearestZone(closest);
-        setExitLoading(false);
-      },
-      () => {
-        setExitError(true);
-        setExitLoading(false);
-      },
-      { enableHighAccuracy: true, timeout: 12000 }
-    );
-  }, []);
+  // findExit was removed on the P0 sweep — its data source
+  // (src/data/exitRoutes.ts) is placeholder geodata. See the honest
+  // awaiting-confirmation block below.
 
   if (!mounted) return null;
 
@@ -251,85 +212,30 @@ export default function SOSButton() {
                   </span>
                 </button>
 
-                <button
-                  onClick={findExit}
-                  disabled={exitLoading}
-                  className="flex w-full items-center gap-3.5 rounded-2xl border border-river-400/30 bg-river-500/10 px-4 py-3.5 text-left transition-colors hover:bg-river-500/15 disabled:opacity-60"
-                >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-river-500/20 text-river-200">
-                    {exitLoading ? (
-                      <Loader2 className="h-5 w-5 animate-spin" />
-                    ) : (
+                {/* "Find nearest exit" was backed by placeholder geodata (see
+                    src/data/exitRoutes.ts). Until NTKMA publishes official
+                    exit routes, we show an honest awaiting-confirmation state
+                    instead of a button that misled people about safety. */}
+                <div className="rounded-2xl border border-cream-200/12 bg-cream-50/[0.04] px-4 py-3.5">
+                  <div className="flex items-start gap-3.5">
+                    <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-cream-50/10 text-cream-200/70">
                       <LogOut className="h-5 w-5" />
-                    )}
-                  </span>
-                  <span className="min-w-0">
-                    <span className="block font-semibold text-cream-50">
-                      {exitLoading ? sosUI.locatingGps[locale] : sosUI.findNearestExit[locale]}
                     </span>
-                    <span className="mt-0.5 block text-xs text-cream-200/55">
-                      {exitError ? sosUI.exitRouteError[locale] : sosUI.exitHint[locale]}
-                    </span>
-                  </span>
-                </button>
-              </div>
-
-              {/* Exit routes */}
-              {nearestZone && userCoords && (
-                <div className="mt-6">
-                  <div className="flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-river-300" />
-                    <p className="text-xs font-semibold text-river-200">
-                      {sosUI.nearestZone[locale]}: {nearestZone.name[locale]}
-                    </p>
+                    <div>
+                      <p className="font-semibold text-cream-100">
+                        {sosUI.findNearestExit[locale]}
+                      </p>
+                      <p className="mt-1 text-xs text-cream-200/55">
+                        {locale === "en"
+                          ? "Official exit routes have not yet been published by NTKMA. In an emergency, dial 112 and follow police and volunteer directions on the ground."
+                          : locale === "hi"
+                          ? "NTKMA द्वारा आधिकारिक निकास मार्ग अभी प्रकाशित नहीं हुए हैं। आपात स्थिति में 112 डायल करें और मैदान पर पुलिस तथा स्वयंसेवकों के निर्देशों का पालन करें।"
+                          : "NTKMA ने अधिकृत निर्गम मार्ग अजून प्रकाशित केलेले नाहीत. आपत्कालीन परिस्थितीत ११२ डायल करा आणि मैदानावर पोलिस व स्वयंसेवकांच्या सूचनांचे पालन करा."}
+                      </p>
+                    </div>
                   </div>
-
-                  <h3 className="mt-3 font-heading text-lg text-cream-50">
-                    {sosUI.exitRoutesTitle[locale]}
-                  </h3>
-
-                  <ul className="mt-3 space-y-2.5">
-                    {nearestZone.exits.map((exit: ExitPoint) => (
-                      <li
-                        key={exit.id}
-                        className="rounded-xl border border-river-400/20 bg-river-500/[0.07] p-4"
-                      >
-                        <p className="font-semibold text-cream-50">{exit.name[locale]}</p>
-                        <p className="mt-1 text-xs text-cream-200/60">{exit.direction[locale]}</p>
-                        <p className="mt-1.5 flex items-center gap-1.5 text-xs text-cream-200/45">
-                          <MapPin className="h-3 w-3 text-gold-400" />
-                          {exit.landmark[locale]}
-                        </p>
-
-                        <div className="mt-3 flex items-center justify-between">
-                          <span className="flex items-center gap-1.5 text-xs text-cream-200/55">
-                            <Clock className="h-3 w-3" />~{exit.walkMinutes}{" "}
-                            {sosUI.walkTime[locale]}
-                          </span>
-                          <a
-                            href={googleMapsWalkUrl(
-                              userCoords.lat,
-                              userCoords.lng,
-                              exit.lat,
-                              exit.lng
-                            )}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-1.5 rounded-full border border-river-400/40 bg-river-500/15 px-3 py-1.5 text-xs font-semibold text-river-100 transition-colors hover:bg-river-500/25"
-                          >
-                            <Navigation className="h-3 w-3" />
-                            {sosUI.navigate[locale]}
-                          </a>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <p className="mt-3 text-[0.6875rem] leading-relaxed text-cream-200/40">
-                    {sosUI.exitDisclaimer[locale]}
-                  </p>
                 </div>
-              )}
+              </div>
 
               {/* Other helplines */}
               <h3 className="mt-8 text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-cream-200/45">

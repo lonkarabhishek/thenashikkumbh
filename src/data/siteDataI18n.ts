@@ -80,9 +80,9 @@ export const bathingDatesI18n: BathingDateI18n[] = [
       mr: "दुसरे अमृत स्नान",
     },
     nakshatra: {
-      en: "Bhadrapad Purnima",
-      hi: "भाद्रपद पूर्णिमा",
-      mr: "भाद्रपद पौर्णिमा",
+      en: "Shravan Amavasya",
+      hi: "श्रावण अमावस्या",
+      mr: "श्रावण अमावस्या",
     },
     significance: {
       en: "The main royal bath, and the one most often described as the heart of the Simhastha. Expect the heaviest crowds of the entire twenty-one months on the ghats this morning.",

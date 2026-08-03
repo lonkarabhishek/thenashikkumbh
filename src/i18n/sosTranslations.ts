@@ -8,8 +8,15 @@ export const sosUI: Record<string, I18nText> = {
   police: { en: "Police", hi: "पुलिस", mr: "पोलीस" },
   ambulance: { en: "Ambulance", hi: "एम्बुलेंस", mr: "रुग्णवाहिका" },
   fire: { en: "Fire Brigade", hi: "अग्निशमन", mr: "अग्निशमन" },
-  womenHelpline: { en: "Women Helpline", hi: "महिला हेल्पलाइन", mr: "महिला हेल्पलाइन" },
-  kumbhControl: { en: "Kumbh Control Room", hi: "कुंभ नियंत्रण कक्ष", mr: "कुंभ नियंत्रण कक्ष" },
+  womenHelpline: { en: "Women helpline", hi: "महिला हेल्पलाइन", mr: "महिला हेल्पलाइन" },
+  childHelpline: { en: "Child helpline", hi: "चाइल्ड हेल्पलाइन", mr: "चाइल्ड हेल्पलाइन" },
+  // The number attached to this label is the NTKMA landline at the Divisional
+  // Commissioner's office — a real published contact, not a control room.
+  kumbhControl: {
+    en: "NTKMA — Divisional Commissioner, Nashik",
+    hi: "NTKMA — विभागीय आयुक्त, नाशिक",
+    mr: "NTKMA — विभागीय आयुक्त, नाशिक",
+  },
   disasterMgmt: { en: "Disaster Mgmt", hi: "आपदा प्रबंधन", mr: "आपत्ती व्यवस्थापन" },
   shareLocation: { en: "Share My Location", hi: "मेरा स्थान साझा करें", mr: "माझे स्थान शेअर करा" },
   locationShared: { en: "Location copied!", hi: "स्थान कॉपी हो गया!", mr: "स्थान कॉपी झाले!" },

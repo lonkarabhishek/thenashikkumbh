@@ -57,10 +57,12 @@ export const chatTopics: ChatTopic[] = [
       hi: "नाशिक कुंभ मेला कब है?",
       mr: "नाशिक कुंभमेळा कधी आहे?",
     },
+    // Source: DGIPR schedule announcement (https://www.mahasamvad.in/167800/).
+    // The registry (src/data/verified/index.ts) is the canonical version.
     answer: {
-      en: "Nashik Kumbh Mela 2027 begins with the flag hoisting ceremony on October 31, 2026, marking the official start of the Kumbh period. The main bathing season runs from August to October 2027, and the entire festival spans approximately 21 months. Make sure to plan your visit around the Shahi Snan dates for the most sacred experience!",
-      hi: "नाशिक कुंभ मेला 2027 की शुरुआत 31 अक्टूबर 2026 को ध्वजारोहण समारोह से होगी, जो कुंभ काल की आधिकारिक शुरुआत है। मुख्य स्नान का मौसम अगस्त से अक्टूबर 2027 तक चलता है, और पूरा त्योहार लगभग 21 महीनों तक फैला है। सबसे पवित्र अनुभव के लिए शाही स्नान की तिथियों के आसपास अपनी यात्रा की योजना बनाएं!",
-      mr: "नाशिक कुंभमेळा 2027 ची सुरुवात 31 ऑक्टोबर 2026 रोजी ध्वजारोहण समारंभाने होईल, जी कुंभ कालावधीची अधिकृत सुरुवात आहे. मुख्य स्नानाचा हंगाम ऑगस्ट ते ऑक्टोबर 2027 पर्यंत चालतो आणि संपूर्ण मेळा सुमारे 21 महिन्यांचा आहे. सर्वात पवित्र अनुभवासाठी शाही स्नानाच्या तारखांच्या आसपास आपल्या भेटीचे नियोजन करा!",
+      en: "The Simhastha formally opens with Dhwajarohan at Ram Kund, Nashik, on 31 October 2026 (12:02 pm). The Nagar Pradakshina falls on 29 July 2027; the three Amrit Snans on 2 August, 31 August, and 11 September 2027 in Nashik with the third bathed at Kushavarta, Trimbakeshwar, on 12 September 2027. The Simhastha concludes on 24 July 2028.",
+      hi: "सिंहस्थ का औपचारिक शुभारंभ 31 अक्टूबर 2026 को दोपहर 12:02 बजे रामकुंड, नाशिक में ध्वजारोहण से होता है। नगर प्रदक्षिणा 29 जुलाई 2027 को है; तीन अमृत स्नान 2 अगस्त, 31 अगस्त और 11 सितंबर 2027 (नाशिक) को हैं, और तीसरा 12 सितंबर 2027 को कुशावर्त, त्र्यंबकेश्वर में। सिंहस्थ का समापन 24 जुलाई 2028 को होगा।",
+      mr: "सिंहस्थाचा औपचारिक प्रारंभ ३१ ऑक्टोबर २०२६ रोजी दुपारी १२:०२ वाजता रामकुंड, नाशिक येथे ध्वजारोहणाने होतो. नगर प्रदक्षिणा २९ जुलै २०२७ रोजी आहे; तीन अमृत स्नान २ ऑगस्ट, ३१ ऑगस्ट आणि ११ सप्टेंबर २०२७ रोजी (नाशिक) आणि तिसरे १२ सप्टेंबर २०२७ रोजी कुशावर्त, त्र्यंबकेश्वर येथे. सिंहस्थाची सांगता २४ जुलै २०२८ रोजी होईल.",
     },
     relatedTopics: ["shahi-snan", "kumbh-what", "how-to-reach"],
     pageLink: "/dates",
@@ -80,10 +82,13 @@ export const chatTopics: ChatTopic[] = [
       hi: "शाही स्नान की तिथियां क्या हैं?",
       mr: "शाही स्नानाच्या तारखा कोणत्या आहेत?",
     },
+    // Corrected on the P0 sweep. The previous answer asserted "five Shahi Snan"
+    // on Aug 20, Sep 3, Sep 17, Oct 2, and Oct 17 — none of those dates appear
+    // in the DGIPR schedule. Source: https://www.mahasamvad.in/167800/.
     answer: {
-      en: "There are five Shahi Snan (Royal Bath) dates during Nashik Kumbh 2027: August 20, September 3, September 17, October 2, and October 17, 2027. These are the most auspicious days for bathing in the Godavari River. Millions of devotees and Naga Sadhus participate in grand processions before taking the holy dip on these dates.",
-      hi: "नाशिक कुंभ 2027 के दौरान पांच शाही स्नान तिथियां हैं: 20 अगस्त, 3 सितंबर, 17 सितंबर, 2 अक्टूबर और 17 अक्टूबर 2027। ये गोदावरी नदी में स्नान के लिए सबसे शुभ दिन हैं। इन तिथियों पर लाखों श्रद्धालु और नागा साधु भव्य जुलूस में भाग लेकर पवित्र स्नान करते हैं।",
-      mr: "नाशिक कुंभ 2027 दरम्यान पाच शाही स्नान तारखा आहेत: 20 ऑगस्ट, 3 सप्टेंबर, 17 सप्टेंबर, 2 ऑक्टोबर आणि 17 ऑक्टोबर 2027. हे गोदावरी नदीत स्नान करण्यासाठी सर्वात शुभ दिवस आहेत. या तारखांना लाखो भाविक आणि नागा साधू भव्य मिरवणुकीत सहभागी होऊन पवित्र स्नान करतात.",
+      en: "There are three official Amrit Snans (traditionally called Shahi Snan): 2 August 2027 on Ashadh Somvati Amavasya, 31 August 2027 on Shravan Amavasya, and 11 September 2027 in Nashik on Bhadrapada Shuddha Ekadashi, with the Trimbakeshwar bath on 12 September 2027 on Bhadrapada Shuddha Dwadashi. Any list showing five Shahi Snans in Aug–Oct 2027 is not the official schedule.",
+      hi: "तीन आधिकारिक अमृत स्नान (परंपरागत रूप से शाही स्नान) हैं: 2 अगस्त 2027 (आषाढ़ सोमवती अमावस्या), 31 अगस्त 2027 (श्रावण अमावस्या) और 11 सितंबर 2027 नाशिक में (भाद्रपद शुक्ल एकादशी); त्र्यंबकेश्वर का स्नान 12 सितंबर 2027 (भाद्रपद शुक्ल द्वादशी) को है। अगस्त–अक्टूबर 2027 में पाँच शाही स्नान बताने वाली कोई भी सूची आधिकारिक कार्यक्रम नहीं है।",
+      mr: "तीन अधिकृत अमृत स्नाने (परंपरेने शाही स्नान) आहेत: २ ऑगस्ट २०२७ (आषाढ सोमवती अमावस्या), ३१ ऑगस्ट २०२७ (श्रावण अमावस्या) आणि ११ सप्टेंबर २०२७ नाशिकमध्ये (भाद्रपद शुद्ध एकादशी); त्र्यंबकेश्वरचे स्नान १२ सप्टेंबर २०२७ (भाद्रपद शुद्ध द्वादशी) रोजी. ऑगस्ट–ऑक्टोबर २०२७ मध्ये पाच शाही स्नाने दाखवणारी कोणतीही यादी अधिकृत कार्यक्रम नाही.",
     },
     relatedTopics: ["kumbh-dates", "sacred-ghats", "naga-sadhus"],
     pageLink: "/dates",

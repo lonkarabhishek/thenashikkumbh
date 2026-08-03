@@ -527,13 +527,15 @@ export default function BusinessesPage() {
             <p className="mx-auto mt-2 max-w-lg text-sm text-temple-400">
               {t(bp.advertisingDesc)}
             </p>
-            <a
-              href="mailto:info@thenashikkumbh.com"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold transition-colors"
-              style={{ color: "#C9A227" }}
-            >
-              {t(bp.contactForAds)} <ChevronRight className="h-4 w-4" />
-            </a>
+            {/* Advertising contact is not yet published; the site does not
+                accept sponsorships until Phase 10's listing standards ship. */}
+            <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-temple-400">
+              {t({
+                en: "Sponsorship not yet open.",
+                hi: "प्रायोजन अभी उपलब्ध नहीं है।",
+                mr: "प्रायोजकत्व अजून उपलब्ध नाही.",
+              })}
+            </p>
           </div>
         </div>
       </section>
