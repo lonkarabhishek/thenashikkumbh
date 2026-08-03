@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Fraunces, Noto_Serif_Devanagari } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { ChatProvider } from "@/context/ChatContext";
@@ -9,6 +9,7 @@ import SOSButton from "@/components/SOSButton";
 
 import { Analytics } from "@vercel/analytics/next";
 import SchemaMarkup from "@/components/SchemaMarkup";
+import PWARegistrar from "@/components/PWARegistrar";
 import "./globals.css";
 
 const inter = Inter({
@@ -32,6 +33,10 @@ const notoSerifDevanagari = Noto_Serif_Devanagari({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#C1272D",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://thenashikkumbh.com"),
   title: {
@@ -40,7 +45,7 @@ export const metadata: Metadata = {
     template: "%s | Nashik Kumbh Mela 2027",
   },
   description:
-    "Your complete guide to Nashik Kumbh Mela 2027 (Simhastha Kumbh) - sacred bathing dates, Shahi Snan schedule, holy ghats of the Godavari River, pilgrim travel guide, spiritual events, Akhada processions, and the ancient heritage of one of Hinduism's most revered gatherings. नाशिक कुंभमेळा २०२७ मार्गदर्शिका.",
+    "Independent public-information initiative for the Nashik–Trimbakeshwar Simhastha Kumbh Mela 2027. Verified Amrit Snan schedule, emergency numbers, and pilgrim guidance. Every operational claim is sourced and dated.",
   keywords: [
     "Nashik Kumbh Mela",
     "Kumbh Mela 2027",
@@ -77,6 +82,12 @@ export const metadata: Metadata = {
       { url: "/icon.svg", type: "image/svg+xml" },
     ],
     apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    title: "Nashik Kumbh",
+    statusBarStyle: "default",
   },
   openGraph: {
     title: "Nashik Kumbh Mela 2027 | Sacred Pilgrimage at Godavari | नाशिक कुंभमेळा",
@@ -138,6 +149,7 @@ export default function RootLayout({
             <KumbhSahayak />
             <SOSButton />
             <Analytics />
+            <PWARegistrar />
           </ChatProvider>
         </LanguageProvider>
       </body>

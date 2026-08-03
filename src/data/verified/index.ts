@@ -453,6 +453,52 @@ export const offices: Office[] = [
   },
 ];
 
+/* ─── Recognised akhadas ───────────────────────────────────────
+ * Source: Akhil Bharatiya Akhara Parishad, corroborated by the Wikipedia
+ * article for ABAP (verified 2026-08-01). Thirteen akhadas are recognised;
+ * the Kinnar Akhara is a fourteenth body seeking recognition and is not
+ * currently recognised by the Parishad.
+ */
+
+export type AkhadaTradition = "Shaiva" | "Vaishnava" | "Udasin_Nirmala";
+
+export interface Akhada {
+  id: string;
+  name: L10n;
+  tradition: AkhadaTradition;
+  seat: L10n;
+  recognitionStatus: "recognised" | "not_recognised";
+  sourceOrganisation: string;
+  sourceUrl: string;
+  verifiedAt: string;
+  verifiedBy: string;
+}
+
+const ABAP = {
+  org: "Akhil Bharatiya Akhara Parishad, corroborated by Wikipedia",
+  url: "https://en.wikipedia.org/wiki/Akhil_Bharatiya_Akhara_Parishad",
+};
+
+export const akhadas: Akhada[] = [
+  { id: "juna", name: { en: "Shri Panchadashanam Juna Akhara", hi: "श्री पंचदशनाम जूना अखाड़ा", mr: "श्री पंचदशनाम जुना आखाडा" }, tradition: "Shaiva", seat: { en: "Varanasi", hi: "वाराणसी", mr: "वाराणसी" }, recognitionStatus: "recognised", sourceOrganisation: ABAP.org, sourceUrl: ABAP.url, verifiedAt: "2026-08-01", verifiedBy: "editorial" },
+  { id: "niranjani", name: { en: "Shri Panchayati Niranjani Akhara", hi: "श्री पंचायती निरंजनी अखाड़ा", mr: "श्री पंचायती निरंजनी आखाडा" }, tradition: "Shaiva", seat: { en: "Prayagraj", hi: "प्रयागराज", mr: "प्रयागराज" }, recognitionStatus: "recognised", sourceOrganisation: ABAP.org, sourceUrl: ABAP.url, verifiedAt: "2026-08-01", verifiedBy: "editorial" },
+  { id: "atal", name: { en: "Shri Panch Atal Akhara", hi: "श्री पंच अटल अखाड़ा", mr: "श्री पंच अटल आखाडा" }, tradition: "Shaiva", seat: { en: "Varanasi", hi: "वाराणसी", mr: "वाराणसी" }, recognitionStatus: "recognised", sourceOrganisation: ABAP.org, sourceUrl: ABAP.url, verifiedAt: "2026-08-01", verifiedBy: "editorial" },
+  { id: "avahan", name: { en: "Shri Panchadashanam Avahan Akhara", hi: "श्री पंचदशनाम आवाहन अखाड़ा", mr: "श्री पंचदशनाम आवाहन आखाडा" }, tradition: "Shaiva", seat: { en: "Varanasi", hi: "वाराणसी", mr: "वाराणसी" }, recognitionStatus: "recognised", sourceOrganisation: ABAP.org, sourceUrl: ABAP.url, verifiedAt: "2026-08-01", verifiedBy: "editorial" },
+  { id: "anand", name: { en: "Taponidhi Shri Anand Panchayati Akhara", hi: "तपोनिधि श्री आनंद पंचायती अखाड़ा", mr: "तपोनिधी श्री आनंद पंचायती आखाडा" }, tradition: "Shaiva", seat: { en: "Nashik", hi: "नाशिक", mr: "नाशिक" }, recognitionStatus: "recognised", sourceOrganisation: ABAP.org, sourceUrl: ABAP.url, verifiedAt: "2026-08-01", verifiedBy: "editorial" },
+  { id: "mahanirvani", name: { en: "Shri Panchayati Mahanirvani Akhara", hi: "श्री पंचायती महानिर्वाणी अखाड़ा", mr: "श्री पंचायती महानिर्वाणी आखाडा" }, tradition: "Shaiva", seat: { en: "Prayagraj", hi: "प्रयागराज", mr: "प्रयागराज" }, recognitionStatus: "recognised", sourceOrganisation: ABAP.org, sourceUrl: ABAP.url, verifiedAt: "2026-08-01", verifiedBy: "editorial" },
+  { id: "panchagni", name: { en: "Shri Panchadashanam Panchagni Akhara", hi: "श्री पंचदशनाम पंचाग्नि अखाड़ा", mr: "श्री पंचदशनाम पंचाग्नि आखाडा" }, tradition: "Shaiva", seat: { en: "Junagadh", hi: "जूनागढ़", mr: "जुनागढ" }, recognitionStatus: "recognised", sourceOrganisation: ABAP.org, sourceUrl: ABAP.url, verifiedAt: "2026-08-01", verifiedBy: "editorial" },
+
+  { id: "nirmohi", name: { en: "Shri Nirmohi Akhara", hi: "श्री निर्मोही अखाड़ा", mr: "श्री निर्मोही आखाडा" }, tradition: "Vaishnava", seat: { en: "Mathura", hi: "मथुरा", mr: "मथुरा" }, recognitionStatus: "recognised", sourceOrganisation: ABAP.org, sourceUrl: ABAP.url, verifiedAt: "2026-08-01", verifiedBy: "editorial" },
+  { id: "digambar", name: { en: "Shri Digambar Akhara", hi: "श्री दिगंबर अखाड़ा", mr: "श्री दिगंबर आखाडा" }, tradition: "Vaishnava", seat: { en: "Sabarkantha", hi: "साबरकांठा", mr: "साबरकांठा" }, recognitionStatus: "recognised", sourceOrganisation: ABAP.org, sourceUrl: ABAP.url, verifiedAt: "2026-08-01", verifiedBy: "editorial" },
+  { id: "nirvani", name: { en: "Shri Nirvani Akhara", hi: "श्री निर्वाणी अखाड़ा", mr: "श्री निर्वाणी आखाडा" }, tradition: "Vaishnava", seat: { en: "Ayodhya", hi: "अयोध्या", mr: "अयोध्या" }, recognitionStatus: "recognised", sourceOrganisation: ABAP.org, sourceUrl: ABAP.url, verifiedAt: "2026-08-01", verifiedBy: "editorial" },
+
+  { id: "bara-udasin", name: { en: "Shri Panchayati Bara Udasin Akhara", hi: "श्री पंचायती बड़ा उदासीन अखाड़ा", mr: "श्री पंचायती बडा उदासीन आखाडा" }, tradition: "Udasin_Nirmala", seat: { en: "Prayagraj", hi: "प्रयागराज", mr: "प्रयागराज" }, recognitionStatus: "recognised", sourceOrganisation: ABAP.org, sourceUrl: ABAP.url, verifiedAt: "2026-08-01", verifiedBy: "editorial" },
+  { id: "naya-udasin", name: { en: "Shri Panchayti Naya Udasin Akhara", hi: "श्री पंचायती नया उदासीन अखाड़ा", mr: "श्री पंचायती नया उदासीन आखाडा" }, tradition: "Udasin_Nirmala", seat: { en: "Haridwar", hi: "हरिद्वार", mr: "हरिद्वार" }, recognitionStatus: "recognised", sourceOrganisation: ABAP.org, sourceUrl: ABAP.url, verifiedAt: "2026-08-01", verifiedBy: "editorial" },
+  { id: "nirmal", name: { en: "Shri Nirmal Panchayati Akhara", hi: "श्री निर्मल पंचायती अखाड़ा", mr: "श्री निर्मल पंचायती आखाडा" }, tradition: "Udasin_Nirmala", seat: { en: "Haridwar", hi: "हरिद्वार", mr: "हरिद्वार" }, recognitionStatus: "recognised", sourceOrganisation: ABAP.org, sourceUrl: ABAP.url, verifiedAt: "2026-08-01", verifiedBy: "editorial" },
+
+  { id: "kinnar", name: { en: "Kinnar Akhara", hi: "किन्नर अखाड़ा", mr: "किन्नर आखाडा" }, tradition: "Shaiva", seat: { en: "Various", hi: "विविध", mr: "विविध" }, recognitionStatus: "not_recognised", sourceOrganisation: ABAP.org, sourceUrl: ABAP.url, verifiedAt: "2026-08-01", verifiedBy: "editorial" },
+];
+
 /* ─── Awaiting-confirmation registry ───────────────────────────
  * When a page has an obvious slot for operational information that is not yet
  * published (facility map, shuttle routes, road closures, event programme,

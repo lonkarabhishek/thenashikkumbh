@@ -1,0 +1,33 @@
+{
+  "name": "The Nashik Kumbh — Simhastha 2027",
+  "short_name": "Nashik Kumbh",
+  "description": "Independent public-information initiative for the Nashik-Trimbakeshwar Simhastha Kumbh Mela 2027. Verified schedule, emergency numbers, and an offline emergency card.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "mr",
+  "background_color": "#FEFCF8",
+  "theme_color": "#C1272D",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/apple-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Emergency (works offline)",
+      "short_name": "SOS",
+      "description": "Offline emergency card with verified numbers.",
+      "url": "/emergency",
+      "icons": [{ "src": "/icon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Amrit Snan dates",
+      "short_name": "Dates",
+      "description": "Officially confirmed schedule.",
+      "url": "/dates",
+      "icons": [{ "src": "/icon.png", "sizes": "192x192" }]
+    }
+  ]
+}

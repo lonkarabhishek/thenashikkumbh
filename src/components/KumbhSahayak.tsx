@@ -16,7 +16,19 @@ interface ChatMessage {
   quickReplies?: string[];
   pageLink?: string;
   image?: string;
+  provenance?: ChatResponse["provenance"];
 }
+
+const STATUS_LABEL: Record<string, { en: string; hi: string; mr: string }> = {
+  official: { en: "Official", hi: "आधिकारिक", mr: "अधिकृत" },
+  provisional: { en: "Provisional", hi: "अस्थायी", mr: "तात्पुरते" },
+  historical: { en: "Historical", hi: "ऐतिहासिक", mr: "ऐतिहासिक" },
+  general_guidance: { en: "General guidance", hi: "सामान्य मार्गदर्शन", mr: "सामान्य मार्गदर्शन" },
+  religious_tradition: { en: "Religious tradition", hi: "धार्मिक परंपरा", mr: "धार्मिक परंपरा" },
+  awaiting_confirmation: { en: "Awaiting confirmation", hi: "पुष्टि की प्रतीक्षा", mr: "पुष्टीच्या प्रतीक्षेत" },
+  unverified: { en: "Unverified", hi: "असत्यापित", mr: "असत्यापित" },
+  commercial: { en: "Commercial", hi: "व्यावसायिक", mr: "व्यावसायिक" },
+};
 
 export default function KumbhSahayak() {
   const { locale } = useLanguage();
@@ -85,6 +97,7 @@ export default function KumbhSahayak() {
         quickReplies: response.relatedTopics,
         pageLink: response.pageLink,
         image: response.image,
+        provenance: response.provenance,
       };
       setMessages((prev) => [...prev, botMsg]);
     }, delay);
@@ -117,6 +130,7 @@ export default function KumbhSahayak() {
               quickReplies: response.relatedTopics,
               pageLink: response.pageLink,
               image: response.image,
+              provenance: response.provenance,
             },
           ]);
         }
@@ -219,6 +233,46 @@ export default function KumbhSahayak() {
                   )}
 
                   <Bubble deva={deva}>{msg.content}</Bubble>
+
+                  {msg.provenance && (
+                    <div className="ml-11 flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.6875rem] text-temple-400">
+                      <span
+                        className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 font-semibold ${
+                          msg.provenance.status === "official"
+                            ? "bg-river-100 text-river-800"
+                            : msg.provenance.status === "awaiting_confirmation"
+                              ? "bg-saffron-100 text-saffron-800"
+                              : msg.provenance.status === "historical" ||
+                                  msg.provenance.status === "religious_tradition"
+                                ? "bg-cream-200 text-temple-700"
+                                : "bg-temple-100 text-temple-500"
+                        }`}
+                      >
+                        {STATUS_LABEL[msg.provenance.status]?.[locale] ??
+                          msg.provenance.status}
+                      </span>
+                      {msg.provenance.sourceUrl && msg.provenance.sourceOrganisation && (
+                        <a
+                          href={msg.provenance.sourceUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline decoration-temple-200 underline-offset-2 hover:text-temple-700"
+                        >
+                          {locale === "en" ? "Source: " : locale === "hi" ? "स्रोत: " : "स्रोत: "}
+                          {msg.provenance.sourceOrganisation}
+                        </a>
+                      )}
+                      {msg.provenance.verifiedAt && (
+                        <span>
+                          {locale === "en"
+                            ? `Verified ${msg.provenance.verifiedAt}`
+                            : locale === "hi"
+                              ? `सत्यापित ${msg.provenance.verifiedAt}`
+                              : `सत्यापित ${msg.provenance.verifiedAt}`}
+                        </span>
+                      )}
+                    </div>
+                  )}
 
                   {msg.pageLink && (
                     <div className="ml-11">

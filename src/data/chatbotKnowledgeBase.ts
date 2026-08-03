@@ -1,9 +1,22 @@
 import type { Locale } from "@/i18n/translations";
+import type { InformationStatus } from "@/data/verified";
 
 /** Trilingual text record */
 type I18nText = Record<Locale, string>;
 
-/** A single chatbot topic with trilingual Q&A, keywords, and metadata */
+/**
+ * Chatbot topic.
+ *
+ * Every topic now carries a `status`. Anything not marked `official` or
+ * `historical` is surfaced with a "general guidance" caveat in the UI, so
+ * a pilgrim reading the answer knows whether we stand behind it.
+ *
+ * Topics that touch an authority-owned operational fact (helpline number,
+ * schedule, road, transport, facility) must also carry `sourceOrganisation`,
+ * `sourceUrl` and `verifiedAt`. Answers that would only be safe with such a
+ * source but have not been re-sourced yet are rewritten to route the pilgrim
+ * to the authority rather than assert a fact.
+ */
 export interface ChatTopic {
   id: string;
   keywords: Record<Locale, string[]>;
@@ -13,6 +26,10 @@ export interface ChatTopic {
   pageLink?: string;
   emoji?: string;
   image?: string;
+  status?: InformationStatus;
+  sourceOrganisation?: string;
+  sourceUrl?: string;
+  verifiedAt?: string;
 }
 
 // ---------------------------------------------------------------------------
@@ -67,6 +84,10 @@ export const chatTopics: ChatTopic[] = [
     relatedTopics: ["shahi-snan", "kumbh-what", "how-to-reach"],
     pageLink: "/dates",
     emoji: "📅",
+    status: "official",
+    sourceOrganisation: "DGIPR Maharashtra",
+    sourceUrl: "https://www.mahasamvad.in/167800/",
+    verifiedAt: "2026-08-01",
   },
 
   // 3 ── Shahi Snan dates ──────────────────────────────────────
@@ -94,6 +115,10 @@ export const chatTopics: ChatTopic[] = [
     pageLink: "/dates",
     emoji: "🛕",
     image: "/images/gallery/kumbh-1.webp",
+    status: "official",
+    sourceOrganisation: "DGIPR Maharashtra",
+    sourceUrl: "https://www.mahasamvad.in/167800/",
+    verifiedAt: "2026-08-01",
   },
 
   // 4 ── How to reach Nashik ───────────────────────────────────
@@ -272,12 +297,16 @@ export const chatTopics: ChatTopic[] = [
       mr: "आणीबाणी संपर्क क्रमांक कोणते आहेत?",
     },
     answer: {
-      en: "Here are the key emergency numbers for Kumbh Mela: Police - 112, Ambulance - 108, Fire Brigade - 101, Women Helpline - 1091. Save these numbers on your phone before arriving. You can also use the SOS button on this website for quick emergency assistance. Stay calm, reach a safe spot, and call for help immediately if needed.",
-      hi: "कुंभ मेले के लिए प्रमुख आपातकालीन नंबर: पुलिस - 112, एम्बुलेंस - 108, दमकल - 101, महिला हेल्पलाइन - 1091। पहुंचने से पहले ये नंबर अपने फोन में सेव कर लें। आप त्वरित आपातकालीन सहायता के लिए इस वेबसाइट पर SOS बटन का भी उपयोग कर सकते हैं। शांत रहें, सुरक्षित स्थान पर पहुंचें और जरूरत पड़ने पर तुरंत मदद के लिए कॉल करें।",
-      mr: "कुंभमेळ्यासाठी महत्त्वाचे आणीबाणी क्रमांक: पोलीस - 112, रुग्णवाहिका - 108, अग्निशमन दल - 101, महिला हेल्पलाइन - 1091. पोहोचण्यापूर्वी हे क्रमांक तुमच्या फोनमध्ये सेव्ह करा. तुम्ही त्वरित आणीबाणी मदतीसाठी या वेबसाइटवरील SOS बटण देखील वापरू शकता. शांत राहा, सुरक्षित ठिकाणी जा आणि गरज पडल्यास लगेच मदतीसाठी कॉल करा.",
+      en: "For any emergency dial 112 (all-India ERSS). Ambulance 108 (MEMS Maharashtra), fire 101, women helpline 1091, child helpline 1098. The Nashik–Trimbakeshwar Kumbh Mela Authority (NTKMA) office landline is 0253-2461909. Please save these before you travel. The SOS button on this site is a shortcut, but the underlying calls are what matter — a working phone with these numbers is more reliable than any app.",
+      hi: "किसी भी आपात स्थिति में 112 (अखिल भारतीय ERSS) डायल करें। एम्बुलेंस 108 (MEMS महाराष्ट्र), अग्निशमन 101, महिला हेल्पलाइन 1091, चाइल्ड हेल्पलाइन 1098। नाशिक–त्र्यंबकेश्वर कुंभ मेला प्राधिकरण (NTKMA) कार्यालय लैंडलाइन 0253-2461909। कृपया यात्रा से पूर्व ये नंबर सहेज लें। इस साइट का SOS बटन शॉर्टकट है, पर वास्तविक कॉल ही महत्व रखती है — इन नंबरों वाला काम करता फोन किसी भी ऐप से अधिक भरोसेमंद है।",
+      mr: "कोणत्याही आपत्कालीन परिस्थितीत ११२ (अखिल भारतीय ERSS) डायल करा. रुग्णवाहिका १०८ (MEMS महाराष्ट्र), अग्निशमन १०१, महिला हेल्पलाइन १०९१, चाइल्ड हेल्पलाइन १०९८. नाशिक–त्र्यंबकेश्वर कुंभमेळा प्राधिकरण (NTKMA) कार्यालय लँडलाइन ०२५३-२४६१९०९. कृपया प्रवासापूर्वी हे क्रमांक जतन करा. या साइटवरील SOS बटण शॉर्टकट आहे, पण खरे कॉल हेच महत्त्वाचे — या क्रमांकांसह चालणारा फोन कोणत्याही अॅपपेक्षा अधिक भरवशाचा आहे.",
     },
     relatedTopics: ["safety", "dos-donts"],
     emoji: "🚨",
+    status: "official",
+    sourceOrganisation: "ERSS / MEMS 108 / MoWCD / NTKMA",
+    sourceUrl: "https://112.gov.in/",
+    verifiedAt: "2026-08-01",
   },
 
   // 12 ── Food & drink ─────────────────────────────────────────
@@ -785,12 +814,16 @@ export const chatTopics: ChatTopic[] = [
       mr: "कुंभात वैद्यकीय सुविधा आहे का?",
     },
     answer: {
-      en: "Yes, extensive medical facilities are set up during Kumbh Mela. Mobile hospitals, first-aid stations, and ambulance services are available across all ghat areas. The government deploys doctors, nurses, and paramedics throughout the Kumbh zone. Free medical camps offer basic health checkups and medicines. For serious cases, Nashik Civil Hospital and several private hospitals are within reach. Keep your personal medicines handy and stay hydrated to avoid common health issues.",
-      hi: "हां, कुंभ मेले के दौरान व्यापक चिकित्सा सुविधाएं उपलब्ध कराई जाती हैं। सभी घाट क्षेत्रों में मोबाइल अस्पताल, प्राथमिक उपचार केंद्र और एम्बुलेंस सेवाएं उपलब्ध हैं। सरकार पूरे कुंभ क्षेत्र में डॉक्टर, नर्स और पैरामेडिक्स तैनात करती है। मुफ्त चिकित्सा शिविर बुनियादी स्वास्थ्य जांच और दवाइयां प्रदान करते हैं। गंभीर मामलों के लिए नाशिक सिविल अस्पताल और कई निजी अस्पताल पहुंच के भीतर हैं।",
-      mr: "होय, कुंभमेळ्यात व्यापक वैद्यकीय सुविधा उपलब्ध करून दिली जाते. सर्व घाट परिसरात मोबाइल रुग्णालये, प्रथमोपचार केंद्रे आणि रुग्णवाहिका सेवा उपलब्ध असतात. सरकार संपूर्ण कुंभ परिसरात डॉक्टर, नर्स आणि पॅरामेडिक्स तैनात करते. मोफत वैद्यकीय शिबिरांमध्ये मूलभूत आरोग्य तपासणी आणि औषधे दिली जातात. गंभीर प्रकरणांसाठी नाशिक सिव्हिल हॉस्पिटल आणि अनेक खाजगी रुग्णालये जवळ आहेत.",
+      en: "The Kumbh administration typically operates temporary mobile hospitals and first-aid posts along ghats and procession routes. The 2027 list of facility locations and hours has not yet been published by NTKMA. Until it is, treat 108 (ambulance) and 112 (all emergencies) as your first call, and know that Nashik has full-service hospitals in the city if a private option is preferred.",
+      hi: "कुंभ प्रशासन आम तौर पर घाटों और शोभायात्रा मार्गों पर अस्थायी मोबाइल अस्पताल और प्राथमिक उपचार केंद्र संचालित करता है। NTKMA द्वारा 2027 की सुविधा स्थलों और समयों की सूची अभी प्रकाशित नहीं की गई है। तब तक 108 (एम्बुलेंस) और 112 (सभी आपात) को अपनी पहली कॉल मानें; नाशिक शहर में पूर्ण-सेवा वाले अस्पताल भी उपलब्ध हैं।",
+      mr: "कुंभ प्रशासन सामान्यतः घाटांवर आणि मिरवणूक मार्गांवर तात्पुरती मोबाइल रुग्णालये आणि प्रथमोपचार केंद्रे चालवते. NTKMA ने २०२७ ची सुविधा ठिकाणे आणि वेळांची यादी अजून प्रकाशित केलेली नाही. तोपर्यंत १०८ (रुग्णवाहिका) आणि ११२ (सर्व आपत्कालीन) हा तुमचा पहिला कॉल असावा; नाशिक शहरात पूर्ण-सेवा रुग्णालयेही आहेत.",
     },
     relatedTopics: ["safety", "emergency", "what-to-carry"],
     emoji: "🏥",
+    status: "awaiting_confirmation",
+    sourceOrganisation: "NTKMA (facility list pending)",
+    sourceUrl: "https://divcomnashik.maharashtra.gov.in/en/simhastha-kumbh-mela-2027/",
+    verifiedAt: "2026-08-01",
   },
 
   // 34 ── ATM & Banking ───────────────────────────────────────
