@@ -194,6 +194,25 @@ export default function Footer() {
           <p className="text-xs leading-relaxed text-cream-200/45">
             {t(translations.footer.disclaimer)}
           </p>
+
+          <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-cream-200/55">
+            <li>
+              <Link href="/emergency" className="hover:text-cream-50">
+                {t({ en: "Emergency (offline)", hi: "आपात (ऑफ़लाइन)", mr: "आपत्कालीन (ऑफलाइन)" })}
+              </Link>
+            </li>
+            <li>
+              <Link href="/policies" className="hover:text-cream-50">
+                {t({ en: "Policies", hi: "नीतियाँ", mr: "धोरणे" })}
+              </Link>
+            </li>
+            <li>
+              <Link href="/changelog" className="hover:text-cream-50">
+                {t({ en: "Changelog", hi: "परिवर्तन-लॉग", mr: "बदल-नोंद" })}
+              </Link>
+            </li>
+          </ul>
+
           <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-xs text-cream-200/45">
             <p>{t(translations.footer.copyright)}</p>
             <p>
