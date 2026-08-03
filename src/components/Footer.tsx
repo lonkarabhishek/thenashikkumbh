@@ -168,7 +168,7 @@ export default function Footer() {
             <p>
               {t(translations.footer.madeBy)}{" "}
               <a
-                href="https://abhisheklonkar.com"
+                href="https://workwithabhi.online"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cream-200/70 underline-offset-2 hover:text-gold-300 hover:underline"
