@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Send, Sparkles, WifiOff } from "lucide-react";
+import { ArrowUpRight, Languages, Send, Sparkles, WifiOff, Zap } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useChat } from "@/context/ChatContext";
 import { quickStartChips } from "@/data/chatbotKnowledgeBase";
-import { SunMandala } from "@/components/art/Motifs";
 
 const COPY = {
   eyebrow: { en: "Kumbh Sahayak", hi: "कुंभ सहायक", mr: "कुंभ सहायक" },
@@ -87,18 +86,25 @@ export default function AskSahayak() {
 
   return (
     <section className="section-dark relative overflow-hidden">
-      {/* a slow mandala behind the panel */}
+      {/* A soft glow behind the panel. The mandala that used to sit here was
+          34rem wide against the right edge, so it clipped into a hard-edged
+          artifact at every viewport width. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-24 top-1/2 hidden -translate-y-1/2 text-gold-500/10 lg:block"
-      >
-        <SunMandala className="h-[34rem] w-[34rem] animate-rotate-slow" />
-      </div>
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(58% 60% at 76% 48%, rgba(201,162,39,0.16), transparent 68%)",
+        }}
+      />
 
       <div className="section-container relative z-10 py-20 sm:py-28">
+        {/* min-w-0 on both columns: without it the grid tracks size to the
+            panel's intrinsic width and the whole section overflows a phone. */}
         <div className="grid gap-12 lg:grid-cols-[1fr_0.95fr] lg:items-center lg:gap-16">
-          <div>
-            <span className="eyebrow">
+          <div className="min-w-0">
+            {/* Not the .eyebrow class — its ::before rule collides with the icon. */}
+            <span className="inline-flex items-center gap-2 text-eyebrow font-semibold uppercase text-gold-300">
               <Sparkles className="h-3.5 w-3.5" />
               {t(COPY.eyebrow)}
             </span>
@@ -107,34 +113,34 @@ export default function AskSahayak() {
             <p className="mt-5 max-w-prose text-lede text-cream-200/70">{t(COPY.body)}</p>
 
             <ul className="mt-8 flex flex-wrap gap-x-7 gap-y-3 text-sm text-cream-200/60">
-              <li className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-gold-400" />
-                {t(COPY.languages)}
-              </li>
-              <li className="flex items-center gap-2">
-                <WifiOff className="h-3.5 w-3.5 text-gold-400" />
-                {t(COPY.offline)}
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-gold-400" />
-                {t(COPY.instant)}
-              </li>
+              {[
+                { Icon: Languages, text: COPY.languages },
+                { Icon: WifiOff, text: COPY.offline },
+                { Icon: Zap, text: COPY.instant },
+              ].map(({ Icon, text }) => (
+                <li key={text.en} className="flex items-center gap-2">
+                  <Icon className="h-3.5 w-3.5 shrink-0 text-gold-400" />
+                  {t(text)}
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* The panel — looks like the assistant, opens the real one on click */}
-          <div className="rounded-card border border-cream-200/10 bg-cream-50/[0.04] p-5 backdrop-blur-sm sm:p-7">
+          <div className="min-w-0 rounded-card border border-cream-200/10 bg-cream-50/[0.04] p-4 backdrop-blur-sm sm:p-6 lg:p-7">
             <button
               onClick={open}
               className="group w-full rounded-2xl border border-cream-200/15 bg-indigo-900/50 p-4 text-left transition-colors hover:border-gold-500/45"
             >
-              <span className="flex items-center gap-3">
+              <span className="flex min-w-0 items-center gap-3">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-saffron-600 text-cream-50">
                   <Sparkles className="h-5 w-5" />
                 </span>
 
+                {/* w-0 as well as min-w-0, so the rotating question never
+                    contributes its full length to the intrinsic width. */}
                 <span
-                  className={`min-w-0 flex-1 truncate text-cream-200/55 transition-opacity duration-300 ${
+                  className={`w-0 min-w-0 flex-1 truncate text-sm text-cream-200/55 transition-opacity duration-300 sm:text-base ${
                     fading ? "opacity-0" : "opacity-100"
                   }`}
                 >
@@ -151,15 +157,16 @@ export default function AskSahayak() {
               {t(COPY.popular)}
             </p>
 
-            <div className="mt-3.5 flex flex-wrap gap-2">
+            {/* A grid, so the chips line up instead of ragging across rows. */}
+            <div className="mt-3.5 grid gap-2 sm:grid-cols-2">
               {chips.map((chip) => (
                 <button
                   key={chip.topicId}
                   onClick={() => openWithTopic(chip.topicId)}
-                  className="group inline-flex items-center gap-1.5 rounded-full border border-cream-200/15 px-3.5 py-2 text-sm text-cream-200/80 transition-colors hover:border-gold-500/50 hover:text-cream-50"
+                  className="group flex items-center justify-between gap-2 rounded-xl border border-cream-200/15 px-3.5 py-2.5 text-left text-sm text-cream-200/80 transition-colors hover:border-gold-500/50 hover:bg-cream-50/5 hover:text-cream-50"
                 >
-                  {t(chip.label)}
-                  <ArrowUpRight className="h-3.5 w-3.5 text-cream-200/40 transition-colors group-hover:text-gold-300" />
+                  <span className="truncate">{t(chip.label)}</span>
+                  <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-cream-200/40 transition-colors group-hover:text-gold-300" />
                 </button>
               ))}
             </div>
