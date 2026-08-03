@@ -30,8 +30,8 @@ import {
 } from "@/components/art/Scenes";
 import { BorderStrip, Diya, Kalash, Lotus, Trishul } from "@/components/art/Motifs";
 
-/** First Shahi Snan — the date the whole calendar hangs off. */
-const FIRST_SNAN = new Date("2027-08-20T04:00:00+05:30");
+/** First Amrit Snan — the date the whole calendar hangs off. */
+const FIRST_SNAN = new Date("2027-08-02T04:00:00+05:30");
 
 const HOME_COPY = {
   heroKicker: {
@@ -46,9 +46,9 @@ const HOME_COPY = {
   },
   askCta: { en: "Ask Sahayak", hi: "सहायक से पूछें", mr: "सहायकाला विचारा" },
   countdownCaption: {
-    en: "until the first Shahi Snan — 20 August 2027",
-    hi: "प्रथम शाही स्नान तक — 20 अगस्त 2027",
-    mr: "पहिल्या शाही स्नानापर्यंत — २० ऑगस्ट २०२७",
+    en: "until the first Amrit Snan — 2 August 2027",
+    hi: "प्रथम अमृत स्नान तक — 2 अगस्त 2027",
+    mr: "पहिल्या अमृत स्नानापर्यंत — २ ऑगस्ट २०२७",
   },
 
   storyKicker: { en: "Why it happens", hi: "यह क्यों होता है", mr: "हे का घडते" },

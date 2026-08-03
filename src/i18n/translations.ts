@@ -487,7 +487,7 @@ export const translations = {
     statBathingSub: { en: "Plus multiple Parva Snan", hi: "तथा अनेक पर्व स्नान", mr: "तसेच अनेक पर्व स्नान" },
     statDuration: { en: "Duration", hi: "अवधि", mr: "कालावधी" },
     statDurationValue: { en: "~3 Months", hi: "~3 माह", mr: "~३ महिने" },
-    statDurationSub: { en: "August - October 2027", hi: "अगस्त - अक्टूबर 2027", mr: "ऑगस्ट - ऑक्टोबर 2027" },
+    statDurationSub: { en: "Oct 2026 – Jul 2028 · baths Aug–Sep 2027", hi: "अक्टूबर 2026 – जुलाई 2028 · स्नान अगस्त–सितंबर 2027", mr: "ऑक्टोबर २०२६ – जुलै २०२८ · स्नाने ऑगस्ट–सप्टेंबर २०२७" },
     ctaHeading: { en: "Explore the Sacred Ghats", hi: "पवित्र घाट देखें", mr: "पवित्र घाट पहा" },
     ctaDesc: { en: "Walk the ancient steps where Lord Rama bathed, where saints meditate, and where the Godavari bestows her blessings upon all who seek.", hi: "उन प्राचीन सीढ़ियों पर चलें जहाँ भगवान राम ने स्नान किया, जहाँ संत ध्यान करते हैं, और जहाँ गोदावरी अपने आशीर्वाद सभी साधकों को प्रदान करती है।", mr: "त्या प्राचीन पायऱ्यांवर चला जिथे भगवान रामांनी स्नान केले, जिथे संत ध्यान करतात, आणि जिथे गोदावरी सर्व शोधकांना आशीर्वाद देते." },
     ctaButton: { en: "Discover the Ghats", hi: "घाट खोजें", mr: "घाट शोधा" },
@@ -556,7 +556,7 @@ export const translations = {
   datesPage: {
     heroTitle: { en: "Important Dates", hi: "महत्वपूर्ण तिथियाँ", mr: "महत्त्वाच्या तिथी" },
     heroSubtitle: { en: "Sacred Bathing Schedule - Shahi Snan & Parva Snan", hi: "पवित्र स्नान कार्यक्रम - शाही स्नान एवं पर्व स्नान", mr: "पवित्र स्नान वेळापत्रक - शाही स्नान व पर्व स्नान" },
-    periodLabel: { en: "August - October 2027", hi: "अगस्त - अक्टूबर 2027", mr: "ऑगस्ट - ऑक्टोबर 2027" },
+    periodLabel: { en: "Oct 2026 – Jul 2028 · baths Aug–Sep 2027", hi: "अक्टूबर 2026 – जुलाई 2028 · स्नान अगस्त–सितंबर 2027", mr: "ऑक्टोबर २०२६ – जुलै २०२८ · स्नाने ऑगस्ट–सप्टेंबर २०२७" },
     whySacredTitle: { en: "Why These Dates Are Sacred", hi: "ये तिथियाँ पवित्र क्यों हैं", mr: "या तिथी पवित्र का आहेत" },
     whySacredDesc: {
       en: "Kumbh Mela dates are not chosen arbitrarily - they are determined by rare celestial alignments of Jupiter (Guru/Brihaspati) and the Sun that occur once every twelve years. When Jupiter enters the zodiac sign of Leo (Simha Rashi), the waters of the Godavari are believed to transform into amrit (divine nectar). Bathing during these precise planetary conjunctions is said to wash away lifetimes of karma, grant spiritual liberation (moksha), and bring the blessings of the divine upon pilgrims who take the sacred dip.",
@@ -763,6 +763,31 @@ export const translations = {
     catSpirituality: { en: "Spirituality", hi: "आध्यात्मिकता", mr: "आध्यात्मिकता" },
     catHeritage: { en: "Heritage", hi: "विरासत", mr: "वारसा" },
     catTravel: { en: "Travel", hi: "यात्रा", mr: "प्रवास" },
+    newsletterSubtitle: {
+      en: "Get the dates, and the crowd advice, before you travel",
+      hi: "यात्रा से पहले तिथियाँ और भीड़ संबंधी सलाह पाएँ",
+      mr: "प्रवासापूर्वी तारखा आणि गर्दीबाबतचा सल्ला मिळवा",
+    },
+    newsletterPromiseDates: {
+      en: "Amrit Snan dates and timings",
+      hi: "अमृत स्नान की तिथियाँ और समय",
+      mr: "अमृत स्नानाच्या तारखा आणि वेळा",
+    },
+    newsletterPromiseNoSpam: {
+      en: "A few emails a year, nothing else",
+      hi: "वर्ष में कुछ ही ईमेल, और कुछ नहीं",
+      mr: "वर्षातून काही मोजकेच ईमेल, बाकी काही नाही",
+    },
+    newsletterThanks: {
+      en: "Thank you — we will write to you before the Amrit Snan dates.",
+      hi: "धन्यवाद — अमृत स्नान की तिथियों से पूर्व हम आपको लिखेंगे।",
+      mr: "धन्यवाद — अमृत स्नानाच्या तारखांपूर्वी आम्ही तुम्हाला लिहू.",
+    },
+    newsletterPrivacy: {
+      en: "Your address is used only for this. Unsubscribe any time.",
+      hi: "आपका पता केवल इसी के लिए प्रयुक्त होगा। कभी भी अनसब्सक्राइब करें।",
+      mr: "तुमचा पत्ता फक्त यासाठीच वापरला जाईल. कधीही सदस्यता रद्द करा.",
+    },
     newsletterTitle: { en: "Get Notified When We Publish", hi: "प्रकाशन होने पर सूचना पाएं", mr: "प्रकाशन झाल्यावर सूचना मिळवा" },
     newsletterDesc: { en: "Subscribe to receive new articles about Kumbh Mela directly in your inbox.", hi: "कुंभ मेला के बारे में नए लेख सीधे अपने इनबॉक्स में प्राप्त करने के लिए सदस्यता लें।", mr: "कुंभमेळ्याबद्दलचे नवीन लेख थेट तुमच्या इनबॉक्समध्ये मिळवण्यासाठी सदस्यता घ्या." },
     emailPlaceholder: { en: "Your email address", hi: "आपका ईमेल पता", mr: "तुमचा ईमेल पत्ता" },

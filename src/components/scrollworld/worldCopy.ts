@@ -178,8 +178,8 @@ export const worldCopy: SceneCopy[] = [
         },
       },
       {
-        label: { en: "First Shahi Snan", hi: "प्रथम शाही स्नान", mr: "पहिले शाही स्नान" },
-        value: { en: "20 August 2027", hi: "20 अगस्त 2027", mr: "२० ऑगस्ट २०२७" },
+        label: { en: "First Amrit Snan", hi: "प्रथम अमृत स्नान", mr: "पहिले अमृत स्नान" },
+        value: { en: "2 August 2027", hi: "2 अगस्त 2027", mr: "२ ऑगस्ट २०२७" },
       },
       {
         label: { en: "Returns", hi: "पुनरागमन", mr: "पुनरागमन" },

@@ -4,11 +4,13 @@ import React, { useState } from "react";
 import Link from "next/link";
 import {
   ArrowRight,
-  Send,
-  Newspaper,
   Calendar,
+  Check,
   ExternalLink,
   Filter,
+  Mail,
+  Newspaper,
+  Send,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
@@ -77,6 +79,7 @@ export default function BlogPage() {
   const bp = translations.blogPage;
   const bn = translations.blogNews;
   const [activeFilter, setActiveFilter] = useState<"all" | NewsCategory>("all");
+  const [subscribed, setSubscribed] = useState(false);
 
   const filteredArticles =
     activeFilter === "all"
@@ -324,42 +327,74 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* ════════════════════ NEWSLETTER CTA ════════════════════ */}
-      <section className="section-dark relative py-8 md:py-16">
-        <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
+      {/* ════════════════════ NEWSLETTER ════════════════════ */}
+      <section className="section-dark relative pb-20 pt-4 md:pb-28">
         <div className="section-container relative z-10">
-          <div
-            className="rounded-2xl p-8 text-center md:p-12"
-            style={{
-              background:
-                "linear-gradient(135deg, rgba(201,162,39,0.08), rgba(201,162,39,0.03))",
-              border: "1px solid rgba(201,162,39,0.15)",
-            }}
-          >
-            <h3 className="mb-4 font-heading text-2xl font-bold text-cream-100 md:text-3xl">
-              {t(bp.newsletterTitle)}
-            </h3>
-            <p className="mx-auto mb-6 max-w-lg text-cream-300/60">
-              {t(bp.newsletterDesc)}
-            </p>
-            <form className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row">
-              <input
-                type="email"
-                placeholder={t(bp.emailPlaceholder)}
-                className="flex-1 rounded-lg px-4 py-3 text-cream-100 placeholder-cream-300/30 transition-all focus:outline-none focus:ring-2"
-                style={{
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(201,162,39,0.12)",
+          <div className="overflow-hidden rounded-card border border-cream-200/12 bg-cream-50/[0.04]">
+            <div className="grid gap-8 p-6 sm:p-10 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-14">
+              <div className="min-w-0">
+                <span className="inline-flex items-center gap-2 text-eyebrow font-semibold uppercase text-gold-300">
+                  <Mail className="h-3.5 w-3.5" />
+                  {t(bp.newsletterTitle)}
+                </span>
+
+                <h2 className="mt-4 font-heading text-2xl leading-tight text-cream-50 sm:text-3xl">
+                  {t(bp.newsletterSubtitle)}
+                </h2>
+
+                <p className="mt-3 max-w-prose leading-relaxed text-cream-200/65">
+                  {t(bp.newsletterDesc)}
+                </p>
+
+                <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2.5 text-sm text-cream-200/55">
+                  {[bp.newsletterPromiseDates, bp.newsletterPromiseNoSpam].map((line) => (
+                    <li key={line.en} className="flex items-center gap-2">
+                      <Check className="h-3.5 w-3.5 shrink-0 text-gold-400" />
+                      {t(line)}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <form
+                className="min-w-0"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  setSubscribed(true);
                 }}
-              />
-              <button
-                type="submit"
-                className="btn-gold inline-flex items-center justify-center gap-2"
               >
-                <Send className="h-4 w-4" />
-                {t(bp.subscribe)}
-              </button>
-            </form>
+                {subscribed ? (
+                  <div className="flex items-center gap-3 rounded-2xl border border-river-400/30 bg-river-500/10 px-5 py-6">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-river-500/20 text-river-200">
+                      <Check className="h-5 w-5" />
+                    </span>
+                    <p className="text-sm text-cream-100">{t(bp.newsletterThanks)}</p>
+                  </div>
+                ) : (
+                  <>
+                    <label htmlFor="kumbh-newsletter" className="sr-only">
+                      {t(bp.emailPlaceholder)}
+                    </label>
+                    <div className="flex flex-col gap-2.5 sm:flex-row">
+                      <input
+                        id="kumbh-newsletter"
+                        type="email"
+                        required
+                        placeholder={t(bp.emailPlaceholder)}
+                        className="min-w-0 flex-1 rounded-full border border-cream-200/15 bg-indigo-900/50 px-5 py-3.5 text-cream-100 outline-none transition-colors placeholder:text-cream-200/35 focus:border-gold-500/50"
+                      />
+                      <button type="submit" className="btn-primary shrink-0">
+                        <Send className="h-4 w-4" />
+                        {t(bp.subscribe)}
+                      </button>
+                    </div>
+                    <p className="mt-3 text-xs text-cream-200/40">
+                      {t(bp.newsletterPrivacy)}
+                    </p>
+                  </>
+                )}
+              </form>
+            </div>
           </div>
         </div>
       </section>

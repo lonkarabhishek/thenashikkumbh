@@ -6,7 +6,7 @@ export default function SchemaMarkup() {
     alternateName: ["नाशिक कुंभमेळा २०२७", "नाशिक कुंभ मेला 2027", "Simhastha Kumbh Nashik"],
     description:
       "Nashik Kumbh Mela 2027 is one of Hinduism's most sacred festivals, held every 12 years at the banks of the holy Godavari River in Nashik, Maharashtra. Millions of devotees, sadhus, and pilgrims gather for sacred baths (Shahi Snan) believed to cleanse sins and lead to moksha. The event features grand Akhada processions, spiritual discourses, yoga camps, and cultural performances.",
-    startDate: "2027-08-20",
+    startDate: "2027-08-02",
     endDate: "2027-10-17",
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
