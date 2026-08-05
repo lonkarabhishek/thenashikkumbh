@@ -141,10 +141,15 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${fraunces.variable} ${notoSerifDevanagari.variable} antialiased`}
       >
+        {/* Skip link renders first in tab order and stays visually hidden
+            until it receives focus. The main content is anchored below. */}
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <LanguageProvider>
           <ChatProvider>
             <Navbar />
-            <main>{children}</main>
+            <main id="main-content">{children}</main>
             <Footer />
             <KumbhSahayak />
             <SOSButton />

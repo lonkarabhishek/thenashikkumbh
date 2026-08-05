@@ -143,8 +143,9 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Official Kumbh contact — sourced from the content registry. Previous
-            entries here (info@thenashikkumbh.com, 0253-2305555) were placeholders. */}
+        {/* Official Kumbh contact — sourced from the content registry. The
+            previous info@ address on this domain and the 0253-2305555 line
+            that lived here were placeholders and have been removed. */}
         <div className="mt-10 rounded-card border border-cream-200/12 bg-cream-50/[0.04] p-5">
           <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-gold-300">
             {t({

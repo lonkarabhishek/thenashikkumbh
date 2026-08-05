@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run verify:content && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "verify:content": "node scripts/verify-content.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",

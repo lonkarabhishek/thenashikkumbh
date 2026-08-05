@@ -1,10 +1,11 @@
 /**
  * Site configuration.
  *
- * `whatsapp` and `email` used to hold placeholder values (`+919999999999`,
- * `info@thenashikkumbh.com`) that were treated by the schema and footer as real.
- * They are removed. Any operational contact belongs in the content registry at
- * `src/data/verified/index.ts` so it carries a source and a verification date.
+ * `whatsapp` and `email` used to hold placeholder values (a nines-only phone
+ * number and an info@ address on this domain) that were treated by the schema
+ * and footer as real. They are removed. Any operational contact belongs in the
+ * content registry at `src/data/verified/index.ts` so it carries a source and
+ * a verification date.
  */
 export const siteConfig = {
   name: "The Nashik Kumbh",

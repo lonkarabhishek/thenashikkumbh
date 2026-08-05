@@ -46,7 +46,7 @@ const transportModes = [
       "Delhi to Nashik Road: Rajdhani connection via Mumbai, or direct trains (~18-20 hrs)",
       "Hyderabad to Nashik Road: direct trains (~12 hrs)",
     ],
-    tip: "During Kumbh, special trains are run by Indian Railways. Book well in advance as demand is extremely high.",
+    tip: "Nashik Road is the main railway station and Indian Railways typically operates additional trains for Simhastha; the official 2027 timetable has not yet been announced. Book as soon as it is published and expect very high demand.",
   },
   {
     Icon: Plane,
@@ -164,9 +164,9 @@ const essentialTips = [
     titleKey: translations.guidePage.emergencyTitle,
     color: "#F87171",
     // Sourced from the content registry (src/data/verified/index.ts). The
-    // "Kumbh Mela Helpline" line that lived here as `1800-XXX-XXXX` was a
-    // placeholder shipped as fact; it and the unverified 0253 numbers are
-    // gone until an official NTKMA helpline is published.
+    // "Kumbh Mela Helpline" placeholder toll-free line and the unverified 0253
+    // numbers that used to sit here are gone until an official NTKMA helpline
+    // is published.
     contacts: [
       { label: "All emergencies (ERSS)", number: "112" },
       { label: "Ambulance (MEMS 108)", number: "108" },

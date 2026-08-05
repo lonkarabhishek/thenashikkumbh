@@ -238,14 +238,14 @@ export const translations = {
       },
       {
         q: {
-          en: "When are the Shahi Snan dates for Nashik Kumbh Mela 2027?",
+          en: "When are the Amrit Snan (bathing) dates for Nashik Kumbh Mela 2027?",
           hi: "नाशिक कुंभ मेला 2027 की शाही स्नान तिथियाँ क्या हैं?",
           mr: "नाशिक कुंभमेळा 2027 च्या शाही स्नान तिथी कोणत्या आहेत?",
         },
         a: {
-          en: "The five main Shahi Snan (Royal Bath) dates for Nashik Kumbh Mela 2027 are: August 20 (Shravan Purnima), September 3 (Bhadrapad Amavasya), September 17 (Bhadrapad Purnima), October 2 (Ashwin Amavasya/Mahalaya), and October 17 (Ashwin Purnima/Sharad Purnima). These dates are considered the most auspicious for sacred bathing in the Godavari River.",
-          hi: "नाशिक कुंभ मेला 2027 की पाँच मुख्य शाही स्नान तिथियाँ हैं: 20 अगस्त (श्रावण पूर्णिमा), 3 सितंबर (भाद्रपद अमावस्या), 17 सितंबर (भाद्रपद पूर्णिमा), 2 अक्टूबर (अश्विन अमावस्या/महालय), और 17 अक्टूबर (अश्विन पूर्णिमा/शरद पूर्णिमा)।",
-          mr: "नाशिक कुंभमेळा 2027 च्या पाच मुख्य शाही स्नान तिथी आहेत: 20 ऑगस्ट (श्रावण पौर्णिमा), 3 सप्टेंबर (भाद्रपद अमावास्या), 17 सप्टेंबर (भाद्रपद पौर्णिमा), 2 ऑक्टोबर (अश्विन अमावास्या/महालय), आणि 17 ऑक्टोबर (अश्विन पौर्णिमा/शरद पौर्णिमा).",
+          en: "Three Amrit Snans are officially confirmed for the 2027 Simhastha, per the Maharashtra government release (DGIPR, 21 May 2025): 2 August 2027 (Ashadh Somvati Amavasya), 31 August 2027 (Shravan Amavasya), and 11 September 2027 at Nashik plus 12 September 2027 at Trimbakeshwar (Bhadrapada Shuddha Ekadashi and Vaman Dwadashi). Any list showing five dates on this page in an earlier version was not the official schedule.",
+          hi: "२०२७ के सिंहस्थ के लिए महाराष्ट्र सरकार (DGIPR, २१ मई २०२५) ने तीन अमृत स्नान आधिकारिक रूप से घोषित किए हैं: २ अगस्त २०२७ (आषाढ़ सोमवती अमावस्या), ३१ अगस्त २०२७ (श्रावण अमावस्या), और ११ सितंबर २०२७ नाशिक + १२ सितंबर २०२७ त्र्यंबकेश्वर (भाद्रपद शुक्ल एकादशी और वामन द्वादशी)।",
+          mr: "२०२७ च्या सिंहस्थासाठी महाराष्ट्र शासनाने (DGIPR, २१ मे २०२५) तीन अमृत स्नान अधिकृतपणे जाहीर केले आहेत: २ ऑगस्ट २०२७ (आषाढ सोमवती अमावास्या), ३१ ऑगस्ट २०२७ (श्रावण अमावास्या), आणि ११ सप्टेंबर २०२७ नाशिक + १२ सप्टेंबर २०२७ त्र्यंबकेश्वर (भाद्रपद शुद्ध एकादशी व वामन द्वादशी).",
         },
       },
       {

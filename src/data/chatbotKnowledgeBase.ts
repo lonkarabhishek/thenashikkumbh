@@ -250,7 +250,7 @@ export const chatTopics: ChatTopic[] = [
       mr: "कुंभमेळ्याला जाणे सुरक्षित आहे का?",
     },
     answer: {
-      en: "Kumbh Mela has extensive safety arrangements in place. AI-powered CCTV surveillance cameras are installed across the area, and a dedicated Kumbh War Room monitors crowd movement in real time. Mobile hospitals, ambulances, and first-aid stations are available throughout the venue. A large police force is deployed for crowd management. Just follow official crowd guidelines, stay with your group, and keep your belongings close.",
+      en: "For any real emergency, dial 112 first. The specific 2027 safety plan — CCTV coverage, control-room command structure, medical camps, police deployment — has not yet been published by NTKMA. The basics that always apply: stay with your group, agree a meeting point that is a place not a person, keep your belongings close, and follow marshal directions on the ground.",
       hi: "कुंभ मेले में व्यापक सुरक्षा व्यवस्था की जाती है। पूरे क्षेत्र में AI-संचालित CCTV निगरानी कैमरे लगाए जाते हैं, और एक समर्पित कुंभ वॉर रूम भीड़ की गतिविधियों पर नजर रखता है। मोबाइल अस्पताल, एम्बुलेंस और प्राथमिक उपचार केंद्र पूरे स्थल पर उपलब्ध रहते हैं। भीड़ प्रबंधन के लिए बड़ी संख्या में पुलिस तैनात की जाती है। बस आधिकारिक भीड़ दिशानिर्देशों का पालन करें और अपना सामान अपने पास रखें।",
       mr: "कुंभमेळ्यात व्यापक सुरक्षा व्यवस्था केली जाते. संपूर्ण परिसरात AI-आधारित CCTV पाळत ठेवणारे कॅमेरे बसवले जातात आणि एक समर्पित कुंभ वॉर रूम गर्दीच्या हालचालींवर लक्ष ठेवतो. मोबाइल रुग्णालये, रुग्णवाहिका आणि प्रथमोपचार केंद्रे संपूर्ण ठिकाणी उपलब्ध असतात. गर्दी व्यवस्थापनासाठी मोठ्या प्रमाणात पोलीस तैनात केले जातात. फक्त अधिकृत गर्दी मार्गदर्शक सूचनांचे पालन करा आणि आपले सामान जवळ ठेवा.",
     },
@@ -951,7 +951,7 @@ export const chatTopics: ChatTopic[] = [
       mr: "कुंभात गर्दीचे व्यवस्थापन कसे केले जाते?",
     },
     answer: {
-      en: "Kumbh Mela has a dedicated crowd management system. AI-powered CCTV cameras monitor crowd density in real time. A Kumbh War Room coordinates police, NDRF, and medical teams. One-way crowd flow systems are set up on Shahi Snan days. Barricades and designated entry/exit points prevent overcrowding. If you feel the crowd getting too dense, move to the side and wait. Always follow police and volunteer instructions. The SOS button on this website can help in emergencies.",
+      en: "The 2027 crowd-management plan — command structure, one-way flow, barricades, entry/exit points — has not yet been published by NTKMA. In the meantime: on Amrit Snan mornings, if the crowd around you feels too dense, move to the side, stop, and wait it out. Follow the direction of police and volunteers on the ground; they see the whole flow, you cannot. Dial 112 in any real emergency.",
       hi: "कुंभ मेले में एक समर्पित भीड़ प्रबंधन प्रणाली है। AI-संचालित CCTV कैमरे वास्तविक समय में भीड़ की घनत्व पर नजर रखते हैं। एक कुंभ वॉर रूम पुलिस, NDRF और चिकित्सा टीमों का समन्वय करता है। शाही स्नान दिनों में एकतरफा भीड़ प्रवाह प्रणालियां स्थापित की जाती हैं। बैरिकेड और निर्धारित प्रवेश/निकास बिंदु अत्यधिक भीड़ को रोकते हैं। अगर भीड़ बहुत ज्यादा लगे, तो किनारे पर जाकर रुकें।",
       mr: "कुंभमेळ्यात एक समर्पित गर्दी व्यवस्थापन प्रणाली आहे. AI-आधारित CCTV कॅमेरे वास्तविक वेळेत गर्दीच्या घनतेवर लक्ष ठेवतात. एक कुंभ वॉर रूम पोलीस, NDRF आणि वैद्यकीय पथकांचे समन्वय करतो. शाही स्नानाच्या दिवशी एकमार्गी गर्दी प्रवाह प्रणाली उभारली जाते. बॅरिकेड्स आणि निर्धारित प्रवेश/निर्गम बिंदू अतिगर्दी रोखतात. गर्दी खूप दाट वाटल्यास बाजूला जाऊन थांबा.",
     },

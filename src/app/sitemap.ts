@@ -79,23 +79,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
+    // Games, Kumbh Run, and Businesses are demoted — they are secondary
+    // interest surfaces, not part of the pilgrim's operational path. Keeping
+    // them in the sitemap but at low priority so search engines follow the
+    // dates/emergency/schedule pages first.
     {
       url: `${baseUrl}/games`,
       lastModified,
       changeFrequency: "monthly",
-      priority: 0.5,
+      priority: 0.2,
     },
     {
       url: `${baseUrl}/kumbhrun`,
       lastModified,
       changeFrequency: "monthly",
-      priority: 0.5,
+      priority: 0.2,
     },
     {
       url: `${baseUrl}/businesses`,
       lastModified,
-      changeFrequency: "weekly",
-      priority: 0.6,
+      changeFrequency: "monthly",
+      priority: 0.3,
     },
     {
       url: `${baseUrl}/blog`,

@@ -69,9 +69,18 @@ export default function SchemaMarkup() {
           },
         },
       })),
+    // Primary source for the schedule — the DGIPR release. Corroborating wire
+    // coverage lives in the content registry, not here.
+    sameAs: [
+      "https://mahasamvad.in/167800",
+      "https://divcomnashik.maharashtra.gov.in/en/about-nashik-trimbakeshwar-authority/",
+    ],
     inLanguage: ["en", "hi", "mr"],
   };
 
+  // The WebSite schema deliberately omits `potentialAction`/SearchAction.
+  // Advertising a search endpoint we do not implement would misrepresent the
+  // site's capabilities to search engines.
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -81,12 +90,6 @@ export default function SchemaMarkup() {
     publisher: {
       "@type": "Organization",
       name: "The Nashik Kumbh — independent public-information initiative",
-    },
-    potentialAction: {
-      "@type": "SearchAction",
-      target:
-        "https://thenashikkumbh.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string",
     },
   };
 

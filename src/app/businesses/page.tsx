@@ -1,584 +1,135 @@
-"use client";
-
-import React, { useState } from "react";
-import {
-  Hotel,
-  Building,
-  MapPin,
-  Star,
-  Phone,
-  Globe,
-  Bus,
-  UtensilsCrossed,
-  Landmark,
-  Compass,
-  Send,
-  Megaphone,
-  ChevronRight,
-  BadgeCheck,
-  Sparkles,
-  ArrowRight,
-} from "lucide-react";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { useLanguage } from "@/context/LanguageContext";
-import { translations } from "@/i18n/translations";
+import { ArrowRight, BadgeCheck, Compass, ShieldCheck } from "lucide-react";
 
-/* ───────────────────────────── data ───────────────────────────── */
+/**
+ * Businesses page.
+ *
+ * Rewritten from scratch. The previous version rendered a category browser
+ * with "Coming Soon" placeholder cards, a fake sponsorship slot, a form that
+ * silently discarded its input, and a "Verified listing / Customer reviews /
+ * Premium placement" pitch — none of which the site offers today. Users
+ * couldn't tell which parts were live and which were mock. That's precisely
+ * the thing the content-integrity brief forbids: plausible placeholder data
+ * shipped as if it were the real service.
+ *
+ * The honest version below explains what a Kumbh business directory *would*
+ * need to look like to be trustworthy, and states plainly that the site does
+ * not yet run one.
+ */
 
-const businessCategoriesData = [
-  { id: "hotels",       labelKey: "catHotels" as const,       icon: <Hotel className="h-5 w-5" />,            accent: "#60A5FA" },
-  { id: "dharamshalas", labelKey: "catDharamshalas" as const,  icon: <Landmark className="h-5 w-5" />,        accent: "#C9A227" },
-  { id: "tours",        labelKey: "catTours" as const,        icon: <Compass className="h-5 w-5" />,         accent: "#34D399" },
-  { id: "puja",         labelKey: "catPuja" as const,         icon: <Sparkles className="h-5 w-5" />,        accent: "#A78BFA" },
-  { id: "restaurants",  labelKey: "catRestaurants" as const,  icon: <UtensilsCrossed className="h-5 w-5" />, accent: "#F87171" },
-  { id: "transport",    labelKey: "catTransport" as const,    icon: <Bus className="h-5 w-5" />,             accent: "#2DD4BF" },
+export const metadata: Metadata = {
+  title: "Businesses & sponsorship — The Nashik Kumbh",
+  description:
+    "The Nashik Kumbh site does not yet run a business directory or accept sponsorships. This page explains why, and what the standards will be if that changes.",
+  alternates: { canonical: "https://thenashikkumbh.com/businesses" },
+};
+
+const STANDARDS = [
+  {
+    Icon: BadgeCheck,
+    title: "Verification before listing",
+    body:
+      "No listing appears until the business has been reached, its permits and price sheets confirmed, and its details attributed to a named source with a verification date. Pilgrims will see the verification date on every card.",
+  },
+  {
+    Icon: ShieldCheck,
+    title: "No pay-to-rank",
+    body:
+      "Sponsorship, if it opens, will be clearly separated from organic listings — sponsored cards will be labelled as sponsored, and ranking of unpaid listings will not depend on payment.",
+  },
+  {
+    Icon: Compass,
+    title: "One clear complaint route",
+    body:
+      "Every listing will carry a single email address for reporting a mistake, over-charging, or a safety issue. Every complaint will be logged in /changelog with the action taken.",
+  },
 ];
-
-const placeholderBusinesses = [
-  { name: "Coming Soon", rating: 0 },
-  { name: "Coming Soon", rating: 0 },
-  { name: "Coming Soon", rating: 0 },
-  { name: "Coming Soon", rating: 0 },
-  { name: "Coming Soon", rating: 0 },
-  { name: "Coming Soon", rating: 0 },
-];
-
-/* ───────────────────────────── page ───────────────────────────── */
 
 export default function BusinessesPage() {
-  const { t } = useLanguage();
-  const bp = translations.businessesPage;
-  const [activeCategory, setActiveCategory] = useState("hotels");
-  const [formData, setFormData] = useState({
-    businessName: "",
-    category: "",
-    contact: "",
-    description: "",
-  });
-
-  const businessCategories = businessCategoriesData.map((cat) => ({
-    ...cat,
-    label: t(bp[cat.labelKey]),
-  }));
-
-  const currentCategory = businessCategories.find((c) => c.id === activeCategory)!;
-
-  const handleFormChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-  };
-
   return (
-    <>
+    <main className="bg-cream-50 pt-24">
+      <section className="section-container py-16 sm:py-24">
+        <p className="text-eyebrow font-semibold uppercase text-saffron-700">
+          Businesses & sponsorship
+        </p>
+        <h1 className="mt-4 max-w-2xl text-title text-temple-900">
+          The directory is not yet open.
+        </h1>
+        <p className="mt-6 max-w-prose text-lede text-temple-500">
+          This site does not run a business directory today. It does not sell
+          sponsorships. It does not display advertisements. If those change,
+          they will be launched under the standards below — not before.
+        </p>
 
-
-      {/* ═══════════════════ HERO BANNER ═══════════════════ */}
-      <section className="section-dark relative overflow-hidden py-32 pt-40">
-        <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,162,39,0.08)_0%,transparent_60%)]" />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute left-20 top-20 h-72 w-72 rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(201,162,39,0.06) 0%, transparent 70%)" }}
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute bottom-10 right-20 h-64 w-64 rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(201,162,39,0.04) 0%, transparent 70%)" }}
-        />
-
-        <div className="section-container relative z-10 text-center">
-          <span
-            className="mb-4 inline-block font-devanagari text-5xl drop-shadow-lg"
-            style={{ color: "#C9A227", textShadow: "0 0 30px rgba(201,162,39,0.4)" }}
-            aria-hidden="true"
-          >
-            सेवा
-          </span>
-
-          <h1
-            className="font-heading text-4xl font-bold text-cream-100 drop-shadow-md md:text-6xl lg:text-7xl"
-          >
-            {t(bp.heroTitle)}
-          </h1>
-
-          <p
-            className="mx-auto mt-4 max-w-2xl text-lg text-cream-300/70 md:text-xl"
-          >
-            {t(bp.heroSubtitle)}
-          </p>
-
-          <div
-            className="gold-line-thick mx-auto mt-8 w-48 origin-center"
-          />
-        </div>
-      </section>
-
-      {/* ═══════════════════ INTRO ═══════════════════ */}
-      <section className="section-dark relative py-12 md:py-16">
-        <div className="section-container relative z-10">
-          <div
-            className="mx-auto max-w-3xl text-center"
-          >
-            <p className="text-lg leading-relaxed text-cream-300/60">
-              {t(bp.introText)}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════ AD SPACE - TOP ═══════════════════ */}
-      <div className="section-dark">
-        <div className="section-container pb-8">
-          <div
-            className="rounded-2xl px-6 py-8 text-center"
-            style={{
-              border: "2px dashed rgba(201,162,39,0.15)",
-              background: "rgba(201,162,39,0.03)",
-            }}
-          >
-            <Megaphone className="mx-auto mb-2 h-8 w-8" style={{ color: "rgba(201,162,39,0.3)" }} />
-            <p className="text-sm font-medium" style={{ color: "rgba(201,162,39,0.5)" }}>
-              {t(bp.adSpaceTitle)}
-            </p>
-            <p className="mt-1 text-xs" style={{ color: "rgba(201,162,39,0.3)" }}>
-              {t(bp.adSpaceDesc)}
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* ═══════════════════ CATEGORY TABS & LISTINGS ═══════════════════ */}
-      <section className="section-dark relative py-8 md:py-12">
-        <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
-        <div className="section-container relative z-10">
-          <div
-            className="mb-10 text-center"
-          >
-            <h2 className="gradient-text font-heading text-3xl font-bold md:text-4xl">
-              {t(bp.browseByCategory)}
-            </h2>
-            <div className="sacred-divider mt-4">
-              <span className="om-decoration select-none" aria-hidden="true">
-                ॐ
-              </span>
-            </div>
-          </div>
-
-          {/* Category Tabs */}
-          <div
-            className="mb-12 flex flex-wrap justify-center gap-3"
-          >
-            {businessCategories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className="flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300"
-                style={
-                  activeCategory === cat.id
-                    ? {
-                        background: "linear-gradient(135deg, #C9A227, #B8922D)",
-                        color: "#0B1220",
-                        boxShadow: "0 4px 20px rgba(201,162,39,0.3)",
-                      }
-                    : {
-                        background: "transparent",
-                        color: "rgba(201,162,39,0.6)",
-                        border: "1px solid rgba(201,162,39,0.15)",
-                      }
-                }
-              >
-                {cat.icon}
-                <span className="hidden sm:inline">{cat.label}</span>
-              </button>
-            ))}
-          </div>
-
-          {/* Active Category Header */}
-          <div
-            className="mb-8 flex items-center gap-3"
-            key={activeCategory}
-          >
-            <span style={{ color: currentCategory.accent }}>{currentCategory.icon}</span>
-            <h3 className="font-heading text-2xl font-bold text-cream-100">
-              {currentCategory.label}
-            </h3>
-            <div
-              className="h-px flex-1"
-              style={{ background: `linear-gradient(90deg, ${currentCategory.accent}40, transparent)` }}
-            />
-          </div>
-
-          {/* Business Cards Grid */}
-          <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {placeholderBusinesses.map((business, index) => (
-              <div
-                key={`${activeCategory}-${index}`}
-                className="card-glass group relative overflow-hidden p-6 transition-all duration-500 hover:-translate-y-2"
-                style={{
-                  background: "rgba(255,255,255,0.03)",
-                  borderColor: "rgba(201,162,39,0.08)",
-                }}
-              >
-                <div className="absolute inset-0 temple-pattern opacity-[0.02] pointer-events-none" />
-
-                <div className="relative z-10">
-                  {/* Category Badge */}
-                  <span
-                    className="mb-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold"
-                    style={{
-                      background: `${currentCategory.accent}15`,
-                      color: currentCategory.accent,
-                      border: `1px solid ${currentCategory.accent}25`,
-                    }}
-                  >
-                    {currentCategory.icon}
-                    {currentCategory.label}
-                  </span>
-
-                  {/* "Coming Soon" badge */}
-                  <div className="mb-3 flex items-center gap-2">
-                    <h4 className="font-heading text-xl font-bold text-cream-100">
-                      {business.name}
-                    </h4>
-                    <span
-                      className="rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider"
-                      style={{
-                        background: "rgba(201,162,39,0.15)",
-                        color: "#C9A227",
-                        border: "1px solid rgba(201,162,39,0.2)",
-                      }}
-                    >
-                      {t(bp.comingSoon)}
-                    </span>
-                  </div>
-
-                  {/* Star Rating Placeholder */}
-                  <div className="mb-4 flex items-center gap-1">
-                    {[1, 2, 3, 4, 5].map((s) => (
-                      <Star
-                        key={s}
-                        className="h-4 w-4"
-                        fill="currentColor"
-                        style={{ color: "rgba(201,162,39,0.15)" }}
-                      />
-                    ))}
-                    <span className="ml-1 text-xs text-cream-300/30">{t(bp.noRatings)}</span>
-                  </div>
-
-                  {/* Contact Placeholder */}
-                  <div className="mb-5 space-y-2 text-sm text-cream-300/40">
-                    <div className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4" style={{ color: "rgba(201,162,39,0.4)" }} />
-                      <span>{t(bp.addressPlaceholder)}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Phone className="h-4 w-4" style={{ color: "rgba(201,162,39,0.4)" }} />
-                      <span>{t(bp.contactPending)}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Globe className="h-4 w-4" style={{ color: "rgba(201,162,39,0.4)" }} />
-                      <span>{t(bp.websiteSoon)}</span>
-                    </div>
-                  </div>
-
-                  {/* Claim Button */}
-                  <button className="btn-ghost-gold w-full gap-2 py-2.5 text-sm">
-                    <BadgeCheck className="h-4 w-4" />
-                    {t(bp.claimListing)}
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════ AD SPACE - MIDDLE ═══════════════════ */}
-      <section className="relative bg-cream-50 py-8">
-        <div className="absolute inset-0 mandala-bg" />
-        <div className="section-container relative z-10">
-          <div
-            className="rounded-2xl px-6 py-10 text-center"
-            style={{
-              border: "2px dashed rgba(201,162,39,0.2)",
-              background: "rgba(201,162,39,0.03)",
-            }}
-          >
-            <Building className="mx-auto mb-3 h-10 w-10" style={{ color: "rgba(201,162,39,0.3)" }} />
-            <p className="font-medium" style={{ color: "rgba(201,162,39,0.7)" }}>
-              {t(bp.sponsoredTitle)}
-            </p>
-            <p className="mx-auto mt-1 max-w-md text-sm text-temple-400">
-              {t(bp.sponsoredDesc)}
-            </p>
-            <button
-              className="mt-4 inline-flex items-center gap-1 text-sm font-medium transition-colors"
-              style={{ color: "#C9A227" }}
-            >
-              {t(bp.learnMore)} <ChevronRight className="h-4 w-4" />
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════ LIST YOUR BUSINESS ═══════════════════ */}
-      <section className="section-dark relative py-16 md:py-24">
-        <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(201,162,39,0.04)_0%,transparent_60%)]" />
-        <div className="section-container relative z-10">
-          <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
-            {/* Left: Info */}
-            <div>
-              <h2 className="gradient-text font-heading text-3xl font-bold md:text-4xl">
-                {t(bp.listYourBusiness)}
-              </h2>
-              <p className="mt-6 text-lg leading-relaxed text-cream-300/60">
-                {t(bp.listDesc)}
-              </p>
-
-              <div className="mt-8 space-y-4">
-                {[
-                  { Icon: BadgeCheck, title: t(bp.verifiedListing), desc: t(bp.verifiedDesc) },
-                  { Icon: Star, title: t(bp.customerReviews), desc: t(bp.customerReviewsDesc) },
-                  { Icon: Megaphone, title: t(bp.premiumPlacement), desc: t(bp.premiumPlacementDesc) },
-                ].map((item) => (
-                  <div key={item.title} className="flex items-start gap-3">
-                    <div
-                      className="mt-0.5 rounded-full p-2"
-                      style={{ background: "rgba(201,162,39,0.1)" }}
-                    >
-                      <item.Icon className="h-5 w-5" style={{ color: "#C9A227" }} />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-cream-100">{item.title}</h4>
-                      <p className="text-sm text-cream-300/50">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div
-                className="mt-8 rounded-xl p-5"
-                style={{
-                  background: "linear-gradient(135deg, rgba(201,162,39,0.08), rgba(201,162,39,0.03))",
-                  border: "1px solid rgba(201,162,39,0.15)",
-                }}
-              >
-                <div className="mb-2 flex items-center gap-2">
-                  <Sparkles className="h-5 w-5" style={{ color: "#C9A227" }} />
-                  <span className="font-heading font-bold" style={{ color: "#C9A227" }}>
-                    {t(bp.premiumUpgrade)}
-                  </span>
-                </div>
-                <p className="text-sm leading-relaxed text-cream-300/50">
-                  Featured listings get premium placement at the top of search results,
-                  highlighted cards, a verified badge, and priority customer support.
-                  Stand out from the crowd and maximize your visibility during Kumbh Mela.
-                </p>
-              </div>
-            </div>
-
-            {/* Right: Form */}
-            <div>
-              <div
-                className="card-dark p-8"
-                style={{ borderColor: "rgba(201,162,39,0.15)" }}
-              >
-                <h3 className="font-heading text-2xl font-bold text-cream-100 mb-6">
-                  {t(bp.registerTitle)}
-                </h3>
-                <form onSubmit={handleFormSubmit} className="space-y-5">
-                  <div>
-                    <label
-                      htmlFor="businessName"
-                      className="mb-1.5 block text-sm font-medium text-cream-300/60"
-                    >
-                      {t(bp.formBusinessName)}
-                    </label>
-                    <input
-                      type="text"
-                      id="businessName"
-                      name="businessName"
-                      value={formData.businessName}
-                      onChange={handleFormChange}
-                      placeholder="Enter your business name"
-                      className="w-full rounded-lg px-4 py-3 text-cream-100 placeholder-cream-300/30 transition-all focus:outline-none focus:ring-2"
-                      style={{
-                        background: "rgba(255,255,255,0.04)",
-                        border: "1px solid rgba(201,162,39,0.12)",
-                        // @ts-expect-error -- ring color
-                        "--tw-ring-color": "rgba(201,162,39,0.4)",
-                      }}
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="category"
-                      className="mb-1.5 block text-sm font-medium text-cream-300/60"
-                    >
-                      {t(bp.formCategory)}
-                    </label>
-                    <select
-                      id="category"
-                      name="category"
-                      value={formData.category}
-                      onChange={handleFormChange}
-                      className="w-full rounded-lg px-4 py-3 text-cream-100 transition-all focus:outline-none focus:ring-2"
-                      style={{
-                        background: "rgba(255,255,255,0.04)",
-                        border: "1px solid rgba(201,162,39,0.12)",
-                      }}
-                    >
-                      <option value="" style={{ background: "#121D31" }}>{t(bp.formSelectCategory)}</option>
-                      {businessCategories.map((cat) => (
-                        <option key={cat.id} value={cat.id} style={{ background: "#121D31" }}>
-                          {cat.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="contact"
-                      className="mb-1.5 block text-sm font-medium text-cream-300/60"
-                    >
-                      {t(bp.formContact)}
-                    </label>
-                    <input
-                      type="tel"
-                      id="contact"
-                      name="contact"
-                      value={formData.contact}
-                      onChange={handleFormChange}
-                      placeholder="+91 XXXXX XXXXX"
-                      className="w-full rounded-lg px-4 py-3 text-cream-100 placeholder-cream-300/30 transition-all focus:outline-none focus:ring-2"
-                      style={{
-                        background: "rgba(255,255,255,0.04)",
-                        border: "1px solid rgba(201,162,39,0.12)",
-                      }}
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="description"
-                      className="mb-1.5 block text-sm font-medium text-cream-300/60"
-                    >
-                      {t(bp.formDescription)}
-                    </label>
-                    <textarea
-                      id="description"
-                      name="description"
-                      value={formData.description}
-                      onChange={handleFormChange}
-                      placeholder="Tell pilgrims about your business..."
-                      rows={4}
-                      className="w-full resize-none rounded-lg px-4 py-3 text-cream-100 placeholder-cream-300/30 transition-all focus:outline-none focus:ring-2"
-                      style={{
-                        background: "rgba(255,255,255,0.04)",
-                        border: "1px solid rgba(201,162,39,0.12)",
-                      }}
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="btn-gold w-full gap-2"
-                  >
-                    <Send className="h-5 w-5" />
-                    {t(bp.formSubmit)}
-                  </button>
-
-                  <p className="mt-3 text-center text-xs text-cream-300/30">
-                    {t(bp.formNote)}
-                  </p>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════ BOTTOM AD SPACE ═══════════════════ */}
-      <section className="relative bg-cream-50 py-8">
-        <div className="absolute inset-0 mandala-bg" />
-        <div className="section-container relative z-10">
-          <div
-            className="rounded-2xl px-6 py-10 text-center"
-            style={{
-              background: "linear-gradient(135deg, rgba(201,162,39,0.05), rgba(201,162,39,0.02))",
-              border: "2px dashed rgba(201,162,39,0.2)",
-            }}
-          >
-            <div className="mb-3 flex items-center justify-center gap-2">
-              <Megaphone className="h-8 w-8" style={{ color: "rgba(201,162,39,0.4)" }} />
-            </div>
-            <p className="font-heading text-lg font-bold" style={{ color: "#C9A227" }}>
-              {t(bp.advertisingTitle)}
-            </p>
-            <p className="mx-auto mt-2 max-w-lg text-sm text-temple-400">
-              {t(bp.advertisingDesc)}
-            </p>
-            {/* Advertising contact is not yet published; the site does not
-                accept sponsorships until Phase 10's listing standards ship. */}
-            <p className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-temple-400">
-              {t({
-                en: "Sponsorship not yet open.",
-                hi: "प्रायोजन अभी उपलब्ध नहीं है।",
-                mr: "प्रायोजकत्व अजून उपलब्ध नाही.",
-              })}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════ FINAL CTA ═══════════════════ */}
-      <section
-        className="relative overflow-hidden py-20 md:py-28"
-        style={{
-          background: "linear-gradient(135deg, #1a0a00 0%, #0B1220 50%, #1a0a00 100%)",
-        }}
-      >
-        <div className="absolute inset-0 temple-pattern opacity-[0.03]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,162,39,0.06)_0%,transparent_70%)]" />
-
-        <div
-          className="section-container relative z-10 text-center"
-        >
-          <div className="sacred-divider mx-auto mb-8 max-w-xs">
-            <span className="font-devanagari text-sm" style={{ color: "#C9A227" }}>
-              ॐ
-            </span>
-          </div>
-
-          <h2 className="font-heading text-3xl font-bold text-cream-100 md:text-5xl">
-            {t(bp.ctaHeading)}
+        <div className="mt-10 rounded-card border border-saffron-200 bg-saffron-50/50 p-6 sm:p-8">
+          <h2 className="font-heading text-xl text-temple-900">
+            Why nothing here is live
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-cream-300/70">
-            {t(bp.ctaDesc)}
+          <p className="mt-3 max-w-prose text-temple-600 leading-relaxed">
+            A pilgrim looking at a listings page assumes what they see is real.
+            An earlier version of this page shipped placeholder cards, a
+            non-functional sign-up form, and a &ldquo;Premium placement&rdquo;
+            pitch. That was misleading and has been removed. The site will not
+            run a directory until the standards on this page can be met for
+            every listing.
           </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/guide" className="btn-gold inline-flex items-center gap-2">
-              <Compass className="h-5 w-5" />
-              {t(translations.eventsPage.pilgrimGuide)}
-            </Link>
-            <Link href="/dates" className="btn-ghost-gold inline-flex items-center gap-2">
-              {t(translations.eventsPage.viewDates)}
-              <ArrowRight className="h-5 w-5" />
-            </Link>
-          </div>
+        </div>
+
+        <h2 className="mt-16 font-heading text-2xl text-temple-900">
+          Standards a real directory will meet
+        </h2>
+        <ol className="mt-8 grid gap-6 sm:grid-cols-1">
+          {STANDARDS.map(({ Icon, title, body }) => (
+            <li
+              key={title}
+              className="flex gap-4 rounded-card border border-temple-100 bg-cream-50 p-6"
+            >
+              <span
+                aria-hidden
+                className="mt-1 grid h-10 w-10 shrink-0 place-items-center rounded-full bg-saffron-100 text-saffron-700"
+              >
+                <Icon className="h-5 w-5" />
+              </span>
+              <div>
+                <h3 className="font-heading text-lg text-temple-900">
+                  {title}
+                </h3>
+                <p className="mt-2 text-temple-600 leading-relaxed">{body}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        <h2 className="mt-16 font-heading text-2xl text-temple-900">
+          For business owners
+        </h2>
+        <p className="mt-4 max-w-prose text-temple-600 leading-relaxed">
+          If you run a hotel, dharamshala, tour, puja service, restaurant or
+          transport service that pilgrims will use during Simhastha 2027, we
+          are not accepting listings today. When the directory opens, it will
+          be announced on the homepage and in the changelog. Until then, work
+          with the Nashik–Trimbakeshwar Kumbh Mela Authority for official
+          recognition; the site will source from what NTKMA publishes.
+        </p>
+
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          <Link
+            href="/policies"
+            className="btn-ghost-gold inline-flex items-center gap-2"
+          >
+            Read the editorial policies
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link
+            href="/changelog"
+            className="btn-ghost-gold inline-flex items-center gap-2"
+          >
+            See the corrections log
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </section>
-
-
-    </>
+    </main>
   );
 }

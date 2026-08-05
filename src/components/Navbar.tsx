@@ -17,6 +17,15 @@ import type { Locale } from "@/i18n/translations";
  */
 type NavItem = { href: string; label: Record<Locale, string> };
 
+/* Nav is organised around what a pilgrim actually does, in order:
+ *   Before  — decide when to come and what to bring
+ *   Arriving — orient in Nashik / Trimbakeshwar
+ *   Inside   — what to see and do at the Mela
+ *   Emergency — the bottom-of-the-drawer safety block
+ *   Explore  — everything secondary lives here (games, run, gallery, businesses)
+ *
+ * Primary bar keeps the three that pilgrims click most; the rest lives under
+ * "More" grouped by journey stage. */
 const PRIMARY: NavItem[] = [
   { href: "/dates", label: translations.nav.dates },
   { href: "/ghats", label: translations.nav.ghats },
@@ -25,25 +34,64 @@ const PRIMARY: NavItem[] = [
 
 const GROUPS = [
   {
-    label: navExtra.groupLearn,
+    label: {
+      en: "Before you come",
+      hi: "आने से पहले",
+      mr: "येण्यापूर्वी",
+    },
     links: [
       { href: "/about", label: translations.nav.about },
+      { href: "/dates", label: translations.nav.dates },
+      { href: "/guide", label: translations.nav.guide },
+    ],
+  },
+  {
+    label: {
+      en: "Arriving & inside the Mela",
+      hi: "पहुँचना और मेले के अंदर",
+      mr: "पोहोचणे व मेळ्यात",
+    },
+    links: [
+      { href: "/ghats", label: translations.nav.ghats },
       { href: "/events", label: translations.nav.events },
       { href: "/naga-sadhus", label: translations.nav.nagaSadhus },
-      { href: "/blog", label: translations.nav.news },
+      { href: "/yatra", label: navExtra.yatra },
+    ],
+  },
+  {
+    label: {
+      en: "Emergency & policies",
+      hi: "आपात व नीतियाँ",
+      mr: "आपत्कालीन व धोरणे",
+    },
+    links: [
+      {
+        href: "/emergency",
+        label: {
+          en: "Emergency (offline)",
+          hi: "आपात (ऑफ़लाइन)",
+          mr: "आपत्कालीन (ऑफलाइन)",
+        },
+      },
+      {
+        href: "/policies",
+        label: { en: "Policies", hi: "नीतियाँ", mr: "धोरणे" },
+      },
+      {
+        href: "/changelog",
+        label: { en: "Changelog", hi: "परिवर्तन-लॉग", mr: "बदल-नोंद" },
+      },
     ],
   },
   {
     label: navExtra.groupExplore,
     links: [
+      { href: "/blog", label: translations.nav.news },
       { href: "/gallery", label: translations.nav.gallery },
+      { href: "/businesses", label: translations.nav.businesses },
       { href: "/games", label: translations.nav.games },
       { href: "/kumbhrun", label: { en: "Kumbh Run", hi: "कुंभ रन", mr: "कुंभ रन" } },
     ],
-  },
-  {
-    label: navExtra.groupPlan,
-    links: [{ href: "/businesses", label: translations.nav.businesses }],
   },
 ] as const;
 

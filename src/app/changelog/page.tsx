@@ -23,6 +23,20 @@ interface Entry {
 
 const ENTRIES: Entry[] = [
   {
+    date: "2026-08-05",
+    title: "Content-integrity gate, nav around the pilgrim journey, honest businesses page",
+    body: [
+      "New build-time integrity check (scripts/verify-content.mjs) fails any deploy that reintroduces a fabricated helpline, an invented Amrit Snan date, an unsourced ‘AI-powered’ claim, or a specific placeholder we've been bitten by before.",
+      "Chatbot answers on safety and crowd management no longer assert unsourced facilities (‘AI-powered CCTV surveillance’, ‘Kumbh War Room’). Guide's ‘special trains are run’ line is now qualified — Indian Railways has not yet published the 2027 Simhastha timetable.",
+      "Businesses page rewritten. It used to render placeholder ‘Coming Soon’ cards, a non-functional sign-up form, and a ‘premium placement’ pitch. It now states plainly that no directory is running and lists the standards a real one will meet.",
+      "Navigation reorganised around the pilgrim journey: Before → Arriving & Inside → Emergency & Policies → Explore. Games, Kumbh Run and Businesses are demoted from primary nav and sitemap priority.",
+      "SEO: WebSite schema no longer advertises a SearchAction endpoint the site doesn't implement. Event schema now carries a sameAs to the DGIPR release and the NTKMA authority page.",
+      "Accessibility: skip-to-main-content link added; prefers-reduced-motion is honoured site-wide.",
+      "Fixed a wrong five-date Shahi Snan list surfaced by the pilgrim FAQ (‘August 20, September 3, September 17, October 2, October 17 2027’) — replaced with the three officially confirmed Amrit Snans and the primary source.",
+      "Government-readiness pack drafted (not sent): proposal, demo script, pilot scope, data-validation request, ownership options, security/privacy summary, accessibility summary, operations plan. Lives in /docs.",
+    ],
+  },
+  {
     date: "2026-08-02",
     title: "Independent-initiative framing, Amrit Snan corrections, PWA emergency card",
     body: [
