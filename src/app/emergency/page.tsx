@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { helplines, offices, primaryHelpline } from "@/data/verified";
 
 /**
@@ -14,18 +15,18 @@ import { helplines, offices, primaryHelpline } from "@/data/verified";
  * evicted. Anchors are `tel:` so the OS handles the call.
  */
 
-export const metadata: Metadata = {
-  title: "Emergency — Nashik Kumbh",
+export const metadata: Metadata = pageMetadata({
+  title: "Emergency Numbers and Helplines",
   description:
     "Officially verified emergency numbers for the Nashik–Trimbakeshwar Simhastha Kumbh Mela. This card works offline.",
-  robots: { index: true, follow: true },
-};
+  path: "/emergency",
+});
 
 const ntkma = offices.find((o) => o.id === "ntkma");
 
 export default function EmergencyPage() {
   return (
-    <main className="min-h-screen bg-cream-50 px-5 py-10 sm:py-16">
+    <div className="min-h-screen bg-cream-50 px-5 py-10 sm:py-16">
       <div className="mx-auto max-w-2xl">
         <p className="text-eyebrow font-semibold uppercase text-sacred-red">
           Emergency
@@ -127,6 +128,6 @@ export default function EmergencyPage() {
           Independent public-information initiative. Verified 2026-08-01.
         </p>
       </div>
-    </main>
+    </div>
   );
 }

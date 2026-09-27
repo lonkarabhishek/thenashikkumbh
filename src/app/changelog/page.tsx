@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Changelog — The Nashik Kumbh",
+export const metadata: Metadata = pageMetadata({
+  title: "Changelog and Corrections",
   description:
     "Public log of factual corrections and material changes to the Nashik Kumbh independent information site.",
-  alternates: { canonical: "https://thenashikkumbh.com/changelog" },
-};
+  path: "/changelog",
+});
 
 /**
  * Public changelog.
@@ -52,7 +53,7 @@ const ENTRIES: Entry[] = [
 
 export default function ChangelogPage() {
   return (
-    <main className="bg-cream-50 pt-24">
+    <div className="bg-cream-50 pt-24">
       <div className="section-container py-16 sm:py-24">
         <p className="text-eyebrow font-semibold uppercase text-saffron-700">
           Public changelog
@@ -89,6 +90,6 @@ export default function ChangelogPage() {
           ))}
         </ol>
       </div>
-    </main>
+    </div>
   );
 }

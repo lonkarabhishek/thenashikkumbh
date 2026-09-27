@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, Compass, ShieldCheck } from "lucide-react";
 
@@ -18,12 +19,13 @@ import { ArrowRight, BadgeCheck, Compass, ShieldCheck } from "lucide-react";
  * not yet run one.
  */
 
-export const metadata: Metadata = {
-  title: "Businesses & sponsorship — The Nashik Kumbh",
+export const metadata: Metadata = pageMetadata({
+  title: "Businesses and Sponsorship",
   description:
     "The Nashik Kumbh site does not yet run a business directory or accept sponsorships. This page explains why, and what the standards will be if that changes.",
-  alternates: { canonical: "https://thenashikkumbh.com/businesses" },
-};
+  path: "/businesses",
+  image: "/images/og/kumbh-12.jpg",
+});
 
 const STANDARDS = [
   {
@@ -48,7 +50,7 @@ const STANDARDS = [
 
 export default function BusinessesPage() {
   return (
-    <main className="bg-cream-50 pt-24">
+    <div className="bg-cream-50 pt-24">
       <section className="section-container py-16 sm:py-24">
         <p className="text-eyebrow font-semibold uppercase text-saffron-700">
           Businesses & sponsorship
@@ -130,6 +132,6 @@ export default function BusinessesPage() {
           </Link>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

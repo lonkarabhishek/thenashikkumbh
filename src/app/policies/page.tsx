@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
 /**
  * Public policies page.
@@ -10,12 +11,12 @@ import type { Metadata } from "next";
  * certification) we say so.
  */
 
-export const metadata: Metadata = {
-  title: "Policies — The Nashik Kumbh",
+export const metadata: Metadata = pageMetadata({
+  title: "Editorial, Privacy and Corrections Policies",
   description:
     "Editorial, source, corrections, privacy, terms, accessibility, and grievance policies for the Nashik Kumbh independent public-information initiative.",
-  alternates: { canonical: "https://thenashikkumbh.com/policies" },
-};
+  path: "/policies",
+});
 
 const SECTIONS = [
   {
@@ -98,7 +99,7 @@ const SECTIONS = [
 
 export default function PoliciesPage() {
   return (
-    <main className="bg-cream-50 pt-24">
+    <div className="bg-cream-50 pt-24">
       <div className="section-container py-16 sm:py-24">
         <p className="text-eyebrow font-semibold uppercase text-saffron-700">
           Trust and governance
@@ -157,6 +158,6 @@ export default function PoliciesPage() {
           </section>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

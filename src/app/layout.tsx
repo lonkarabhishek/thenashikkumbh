@@ -99,7 +99,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/og-image.svg",
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Nashik Kumbh Mela 2027 - नाशिक कुंभमेळा २०२७",
@@ -111,10 +111,13 @@ export const metadata: Metadata = {
     title: "Nashik Kumbh Mela 2027 | नाशिक कुंभमेळा",
     description:
       "Complete guide to Nashik Kumbh Mela 2027 - sacred dates, holy ghats, pilgrim tips & spiritual events at the Godavari River.",
+    images: ["/images/og-image.jpg"],
   },
-  alternates: {
-    canonical: "https://thenashikkumbh.com",
-  },
+  // Deliberately no `alternates.canonical` here: a canonical set in the root
+  // layout is inherited by every page that forgets its own, which tells search
+  // engines those pages are duplicates of the home page. The home page sets
+  // its canonical in src/app/(home)/layout.tsx; inner pages use pageMetadata()
+  // from src/lib/seo.ts.
   robots: {
     index: true,
     follow: true,

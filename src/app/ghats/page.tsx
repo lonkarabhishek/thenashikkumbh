@@ -27,7 +27,7 @@ export default function GhatsPage() {
   const { t } = useLanguage();
 
   return (
-    <main className="min-h-screen bg-[#0B1220]">
+    <div className="min-h-screen bg-[#0B1220]">
       {/* ════════════════════════ (a) HERO BANNER ════════════════════════════ */}
       <section className="relative overflow-hidden min-h-[60vh] flex items-center justify-center bg-gradient-to-b from-[#1a0a00] via-[#110804] to-[#0B1220]">
         {/* Pattern overlay */}
@@ -435,6 +435,6 @@ export default function GhatsPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

@@ -44,7 +44,7 @@ export default function SchemaMarkup() {
         addressCountry: "IN",
       },
     },
-    image: "https://thenashikkumbh.com/images/og-image.svg",
+    image: ["https://thenashikkumbh.com/images/og-image.jpg"],
     organizer: {
       "@type": "Organization",
       name: ntkma?.name.en ?? "Nashik–Trimbakeshwar Kumbh Mela Authority",
@@ -87,10 +87,20 @@ export default function SchemaMarkup() {
     name: "The Nashik Kumbh",
     url: "https://thenashikkumbh.com",
     inLanguage: ["en", "hi", "mr"],
-    publisher: {
-      "@type": "Organization",
-      name: "The Nashik Kumbh — independent public-information initiative",
-    },
+    publisher: { "@id": "https://thenashikkumbh.com/#organization" },
+  };
+
+  // Publisher identity, referenced by the WebSite above. Describes this site
+  // only; it makes no claim of official or government status.
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://thenashikkumbh.com/#organization",
+    name: "The Nashik Kumbh",
+    description:
+      "Independent public-information initiative for the Nashik–Trimbakeshwar Simhastha Kumbh Mela 2027. Not an official government website.",
+    url: "https://thenashikkumbh.com",
+    logo: "https://thenashikkumbh.com/icon.png",
   };
 
   return (
@@ -102,6 +112,10 @@ export default function SchemaMarkup() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
     </>
   );

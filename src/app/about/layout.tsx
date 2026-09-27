@@ -1,9 +1,14 @@
 import { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About Kumbh Mela - History, Origins & Spiritual Significance",
   description:
     "Discover the ancient origins of Kumbh Mela, the Samudra Manthan legend, and why Nashik is one of four sacred cities chosen for this divine gathering at the Godavari River.",
+  path: "/about",
+  image: "/images/og/kumbh-2.jpg",
+  imageAlt: "About Kumbh Mela - History and Spiritual Significance",
   keywords: [
     "Kumbh Mela history",
     "Samudra Manthan",
@@ -14,28 +19,17 @@ export const metadata: Metadata = {
     "कुंभ मेला इतिहास",
     "कुंभमेळा इतिहास",
   ],
-  alternates: {
-    canonical: "https://thenashikkumbh.com/about",
-  },
-  openGraph: {
-    title: "About Kumbh Mela - History & Spiritual Significance",
-    description:
-      "The world's largest spiritual gathering - learn about the mythological origins, importance in Hinduism, and Nashik's sacred bond with Kumbh Mela.",
-    images: [
-      {
-        url: "/images/gallery/kumbh-2.webp",
-        width: 1200,
-        height: 630,
-        alt: "About Kumbh Mela - History and Spiritual Significance",
-      },
-    ],
-  },
-};
+});
 
 export default function AboutLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema([{ name: "About", path: "/about" }])} />
+      {children}
+    </>
+  );
 }

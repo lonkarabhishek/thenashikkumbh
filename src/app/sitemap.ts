@@ -4,7 +4,10 @@ import { trails } from "@/data/yatraData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://thenashikkumbh.com";
-  const lastModified = new Date();
+  // Static pages carry no <lastmod>. Stamping every URL with the build time
+  // tells crawlers everything changed on every deploy, and Google stops
+  // trusting lastmod for sites that do that. Blog posts use their real date.
+  const lastModified = undefined;
 
   const staticPages: MetadataRoute.Sitemap = [
     {
