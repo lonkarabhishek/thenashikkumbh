@@ -24,9 +24,9 @@ export const worldCopy: SceneCopy[] = [
       mr: "सुरुवात अशा झऱ्यातून, जो दोन्ही तळहातांनी झाकता येईल",
     },
     body: {
-      en: "The hill is not treated as Shiva's home but as Shiva himself — which is why climbing it was long thought improper, and why the steps are relatively recent. At the summit water surfaces and divides three ways.",
-      hi: "इस पर्वत को शिव का निवास नहीं, स्वयं शिव माना जाता है — इसीलिए उस पर चढ़ना लंबे समय तक अनुचित समझा गया, और सीढ़ियाँ अपेक्षाकृत हाल की हैं। शिखर पर जल फूटता है और तीन दिशाओं में बँट जाता है।",
-      mr: "या डोंगराला शिवाचे घर नव्हे तर स्वतः शिव मानतात — म्हणूनच त्यावर चढणे बराच काळ अनुचित समजले जाई, आणि पायऱ्या तुलनेने अलीकडच्या आहेत. शिखरावर पाणी उमलते आणि तीन दिशांना विभागते.",
+      en: "The hill is not treated as Shiva's home but as Shiva himself, which is why climbing it was long thought improper, and why the steps are relatively recent. At the summit water surfaces and divides three ways.",
+      hi: "इस पर्वत को शिव का निवास नहीं, स्वयं शिव माना जाता है, इसीलिए उस पर चढ़ना लंबे समय तक अनुचित समझा गया, और सीढ़ियाँ अपेक्षाकृत हाल की हैं। शिखर पर जल फूटता है और तीन दिशाओं में बँट जाता है।",
+      mr: "या डोंगराला शिवाचे घर नव्हे तर स्वतः शिव मानतात, म्हणूनच त्यावर चढणे बराच काळ अनुचित समजले जाई, आणि पायऱ्या तुलनेने अलीकडच्या आहेत. शिखरावर पाणी उमलते आणि तीन दिशांना विभागते.",
     },
     facts: [
       {
@@ -40,9 +40,9 @@ export const worldCopy: SceneCopy[] = [
       {
         label: { en: "Rivers born here", hi: "यहाँ जन्मी नदियाँ", mr: "इथे जन्मलेल्या नद्या" },
         value: {
-          en: "three — only one is the Godavari",
-          hi: "तीन — उनमें एक ही गोदावरी",
-          mr: "तीन — त्यातली एकच गोदावरी",
+          en: "three, only one is the Godavari",
+          hi: "तीन, उनमें एक ही गोदावरी",
+          mr: "तीन, त्यातली एकच गोदावरी",
         },
       },
     ],
@@ -55,8 +55,8 @@ export const worldCopy: SceneCopy[] = [
     },
     title: {
       en: "One of twelve Jyotirlingas, and it is three thumbs of stone",
-      hi: "बारह ज्योतिर्लिंगों में एक — और वह तीन अंगूठे भर पत्थर",
-      mr: "बारा ज्योतिर्लिंगांपैकी एक — आणि तो तीन अंगठ्यांएवढा दगड",
+      hi: "बारह ज्योतिर्लिंगों में एक: और वह तीन अंगूठे भर पत्थर",
+      mr: "बारा ज्योतिर्लिंगांपैकी एक: आणि तो तीन अंगठ्यांएवढा दगड",
     },
     body: {
       en: "Not a pillar you look up at. A hollow you look down into, where Brahma, Vishnu and Shiva sit worn smooth by centuries of water and milk. Custom is strict: you bathe at Kushavarta first, then you go in.",
@@ -129,9 +129,9 @@ export const worldCopy: SceneCopy[] = [
       mr: "त्याच्या शेजारी एक शहर उभे राहते, उखडण्यासाठीच बांधलेले",
     },
     body: {
-      en: "Roads cut, water piped, power run, drains laid, hospitals and fire posts staffed — one of the largest temporary settlements human beings build anywhere. Whatever you believe, notice the engineering.",
-      hi: "सड़कें, पानी की पाइप, बिजली, नालियाँ, अस्पताल और अग्निशमन चौकियाँ — मनुष्य द्वारा कहीं भी बनाई जाने वाली सबसे बड़ी अस्थायी बस्तियों में से एक। आप जो भी मानते हों, इस अभियांत्रिकी को देखिए।",
-      mr: "रस्ते, पाण्याच्या वाहिन्या, वीज, नाले, रुग्णालये आणि अग्निशमन चौक्या — माणसाने कुठेही उभारलेल्या सर्वात मोठ्या तात्पुरत्या वस्त्यांपैकी एक. तुमची श्रद्धा काहीही असो, ही अभियांत्रिकी पाहा.",
+      en: "Roads cut, water piped, power run, drains laid, hospitals and fire posts staffed, one of the largest temporary settlements human beings build anywhere. Whatever you believe, notice the engineering.",
+      hi: "सड़कें, पानी की पाइप, बिजली, नालियाँ, अस्पताल और अग्निशमन चौकियाँ, मनुष्य द्वारा कहीं भी बनाई जाने वाली सबसे बड़ी अस्थायी बस्तियों में से एक। आप जो भी मानते हों, इस अभियांत्रिकी को देखिए।",
+      mr: "रस्ते, पाण्याच्या वाहिन्या, वीज, नाले, रुग्णालये आणि अग्निशमन चौक्या, माणसाने कुठेही उभारलेल्या सर्वात मोठ्या तात्पुरत्या वस्त्यांपैकी एक. तुमची श्रद्धा काहीही असो, ही अभियांत्रिकी पाहा.",
     },
     facts: [
       {
@@ -165,16 +165,16 @@ export const worldCopy: SceneCopy[] = [
     },
     body: {
       en: "The akhadas go down to the water first, in an order agreed centuries ago and taken extremely seriously. Then everyone else. Know your way out before you go in, and agree a meeting point that is a place, not a person.",
-      hi: "पहले अखाड़े जल तक जाते हैं, सदियों पहले तय क्रम में, जिसे अत्यंत गंभीरता से लिया जाता है। फिर बाकी सब। भीतर जाने से पहले निकास जान लें, और मिलने की जगह तय करें — कोई व्यक्ति नहीं, कोई स्थान।",
-      mr: "आधी आखाडे पाण्यापर्यंत जातात, शतकांपूर्वी ठरलेल्या आणि अत्यंत गांभीर्याने घेतल्या जाणाऱ्या क्रमाने. मग बाकी सगळे. आत जाण्यापूर्वी बाहेर पडण्याचा मार्ग माहीत करा, आणि भेटण्याची जागा ठरवा — कोणी माणूस नव्हे, एखादे ठिकाण.",
+      hi: "पहले अखाड़े जल तक जाते हैं, सदियों पहले तय क्रम में, जिसे अत्यंत गंभीरता से लिया जाता है। फिर बाकी सब। भीतर जाने से पहले निकास जान लें, और मिलने की जगह तय करें, कोई व्यक्ति नहीं, कोई स्थान।",
+      mr: "आधी आखाडे पाण्यापर्यंत जातात, शतकांपूर्वी ठरलेल्या आणि अत्यंत गांभीर्याने घेतल्या जाणाऱ्या क्रमाने. मग बाकी सगळे. आत जाण्यापूर्वी बाहेर पडण्याचा मार्ग माहीत करा, आणि भेटण्याची जागा ठरवा, कोणी माणूस नव्हे, एखादे ठिकाण.",
     },
     facts: [
       {
         label: { en: "Recognised akhadas", hi: "मान्यता प्राप्त अखाड़े", mr: "मान्यताप्राप्त आखाडे" },
         value: {
-          en: "13 — Juna is the largest",
-          hi: "13 — जूना सबसे बड़ा",
-          mr: "१३ — जुना सर्वात मोठा",
+          en: "13, Juna is the largest",
+          hi: "13, जूना सबसे बड़ा",
+          mr: "१३, जुना सर्वात मोठा",
         },
       },
       {

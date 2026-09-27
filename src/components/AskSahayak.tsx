@@ -103,7 +103,7 @@ export default function AskSahayak() {
             panel's intrinsic width and the whole section overflows a phone. */}
         <div className="grid gap-12 lg:grid-cols-[1fr_0.95fr] lg:items-center lg:gap-16">
           <div className="min-w-0">
-            {/* Not the .eyebrow class — its ::before rule collides with the icon. */}
+            {/* Not the .eyebrow class, its ::before rule collides with the icon. */}
             <span className="inline-flex items-center gap-2 text-eyebrow font-semibold uppercase text-gold-300">
               <Sparkles className="h-3.5 w-3.5" />
               {t(COPY.eyebrow)}
@@ -127,7 +127,7 @@ export default function AskSahayak() {
             </ul>
           </div>
 
-          {/* The panel — looks like the assistant, opens the real one on click */}
+          {/* The panel, looks like the assistant, opens the real one on click */}
           <div className="min-w-0 rounded-card border border-cream-200/10 bg-cream-50/[0.04] p-4 backdrop-blur-sm sm:p-6 lg:p-7">
             <button
               onClick={open}

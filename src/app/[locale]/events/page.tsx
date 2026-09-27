@@ -13,9 +13,9 @@ import {
 /**
  * Events & Akhadas
  *
- * The prior page shipped a full 2027 event calendar — grand opening,
+ * The prior page shipped a full 2027 event calendar, grand opening,
  * daily discourses, morning yoga, evening bhajans, elephant processions,
- * food distribution, chariot processions — none of which is officially
+ * food distribution, chariot processions, none of which is officially
  * confirmed for 2027. That data has been removed. This page now shows:
  *
  *   1. The three official Amrit Snans from the content registry, as the
@@ -44,9 +44,9 @@ const COPY = {
     mr: "अधिकृतपणे काय जाहीर आहे, आणि काय नाही",
   },
   heroBody: {
-    en: "Wire copy about the 2027 Simhastha is already full of specific event promises — grand openings, daily bhajans, elephant processions, free bhandaras. The Nashik–Trimbakeshwar Kumbh Mela Authority has not yet published a detailed event programme. This page distinguishes the three things it has confirmed from the things it has not.",
-    hi: "2027 सिंहस्थ के बारे में समाचारों में पहले से ही विशिष्ट कार्यक्रमों की बातें भरी हैं — भव्य उद्घाटन, दैनिक भजन, हाथी शोभायात्रा, नि:शुल्क भंडारे। नाशिक–त्र्यंबकेश्वर कुंभ मेला प्राधिकरण ने अभी विस्तृत कार्यक्रम सूची प्रकाशित नहीं की है। यह पृष्ठ प्राधिकरण द्वारा पुष्ट तीन बातों को अन्य से अलग करके दिखाता है।",
-    mr: "२०२७ सिंहस्थाबद्दल बातम्यांत आधीच अनेक कार्यक्रमांच्या घोषणा भरल्या आहेत — भव्य उद्घाटन, दैनिक भजन, हत्ती मिरवणुका, मोफत भंडारे. नाशिक–त्र्यंबकेश्वर कुंभमेळा प्राधिकरणाने अजून तपशीलवार कार्यक्रम सूची प्रकाशित केलेली नाही. हे पान प्राधिकरणाने पुष्टी दिलेल्या तीन गोष्टी इतरांपासून वेगळ्या दाखवते.",
+    en: "Wire copy about the 2027 Simhastha is already full of specific event promises, grand openings, daily bhajans, elephant processions, free bhandaras. The Nashik–Trimbakeshwar Kumbh Mela Authority has not yet published a detailed event programme. This page distinguishes the three things it has confirmed from the things it has not.",
+    hi: "2027 सिंहस्थ के बारे में समाचारों में पहले से ही विशिष्ट कार्यक्रमों की बातें भरी हैं, भव्य उद्घाटन, दैनिक भजन, हाथी शोभायात्रा, नि:शुल्क भंडारे। नाशिक–त्र्यंबकेश्वर कुंभ मेला प्राधिकरण ने अभी विस्तृत कार्यक्रम सूची प्रकाशित नहीं की है। यह पृष्ठ प्राधिकरण द्वारा पुष्ट तीन बातों को अन्य से अलग करके दिखाता है।",
+    mr: "२०२७ सिंहस्थाबद्दल बातम्यांत आधीच अनेक कार्यक्रमांच्या घोषणा भरल्या आहेत, भव्य उद्घाटन, दैनिक भजन, हत्ती मिरवणुका, मोफत भंडारे. नाशिक–त्र्यंबकेश्वर कुंभमेळा प्राधिकरणाने अजून तपशीलवार कार्यक्रम सूची प्रकाशित केलेली नाही. हे पान प्राधिकरणाने पुष्टी दिलेल्या तीन गोष्टी इतरांपासून वेगळ्या दाखवते.",
   },
   confirmedTitle: {
     en: "Officially confirmed",

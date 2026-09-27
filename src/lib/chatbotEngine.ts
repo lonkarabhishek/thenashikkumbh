@@ -8,13 +8,13 @@ import type { InformationStatus, L10n } from "@/data/verified";
  *
  * Two rules the engine now enforces:
  *
- *  1. Every response carries provenance — status, sourceOrganisation,
- *     sourceUrl, verifiedAt — surfaced by the UI below the answer. If a topic
+ *  1. Every response carries provenance, status, sourceOrganisation,
+ *     sourceUrl, verifiedAt, surfaced by the UI below the answer. If a topic
  *     has no source, it is served as `general_guidance` and the UI says so.
  *
  *  2. Safety-critical queries with no confident topic match are refused
  *     honestly instead of falling through to the generic fallback. The list
- *     of safety triggers is deliberately conservative — matching a trigger
+ *     of safety triggers is deliberately conservative, matching a trigger
  *     means we would rather say "we don't know" than surface a low-score
  *     topic that only tangentially answered the question.
  */

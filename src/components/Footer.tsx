@@ -46,7 +46,7 @@ const SOCIALS = [
   { icon: Twitter, href: "https://twitter.com/thenashikkumbh", label: "X" },
 ];
 
-/** Numbers that work without a data connection — worth repeating on every page. */
+/** Numbers that work without a data connection, worth repeating on every page. */
 const HELPLINES = [
   { number: "112", label: { en: "Police", hi: "पुलिस", mr: "पोलीस" } },
   { number: "108", label: { en: "Ambulance", hi: "एम्बुलेंस", mr: "रुग्णवाहिका" } },
@@ -143,7 +143,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Official Kumbh contact — sourced from the content registry. The
+        {/* Official Kumbh contact, sourced from the content registry. The
             previous info@ address on this domain and the 0253-2305555 line
             that lived here were placeholders and have been removed. */}
         <div className="mt-10 rounded-card border border-cream-200/12 bg-cream-50/[0.04] p-5">

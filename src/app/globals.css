@@ -23,7 +23,7 @@
   --rule-dark: rgba(245, 236, 220, 0.14);
 }
 
-/* Skip-to-content link — visually hidden until keyboard focus lands on it.
+/* Skip-to-content link, visually hidden until keyboard focus lands on it.
    WCAG 2.4.1: gives keyboard and screen-reader users a way past the nav. */
 .skip-link {
   position: absolute;
@@ -157,7 +157,7 @@
     @apply w-6 h-px bg-gold-400;
   }
 
-  /* ─── Sacred divider — a thin gold rule with a diamond ── */
+  /* ─── Sacred divider, a thin gold rule with a diamond ── */
   .sacred-divider {
     @apply flex items-center justify-center gap-4 my-10;
   }
@@ -332,7 +332,7 @@
     display: none;
   }
 
-  /* Fine paper grain — gives flat cream sections a printed feel */
+  /* Fine paper grain, gives flat cream sections a printed feel */
   .paper-grain {
     position: relative;
   }
@@ -356,7 +356,7 @@
   background-size: 260px 260px;
 }
 
-/* Woven folk pattern — subtle diagonal weave */
+/* Woven folk pattern, subtle diagonal weave */
 .temple-pattern {
   background-image: linear-gradient(
       45deg,

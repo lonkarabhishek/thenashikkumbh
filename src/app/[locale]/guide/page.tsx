@@ -173,7 +173,7 @@ const essentialTips = [
       { label: "Fire", number: "101" },
       { label: "Women helpline", number: "1091" },
       { label: "Child helpline", number: "1098" },
-      { label: "NTKMA — Divisional Commissioner, Nashik", number: "0253-2461909" },
+      { label: "NTKMA, Divisional Commissioner, Nashik", number: "0253-2461909" },
     ],
   },
   {
@@ -188,7 +188,7 @@ const essentialTips = [
     titleKey: translations.guidePage.mobileTitle,
     color: "#A78BFA",
     content:
-      "During peak Amrit Snan days, mobile networks can become heavily congested. Pre-download offline maps of the ghat areas and save important numbers on paper. We do not recommend a specific carrier — network performance at the mela has not been independently measured.",
+      "During peak Amrit Snan days, mobile networks can become heavily congested. Pre-download offline maps of the ghat areas and save important numbers on paper. We do not recommend a specific carrier, network performance at the mela has not been independently measured.",
   },
   {
     Icon: Wallet,
@@ -202,7 +202,7 @@ const essentialTips = [
     titleKey: translations.guidePage.generalSafetyTitle,
     color: "#C9A227",
     content:
-      "Set a meeting point with your group in case you get separated. Wear comfortable, non-slippery footwear \u2014 ghat steps can be wet and slippery. Avoid carrying large bags or expensive jewelry. Use the lost-and-found centers set up by the administration.",
+      "Set a meeting point with your group in case you get separated. Wear comfortable, non-slippery footwear, ghat steps can be wet and slippery. Avoid carrying large bags or expensive jewelry. Use the lost-and-found centers set up by the administration.",
   },
 ];
 

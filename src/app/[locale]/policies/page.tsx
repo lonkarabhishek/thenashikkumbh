@@ -29,7 +29,7 @@ const SECTIONS = [
     title: "Editorial policy",
     body: [
       "The Nashik Kumbh site is an independent public-information initiative. It is not an official government website and does not present itself as one.",
-      "Every operational fact on the site — dates, phone numbers, offices, addresses, road closures, transport, facilities — is recorded in a machine-readable content registry with a source URL, the name of the publishing authority, and the date on which it was last verified.",
+      "Every operational fact on the site, dates, phone numbers, offices, addresses, road closures, transport, facilities, is recorded in a machine-readable content registry with a source URL, the name of the publishing authority, and the date on which it was last verified.",
       "Editorial voice describes; it does not embellish. Statistics about crowd size, spend, or transport that come from named authorities are attributed to those authorities in the body of the page.",
     ],
   },
@@ -88,7 +88,7 @@ const SECTIONS = [
     id: "accessibility",
     title: "Accessibility statement",
     body: [
-      "The site is designed to be usable on modest Android phones over patchy mobile networks. It follows the practical intent of WCAG 2.2 AA — keyboard operation, visible focus states, sufficient contrast, respect for reduced-motion preferences, transcripts alongside audio narration.",
+      "The site is designed to be usable on modest Android phones over patchy mobile networks. It follows the practical intent of WCAG 2.2 AA, keyboard operation, visible focus states, sufficient contrast, respect for reduced-motion preferences, transcripts alongside audio narration.",
       "The site is not yet formally audited or certified for GIGW 3.0 compliance. If you find an accessibility barrier, please write to us and we will fix it.",
     ],
   },

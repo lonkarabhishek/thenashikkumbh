@@ -10,7 +10,7 @@ import { ArrowRight, BadgeCheck, Compass, ShieldCheck } from "lucide-react";
  * Rewritten from scratch. The previous version rendered a category browser
  * with "Coming Soon" placeholder cards, a fake sponsorship slot, a form that
  * silently discarded its input, and a "Verified listing / Customer reviews /
- * Premium placement" pitch — none of which the site offers today. Users
+ * Premium placement" pitch, none of which the site offers today. Users
  * couldn't tell which parts were live and which were mock. That's precisely
  * the thing the content-integrity brief forbids: plausible placeholder data
  * shipped as if it were the real service.
@@ -43,7 +43,7 @@ const STANDARDS = [
     Icon: ShieldCheck,
     title: "No pay-to-rank",
     body:
-      "Sponsorship, if it opens, will be clearly separated from organic listings — sponsored cards will be labelled as sponsored, and ranking of unpaid listings will not depend on payment.",
+      "Sponsorship, if it opens, will be clearly separated from organic listings, sponsored cards will be labelled as sponsored, and ranking of unpaid listings will not depend on payment.",
   },
   {
     Icon: Compass,
@@ -66,7 +66,7 @@ export default function BusinessesPage() {
         <p className="mt-6 max-w-prose text-lede text-temple-500">
           This site does not run a business directory today. It does not sell
           sponsorships. It does not display advertisements. If those change,
-          they will be launched under the standards below — not before.
+          they will be launched under the standards below, not before.
         </p>
 
         <div className="mt-10 rounded-card border border-saffron-200 bg-saffron-50/50 p-6 sm:p-8">

@@ -1,8 +1,8 @@
 /**
  * Content governance registry.
  *
- * Every operational claim on this site — dates, phone numbers, addresses,
- * offices, road closures, transport, facilities — flows through this file.
+ * Every operational claim on this site, dates, phone numbers, addresses,
+ * offices, road closures, transport, facilities, flows through this file.
  * No page, translation, chatbot answer or structured-data object may assert an
  * operational fact without an entry here.
  *
@@ -94,7 +94,7 @@ export interface ScheduleEvent {
 
 const DGIPR = {
   org: "Directorate General of Information and Public Relations, Maharashtra",
-  title: "Nashik–Trimbakeshwar Kumbh Mela 2027 — official schedule announcement",
+  title: "Nashik–Trimbakeshwar Kumbh Mela 2027: official schedule announcement",
   url: "https://www.mahasamvad.in/167800/",
 };
 
@@ -116,7 +116,7 @@ export const schedule: ScheduleEvent[] = [
       mr: "रामकुंड, पंचवटी, नाशिक",
     },
     name: {
-      en: "Dhwajarohan — Flag Hoisting",
+      en: "Dhwajarohan: Flag Hoisting",
       hi: "ध्वजारोहण",
       mr: "ध्वजारोहण",
     },
@@ -222,9 +222,9 @@ export const schedule: ScheduleEvent[] = [
     isoDate: "2027-09-11",
     location: { en: "Ram Kund, Nashik", hi: "रामकुंड, नाशिक", mr: "रामकुंड, नाशिक" },
     name: {
-      en: "Third Amrit Snan — Nashik",
-      hi: "तृतीय अमृत स्नान — नाशिक",
-      mr: "तिसरे अमृत स्नान — नाशिक",
+      en: "Third Amrit Snan: Nashik",
+      hi: "तृतीय अमृत स्नान: नाशिक",
+      mr: "तिसरे अमृत स्नान: नाशिक",
     },
     tithi: {
       en: "Bhadrapada Shuddha Ekadashi",
@@ -253,9 +253,9 @@ export const schedule: ScheduleEvent[] = [
       mr: "कुशावर्त, त्र्यंबकेश्वर",
     },
     name: {
-      en: "Third Amrit Snan — Trimbakeshwar",
-      hi: "तृतीय अमृत स्नान — त्र्यंबकेश्वर",
-      mr: "तिसरे अमृत स्नान — त्र्यंबकेश्वर",
+      en: "Third Amrit Snan: Trimbakeshwar",
+      hi: "तृतीय अमृत स्नान: त्र्यंबकेश्वर",
+      mr: "तिसरे अमृत स्नान: त्र्यंबकेश्वर",
     },
     tithi: {
       en: "Bhadrapada Shuddha Dwadashi (Vaman Dwadashi)",
@@ -331,7 +331,7 @@ export interface Helpline {
 }
 
 const ERSS = {
-  org: "Ministry of Home Affairs, Government of India — Emergency Response Support System",
+  org: "Ministry of Home Affairs, Government of India, Emergency Response Support System",
   url: "https://112.gov.in/",
 };
 
@@ -368,7 +368,7 @@ export const helplines: Helpline[] = [
     jurisdiction: { en: "Maharashtra", hi: "महाराष्ट्र", mr: "महाराष्ट्र" },
     status: "official",
     sourceOrganisation:
-      "Public Health Department, Government of Maharashtra — MEMS 108",
+      "Public Health Department, Government of Maharashtra, MEMS 108",
     sourceUrl: "https://www.mems108.in/",
     verifiedAt: "2026-08-01",
     verifiedBy: "editorial",

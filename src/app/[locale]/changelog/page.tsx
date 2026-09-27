@@ -16,7 +16,7 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
 /**
  * Public changelog.
  *
- * Only material and factual changes are logged here — a corrected date, a
+ * Only material and factual changes are logged here, a corrected date, a
  * removed placeholder, a rewired assistant, a new source. Design tweaks are
  * out of scope. Newest entry first.
  */
@@ -33,12 +33,12 @@ const ENTRIES: Entry[] = [
     title: "Content-integrity gate, nav around the pilgrim journey, honest businesses page",
     body: [
       "New build-time integrity check (scripts/verify-content.mjs) fails any deploy that reintroduces a fabricated helpline, an invented Amrit Snan date, an unsourced ‘AI-powered’ claim, or a specific placeholder we've been bitten by before.",
-      "Chatbot answers on safety and crowd management no longer assert unsourced facilities (‘AI-powered CCTV surveillance’, ‘Kumbh War Room’). Guide's ‘special trains are run’ line is now qualified — Indian Railways has not yet published the 2027 Simhastha timetable.",
+      "Chatbot answers on safety and crowd management no longer assert unsourced facilities (‘AI-powered CCTV surveillance’, ‘Kumbh War Room’). Guide's ‘special trains are run’ line is now qualified, Indian Railways has not yet published the 2027 Simhastha timetable.",
       "Businesses page rewritten. It used to render placeholder ‘Coming Soon’ cards, a non-functional sign-up form, and a ‘premium placement’ pitch. It now states plainly that no directory is running and lists the standards a real one will meet.",
       "Navigation reorganised around the pilgrim journey: Before → Arriving & Inside → Emergency & Policies → Explore. Games, Kumbh Run and Businesses are demoted from primary nav and sitemap priority.",
       "SEO: WebSite schema no longer advertises a SearchAction endpoint the site doesn't implement. Event schema now carries a sameAs to the DGIPR release and the NTKMA authority page.",
       "Accessibility: skip-to-main-content link added; prefers-reduced-motion is honoured site-wide.",
-      "Fixed a wrong five-date Shahi Snan list surfaced by the pilgrim FAQ (‘August 20, September 3, September 17, October 2, October 17 2027’) — replaced with the three officially confirmed Amrit Snans and the primary source.",
+      "Fixed a wrong five-date Shahi Snan list surfaced by the pilgrim FAQ (‘August 20, September 3, September 17, October 2, October 17 2027’), replaced with the three officially confirmed Amrit Snans and the primary source.",
       "Government-readiness pack drafted (not sent): proposal, demo script, pilot scope, data-validation request, ownership options, security/privacy summary, accessibility summary, operations plan. Lives in /docs.",
     ],
   },
@@ -51,7 +51,7 @@ const ENTRIES: Entry[] = [
       "Fixed the second Amrit Snan tithi from ‘Bhadrapad Purnima’ to ‘Shravan Amavasya’. Removed the invented ‘five Shahi Snans’ list from the assistant's knowledge base and replaced with the three officially confirmed Amrit Snans.",
       "Chatbot answers now display information status, source, and last-verified date. Safety-critical queries without a confident topic match are refused honestly.",
       "SOS ‘find nearest exit’ removed. The underlying geodata is placeholder; a false safety feature was worse than none. Replaced with an honest awaiting-confirmation state and a routing to 112.",
-      "New /emergency page and service worker cache — the emergency card and 112 button remain available offline.",
+      "New /emergency page and service worker cache, the emergency card and 112 button remain available offline.",
     ],
   },
 ];

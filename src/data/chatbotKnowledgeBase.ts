@@ -104,7 +104,7 @@ export const chatTopics: ChatTopic[] = [
       mr: "शाही स्नानाच्या तारखा कोणत्या आहेत?",
     },
     // Corrected on the P0 sweep. The previous answer asserted "five Shahi Snan"
-    // on Aug 20, Sep 3, Sep 17, Oct 2, and Oct 17 — none of those dates appear
+    // on Aug 20, Sep 3, Sep 17, Oct 2, and Oct 17, none of those dates appear
     // in the DGIPR schedule. Source: https://www.mahasamvad.in/167800/.
     answer: {
       en: "There are three official Amrit Snans (traditionally called Shahi Snan): 2 August 2027 on Ashadh Somvati Amavasya, 31 August 2027 on Shravan Amavasya, and 11 September 2027 in Nashik on Bhadrapada Shuddha Ekadashi, with the Trimbakeshwar bath on 12 September 2027 on Bhadrapada Shuddha Dwadashi. Any list showing five Shahi Snans in Aug–Oct 2027 is not the official schedule.",
@@ -250,7 +250,7 @@ export const chatTopics: ChatTopic[] = [
       mr: "कुंभमेळ्याला जाणे सुरक्षित आहे का?",
     },
     answer: {
-      en: "For any real emergency, dial 112 first. The specific 2027 safety plan — CCTV coverage, control-room command structure, medical camps, police deployment — has not yet been published by NTKMA. The basics that always apply: stay with your group, agree a meeting point that is a place not a person, keep your belongings close, and follow marshal directions on the ground.",
+      en: "For any real emergency, dial 112 first. The specific 2027 safety plan, CCTV coverage, control-room command structure, medical camps, police deployment, has not yet been published by NTKMA. The basics that always apply: stay with your group, agree a meeting point that is a place not a person, keep your belongings close, and follow marshal directions on the ground.",
       hi: "कुंभ मेले में व्यापक सुरक्षा व्यवस्था की जाती है। पूरे क्षेत्र में AI-संचालित CCTV निगरानी कैमरे लगाए जाते हैं, और एक समर्पित कुंभ वॉर रूम भीड़ की गतिविधियों पर नजर रखता है। मोबाइल अस्पताल, एम्बुलेंस और प्राथमिक उपचार केंद्र पूरे स्थल पर उपलब्ध रहते हैं। भीड़ प्रबंधन के लिए बड़ी संख्या में पुलिस तैनात की जाती है। बस आधिकारिक भीड़ दिशानिर्देशों का पालन करें और अपना सामान अपने पास रखें।",
       mr: "कुंभमेळ्यात व्यापक सुरक्षा व्यवस्था केली जाते. संपूर्ण परिसरात AI-आधारित CCTV पाळत ठेवणारे कॅमेरे बसवले जातात आणि एक समर्पित कुंभ वॉर रूम गर्दीच्या हालचालींवर लक्ष ठेवतो. मोबाइल रुग्णालये, रुग्णवाहिका आणि प्रथमोपचार केंद्रे संपूर्ण ठिकाणी उपलब्ध असतात. गर्दी व्यवस्थापनासाठी मोठ्या प्रमाणात पोलीस तैनात केले जातात. फक्त अधिकृत गर्दी मार्गदर्शक सूचनांचे पालन करा आणि आपले सामान जवळ ठेवा.",
     },
@@ -297,9 +297,9 @@ export const chatTopics: ChatTopic[] = [
       mr: "आणीबाणी संपर्क क्रमांक कोणते आहेत?",
     },
     answer: {
-      en: "For any emergency dial 112 (all-India ERSS). Ambulance 108 (MEMS Maharashtra), fire 101, women helpline 1091, child helpline 1098. The Nashik–Trimbakeshwar Kumbh Mela Authority (NTKMA) office landline is 0253-2461909. Please save these before you travel. The SOS button on this site is a shortcut, but the underlying calls are what matter — a working phone with these numbers is more reliable than any app.",
-      hi: "किसी भी आपात स्थिति में 112 (अखिल भारतीय ERSS) डायल करें। एम्बुलेंस 108 (MEMS महाराष्ट्र), अग्निशमन 101, महिला हेल्पलाइन 1091, चाइल्ड हेल्पलाइन 1098। नाशिक–त्र्यंबकेश्वर कुंभ मेला प्राधिकरण (NTKMA) कार्यालय लैंडलाइन 0253-2461909। कृपया यात्रा से पूर्व ये नंबर सहेज लें। इस साइट का SOS बटन शॉर्टकट है, पर वास्तविक कॉल ही महत्व रखती है — इन नंबरों वाला काम करता फोन किसी भी ऐप से अधिक भरोसेमंद है।",
-      mr: "कोणत्याही आपत्कालीन परिस्थितीत ११२ (अखिल भारतीय ERSS) डायल करा. रुग्णवाहिका १०८ (MEMS महाराष्ट्र), अग्निशमन १०१, महिला हेल्पलाइन १०९१, चाइल्ड हेल्पलाइन १०९८. नाशिक–त्र्यंबकेश्वर कुंभमेळा प्राधिकरण (NTKMA) कार्यालय लँडलाइन ०२५३-२४६१९०९. कृपया प्रवासापूर्वी हे क्रमांक जतन करा. या साइटवरील SOS बटण शॉर्टकट आहे, पण खरे कॉल हेच महत्त्वाचे — या क्रमांकांसह चालणारा फोन कोणत्याही अॅपपेक्षा अधिक भरवशाचा आहे.",
+      en: "For any emergency dial 112 (all-India ERSS). Ambulance 108 (MEMS Maharashtra), fire 101, women helpline 1091, child helpline 1098. The Nashik–Trimbakeshwar Kumbh Mela Authority (NTKMA) office landline is 0253-2461909. Please save these before you travel. The SOS button on this site is a shortcut, but the underlying calls are what matter, a working phone with these numbers is more reliable than any app.",
+      hi: "किसी भी आपात स्थिति में 112 (अखिल भारतीय ERSS) डायल करें। एम्बुलेंस 108 (MEMS महाराष्ट्र), अग्निशमन 101, महिला हेल्पलाइन 1091, चाइल्ड हेल्पलाइन 1098। नाशिक–त्र्यंबकेश्वर कुंभ मेला प्राधिकरण (NTKMA) कार्यालय लैंडलाइन 0253-2461909। कृपया यात्रा से पूर्व ये नंबर सहेज लें। इस साइट का SOS बटन शॉर्टकट है, पर वास्तविक कॉल ही महत्व रखती है, इन नंबरों वाला काम करता फोन किसी भी ऐप से अधिक भरोसेमंद है।",
+      mr: "कोणत्याही आपत्कालीन परिस्थितीत ११२ (अखिल भारतीय ERSS) डायल करा. रुग्णवाहिका १०८ (MEMS महाराष्ट्र), अग्निशमन १०१, महिला हेल्पलाइन १०९१, चाइल्ड हेल्पलाइन १०९८. नाशिक–त्र्यंबकेश्वर कुंभमेळा प्राधिकरण (NTKMA) कार्यालय लँडलाइन ०२५३-२४६१९०९. कृपया प्रवासापूर्वी हे क्रमांक जतन करा. या साइटवरील SOS बटण शॉर्टकट आहे, पण खरे कॉल हेच महत्त्वाचे, या क्रमांकांसह चालणारा फोन कोणत्याही अॅपपेक्षा अधिक भरवशाचा आहे.",
     },
     relatedTopics: ["safety", "dos-donts"],
     emoji: "🚨",
@@ -951,7 +951,7 @@ export const chatTopics: ChatTopic[] = [
       mr: "कुंभात गर्दीचे व्यवस्थापन कसे केले जाते?",
     },
     answer: {
-      en: "The 2027 crowd-management plan — command structure, one-way flow, barricades, entry/exit points — has not yet been published by NTKMA. In the meantime: on Amrit Snan mornings, if the crowd around you feels too dense, move to the side, stop, and wait it out. Follow the direction of police and volunteers on the ground; they see the whole flow, you cannot. Dial 112 in any real emergency.",
+      en: "The 2027 crowd-management plan, command structure, one-way flow, barricades, entry/exit points, has not yet been published by NTKMA. In the meantime: on Amrit Snan mornings, if the crowd around you feels too dense, move to the side, stop, and wait it out. Follow the direction of police and volunteers on the ground; they see the whole flow, you cannot. Dial 112 in any real emergency.",
       hi: "कुंभ मेले में एक समर्पित भीड़ प्रबंधन प्रणाली है। AI-संचालित CCTV कैमरे वास्तविक समय में भीड़ की घनत्व पर नजर रखते हैं। एक कुंभ वॉर रूम पुलिस, NDRF और चिकित्सा टीमों का समन्वय करता है। शाही स्नान दिनों में एकतरफा भीड़ प्रवाह प्रणालियां स्थापित की जाती हैं। बैरिकेड और निर्धारित प्रवेश/निकास बिंदु अत्यधिक भीड़ को रोकते हैं। अगर भीड़ बहुत ज्यादा लगे, तो किनारे पर जाकर रुकें।",
       mr: "कुंभमेळ्यात एक समर्पित गर्दी व्यवस्थापन प्रणाली आहे. AI-आधारित CCTV कॅमेरे वास्तविक वेळेत गर्दीच्या घनतेवर लक्ष ठेवतात. एक कुंभ वॉर रूम पोलीस, NDRF आणि वैद्यकीय पथकांचे समन्वय करतो. शाही स्नानाच्या दिवशी एकमार्गी गर्दी प्रवाह प्रणाली उभारली जाते. बॅरिकेड्स आणि निर्धारित प्रवेश/निर्गम बिंदू अतिगर्दी रोखतात. गर्दी खूप दाट वाटल्यास बाजूला जाऊन थांबा.",
     },

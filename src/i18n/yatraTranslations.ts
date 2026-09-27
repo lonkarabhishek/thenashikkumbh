@@ -11,9 +11,9 @@ export const yatraUI: Record<string, L> = {
     mr: "तुमच्यासोबत चालणाऱ्या गोष्टी",
   },
   lede: {
-    en: "Put in your earphones and start walking. As you reach each place, its story begins — who stood here, what happened, and what to look at while you listen. No booking, no guide, no charge.",
-    hi: "इयरफ़ोन लगाइए और चलना शुरू कीजिए। जैसे ही आप किसी स्थान पर पहुँचते हैं, उसकी कहानी शुरू हो जाती है — यहाँ कौन खड़ा था, क्या हुआ था, और सुनते हुए किस ओर देखना है। न बुकिंग, न गाइड, न शुल्क।",
-    mr: "इअरफोन लावा आणि चालायला सुरुवात करा. तुम्ही एखाद्या ठिकाणी पोहोचताच त्याची गोष्ट सुरू होते — इथे कोण उभे होते, काय घडले, आणि ऐकताना कुठे पाहायचे. बुकिंग नाही, गाईड नाही, शुल्क नाही.",
+    en: "Put in your earphones and start walking. As you reach each place, its story begins, who stood here, what happened, and what to look at while you listen. No booking, no guide, no charge.",
+    hi: "इयरफ़ोन लगाइए और चलना शुरू कीजिए। जैसे ही आप किसी स्थान पर पहुँचते हैं, उसकी कहानी शुरू हो जाती है, यहाँ कौन खड़ा था, क्या हुआ था, और सुनते हुए किस ओर देखना है। न बुकिंग, न गाइड, न शुल्क।",
+    mr: "इअरफोन लावा आणि चालायला सुरुवात करा. तुम्ही एखाद्या ठिकाणी पोहोचताच त्याची गोष्ट सुरू होते, इथे कोण उभे होते, काय घडले, आणि ऐकताना कुठे पाहायचे. बुकिंग नाही, गाईड नाही, शुल्क नाही.",
   },
 
   /* How it works */
@@ -64,9 +64,9 @@ export const yatraUI: Record<string, L> = {
   /* Map */
   mapTitle: { en: "The route", hi: "मार्ग", mr: "मार्ग" },
   mapCaption: {
-    en: "Distances and directions between stops are to scale. Streets are not shown — tap any stop below for turn-by-turn directions.",
-    hi: "पड़ावों के बीच दूरी और दिशा वास्तविक अनुपात में हैं। सड़कें नहीं दिखाई गई हैं — रास्ते के लिए नीचे किसी भी पड़ाव पर टैप करें।",
-    mr: "थांब्यांमधील अंतर आणि दिशा प्रमाणात आहेत. रस्ते दाखवलेले नाहीत — मार्गासाठी खालील कोणत्याही थांब्यावर टॅप करा.",
+    en: "Distances and directions between stops are to scale. Streets are not shown, tap any stop below for turn-by-turn directions.",
+    hi: "पड़ावों के बीच दूरी और दिशा वास्तविक अनुपात में हैं। सड़कें नहीं दिखाई गई हैं, रास्ते के लिए नीचे किसी भी पड़ाव पर टैप करें।",
+    mr: "थांब्यांमधील अंतर आणि दिशा प्रमाणात आहेत. रस्ते दाखवलेले नाहीत, मार्गासाठी खालील कोणत्याही थांब्यावर टॅप करा.",
   },
   youAreHere: { en: "You", hi: "आप", mr: "तुम्ही" },
 
@@ -92,9 +92,9 @@ export const yatraUI: Record<string, L> = {
 
   /* Voice */
   voiceNote: {
-    en: "Recorded narration in Marathi, Hindi and English — about half a megabyte per story. If a recording will not play, your phone reads the text aloud instead.",
-    hi: "मराठी, हिंदी और अंग्रेज़ी में रिकॉर्ड की गई आवाज़ — हर कहानी लगभग आधा एमबी। यदि रिकॉर्डिंग न चले तो आपका फ़ोन स्वयं पाठ पढ़कर सुनाएगा।",
-    mr: "मराठी, हिंदी आणि इंग्रजीत रेकॉर्ड केलेले निवेदन — प्रत्येक गोष्ट सुमारे अर्धा एमबी. रेकॉर्डिंग चालले नाही, तर तुमचा फोन मजकूर वाचून दाखवेल.",
+    en: "Recorded narration in Marathi, Hindi and English, about half a megabyte per story. If a recording will not play, your phone reads the text aloud instead.",
+    hi: "मराठी, हिंदी और अंग्रेज़ी में रिकॉर्ड की गई आवाज़, हर कहानी लगभग आधा एमबी। यदि रिकॉर्डिंग न चले तो आपका फ़ोन स्वयं पाठ पढ़कर सुनाएगा।",
+    mr: "मराठी, हिंदी आणि इंग्रजीत रेकॉर्ड केलेले निवेदन, प्रत्येक गोष्ट सुमारे अर्धा एमबी. रेकॉर्डिंग चालले नाही, तर तुमचा फोन मजकूर वाचून दाखवेल.",
   },
   voiceMissing: {
     en: "Your device has no voice installed for this language yet, so narration may sound off. The full text is below.",
@@ -115,7 +115,7 @@ export const yatraUI: Record<string, L> = {
   },
   homeTeaserBody: {
     en: "A free walking audio guide to Nashik's sacred quarter, in Marathi, Hindi and English. Twelve places, twelve stories, no guide needed.",
-    hi: "नाशिक के पवित्र क्षेत्र की नि:शुल्क पैदल ऑडियो गाइड — मराठी, हिंदी और अंग्रेज़ी में। बारह स्थान, बारह कहानियाँ, किसी गाइड की ज़रूरत नहीं।",
-    mr: "नाशिकच्या पवित्र भागाची मोफत पायी ऑडिओ गाईड — मराठी, हिंदी आणि इंग्रजीत. बारा ठिकाणे, बारा गोष्टी, गाईडची गरज नाही.",
+    hi: "नाशिक के पवित्र क्षेत्र की नि:शुल्क पैदल ऑडियो गाइड, मराठी, हिंदी और अंग्रेज़ी में। बारह स्थान, बारह कहानियाँ, किसी गाइड की ज़रूरत नहीं।",
+    mr: "नाशिकच्या पवित्र भागाची मोफत पायी ऑडिओ गाईड, मराठी, हिंदी आणि इंग्रजीत. बारा ठिकाणे, बारा गोष्टी, गाईडची गरज नाही.",
   },
 };

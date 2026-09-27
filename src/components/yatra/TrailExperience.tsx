@@ -133,7 +133,7 @@ export default function TrailExperience({ trail }: { trail: Trail }) {
     [activeStopId, trail.stops]
   );
 
-  /** Speak a stop with the device voice — the fallback path. */
+  /** Speak a stop with the device voice, the fallback path. */
   const speakStop = useCallback(
     (stop: StoryStop) => {
       const narrator = narratorRef.current;
@@ -290,7 +290,7 @@ export default function TrailExperience({ trail }: { trail: Trail }) {
       : narration.progress;
   const deva = locale !== "en";
 
-  // Arrival trigger — plays once per stop per session.
+  // Arrival trigger, plays once per stop per session.
   useEffect(() => {
     if (!flowOn || !distances) return;
     if (isBusy) return;

@@ -6,7 +6,7 @@
 // found. Ran locally and wired into the Vercel build.
 //
 // This is deliberately narrow: it enforces the specific facts we have already
-// gotten wrong once. It is not a substitute for editorial review — it catches
+// gotten wrong once. It is not a substitute for editorial review, it catches
 // regressions, not new fabrications.
 
 import { readdirSync, readFileSync, statSync } from "node:fs";
@@ -22,7 +22,7 @@ const EXTS = new Set([".ts", ".tsx", ".js", ".jsx", ".mjs", ".md", ".json"]);
  *  - `blogData.ts` reproduces attributed wire-service copy; that is journalism,
  *    not a first-party claim.
  *  - `chatbotEngine.ts` and `chatbotKnowledgeBase.ts` list keywords/questions
- *    the engine matches on — they mention the strings without asserting them.
+ *    the engine matches on, they mention the strings without asserting them.
  *  - `SchemaMarkup.tsx` documents *why* the FAQ schema was removed.
  *  - `changelog/page.tsx` records past corrections; that is the whole point.
  *  - `verified/index.ts` is the registry; correctly-dated facts live here.
@@ -42,7 +42,7 @@ const ALLOWLIST = new Set([
  * Forbidden patterns.
  *
  * If the string appears anywhere outside the allowlist, the build fails. Keep
- * the messages actionable — the failure output should tell an editor how to
+ * the messages actionable, the failure output should tell an editor how to
  * fix it, not just what tripped.
  */
 const FORBIDDEN = [

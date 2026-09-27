@@ -2,9 +2,9 @@ import { Shikhara, WarliFigure } from "./Motifs";
 
 /**
  * One illustration per story stop, in the same flat screen-print language as
- * the rest of the site. Each picks out the single detail its story turns on —
+ * the rest of the site. Each picks out the single detail its story turns on,
  * the empty plinth where Kapaleshwar's Nandi should be, the shut gate at
- * Kalaram, the three small faces at Trimbakeshwar — so the card is a cue for
+ * Kalaram, the three small faces at Trimbakeshwar, so the card is a cue for
  * what you are about to hear rather than generic decoration.
  *
  * All share a 400×240 frame so they crop identically in a card.
@@ -36,7 +36,7 @@ function Frame({ children, tint = PAPER }: { children: React.ReactNode; tint?: s
   );
 }
 
-/** A low sun disc with a few rays — used where a scene needs a horizon. */
+/** A low sun disc with a few rays, used where a scene needs a horizon. */
 function Sun({ cx, cy, r = 26 }: { cx: number; cy: number; r?: number }) {
   return (
     <g>
@@ -64,7 +64,7 @@ function Steps({ top, count = 4, height = 14 }: { top: number; count?: number; h
   );
 }
 
-/* ── 1. Ram Kund — a son offering water ──────────────────── */
+/* ── 1. Ram Kund, a son offering water ──────────────────── */
 export function RamKundArt({ className }: ArtProps) {
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className={className}
@@ -108,7 +108,7 @@ export function RamKundArt({ className }: ArtProps) {
   );
 }
 
-/* ── 2. Kapaleshwar — the missing Nandi ──────────────────── */
+/* ── 2. Kapaleshwar, the missing Nandi ──────────────────── */
 export function KapaleshwarArt({ className }: ArtProps) {
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className={className}
@@ -126,7 +126,7 @@ export function KapaleshwarArt({ className }: ArtProps) {
         <rect x="0" y="180" width={W} height="60" fill={STEP_A} />
         <rect x="0" y="180" width={W} height="3" fill="#D6C9B8" />
 
-        {/* the empty plinth — drawn as an outline because nothing sits on it */}
+        {/* the empty plinth, drawn as an outline because nothing sits on it */}
         <rect
           x="96"
           y="186"
@@ -139,19 +139,9 @@ export function KapaleshwarArt({ className }: ArtProps) {
           strokeDasharray="6 6"
           opacity="0.55"
         />
-        <text
-          x="134"
-          y="228"
-          textAnchor="middle"
-          fontSize="15"
-          fill={INK}
-          opacity="0.4"
-          fontStyle="italic"
-        >
-          —
-        </text>
+        <line x1="127" y1="223" x2="141" y2="223" stroke={INK} strokeWidth="1.2" opacity="0.4" />
 
-        {/* the cow who told Shiva where to bathe — a filled silhouette, which
+        {/* the cow who told Shiva where to bathe, a filled silhouette, which
             reads better than outline at card size */}
         <g fill={INK}>
           {/* body and haunch */}
@@ -175,7 +165,7 @@ export function KapaleshwarArt({ className }: ArtProps) {
   );
 }
 
-/* ── 3. Kalaram — the door that stayed shut ──────────────── */
+/* ── 3. Kalaram, the door that stayed shut ──────────────── */
 export function KalaramArt({ className }: ArtProps) {
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className={className}
@@ -191,7 +181,7 @@ export function KalaramArt({ className }: ArtProps) {
           <path d="M200 6 l24 7 l-24 7 Z" />
         </g>
 
-        {/* courtyard colonnade — eighty-four pillars, suggested */}
+        {/* courtyard colonnade, eighty-four pillars, suggested */}
         <rect x="40" y="150" width={320} height="8" fill={STONE_DARK} />
         <g stroke={STONE} strokeWidth="4" strokeLinecap="round">
           {[52, 76, 100, 124, 276, 300, 324, 348].map((x) => (
@@ -225,7 +215,7 @@ export function KalaramArt({ className }: ArtProps) {
   );
 }
 
-/* ── 4. Sita Gufa — five banyans, one small door ─────────── */
+/* ── 4. Sita Gufa, five banyans, one small door ─────────── */
 export function SitaGufaArt({ className }: ArtProps) {
   const trees = [56, 128, 200, 272, 344];
   return (
@@ -256,7 +246,7 @@ export function SitaGufaArt({ className }: ArtProps) {
         <rect x="0" y="172" width={W} height="68" fill={STEP_A} />
         <rect x="0" y="172" width={W} height="3" fill="#D6C9B8" />
 
-        {/* the cave mouth — deliberately small */}
+        {/* the cave mouth, deliberately small */}
         <path d="M180 172 v-26 a20 20 0 0 1 40 0 v26 Z" fill={STONE_DARK} />
         <rect x="176" y="172" width={48} height="7" fill="#B3A28C" />
         <rect x="172" y="179" width={56} height="7" fill="#D6C9B8" />
@@ -270,7 +260,7 @@ export function SitaGufaArt({ className }: ArtProps) {
   );
 }
 
-/* ── 5. Godavari Ghats — the crowd at the water ──────────── */
+/* ── 5. Godavari Ghats, the crowd at the water ──────────── */
 export function GodavariGhatsArt({ className }: ArtProps) {
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className={className}
@@ -329,7 +319,7 @@ export function GodavariGhatsArt({ className }: ArtProps) {
   );
 }
 
-/* ── 6. Kushavarta — the tank that holds the river ───────── */
+/* ── 6. Kushavarta, the tank that holds the river ───────── */
 export function KushavartaArt({ className }: ArtProps) {
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className={className}
@@ -385,7 +375,7 @@ export function KushavartaArt({ className }: ArtProps) {
   );
 }
 
-/* ── 7. Trimbakeshwar — three faces in a hollow ──────────── */
+/* ── 7. Trimbakeshwar, three faces in a hollow ──────────── */
 export function TrimbakeshwarArt({ className }: ArtProps) {
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className={className}
@@ -426,7 +416,7 @@ export function TrimbakeshwarArt({ className }: ArtProps) {
   );
 }
 
-/* ── 8. Gangadwar — the climb to the spring ──────────────── */
+/* ── 8. Gangadwar, the climb to the spring ──────────────── */
 export function GangadwarArt({ className }: ArtProps) {
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className={className}
@@ -467,7 +457,7 @@ export function GangadwarArt({ className }: ArtProps) {
   );
 }
 
-/* ── 9. Brahmagiri — one spring, three rivers ────────────── */
+/* ── 9. Brahmagiri, one spring, three rivers ────────────── */
 export function BrahmagiriArt({ className }: ArtProps) {
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className={className}
@@ -507,7 +497,7 @@ export function BrahmagiriArt({ className }: ArtProps) {
   );
 }
 
-/* ── 10. Sadhugram — a city built to be taken down ───────── */
+/* ── 10. Sadhugram, a city built to be taken down ───────── */
 export function SadhugramArt({ className }: ArtProps) {
   const rows = [
     { y: 118, scale: 0.7, xs: [44, 104, 164, 224, 284, 344] },
@@ -567,7 +557,7 @@ export function SadhugramArt({ className }: ArtProps) {
   );
 }
 
-/* ── 11. Akhada camps — flags, tridents, an unbroken fire ── */
+/* ── 11. Akhada camps, flags, tridents, an unbroken fire ── */
 export function AkhadaCampsArt({ className }: ArtProps) {
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className={className}
@@ -621,7 +611,7 @@ export function AkhadaCampsArt({ className }: ArtProps) {
   );
 }
 
-/* ── 12. Naga sadhus — ash, fire, and a trident ──────────── */
+/* ── 12. Naga sadhus, ash, fire, and a trident ──────────── */
 export function NagaSadhusArt({ className }: ArtProps) {
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className={className}
