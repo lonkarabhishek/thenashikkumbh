@@ -21,6 +21,7 @@ import { trails } from "@/data/yatraData";
 import Reveal from "@/components/Reveal";
 import Countdown from "@/components/Countdown";
 import AskSahayak from "@/components/AskSahayak";
+import NewsNudge from "@/components/NewsNudge";
 import {
   GhatPanorama,
   ProcessionBand,
@@ -311,6 +312,9 @@ export default function Home() {
           </Link>
         </Reveal>
       </section>
+
+      {/* ═══ News — a pointer to /blog, headlines only ═══════ */}
+      <NewsNudge />
 
       {/* ═══ Ghats ══════════════════════════════════════════ */}
       <section className="section-paper py-20 sm:py-28">
