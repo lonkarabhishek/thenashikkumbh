@@ -1,6 +1,8 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, useEffect, ReactNode } from "react";
+import { createContext, useContext, useCallback, ReactNode } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { stripLocale } from "@/i18n/locales";
 import { Locale, translations, t } from "@/i18n/translations";
 
 interface LanguageContextType {
@@ -12,34 +14,30 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-const LOCALE_KEY = "kumbh-locale";
+/**
+ * The language comes from the URL prefix (/mr, /hi, /en), passed down by the
+ * [locale] layout. Switching language navigates to the same page under the
+ * other prefix, so every language has its own crawlable URL.
+ */
+export function LanguageProvider({
+  locale,
+  children,
+}: {
+  locale: Locale;
+  children: ReactNode;
+}) {
+  const router = useRouter();
+  const pathname = usePathname();
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("mr");
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem(LOCALE_KEY) as Locale | null;
-      if (saved && ["en", "hi", "mr"].includes(saved)) {
-        setLocaleState(saved);
-      }
-    }
-  }, []);
-
-  // Keep <html lang> in sync so screen readers and the Devanagari line-height
-  // rules in globals.css pick the right script.
-  useEffect(() => {
-    if (typeof document !== "undefined") {
-      document.documentElement.lang = locale;
-    }
-  }, [locale]);
-
-  const setLocale = useCallback((newLocale: Locale) => {
-    setLocaleState(newLocale);
-    if (typeof window !== "undefined") {
-      localStorage.setItem(LOCALE_KEY, newLocale);
-    }
-  }, []);
+  const setLocale = useCallback(
+    (newLocale: Locale) => {
+      if (newLocale === locale) return;
+      const rest = stripLocale(pathname ?? "/");
+      const query = window.location.search + window.location.hash;
+      router.push(`/${newLocale}${rest === "/" ? "" : rest}${query}`);
+    },
+    [locale, pathname, router]
+  );
 
   const translate = useCallback(
     (obj: Record<Locale, string>) => t(obj, locale),

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/LocaleLink";
 import { ArrowRight, Eye, Footprints, Headphones, Radar } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { yatraUI } from "@/i18n/yatraTranslations";

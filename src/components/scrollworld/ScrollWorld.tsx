@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/LocaleLink";
 import { ArrowRight, ChevronDown, Headphones } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { worldScenes } from "./IsoScenes";

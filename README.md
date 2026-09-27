@@ -34,7 +34,25 @@ python3 scripts/generate_voiceover.py                        # narration.json ->
 re-render everything, or `--locale mr` to redo one language. Voices are
 `en-IN-Neerja`, `hi-IN-Swara` and `mr-IN-Aarohi`.
 
+## Languages and URLs
+
+Every page exists in three languages, each at its own URL: `/mr/...` (Marathi,
+the default), `/hi/...` and `/en/...`. The URL is the only source of the
+language; the language switcher navigates to the same page under another
+prefix. Pages link to each other with `hreflang`, and the sitemap lists every
+language version.
+
+- Old unprefixed URLs (`/dates`, `/`) 301-redirect to `/mr/...` (`src/middleware.ts`).
+- Use `Link` from `@/components/LocaleLink` for internal links; it adds the prefix.
+- Page titles and descriptions per language live in `src/i18n/seoCopy.ts`.
+- Build page metadata with `sectionMetadata()` / `pageMetadata()` from `src/lib/seo.ts`.
+- `/emergency`, `/policies`, `/changelog` and `/businesses` have English-only
+  bodies, so all three language URLs canonicalise to the `/en` version.
+
 ## Pages
+
+Routes below are shown without the language prefix.
+
 
 | Route | Page | Description |
 |-------|------|-------------|

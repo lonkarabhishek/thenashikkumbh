@@ -33,7 +33,7 @@ const ALLOWLIST = new Set([
   "src/data/chatbotKnowledgeBase.ts",
   "src/lib/chatbotEngine.ts",
   "src/components/SchemaMarkup.tsx",
-  "src/app/changelog/page.tsx",
+  "src/app/[locale]/changelog/page.tsx",
   "src/data/verified/index.ts",
   "scripts/verify-content.mjs",
 ]);
