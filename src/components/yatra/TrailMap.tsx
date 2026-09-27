@@ -8,7 +8,7 @@ import { Locale } from "@/i18n/translations";
  * A schematic vector map of a trail.
  *
  * Real coordinates, equirectangular projection, aspect ratio preserved, with a
- * scale bar — so distances and bearings between stops are honest. Streets are
+ * scale bar, so distances and bearings between stops are honest. Streets are
  * deliberately not drawn: we do not have licensed street geometry, and inventing
  * it on a government site would be worse than leaving it out. For turn-by-turn
  * the stop cards hand off to Google Maps.

@@ -13,13 +13,13 @@ import {
 } from "./IsoKit";
 
 /**
- * Five isometric dioramas — little models of the Kumbh that the camera dives
+ * Five isometric dioramas, little models of the Kumbh that the camera dives
  * into, one after another.
  *
  * Each scene is delivered as three layers so the engine can dolly them at
  * different rates: a backdrop, the model itself (kept as one coherent group so
  * its geometry never separates), and a few foreground objects that rush past
- * the lens. That's where the sense of depth comes from — not from taking the
+ * the lens. That's where the sense of depth comes from, not from taking the
  * model apart.
  */
 
@@ -87,7 +87,7 @@ function Foreground({ children }: { children: React.ReactNode }) {
   );
 }
 
-/* ═══ 1 · Brahmagiri — the spring ══════════════════════════ */
+/* ═══ 1 · Brahmagiri, the spring ══════════════════════════ */
 
 function SourceBack() {
   return (
@@ -152,7 +152,7 @@ function SourceModel() {
       <IsoPlate x={118} y={118} z={105} w={24} d={24} color="#175452" />
       <IsoPlate x={121} y={121} z={106} w={18} d={18} color="#6FBDB8" />
 
-      {/* The trident — the hill is treated as Shiva himself.
+      {/* The trident, the hill is treated as Shiva himself.
           The prongs straddle the x−y axis; putting them on x=y would collapse
           them onto the same screen column. */}
       {(() => {
@@ -193,7 +193,7 @@ function SourceFront() {
   );
 }
 
-/* ═══ 2 · Trimbakeshwar — the temple ═══════════════════════ */
+/* ═══ 2 · Trimbakeshwar, the temple ═══════════════════════ */
 
 function TempleBack() {
   return (
@@ -265,7 +265,7 @@ function TempleFront() {
   );
 }
 
-/* ═══ 3 · Panchavati — the ghats ═══════════════════════════ */
+/* ═══ 3 · Panchavati, the ghats ═══════════════════════════ */
 
 function GhatsBack() {
   return (
@@ -388,7 +388,7 @@ function GhatsFront() {
   );
 }
 
-/* ═══ 4 · Sadhugram — the city that is taken down ══════════ */
+/* ═══ 4 · Sadhugram, the city that is taken down ══════════ */
 
 function CampBack() {
   return (
@@ -494,7 +494,7 @@ function CampFront() {
   );
 }
 
-/* ═══ 5 · Shahi Snan — before dawn ═════════════════════════ */
+/* ═══ 5 · Shahi Snan, before dawn ═════════════════════════ */
 
 function SnanBack() {
   return (

@@ -12,18 +12,18 @@ import { navExtra } from "@/i18n/navExtra";
 import type { Locale } from "@/i18n/translations";
 
 /**
- * The two things this site does that no other Kumbh page does — the assistant
- * and the audio walks — get real buttons. Everything else is a plain link, and
+ * The two things this site does that no other Kumbh page does, the assistant
+ * and the audio walks, get real buttons. Everything else is a plain link, and
  * the long tail lives under one grouped menu.
  */
 type NavItem = { href: string; label: Record<Locale, string> };
 
 /* Nav is organised around what a pilgrim actually does, in order:
- *   Before  — decide when to come and what to bring
- *   Arriving — orient in Nashik / Trimbakeshwar
- *   Inside   — what to see and do at the Mela
- *   Emergency — the bottom-of-the-drawer safety block
- *   Explore  — everything secondary lives here (games, run, gallery, businesses)
+ *   Before , decide when to come and what to bring
+ *   Arriving, orient in Nashik / Trimbakeshwar
+ *   Inside  , what to see and do at the Mela
+ *   Emergency, the bottom-of-the-drawer safety block
+ *   Explore , everything secondary lives here (games, run, gallery, businesses)
  *
  * Primary bar keeps the three that pilgrims click most; the rest lives under
  * "More" grouped by journey stage. */
@@ -233,7 +233,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Right cluster — the two headline actions live here */}
+            {/* Right cluster, the two headline actions live here */}
             <div className="flex shrink-0 items-center gap-2">
               {/* Ask the assistant */}
               <button
@@ -262,7 +262,7 @@ export default function Navbar() {
                 <span className="hidden text-sm sm:inline">{t(navExtra.yatra)}</span>
               </Link>
 
-              {/* Language — full control on desktop, inside the menu on phones */}
+              {/* Language, full control on desktop, inside the menu on phones */}
               <div
                 role="group"
                 aria-label={t(navExtra.language)}
@@ -320,7 +320,7 @@ export default function Navbar() {
             </div>
 
             <div className="flex-1 overflow-y-auto px-5 py-6">
-              {/* Language first — one tap, full names */}
+              {/* Language first, one tap, full names */}
               <p className="pb-2 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-temple-400">
                 {t(navExtra.language)}
               </p>

@@ -5,7 +5,7 @@
  * Everything is built from boxes, pyramids and plates so the dioramas read as
  * actual little models rather than flat shapes seen side-on.
  *
- * Painter's algorithm is manual — draw things in back-to-front order, meaning
+ * Painter's algorithm is manual, draw things in back-to-front order, meaning
  * ascending (x + y). Each helper draws its own faces in the right order.
  */
 
@@ -64,7 +64,7 @@ export function IsoBox({ x = 0, y = 0, z = 0, w, d, h, color, capped = true, opa
   );
 }
 
-/** A four-sided pyramid — tents, hills, spire caps. */
+/** A four-sided pyramid, tents, hills, spire caps. */
 export function IsoPyramid({
   x = 0,
   y = 0,
@@ -74,7 +74,7 @@ export function IsoPyramid({
   h,
   color,
   opacity,
-  /** Override face brightness — canvas and other pale materials need a
+  /** Override face brightness, canvas and other pale materials need a
       gentler falloff or they read as grey. */
   shading = [LEFT, RIGHT],
 }: Omit<BoxProps, "capped"> & { shading?: [number, number] }) {
@@ -91,7 +91,7 @@ export function IsoPyramid({
   );
 }
 
-/** A flat plate — ground, water, a step tread. */
+/** A flat plate, ground, water, a step tread. */
 export function IsoPlate({
   x = 0,
   y = 0,
@@ -316,7 +316,7 @@ export function IsoTree({
 }
 
 /**
- * A person. Deliberately tiny and simple — at diorama scale a figure is a few
+ * A person. Deliberately tiny and simple, at diorama scale a figure is a few
  * pixels, and a blob of the right proportion reads better than detail.
  */
 export function IsoPerson({

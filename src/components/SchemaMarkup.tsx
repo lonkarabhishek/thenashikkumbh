@@ -5,7 +5,7 @@ import { offices, schedule } from "@/data/verified";
  *
  * Rebuilt against the content registry. The previous version claimed a
  * Nashik–Trimbakeshwar Kumbh Mela Administration organiser and a
- * `+91-9999999999` contact — both fabricated. The Event schema now uses only
+ * `+91-9999999999` contact, both fabricated. The Event schema now uses only
  * fields sourced from the DGIPR schedule, with `startDate`/`endDate` derived
  * from the registry so a schedule change updates the schema automatically.
  *
@@ -69,7 +69,7 @@ export default function SchemaMarkup() {
           },
         },
       })),
-    // Primary source for the schedule — the DGIPR release. Corroborating wire
+    // Primary source for the schedule, the DGIPR release. Corroborating wire
     // coverage lives in the content registry, not here.
     sameAs: [
       "https://mahasamvad.in/167800",

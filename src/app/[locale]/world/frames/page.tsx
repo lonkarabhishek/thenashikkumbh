@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import { worldScenes } from "@/components/scrollworld/IsoScenes";
 
 export const metadata: Metadata = {
-  title: "Scroll world — scene sheet",
+  title: "Scroll world: scene sheet",
   robots: { index: false, follow: false },
 };
 
 const LABELS = [
-  "1 · Brahmagiri — the spring",
-  "2 · Trimbakeshwar — the temple",
-  "3 · Panchavati — the ghats",
-  "4 · Sadhugram — the tent city",
-  "5 · Shahi Snan — before dawn",
+  "1 · Brahmagiri: the spring",
+  "2 · Trimbakeshwar: the temple",
+  "3 · Panchavati: the ghats",
+  "4 · Sadhugram: the tent city",
+  "5 · Shahi Snan: before dawn",
 ];
 
 /**
@@ -31,7 +31,7 @@ export default function WorldFramesPage({
   return (
     <div className="bg-cream-100 pt-24">
       <div className="section-container pb-16">
-        <h1 className="text-title">Scroll world — scene sheet</h1>
+        <h1 className="text-title">Scroll world: scene sheet</h1>
         <p className="mt-3 text-temple-500">
           Each frame below is one scene at rest. In the live page the camera dollies
           through all three depth layers of each, then flows into the next.

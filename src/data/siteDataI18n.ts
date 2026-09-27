@@ -22,7 +22,7 @@ export const bathingDatesI18n: BathingDateI18n[] = [
   {
     date: "October 31, 2026",
     event: {
-      en: "Dhwajarohan — Flag Hoisting",
+      en: "Dhwajarohan: Flag Hoisting",
       hi: "ध्वजारोहण",
       mr: "ध्वजारोहण",
     },
@@ -32,9 +32,9 @@ export const bathingDatesI18n: BathingDateI18n[] = [
       mr: "त्र्यंबकेश्वर, रामकुंड आणि पंचवटी",
     },
     significance: {
-      en: "The Simhastha formally begins. Flags are raised at Trimbakeshwar, Ram Kund and Panchavati — the invitation to the akhadas and to every pilgrim. Everything that follows is counted from this morning.",
-      hi: "सिंहस्थ का औपचारिक आरंभ। त्र्यंबकेश्वर, रामकुंड और पंचवटी पर ध्वज फहराए जाते हैं — अखाड़ों और हर श्रद्धालु के लिए यही निमंत्रण है। आगे जो कुछ होता है, वह इसी सुबह से गिना जाता है।",
-      mr: "सिंहस्थाचा औपचारिक प्रारंभ. त्र्यंबकेश्वर, रामकुंड आणि पंचवटी येथे ध्वज फडकवले जातात — आखाड्यांना आणि प्रत्येक भाविकाला हेच निमंत्रण. पुढे जे घडते ते याच सकाळपासून मोजले जाते.",
+      en: "The Simhastha formally begins. Flags are raised at Trimbakeshwar, Ram Kund and Panchavati, the invitation to the akhadas and to every pilgrim. Everything that follows is counted from this morning.",
+      hi: "सिंहस्थ का औपचारिक आरंभ। त्र्यंबकेश्वर, रामकुंड और पंचवटी पर ध्वज फहराए जाते हैं, अखाड़ों और हर श्रद्धालु के लिए यही निमंत्रण है। आगे जो कुछ होता है, वह इसी सुबह से गिना जाता है।",
+      mr: "सिंहस्थाचा औपचारिक प्रारंभ. त्र्यंबकेश्वर, रामकुंड आणि पंचवटी येथे ध्वज फडकवले जातात, आखाड्यांना आणि प्रत्येक भाविकाला हेच निमंत्रण. पुढे जे घडते ते याच सकाळपासून मोजले जाते.",
     },
     isMajor: false,
   },
@@ -67,8 +67,8 @@ export const bathingDatesI18n: BathingDateI18n[] = [
     },
     significance: {
       en: "The first royal bath, and the busiest morning of the mela. The akhadas go down to the water first, in an order agreed centuries ago; the public follows. It begins well before dawn.",
-      hi: "प्रथम शाही स्नान — मेले की सबसे व्यस्त सुबह। पहले अखाड़े जल तक जाते हैं, सदियों पहले तय क्रम में; फिर जनता। यह भोर से बहुत पहले शुरू होता है।",
-      mr: "पहिले शाही स्नान — मेळ्यातील सर्वात गजबजलेली सकाळ. आधी आखाडे पाण्यापर्यंत जातात, शतकांपूर्वी ठरलेल्या क्रमाने; मग सामान्य लोक. हे पहाटेच्या खूप आधी सुरू होते.",
+      hi: "प्रथम शाही स्नान, मेले की सबसे व्यस्त सुबह। पहले अखाड़े जल तक जाते हैं, सदियों पहले तय क्रम में; फिर जनता। यह भोर से बहुत पहले शुरू होता है।",
+      mr: "पहिले शाही स्नान, मेळ्यातील सर्वात गजबजलेली सकाळ. आधी आखाडे पाण्यापर्यंत जातात, शतकांपूर्वी ठरलेल्या क्रमाने; मग सामान्य लोक. हे पहाटेच्या खूप आधी सुरू होते.",
     },
     isMajor: true,
   },
@@ -94,9 +94,9 @@ export const bathingDatesI18n: BathingDateI18n[] = [
   {
     date: "September 11, 2027",
     event: {
-      en: "Third Amrit Snan — Nashik",
-      hi: "तृतीय अमृत स्नान — नाशिक",
-      mr: "तिसरे अमृत स्नान — नाशिक",
+      en: "Third Amrit Snan: Nashik",
+      hi: "तृतीय अमृत स्नान: नाशिक",
+      mr: "तिसरे अमृत स्नान: नाशिक",
     },
     nakshatra: {
       en: "Ram Kund, Godavari",
@@ -104,18 +104,18 @@ export const bathingDatesI18n: BathingDateI18n[] = [
       mr: "रामकुंड, गोदावरी",
     },
     significance: {
-      en: "The concluding royal bath at Ram Kund, where the Vaishnav akhadas bathe. Trimbakeshwar takes its own the following day — the two have been kept a day apart for generations to keep the peace.",
-      hi: "रामकुंड पर अंतिम शाही स्नान, जहाँ वैष्णव अखाड़े स्नान करते हैं। त्र्यंबकेश्वर अगले दिन अपना स्नान करता है — शांति बनाए रखने के लिए दोनों को पीढ़ियों से एक दिन के अंतर पर रखा गया है।",
-      mr: "रामकुंडावरील अंतिम शाही स्नान, जिथे वैष्णव आखाडे स्नान करतात. त्र्यंबकेश्वर दुसऱ्या दिवशी आपले स्नान करते — शांतता टिकावी म्हणून दोन्ही पिढ्यानपिढ्या एका दिवसाच्या अंतरावर ठेवली आहेत.",
+      en: "The concluding royal bath at Ram Kund, where the Vaishnav akhadas bathe. Trimbakeshwar takes its own the following day, the two have been kept a day apart for generations to keep the peace.",
+      hi: "रामकुंड पर अंतिम शाही स्नान, जहाँ वैष्णव अखाड़े स्नान करते हैं। त्र्यंबकेश्वर अगले दिन अपना स्नान करता है, शांति बनाए रखने के लिए दोनों को पीढ़ियों से एक दिन के अंतर पर रखा गया है।",
+      mr: "रामकुंडावरील अंतिम शाही स्नान, जिथे वैष्णव आखाडे स्नान करतात. त्र्यंबकेश्वर दुसऱ्या दिवशी आपले स्नान करते, शांतता टिकावी म्हणून दोन्ही पिढ्यानपिढ्या एका दिवसाच्या अंतरावर ठेवली आहेत.",
     },
     isMajor: true,
   },
   {
     date: "September 12, 2027",
     event: {
-      en: "Third Amrit Snan — Trimbakeshwar",
-      hi: "तृतीय अमृत स्नान — त्र्यंबकेश्वर",
-      mr: "तिसरे अमृत स्नान — त्र्यंबकेश्वर",
+      en: "Third Amrit Snan: Trimbakeshwar",
+      hi: "तृतीय अमृत स्नान: त्र्यंबकेश्वर",
+      mr: "तिसरे अमृत स्नान: त्र्यंबकेश्वर",
     },
     nakshatra: {
       en: "Kushavarta Kund",
@@ -124,8 +124,8 @@ export const bathingDatesI18n: BathingDateI18n[] = [
     },
     significance: {
       en: "The Shaivite akhadas take the final bath at Kushavarta, the tank the Godavari is formally received into. This closes the main bathing season of the Simhastha.",
-      hi: "शैव अखाड़े कुशावर्त में अंतिम स्नान करते हैं — वही कुंड जहाँ गोदावरी का औपचारिक स्वागत होता है। इसी के साथ सिंहस्थ का मुख्य स्नान काल समाप्त होता है।",
-      mr: "शैव आखाडे कुशावर्तात अंतिम स्नान करतात — तोच कुंड जिथे गोदावरीचे औपचारिक स्वागत होते. यानेच सिंहस्थाचा मुख्य स्नानकाळ संपतो.",
+      hi: "शैव अखाड़े कुशावर्त में अंतिम स्नान करते हैं, वही कुंड जहाँ गोदावरी का औपचारिक स्वागत होता है। इसी के साथ सिंहस्थ का मुख्य स्नान काल समाप्त होता है।",
+      mr: "शैव आखाडे कुशावर्तात अंतिम स्नान करतात, तोच कुंड जिथे गोदावरीचे औपचारिक स्वागत होते. यानेच सिंहस्थाचा मुख्य स्नानकाळ संपतो.",
     },
     isMajor: true,
   },

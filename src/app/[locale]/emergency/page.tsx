@@ -9,7 +9,7 @@ import { helplines, offices, primaryHelpline } from "@/data/verified";
  * Deliberately server-rendered plain HTML with no client JavaScript. This is
  * the page the service worker caches, so it must render entirely from what
  * the browser already has. It also acts as the honest home for "this site
- * works offline" — that claim now points at *this* page, not at the whole
+ * works offline", that claim now points at *this* page, not at the whole
  * app.
  *
  * Nothing here uses inline images so it will paint even if the file cache is
@@ -123,7 +123,7 @@ export default function EmergencyPage() {
             Go to the nearest police booth (marked with blue flags). They have a
             public-address system, and lost-person reports go out across the
             whole mela within minutes. Agree a meeting point with your family
-            that is a place, not a person — phones lose signal in a crowd of
+            that is a place, not a person, phones lose signal in a crowd of
             millions.
           </p>
         </section>

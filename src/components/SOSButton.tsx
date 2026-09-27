@@ -22,14 +22,14 @@ import { sosUI } from "@/i18n/sosTranslations";
  * Emergency panel.
  *
  * Designed for the worst case: one hand, bright sunlight, no patience, possibly
- * panicking. So there is exactly one thing at the top — call 112 — and
+ * panicking. So there is exactly one thing at the top, call 112, and
  * everything else is secondary. Every action works without a data connection
  * except the two that explicitly need GPS.
  */
 
 /**
  * Numbers here are sourced. The previous list carried "Police Control Room
- * 0253-2305555" and "Disaster Management 0253-2571202" without a citation —
+ * 0253-2305555" and "Disaster Management 0253-2571202" without a citation,
  * both removed. The NTKMA landline is from the Divisional Commissioner's own
  * contact page (verified 2026-08-01); the rest are national ERSS numbers.
  */
@@ -94,7 +94,7 @@ export default function SOSButton() {
             setLocationState("shared");
             return;
           } catch {
-            // Share sheet dismissed — fall through to the clipboard.
+            // Share sheet dismissed, fall through to the clipboard.
           }
         }
 
@@ -110,7 +110,7 @@ export default function SOSButton() {
     );
   }, []);
 
-  // findExit was removed on the P0 sweep — its data source
+  // findExit was removed on the P0 sweep, its data source
   // (src/data/exitRoutes.ts) is placeholder geodata. See the honest
   // awaiting-confirmation block below.
 

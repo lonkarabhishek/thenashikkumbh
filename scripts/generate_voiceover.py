@@ -43,7 +43,7 @@ VOICES = {
     "mr": "mr-IN-AarohiNeural",
 }
 
-# Slightly under natural pace — this is heard while walking, often on a phone
+# Slightly under natural pace, this is heard while walking, often on a phone
 # speaker in a crowd.
 RATE = "-8%"
 

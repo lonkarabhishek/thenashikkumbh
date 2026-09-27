@@ -31,7 +31,7 @@ import {
 } from "@/components/art/Scenes";
 import { BorderStrip, Diya, Kalash, Lotus, Trishul } from "@/components/art/Motifs";
 
-/** First Amrit Snan — the date the whole calendar hangs off. */
+/** First Amrit Snan, the date the whole calendar hangs off. */
 const FIRST_SNAN = new Date("2027-08-02T04:00:00+05:30");
 
 const HOME_COPY = {
@@ -47,9 +47,9 @@ const HOME_COPY = {
   },
   askCta: { en: "Ask Sahayak", hi: "सहायक से पूछें", mr: "सहायकाला विचारा" },
   countdownCaption: {
-    en: "until the first Amrit Snan — 2 August 2027",
-    hi: "प्रथम अमृत स्नान तक — 2 अगस्त 2027",
-    mr: "पहिल्या अमृत स्नानापर्यंत — २ ऑगस्ट २०२७",
+    en: "until the first Amrit Snan: 2 August 2027",
+    hi: "प्रथम अमृत स्नान तक: 2 अगस्त 2027",
+    mr: "पहिल्या अमृत स्नानापर्यंत: २ ऑगस्ट २०२७",
   },
 
   storyKicker: { en: "Why it happens", hi: "यह क्यों होता है", mr: "हे का घडते" },
@@ -60,21 +60,21 @@ const HOME_COPY = {
   },
   beat1Title: { en: "The ocean was churned", hi: "समुद्र मथा गया", mr: "समुद्र घुसळला गेला" },
   beat1Body: {
-    en: "Devas and asuras used a mountain as the rod and a serpent as the rope, and churned the ocean of milk for a thousand years to draw out amrit — the nectar that ends death.",
-    hi: "देवों और असुरों ने पर्वत को मथानी और नाग को रस्सी बनाकर हज़ार वर्ष तक क्षीरसागर मथा, ताकि अमृत निकले — वह जो मृत्यु समाप्त कर दे।",
-    mr: "देव आणि असुरांनी पर्वताची रवी आणि नागाची दोरी करून हजार वर्षे क्षीरसागर घुसळला, अमृत निघावे म्हणून — जे मृत्यू संपवते.",
+    en: "Devas and asuras used a mountain as the rod and a serpent as the rope, and churned the ocean of milk for a thousand years to draw out amrit, the nectar that ends death.",
+    hi: "देवों और असुरों ने पर्वत को मथानी और नाग को रस्सी बनाकर हज़ार वर्ष तक क्षीरसागर मथा, ताकि अमृत निकले, वह जो मृत्यु समाप्त कर दे।",
+    mr: "देव आणि असुरांनी पर्वताची रवी आणि नागाची दोरी करून हजार वर्षे क्षीरसागर घुसळला, अमृत निघावे म्हणून, जे मृत्यू संपवते.",
   },
   beat2Title: { en: "Four drops fell to earth", hi: "चार बूँदें धरती पर गिरीं", mr: "चार थेंब पृथ्वीवर पडले" },
   beat2Body: {
-    en: "In the chase that followed, four drops spilled from the kalash — at Prayagraj, Haridwar, Ujjain and here, on the Godavari at Nashik. Each place became a Kumbh.",
-    hi: "उसके बाद हुए संघर्ष में कलश से चार बूँदें छलकीं — प्रयागराज, हरिद्वार, उज्जैन और यहाँ, नाशिक की गोदावरी पर। हर स्थान कुंभ बन गया।",
-    mr: "त्यानंतरच्या झटापटीत कलशातून चार थेंब सांडले — प्रयागराज, हरिद्वार, उज्जैन आणि इथे, नाशिकच्या गोदावरीवर. प्रत्येक ठिकाण कुंभ झाले.",
+    en: "In the chase that followed, four drops spilled from the kalash, at Prayagraj, Haridwar, Ujjain and here, on the Godavari at Nashik. Each place became a Kumbh.",
+    hi: "उसके बाद हुए संघर्ष में कलश से चार बूँदें छलकीं, प्रयागराज, हरिद्वार, उज्जैन और यहाँ, नाशिक की गोदावरी पर। हर स्थान कुंभ बन गया।",
+    mr: "त्यानंतरच्या झटापटीत कलशातून चार थेंब सांडले, प्रयागराज, हरिद्वार, उज्जैन आणि इथे, नाशिकच्या गोदावरीवर. प्रत्येक ठिकाण कुंभ झाले.",
   },
   beat3Title: { en: "Twelve years, twelve days", hi: "बारह वर्ष, बारह दिन", mr: "बारा वर्षे, बारा दिवस" },
   beat3Body: {
-    en: "The churning is said to have lasted twelve divine days — and one divine day is one human year. That is why the Kumbh returns to each city every twelve years.",
-    hi: "कहा जाता है कि मंथन बारह दिव्य दिन चला — और एक दिव्य दिन मनुष्य का एक वर्ष है। इसीलिए कुंभ हर नगर में बारह वर्ष बाद लौटता है।",
-    mr: "मंथन बारा दिव्य दिवस चालले असे म्हणतात — आणि एक दिव्य दिवस म्हणजे माणसाचे एक वर्ष. म्हणूनच कुंभ प्रत्येक शहरात बारा वर्षांनी परततो.",
+    en: "The churning is said to have lasted twelve divine days, and one divine day is one human year. That is why the Kumbh returns to each city every twelve years.",
+    hi: "कहा जाता है कि मंथन बारह दिव्य दिन चला, और एक दिव्य दिन मनुष्य का एक वर्ष है। इसीलिए कुंभ हर नगर में बारह वर्ष बाद लौटता है।",
+    mr: "मंथन बारा दिव्य दिवस चालले असे म्हणतात, आणि एक दिव्य दिवस म्हणजे माणसाचे एक वर्ष. म्हणूनच कुंभ प्रत्येक शहरात बारा वर्षांनी परततो.",
   },
 
   safetyKicker: {
@@ -94,8 +94,8 @@ const HOME_COPY = {
   },
   safety2: {
     en: "Agree a meeting point with your family that is a place, not a person. Phones lose signal in a crowd of millions.",
-    hi: "परिवार से मिलने की जगह तय करें — कोई व्यक्ति नहीं, कोई स्थान। लाखों की भीड़ में फ़ोन का नेटवर्क चला जाता है।",
-    mr: "कुटुंबाशी भेटण्याची जागा ठरवा — कोणी माणूस नव्हे, एखादे ठिकाण. लाखोंच्या गर्दीत फोनचे नेटवर्क जाते.",
+    hi: "परिवार से मिलने की जगह तय करें, कोई व्यक्ति नहीं, कोई स्थान। लाखों की भीड़ में फ़ोन का नेटवर्क चला जाता है।",
+    mr: "कुटुंबाशी भेटण्याची जागा ठरवा, कोणी माणूस नव्हे, एखादे ठिकाण. लाखोंच्या गर्दीत फोनचे नेटवर्क जाते.",
   },
   safety3: {
     en: "Emergency numbers work without internet: 112 police, 108 ambulance, 101 fire. Save them before you leave your room.",
@@ -176,7 +176,7 @@ export default function Home() {
         <GhatPanorama className="mt-4 w-full" />
       </section>
 
-      {/* ═══ Ask Sahayak — first thing after the hero ═══════ */}
+      {/* ═══ Ask Sahayak, first thing after the hero ═══════ */}
       <AskSahayak />
 
       {/* ═══ Why it happens ═════════════════════════════════ */}
@@ -221,7 +221,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ Yatra — the headline feature ═══════════════════ */}
+      {/* ═══ Yatra, the headline feature ═══════════════════ */}
       <section className="section-dark relative overflow-hidden">
         <div className="section-container grid gap-12 py-20 sm:py-28 lg:grid-cols-[1fr_0.85fr] lg:items-center">
           <div>
@@ -313,7 +313,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* ═══ News — a pointer to /blog, headlines only ═══════ */}
+      {/* ═══ News, a pointer to /blog, headlines only ═══════ */}
       <NewsNudge />
 
       {/* ═══ Ghats ══════════════════════════════════════════ */}

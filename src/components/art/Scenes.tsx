@@ -221,7 +221,7 @@ export function TempleSkyline({
   );
 }
 
-/* ── River band — a section divider you can stack on cream ─ */
+/* ── River band, a section divider you can stack on cream ─ */
 export function RiverBand({ className = "w-full h-auto" }: { className?: string }) {
   return (
     <svg viewBox="0 0 1200 90" className={className} preserveAspectRatio="none" aria-hidden focusable="false">
@@ -236,7 +236,7 @@ export function RiverBand({ className = "w-full h-auto" }: { className?: string 
   );
 }
 
-/* ── Samudra Manthan — why the Kumbh happens at all ──────── */
+/* ── Samudra Manthan, why the Kumbh happens at all ──────── */
 export function SamudraManthan({
   className = "w-full h-auto",
   uid = "manthan",
@@ -268,7 +268,7 @@ export function SamudraManthan({
         opacity="0.7"
       />
 
-      {/* Mount Mandara — the churning rod */}
+      {/* Mount Mandara, the churning rod */}
       <path d="M320 108 L238 300 L402 300 Z" fill="#23395F" />
       <path d="M258 178 L200 300 L316 300 Z" fill="#2F4A7D" />
       <path d="M386 192 L338 300 L436 300 Z" fill="#2F4A7D" />
@@ -302,7 +302,7 @@ export function SamudraManthan({
         <circle cy="33" r="7" fill="#FBF6EC" opacity="0.9" />
       </g>
 
-      {/* four drops — the four Kumbh cities */}
+      {/* four drops, the four Kumbh cities */}
       <g fill="#E07B14">
         {[
           [176, 128],
@@ -366,7 +366,7 @@ export function WalkingPilgrim({ className = "w-full h-auto" }: { className?: st
         <WarliFigure x={originX} y={originY} scale={scale} pose="walk" />
       </g>
 
-      {/* headphones — a band over the crown and a pad at each ear, so they read
+      {/* headphones, a band over the crown and a pad at each ear, so they read
           as headphones rather than eyes */}
       <g fill="none" stroke="#23395F" strokeWidth="3" strokeLinecap="round">
         <path d={`M ${head.x - 17} ${head.y} A 17 17 0 0 1 ${head.x + 17} ${head.y}`} />

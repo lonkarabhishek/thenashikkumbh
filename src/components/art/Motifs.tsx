@@ -3,7 +3,7 @@
  *
  * Every mark is a plain inline SVG that inherits `currentColor` unless it needs
  * two tones, so a motif can sit on cream or on indigo without a second variant.
- * Keep them geometric — these are drawn in the spirit of Warli and temple
+ * Keep them geometric, these are drawn in the spirit of Warli and temple
  * woodcut, not rendered illustration.
  */
 
@@ -17,7 +17,7 @@ const a11y = (title?: string) =>
     ? { role: "img" as const, "aria-label": title }
     : { "aria-hidden": true as const, focusable: "false" as const };
 
-/* ── Kalash — the pot the Kumbh is named for ─────────────── */
+/* ── Kalash, the pot the Kumbh is named for ─────────────── */
 export function Kalash({ className = "w-8 h-8", title }: MotifProps) {
   return (
     <svg viewBox="0 0 64 64" className={className} {...a11y(title)}>
@@ -55,7 +55,7 @@ export function OmMark({ className = "w-8 h-8", title }: MotifProps) {
   );
 }
 
-/* ── Diya — oil lamp with flame ──────────────────────────── */
+/* ── Diya, oil lamp with flame ──────────────────────────── */
 export function Diya({ className = "w-8 h-8", title }: MotifProps) {
   return (
     <svg viewBox="0 0 64 64" className={className} {...a11y(title)}>
@@ -72,7 +72,7 @@ export function Diya({ className = "w-8 h-8", title }: MotifProps) {
   );
 }
 
-/* ── Trishul — the trident carried by the akhadas ────────── */
+/* ── Trishul, the trident carried by the akhadas ────────── */
 export function Trishul({ className = "w-8 h-8", title }: MotifProps) {
   return (
     <svg viewBox="0 0 64 64" className={className} {...a11y(title)}>
@@ -99,7 +99,7 @@ export function Lotus({ className = "w-8 h-8", title }: MotifProps) {
   );
 }
 
-/* ── Sun mandala — radial rays around a disc ─────────────── */
+/* ── Sun mandala, radial rays around a disc ─────────────── */
 export function SunMandala({ className = "w-24 h-24", title }: MotifProps) {
   const rays = Array.from({ length: 32 }, (_, i) => {
     const angle = (i * 360) / 32;
@@ -128,7 +128,7 @@ export function SunMandala({ className = "w-24 h-24", title }: MotifProps) {
   );
 }
 
-/* ── Warli figure — the folk stick-and-triangle human ────── */
+/* ── Warli figure, the folk stick-and-triangle human ────── */
 export function WarliFigure({
   x = 0,
   y = 0,
@@ -165,7 +165,7 @@ export function WarliFigure({
       strokeLinecap="round"
     >
       <circle cx="0" cy="-4" r="4" />
-      {/* twin triangles — the Warli torso */}
+      {/* twin triangles, the Warli torso */}
       <path d="M0 0 L-7 10 L7 10 Z" />
       <path d="M0 21 L-7 11 L7 11 Z" />
       <path d={arms} />
@@ -174,7 +174,7 @@ export function WarliFigure({
   );
 }
 
-/* ── Shikhara — a temple spire, used to build skylines ───── */
+/* ── Shikhara, a temple spire, used to build skylines ───── */
 export function Shikhara({
   x,
   baseY,
@@ -275,7 +275,7 @@ export function BorderStrip({ className = "w-full h-4" }: { className?: string }
   );
 }
 
-/* ── Wave rule — a slim Godavari divider ─────────────────── */
+/* ── Wave rule, a slim Godavari divider ─────────────────── */
 export function WaveRule({ className = "w-full h-6" }: { className?: string }) {
   return (
     <svg viewBox="0 0 400 24" className={className} preserveAspectRatio="none" aria-hidden focusable="false">

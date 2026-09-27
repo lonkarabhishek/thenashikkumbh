@@ -779,9 +779,9 @@ export const translations = {
       mr: "वर्षातून काही मोजकेच ईमेल, बाकी काही नाही",
     },
     newsletterThanks: {
-      en: "Thank you — we will write to you before the Amrit Snan dates.",
-      hi: "धन्यवाद — अमृत स्नान की तिथियों से पूर्व हम आपको लिखेंगे।",
-      mr: "धन्यवाद — अमृत स्नानाच्या तारखांपूर्वी आम्ही तुम्हाला लिहू.",
+      en: "Thank you, we will write to you before the Amrit Snan dates.",
+      hi: "धन्यवाद, अमृत स्नान की तिथियों से पूर्व हम आपको लिखेंगे।",
+      mr: "धन्यवाद, अमृत स्नानाच्या तारखांपूर्वी आम्ही तुम्हाला लिहू.",
     },
     newsletterPrivacy: {
       en: "Your address is used only for this. Unsubscribe any time.",

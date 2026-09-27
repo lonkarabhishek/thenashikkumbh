@@ -11,11 +11,11 @@ export const sosUI: Record<string, I18nText> = {
   womenHelpline: { en: "Women helpline", hi: "महिला हेल्पलाइन", mr: "महिला हेल्पलाइन" },
   childHelpline: { en: "Child helpline", hi: "चाइल्ड हेल्पलाइन", mr: "चाइल्ड हेल्पलाइन" },
   // The number attached to this label is the NTKMA landline at the Divisional
-  // Commissioner's office — a real published contact, not a control room.
+  // Commissioner's office, a real published contact, not a control room.
   kumbhControl: {
-    en: "NTKMA — Divisional Commissioner, Nashik",
-    hi: "NTKMA — विभागीय आयुक्त, नाशिक",
-    mr: "NTKMA — विभागीय आयुक्त, नाशिक",
+    en: "NTKMA, Divisional Commissioner, Nashik",
+    hi: "NTKMA, विभागीय आयुक्त, नाशिक",
+    mr: "NTKMA, विभागीय आयुक्त, नाशिक",
   },
   disasterMgmt: { en: "Disaster Mgmt", hi: "आपदा प्रबंधन", mr: "आपत्ती व्यवस्थापन" },
   shareLocation: { en: "Share My Location", hi: "मेरा स्थान साझा करें", mr: "माझे स्थान शेअर करा" },
@@ -71,8 +71,8 @@ export const sosUI: Record<string, I18nText> = {
   callNow: { en: "Call 112 now", hi: "अभी 112 पर कॉल करें", mr: "आता ११२ वर कॉल करा" },
   callNowHint: {
     en: "One number for police, ambulance and fire",
-    hi: "पुलिस, एम्बुलेंस और अग्निशमन — एक ही नंबर",
-    mr: "पोलीस, रुग्णवाहिका आणि अग्निशमन — एकच क्रमांक",
+    hi: "पुलिस, एम्बुलेंस और अग्निशमन, एक ही नंबर",
+    mr: "पोलीस, रुग्णवाहिका आणि अग्निशमन, एकच क्रमांक",
   },
   otherNumbers: { en: "Other helplines", hi: "अन्य हेल्पलाइन", mr: "इतर हेल्पलाइन" },
   onThisPhone: { en: "On this phone", hi: "इसी फ़ोन पर", mr: "याच फोनवर" },
@@ -84,9 +84,9 @@ export const sosUI: Record<string, I18nText> = {
   },
   lostTitle: { en: "Lost someone?", hi: "कोई बिछड़ गया?", mr: "कोणी हरवले?" },
   lostBody: {
-    en: "Go to the nearest police booth — they have blue flags and a public address system, and every lost-person report goes out across the whole mela within minutes.",
-    hi: "निकटतम पुलिस बूथ पर जाएँ — वहाँ नीले झंडे और उद्घोषणा प्रणाली है, और गुमशुदगी की सूचना कुछ ही मिनटों में पूरे मेले में प्रसारित हो जाती है।",
-    mr: "जवळच्या पोलीस बूथवर जा — तिथे निळे झेंडे आणि उद्घोषणा यंत्रणा आहे, आणि हरवल्याची नोंद काही मिनिटांत संपूर्ण मेळ्यात प्रसारित होते.",
+    en: "Go to the nearest police booth, they have blue flags and a public address system, and every lost-person report goes out across the whole mela within minutes.",
+    hi: "निकटतम पुलिस बूथ पर जाएँ, वहाँ नीले झंडे और उद्घोषणा प्रणाली है, और गुमशुदगी की सूचना कुछ ही मिनटों में पूरे मेले में प्रसारित हो जाती है।",
+    mr: "जवळच्या पोलीस बूथवर जा, तिथे निळे झेंडे आणि उद्घोषणा यंत्रणा आहे, आणि हरवल्याची नोंद काही मिनिटांत संपूर्ण मेळ्यात प्रसारित होते.",
   },
   sharingHint: {
     en: "Sends your exact coordinates to anyone you choose",

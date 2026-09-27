@@ -1,9 +1,9 @@
 /*
- * Nashik Kumbh — deliberately small service worker.
+ * Nashik Kumbh, deliberately small service worker.
  *
  * The point is one honest offline capability: the emergency card (/emergency)
  * and the assets it needs must open when the network is down. We do NOT cache
- * live pages, alerts, or the schedule — those need to stay fresh, and a stale
+ * live pages, alerts, or the schedule, those need to stay fresh, and a stale
  * "official notice" from three weeks ago is worse than nothing.
  *
  * Strategy:

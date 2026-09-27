@@ -12,8 +12,8 @@ import { worldCopy, worldUI } from "./worldCopy";
  *
  * Two things the layout has to get right: the copy must stay legible over
  * whatever the art is doing, and the information has to arrive gradually rather
- * than all at once. So the text lives in its own paper panel — never floating
- * over the model — and each scene's facts stagger in as the camera moves deeper
+ * than all at once. So the text lives in its own paper panel, never floating
+ * over the model, and each scene's facts stagger in as the camera moves deeper
  * into it.
  *
  * Scroll only drives time. Per-frame work is arithmetic written straight to the
@@ -21,7 +21,7 @@ import { worldCopy, worldUI } from "./worldCopy";
  */
 
 /**
- * Scroll height per scene, in viewport heights. Phones get a shorter flight —
+ * Scroll height per scene, in viewport heights. Phones get a shorter flight,
  * nine screen-heights of swiping is a lot of thumb.
  */
 const SCENE_VH = 1.8;
