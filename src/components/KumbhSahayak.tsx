@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import Link from "next/link";
+import Link from "@/components/LocaleLink";
 import { ArrowRight, Send, Sparkles, X } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useChat } from "@/context/ChatContext";

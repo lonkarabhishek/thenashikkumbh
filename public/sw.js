@@ -7,17 +7,22 @@
  * "official notice" from three weeks ago is worse than nothing.
  *
  * Strategy:
- *   /emergency        → cache-first, versioned. This is the only page cached.
+ *   /{mr,hi,en}/emergency → cache-first, versioned. The only pages cached.
  *   everything else   → network, no cache-fallback beyond the offline card.
  *
  * Bump CACHE_VERSION whenever /emergency, its icons, or verified numbers
  * change so that phones with an old copy update on next visit.
  */
 
-const CACHE_VERSION = "kumbh-emergency-v1";
-const OFFLINE_URL = "/emergency";
+const CACHE_VERSION = "kumbh-emergency-v2";
+// Pages live under a language prefix; offline, a navigation gets the card in
+// the language of the URL it asked for, falling back to Marathi.
+const OFFLINE_URLS = { mr: "/mr/emergency", hi: "/hi/emergency", en: "/en/emergency" };
+const OFFLINE_URL = OFFLINE_URLS.mr;
+const offlineUrlFor = (pathname) =>
+  OFFLINE_URLS[pathname.split("/")[1]] || OFFLINE_URL;
 const PRECACHE = [
-  OFFLINE_URL,
+  ...Object.values(OFFLINE_URLS),
   "/manifest.json",
   "/icon.png",
   "/icon.svg",
@@ -51,11 +56,11 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
 
-  // For navigations, try the network first; if offline, serve /emergency.
+  // For navigations, try the network first; if offline, serve the card.
   if (req.mode === "navigate") {
     event.respondWith(
       fetch(req).catch(() =>
-        caches.match(OFFLINE_URL).then(
+        caches.match(offlineUrlFor(url.pathname)).then(
           (res) =>
             res ||
             new Response("Offline", { status: 503, statusText: "Offline" }),

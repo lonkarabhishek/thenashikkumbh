@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/LocaleLink";
+import { stripLocale } from "@/i18n/locales";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Headphones, Menu, Sparkles, X } from "lucide-react";
@@ -148,8 +149,10 @@ export default function Navbar() {
     };
   }, [moreOpen]);
 
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+  const isActive = (href: string) => {
+    const path = stripLocale(pathname ?? "/");
+    return href === "/" ? path === "/" : path.startsWith(href);
+  };
 
   const walksActive = isActive("/yatra");
 

@@ -1,5 +1,7 @@
 import { MetadataRoute } from "next";
 
+// One group only. A separate `Googlebot` group would replace, not extend, the
+// `*` rules for Google, silently re-allowing everything disallowed below.
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
@@ -8,12 +10,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/api/", "/admin/"],
       },
-      {
-        userAgent: "Googlebot",
-        allow: "/",
-      },
     ],
     sitemap: "https://thenashikkumbh.com/sitemap.xml",
-    host: "https://thenashikkumbh.com",
   };
 }

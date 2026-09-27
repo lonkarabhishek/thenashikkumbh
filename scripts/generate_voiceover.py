@@ -9,6 +9,7 @@ Usage:
     node_modules/.bin/sucrase-node scripts/export-narration.ts   # refresh manifest
     python3 scripts/generate_voiceover.py                        # synthesise
     python3 scripts/generate_voiceover.py --force                # re-synthesise all
+    python3 scripts/polish_narration.py                          # loudness + clarity pass
 
 The manifest (scripts/narration.json) is generated from src/data/yatraData.ts,
 so editing the story copy and re-running both commands is the whole workflow.

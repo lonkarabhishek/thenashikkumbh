@@ -36,6 +36,21 @@ const VOICE_PREFERENCE: Record<Locale, string[]> = {
   mr: ["mr-in", "mr", "hi-in", "hi"],
 };
 
+/**
+ * Rough quality rank from the voice name. Browsers and OSes mark their
+ * neural voices this way (Edge "Online (Natural)", Chrome "Google …",
+ * Apple "Enhanced"/"Premium"); compact or eSpeak voices sound robotic.
+ */
+function voiceQuality(voice: SpeechSynthesisVoice): number {
+  const name = voice.name.toLowerCase();
+  let score = 0;
+  if (/natural|neural|online/.test(name)) score += 3;
+  if (/premium|enhanced/.test(name)) score += 2;
+  if (/google/.test(name)) score += 1;
+  if (/compact|espeak/.test(name)) score -= 2;
+  return score;
+}
+
 const BCP47: Record<Locale, string> = {
   en: "en-IN",
   hi: "hi-IN",
@@ -118,8 +133,14 @@ export class Narrator {
     if (!voices.length) return null;
 
     for (const tag of VOICE_PREFERENCE[this.locale]) {
-      const match = voices.find((v) => v.lang.toLowerCase().replace("_", "-").startsWith(tag));
-      if (match) return match;
+      const matches = voices.filter((v) =>
+        v.lang.toLowerCase().replace("_", "-").startsWith(tag)
+      );
+      if (matches.length) {
+        // Within a language, take the most natural-sounding voice the device
+        // offers; the first listed is often a robotic compact voice.
+        return matches.reduce((best, v) => (voiceQuality(v) > voiceQuality(best) ? v : best));
+      }
     }
     return null;
   }
