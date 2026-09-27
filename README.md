@@ -28,11 +28,14 @@ Story copy lives in `src/data/yatraData.ts`. After editing it:
 pip3 install edge-tts --break-system-packages
 node_modules/.bin/sucrase-node scripts/export-narration.ts   # copy -> scripts/narration.json
 python3 scripts/generate_voiceover.py                        # narration.json -> public/audio
+python3 scripts/polish_narration.py                          # loudness and clarity pass
 ```
 
 `generate_voiceover.py` skips files that already exist; pass `--force` to
 re-render everything, or `--locale mr` to redo one language. Voices are
-`en-IN-Neerja`, `hi-IN-Swara` and `mr-IN-Aarohi`.
+`en-IN-Neerja`, `hi-IN-Swara` and `mr-IN-Aarohi`. `polish_narration.py` then
+normalises every file to -16 LUFS for phone speakers; it skips files already
+at that level.
 
 ## Languages and URLs
 
