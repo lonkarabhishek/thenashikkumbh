@@ -3,7 +3,7 @@ import type { Locale } from "@/i18n/translations";
 import { DEFAULT_LOCALE, LOCALES, OG_LOCALE } from "@/i18n/locales";
 import { SEO_COPY, type PageKey } from "@/i18n/seoCopy";
 
-export const SITE_URL = "https://thenashikkumbh.com";
+export const SITE_URL = "https://www.thenashikkumbh.com";
 export const SITE_NAME = "The Nashik Kumbh";
 export const DEFAULT_OG_IMAGE = "/images/og-image.jpg";
 

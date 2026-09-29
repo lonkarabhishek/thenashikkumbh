@@ -44,7 +44,7 @@ export default function SchemaMarkup() {
         addressCountry: "IN",
       },
     },
-    image: ["https://thenashikkumbh.com/images/og-image.jpg"],
+    image: ["https://www.thenashikkumbh.com/images/og-image.jpg"],
     organizer: {
       "@type": "Organization",
       name: ntkma?.name.en ?? "Nashik–Trimbakeshwar Kumbh Mela Authority",
@@ -85,9 +85,9 @@ export default function SchemaMarkup() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "The Nashik Kumbh",
-    url: "https://thenashikkumbh.com",
+    url: "https://www.thenashikkumbh.com",
     inLanguage: ["en", "hi", "mr"],
-    publisher: { "@id": "https://thenashikkumbh.com/#organization" },
+    publisher: { "@id": "https://www.thenashikkumbh.com/#organization" },
   };
 
   // Publisher identity, referenced by the WebSite above. Describes this site
@@ -95,12 +95,12 @@ export default function SchemaMarkup() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://thenashikkumbh.com/#organization",
+    "@id": "https://www.thenashikkumbh.com/#organization",
     name: "The Nashik Kumbh",
     description:
       "Independent public-information initiative for the Nashik–Trimbakeshwar Simhastha Kumbh Mela 2027. Not an official government website.",
-    url: "https://thenashikkumbh.com",
-    logo: "https://thenashikkumbh.com/icon.png",
+    url: "https://www.thenashikkumbh.com",
+    logo: "https://www.thenashikkumbh.com/icon.png",
   };
 
   return (
