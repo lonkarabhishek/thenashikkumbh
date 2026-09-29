@@ -8,6 +8,7 @@ type Params = { params: { locale: Locale } };
 export function generateMetadata({ params }: Params): Metadata {
   return sectionMetadata(params.locale, "dates", {
     path: "/dates",
+    absoluteTitle: true,
     image: "/images/og/kumbh-7.jpg",
     keywords: [
     "Shahi Snan dates 2027",

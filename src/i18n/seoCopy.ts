@@ -49,22 +49,21 @@ export const TRAIL_TITLE_SUFFIX: Record<Locale, string> = {
 export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
   home: {
     en: {
-      title:
-        "Nashik Kumbh Mela 2027 | Sacred Pilgrimage at Godavari River | नाशिक कुंभमेळा",
+      title: "Nashik Kumbh Mela 2027: Dates, Shahi Snan and Pilgrim Guide",
       description:
-        "Independent public-information initiative for the Nashik–Trimbakeshwar Simhastha Kumbh Mela 2027. Verified Amrit Snan schedule, emergency numbers, and pilgrim guidance. Every operational claim is sourced and dated.",
+        "Nashik (Nasik) Kumbh Mela 2027 guide: Shahi Snan (Amrit Snan) dates, ghats, how to reach, and emergency numbers. Simple, checked information for pilgrims.",
       crumb: "Home",
     },
     mr: {
-      title: "नाशिक कुंभमेळा २०२७ | अमृत स्नान तारखा, घाट आणि भाविक मार्गदर्शिका",
+      title: "नाशिक कुंभमेळा २०२७ कधी आहे? तारखा, शाही स्नान आणि मार्गदर्शिका",
       description:
-        "नाशिक–त्र्यंबकेश्वर सिंहस्थ कुंभमेळा २०२७ साठी स्वतंत्र सार्वजनिक माहिती उपक्रम. अमृत स्नानाचे पडताळलेले वेळापत्रक, आपत्कालीन क्रमांक आणि भाविकांसाठी मार्गदर्शन. प्रत्येक माहितीचा स्रोत आणि तारीख दिलेली आहे.",
+        "नाशिक कुंभमेळा २०२७: शाही स्नान (अमृत स्नान) तारखा, घाट, कसे पोहोचाल आणि आपत्कालीन क्रमांक. भाविकांसाठी तपासलेली, सोपी माहिती.",
       crumb: "मुख्यपृष्ठ",
     },
     hi: {
-      title: "नाशिक कुंभ मेला 2027 | अमृत स्नान तिथियाँ, घाट और तीर्थयात्री गाइड",
+      title: "नाशिक कुंभ मेला 2027 कब है? तिथियाँ, शाही स्नान और गाइड",
       description:
-        "नाशिक–त्र्यंबकेश्वर सिंहस्थ कुंभ मेला 2027 के लिए स्वतंत्र सार्वजनिक सूचना पहल। अमृत स्नान का सत्यापित कार्यक्रम, आपातकालीन नंबर और तीर्थयात्रियों के लिए मार्गदर्शन। हर जानकारी का स्रोत और तिथि दी गई है।",
+        "नाशिक कुंभ मेला 2027: शाही स्नान (अमृत स्नान) की तिथियाँ, घाट, कैसे पहुँचें और आपातकालीन नंबर। श्रद्धालुओं के लिए जाँची हुई, आसान जानकारी।",
       crumb: "होम",
     },
   },
@@ -76,13 +75,13 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
       crumb: "About",
     },
     mr: {
-      title: "कुंभमेळ्याविषयी: इतिहास, उगम आणि आध्यात्मिक महत्त्व",
+      title: "कुंभमेळा माहिती मराठीत: इतिहास, उगम आणि महत्त्व",
       description:
         "कुंभमेळ्याचा प्राचीन उगम, समुद्रमंथनाची कथा आणि गोदावरीकाठचे नाशिक हे या दिव्य सोहळ्यासाठी निवडलेल्या चार पवित्र नगरांपैकी एक का आहे, ते जाणून घ्या.",
       crumb: "कुंभमेळ्याविषयी",
     },
     hi: {
-      title: "कुंभ मेले के बारे में: इतिहास, उत्पत्ति और आध्यात्मिक महत्व",
+      title: "कुंभ मेला जानकारी: इतिहास, उत्पत्ति और महत्व",
       description:
         "कुंभ मेले की प्राचीन उत्पत्ति, समुद्र मंथन की कथा, और गोदावरी तट पर बसा नाशिक इस दिव्य समागम के लिए चुने गए चार पवित्र नगरों में से एक क्यों है, जानिए।",
       crumb: "कुंभ के बारे में",
@@ -110,21 +109,21 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
   },
   dates: {
     en: {
-      title: "Nashik Kumbh 2027 Dates: Amrit Snan (Shahi Snan) Schedule",
+      title: "Nashik Kumbh 2027 Shahi Snan Dates (Amrit Snan) | Full Schedule",
       description:
-        "Officially confirmed Nashik–Trimbakeshwar Simhastha dates: Dhwajarohan on 31 October 2026, Amrit Snan on 2 August, 31 August and 11–12 September 2027. Every date is sourced.",
+        "Shahi Snan (Amrit Snan) dates for Nashik Kumbh 2027: 2 Aug, 31 Aug, 11 Sep (Nashik) and 12 Sep (Trimbakeshwar). Which ghat, what to expect, and answers to common questions.",
       crumb: "Important Dates",
     },
     mr: {
-      title: "नाशिक कुंभमेळा २०२७ तारखा: अमृत स्नान (शाही स्नान) वेळापत्रक",
+      title: "नाशिक कुंभमेळा २०२७ शाही स्नान तारखा (अमृत स्नान) | संपूर्ण वेळापत्रक",
       description:
-        "नाशिक–त्र्यंबकेश्वर सिंहस्थाच्या अधिकृत तारखा: ध्वजारोहण ३१ ऑक्टोबर २०२६; अमृत स्नान २ ऑगस्ट, ३१ ऑगस्ट आणि ११–१२ सप्टेंबर २०२७. प्रत्येक तारखेचा स्रोत दिलेला आहे.",
+        "नाशिक कुंभमेळा २०२७ च्या शाही स्नान (अमृत स्नान) तारखा: २ ऑगस्ट, ३१ ऑगस्ट, ११ सप्टेंबर (नाशिक) आणि १२ सप्टेंबर (त्र्यंबकेश्वर). कोणता घाट, काय अपेक्षित आहे आणि नेहमीच्या प्रश्नांची उत्तरे.",
       crumb: "महत्त्वाच्या तारखा",
     },
     hi: {
-      title: "नाशिक कुंभ मेला 2027 तिथियाँ: अमृत स्नान (शाही स्नान) कार्यक्रम",
+      title: "नाशिक कुंभ 2027 शाही स्नान तिथियाँ (अमृत स्नान) | पूरा कार्यक्रम",
       description:
-        "नाशिक–त्र्यंबकेश्वर सिंहस्थ की आधिकारिक तिथियाँ: ध्वजारोहण 31 अक्टूबर 2026; अमृत स्नान 2 अगस्त, 31 अगस्त और 11–12 सितंबर 2027। हर तिथि का स्रोत दिया गया है।",
+        "नाशिक कुंभ 2027 की शाही स्नान (अमृत स्नान) तिथियाँ: 2 अगस्त, 31 अगस्त, 11 सितंबर (नाशिक) और 12 सितंबर (त्र्यंबकेश्वर)। कौन-सा घाट, क्या उम्मीद करें और आम सवालों के जवाब।",
       crumb: "महत्वपूर्ण तिथियाँ",
     },
   },
@@ -150,21 +149,21 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
   },
   gallery: {
     en: {
-      title: "Gallery - Visual Journey Through Kumbh Mela",
+      title: "Kumbh Mela Photos: Pictures of Shahi Snan, Sadhus and Ghats",
       description:
-        "Browse stunning images from Nashik Kumbh Mela - sacred Shahi Snan, grand processions, evening aarti, temple architecture, and the spiritual energy of millions gathered at the Godavari.",
+        "Kumbh Mela photos and pictures: Shahi Snan crowds, Naga sadhu processions, evening aarti, temples and river ghats, all in one gallery.",
       crumb: "Gallery",
     },
     mr: {
-      title: "छायाचित्रे: कुंभमेळ्याचा दृश्य प्रवास",
+      title: "कुंभमेळा फोटो: शाही स्नान, साधू आणि घाटांची छायाचित्रे",
       description:
-        "नाशिक कुंभमेळ्याची छायाचित्रे: पवित्र शाही स्नान, भव्य शोभायात्रा, सायंकाळची आरती, मंदिर स्थापत्य आणि गोदावरीकाठी जमलेल्या लाखो भाविकांचा आध्यात्मिक उत्साह.",
+        "कुंभमेळ्याचे फोटो आणि छायाचित्रे: शाही स्नानाची गर्दी, नागा साधूंच्या मिरवणुका, संध्याकाळची आरती, मंदिरे आणि नदीचे घाट, सगळे एकाच दालनात.",
       crumb: "छायाचित्रे",
     },
     hi: {
-      title: "गैलरी: कुंभ मेले की दृश्य यात्रा",
+      title: "कुंभ मेला फोटो: शाही स्नान, साधुओं और घाटों की तस्वीरें",
       description:
-        "नाशिक कुंभ मेले की तस्वीरें: पवित्र शाही स्नान, भव्य शोभायात्राएँ, संध्या आरती, मंदिर स्थापत्य और गोदावरी तट पर जुटे लाखों श्रद्धालुओं का आध्यात्मिक उत्साह।",
+        "कुंभ मेले की फोटो और तस्वीरें: शाही स्नान की भीड़, नागा साधुओं की शोभायात्रा, संध्या आरती, मंदिर और नदी के घाट, सब एक गैलरी में।",
       crumb: "गैलरी",
     },
   },
@@ -190,7 +189,7 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
   },
   ghats: {
     en: {
-      title: "Sacred Ghats of Nashik - Ram Kund, Godavari & Panchavati",
+      title: "Nashik Ghats: Ram Kund, Panchavati and Other Sacred Ghats",
       description:
         "Explore the holy bathing ghats of Nashik including Ram Kund, Godavari Ghats, Kapaleshwar Temple, and Panchavati - where Lord Rama walked during his exile.",
       crumb: "Sacred Ghats",

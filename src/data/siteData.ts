@@ -10,7 +10,7 @@
 export const siteConfig = {
   name: "The Nashik Kumbh",
   domain: "thenashikkumbh.com",
-  url: "https://thenashikkumbh.com",
+  url: "https://www.thenashikkumbh.com",
   description:
     "An independent public-information initiative for the Nashik–Trimbakeshwar Simhastha Kumbh Mela 2027. Verified dates, guidance and emergency information; official facts attributed to their publishing authority.",
   tagline: "Where Faith Meets Eternity",

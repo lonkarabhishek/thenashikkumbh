@@ -11,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/admin/"],
       },
     ],
-    sitemap: "https://thenashikkumbh.com/sitemap.xml",
+    sitemap: "https://www.thenashikkumbh.com/sitemap.xml",
   };
 }
