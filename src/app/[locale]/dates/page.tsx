@@ -5,6 +5,7 @@ import { Clock, Users, ShieldCheck, ArrowRight, Star, Calendar, Sparkles } from 
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { bathingDatesI18n } from "@/data/siteDataI18n";
+import { DatesFaq, DatesQuickAnswer } from "@/components/DatesAnswers";
 
 /* ───────────────────────────── page ─────────────────────────────── */
 
@@ -64,6 +65,8 @@ export default function ImportantDatesPage() {
       </section>
 
       {/* ═══════════════════ INTRODUCTION ═══════════════════ */}
+      <DatesQuickAnswer />
+
       <section className="relative bg-cream-50 py-16 md:py-24">
         <div className="absolute inset-0 mandala-bg" />
         <div className="section-container relative z-10">
@@ -283,6 +286,8 @@ export default function ImportantDatesPage() {
       </section>
 
       {/* ═══════════════════ CTA ═══════════════════ */}
+      <DatesFaq />
+
       <section
         className="relative overflow-hidden py-20 md:py-28"
         style={{

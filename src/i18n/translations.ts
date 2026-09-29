@@ -554,8 +554,8 @@ export const translations = {
 
   // ─── DATES PAGE ──────────────────────────────────────────
   datesPage: {
-    heroTitle: { en: "Important Dates", hi: "महत्वपूर्ण तिथियाँ", mr: "महत्त्वाच्या तिथी" },
-    heroSubtitle: { en: "Sacred Bathing Schedule - Shahi Snan & Parva Snan", hi: "पवित्र स्नान कार्यक्रम - शाही स्नान एवं पर्व स्नान", mr: "पवित्र स्नान वेळापत्रक - शाही स्नान व पर्व स्नान" },
+    heroTitle: { en: "Nashik Kumbh 2027 Shahi Snan Dates", hi: "नाशिक कुंभ 2027 शाही स्नान तिथियाँ", mr: "नाशिक कुंभमेळा २०२७ शाही स्नान तारखा" },
+    heroSubtitle: { en: "Amrit Snan (Shahi Snan) schedule for Nashik and Trimbakeshwar", hi: "नाशिक और त्र्यंबकेश्वर का अमृत स्नान (शाही स्नान) कार्यक्रम", mr: "नाशिक आणि त्र्यंबकेश्वरचे अमृत स्नान (शाही स्नान) वेळापत्रक" },
     periodLabel: { en: "Oct 2026 – Jul 2028 · baths Aug–Sep 2027", hi: "अक्टूबर 2026 – जुलाई 2028 · स्नान अगस्त–सितंबर 2027", mr: "ऑक्टोबर २०२६ – जुलै २०२८ · स्नाने ऑगस्ट–सप्टेंबर २०२७" },
     whySacredTitle: { en: "Why These Dates Are Sacred", hi: "ये तिथियाँ पवित्र क्यों हैं", mr: "या तिथी पवित्र का आहेत" },
     whySacredDesc: {
@@ -671,8 +671,8 @@ export const translations = {
 
   // ─── GALLERY PAGE ────────────────────────────────────────
   galleryPage: {
-    heroTitle: { en: "Gallery", hi: "गैलरी", mr: "गॅलरी" },
-    heroSubtitle: { en: "Visual Journey Through the Sacred Kumbh Mela", hi: "पवित्र कुंभ मेला की दृश्य यात्रा", mr: "पवित्र कुंभमेळ्याचा दृश्य प्रवास" },
+    heroTitle: { en: "Kumbh Mela Photos", hi: "कुंभ मेला फोटो", mr: "कुंभमेळा फोटो" },
+    heroSubtitle: { en: "Pictures of Shahi Snan, sadhus, aarti and the ghats", hi: "शाही स्नान, साधुओं, आरती और घाटों की तस्वीरें", mr: "शाही स्नान, साधू, आरती आणि घाटांची छायाचित्रे" },
     filterLabel: { en: "Filter:", hi: "फ़िल्टर:", mr: "फिल्टर:" },
     filterAll: { en: "All", hi: "सभी", mr: "सर्व" },
     filterShahiSnan: { en: "Shahi Snan", hi: "शाही स्नान", mr: "शाही स्नान" },
