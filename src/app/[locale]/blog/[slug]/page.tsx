@@ -6,7 +6,8 @@ import Link from "@/components/LocaleLink";
 import { ArrowLeft, Calendar, ExternalLink, Share2 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import type { Locale } from "@/i18n/translations";
-import { blogArticles, getArticleBySlug } from "@/data/blogData";
+import { NEWS_AUTHOR, blogArticles, getArticleBySlug } from "@/data/blogData";
+import RichText from "@/components/RichText";
 
 /* ───────────── category colors ───────────── */
 
@@ -34,6 +35,20 @@ function formatDate(dateStr: string, locale: Locale): string {
     day: "numeric",
   });
 }
+
+const UI = {
+  by: { en: "By", hi: "लेखक:", mr: "लेखक:" },
+  source: { en: "Source", hi: "स्रोत", mr: "स्रोत" },
+  updated: { en: "Updated", hi: "अपडेट", mr: "अद्ययावत" },
+  originally: {
+    en: "Originally announced on",
+    hi: "मूल घोषणा की तिथि:",
+    mr: "मूळ घोषणा:",
+  },
+  sources: { en: "Sources", hi: "स्रोत", mr: "स्रोत" },
+  confirmed: { en: "Confirmed (official)", hi: "पुष्ट (आधिकारिक)", mr: "पुष्टी (अधिकृत)" },
+  reported: { en: "Reported (media)", hi: "रिपोर्ट (मीडिया)", mr: "वृत्त (माध्यमे)" },
+};
 
 /* ───────────── component ───────────── */
 
@@ -134,7 +149,7 @@ export default function BlogDetailPage() {
               </span>
               <span className="inline-flex items-center gap-1.5 text-xs text-cream-300/40">
                 <ExternalLink className="h-3.5 w-3.5" />
-                {article.source}
+                {UI.source[locale]}: {article.source}
               </span>
             </div>
 
@@ -142,6 +157,26 @@ export default function BlogDetailPage() {
             <h1 className="mb-6 font-heading text-3xl font-bold leading-tight text-cream-100 md:text-4xl lg:text-5xl">
               {article.title[locale]}
             </h1>
+
+            {/* Byline and dates */}
+            <p className="mb-6 text-sm text-cream-300/60">
+              {UI.by[locale]}{" "}
+              <Link href={NEWS_AUTHOR.path} className="rich-link text-[#DFCC78]">
+                {NEWS_AUTHOR.name}
+              </Link>
+              {article.updated && article.updated !== article.date && (
+                <>
+                  {" · "}
+                  {UI.updated[locale]} <time dateTime={article.updated}>{formatDate(article.updated, locale)}</time>
+                </>
+              )}
+              {article.originallyAnnounced && (
+                <span className="mt-1 block text-cream-300/50">
+                  {UI.originally[locale]}{" "}
+                  <time dateTime={article.originallyAnnounced}>{formatDate(article.originallyAnnounced, locale)}</time>
+                </span>
+              )}
+            </p>
 
             {/* Summary */}
             <p
@@ -160,15 +195,34 @@ export default function BlogDetailPage() {
           <div
             className="prose-dark"
           >
-            {article.content[locale].split("\n").map((paragraph, i) => (
-              <p
-                key={i}
-                className="mb-6 text-base leading-relaxed text-cream-300/70 md:text-lg"
-              >
-                {paragraph}
-              </p>
-            ))}
+            <RichText text={article.content[locale]} tone="dark" />
           </div>
+
+          {/* Sources */}
+          {article.sources && article.sources.length > 0 && (
+            <aside
+              className="mt-10 rounded-2xl p-6"
+              style={{ background: "rgba(201,162,39,0.05)", border: "1px solid rgba(201,162,39,0.15)" }}
+              aria-labelledby="sources-title"
+            >
+              <h2 id="sources-title" className="font-heading text-lg font-bold text-cream-100">
+                {UI.sources[locale]}
+              </h2>
+              <ol className="mt-4 space-y-3 text-sm text-cream-300/70">
+                {article.sources.map((src) => (
+                  <li key={src.url} className="leading-snug">
+                    <a href={src.url} target="_blank" rel="noopener noreferrer" className="rich-link text-[#DFCC78]">
+                      {src.title}
+                    </a>
+                    <span className="block text-xs text-cream-300/50">
+                      {src.publisher} · {formatDate(src.date, locale)} ·{" "}
+                      {src.status === "confirmed" ? UI.confirmed[locale] : UI.reported[locale]}
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </aside>
+          )}
 
           {/* Share button */}
           <div
@@ -176,7 +230,7 @@ export default function BlogDetailPage() {
             style={{ borderColor: "rgba(201,162,39,0.1)" }}
           >
             <span className="text-sm text-cream-300/40">
-              {article.source} &middot; {formatDate(article.date, locale)}
+              {NEWS_AUTHOR.name} &middot; {formatDate(article.date, locale)}
             </span>
             <button
               onClick={handleShare}
