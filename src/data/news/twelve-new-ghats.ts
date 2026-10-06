@@ -42,7 +42,7 @@ export const article: BlogArticle = {
   ],
   category: "infra",
   image: "/images/og-image.jpg",
-  photoId: 49,
+  photoId: 48,
   summary: {
     en: "Ten new ghats (3,451 m, ₹361.26 crore) are being built along the Godavari in Nashik and two (₹146.10 crore) in Trimbakeshwar, with a March 2027 target. Here are the names, the latest review, and where the numbers still differ.",
     hi: "नाशिक में गोदावरी किनारे 10 नए घाट (3,451 मीटर, ₹361.26 करोड़) और त्र्यंबकेश्वर में 2 घाट (₹146.10 करोड़) बन रहे हैं, लक्ष्य मार्च 2027 है। घाटों के नाम, ताजा समीक्षा और जहाँ आँकड़े अब भी अलग हैं, सब यहाँ।",

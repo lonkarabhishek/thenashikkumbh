@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
+import CommonsPhoto from "@/components/photos/CommonsPhoto";
 
 /* ───────────────────────────── data ───────────────────────────── */
 
@@ -541,6 +542,11 @@ export default function PilgrimGuidePage() {
       </section>
 
       {/* ═══════════════════ ACCOMMODATION ═══════════════════ */}
+      <div className="section-container mx-auto grid max-w-5xl gap-8 py-12 md:grid-cols-2">
+        <CommonsPhoto id={38} />
+        <CommonsPhoto id={41} />
+      </div>
+
       <section
         id="accommodation"
         className="relative scroll-mt-32 bg-cream-50 py-16 md:py-24"

@@ -1,3 +1,4 @@
+import type { Locale } from "@/i18n/translations";
 import commons from "./commons.json";
 import available from "./available.json";
 
@@ -64,3 +65,15 @@ export const PHOTO_TOPICS = [
   "Nashik city & landmarks",
   "Simhastha 2027 preparations",
 ] as const;
+
+/** Topic names as shown to readers. Keys match the photo data's `topic`. */
+export const TOPIC_LABEL: Record<string, Record<Locale, string>> = {
+  "Ramkund & Godavari ghats": { en: "Ramkund & Godavari ghats", hi: "रामकुंड और गोदावरी घाट", mr: "रामकुंड व गोदावरी घाट" },
+  "Snan crowds": { en: "Snan crowds", hi: "स्नान की भीड़", mr: "स्नानाची गर्दी" },
+  "Sadhus, akharas & processions": { en: "Sadhus, akhadas & processions", hi: "साधु, अखाड़े और शोभायात्राएँ", mr: "साधू, आखाडे व मिरवणुका" },
+  "Trimbakeshwar & Kushavarta": { en: "Trimbakeshwar & Kushavarta", hi: "त्र्यंबकेश्वर और कुशावर्त", mr: "त्र्यंबकेश्वर व कुशावर्त" },
+  "Panchavati temples": { en: "Panchavati temples", hi: "पंचवटी के मंदिर", mr: "पंचवटीतील मंदिरे" },
+  "Night & aarti": { en: "Night & aarti", hi: "रात और आरती", mr: "रात्र व आरती" },
+  "Nashik city & landmarks": { en: "Nashik city & landmarks", hi: "नाशिक शहर और स्थल", mr: "नाशिक शहर व स्थळे" },
+  "Simhastha 2027 preparations": { en: "Simhastha 2027 preparations", hi: "सिंहस्थ 2027 की तैयारी", mr: "सिंहस्थ 2027 ची तयारी" },
+};

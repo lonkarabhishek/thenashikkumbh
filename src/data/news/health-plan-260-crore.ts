@@ -35,6 +35,7 @@ export const article: BlogArticle = {
   ],
   category: "govt",
   image: "/images/og-image.jpg",
+  photoId: 31,
   summary: {
     en: "A ₹260 crore health plan for the 2027 Simhastha has been approved through NTKMA. It covers 136 temporary medical facilities, 190 ambulances, 3,600 extra staff, beds rising from 1,305 to 1,945 (185 ICU), a 10-bed hospital at Nandur Sadhugram and digital disease surveillance.",
     hi: "2027 सिंहस्थ के लिए ₹260 करोड़ की स्वास्थ्य योजना को NTKMA के ज़रिए मंज़ूरी मिली है। इसमें 136 अस्थायी चिकित्सा केंद्र, 190 एम्बुलेंस, 3,600 अतिरिक्त कर्मचारी, 1,305 से 1,945 बेड (185 ICU), नांदूर साधुग्राम में 10 बेड का अस्पताल और डिजिटल रोग निगरानी शामिल है।",

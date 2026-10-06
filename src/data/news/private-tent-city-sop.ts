@@ -35,6 +35,7 @@ export const article: BlogArticle = {
   ],
   category: "kumbh",
   image: "/images/og-image.jpg",
+  photoId: 25,
   summary: {
     en: "NTKMA plans Prayagraj-style tent cities on about 80 acres in Nashik and more than 50 acres in Trimbak. A new SOP of 29 September 2026 sets the rules for private tent cities. A tent-booking app has been approved but is not live yet, and no tent prices have been published.",
     hi: "NTKMA नाशिक में लगभग 80 एकड़ और त्र्यंबक में 50 एकड़ से अधिक जमीन पर प्रयागराज जैसे टेंट सिटी बनाने की योजना बना रहा है। 29 सितंबर 2026 की नई SOP निजी टेंट सिटी के नियम तय करती है। टेंट बुकिंग ऐप मंजूर हो चुका है, पर अभी शुरू नहीं हुआ है, और टेंट के दाम अभी घोषित नहीं हुए हैं।",

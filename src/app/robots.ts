@@ -14,6 +14,7 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: [
       "https://www.thenashikkumbh.com/sitemap.xml",
       "https://www.thenashikkumbh.com/news-sitemap.xml",
+      "https://www.thenashikkumbh.com/image-sitemap.xml",
     ],
   };
 }

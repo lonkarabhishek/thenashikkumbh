@@ -36,6 +36,7 @@ export const article: BlogArticle = {
   ],
   category: "infra",
   image: "/images/og-image.jpg",
+  photoId: 38,
   summary: {
     en: "The 66.15 km outer ring road around Nashik will cost ₹7,922 crore. MSIDC has appointed 7 contractors and work has started wherever land is available. About 30% of the land is in hand, and the target is to finish before the Kumbh.",
     hi: "नाशिक के चारों ओर 66.15 किमी लंबी बाहरी रिंग रोड पर ₹7,922 करोड़ खर्च होंगे। MSIDC ने 7 ठेकेदार नियुक्त किए हैं और जहाँ ज़मीन मिली है वहाँ काम शुरू हो गया है। लगभग 30% ज़मीन हाथ में है और लक्ष्य कुंभ से पहले काम पूरा करना है।",

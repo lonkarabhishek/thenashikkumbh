@@ -43,6 +43,7 @@ export const article: BlogArticle = {
   ],
   category: "infra",
   image: "/images/og-image.jpg",
+  photoId: 42,
   summary: {
     en: "Nashik's ₹1,600 crore Godavari rejuvenation project adds four new sewage treatment plants and 400 km of new sewers. NMC Commissioner Manisha Khatri says the river will reach bathing quality by May 2027, before the first Amrit Snan.",
     hi: "नाशिक की ₹1,600 करोड़ की गोदावरी पुनर्जीवन परियोजना में चार नए सीवेज ट्रीटमेंट प्लांट और 400 किमी नई सीवर लाइनें शामिल हैं। मनपा आयुक्त मनीषा खत्री के अनुसार मई 2027 तक नदी का पानी नहाने लायक हो जाएगा, यानी पहले अमृत स्नान से पहले।",

@@ -2,6 +2,7 @@
 
 import Link from "@/components/LocaleLink";
 import { useLanguage } from "@/context/LanguageContext";
+import CommonsPhoto from "@/components/photos/CommonsPhoto";
 
 /**
  * The 12 new ghats being built for 2027, plus Kushavarta.
@@ -96,6 +97,10 @@ export default function NewGhats2027() {
           </div>
         </div>
 
+        <div className="mt-10 grid gap-8 md:grid-cols-2">
+          <CommonsPhoto id={1} tone="dark" />
+          <CommonsPhoto id={14} tone="dark" />
+        </div>
         <p className="mt-8 text-sm text-cream-300/50">{t(COPY.conflict)}</p>
         <Link
           href="/blog/12-new-ghats-nashik-trimbakeshwar-march-2027"

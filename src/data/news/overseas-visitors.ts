@@ -49,6 +49,7 @@ export const article: BlogArticle = {
   ],
   category: "govt",
   image: "/images/og-image.jpg",
+  photoId: 8,
   summary: {
     en: "NTKMA expects at least 5 lakh foreign visitors at the 2027 Simhastha and plans help desks at airports in Nashik, Mumbai, Delhi and elsewhere, with the MEA and embassies. Here is how that fits with the different crowd estimates, and what Nashik airport offers today.",
     hi: "NTKMA को 2027 के सिंहस्थ में कम से कम 5 लाख विदेशी आगंतुकों की उम्मीद है। नाशिक, मुंबई, दिल्ली और अन्य हवाई अड्डों पर विदेश मंत्रालय और दूतावासों के साथ हेल्प डेस्क की योजना है। भीड़ के अलग-अलग अनुमान और नाशिक हवाई अड्डे की मौजूदा स्थिति भी जानिए।",

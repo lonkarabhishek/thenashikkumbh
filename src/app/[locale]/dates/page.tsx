@@ -7,6 +7,7 @@ import { translations } from "@/i18n/translations";
 import { majorMelaPeriod, schedule, type ScheduleEvent } from "@/data/verified";
 import type { Locale } from "@/i18n/translations";
 import { DatesFaq, DatesQuickAnswer } from "@/components/DatesAnswers";
+import CommonsPhoto from "@/components/photos/CommonsPhoto";
 
 /* ───────────────────────────── page ─────────────────────────────── */
 
@@ -347,6 +348,9 @@ export default function ImportantDatesPage() {
       </section>
 
       {/* ═══════════════════ CTA ═══════════════════ */}
+      <div className="section-container mx-auto max-w-3xl">
+        <CommonsPhoto id={28} className="mt-12" />
+      </div>
       <DatesFaq />
 
       <section

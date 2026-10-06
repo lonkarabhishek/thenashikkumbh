@@ -49,6 +49,7 @@ export const article: BlogArticle = {
   ],
   category: "kumbh",
   image: "/images/og-image.jpg",
+  photoId: 43,
   summary: {
     en: "About 600 Nashik properties are on Airbnb today. NTKMA is working with Airbnb to reach at least 2,000 and will ask residents to rent out rooms. Hotel capacity is not enough, and no official homestay rules or list have been published yet.",
     hi: "नाशिक की लगभग 600 प्रॉपर्टी आज Airbnb पर हैं। NTKMA इसे कम से कम 2,000 तक ले जाने के लिए Airbnb के साथ काम कर रहा है और लोगों से कमरे किराए पर देने की अपील करेगा। होटल क्षमता पर्याप्त नहीं है, और होमस्टे के आधिकारिक नियम या सूची अभी जारी नहीं हुई है।",

@@ -7,6 +7,8 @@ import { useLanguage } from "@/context/LanguageContext";
 import type { Locale } from "@/i18n/translations";
 import { NEWS_AUTHOR, type BlogArticle } from "@/data/blogData";
 import RichText from "@/components/RichText";
+import PhotoCredit from "@/components/photos/PhotoCredit";
+import { getPhoto, isPhotoAvailable } from "@/data/photos";
 
 /* ───────────── category colors ───────────── */
 
@@ -83,6 +85,8 @@ export default function BlogArticleView({
   }
 
   const colors = categoryColors[article.category] ?? categoryColors.kumbh;
+  const photo =
+    article.photoId && isPhotoAvailable(article.photoId) ? getPhoto(article.photoId) : undefined;
   const catLabel = categoryLabels[article.category]?.[locale] ?? article.category;
 
 
@@ -101,8 +105,8 @@ export default function BlogArticleView({
       <section className="section-dark relative overflow-hidden pt-24">
         <div className="relative h-[40vh] min-h-[320px] w-full md:h-[50vh]">
           <img
-            src={article.image}
-            alt={article.title[locale]}
+            src={photo ? photo.file : article.image}
+            alt={photo ? photo.alt : article.title[locale]}
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-[#0B1220]/60 to-transparent" />
@@ -157,6 +161,13 @@ export default function BlogArticleView({
             <h1 className="mb-6 font-heading text-3xl font-bold leading-tight text-cream-100 md:text-4xl lg:text-5xl">
               {article.title[locale]}
             </h1>
+
+            {photo && (
+              <p className="mb-4 text-xs text-cream-300/60">
+                {photo.caption}
+                <PhotoCredit photo={photo} className="mt-1" />
+              </p>
+            )}
 
             {/* Byline and dates */}
             <p className="mb-6 text-sm text-cream-300/60">
