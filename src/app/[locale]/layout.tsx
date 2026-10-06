@@ -4,7 +4,7 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import { ChatProvider } from "@/context/ChatContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import KumbhSahayak from "@/components/KumbhSahayak";
+import KumbhSahayakLazy from "@/components/KumbhSahayakLazy";
 import SOSButton from "@/components/SOSButton";
 
 import { Analytics } from "@vercel/analytics/next";
@@ -24,13 +24,18 @@ const inter = Inter({
 });
 
 // Optical sizing keeps the display cuts tight and the small sizes readable.
+// Only the opsz axis is used; SOFT and WONK were never set and doubled the
+// file size.
 const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-fraunces",
   display: "swap",
-  axes: ["SOFT", "WONK", "opsz"],
+  axes: ["opsz"],
 });
 
+// Not preloaded: it is ~150 KB and was holding back first paint on every
+// page, including English ones. It still loads with display: swap wherever
+// Devanagari text appears.
 const notoSerifDevanagari = Noto_Serif_Devanagari({
   subsets: ["devanagari", "latin"],
   weight: ["400", "600", "700"],
@@ -149,7 +154,7 @@ export default function LocaleLayout({
             <Navbar />
             <main id="main-content">{children}</main>
             <Footer />
-            <KumbhSahayak />
+            <KumbhSahayakLazy />
             <SOSButton />
             <Analytics />
             <PWARegistrar />

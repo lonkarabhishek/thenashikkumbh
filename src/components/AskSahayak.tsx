@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight, Languages, Send, Sparkles, Zap } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useChat } from "@/context/ChatContext";
-import { quickStartChips } from "@/data/chatbotKnowledgeBase";
+import { quickStartChips } from "@/data/chatbotChips";
 
 const COPY = {
   eyebrow: { en: "Kumbh Sahayak", hi: "कुंभ सहायक", mr: "कुंभ सहायक" },

@@ -3,7 +3,6 @@
 import Link from "@/components/LocaleLink";
 import { ArrowRight, Newspaper } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
-import { blogArticles } from "@/data/blogData";
 import type { Locale } from "@/i18n/translations";
 import Reveal from "@/components/Reveal";
 
@@ -19,16 +18,19 @@ const COPY = {
 
 const DATE_LOCALE: Record<Locale, string> = { en: "en-IN", hi: "hi-IN", mr: "mr-IN" };
 
-/** The three newest articles, newest first. */
-const latest = [...blogArticles]
-  .sort((a, b) => b.date.localeCompare(a.date))
-  .slice(0, 3);
+/** Only what the box shows; the server passes it in so the full text of
+ * every post stays out of the home page's JavaScript. */
+export interface NewsHeadline {
+  slug: string;
+  date: string;
+  title: { en: string; hi: string; mr: string };
+}
 
 /**
  * A home-page pointer to the news section: headlines only, no summaries, so
  * it reads as a nudge rather than a second copy of /blog.
  */
-export default function NewsNudge() {
+export default function NewsNudge({ items: latest }: { items: NewsHeadline[] }) {
   const { locale, t } = useLanguage();
 
   return (
