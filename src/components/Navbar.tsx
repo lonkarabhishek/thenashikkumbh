@@ -2,6 +2,7 @@
 
 import Link from "@/components/LocaleLink";
 import { stripLocale } from "@/i18n/locales";
+import AdvisoryBanner from "@/components/AdvisoryBanner";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Headphones, Menu, Sparkles, X } from "lucide-react";
@@ -163,6 +164,7 @@ export default function Navbar() {
           scrolled ? "border-b border-temple-100 shadow-soft" : "border-b border-temple-100/60"
         }`}
       >
+        <AdvisoryBanner />
         <div className="section-container">
           <div className="flex h-16 items-center justify-between gap-3 lg:h-20 lg:gap-6">
             {/* Wordmark */}

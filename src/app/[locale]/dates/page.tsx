@@ -4,17 +4,70 @@ import Link from "@/components/LocaleLink";
 import { Clock, Users, ShieldCheck, ArrowRight, Star, Calendar, Sparkles } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
-import { bathingDatesI18n } from "@/data/siteDataI18n";
+import { majorMelaPeriod, schedule, type ScheduleEvent } from "@/data/verified";
+import type { Locale } from "@/i18n/translations";
 import { DatesFaq, DatesQuickAnswer } from "@/components/DatesAnswers";
 
 /* ───────────────────────────── page ─────────────────────────────── */
 
-export default function ImportantDatesPage() {
-  const { t } = useLanguage();
+type Kind = "amrit" | "ceremony" | "procession" | "parva" | "close";
 
-  const sortedDates = [...bathingDatesI18n].sort(
-    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
-  );
+function kindOf(e: ScheduleEvent): Kind {
+  if (e.isAmritSnan) return "amrit";
+  if (e.id === "nagar-pradakshina") return "procession";
+  if (e.id.startsWith("parva")) return "parva";
+  if (e.id.startsWith("conclusion")) return "close";
+  return "ceremony";
+}
+
+const KIND_LABEL: Record<Kind, Record<Locale, string>> = {
+  amrit: { en: "Amrit Snan", hi: "अमृत स्नान", mr: "अमृत स्नान" },
+  ceremony: { en: "Ceremony", hi: "समारोह", mr: "सोहळा" },
+  procession: { en: "Procession", hi: "शोभायात्रा", mr: "मिरवणूक" },
+  parva: { en: "Parva days", hi: "पर्व दिवस", mr: "पर्व दिवस" },
+  close: { en: "Close", hi: "समापन", mr: "सांगता" },
+};
+
+const DATE_LOCALE: Record<Locale, string> = { en: "en-IN", hi: "hi-IN", mr: "mr-IN" };
+
+function formatDate(iso: string, locale: Locale) {
+  return new Date(`${iso}T00:00:00+05:30`).toLocaleDateString(DATE_LOCALE[locale], {
+    weekday: "short",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "Asia/Kolkata",
+  });
+}
+
+function formatTime(hhmm: string, locale: Locale) {
+  return new Date(`2026-01-01T${hhmm}:00+05:30`).toLocaleTimeString(DATE_LOCALE[locale], {
+    hour: "numeric",
+    minute: "2-digit",
+    timeZone: "Asia/Kolkata",
+  });
+}
+
+function rangeText(a: string, b: string, locale: Locale) {
+  if (locale === "hi") return `${a} से ${b} तक`;
+  if (locale === "mr") return `${a} ते ${b}`;
+  return `${a} to ${b}`;
+}
+
+const PERIOD_COPY = {
+  title: { en: "Major Mela Period", hi: "मुख्य मेला अवधि", mr: "मुख्य मेळा कालावधी" },
+  body: {
+    en: "The official peak of the mela, when most pilgrims are expected.",
+    hi: "मेले का आधिकारिक मुख्य समय, जब सबसे अधिक श्रद्धालु अपेक्षित हैं।",
+    mr: "मेळ्याचा अधिकृत मुख्य काळ, जेव्हा सर्वाधिक भाविक अपेक्षित आहेत.",
+  },
+  days: { en: "days", hi: "दिन", mr: "दिवस" },
+};
+
+export default function ImportantDatesPage() {
+  const { locale, t } = useLanguage();
+
+  const sortedDates = [...schedule].sort((a, b) => a.isoDate.localeCompare(b.isoDate));
 
   return (
     <>
@@ -111,6 +164,19 @@ export default function ImportantDatesPage() {
             </p>
           </div>
 
+          {/* -- major mela period -- */}
+          <div className="card-dark mx-auto mb-14 max-w-2xl p-6 text-center">
+            <p className="text-xs font-bold uppercase tracking-widest" style={{ color: "#C9A227" }}>
+              {t(PERIOD_COPY.title)}
+            </p>
+            <p className="mt-2 font-heading text-xl text-cream-100">
+              {rangeText(formatDate(majorMelaPeriod.startIso, locale), formatDate(majorMelaPeriod.endIso, locale), locale)}
+            </p>
+            <p className="mt-1 text-sm text-cream-300/70">
+              {majorMelaPeriod.days} {t(PERIOD_COPY.days)} · {t(PERIOD_COPY.body)}
+            </p>
+          </div>
+
           {/* -- vertical timeline -- */}
           <div className="relative">
             {/* center line -- desktop; left line -- mobile */}
@@ -125,19 +191,21 @@ export default function ImportantDatesPage() {
             <div className="space-y-12 md:space-y-16">
               {sortedDates.map((item, idx) => {
                 const isLeft = idx % 2 === 0;
+                const isMajor = item.isAmritSnan;
+                const kind = kindOf(item);
 
                 return (
                   <div
-                    key={item.date}
+                    key={item.id}
                     className="relative"
                   >
                     {/* -- node / circle -- */}
                     <div
                       className={`absolute left-4 z-10 -translate-x-1/2 md:left-1/2 ${
-                        item.isMajor ? "-mt-1" : "mt-0.5"
+                        isMajor ? "-mt-1" : "mt-0.5"
                       }`}
                     >
-                      {item.isMajor ? (
+                      {isMajor ? (
                         <span
                           className="flex h-10 w-10 items-center justify-center rounded-full shadow-lg md:h-12 md:w-12"
                           style={{
@@ -168,58 +236,51 @@ export default function ImportantDatesPage() {
                     >
                       <div
                         className={`card-dark group relative p-6 transition-transform hover:-translate-y-1 md:p-8 ${
-                          item.isMajor
+                          isMajor
                             ? "border-l-4"
                             : ""
                         }`}
-                        style={item.isMajor ? { borderLeftColor: "#C9A227" } : {}}
+                        style={isMajor ? { borderLeftColor: "#C9A227" } : {}}
                       >
-                        {/* Shahi Snan badge */}
-                        {item.isMajor && (
-                          <span
-                            className="mb-3 inline-flex items-center gap-1.5 rounded-full px-4 py-1 text-xs font-bold uppercase tracking-widest"
-                            style={{
-                              background: "linear-gradient(135deg, rgba(201,162,39,0.2), rgba(201,162,39,0.08))",
-                              color: "#C9A227",
-                              border: "1px solid rgba(201,162,39,0.3)",
-                            }}
-                          >
-                            <Sparkles className="h-3 w-3" />
-                            {t(translations.datesPage.shahiSnanBadge)}
-                          </span>
-                        )}
-
-                        {!item.isMajor && (
-                          <span
-                            className="mb-3 inline-block rounded-full px-3 py-1 text-xs font-medium uppercase tracking-wider"
-                            style={{
-                              background: "rgba(201,162,39,0.08)",
-                              color: "rgba(201,162,39,0.7)",
-                              border: "1px solid rgba(201,162,39,0.15)",
-                            }}
-                          >
-                            {t(translations.datesPage.parvaSnanBadge)}
-                          </span>
-                        )}
+                        <span
+                          className={`mb-3 inline-flex items-center gap-1.5 rounded-full px-4 py-1 text-xs uppercase tracking-widest ${isMajor ? "font-bold" : "font-medium"}`}
+                          style={{
+                            background: isMajor
+                              ? "linear-gradient(135deg, rgba(201,162,39,0.2), rgba(201,162,39,0.08))"
+                              : "rgba(201,162,39,0.08)",
+                            color: isMajor ? "#C9A227" : "rgba(201,162,39,0.7)",
+                            border: `1px solid rgba(201,162,39,${isMajor ? 0.3 : 0.15})`,
+                          }}
+                        >
+                          {isMajor && <Sparkles className="h-3 w-3" />}
+                          {t(KIND_LABEL[kind])}
+                        </span>
 
                         <p
                           className="font-heading text-xl font-bold md:text-2xl"
                           style={{ color: "#C9A227" }}
                         >
-                          {item.date}
+                          {formatDate(item.isoDate, locale)}
+                          {item.startTime && (
+                            <span className="ml-2 text-base font-semibold text-cream-300/70">
+                              {formatTime(item.startTime, locale)}
+                            </span>
+                          )}
                         </p>
 
                         <h3 className="mt-2 font-heading text-lg font-bold text-cream-100 md:text-xl">
-                          {t(item.event)}
+                          {t(item.name)}
                         </h3>
 
                         <p className="mt-1 text-sm font-medium text-cream-300/50">
-                          {t(item.nakshatra)}
+                          {item.tithi ? `${t(item.tithi)} · ${t(item.location)}` : t(item.location)}
                         </p>
 
-                        <p className="mt-3 text-base leading-relaxed text-cream-300/70">
-                          {t(item.significance)}
-                        </p>
+                        {item.significance && (
+                          <p className="mt-3 text-base leading-relaxed text-cream-300/70">
+                            {t(item.significance)}
+                          </p>
+                        )}
                       </div>
                     </div>
                   </div>

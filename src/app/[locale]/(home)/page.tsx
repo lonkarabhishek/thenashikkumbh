@@ -16,7 +16,9 @@ import { useLanguage } from "@/context/LanguageContext";
 import { useChat } from "@/context/ChatContext";
 import { translations } from "@/i18n/translations";
 import { yatraUI } from "@/i18n/yatraTranslations";
-import { bathingDatesI18n, ghatsI18n } from "@/data/siteDataI18n";
+import { ghatsI18n } from "@/data/siteDataI18n";
+import { schedule } from "@/data/verified";
+import type { Locale } from "@/i18n/translations";
 import { trails } from "@/data/yatraData";
 import Reveal from "@/components/Reveal";
 import Countdown from "@/components/Countdown";
@@ -88,10 +90,11 @@ const HOME_COPY = {
     mr: "दर्शनापेक्षा महत्त्वाच्या तीन गोष्टी",
   },
   safety1: {
-    en: "Know your way out before you go in. The SOS button on this site finds your nearest exit route from wherever you are standing.",
-    hi: "भीतर जाने से पहले निकास जान लें। इस साइट का SOS बटन आप जहाँ खड़े हैं वहीं से निकटतम निकास मार्ग खोज देता है।",
-    mr: "आत जाण्यापूर्वी बाहेर पडण्याचा मार्ग माहीत करून घ्या. या साइटवरचे SOS बटण तुम्ही जिथे उभे आहात तिथून जवळचा मार्ग शोधून देते.",
+    en: "Know your way out before you go in. Official exit routes are not published yet, so note the way you came in, and follow police directions on the ghats.",
+    hi: "भीतर जाने से पहले बाहर निकलने का रास्ता जान लें। आधिकारिक निकास मार्ग अभी घोषित नहीं हुए हैं, इसलिए जिस रास्ते से आए उसे याद रखें और घाटों पर पुलिस के निर्देश मानें।",
+    mr: "आत जाण्यापूर्वी बाहेर पडण्याचा मार्ग जाणून घ्या. अधिकृत निर्गमन मार्ग अजून जाहीर झालेले नाहीत, म्हणून ज्या वाटेने आलात ती लक्षात ठेवा आणि घाटांवर पोलिसांच्या सूचना पाळा.",
   },
+
   safety2: {
     en: "Agree a meeting point with your family that is a place, not a person. Phones lose signal in a crowd of millions.",
     hi: "परिवार से मिलने की जगह तय करें, कोई व्यक्ति नहीं, कोई स्थान। लाखों की भीड़ में फ़ोन का नेटवर्क चला जाता है।",
@@ -116,11 +119,23 @@ const HOME_COPY = {
   },
 };
 
+const HOME_DATE_LOCALE: Record<Locale, string> = { en: "en-IN", hi: "hi-IN", mr: "mr-IN" };
+
+function formatHomeDate(iso: string, locale: Locale) {
+  return new Date(`${iso}T00:00:00+05:30`).toLocaleDateString(HOME_DATE_LOCALE[locale], {
+    weekday: "short",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "Asia/Kolkata",
+  });
+}
+
 export default function Home() {
-  const { t } = useLanguage();
+  const { locale, t } = useLanguage();
   const { open: openChat } = useChat();
 
-  const majorDates = bathingDatesI18n.filter((d) => d.isMajor);
+  const majorDates = schedule.filter((e) => e.isAmritSnan);
   const featuredGhats = ghatsI18n.slice(0, 3);
 
   const storyBeats = [
@@ -279,22 +294,22 @@ export default function Home() {
 
         <ol className="mt-12 overflow-hidden rounded-card border border-temple-100">
           {majorDates.map((date, i) => (
-            <Reveal as="li" key={date.date} delay={i * 60}>
+            <Reveal as="li" key={date.id} delay={i * 60}>
               <div className="flex flex-col gap-4 border-b border-temple-100 bg-cream-50 p-6 last:border-b-0 sm:flex-row sm:items-center sm:gap-8 sm:p-7">
                 <div className="flex shrink-0 items-center gap-4 sm:w-52">
                   <Diya className="h-7 w-7 shrink-0 text-saffron-600" />
                   <div>
                     <p className="font-heading text-lg leading-tight text-temple-900">
-                      {date.date}
+                      {formatHomeDate(date.isoDate, locale)}
                     </p>
-                    <p className="mt-0.5 text-xs text-temple-400">{t(date.nakshatra)}</p>
+                    <p className="mt-0.5 text-xs text-temple-400">{date.tithi ? t(date.tithi) : t(date.location)}</p>
                   </div>
                 </div>
 
                 <div className="min-w-0 flex-1">
-                  <p className="font-semibold text-temple-900">{t(date.event)}</p>
+                  <p className="font-semibold text-temple-900">{t(date.name)}</p>
                   <p className="mt-1 text-sm leading-relaxed text-temple-500">
-                    {t(date.significance)}
+                    {date.significance ? t(date.significance) : t(date.location)}
                   </p>
                 </div>
               </div>

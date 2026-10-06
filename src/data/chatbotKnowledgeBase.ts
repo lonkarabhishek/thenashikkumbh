@@ -74,12 +74,12 @@ export const chatTopics: ChatTopic[] = [
       hi: "नाशिक कुंभ मेला कब है?",
       mr: "नाशिक कुंभमेळा कधी आहे?",
     },
-    // Source: DGIPR schedule announcement (https://www.mahasamvad.in/167800/).
+    // Source: NTKMA Kumbh Mela Plan (June 2026) and the 1 June 2025 schedule.
     // The registry (src/data/verified/index.ts) is the canonical version.
     answer: {
-      en: "The Simhastha formally opens with Dhwajarohan at Ram Kund, Nashik, on 31 October 2026 (12:02 pm). The Nagar Pradakshina falls on 29 July 2027; the three Amrit Snans on 2 August, 31 August, and 11 September 2027 in Nashik with the third bathed at Kushavarta, Trimbakeshwar, on 12 September 2027. The Simhastha concludes on 24 July 2028.",
-      hi: "सिंहस्थ का औपचारिक शुभारंभ 31 अक्टूबर 2026 को दोपहर 12:02 बजे रामकुंड, नाशिक में ध्वजारोहण से होता है। नगर प्रदक्षिणा 29 जुलाई 2027 को है; तीन अमृत स्नान 2 अगस्त, 31 अगस्त और 11 सितंबर 2027 (नाशिक) को हैं, और तीसरा 12 सितंबर 2027 को कुशावर्त, त्र्यंबकेश्वर में। सिंहस्थ का समापन 24 जुलाई 2028 को होगा।",
-      mr: "सिंहस्थाचा औपचारिक प्रारंभ ३१ ऑक्टोबर २०२६ रोजी दुपारी १२:०२ वाजता रामकुंड, नाशिक येथे ध्वजारोहणाने होतो. नगर प्रदक्षिणा २९ जुलै २०२७ रोजी आहे; तीन अमृत स्नान २ ऑगस्ट, ३१ ऑगस्ट आणि ११ सप्टेंबर २०२७ रोजी (नाशिक) आणि तिसरे १२ सप्टेंबर २०२७ रोजी कुशावर्त, त्र्यंबकेश्वर येथे. सिंहस्थाची सांगता २४ जुलै २०२८ रोजी होईल.",
+      en: "The Simhastha formally opens with Dhwajarohan on Saturday 31 October 2026 at 12:02 pm, at the same moment at Ramkund (Nashik) and Kushavarta (Trimbakeshwar). Nagar Pradakshina is on 29 July 2027. The three Amrit Snans are on 2 August, 31 August and 11 September 2027 in Nashik, with Trimbakeshwar's third bath on 12 September 2027. The Simhastha closes on 29 July 2028 in Nashik and 24 July 2028 in Trimbakeshwar (NTKMA plan).",
+      hi: "सिंहस्थ का औपचारिक शुभारंभ शनिवार 31 अक्टूबर 2026 को दोपहर 12:02 बजे ध्वजारोहण से होता है, एक साथ रामकुंड (नाशिक) और कुशावर्त (त्र्यंबकेश्वर) पर। नगर प्रदक्षिणा 29 जुलाई 2027 को है। तीन अमृत स्नान नाशिक में 2 अगस्त, 31 अगस्त और 11 सितंबर 2027 को हैं, और त्र्यंबकेश्वर का तीसरा स्नान 12 सितंबर 2027 को। सिंहस्थ का समापन नाशिक में 29 जुलाई 2028 और त्र्यंबकेश्वर में 24 जुलाई 2028 को होगा (NTKMA योजना)।",
+      mr: "सिंहस्थाचा औपचारिक प्रारंभ शनिवार ३१ ऑक्टोबर २०२६ रोजी दुपारी १२:०२ वाजता ध्वजारोहणाने होतो, रामकुंड (नाशिक) आणि कुशावर्त (त्र्यंबकेश्वर) येथे एकाच वेळी. नगर प्रदक्षिणा २९ जुलै २०२७ रोजी आहे. तीन अमृत स्नाने नाशिकमध्ये २ ऑगस्ट, ३१ ऑगस्ट आणि ११ सप्टेंबर २०२७ रोजी, आणि त्र्यंबकेश्वरचे तिसरे स्नान १२ सप्टेंबर २०२७ रोजी आहे. सिंहस्थाची सांगता नाशिकमध्ये २९ जुलै २०२८ आणि त्र्यंबकेश्वरमध्ये २४ जुलै २०२८ रोजी होईल (NTKMA योजना).",
     },
     relatedTopics: ["shahi-snan", "kumbh-what", "how-to-reach"],
     pageLink: "/dates",
@@ -250,9 +250,9 @@ export const chatTopics: ChatTopic[] = [
       mr: "कुंभमेळ्याला जाणे सुरक्षित आहे का?",
     },
     answer: {
-      en: "For any real emergency, dial 112 first. The specific 2027 safety plan, CCTV coverage, control-room command structure, medical camps, police deployment, has not yet been published by NTKMA. The basics that always apply: stay with your group, agree a meeting point that is a place not a person, keep your belongings close, and follow marshal directions on the ground.",
-      hi: "कुंभ मेले में व्यापक सुरक्षा व्यवस्था की जाती है। पूरे क्षेत्र में AI-संचालित CCTV निगरानी कैमरे लगाए जाते हैं, और एक समर्पित कुंभ वॉर रूम भीड़ की गतिविधियों पर नजर रखता है। मोबाइल अस्पताल, एम्बुलेंस और प्राथमिक उपचार केंद्र पूरे स्थल पर उपलब्ध रहते हैं। भीड़ प्रबंधन के लिए बड़ी संख्या में पुलिस तैनात की जाती है। बस आधिकारिक भीड़ दिशानिर्देशों का पालन करें और अपना सामान अपने पास रखें।",
-      mr: "कुंभमेळ्यात व्यापक सुरक्षा व्यवस्था केली जाते. संपूर्ण परिसरात AI-आधारित CCTV पाळत ठेवणारे कॅमेरे बसवले जातात आणि एक समर्पित कुंभ वॉर रूम गर्दीच्या हालचालींवर लक्ष ठेवतो. मोबाइल रुग्णालये, रुग्णवाहिका आणि प्रथमोपचार केंद्रे संपूर्ण ठिकाणी उपलब्ध असतात. गर्दी व्यवस्थापनासाठी मोठ्या प्रमाणात पोलीस तैनात केले जातात. फक्त अधिकृत गर्दी मार्गदर्शक सूचनांचे पालन करा आणि आपले सामान जवळ ठेवा.",
+      en: "For any real emergency, dial 112 first. What has been announced so far: about 4,000 CCTV cameras in Nashik and 1,000 in Trimbakeshwar, a third command centre, a ₹260 crore health plan and a ₹92 crore fire and disaster plan. The ghat-wise crowd plan and lost-and-found locations are not published yet. Stay with your group, agree a meeting point that is a place not a person, and follow police directions.",
+      hi: "किसी भी आपात स्थिति में पहले 112 डायल करें। अब तक घोषित: नाशिक में लगभग 4,000 और त्र्यंबकेश्वर में 1,000 CCTV कैमरे, तीसरा कमांड सेंटर, ₹260 करोड़ की स्वास्थ्य योजना और ₹92 करोड़ की अग्नि व आपदा योजना। घाटवार भीड़ योजना और खोया-पाया केंद्रों की जगह अभी घोषित नहीं हुई। अपने समूह के साथ रहें, मिलने की जगह (व्यक्ति नहीं, स्थान) तय करें और पुलिस के निर्देश मानें।",
+      mr: "कोणत्याही आपत्कालीन स्थितीत आधी ११२ डायल करा. आतापर्यंत जाहीर: नाशिकमध्ये सुमारे ४,००० आणि त्र्यंबकेश्वरमध्ये १,००० CCTV कॅमेरे, तिसरे कमांड सेंटर, ₹२६० कोटींची आरोग्य योजना आणि ₹९२ कोटींची अग्नी व आपत्ती योजना. घाटनिहाय गर्दी योजना आणि हरवले-सापडले केंद्रांची ठिकाणे अजून जाहीर झालेली नाहीत. गटासोबत राहा, भेटण्याची जागा (माणूस नव्हे, ठिकाण) ठरवा आणि पोलिसांच्या सूचना पाळा.",
     },
     relatedTopics: ["emergency", "dos-donts", "what-to-carry"],
     pageLink: "/guide",
@@ -951,9 +951,9 @@ export const chatTopics: ChatTopic[] = [
       mr: "कुंभात गर्दीचे व्यवस्थापन कसे केले जाते?",
     },
     answer: {
-      en: "The 2027 crowd-management plan, command structure, one-way flow, barricades, entry/exit points, has not yet been published by NTKMA. In the meantime: on Amrit Snan mornings, if the crowd around you feels too dense, move to the side, stop, and wait it out. Follow the direction of police and volunteers on the ground; they see the whole flow, you cannot. Dial 112 in any real emergency.",
-      hi: "कुंभ मेले में एक समर्पित भीड़ प्रबंधन प्रणाली है। AI-संचालित CCTV कैमरे वास्तविक समय में भीड़ की घनत्व पर नजर रखते हैं। एक कुंभ वॉर रूम पुलिस, NDRF और चिकित्सा टीमों का समन्वय करता है। शाही स्नान दिनों में एकतरफा भीड़ प्रवाह प्रणालियां स्थापित की जाती हैं। बैरिकेड और निर्धारित प्रवेश/निकास बिंदु अत्यधिक भीड़ को रोकते हैं। अगर भीड़ बहुत ज्यादा लगे, तो किनारे पर जाकर रुकें।",
-      mr: "कुंभमेळ्यात एक समर्पित गर्दी व्यवस्थापन प्रणाली आहे. AI-आधारित CCTV कॅमेरे वास्तविक वेळेत गर्दीच्या घनतेवर लक्ष ठेवतात. एक कुंभ वॉर रूम पोलीस, NDRF आणि वैद्यकीय पथकांचे समन्वय करतो. शाही स्नानाच्या दिवशी एकमार्गी गर्दी प्रवाह प्रणाली उभारली जाते. बॅरिकेड्स आणि निर्धारित प्रवेश/निर्गम बिंदू अतिगर्दी रोखतात. गर्दी खूप दाट वाटल्यास बाजूला जाऊन थांबा.",
+      en: "The detailed 2027 crowd plan (one-way routes, barricades, entry and exit points) has not been published yet. Announced so far: on Amrit Snan days private vehicles stop at 46 outer parking hubs and the Ramkund and Trimbak temple cores become pedestrian zones; CCTV and three command centres will watch the crowds. If the crowd around you feels too dense, move to the side, stop and wait. Follow police and volunteers. Dial 112 in any real emergency.",
+      hi: "2027 की विस्तृत भीड़ योजना (एकतरफा मार्ग, बैरिकेड, प्रवेश और निकास) अभी प्रकाशित नहीं हुई है। अब तक घोषित: अमृत स्नान के दिन निजी वाहन 46 बाहरी पार्किंग हब पर रुकेंगे और रामकुंड व त्र्यंबक मंदिर क्षेत्र पैदल क्षेत्र बनेंगे; CCTV और तीन कमांड सेंटर भीड़ पर नज़र रखेंगे। भीड़ बहुत घनी लगे तो किनारे जाकर रुकें। पुलिस और स्वयंसेवकों के निर्देश मानें। आपात स्थिति में 112 डायल करें।",
+      mr: "२०२७ ची सविस्तर गर्दी योजना (एकमार्गी रस्ते, बॅरिकेड्स, प्रवेश आणि निर्गम) अजून प्रकाशित झालेली नाही. आतापर्यंत जाहीर: अमृत स्नानाच्या दिवशी खासगी वाहने ४६ बाहेरील पार्किंग हबवर थांबतील आणि रामकुंड व त्र्यंबक मंदिर परिसर पादचारी क्षेत्र होईल; CCTV आणि तीन कमांड सेंटर गर्दीवर लक्ष ठेवतील. गर्दी खूप दाट वाटल्यास बाजूला जाऊन थांबा. पोलीस आणि स्वयंसेवकांच्या सूचना पाळा. आपत्कालीन स्थितीत ११२ डायल करा.",
     },
     relatedTopics: ["safety", "emergency", "dos-donts"],
     emoji: "👮",

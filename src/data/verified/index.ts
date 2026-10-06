@@ -105,15 +105,31 @@ const DCC_WIRE = {
   url: "https://www.deccanchronicle.com/nation/nashik-kumbh-mela-2027-to-begin-with-flag-hoisting-on-october-31-2026-1882836",
 };
 
+/** NTKMA Kumbh Mela Plan (official PDF, June 2026): the authority's own schedule. */
+const NTKMA_PLAN = {
+  org: "Nashik-Trimbakeshwar Kumbh Mela Authority (NTKMA)",
+  title: "Nashik-Trimbakeshwar Simhastha Kumbh Mela Plan (June 2026)",
+  url: "https://cdnbbsr.s3waas.gov.in/s36048ff4e8cb07aa60b6777b6f7384d52/uploads/2026/06/20260615229440107.pdf",
+};
+
+/** The schedule announced at the CM's meeting with the akhadas, 1 June 2025. */
+const JUNE_2025_SCHEDULE = {
+  org: "ETV Bharat Marathi (reporting the official schedule of 1 June 2025)",
+  title: "Simhastha Kumbh Mela to begin in Nashik-Trimbakeshwar on October 31",
+  url: "https://www.etvbharat.com/mr/!state/simhastha-kumbh-mela-to-begin-in-nashik-trimbakeshwar-on-october-31-next-year-amrut-snan-check-all-dates-maharashtra-news-mhs25060103673",
+};
+
+const VERIFIED = { verifiedAt: "2026-10-06", verifiedBy: "editorial" };
+
 export const schedule: ScheduleEvent[] = [
   {
     id: "dhwajarohan",
     isoDate: "2026-10-31",
     startTime: "12:02",
     location: {
-      en: "Ram Kund, Panchavati, Nashik",
-      hi: "रामकुंड, पंचवटी, नाशिक",
-      mr: "रामकुंड, पंचवटी, नाशिक",
+      en: "Ramkund (Panchavati, Nashik) and Kushavarta (Trimbakeshwar)",
+      hi: "रामकुंड (पंचवटी, नाशिक) और कुशावर्त (त्र्यंबकेश्वर)",
+      mr: "रामकुंड (पंचवटी, नाशिक) आणि कुशावर्त (त्र्यंबकेश्वर)",
     },
     name: {
       en: "Dhwajarohan: Flag Hoisting",
@@ -123,15 +139,31 @@ export const schedule: ScheduleEvent[] = [
     status: "official",
     isAmritSnan: false,
     significance: {
-      en: "The formal opening of the Simhastha. The flag is raised at Ram Kund; the akhadas and every pilgrim are invited to begin.",
-      hi: "सिंहस्थ का औपचारिक शुभारंभ। रामकुंड पर ध्वज फहराया जाता है; अखाड़ों और हर श्रद्धालु के लिए यही निमंत्रण है।",
-      mr: "सिंहस्थाचा औपचारिक प्रारंभ. रामकुंडावर ध्वज फडकवला जातो; आखाड्यांना आणि प्रत्येक भाविकाला हेच निमंत्रण.",
+      en: "The formal start of the Simhastha. Flags go up at 12:02 PM at the same moment at Ramkund in Nashik and Kushavarta in Trimbakeshwar.",
+      hi: "सिंहस्थ का औपचारिक आरंभ। दोपहर 12:02 बजे नाशिक के रामकुंड और त्र्यंबकेश्वर के कुशावर्त पर एक साथ ध्वज फहराए जाते हैं।",
+      mr: "सिंहस्थाचा औपचारिक प्रारंभ. दुपारी १२:०२ वाजता नाशिकच्या रामकुंडावर आणि त्र्यंबकेश्वरच्या कुशावर्तावर एकाच वेळी ध्वज फडकवले जातात.",
     },
-    sourceOrganisation: DGIPR.org,
-    sourceTitle: DGIPR.title,
-    sourceUrl: DGIPR.url,
-    verifiedAt: "2026-08-01",
-    verifiedBy: "editorial",
+    sourceOrganisation: NTKMA_PLAN.org,
+    sourceTitle: NTKMA_PLAN.title,
+    sourceUrl: NTKMA_PLAN.url,
+    ...VERIFIED,
+  },
+  {
+    id: "sadhugram-dhwajarohan",
+    isoDate: "2027-07-24",
+    location: { en: "Sadhugram, Nashik", hi: "साधुग्राम, नाशिक", mr: "साधुग्राम, नाशिक" },
+    name: {
+      en: "Sadhugram (Akhada) Flag Hoisting",
+      hi: "साधुग्राम (अखाड़ा) ध्वजारोहण",
+      mr: "साधुग्राम (आखाडा) ध्वजारोहण",
+    },
+    tithi: { en: "Ashadh Krishna Panchami", hi: "आषाढ़ कृष्ण पंचमी", mr: "आषाढ कृष्ण पंचमी" },
+    status: "official",
+    isAmritSnan: false,
+    sourceOrganisation: JUNE_2025_SCHEDULE.org,
+    sourceTitle: JUNE_2025_SCHEDULE.title,
+    sourceUrl: JUNE_2025_SCHEDULE.url,
+    ...VERIFIED,
   },
   {
     id: "nagar-pradakshina",
@@ -142,26 +174,26 @@ export const schedule: ScheduleEvent[] = [
       hi: "नगर प्रदक्षिणा",
       mr: "नगर प्रदक्षिणा",
     },
+    tithi: { en: "Ashadh Krishna Ekadashi", hi: "आषाढ़ कृष्ण एकादशी", mr: "आषाढ कृष्ण एकादशी" },
     status: "official",
     isAmritSnan: false,
     significance: {
-      en: "The ceremonial circumambulation of the city, four days before the first Amrit Snan.",
-      hi: "प्रथम अमृत स्नान से चार दिन पूर्व नगर की परिक्रमा।",
-      mr: "पहिल्या अमृत स्नानाच्या चार दिवस आधी शहराची प्रदक्षिणा.",
+      en: "A ceremonial procession around the city, four days before the first Amrit Snan. It is a procession, not a bath.",
+      hi: "प्रथम अमृत स्नान से चार दिन पहले नगर की परिक्रमा करने वाली शोभायात्रा। यह स्नान नहीं, शोभायात्रा है।",
+      mr: "पहिल्या अमृत स्नानाच्या चार दिवस आधी शहराला प्रदक्षिणा घालणारी मिरवणूक. हे स्नान नाही, मिरवणूक आहे.",
     },
-    sourceOrganisation: DGIPR.org,
-    sourceTitle: DGIPR.title,
-    sourceUrl: DGIPR.url,
-    verifiedAt: "2026-08-01",
-    verifiedBy: "editorial",
+    sourceOrganisation: JUNE_2025_SCHEDULE.org,
+    sourceTitle: JUNE_2025_SCHEDULE.title,
+    sourceUrl: JUNE_2025_SCHEDULE.url,
+    ...VERIFIED,
   },
   {
     id: "amrit-snan-1",
     isoDate: "2027-08-02",
     location: {
-      en: "Nashik and Trimbakeshwar",
-      hi: "नाशिक और त्र्यंबकेश्वर",
-      mr: "नाशिक आणि त्र्यंबकेश्वर",
+      en: "Ramkund (Nashik) and Kushavarta (Trimbakeshwar)",
+      hi: "रामकुंड (नाशिक) और कुशावर्त (त्र्यंबकेश्वर)",
+      mr: "रामकुंड (नाशिक) आणि कुशावर्त (त्र्यंबकेश्वर)",
     },
     name: {
       en: "First Amrit Snan (traditionally called Shahi Snan)",
@@ -176,28 +208,43 @@ export const schedule: ScheduleEvent[] = [
     status: "official",
     isAmritSnan: true,
     significance: {
-      en: "The first royal bath. The akhadas descend first in an order agreed centuries ago; the public follows.",
-      hi: "प्रथम शाही स्नान। पहले अखाड़े जल तक जाते हैं, सदियों पहले तय क्रम में; फिर जनता।",
-      mr: "पहिले शाही स्नान. आधी आखाडे पाण्यापर्यंत जातात, शतकांपूर्वी ठरलेल्या क्रमाने; मग सामान्य लोक.",
+      en: "The first royal bath, in Nashik and Trimbakeshwar. The akhadas go down to the water first; the public follows.",
+      hi: "पहला शाही स्नान, नाशिक और त्र्यंबकेश्वर में। पहले अखाड़े जल में उतरते हैं, फिर आम श्रद्धालु।",
+      mr: "पहिले शाही स्नान, नाशिक आणि त्र्यंबकेश्वरमध्ये. आधी आखाडे पाण्यात उतरतात, मग सामान्य भाविक.",
     },
-    sourceOrganisation: DGIPR.org,
-    sourceTitle: DGIPR.title,
-    sourceUrl: DGIPR.url,
-    verifiedAt: "2026-08-01",
-    verifiedBy: "editorial",
+    sourceOrganisation: NTKMA_PLAN.org,
+    sourceTitle: NTKMA_PLAN.title,
+    sourceUrl: NTKMA_PLAN.url,
+    ...VERIFIED,
+  },
+  {
+    id: "parva-august-2027",
+    isoDate: "2027-08-12",
+    location: { en: "Nashik", hi: "नाशिक", mr: "नाशिक" },
+    name: {
+      en: "Special Parva Days (Nashik): 12, 17 and 28 August 2027",
+      hi: "विशेष पर्व दिवस (नाशिक): 12, 17 और 28 अगस्त 2027",
+      mr: "विशेष पर्व दिवस (नाशिक): १२, १७ आणि २८ ऑगस्ट २०२७",
+    },
+    status: "official",
+    isAmritSnan: false,
+    sourceOrganisation: JUNE_2025_SCHEDULE.org,
+    sourceTitle: JUNE_2025_SCHEDULE.title,
+    sourceUrl: JUNE_2025_SCHEDULE.url,
+    ...VERIFIED,
   },
   {
     id: "amrit-snan-2",
     isoDate: "2027-08-31",
     location: {
-      en: "Nashik and Trimbakeshwar",
-      hi: "नाशिक और त्र्यंबकेश्वर",
-      mr: "नाशिक आणि त्र्यंबकेश्वर",
+      en: "Ramkund (Nashik) and Kushavarta (Trimbakeshwar)",
+      hi: "रामकुंड (नाशिक) और कुशावर्त (त्र्यंबकेश्वर)",
+      mr: "रामकुंड (नाशिक) आणि कुशावर्त (त्र्यंबकेश्वर)",
     },
     name: {
-      en: "Second Amrit Snan (Mahakumbhasnan)",
-      hi: "द्वितीय अमृत स्नान (महाकुम्भस्नान)",
-      mr: "दुसरे अमृत स्नान (महाकुंभस्नान)",
+      en: "Second Amrit Snan (Mahakumbh Snan)",
+      hi: "द्वितीय अमृत स्नान (महाकुंभ स्नान)",
+      mr: "दुसरे अमृत स्नान (महाकुंभ स्नान)",
     },
     tithi: {
       en: "Shravan Amavasya",
@@ -207,20 +254,19 @@ export const schedule: ScheduleEvent[] = [
     status: "official",
     isAmritSnan: true,
     significance: {
-      en: "The main royal bath. The heaviest crowds of the twenty-one months are expected this morning.",
-      hi: "मुख्य शाही स्नान। इक्कीस महीनों की सबसे अधिक भीड़ इसी सुबह अपेक्षित है।",
-      mr: "मुख्य शाही स्नान. एकवीस महिन्यांतील सर्वात मोठी गर्दी याच सकाळी अपेक्षित आहे.",
+      en: "The second royal bath, also called the Mahakumbh Snan, in Nashik and Trimbakeshwar.",
+      hi: "दूसरा शाही स्नान, जिसे महाकुंभ स्नान भी कहते हैं, नाशिक और त्र्यंबकेश्वर में।",
+      mr: "दुसरे शाही स्नान, ज्याला महाकुंभ स्नानही म्हणतात, नाशिक आणि त्र्यंबकेश्वरमध्ये.",
     },
-    sourceOrganisation: DGIPR.org,
-    sourceTitle: DGIPR.title,
-    sourceUrl: DGIPR.url,
-    verifiedAt: "2026-08-01",
-    verifiedBy: "editorial",
+    sourceOrganisation: NTKMA_PLAN.org,
+    sourceTitle: NTKMA_PLAN.title,
+    sourceUrl: NTKMA_PLAN.url,
+    ...VERIFIED,
   },
   {
     id: "amrit-snan-3-nashik",
     isoDate: "2027-09-11",
-    location: { en: "Ram Kund, Nashik", hi: "रामकुंड, नाशिक", mr: "रामकुंड, नाशिक" },
+    location: { en: "Ramkund, Nashik", hi: "रामकुंड, नाशिक", mr: "रामकुंड, नाशिक" },
     name: {
       en: "Third Amrit Snan: Nashik",
       hi: "तृतीय अमृत स्नान: नाशिक",
@@ -234,15 +280,14 @@ export const schedule: ScheduleEvent[] = [
     status: "official",
     isAmritSnan: true,
     significance: {
-      en: "The concluding royal bath at Ram Kund, where the Vaishnav akhadas bathe. Trimbakeshwar bathes the following day.",
-      hi: "रामकुंड पर अंतिम शाही स्नान, जहाँ वैष्णव अखाड़े स्नान करते हैं। त्र्यंबकेश्वर अगले दिन स्नान करता है।",
-      mr: "रामकुंडावरील अंतिम शाही स्नान, जिथे वैष्णव आखाडे स्नान करतात. त्र्यंबकेश्वर दुसऱ्या दिवशी स्नान करते.",
+      en: "The third royal bath in Nashik, at Ramkund, where the Vaishnav akhadas bathe. Trimbakeshwar bathes the next day.",
+      hi: "नाशिक में तीसरा शाही स्नान, रामकुंड पर, जहाँ वैष्णव अखाड़े स्नान करते हैं। त्र्यंबकेश्वर में अगले दिन स्नान होता है।",
+      mr: "नाशिकमधील तिसरे शाही स्नान, रामकुंडावर, जिथे वैष्णव आखाडे स्नान करतात. त्र्यंबकेश्वरमध्ये दुसऱ्या दिवशी स्नान होते.",
     },
-    sourceOrganisation: DGIPR.org,
-    sourceTitle: DGIPR.title,
-    sourceUrl: DGIPR.url,
-    verifiedAt: "2026-08-01",
-    verifiedBy: "editorial",
+    sourceOrganisation: NTKMA_PLAN.org,
+    sourceTitle: NTKMA_PLAN.title,
+    sourceUrl: NTKMA_PLAN.url,
+    ...VERIFIED,
   },
   {
     id: "amrit-snan-3-trimbak",
@@ -265,43 +310,64 @@ export const schedule: ScheduleEvent[] = [
     status: "official",
     isAmritSnan: true,
     significance: {
-      en: "The Shaivite akhadas bathe at Kushavarta on the day after Nashik. This closes the main bathing season.",
-      hi: "शैव अखाड़े नाशिक के अगले दिन कुशावर्त में स्नान करते हैं। इसी के साथ मुख्य स्नान काल समाप्त होता है।",
-      mr: "शैव आखाडे नाशिकच्या दुसऱ्या दिवशी कुशावर्तात स्नान करतात. यानेच मुख्य स्नानकाळ संपतो.",
+      en: "The Shaiva akhadas take the third royal bath at Kushavarta, the day after Nashik.",
+      hi: "शैव अखाड़े नाशिक के अगले दिन कुशावर्त में तीसरा शाही स्नान करते हैं।",
+      mr: "शैव आखाडे नाशिकच्या दुसऱ्या दिवशी कुशावर्तात तिसरे शाही स्नान करतात.",
     },
-    sourceOrganisation: DGIPR.org,
-    sourceTitle: DGIPR.title,
-    sourceUrl: DGIPR.url,
-    verifiedAt: "2026-08-01",
-    verifiedBy: "editorial",
+    sourceOrganisation: NTKMA_PLAN.org,
+    sourceTitle: NTKMA_PLAN.title,
+    sourceUrl: NTKMA_PLAN.url,
+    ...VERIFIED,
+  },
+  {
+    id: "conclusion-trimbak",
+    isoDate: "2028-07-24",
+    location: { en: "Trimbakeshwar", hi: "त्र्यंबकेश्वर", mr: "त्र्यंबकेश्वर" },
+    name: {
+      en: "Simhastha Samapti (Close): Trimbakeshwar",
+      hi: "सिंहस्थ समाप्ति: त्र्यंबकेश्वर",
+      mr: "सिंहस्थ समाप्ती: त्र्यंबकेश्वर",
+    },
+    status: "official",
+    isAmritSnan: false,
+    sourceOrganisation: NTKMA_PLAN.org,
+    sourceTitle: NTKMA_PLAN.title,
+    sourceUrl: NTKMA_PLAN.url,
+    ...VERIFIED,
   },
   {
     id: "conclusion",
-    isoDate: "2028-07-24",
-    location: {
-      en: "Nashik and Trimbakeshwar",
-      hi: "नाशिक और त्र्यंबकेश्वर",
-      mr: "नाशिक आणि त्र्यंबकेश्वर",
-    },
+    isoDate: "2028-07-29",
+    location: { en: "Nashik", hi: "नाशिक", mr: "नाशिक" },
     name: {
-      en: "Conclusion of the Simhastha",
-      hi: "सिंहस्थ की समाप्ति",
-      mr: "सिंहस्थाची सांगता",
+      en: "Simhastha Samapti (Close): Nashik",
+      hi: "सिंहस्थ समाप्ति: नाशिक",
+      mr: "सिंहस्थ समाप्ती: नाशिक",
     },
     status: "official",
     isAmritSnan: false,
     significance: {
-      en: "The formal close, twenty-one months after the flag went up.",
-      hi: "ध्वजारोहण के इक्कीस महीने बाद औपचारिक समापन।",
-      mr: "ध्वजारोहणानंतर एकवीस महिन्यांनी औपचारिक सांगता.",
+      en: "The formal close of the Simhastha in Nashik. Trimbakeshwar closes five days earlier, on 24 July 2028.",
+      hi: "नाशिक में सिंहस्थ का औपचारिक समापन। त्र्यंबकेश्वर में यह पाँच दिन पहले, 24 जुलाई 2028 को होता है।",
+      mr: "नाशिकमध्ये सिंहस्थाची औपचारिक सांगता. त्र्यंबकेश्वरमध्ये ती पाच दिवस आधी, २४ जुलै २०२८ रोजी होते.",
     },
-    sourceOrganisation: DGIPR.org,
-    sourceTitle: DGIPR.title,
-    sourceUrl: DGIPR.url,
-    verifiedAt: "2026-08-01",
-    verifiedBy: "editorial",
+    sourceOrganisation: NTKMA_PLAN.org,
+    sourceTitle: NTKMA_PLAN.title,
+    sourceUrl: NTKMA_PLAN.url,
+    ...VERIFIED,
   },
 ];
+
+/** The official "Major Mela Period" (NTKMA plan): 107 days of peak activity. */
+export const majorMelaPeriod = {
+  startIso: "2027-06-15",
+  endIso: "2027-09-30",
+  days: 107,
+  sourceUrl: NTKMA_PLAN.url,
+};
+
+/** Source used for schedule facts across the site. */
+export const scheduleSources = { NTKMA_PLAN, JUNE_2025_SCHEDULE };
 
 export function nextAmritSnan(now: Date = new Date()): ScheduleEvent | null {
   const upcoming = schedule
@@ -540,9 +606,9 @@ export const awaiting: AwaitingConfirmation[] = [
   {
     id: "traffic-plan",
     topic: {
-      en: "Traffic plan, road closures, parking zones and shuttle routes",
-      hi: "यातायात योजना, मार्ग बंदी, पार्किंग क्षेत्र और शटल मार्ग",
-      mr: "वाहतूक योजना, रस्ते बंदी, पार्किंग क्षेत्रे आणि शटल मार्ग",
+      en: "Road-closure orders and the ghat-wise crowd plan",
+      hi: "मार्ग बंदी के आदेश और घाटवार भीड़ योजना",
+      mr: "रस्ते बंदीचे आदेश आणि घाटनिहाय गर्दी योजना",
     },
     expectedFrom: {
       en: "Nashik City Police and NTKMA",
@@ -553,9 +619,9 @@ export const awaiting: AwaitingConfirmation[] = [
   {
     id: "railway-plan",
     topic: {
-      en: "Special trains and station-specific arrangements at Nashik Road, Devlali, Odha, Kherwadi and Kasbe Sukene",
-      hi: "विशेष रेलगाड़ियाँ और नाशिक रोड, देवलाली, ओढा, खेरवाडी तथा कसबे सुकेने की स्टेशन-विशेष व्यवस्था",
-      mr: "विशेष रेल्वेगाड्या आणि नाशिक रोड, देवळाली, ओढा, खेरवाडी व कसबे सुकेणे येथील स्थानक-विशिष्ट व्यवस्था",
+      en: "The 2027 special-train timetable",
+      hi: "2027 की विशेष ट्रेनों की समय-सारणी",
+      mr: "२०२७ च्या विशेष गाड्यांचे वेळापत्रक",
     },
     expectedFrom: {
       en: "Central Railway (Bhusawal Division) and Ministry of Railways",
@@ -566,15 +632,70 @@ export const awaiting: AwaitingConfirmation[] = [
   {
     id: "official-accommodation",
     topic: {
-      en: "Officially arranged accommodation, tent-city bookings and pilgrim housing",
-      hi: "आधिकारिक आवास, टेंट-सिटी बुकिंग और तीर्थयात्री आवास",
-      mr: "अधिकृत निवास, तंबू-नगर आरक्षण आणि यात्री निवास",
+      en: "Tent-city prices, the live booking app and homestay registration rules",
+      hi: "टेंट सिटी की कीमतें, चालू बुकिंग ऐप और होमस्टे पंजीकरण नियम",
+      mr: "तंबू नगरीचे दर, सुरू झालेले बुकिंग ॲप आणि होमस्टे नोंदणीचे नियम",
     },
     expectedFrom: {
       en: "NTKMA and Maharashtra Tourism Development Corporation",
       hi: "NTKMA और महाराष्ट्र पर्यटन विकास निगम",
       mr: "NTKMA आणि महाराष्ट्र पर्यटन विकास महामंडळ",
     },
+  },
+  {
+    id: "amrit-snan-timings",
+    topic: {
+      en: "Amrit Snan timings (hours)",
+      hi: "अमृत स्नान का समय (घंटे)",
+      mr: "अमृत स्नानाच्या वेळा (तास)",
+    },
+    expectedFrom: { en: "NTKMA", hi: "NTKMA", mr: "NTKMA" },
+  },
+];
+
+/** Plans that have been officially announced, though details may follow. */
+export interface Announced {
+  id: string;
+  topic: L10n;
+  summary: L10n;
+  sourceLabel: string;
+  sourceUrl: string;
+  /** Site page with the full detail, without language prefix. */
+  more: string;
+}
+
+export const announced: Announced[] = [
+  {
+    id: "parking-shuttle-plan",
+    topic: {
+      en: "Parking and shuttle plan",
+      hi: "पार्किंग और शटल योजना",
+      mr: "पार्किंग आणि शटल योजना",
+    },
+    summary: {
+      en: "46 outer parking hubs and 4,500 MSRTC buses. On Amrit Snan days private vehicles stop at the outer hubs.",
+      hi: "46 बाहरी पार्किंग हब और 4,500 MSRTC बसें। अमृत स्नान के दिन निजी वाहन बाहरी हब पर रुकेंगे।",
+      mr: "४६ बाहेरील पार्किंग हब आणि ४,५०० MSRTC बसेस. अमृत स्नानाच्या दिवशी खासगी वाहने बाहेरील हबवर थांबतील.",
+    },
+    sourceLabel: "NTKMA via Punekar News, 2 Jun 2026",
+    sourceUrl: "https://www.punekarnews.in/46-parking-hubs-5-railway-stations-4500-buses-inside-nashiks-kumbh-mela-2027-transport-blueprint/",
+    more: "/how-to-reach",
+  },
+  {
+    id: "tent-city-sop",
+    topic: {
+      en: "Tent cities and private tent-city rules",
+      hi: "टेंट सिटी और निजी टेंट सिटी के नियम",
+      mr: "तंबू नगरी आणि खासगी तंबू नगरीचे नियम",
+    },
+    summary: {
+      en: "An SOP for private tent cities (29 Sep 2026) and a tent-only booking app have been approved. The app is not live yet.",
+      hi: "निजी टेंट सिटी का SOP (29 सितंबर 2026) और केवल टेंट के लिए बुकिंग ऐप मंज़ूर हुए हैं। ऐप अभी शुरू नहीं हुआ।",
+      mr: "खासगी तंबू नगरीची SOP (२९ सप्टेंबर २०२६) आणि फक्त तंबूंसाठी बुकिंग ॲप मंजूर झाले आहे. ॲप अजून सुरू झालेले नाही.",
+    },
+    sourceLabel: "NTKMA SOP via Free Press Journal",
+    sourceUrl: "https://www.freepressjournal.in/pune/nashik-private-tent-cities-to-expand-accommodation-for-simhastha-2027-pilgrims",
+    more: "/accommodation",
   },
 ];
 

@@ -19,6 +19,7 @@ const amritSnans = schedule
   .sort((a, b) => a.isoDate.localeCompare(b.isoDate));
 const opening = schedule.find((e) => e.id === "dhwajarohan");
 const closing = schedule.find((e) => e.id === "conclusion");
+const closingTrimbak = schedule.find((e) => e.id === "conclusion-trimbak");
 
 function formatDate(iso: string, locale: Locale) {
   return new Date(`${iso}T00:00:00+05:30`).toLocaleDateString(DATE_LOCALE[locale], {
@@ -91,9 +92,9 @@ export function DatesFaq() {
         mr: "नाशिक कुंभमेळा २०२७ कधी आहे?",
       },
       a: {
-        en: `It starts with flag hoisting (Dhwajarohan) on ${d(opening?.isoDate)} and ends on ${d(closing?.isoDate)}. The main bathing days, the Amrit Snans, are in August and September 2027.`,
-        hi: `यह ${d(opening?.isoDate)} को ध्वजारोहण से शुरू होता है और ${d(closing?.isoDate)} को समाप्त होता है। मुख्य स्नान, यानी अमृत स्नान, अगस्त और सितंबर 2027 में हैं।`,
-        mr: `तो ${d(opening?.isoDate)} रोजी ध्वजारोहणाने सुरू होतो आणि ${d(closing?.isoDate)} रोजी संपतो. मुख्य स्नाने, म्हणजे अमृत स्नान, ऑगस्ट आणि सप्टेंबर २०२७ मध्ये आहेत.`,
+        en: `It starts with flag hoisting (Dhwajarohan) on ${d(opening?.isoDate)} and closes on ${d(closing?.isoDate)} in Nashik and ${d(closingTrimbak?.isoDate)} in Trimbakeshwar. The main bathing days, the Amrit Snans, are in August and September 2027.`,
+        hi: `यह ${d(opening?.isoDate)} को ध्वजारोहण से शुरू होता है और नाशिक में ${d(closing?.isoDate)} तथा त्र्यंबकेश्वर में ${d(closingTrimbak?.isoDate)} को समाप्त होता है। मुख्य स्नान, यानी अमृत स्नान, अगस्त और सितंबर 2027 में हैं।`,
+        mr: `तो ${d(opening?.isoDate)} रोजी ध्वजारोहणाने सुरू होतो आणि नाशिकमध्ये ${d(closing?.isoDate)} व त्र्यंबकेश्वरमध्ये ${d(closingTrimbak?.isoDate)} रोजी संपतो. मुख्य स्नाने, म्हणजे अमृत स्नान, ऑगस्ट आणि सप्टेंबर २०२७ मध्ये आहेत.`,
       },
     },
     {
