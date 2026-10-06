@@ -45,7 +45,8 @@ language; the language switcher navigates to the same page under another
 prefix. Pages link to each other with `hreflang`, and the sitemap lists every
 language version.
 
-- Old unprefixed URLs (`/dates`, `/`) 301-redirect to `/mr/...` (`src/middleware.ts`).
+- Old unprefixed URLs (`/dates`, `/`) 301-redirect in one hop to `/en/...`, and the
+  bare domain and `kumbh.si` 301 to the same page on www (`src/middleware.ts`).
 - Use `Link` from `@/components/LocaleLink` for internal links; it adds the prefix.
 - Page titles and descriptions per language live in `src/i18n/seoCopy.ts`.
 - Build page metadata with `sectionMetadata()` / `pageMetadata()` from `src/lib/seo.ts`.
