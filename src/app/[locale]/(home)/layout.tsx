@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { SEO_COPY } from "@/i18n/seoCopy";
 import type { Locale } from "@/i18n/translations";
 import { pageMetadata } from "@/lib/seo";
+import EventsSchema from "@/components/EventsSchema";
 
 type Params = { params: { locale: Locale } };
 
@@ -20,5 +21,10 @@ export function generateMetadata({ params }: Params): Metadata {
 }
 
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <EventsSchema />
+      {children}
+    </>
+  );
 }

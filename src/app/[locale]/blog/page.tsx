@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "@/components/LocaleLink";
+import JsonLd from "@/components/JsonLd";
+import { sectionBreadcrumb } from "@/lib/seo";
 import {
   ArrowRight,
   Calendar,
@@ -96,6 +98,7 @@ export default function BlogPage() {
 
   return (
     <>
+      <JsonLd data={sectionBreadcrumb(locale, "blog", "/blog")} />
       {/* ════════════════════ HERO BANNER ════════════════════ */}
       <section className="section-dark relative overflow-hidden py-32 pt-40">
         <div className="absolute inset-0 temple-pattern opacity-[0.03]" />

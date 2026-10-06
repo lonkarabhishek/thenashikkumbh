@@ -114,6 +114,7 @@ export function sectionMetadata(
 
 /** Maps a photo path such as "/images/gallery/kumbh-2.webp" to its 1200x630 crop. */
 export function ogImageFor(photo: string): string {
+  if (photo === DEFAULT_OG_IMAGE || photo.startsWith("/images/og/")) return photo;
   const name = photo.split("/").pop()?.replace(/\.(webp|jpe?g|png)$/, "");
   return name ? `/images/og/${name}.jpg` : DEFAULT_OG_IMAGE;
 }

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import { getArticleBySlug, getAllSlugs } from "@/data/blogData";
+import { NEWS_AUTHOR, getArticleBySlug, getAllSlugs } from "@/data/blogData";
+import { getPhoto, isPhotoAvailable } from "@/data/photos";
 import JsonLd from "@/components/JsonLd";
 import { LOCALES } from "@/i18n/locales";
 import { SEO_COPY } from "@/i18n/seoCopy";
@@ -38,7 +39,7 @@ export function generateMetadata({ params }: Omit<Props, "children">): Metadata 
     keywords: ["Kumbh Mela", "Nashik", article.category, "Simhastha 2027", "Godavari"],
     type: "article",
     publishedTime: article.date,
-    authors: [article.source],
+    authors: [NEWS_AUTHOR.name],
   });
 }
 
@@ -54,15 +55,37 @@ export default function BlogSlugLayout({ params, children }: Props) {
   if (!article) return children;
 
   const url = localeUrl(locale, `/blog/${article.slug}`);
+  const photo = article.photoId && isPhotoAvailable(article.photoId) ? getPhoto(article.photoId) : undefined;
+  const photoImage = photo
+    ? [
+        {
+          "@type": "ImageObject",
+          url: `${SITE_URL}${photo.file}`,
+          caption: photo.caption,
+          creator: { "@type": "Person", name: photo.author },
+          creditText: `${photo.author} / Wikimedia Commons`,
+          license: photo.licenseUrl,
+          acquireLicensePage: photo.sourcePage,
+        },
+      ]
+    : [];
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
     headline: article.title[locale],
     description: article.summary[locale],
-    image: [`${SITE_URL}${ogImageFor(article.image)}`],
+    image: [`${SITE_URL}${ogImageFor(article.image)}`, ...photoImage],
     datePublished: article.date,
-    dateModified: article.date,
-    author: { "@type": "Organization", name: article.source },
+    dateModified: article.updated ?? article.date,
+    author: {
+      "@type": "Organization",
+      name: NEWS_AUTHOR.name,
+      url: localeUrl(locale, NEWS_AUTHOR.path),
+    },
+    // The original reporting or official document, credited as the source.
+    ...(article.sources?.length
+      ? { citation: article.sources.map((src) => ({ "@type": "CreativeWork", name: src.title, url: src.url, publisher: src.publisher })) }
+      : {}),
     publisher: {
       "@type": "Organization",
       name: SITE_NAME,
