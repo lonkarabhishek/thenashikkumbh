@@ -29,6 +29,19 @@ interface Entry {
 
 const ENTRIES: Entry[] = [
   {
+    date: "2026-10-06",
+    title: "Schedule corrections, 13 sourced news posts, new pilgrim pages",
+    body: [
+      "Corrected the first Amrit Snan tithi on the home and dates pages: 2 August 2027 is Ashadh Somvati Amavasya; 31 August 2027 is Shravan Amavasya.",
+      "Corrected the close of the Simhastha: 29 July 2028 in Nashik and 24 July 2028 in Trimbakeshwar (NTKMA Kumbh Mela Plan, June 2026). The site previously gave 24 July 2028 for both.",
+      "Dhwajarohan details updated: 31 October 2026 at 12:02 PM, at the same moment at Ramkund and Kushavarta. Added the Sadhugram flag hoisting (24 July 2027), the special Nashik parva days (12, 17 and 28 August 2027) and the Major Mela Period (15 June to 30 September 2027). Nagar Pradakshina is no longer labelled a Parva Snan.",
+      "Removed the home-page line saying the SOS button finds the nearest exit route; that feature was removed on 2 August.",
+      "Budget: ₹22,425.39 crore (approved 13 March 2026, PIB) and ₹34,732 crore total outlay (August 2026) replace ₹25,055 crore as the current figure. The Authority Act, 2025 is recorded as in force. Ring-road and railway posts corrected; unsupported railway claims removed.",
+      "Removed unsourced hotel, dharamshala and tent prices from the guide. Added 13 news posts with linked sources and new pages for Dhwajarohan, Trimbakeshwar, how to reach, accommodation and the Parva Snan calendar.",
+      "Old posts now show when the news was originally announced. Bylines now read The Nashik Kumbh Desk instead of a government office.",
+    ],
+  },
+  {
     date: "2026-08-05",
     title: "Content-integrity gate, nav around the pilgrim journey, honest businesses page",
     body: [
