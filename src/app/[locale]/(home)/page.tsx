@@ -37,6 +37,12 @@ import { BorderStrip, Diya, Kalash, Lotus, Trishul } from "@/components/art/Moti
 const FIRST_SNAN = new Date("2027-08-02T04:00:00+05:30");
 
 const HOME_COPY = {
+  h1Main: { en: "Nashik Kumbh Mela 2027", hi: "नाशिक कुंभ मेला 2027", mr: "नाशिक कुंभमेळा 2027" },
+  h1Sub: {
+    en: "(Simhastha): Dates, Amrit Snan, News & Guide",
+    hi: "(सिंहस्थ): तिथियाँ, अमृत स्नान, समाचार और गाइड",
+    mr: "(सिंहस्थ): तारखा, अमृत स्नान, बातम्या आणि मार्गदर्शक",
+  },
   heroKicker: {
     en: "Simhastha Kumbh Mela · Nashik & Trimbakeshwar",
     hi: "सिंहस्थ कुंभ मेला · नाशिक व त्र्यंबकेश्वर",
@@ -154,7 +160,12 @@ export default function Home() {
             <p className="mt-6 text-eyebrow font-semibold uppercase text-saffron-700">
               {t(HOME_COPY.heroKicker)}
             </p>
-            <h1 className="mt-5 text-display text-balance">{t(translations.hero.title)}</h1>
+            <h1 className="mt-5 text-display text-balance">
+              {t(HOME_COPY.h1Main)}
+              <span className="mt-3 block font-sans text-lg font-semibold tracking-normal text-temple-600 sm:text-xl">
+                {t(HOME_COPY.h1Sub)}
+              </span>
+            </h1>
           </Reveal>
 
           <Reveal delay={70}>

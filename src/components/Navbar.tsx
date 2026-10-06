@@ -44,7 +44,11 @@ const GROUPS = [
     links: [
       { href: "/about", label: translations.nav.about },
       { href: "/dates", label: translations.nav.dates },
+      { href: "/parva-snan-calendar", label: { en: "Parva Snan calendar", hi: "पर्व स्नान कैलेंडर", mr: "पर्व स्नान दिनदर्शिका" } },
+      { href: "/dhwajarohan-2026", label: { en: "Dhwajarohan 31 Oct", hi: "ध्वजारोहण 31 अक्टूबर", mr: "ध्वजारोहण ३१ ऑक्टोबर" } },
       { href: "/guide", label: translations.nav.guide },
+      { href: "/how-to-reach", label: { en: "How to reach", hi: "कैसे पहुँचें", mr: "कसे पोहोचाल" } },
+      { href: "/accommodation", label: { en: "Where to stay", hi: "कहाँ ठहरें", mr: "कुठे राहाल" } },
     ],
   },
   {
@@ -55,6 +59,7 @@ const GROUPS = [
     },
     links: [
       { href: "/ghats", label: translations.nav.ghats },
+      { href: "/trimbakeshwar-kumbh-2027", label: { en: "Trimbakeshwar Kumbh 2027", hi: "त्र्यंबकेश्वर कुंभ 2027", mr: "त्र्यंबकेश्वर कुंभ 2027" } },
       { href: "/events", label: translations.nav.events },
       { href: "/naga-sadhus", label: translations.nav.nagaSadhus },
       { href: "/yatra", label: navExtra.yatra },

@@ -33,10 +33,11 @@ export type PageKey =
   | "naga-sadhus"
   | "yatra";
 
+// Short brand suffix so page titles are not cut off in search results.
 export const TITLE_TEMPLATE: Record<Locale, string> = {
-  en: "%s | Nashik Kumbh Mela 2027",
-  mr: "%s | नाशिक कुंभमेळा २०२७",
-  hi: "%s | नाशिक कुंभ मेला 2027",
+  en: "%s | The Nashik Kumbh",
+  mr: "%s | द नाशिक कुंभ",
+  hi: "%s | द नाशिक कुंभ",
 };
 
 /** Suffix for a Yatra trail page title, after the trail's own name. */
@@ -49,21 +50,21 @@ export const TRAIL_TITLE_SUFFIX: Record<Locale, string> = {
 export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
   home: {
     en: {
-      title: "Nashik Kumbh Mela 2027: Dates, Shahi Snan and Pilgrim Guide",
+      title: "Nashik Kumbh Mela 2027 (Simhastha): Dates, Shahi Snan, News & Guide",
       description:
-        "Nashik (Nasik) Kumbh Mela 2027 guide: Shahi Snan (Amrit Snan) dates, ghats, how to reach, and emergency numbers. Simple, checked information for pilgrims.",
+        "Nashik Kumbh 2027: Dhwajarohan 31 Oct 2026, Amrit Snan 2 Aug, 31 Aug, 11 and 12 Sep 2027. Dates, ghats, travel, stay and sourced news.",
       crumb: "Home",
     },
     mr: {
-      title: "नाशिक कुंभमेळा २०२७ कधी आहे? तारखा, शाही स्नान आणि मार्गदर्शिका",
+      title: "नाशिक कुंभमेळा 2027 (सिंहस्थ): तारखा, अमृत स्नान, बातम्या आणि मार्गदर्शक",
       description:
-        "नाशिक कुंभमेळा २०२७: शाही स्नान (अमृत स्नान) तारखा, घाट, कसे पोहोचाल आणि आपत्कालीन क्रमांक. भाविकांसाठी तपासलेली, सोपी माहिती.",
+        "नाशिक कुंभमेळा 2027: ध्वजारोहण ३१ ऑक्टोबर २०२६, अमृत स्नान २ ऑगस्ट, ३१ ऑगस्ट, ११ व १२ सप्टेंबर २०२७. तारखा, घाट, प्रवास, निवास आणि बातम्या.",
       crumb: "मुख्यपृष्ठ",
     },
     hi: {
-      title: "नाशिक कुंभ मेला 2027 कब है? तिथियाँ, शाही स्नान और गाइड",
+      title: "नाशिक कुंभ मेला 2027 (सिंहस्थ): तिथियाँ, अमृत स्नान, समाचार और गाइड",
       description:
-        "नाशिक कुंभ मेला 2027: शाही स्नान (अमृत स्नान) की तिथियाँ, घाट, कैसे पहुँचें और आपातकालीन नंबर। श्रद्धालुओं के लिए जाँची हुई, आसान जानकारी।",
+        "नाशिक कुंभ 2027: ध्वजारोहण 31 अक्टूबर 2026, अमृत स्नान 2 अगस्त, 31 अगस्त, 11 और 12 सितंबर 2027। तिथियाँ, घाट, यात्रा, ठहरना और समाचार।",
       crumb: "होम",
     },
   },
@@ -71,7 +72,7 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
     en: {
       title: "About Kumbh Mela - History, Origins & Spiritual Significance",
       description:
-        "Discover the ancient origins of Kumbh Mela, the Samudra Manthan legend, and why Nashik is one of four sacred cities chosen for this divine gathering at the Godavari River.",
+        "The ancient origins of Kumbh Mela, the Samudra Manthan story, and why Nashik on the Godavari is one of its four sacred cities.",
       crumb: "About",
     },
     mr: {
@@ -91,7 +92,7 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
     en: {
       title: "Kumbh Mela Blog - Latest News, Updates and Stories from Nashik",
       description:
-        "Stay updated with the latest news and stories about Nashik Kumbh Mela 2027. Read about infrastructure developments, government plans, cultural events, and pilgrim guides for Simhastha Kumbh at the Godavari River.",
+        "Latest Nashik Kumbh Mela 2027 news: dates, works, budget, safety, stay and travel. Every story is sourced and dated.",
       crumb: "Blog",
     },
     mr: {
@@ -109,21 +110,21 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
   },
   dates: {
     en: {
-      title: "Nashik Kumbh 2027 Shahi Snan Dates (Amrit Snan) | Full Schedule",
+      title: "Nashik Kumbh 2027 Shahi (Amrit) Snan Dates: 2 Aug, 31 Aug, 11 and 12 Sep",
       description:
-        "Shahi Snan (Amrit Snan) dates for Nashik Kumbh 2027: 2 Aug, 31 Aug, 11 Sep (Nashik) and 12 Sep (Trimbakeshwar). Which ghat, what to expect, and answers to common questions.",
+        "Official Nashik Kumbh 2027 dates: Dhwajarohan 31 Oct 2026 at 12:02 PM; Amrit (Shahi) Snan 2 Aug, 31 Aug, 11 Sep (Nashik), 12 Sep (Trimbak).",
       crumb: "Important Dates",
     },
     mr: {
-      title: "नाशिक कुंभमेळा २०२७ शाही स्नान तारखा (अमृत स्नान) | संपूर्ण वेळापत्रक",
+      title: "नाशिक कुंभमेळा 2027 शाही (अमृत) स्नान तारखा: २ ऑगस्ट, ३१ ऑगस्ट, ११ व १२ सप्टेंबर",
       description:
-        "नाशिक कुंभमेळा २०२७ च्या शाही स्नान (अमृत स्नान) तारखा: २ ऑगस्ट, ३१ ऑगस्ट, ११ सप्टेंबर (नाशिक) आणि १२ सप्टेंबर (त्र्यंबकेश्वर). कोणता घाट, काय अपेक्षित आहे आणि नेहमीच्या प्रश्नांची उत्तरे.",
+        "नाशिक कुंभमेळा 2027 तारखा: ध्वजारोहण ३१ ऑक्टोबर २०२६, दुपारी १२:०२; अमृत (शाही) स्नान २ ऑगस्ट, ३१ ऑगस्ट, ११ सप्टेंबर (नाशिक), १२ सप्टेंबर (त्र्यंबक).",
       crumb: "महत्त्वाच्या तारखा",
     },
     hi: {
-      title: "नाशिक कुंभ 2027 शाही स्नान तिथियाँ (अमृत स्नान) | पूरा कार्यक्रम",
+      title: "नाशिक कुंभ 2027 शाही (अमृत) स्नान तिथियाँ: 2 अगस्त, 31 अगस्त, 11 और 12 सितंबर",
       description:
-        "नाशिक कुंभ 2027 की शाही स्नान (अमृत स्नान) तिथियाँ: 2 अगस्त, 31 अगस्त, 11 सितंबर (नाशिक) और 12 सितंबर (त्र्यंबकेश्वर)। कौन-सा घाट, क्या उम्मीद करें और आम सवालों के जवाब।",
+        "नाशिक कुंभ 2027 की आधिकारिक तिथियाँ: ध्वजारोहण 31 अक्टूबर 2026, दोपहर 12:02; अमृत (शाही) स्नान 2 अगस्त, 31 अगस्त, 11 सितंबर (नाशिक), 12 सितंबर (त्र्यंबक)।",
       crumb: "महत्वपूर्ण तिथियाँ",
     },
   },
@@ -171,7 +172,7 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
     en: {
       title: "Kumbh Mela Games - Quiz, Word Scramble and Fun Activities",
       description:
-        "Play fun and educational games about Nashik Kumbh Mela 2027. Test your knowledge with our Kumbh quiz, word scramble, and learn about sacred traditions, ghats, and rituals through interactive activities.",
+        "Fun, simple games about Nashik Kumbh Mela 2027: a Kumbh quiz and word scramble on traditions, ghats and rituals.",
       crumb: "Games",
     },
     mr: {
@@ -211,19 +212,19 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
     en: {
       title: "Pilgrim Guide - How to Reach, Stay & Prepare for Kumbh Mela",
       description:
-        "Complete pilgrim guide for Nashik Kumbh Mela 2027 - how to reach by train, flight, and road, accommodation options, what to carry, do's and don'ts, and essential travel tips.",
+        "Nashik Kumbh Mela 2027 pilgrim guide: how to reach by train, air and road, where to stay, what to carry, and safety tips.",
       crumb: "Pilgrim Guide",
     },
     mr: {
       title: "भाविक मार्गदर्शिका: कसे पोहोचाल, कुठे राहाल, काय तयारी कराल",
       description:
-        "नाशिक कुंभमेळा २०२७ साठी संपूर्ण मार्गदर्शिका: रेल्वे, विमान आणि रस्त्याने कसे पोहोचाल, निवासाचे पर्याय, सोबत काय न्याल, काय करावे व काय टाळावे आणि प्रवासाच्या आवश्यक सूचना.",
+        "नाशिक कुंभमेळा 2027 भाविक मार्गदर्शिका: रेल्वे, विमान, रस्त्याने कसे पोहोचाल, कुठे राहाल, काय न्याल आणि सुरक्षेच्या सूचना.",
       crumb: "भाविक मार्गदर्शिका",
     },
     hi: {
       title: "तीर्थयात्री गाइड: कैसे पहुँचें, कहाँ ठहरें, कैसे तैयारी करें",
       description:
-        "नाशिक कुंभ मेला 2027 के लिए संपूर्ण गाइड: ट्रेन, हवाई जहाज़ और सड़क से कैसे पहुँचें, ठहरने के विकल्प, क्या साथ ले जाएँ, क्या करें और क्या न करें, और यात्रा के ज़रूरी सुझाव।",
+        "नाशिक कुंभ मेला 2027 तीर्थयात्री गाइड: ट्रेन, हवाई और सड़क से कैसे पहुँचें, कहाँ ठहरें, क्या ले जाएँ और सुरक्षा सुझाव।",
       crumb: "तीर्थयात्री गाइड",
     },
   },
@@ -231,19 +232,19 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
     en: {
       title: "Kumbh Run - Sacred Pilgrimage Runner Game",
       description:
-        "Play Kumbh Run, a fun endless runner game set in the sacred places of Nashik Kumbh Mela. Run through Ram Kund, Panchavati, Trimbakeshwar, and other holy sites while learning about each landmark.",
+        "Kumbh Run: a fun runner game through Ram Kund, Panchavati, Trimbakeshwar and other holy places of the Nashik Kumbh.",
       crumb: "Kumbh Run",
     },
     mr: {
       title: "कुंभ रन: तीर्थक्षेत्रांतून धावण्याचा खेळ",
       description:
-        "कुंभ रन हा नाशिक कुंभमेळ्याच्या पवित्र स्थळांवर आधारित धावण्याचा खेळ आहे. रामकुंड, पंचवटी, त्र्यंबकेश्वर आणि इतर तीर्थस्थळांमधून धावा आणि प्रत्येक स्थळाबद्दल जाणून घ्या.",
+        "कुंभ रन: रामकुंड, पंचवटी, त्र्यंबकेश्वर आणि नाशिक कुंभातील इतर पवित्र स्थळांमधून धावण्याचा मजेदार खेळ.",
       crumb: "कुंभ रन",
     },
     hi: {
       title: "कुंभ रन: तीर्थ स्थलों से होकर दौड़ने का खेल",
       description:
-        "कुंभ रन नाशिक कुंभ मेले के पवित्र स्थलों पर आधारित एक दौड़ने वाला खेल है। रामकुंड, पंचवटी, त्र्यंबकेश्वर और अन्य तीर्थ स्थलों से दौड़ते हुए हर स्थल के बारे में जानिए।",
+        "कुंभ रन: रामकुंड, पंचवटी, त्र्यंबकेश्वर और नाशिक कुंभ के दूसरे पवित्र स्थलों से होकर दौड़ने का मज़ेदार खेल।",
       crumb: "कुंभ रन",
     },
   },
@@ -251,7 +252,7 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
     en: {
       title: "Naga Sadhus - Warrior Ascetics of Kumbh Mela",
       description:
-        "Learn about the Naga Sadhus, the ancient warrior-monks of Hindu tradition. Their history, sacred attire, Akhada orders, and their powerful role at Nashik Kumbh Mela 2027.",
+        "Who the Naga Sadhus are: history, sacred attire, akhada orders and their role at the Nashik Kumbh Mela 2027.",
       crumb: "Naga Sadhus",
     },
     mr: {
@@ -271,19 +272,19 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
     en: {
       title: "Yatra - Free Walking Audio Guide to Nashik Kumbh Mela",
       description:
-        "Free self-guided walking audio tours of Nashik's sacred quarter, in Marathi, Hindi and English. Hear the story of Ram Kund, Kapaleshwar, Kalaram Mandir, Trimbakeshwar and the akhadas as you reach each place.",
+        "Free walking audio tours of Nashik's sacred quarter in Marathi, Hindi and English: Ram Kund, Kalaram, Trimbakeshwar and more.",
       crumb: "Yatra Audio Guide",
     },
     mr: {
       title: "यात्रा: नाशिक कुंभमेळ्यासाठी मोफत ऑडिओ पदयात्रा मार्गदर्शक",
       description:
-        "नाशिकच्या पवित्र परिसराच्या मोफत, स्वयं-मार्गदर्शित ऑडिओ पदयात्रा, मराठी, हिंदी आणि इंग्रजीत. रामकुंड, कपालेश्वर, काळाराम मंदिर, त्र्यंबकेश्वर आणि आखाड्यांची कथा प्रत्येक ठिकाणी पोहोचताच ऐका.",
+        "नाशिकच्या पवित्र परिसराच्या मोफत ऑडिओ पदयात्रा, मराठी, हिंदी आणि इंग्रजीत: रामकुंड, काळाराम, त्र्यंबकेश्वर आणि बरेच काही.",
       crumb: "यात्रा ऑडिओ मार्गदर्शक",
     },
     hi: {
       title: "यात्रा: नाशिक कुंभ मेले के लिए मुफ़्त ऑडियो वॉकिंग गाइड",
       description:
-        "नाशिक के पवित्र क्षेत्र के मुफ़्त, स्व-निर्देशित ऑडियो वॉकिंग टूर, मराठी, हिंदी और अंग्रेज़ी में। रामकुंड, कपालेश्वर, कालाराम मंदिर, त्र्यंबकेश्वर और अखाड़ों की कथा हर स्थान पर पहुँचते ही सुनिए।",
+        "नाशिक के पवित्र क्षेत्र के मुफ़्त ऑडियो वॉकिंग टूर, मराठी, हिंदी और अंग्रेज़ी में: रामकुंड, कालाराम, त्र्यंबकेश्वर और भी बहुत कुछ।",
       crumb: "यात्रा ऑडियो गाइड",
     },
   },

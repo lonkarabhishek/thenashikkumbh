@@ -366,6 +366,9 @@ export const majorMelaPeriod = {
   sourceUrl: NTKMA_PLAN.url,
 };
 
+/** Date the schedule was last checked against official sources. */
+export const scheduleUpdated = "2026-10-06";
+
 /** Source used for schedule facts across the site. */
 export const scheduleSources = { NTKMA_PLAN, JUNE_2025_SCHEDULE };
 

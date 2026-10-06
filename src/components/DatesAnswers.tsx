@@ -2,7 +2,7 @@
 
 import { CalendarDays } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
-import { schedule } from "@/data/verified";
+import { schedule, scheduleUpdated } from "@/data/verified";
 import type { Locale } from "@/i18n/translations";
 
 /**
@@ -34,13 +34,14 @@ const COPY = {
   quickTitle: {
     en: "Shahi Snan (Amrit Snan) dates at a glance",
     hi: "शाही स्नान (अमृत स्नान) की तिथियाँ एक नज़र में",
-    mr: "शाही स्नान (अमृत स्नान) तारखा एका नजरेत",
+    mr: "नाशिक कुंभमेळा कधी आहे? शाही स्नान (अमृत स्नान) तारखा",
   },
   quickNote: {
     en: "Shahi Snan is now officially called Amrit Snan. It is the same royal bath.",
     hi: "शाही स्नान को अब आधिकारिक रूप से अमृत स्नान कहा जाता है। यह वही शाही स्नान है।",
     mr: "शाही स्नानाला आता अधिकृतपणे अमृत स्नान म्हणतात. हे तेच शाही स्नान आहे.",
   },
+  updated: { en: "Last updated", hi: "अंतिम अपडेट", mr: "अखेरचे अद्ययावत" },
   faqTitle: {
     en: "Common questions about the dates",
     hi: "तिथियों के बारे में आम सवाल",
@@ -74,6 +75,9 @@ export function DatesQuickAnswer() {
           ))}
         </ol>
         <p className="mt-4 text-sm text-temple-500">{t(COPY.quickNote)}</p>
+        <p className="mt-2 text-xs text-temple-400">
+          {t(COPY.updated)}: <time dateTime={scheduleUpdated}>{formatDate(scheduleUpdated, locale)}</time>
+        </p>
       </div>
     </section>
   );

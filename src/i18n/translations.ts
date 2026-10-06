@@ -554,7 +554,7 @@ export const translations = {
 
   // ─── DATES PAGE ──────────────────────────────────────────
   datesPage: {
-    heroTitle: { en: "Nashik Kumbh 2027 Shahi Snan Dates", hi: "नाशिक कुंभ 2027 शाही स्नान तिथियाँ", mr: "नाशिक कुंभमेळा २०२७ शाही स्नान तारखा" },
+    heroTitle: { en: "Nashik Kumbh 2027 Shahi (Amrit) Snan Dates", hi: "नाशिक कुंभ 2027 शाही (अमृत) स्नान तिथियाँ", mr: "नाशिक कुंभमेळा 2027 शाही (अमृत) स्नान तारखा" },
     heroSubtitle: { en: "Amrit Snan (Shahi Snan) schedule for Nashik and Trimbakeshwar", hi: "नाशिक और त्र्यंबकेश्वर का अमृत स्नान (शाही स्नान) कार्यक्रम", mr: "नाशिक आणि त्र्यंबकेश्वरचे अमृत स्नान (शाही स्नान) वेळापत्रक" },
     periodLabel: { en: "Oct 2026 – Jul 2028 · baths Aug–Sep 2027", hi: "अक्टूबर 2026 – जुलाई 2028 · स्नान अगस्त–सितंबर 2027", mr: "ऑक्टोबर २०२६ – जुलै २०२८ · स्नाने ऑगस्ट–सप्टेंबर २०२७" },
     whySacredTitle: { en: "Why These Dates Are Sacred", hi: "ये तिथियाँ पवित्र क्यों हैं", mr: "या तिथी पवित्र का आहेत" },
