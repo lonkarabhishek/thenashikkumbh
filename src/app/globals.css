@@ -517,3 +517,15 @@
     transform: none;
   }
 }
+
+/* Links inside news posts and info pages (RichText). */
+.rich-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.rich-text-dark .rich-link {
+  color: #dfcc78;
+}
+.rich-text-light .rich-link {
+  color: #a0522d;
+}

@@ -3,9 +3,16 @@
 import { useEffect, useRef, useState, type ElementType, type ReactNode } from "react";
 
 /**
- * Fades a block in the first time it enters the viewport. Uses the `.reveal`
+ * Fades a block in the first time it scrolls into view. Uses the `.reveal`
  * classes in globals.css, which are neutralised under prefers-reduced-motion.
+ *
+ * Blocks are rendered visible in the HTML. Only blocks that start below the
+ * fold are hidden (after hydration) and faded in on scroll, so above-the-fold
+ * text such as the hero paints immediately instead of waiting for JS, which
+ * was the main cause of the slow mobile LCP.
  */
+type State = "static" | "hidden" | "visible";
+
 export default function Reveal({
   children,
   as: Tag = "div",
@@ -18,21 +25,19 @@ export default function Reveal({
   className?: string;
 }) {
   const ref = useRef<HTMLElement>(null);
-  const [visible, setVisible] = useState(false);
+  const [state, setState] = useState<State>("static");
 
   useEffect(() => {
     const node = ref.current;
-    if (!node) return;
+    if (!node || typeof IntersectionObserver === "undefined") return;
+    // Already on screen at load: leave it alone, no animation.
+    if (node.getBoundingClientRect().top < window.innerHeight) return;
 
-    if (typeof IntersectionObserver === "undefined") {
-      setVisible(true);
-      return;
-    }
-
+    setState("hidden");
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setVisible(true);
+          setState("visible");
           observer.disconnect();
         }
       },
@@ -43,11 +48,13 @@ export default function Reveal({
     return () => observer.disconnect();
   }, []);
 
+  const motion = state === "static" ? "" : `reveal ${state === "visible" ? "is-visible" : ""}`;
+
   return (
     <Tag
       ref={ref}
-      className={`reveal ${visible ? "is-visible" : ""} ${className}`}
-      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+      className={`${motion} ${className}`}
+      style={delay && state !== "static" ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}
     </Tag>

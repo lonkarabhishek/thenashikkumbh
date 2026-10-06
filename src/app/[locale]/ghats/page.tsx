@@ -14,6 +14,7 @@ import {
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { ghatsI18n } from "@/data/siteDataI18n";
+import NewGhats2027 from "@/components/NewGhats2027";
 
 /* ───────────────── Warm gradient palettes for each ghat ───────────────────── */
 
@@ -195,9 +196,10 @@ export default function GhatsPage() {
                         {ghatDevanagari[index % ghatDevanagari.length]}
                       </div>
                       <Waves className="w-10 h-10 mb-3" style={{ color: "rgba(201,162,39,0.6)" }} />
-                      <h3 className="text-3xl md:text-4xl font-heading font-bold text-cream-100 text-center drop-shadow-lg">
+                      {/* Decorative repeat of the name; the real heading is below. */}
+                      <p aria-hidden="true" className="text-3xl md:text-4xl font-heading font-bold text-cream-100 text-center drop-shadow-lg">
                         {t(ghat.name)}
-                      </h3>
+                      </p>
                       <p className="text-sm mt-2 tracking-[0.2em] uppercase" style={{ color: "rgba(201,162,39,0.7)" }}>
                         {t(ghat.subtitle)}
                       </p>
@@ -311,6 +313,8 @@ export default function GhatsPage() {
       })}
 
       {/* ════════════ (d) HOW TO REACH THE GHATS ═════════════════════════════ */}
+      <NewGhats2027 />
+
       <section className="relative py-20 md:py-28 bg-cream-50">
         <div className="absolute inset-0 mandala-bg opacity-20" />
 

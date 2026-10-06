@@ -16,6 +16,9 @@ const COLUMNS = [
     links: [
       { href: "/dates", label: translations.nav.dates },
       { href: "/guide", label: translations.nav.guide },
+      { href: "/how-to-reach", label: { en: "How to reach", hi: "कैसे पहुँचें", mr: "कसे पोहोचाल" } },
+      { href: "/accommodation", label: { en: "Where to stay", hi: "कहाँ ठहरें", mr: "कुठे राहाल" } },
+      { href: "/parva-snan-calendar", label: { en: "Parva Snan calendar", hi: "पर्व स्नान कैलेंडर", mr: "पर्व स्नान दिनदर्शिका" } },
       { href: "/businesses", label: translations.nav.businesses },
     ],
   },
@@ -24,6 +27,7 @@ const COLUMNS = [
     links: [
       { href: "/yatra", label: navExtra.yatra },
       { href: "/ghats", label: translations.nav.ghats },
+      { href: "/trimbakeshwar-kumbh-2027", label: { en: "Trimbakeshwar Kumbh 2027", hi: "त्र्यंबकेश्वर कुंभ 2027", mr: "त्र्यंबकेश्वर कुंभ 2027" } },
       { href: "/events", label: translations.nav.events },
       { href: "/gallery", label: translations.nav.gallery },
     ],

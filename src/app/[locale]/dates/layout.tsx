@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import type { Locale } from "@/i18n/translations";
 import { sectionBreadcrumb, sectionMetadata } from "@/lib/seo";
+import EventsSchema from "@/components/EventsSchema";
+import { datesFaqs } from "@/data/datesFaq";
 
 type Params = { params: { locale: Locale } };
 
@@ -31,6 +33,18 @@ export default function DatesLayout({
   return (
     <>
       <JsonLd data={sectionBreadcrumb(params.locale, "dates", "/dates")} />
+      <EventsSchema />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: datesFaqs(params.locale).map((f) => ({
+            "@type": "Question",
+            name: f.q[params.locale],
+            acceptedAnswer: { "@type": "Answer", text: f.a[params.locale] },
+          })),
+        }}
+      />
       {children}
     </>
   );

@@ -1,7 +1,6 @@
 import { Metadata } from "next";
-import JsonLd from "@/components/JsonLd";
 import type { Locale } from "@/i18n/translations";
-import { sectionBreadcrumb, sectionMetadata } from "@/lib/seo";
+import { sectionMetadata } from "@/lib/seo";
 
 type Params = { params: { locale: Locale } };
 
@@ -28,10 +27,8 @@ export default function BlogLayout({
 }: Params & {
   children: React.ReactNode;
 }) {
-  return (
-    <>
-      <JsonLd data={sectionBreadcrumb(params.locale, "blog", "/blog")} />
-      {children}
-    </>
-  );
+  // The /blog index renders its own breadcrumb; article pages render a
+  // three-level one. Emitting one here too would duplicate it on articles.
+  void params;
+  return children;
 }

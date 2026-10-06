@@ -4,8 +4,8 @@ import type { Locale } from "@/i18n/translations";
  * Every page lives under a language prefix: /mr/..., /hi/..., /en/...
  * The URL is the single source of truth for the language, so search engines
  * can index each language on its own and hreflang can link them together.
- * Unprefixed paths (the pre-2026-09 URLs) 301 to the default locale; see
- * src/middleware.ts.
+ * Unprefixed paths (the pre-2026-09 URLs, which were English) 301 to /en;
+ * see src/middleware.ts.
  */
 export const LOCALES: readonly Locale[] = ["mr", "hi", "en"];
 export const DEFAULT_LOCALE: Locale = "mr";

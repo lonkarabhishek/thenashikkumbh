@@ -1,7 +1,6 @@
 import { Metadata } from "next";
-import JsonLd from "@/components/JsonLd";
 import type { Locale } from "@/i18n/translations";
-import { sectionBreadcrumb, sectionMetadata } from "@/lib/seo";
+import { sectionMetadata } from "@/lib/seo";
 
 type Params = { params: { locale: Locale } };
 
@@ -29,10 +28,7 @@ export default function YatraLayout({
 }: Params & {
   children: React.ReactNode;
 }) {
-  return (
-    <>
-      <JsonLd data={sectionBreadcrumb(params.locale, "yatra", "/yatra")} />
-      {children}
-    </>
-  );
+  // Breadcrumbs are rendered by the index and trail pages themselves.
+  void params;
+  return children;
 }

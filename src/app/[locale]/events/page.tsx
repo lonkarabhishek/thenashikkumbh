@@ -5,10 +5,12 @@ import { ArrowRight, Calendar, Info, Users } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import {
   akhadas,
+  announced,
   awaitingByTopic,
   schedule,
   type Akhada,
 } from "@/data/verified";
+import { formatDate as fmtDate } from "@/lib/dates";
 
 /**
  * Events & Akhadas
@@ -53,6 +55,17 @@ const COPY = {
     hi: "आधिकारिक रूप से पुष्ट",
     mr: "अधिकृतपणे पुष्ट",
   },
+  announcedTitle: {
+    en: "Announced",
+    hi: "घोषित",
+    mr: "जाहीर",
+  },
+  announcedBody: {
+    en: "These plans have been officially announced. Some details are still to come.",
+    hi: "ये योजनाएँ आधिकारिक रूप से घोषित हो चुकी हैं। कुछ विवरण अभी आने बाकी हैं।",
+    mr: "या योजना अधिकृतपणे जाहीर झाल्या आहेत. काही तपशील अजून यायचे आहेत.",
+  },
+  readMore: { en: "Details", hi: "विवरण", mr: "तपशील" },
   awaitingTitle: {
     en: "Awaiting official confirmation",
     hi: "आधिकारिक पुष्टि की प्रतीक्षा",
@@ -112,6 +125,7 @@ export default function EventsPage() {
   const trafficPlan = awaitingByTopic("traffic-plan");
   const railwayPlan = awaitingByTopic("railway-plan");
   const accommodation = awaitingByTopic("official-accommodation");
+  const timings = awaitingByTopic("amrit-snan-timings");
 
   const byTradition = recognised.reduce(
     (acc, a) => {
@@ -154,10 +168,7 @@ export default function EventsPage() {
               <div className="shrink-0 sm:w-56">
                 <p className="flex items-center gap-2 text-eyebrow font-semibold uppercase text-saffron-700">
                   <Calendar className="h-3.5 w-3.5" />
-                  {new Date(`${snan.isoDate}T00:00:00`).toLocaleDateString(
-                    locale === "en" ? "en-IN" : locale === "hi" ? "hi-IN" : "mr-IN",
-                    { day: "numeric", month: "long", year: "numeric" }
-                  )}
+                  {fmtDate(snan.isoDate, locale)}
                 </p>
                 <p className="mt-1 font-heading text-lg text-temple-900">
                   {snan.tithi ? t(snan.tithi) : t(snan.name)}
@@ -201,6 +212,25 @@ export default function EventsPage() {
       {/* ═══════════════ Awaiting confirmation ═══════════════ */}
       <section className="section-paper py-20 sm:py-28">
         <div className="section-container">
+          <span className="eyebrow">{t(COPY.announcedTitle)}</span>
+          <p className="mt-4 max-w-prose text-lede text-temple-500">{t(COPY.announcedBody)}</p>
+          <ul className="mb-16 mt-8 grid gap-4 sm:grid-cols-2">
+            {announced.map((a) => (
+              <li key={a.id} className="card-flat">
+                <p className="font-semibold text-temple-900">{t(a.topic)}</p>
+                <p className="mt-2 text-sm text-temple-700">{t(a.summary)}</p>
+                <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs">
+                  <a href={a.sourceUrl} target="_blank" rel="noopener noreferrer" className="rich-link text-temple-500">
+                    {a.sourceLabel}
+                  </a>
+                  <Link href={a.more} className="rich-link text-saffron-700">
+                    {t(COPY.readMore)}
+                  </Link>
+                </p>
+              </li>
+            ))}
+          </ul>
+
           <span className="eyebrow">{t(COPY.awaitingTitle)}</span>
           <h2 className="mt-4 text-title">
             {t({
@@ -212,7 +242,7 @@ export default function EventsPage() {
           <p className="mt-4 max-w-prose text-lede text-temple-500">{t(COPY.awaitingBody)}</p>
 
           <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-            {[eventProgramme, facilityMap, trafficPlan, railwayPlan, accommodation]
+            {[eventProgramme, facilityMap, trafficPlan, railwayPlan, accommodation, timings]
               .filter((a): a is NonNullable<typeof a> => Boolean(a))
               .map((a) => (
                 <li key={a.id} className="card-flat">
