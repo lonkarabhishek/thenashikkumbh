@@ -1,5 +1,6 @@
 import { schedule } from "@/data/verified";
 import type { Locale } from "@/i18n/translations";
+import { formatDate as fmtDate } from "@/lib/dates";
 
 /**
  * Plain-language answers to the date questions people search for. Shared by
@@ -7,15 +8,8 @@ import type { Locale } from "@/i18n/translations";
  * never disagree. Dates come from the verified schedule.
  */
 
-const DATE_LOCALE: Record<Locale, string> = { en: "en-IN", hi: "hi-IN", mr: "mr-IN" };
-
 export function formatScheduleDate(iso: string, locale: Locale) {
-  return new Date(`${iso}T00:00:00+05:30`).toLocaleDateString(DATE_LOCALE[locale], {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: "Asia/Kolkata",
-  });
+  return fmtDate(iso, locale);
 }
 
 export const amritSnans = schedule

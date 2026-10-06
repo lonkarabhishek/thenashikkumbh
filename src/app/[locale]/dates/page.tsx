@@ -8,6 +8,7 @@ import { majorMelaPeriod, schedule, type ScheduleEvent } from "@/data/verified";
 import type { Locale } from "@/i18n/translations";
 import { DatesFaq, DatesQuickAnswer } from "@/components/DatesAnswers";
 import CommonsPhoto from "@/components/photos/CommonsPhoto";
+import { formatDate as fmtDate, formatTime as fmtTime, localDigits } from "@/lib/dates";
 
 /* ───────────────────────────── page ─────────────────────────────── */
 
@@ -29,24 +30,12 @@ const KIND_LABEL: Record<Kind, Record<Locale, string>> = {
   close: { en: "Close", hi: "समापन", mr: "सांगता" },
 };
 
-const DATE_LOCALE: Record<Locale, string> = { en: "en-IN", hi: "hi-IN", mr: "mr-IN" };
-
 function formatDate(iso: string, locale: Locale) {
-  return new Date(`${iso}T00:00:00+05:30`).toLocaleDateString(DATE_LOCALE[locale], {
-    weekday: "short",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: "Asia/Kolkata",
-  });
+  return fmtDate(iso, locale, { weekday: true });
 }
 
 function formatTime(hhmm: string, locale: Locale) {
-  return new Date(`2026-01-01T${hhmm}:00+05:30`).toLocaleTimeString(DATE_LOCALE[locale], {
-    hour: "numeric",
-    minute: "2-digit",
-    timeZone: "Asia/Kolkata",
-  });
+  return fmtTime(hhmm, locale);
 }
 
 function rangeText(a: string, b: string, locale: Locale) {
@@ -174,7 +163,7 @@ export default function ImportantDatesPage() {
               {rangeText(formatDate(majorMelaPeriod.startIso, locale), formatDate(majorMelaPeriod.endIso, locale), locale)}
             </p>
             <p className="mt-1 text-sm text-cream-300/70">
-              {majorMelaPeriod.days} {t(PERIOD_COPY.days)} · {t(PERIOD_COPY.body)}
+              {localDigits(String(majorMelaPeriod.days), locale)} {t(PERIOD_COPY.days)} · {t(PERIOD_COPY.body)}
             </p>
           </div>
 

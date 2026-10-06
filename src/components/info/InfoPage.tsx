@@ -5,6 +5,7 @@ import CommonsPhoto from "@/components/photos/CommonsPhoto";
 import type { InfoPageContent } from "@/content/pages/types";
 import type { Locale } from "@/i18n/translations";
 import { breadcrumbSchema, pageMetadata } from "@/lib/seo";
+import { formatDate as fmtDate } from "@/lib/dates";
 
 const UI = {
   updated: { en: "Last updated", hi: "अंतिम अपडेट", mr: "अखेरचे अद्ययावत" },
@@ -18,15 +19,8 @@ const UI = {
   },
 };
 
-const DATE_LOCALE: Record<Locale, string> = { en: "en-IN", hi: "hi-IN", mr: "mr-IN" };
-
 function formatDate(iso: string, locale: Locale) {
-  return new Date(`${iso}T00:00:00+05:30`).toLocaleDateString(DATE_LOCALE[locale], {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: "Asia/Kolkata",
-  });
+  return fmtDate(iso, locale);
 }
 
 export function infoPageMetadata(page: InfoPageContent, locale: Locale): Metadata {

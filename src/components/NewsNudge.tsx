@@ -3,8 +3,8 @@
 import Link from "@/components/LocaleLink";
 import { ArrowRight, Newspaper } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
-import type { Locale } from "@/i18n/translations";
 import Reveal from "@/components/Reveal";
+import { formatDate as fmtDate } from "@/lib/dates";
 
 const COPY = {
   kicker: { en: "Latest news", hi: "ताज़ा समाचार", mr: "ताज्या बातम्या" },
@@ -15,8 +15,6 @@ const COPY = {
   },
   all: { en: "All news", hi: "सभी समाचार", mr: "सर्व बातम्या" },
 };
-
-const DATE_LOCALE: Record<Locale, string> = { en: "en-IN", hi: "hi-IN", mr: "mr-IN" };
 
 /** Only what the box shows; the server passes it in so the full text of
  * every post stays out of the home page's JavaScript. */
@@ -68,11 +66,7 @@ export default function NewsNudge({ items: latest }: { items: NewsHeadline[] }) 
                 dateTime={article.date}
                 className="hidden w-32 shrink-0 text-sm text-temple-400 sm:block"
               >
-                {new Date(article.date).toLocaleDateString(DATE_LOCALE[locale], {
-                  day: "numeric",
-                  month: "short",
-                  year: "numeric",
-                })}
+                {fmtDate(article.date, locale, { short: true })}
               </time>
               <span className="min-w-0 flex-1 font-semibold leading-snug text-temple-900 group-hover:text-saffron-800">
                 {article.title[locale]}

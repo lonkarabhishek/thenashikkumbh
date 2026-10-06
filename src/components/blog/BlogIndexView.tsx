@@ -18,6 +18,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
 import type { Locale } from "@/i18n/translations";
 import type { BlogArticle } from "@/data/blogData";
+import { formatDate as fmtDate } from "@/lib/dates";
 
 /* ───────────────────────────── types ───────────────────────────── */
 
@@ -61,17 +62,7 @@ const categoryTranslationMap: Record<NewsCategory, "catKumbh" | "catInfra" | "ca
 };
 
 function formatDate(dateStr: string, locale: Locale): string {
-  const date = new Date(dateStr);
-  const localeMap: Record<Locale, string> = {
-    en: "en-IN",
-    hi: "hi-IN",
-    mr: "mr-IN",
-  };
-  return date.toLocaleDateString(localeMap[locale], {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  return fmtDate(dateStr, locale);
 }
 
 /* ───────────────────────────── page ───────────────────────────── */

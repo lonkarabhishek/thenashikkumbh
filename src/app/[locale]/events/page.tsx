@@ -10,6 +10,7 @@ import {
   schedule,
   type Akhada,
 } from "@/data/verified";
+import { formatDate as fmtDate } from "@/lib/dates";
 
 /**
  * Events & Akhadas
@@ -167,10 +168,7 @@ export default function EventsPage() {
               <div className="shrink-0 sm:w-56">
                 <p className="flex items-center gap-2 text-eyebrow font-semibold uppercase text-saffron-700">
                   <Calendar className="h-3.5 w-3.5" />
-                  {new Date(`${snan.isoDate}T00:00:00`).toLocaleDateString(
-                    locale === "en" ? "en-IN" : locale === "hi" ? "hi-IN" : "mr-IN",
-                    { day: "numeric", month: "long", year: "numeric" }
-                  )}
+                  {fmtDate(snan.isoDate, locale)}
                 </p>
                 <p className="mt-1 font-heading text-lg text-temple-900">
                   {snan.tithi ? t(snan.tithi) : t(snan.name)}

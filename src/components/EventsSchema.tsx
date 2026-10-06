@@ -46,7 +46,7 @@ export default function EventsSchema() {
       name: `${e.name.en}, Nashik–Trimbakeshwar Simhastha Kumbh Mela`,
       description: e.significance?.en ?? e.name.en,
       startDate: e.startTime ? `${e.isoDate}T${e.startTime}:00+05:30` : e.isoDate,
-      endDate: e.isoDate,
+      ...(e.startTime ? {} : { endDate: e.isoDate }),
       eventStatus: "https://schema.org/EventScheduled",
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       location: placesFor(e),

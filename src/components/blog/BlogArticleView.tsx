@@ -9,6 +9,7 @@ import { NEWS_AUTHOR, type BlogArticle } from "@/data/blogData";
 import RichText from "@/components/RichText";
 import PhotoCredit from "@/components/photos/PhotoCredit";
 import { getPhoto, isPhotoAvailable } from "@/data/photos";
+import { formatDate as fmtDate } from "@/lib/dates";
 
 /* ───────────── category colors ───────────── */
 
@@ -29,12 +30,7 @@ const categoryLabels: Record<string, Record<Locale, string>> = {
 };
 
 function formatDate(dateStr: string, locale: Locale): string {
-  const localeMap: Record<Locale, string> = { en: "en-IN", hi: "hi-IN", mr: "mr-IN" };
-  return new Date(dateStr).toLocaleDateString(localeMap[locale], {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  return fmtDate(dateStr, locale);
 }
 
 const UI = {

@@ -32,6 +32,7 @@ import {
   WalkingPilgrim,
 } from "@/components/art/Scenes";
 import { BorderStrip, Diya, Kalash, Lotus, Trishul } from "@/components/art/Motifs";
+import { formatDate as fmtDate } from "@/lib/dates";
 
 /** First Amrit Snan, the date the whole calendar hangs off. */
 const FIRST_SNAN = new Date("2027-08-02T04:00:00+05:30");
@@ -130,16 +131,8 @@ const HOME_COPY = {
   },
 };
 
-const HOME_DATE_LOCALE: Record<Locale, string> = { en: "en-IN", hi: "hi-IN", mr: "mr-IN" };
-
 function formatHomeDate(iso: string, locale: Locale) {
-  return new Date(`${iso}T00:00:00+05:30`).toLocaleDateString(HOME_DATE_LOCALE[locale], {
-    weekday: "short",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: "Asia/Kolkata",
-  });
+  return fmtDate(iso, locale, { weekday: true });
 }
 
 export default function HomePage({ news }: { news: NewsHeadline[] }) {
