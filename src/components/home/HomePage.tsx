@@ -12,6 +12,7 @@ import {
   Sparkles,
   Waves,
 } from "lucide-react";
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useChat } from "@/context/ChatContext";
 import { translations } from "@/i18n/translations";
@@ -24,6 +25,7 @@ import Reveal from "@/components/Reveal";
 import Countdown from "@/components/Countdown";
 import AskSahayak from "@/components/AskSahayak";
 import NewsNudge, { type NewsHeadline } from "@/components/NewsNudge";
+import PhotoDrift, { type DriftPhoto } from "@/components/home/PhotoDrift";
 import {
   GhatPanorama,
   ProcessionBand,
@@ -34,10 +36,13 @@ import {
 import { BorderStrip, Diya, Kalash, Lotus, Trishul } from "@/components/art/Motifs";
 import { formatDate as fmtDate } from "@/lib/dates";
 
+const MAJOR_DATES = schedule.filter((e) => e.isAmritSnan);
+
 /** First Amrit Snan, the date the whole calendar hangs off. */
 const FIRST_SNAN = new Date("2027-08-02T04:00:00+05:30");
 
 const HOME_COPY = {
+  nextSnan: { en: "Next Amrit Snan", hi: "अगला अमृत स्नान", mr: "पुढचे अमृत स्नान" },
   storyMore: {
     en: "Read the history of the Kumbh Mela",
     hi: "कुंभ मेले का इतिहास पढ़ें",
@@ -135,11 +140,19 @@ function formatHomeDate(iso: string, locale: Locale) {
   return fmtDate(iso, locale, { weekday: true });
 }
 
-export default function HomePage({ news }: { news: NewsHeadline[] }) {
+export default function HomePage({ news, glimpses }: { news: NewsHeadline[]; glimpses: DriftPhoto[] }) {
   const { locale, t } = useLanguage();
   const { open: openChat } = useChat();
 
-  const majorDates = schedule.filter((e) => e.isAmritSnan);
+  const majorDates = MAJOR_DATES;
+
+  // The next Amrit Snan gets a flickering diya. Worked out in the browser so
+  // the static page never goes stale.
+  const [nextId, setNextId] = useState<string | null>(null);
+  useEffect(() => {
+    const today = new Date().toISOString().slice(0, 10);
+    setNextId(MAJOR_DATES.find((d) => d.isoDate >= today)?.id ?? null);
+  }, []);
   const featuredGhats = ghatsI18n.slice(0, 3);
 
   const storyBeats = [
@@ -306,11 +319,19 @@ export default function HomePage({ news }: { news: NewsHeadline[] }) {
             <Reveal as="li" key={date.id} delay={i * 60}>
               <div className="flex flex-col gap-4 border-b border-temple-100 bg-cream-50 p-6 last:border-b-0 sm:flex-row sm:items-center sm:gap-8 sm:p-7">
                 <div className="flex shrink-0 items-center gap-4 sm:w-52">
-                  <Diya className="h-7 w-7 shrink-0 text-saffron-600" />
+                  <Diya
+                    className={`h-7 w-7 shrink-0 text-saffron-600 ${date.id === nextId ? "diya-flicker" : ""}`}
+                  />
                   <div>
                     <p className="font-heading text-lg leading-tight text-temple-900">
                       {formatHomeDate(date.isoDate, locale)}
                     </p>
+                    {date.id === nextId && (
+                      <p className="mt-1 inline-flex items-center gap-1.5 text-[0.6875rem] font-semibold uppercase tracking-wider text-saffron-700">
+                        <span className="live-dot h-1.5 w-1.5" aria-hidden />
+                        {t(HOME_COPY.nextSnan)}
+                      </p>
+                    )}
                     <p className="mt-0.5 text-xs text-temple-400">{date.tithi ? t(date.tithi) : t(date.location)}</p>
                   </div>
                 </div>
@@ -336,6 +357,9 @@ export default function HomePage({ news }: { news: NewsHeadline[] }) {
           </Link>
         </Reveal>
       </section>
+
+      {/* ═══ Glimpses, a slow drifting photo strip ══════════ */}
+      <PhotoDrift photos={glimpses} />
 
       {/* ═══ News, a pointer to /blog, headlines only ═══════ */}
       <NewsNudge items={news} />

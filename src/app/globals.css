@@ -529,3 +529,61 @@
 .rich-text-light .rich-link {
   color: #a0522d;
 }
+
+/* ─── Subtle motion ────────────────────────────────────────
+   Slow, quiet movement so the site feels alive without looking like a
+   news ticker. All of it stops under prefers-reduced-motion (see top). */
+
+/* A soft "updated" dot: a ring that breathes out every few seconds. */
+.live-dot {
+  position: relative;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: currentColor;
+}
+.live-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: liveDot 2.8s ease-out infinite;
+}
+@keyframes liveDot {
+  0% { transform: scale(1); opacity: 0.55; }
+  70%, 100% { transform: scale(2.8); opacity: 0; }
+}
+
+/* A diya flame that flickers gently. */
+.diya-flicker {
+  animation: diyaFlicker 3.2s ease-in-out infinite;
+  transform-origin: 50% 80%;
+}
+@keyframes diyaFlicker {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  30% { opacity: 0.82; transform: scale(0.97) rotate(-1.5deg); }
+  55% { opacity: 1; transform: scale(1.03) rotate(1deg); }
+  80% { opacity: 0.9; transform: scale(0.99); }
+}
+
+/* Photos drifting slowly sideways, like the river. The track holds the set
+   twice, so moving it by half loops without a seam. */
+.photo-drift {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+.photo-drift-track {
+  display: flex;
+  width: max-content;
+  animation: photoDrift 220s linear infinite;
+}
+.photo-drift:hover .photo-drift-track,
+.photo-drift:focus-within .photo-drift-track {
+  animation-play-state: paused;
+}
+@keyframes photoDrift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
