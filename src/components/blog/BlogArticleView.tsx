@@ -1,307 +1,269 @@
 "use client";
 
-import React from "react";
+import { useState } from "react";
 import Link from "@/components/LocaleLink";
-import { ArrowLeft, Calendar, ExternalLink, Share2 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Check, Clock, Share2 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import type { Locale } from "@/i18n/translations";
 import { NEWS_AUTHOR, type BlogArticle } from "@/data/blogData";
 import RichText from "@/components/RichText";
 import PhotoCredit from "@/components/photos/PhotoCredit";
 import { getPhoto, isPhotoAvailable } from "@/data/photos";
-import { formatDate as fmtDate } from "@/lib/dates";
+import { formatDate } from "@/lib/dates";
+import type { NewsStatus, NewsThumb } from "./newsMeta";
+import { CATEGORY_LABEL, NEWS_UI, STATUS_HINT } from "./newsCopy";
+import StatusBadge from "./StatusBadge";
 
-/* ───────────── category colors ───────────── */
-
-const categoryColors: Record<string, { bg: string; text: string; border: string }> = {
-  kumbh: { bg: "rgba(245,158,11,0.12)", text: "#F59E0B", border: "rgba(245,158,11,0.25)" },
-  infra: { bg: "rgba(59,130,246,0.12)", text: "#3B82F6", border: "rgba(59,130,246,0.25)" },
-  govt: { bg: "rgba(16,185,129,0.12)", text: "#10B981", border: "rgba(16,185,129,0.25)" },
-  culture: { bg: "rgba(139,92,246,0.12)", text: "#8B5CF6", border: "rgba(139,92,246,0.25)" },
-  guide: { bg: "rgba(20,184,166,0.12)", text: "#14B8A6", border: "rgba(20,184,166,0.25)" },
+export type RelatedArticle = Pick<BlogArticle, "id" | "slug" | "title" | "date" | "category"> & {
+  thumb: NewsThumb | null;
 };
-
-const categoryLabels: Record<string, Record<Locale, string>> = {
-  kumbh: { en: "Kumbh Mela", hi: "कुंभ मेला", mr: "कुंभमेळा" },
-  infra: { en: "Infrastructure", hi: "बुनियादी ढाँचा", mr: "पायाभूत सुविधा" },
-  govt: { en: "Government", hi: "सरकार", mr: "शासन" },
-  culture: { en: "Culture", hi: "संस्कृति", mr: "संस्कृती" },
-  guide: { en: "Guide", hi: "गाइड", mr: "मार्गदर्शिका" },
-};
-
-function formatDate(dateStr: string, locale: Locale): string {
-  return fmtDate(dateStr, locale);
-}
-
-const UI = {
-  by: { en: "By", hi: "लेखक:", mr: "लेखक:" },
-  source: { en: "Source", hi: "स्रोत", mr: "स्रोत" },
-  updated: { en: "Updated", hi: "अपडेट", mr: "अद्ययावत" },
-  originally: {
-    en: "Originally announced on",
-    hi: "मूल घोषणा की तिथि:",
-    mr: "मूळ घोषणा:",
-  },
-  sources: { en: "Sources", hi: "स्रोत", mr: "स्रोत" },
-  confirmed: { en: "Confirmed (official)", hi: "पुष्ट (आधिकारिक)", mr: "पुष्टी (अधिकृत)" },
-  reported: { en: "Reported (media)", hi: "रिपोर्ट (मीडिया)", mr: "वृत्त (माध्यमे)" },
-};
-
-/* ───────────── component ───────────── */
-
-export type RelatedArticle = Pick<BlogArticle, "id" | "slug" | "title" | "date" | "image">;
 
 export default function BlogArticleView({
   article,
+  status = null,
+  thumb = null,
+  minutes,
   related,
 }: {
   article: BlogArticle | undefined;
+  status?: NewsStatus;
+  thumb?: NewsThumb | null;
+  minutes?: Record<Locale, number>;
   related: RelatedArticle[];
 }) {
-  const { locale } = useLanguage();
+  const { locale, t } = useLanguage();
+  const [copied, setCopied] = useState(false);
 
   if (!article) {
     return (
-      <section className="section-dark flex min-h-screen items-center justify-center pt-32">
+      <section className="flex min-h-[70vh] items-center justify-center bg-cream-50 pt-32">
         <div className="text-center">
-          <h1 className="mb-4 font-heading text-3xl font-bold text-cream-100">
-            Article Not Found
-          </h1>
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 text-sm font-semibold"
-            style={{ color: "#C9A227" }}
-          >
+          <h1 className="mb-4 font-heading text-3xl font-bold text-temple-900">Article not found</h1>
+          <Link href="/blog" className="inline-flex items-center gap-2 font-semibold text-saffron-700">
             <ArrowLeft className="h-4 w-4" />
-            Back to News
+            {t(NEWS_UI.allNews)}
           </Link>
         </div>
       </section>
     );
   }
 
-  const colors = categoryColors[article.category] ?? categoryColors.kumbh;
-  const photo =
-    article.photoId && isPhotoAvailable(article.photoId) ? getPhoto(article.photoId) : undefined;
-  const catLabel = categoryLabels[article.category]?.[locale] ?? article.category;
+  // The story's own photo carries a caption and credit; a category stand-in
+  // is decorative and only shown in lists.
+  const photo = thumb?.own && article.photoId && isPhotoAvailable(article.photoId) ? getPhoto(article.photoId) : undefined;
+  const updated = article.updated && article.updated !== article.date ? article.updated : undefined;
 
-
-  const handleShare = async () => {
+  const share = async () => {
     const url = window.location.href;
-    if (navigator.share) {
-      await navigator.share({ title: article.title[locale], url });
-    } else {
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: article.title[locale], url });
+        return;
+      }
       await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // The reader closed the share sheet; nothing to do.
     }
   };
 
   return (
-    <>
-      {/* ═══════ HERO IMAGE ═══════ */}
-      <section className="section-dark relative overflow-hidden pt-24">
-        <div className="relative h-[40vh] min-h-[320px] w-full md:h-[50vh]">
-          <img
-            src={photo ? photo.file : article.image}
-            alt={photo ? photo.alt : article.title[locale]}
-            className="h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-[#0B1220]/60 to-transparent" />
-
-          {/* Back button overlay */}
-          <div className="absolute left-0 top-0 z-10 p-6">
+    <div className="bg-cream-50">
+      <article className="pb-16 pt-28 md:pb-24 md:pt-36">
+        {/* ══════ Header ══════ */}
+        <header className="mx-auto max-w-[46rem] px-4 sm:px-6">
+          <nav className="flex items-center gap-2 text-sm">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-cream-100 backdrop-blur-md transition-colors hover:text-[#C9A227]"
-              style={{
-                background: "rgba(11,18,32,0.6)",
-                border: "1px solid rgba(201,162,39,0.15)",
-              }}
+              className="inline-flex items-center gap-1.5 font-semibold text-temple-600 transition-colors hover:text-saffron-700"
             >
               <ArrowLeft className="h-4 w-4" />
-              {locale === "en" ? "All News" : locale === "hi" ? "सभी समाचार" : "सर्व बातम्या"}
+              {t(NEWS_UI.allNews)}
             </Link>
-          </div>
-        </div>
-      </section>
+            <span aria-hidden className="text-temple-300">
+              /
+            </span>
+            <span className="font-semibold uppercase tracking-wider text-saffron-700">
+              {CATEGORY_LABEL[article.category]?.[locale] ?? article.category}
+            </span>
+          </nav>
 
-      {/* ═══════ ARTICLE CONTENT ═══════ */}
-      <section className="section-dark relative pb-16">
-        <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
-        <div className="section-container relative z-10 mx-auto max-w-3xl">
-          {/* Meta row */}
-          <div
-            className="-mt-16 relative z-20 mb-8"
-          >
-            <div className="flex flex-wrap items-center gap-3 mb-4">
+          <h1 className="mt-6 font-heading text-[2rem] font-bold leading-[1.15] text-temple-900 text-balance md:text-[2.75rem]">
+            {article.title[locale]}
+          </h1>
+
+          <p className="mt-5 text-lg leading-relaxed text-temple-600 md:text-xl">{article.summary[locale]}</p>
+
+          {/* Byline */}
+          <div className="mt-7 flex flex-wrap items-center justify-between gap-4 border-y border-temple-100 py-4">
+            <div className="flex items-center gap-3">
               <span
-                className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold"
-                style={{
-                  background: colors.bg,
-                  color: colors.text,
-                  border: `1px solid ${colors.border}`,
-                }}
+                aria-hidden
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-temple-900 font-heading text-sm font-bold text-cream-50"
               >
-                {catLabel}
+                NK
               </span>
-              <span className="inline-flex items-center gap-1.5 text-xs text-cream-300/40">
-                <Calendar className="h-3.5 w-3.5" />
-                {formatDate(article.date, locale)}
-              </span>
-              <span className="inline-flex items-center gap-1.5 text-xs text-cream-300/40">
-                <ExternalLink className="h-3.5 w-3.5" />
-                {UI.source[locale]}: {article.source}
-              </span>
+              <div className="text-sm leading-snug">
+                <p className="text-temple-800">
+                  {t(NEWS_UI.by)}{" "}
+                  <Link href={NEWS_AUTHOR.path} className="font-semibold hover:text-saffron-700">
+                    {NEWS_AUTHOR.name}
+                  </Link>
+                </p>
+                <p className="mt-0.5 flex flex-wrap items-center gap-x-2 text-temple-500">
+                  <time dateTime={article.date}>{formatDate(article.date, locale)}</time>
+                  {updated && (
+                    <>
+                      <span aria-hidden>·</span>
+                      <span>
+                        {t(NEWS_UI.updated)} <time dateTime={updated}>{formatDate(updated, locale)}</time>
+                      </span>
+                    </>
+                  )}
+                  {minutes && (
+                    <>
+                      <span aria-hidden>·</span>
+                      <span className="inline-flex items-center gap-1">
+                        <Clock className="h-3.5 w-3.5" />
+                        {minutes[locale]} {t(NEWS_UI.minRead)}
+                      </span>
+                    </>
+                  )}
+                </p>
+              </div>
             </div>
-
-            {/* Title */}
-            <h1 className="mb-6 font-heading text-3xl font-bold leading-tight text-cream-100 md:text-4xl lg:text-5xl">
-              {article.title[locale]}
-            </h1>
-
-            {photo && (
-              <p className="mb-4 text-xs text-cream-300/60">
-                {photo.caption}
-                <PhotoCredit photo={photo} className="mt-1" />
-              </p>
-            )}
-
-            {/* Byline and dates */}
-            <p className="mb-6 text-sm text-cream-300/60">
-              {UI.by[locale]}{" "}
-              <Link href={NEWS_AUTHOR.path} className="rich-link text-[#DFCC78]">
-                {NEWS_AUTHOR.name}
-              </Link>
-              {article.updated && article.updated !== article.date && (
-                <>
-                  {" · "}
-                  {UI.updated[locale]} <time dateTime={article.updated}>{formatDate(article.updated, locale)}</time>
-                </>
-              )}
-              {article.originallyAnnounced && (
-                <span className="mt-1 block text-cream-300/50">
-                  {UI.originally[locale]}{" "}
-                  <time dateTime={article.originallyAnnounced}>{formatDate(article.originallyAnnounced, locale)}</time>
-                </span>
-              )}
-            </p>
-
-            {/* Summary */}
-            <p
-              className="mb-8 text-lg leading-relaxed md:text-xl"
-              style={{ color: "rgba(201,162,39,0.7)" }}
+            <button
+              onClick={share}
+              className="inline-flex items-center gap-2 rounded-full border border-temple-200 px-4 py-2 text-sm font-semibold text-temple-700 transition-colors hover:border-saffron-400 hover:text-saffron-700"
             >
-              {article.summary[locale]}
-            </p>
+              {copied ? <Check className="h-4 w-4" /> : <Share2 className="h-4 w-4" />}
+              {copied ? t(NEWS_UI.copied) : t(NEWS_UI.share)}
+            </button>
+          </div>
 
+          {/* What kind of story this is */}
+          {status && (
             <div
-              className="gold-line-thick mb-8 w-32 origin-left"
-            />
-          </div>
+              className={`mt-6 flex items-start gap-3 rounded-xl px-4 py-3 text-sm leading-relaxed ${
+                status === "confirmed" ? "bg-river-50 text-river-900" : "bg-saffron-50 text-saffron-900"
+              }`}
+            >
+              <StatusBadge status={status} size="md" />
+              <span className="pt-0.5">{STATUS_HINT[status][locale]}</span>
+            </div>
+          )}
+          {article.originallyAnnounced && (
+            <p className="mt-4 text-sm text-temple-500">
+              {t(NEWS_UI.originally)}{" "}
+              <time dateTime={article.originallyAnnounced}>{formatDate(article.originallyAnnounced, locale)}</time>
+            </p>
+          )}
+        </header>
 
-          {/* Body content */}
-          <div
-            className="prose-dark"
-          >
-            <RichText text={article.content[locale]} tone="dark" />
-          </div>
+        {/* ══════ Photo ══════ */}
+        {photo && (
+          <figure className="mx-auto mt-10 max-w-[60rem] px-4 sm:px-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={photo.file}
+              alt={photo.alt}
+              width={photo.width}
+              height={photo.height}
+              fetchPriority="high"
+              className="h-auto w-full rounded-card"
+            />
+            <figcaption className="mx-auto mt-3 max-w-[46rem] text-sm text-temple-500">
+              {photo.caption}
+              <PhotoCredit photo={photo} className="mt-1 text-temple-400" />
+            </figcaption>
+          </figure>
+        )}
+
+        {/* ══════ Body ══════ */}
+        <div className="mx-auto mt-10 max-w-[46rem] px-4 sm:px-6">
+          <RichText text={article.content[locale]} tone="light" />
 
           {/* Sources */}
           {article.sources && article.sources.length > 0 && (
             <aside
-              className="mt-10 rounded-2xl p-6"
-              style={{ background: "rgba(201,162,39,0.05)", border: "1px solid rgba(201,162,39,0.15)" }}
+              className="mt-12 rounded-card border border-temple-100 bg-cream-100/70 p-5 sm:p-6"
               aria-labelledby="sources-title"
             >
-              <h2 id="sources-title" className="font-heading text-lg font-bold text-cream-100">
-                {UI.sources[locale]}
+              <h2 id="sources-title" className="font-heading text-lg font-bold text-temple-900">
+                {t(NEWS_UI.sourcesTitle)}
               </h2>
-              <ol className="mt-4 space-y-3 text-sm text-cream-300/70">
+              <ol className="mt-4 space-y-4">
                 {article.sources.map((src) => (
-                  <li key={src.url} className="leading-snug">
-                    <a href={src.url} target="_blank" rel="noopener noreferrer" className="rich-link text-[#DFCC78]">
-                      {src.title}
-                    </a>
-                    <span className="block text-xs text-cream-300/50">
-                      {src.publisher} · {formatDate(src.date, locale)} ·{" "}
-                      {src.status === "confirmed" ? UI.confirmed[locale] : UI.reported[locale]}
+                  <li key={src.url} className="flex flex-col gap-1.5 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                    <div className="min-w-0">
+                      <a
+                        href={src.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-start gap-1 font-semibold text-temple-800 hover:text-saffron-700"
+                      >
+                        <span className="underline decoration-temple-200 underline-offset-4 group-hover:decoration-saffron-400">
+                          {src.title}
+                        </span>
+                        <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0" />
+                      </a>
+                      <p className="mt-0.5 text-sm text-temple-500">
+                        {src.publisher} · <time dateTime={src.date}>{formatDate(src.date, locale)}</time>
+                      </p>
+                    </div>
+                    <span className="shrink-0">
+                      <StatusBadge status={src.status} />
                     </span>
                   </li>
                 ))}
               </ol>
             </aside>
           )}
-
-          {/* Share button */}
-          <div
-            className="mt-12 flex items-center justify-between border-t pt-8"
-            style={{ borderColor: "rgba(201,162,39,0.1)" }}
-          >
-            <span className="text-sm text-cream-300/40">
-              {NEWS_AUTHOR.name} &middot; {formatDate(article.date, locale)}
-            </span>
-            <button
-              onClick={handleShare}
-              className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all hover:scale-105"
-              style={{
-                background: "rgba(201,162,39,0.1)",
-                color: "#C9A227",
-                border: "1px solid rgba(201,162,39,0.2)",
-              }}
-            >
-              <Share2 className="h-4 w-4" />
-              {locale === "en" ? "Share" : locale === "hi" ? "शेयर करें" : "शेअर करा"}
-            </button>
-          </div>
         </div>
-      </section>
+      </article>
 
-      {/* ═══════ RELATED ARTICLES ═══════ */}
+      {/* ══════ More news ══════ */}
       {related.length > 0 && (
-        <section className="section-dark relative pb-16">
-          <div className="absolute inset-0 temple-pattern opacity-[0.02]" />
-          <div className="section-container relative z-10">
-            <h2 className="mb-8 font-heading text-2xl font-bold text-cream-100">
-              {locale === "en"
-                ? "Related Articles"
-                : locale === "hi"
-                  ? "संबंधित लेख"
-                  : "संबंधित लेख"}
-            </h2>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <section className="border-t border-temple-100 bg-cream-100/60 py-14 md:py-20">
+          <div className="section-container max-w-5xl">
+            <div className="flex items-baseline justify-between gap-4">
+              <h2 className="font-heading text-2xl font-bold text-temple-900">{t(NEWS_UI.more)}</h2>
+              <Link href="/blog" className="text-sm font-semibold text-saffron-700 hover:underline">
+                {t(NEWS_UI.allNews)}
+              </Link>
+            </div>
+            <div className="mt-8 grid gap-8 sm:grid-cols-3">
               {related.map((rel) => (
-                <Link key={rel.slug} href={`/blog/${rel.slug}`}>
-                  <article
-                    className="group relative overflow-hidden rounded-xl transition-all duration-500 hover:-translate-y-1"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))",
-                      border: "1px solid rgba(201,162,39,0.08)",
-                    }}
-                  >
-                    <div className="relative h-40 overflow-hidden">
+                <Link key={rel.slug} href={`/blog/${rel.slug}`} className="group">
+                  <div className="overflow-hidden rounded-xl bg-cream-200">
+                    {rel.thumb && (
+                      // eslint-disable-next-line @next/next/no-img-element
                       <img
-                        src={rel.image}
-                        alt={rel.title[locale]}
-                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src={rel.thumb.src}
+                        alt={rel.thumb.alt}
+                        width={rel.thumb.width}
+                        height={rel.thumb.height}
                         loading="lazy"
+                        className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] to-transparent" />
-                    </div>
-                    <div className="p-4">
-                      <h3 className="mb-2 font-heading text-sm font-bold leading-snug text-cream-100 line-clamp-2">
-                        {rel.title[locale]}
-                      </h3>
-                      <span className="text-xs text-cream-300/40">
-                        {formatDate(rel.date, locale)}
-                      </span>
-                    </div>
-                  </article>
+                    )}
+                  </div>
+                  <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-saffron-700">
+                    {CATEGORY_LABEL[rel.category]?.[locale] ?? rel.category}
+                  </p>
+                  <h3 className="mt-1.5 font-heading text-lg font-bold leading-snug text-temple-900 transition-colors group-hover:text-saffron-700">
+                    {rel.title[locale]}
+                  </h3>
+                  <time dateTime={rel.date} className="mt-2 block text-sm text-temple-500">
+                    {formatDate(rel.date, locale)}
+                  </time>
                 </Link>
               ))}
             </div>
           </div>
         </section>
       )}
-    </>
+    </div>
   );
 }

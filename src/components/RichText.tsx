@@ -53,43 +53,57 @@ export default function RichText({
   /** "dark" for pages on the navy background, "light" for cream pages. */
   tone?: "dark" | "light";
 }) {
-  const p = tone === "dark" ? "text-cream-300/80" : "text-temple-700";
+  const p =
+    tone === "dark"
+      ? "mb-6 text-base leading-relaxed text-cream-300/80 md:text-lg"
+      : "mb-6 text-[1.0625rem] leading-[1.8] text-temple-800 md:text-[1.1875rem]";
   const h = tone === "dark" ? "text-cream-100" : "text-temple-900";
+  const marker = tone === "dark" ? "marker:text-gold-400" : "marker:text-saffron-500";
   const blocks = text.trim().split(/\n\s*\n/);
+  const out: ReactNode[] = [];
 
-  return (
-    <div className={`rich-text rich-text-${tone}`}>
-      {blocks.map((block, bi) => {
-        const lines = block.split("\n").map((l) => l.trim()).filter(Boolean);
-        const key = `b${bi}`;
-        if (lines.length === 0) return null;
-
-        if (lines[0].startsWith("## ") && lines.length === 1) {
-          return (
-            <h2 key={key} className={`mb-4 mt-10 font-heading text-2xl font-bold ${h}`}>
-              {inline(lines[0].slice(3), key)}
-            </h2>
-          );
-        }
-        if (lines[0].startsWith("### ") && lines.length === 1) {
-          return (
-            <h3 key={key} className={`mb-3 mt-8 font-heading text-xl font-bold ${h}`}>
-              {inline(lines[0].slice(4), key)}
-            </h3>
-          );
-        }
-        if (lines.every((l) => l.startsWith("- "))) {
-          return (
-            <ul key={key} className={`mb-6 list-disc space-y-2 pl-6 text-base leading-relaxed md:text-lg ${p}`}>
-              {lines.map((l, li) => (
-                <li key={li}>{inline(l.slice(2), `${key}-${li}`)}</li>
-              ))}
-            </ul>
-          );
-        }
-        return (
-          <p key={key} className={`mb-6 text-base leading-relaxed md:text-lg ${p}`}>
-            {lines.map((l, li) => (
+  blocks.forEach((block, bi) => {
+    const lines = block.split("\n").map((l) => l.trim()).filter(Boolean);
+    // A block can mix a lead-in line, a heading and "- " bullets ("The work
+    // includes:" followed by a list). Split it into runs so the bullets
+    // become a real list instead of one run-on paragraph.
+    let i = 0;
+    let run = 0;
+    while (i < lines.length) {
+      const key = `b${bi}-${run++}`;
+      const line = lines[i];
+      if (line.startsWith("## ")) {
+        out.push(
+          <h2 key={key} className={`mb-4 mt-12 font-heading text-2xl font-bold leading-snug md:text-[1.75rem] ${h}`}>
+            {inline(line.slice(3), key)}
+          </h2>
+        );
+        i++;
+      } else if (line.startsWith("### ")) {
+        out.push(
+          <h3 key={key} className={`mb-3 mt-8 font-heading text-xl font-bold ${h}`}>
+            {inline(line.slice(4), key)}
+          </h3>
+        );
+        i++;
+      } else if (line.startsWith("- ")) {
+        const items: string[] = [];
+        while (i < lines.length && lines[i].startsWith("- ")) items.push(lines[i++].slice(2));
+        out.push(
+          <ul key={key} className={`${p} list-disc space-y-2.5 pl-6 ${marker}`}>
+            {items.map((item, li) => (
+              <li key={li} className="pl-1">
+                {inline(item, `${key}-${li}`)}
+              </li>
+            ))}
+          </ul>
+        );
+      } else {
+        const para: string[] = [];
+        while (i < lines.length && !/^(## |### |- )/.test(lines[i])) para.push(lines[i++]);
+        out.push(
+          <p key={key} className={p}>
+            {para.map((l, li) => (
               <Fragment key={li}>
                 {li > 0 && " "}
                 {inline(l, `${key}-${li}`)}
@@ -97,7 +111,9 @@ export default function RichText({
             ))}
           </p>
         );
-      })}
-    </div>
-  );
+      }
+    }
+  });
+
+  return <div className={`rich-text rich-text-${tone}`}>{out}</div>;
 }

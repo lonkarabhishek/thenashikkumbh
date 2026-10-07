@@ -29,6 +29,17 @@ interface Entry {
 
 const ENTRIES: Entry[] = [
   {
+    date: "2026-10-07",
+    title: "Nine news posts, a cleaner news section, 50 credited photos",
+    body: [
+      "Added 9 sourced posts for 7 October 2026: police housing, bank and ATM plans, 18 roads, ICUs at the ghats, the Trimbakeshwar hospital site, NMC tourism projects, the Ramjhula proposal, the Swami Samarth Seva Kendra protest and Godavari water sampling. Each is labelled Confirmed or Media report.",
+      "The ₹260 crore health plan post no longer gives a bed count for the Sadhugram hospital, because reports differ on its size and site.",
+      "News pages redesigned for reading: real photos instead of one repeated banner, stories grouped by day, a Confirmed or Media report badge on every story, and a plain sources box. Bullet lists inside posts now display as lists.",
+      "Removed the newsletter sign-up form on the news page. It did not save any email address. It is replaced by the RSS feed and the Kumbh Sahayak news answers.",
+      "All 50 Wikimedia Commons photos are now on the site, each with its author and licence on the photo and on the credits page. Five image files with no licence on record (two of them iStock stock photos) were deleted from the repository; none of them was ever shown on the site.",
+    ],
+  },
+  {
     date: "2026-10-06",
     title: "Schedule corrections, 13 sourced news posts, new pilgrim pages",
     body: [
