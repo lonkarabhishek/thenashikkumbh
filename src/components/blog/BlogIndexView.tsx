@@ -95,7 +95,8 @@ export default function BlogIndexView({ articles }: { articles: ArticleCard[] })
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-cream-200/75">{t(COPY.subtitle)}</p>
           {latestDate && (
             <p className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-cream-200/60">
-              <span>
+              <span className="inline-flex items-center gap-2">
+                <span className="live-dot text-river-400" aria-hidden />
                 {t(COPY.lastUpdated)}:{" "}
                 <time dateTime={latestDate} className="font-semibold text-cream-100">
                   {formatDate(latestDate, locale)}

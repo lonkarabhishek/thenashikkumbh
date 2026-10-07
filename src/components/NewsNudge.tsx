@@ -14,6 +14,7 @@ const COPY = {
     mr: "सिंहस्थ तयारीच्या बातम्या",
   },
   all: { en: "All news", hi: "सभी समाचार", mr: "सर्व बातम्या" },
+  updated: { en: "Updated", hi: "अपडेट", mr: "अद्ययावत" },
 };
 
 /** Only what the box shows; the server passes it in so the full text of
@@ -36,6 +37,12 @@ export default function NewsNudge({ items: latest }: { items: NewsHeadline[] }) 
       <Reveal className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <span className="eyebrow">{t(COPY.kicker)}</span>
+          {latest[0] && (
+            <span className="ml-4 inline-flex items-center gap-2 align-middle text-xs font-medium text-temple-500">
+              <span className="live-dot text-river-500" aria-hidden />
+              {t(COPY.updated)} {fmtDate(latest[0].date, locale, { short: true })}
+            </span>
+          )}
           <h2 id="news-nudge-title" className="mt-5 text-title">
             {t(COPY.title)}
           </h2>
