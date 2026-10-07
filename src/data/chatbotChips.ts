@@ -6,6 +6,11 @@ type I18nText = { en: string; hi: string; mr: string };
 
 export const quickStartChips: { topicId: string; label: I18nText }[] = [
   {
+    // Answered from the news index, not a knowledge-base topic.
+    topicId: "latest-news",
+    label: { en: "Latest news", hi: "ताज़ा खबरें", mr: "ताज्या बातम्या" },
+  },
+  {
     topicId: "kumbh-dates",
     label: { en: "Kumbh Dates", hi: "कुंभ तिथियां", mr: "कुंभ तारखा" },
   },

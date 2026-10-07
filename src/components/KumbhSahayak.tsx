@@ -2,12 +2,20 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "@/components/LocaleLink";
-import { ArrowRight, Send, Sparkles, X } from "lucide-react";
+import { ArrowRight, Newspaper, Send, Sparkles, X } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useChat } from "@/context/ChatContext";
 import { chatbotUI } from "@/i18n/chatbotTranslations";
 import { quickStartChips, chatTopics } from "@/data/chatbotKnowledgeBase";
-import { getResponse, getTopicById, ChatResponse } from "@/lib/chatbotEngine";
+import {
+  getLatestNews,
+  getResponse,
+  getTopicById,
+  NEWS_TOPIC_ID,
+  type ChatLink,
+  type ChatResponse,
+} from "@/lib/chatbotEngine";
+import { formatDate } from "@/lib/dates";
 
 interface ChatMessage {
   id: string;
@@ -15,8 +23,31 @@ interface ChatMessage {
   content: string;
   quickReplies?: string[];
   pageLink?: string;
+  links?: ChatLink[];
+  linksTitle?: string;
   image?: string;
   provenance?: ChatResponse["provenance"];
+}
+
+function toMessage(response: ChatResponse): ChatMessage {
+  return {
+    id: (Date.now() + 1).toString(),
+    role: "assistant",
+    content: response.answer,
+    quickReplies: response.relatedTopics,
+    pageLink: response.pageLink,
+    links: response.links,
+    linksTitle: response.linksTitle,
+    image: response.image,
+    provenance: response.provenance,
+  };
+}
+
+/** Label for a quick-reply chip: a guide topic's question, or "Latest news". */
+function chipLabel(topicId: string, locale: "en" | "hi" | "mr"): string | null {
+  const chip = quickStartChips.find((c) => c.topicId === topicId);
+  if (topicId === NEWS_TOPIC_ID && chip) return chip.label[locale];
+  return chatTopics.find((t) => t.id === topicId)?.question[locale] ?? null;
 }
 
 const STATUS_LABEL: Record<string, { en: string; hi: string; mr: string }> = {
@@ -27,6 +58,8 @@ const STATUS_LABEL: Record<string, { en: string; hi: string; mr: string }> = {
   religious_tradition: { en: "Religious tradition", hi: "धार्मिक परंपरा", mr: "धार्मिक परंपरा" },
   awaiting_confirmation: { en: "Awaiting confirmation", hi: "पुष्टि की प्रतीक्षा", mr: "पुष्टीच्या प्रतीक्षेत" },
   unverified: { en: "Unverified", hi: "असत्यापित", mr: "असत्यापित" },
+  news_confirmed: { en: "News: confirmed", hi: "खबर: पुष्ट", mr: "बातमी: पुष्ट" },
+  news_reported: { en: "News: partly reported", hi: "खबर: कुछ बातें रिपोर्टेड", mr: "बातमी: काही तपशील माध्यमांतील" },
   commercial: { en: "Commercial", hi: "व्यावसायिक", mr: "व्यावसायिक" },
 };
 
@@ -90,50 +123,29 @@ export default function KumbhSahayak() {
 
     setTimeout(() => {
       setIsTyping(false);
-      const botMsg: ChatMessage = {
-        id: (Date.now() + 1).toString(),
-        role: "assistant",
-        content: response.answer,
-        quickReplies: response.relatedTopics,
-        pageLink: response.pageLink,
-        image: response.image,
-        provenance: response.provenance,
-      };
-      setMessages((prev) => [...prev, botMsg]);
+      setMessages((prev) => [...prev, toMessage(response)]);
     }, delay);
   }, [inputValue, locale]);
 
   const handleQuickReply = useCallback(
-    (topicId: string) => {
-      const topic = chatTopics.find((t) => t.id === topicId);
-      if (!topic) return;
+    async (topicId: string) => {
+      const label = chipLabel(topicId, locale);
+      if (!label) return;
 
       const userMsg: ChatMessage = {
         id: Date.now().toString(),
         role: "user",
-        content: topic.question[locale],
+        content: label,
       };
       setMessages((prev) => [...prev, userMsg]);
       setIsTyping(true);
 
-      const response = getTopicById(topicId, locale);
+      const response =
+        topicId === NEWS_TOPIC_ID ? await getLatestNews(locale) : getTopicById(topicId, locale);
 
       setTimeout(() => {
         setIsTyping(false);
-        if (response) {
-          setMessages((prev) => [
-            ...prev,
-            {
-              id: (Date.now() + 1).toString(),
-              role: "assistant",
-              content: response.answer,
-              quickReplies: response.relatedTopics,
-              pageLink: response.pageLink,
-              image: response.image,
-              provenance: response.provenance,
-            },
-          ]);
-        }
+        if (response) setMessages((prev) => [...prev, toMessage(response)]);
       }, 600 + Math.random() * 400);
     },
     [locale]
@@ -207,9 +219,16 @@ export default function KumbhSahayak() {
                     <button
                       key={chip.topicId}
                       onClick={() => handleQuickReply(chip.topicId)}
-                      className="group flex items-center justify-between gap-2 rounded-xl border border-temple-100 bg-cream-50 px-4 py-3 text-left text-sm font-medium text-temple-800 transition-colors hover:border-saffron-300 hover:bg-saffron-50"
+                      className={`group flex items-center justify-between gap-2 rounded-xl border px-4 py-3 text-left text-sm transition-colors ${
+                        chip.topicId === NEWS_TOPIC_ID
+                          ? "border-saffron-200 bg-saffron-50 font-semibold text-saffron-800 hover:border-saffron-400 hover:bg-saffron-100 sm:col-span-2"
+                          : "border-temple-100 bg-cream-50 font-medium text-temple-800 hover:border-saffron-300 hover:bg-saffron-50"
+                      }`}
                     >
-                      {chip.label[locale]}
+                      <span className="flex items-center gap-2">
+                        {chip.topicId === NEWS_TOPIC_ID && <Newspaper className="h-4 w-4 flex-shrink-0" />}
+                        {chip.label[locale]}
+                      </span>
                       <ArrowRight className="h-3.5 w-3.5 flex-shrink-0 text-temple-300 transition-all group-hover:translate-x-0.5 group-hover:text-saffron-600" />
                     </button>
                   ))}
@@ -262,6 +281,12 @@ export default function KumbhSahayak() {
                           {msg.provenance.sourceOrganisation}
                         </a>
                       )}
+                      {msg.provenance.publishedAt && (
+                        <span>
+                          {locale === "en" ? "Published " : locale === "hi" ? "प्रकाशित " : "प्रकाशित "}
+                          {formatDate(msg.provenance.publishedAt, locale, { short: true })}
+                        </span>
+                      )}
                       {msg.provenance.verifiedAt && (
                         <span>
                           {locale === "en"
@@ -271,6 +296,43 @@ export default function KumbhSahayak() {
                               : `सत्यापित ${msg.provenance.verifiedAt}`}
                         </span>
                       )}
+                    </div>
+                  )}
+
+                  {msg.links && msg.links.length > 0 && (
+                    <div className="ml-11 max-w-[85%] rounded-xl border border-temple-100 bg-cream-50 p-3">
+                      {msg.linksTitle && (
+                        <p
+                          className={`mb-2 flex items-start gap-1.5 text-xs font-semibold text-temple-700 ${
+                            deva ? "font-devanagari" : ""
+                          }`}
+                        >
+                          <Newspaper className="mt-px h-3.5 w-3.5 flex-shrink-0 text-saffron-600" />
+                          {msg.linksTitle}
+                        </p>
+                      )}
+                      <ul className="space-y-1">
+                        {msg.links.map((link) => (
+                          <li key={link.href}>
+                            <Link
+                              href={link.href}
+                              onClick={close}
+                              className={`group flex items-baseline justify-between gap-3 rounded-lg px-2 py-1.5 text-sm text-temple-800 transition-colors hover:bg-saffron-50 hover:text-saffron-800 ${
+                                deva ? "font-devanagari" : ""
+                              }`}
+                            >
+                              <span className="underline decoration-temple-200 underline-offset-2 group-hover:decoration-saffron-400">
+                                {link.label}
+                              </span>
+                              {link.meta && (
+                                <span className="flex-shrink-0 text-[0.6875rem] text-temple-400">
+                                  {link.meta}
+                                </span>
+                              )}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   )}
 
@@ -290,15 +352,15 @@ export default function KumbhSahayak() {
                   {msg.quickReplies && msg.quickReplies.length > 0 && (
                     <div className="ml-11 flex flex-wrap gap-2">
                       {msg.quickReplies.map((topicId) => {
-                        const topic = chatTopics.find((t) => t.id === topicId);
-                        if (!topic) return null;
+                        const label = chipLabel(topicId, locale);
+                        if (!label) return null;
                         return (
                           <button
                             key={topicId}
                             onClick={() => handleQuickReply(topicId)}
                             className="rounded-full border border-saffron-200 bg-saffron-50 px-3.5 py-1.5 text-xs font-medium text-saffron-800 transition-colors hover:border-saffron-400 hover:bg-saffron-100"
                           >
-                            {topic.question[locale]}
+                            {label}
                           </button>
                         );
                       })}
@@ -382,7 +444,7 @@ function Bubble({ children, deva }: { children: React.ReactNode; deva: boolean }
     <div className="flex items-end gap-3">
       <Avatar />
       <p
-        className={`max-w-[85%] rounded-2xl rounded-bl-sm border border-temple-100 bg-cream-100 px-4 py-3 leading-relaxed text-temple-800 ${
+        className={`max-w-[85%] whitespace-pre-line rounded-2xl rounded-bl-sm border border-temple-100 bg-cream-100 px-4 py-3 leading-relaxed text-temple-800 ${
           deva ? "font-devanagari" : ""
         }`}
       >
