@@ -9,6 +9,7 @@ export const article: BlogArticle = {
     mr: "नाशिक सिंहस्थासाठी ₹260 कोटींचा आरोग्य आराखडा: १३६ वैद्यकीय केंद्रे, १९० रुग्णवाहिका, १,९४५ खाटा",
   },
   date: "2026-10-06",
+  updated: "2026-10-07",
   source: "Times of India",
   sources: [
     {
@@ -37,9 +38,9 @@ export const article: BlogArticle = {
   image: "/images/og-image.jpg",
   photoId: 31,
   summary: {
-    en: "A ₹260 crore health plan for the 2027 Simhastha has been approved through NTKMA. It covers 136 temporary medical facilities, 190 ambulances, 3,600 extra staff, beds rising from 1,305 to 1,945 (185 ICU), a 10-bed hospital at Nandur Sadhugram and digital disease surveillance.",
-    hi: "2027 सिंहस्थ के लिए ₹260 करोड़ की स्वास्थ्य योजना को NTKMA के ज़रिए मंज़ूरी मिली है। इसमें 136 अस्थायी चिकित्सा केंद्र, 190 एम्बुलेंस, 3,600 अतिरिक्त कर्मचारी, 1,305 से 1,945 बेड (185 ICU), नांदूर साधुग्राम में 10 बेड का अस्पताल और डिजिटल रोग निगरानी शामिल है।",
-    mr: "२०२७ च्या सिंहस्थासाठी ₹260 कोटींच्या आरोग्य आराखड्याला NTKMA मार्फत मंजुरी मिळाली आहे. त्यात १३६ तात्पुरती वैद्यकीय केंद्रे, १९० रुग्णवाहिका, ३,६०० जादा कर्मचारी, १,३०५ वरून १,९४५ खाटा (१८५ ICU), नांदूर साधुग्राममध्ये १० खाटांचे रुग्णालय आणि डिजिटल रोग सर्वेक्षण यांचा समावेश आहे.",
+    en: "A ₹260 crore health plan for the 2027 Simhastha has been approved through NTKMA. It covers 136 temporary medical facilities, 190 ambulances, 3,600 extra staff, beds rising from 1,305 to 1,945 (185 ICU), a temporary hospital at Sadhugram and digital disease surveillance.",
+    hi: "2027 सिंहस्थ के लिए ₹260 करोड़ की स्वास्थ्य योजना को NTKMA के ज़रिए मंज़ूरी मिली है। इसमें 136 अस्थायी चिकित्सा केंद्र, 190 एम्बुलेंस, 3,600 अतिरिक्त कर्मचारी, 1,305 से 1,945 बेड (185 ICU), साधुग्राम में एक अस्थायी अस्पताल और डिजिटल रोग निगरानी शामिल है।",
+    mr: "२०२७ च्या सिंहस्थासाठी ₹260 कोटींच्या आरोग्य आराखड्याला NTKMA मार्फत मंजुरी मिळाली आहे. त्यात १३६ तात्पुरती वैद्यकीय केंद्रे, १९० रुग्णवाहिका, ३,६०० जादा कर्मचारी, १,३०५ वरून १,९४५ खाटा (१८५ ICU), साधुग्राममध्ये एक तात्पुरते रुग्णालय आणि डिजिटल रोग सर्वेक्षण यांचा समावेश आहे.",
   },
   content: {
     en: `A ₹260 crore health plan for the 2027 Nashik-Trimbakeshwar Simhastha has received administrative approval through the Nashik-Trimbakeshwar Kumbh Mela Authority (NTKMA). The Times of India reported this on 25 September 2026, based on the official approval.
@@ -51,7 +52,7 @@ According to the report, the plan covers:
 - 190 ambulances, both ALS (Advanced Life Support) and BLS (Basic Life Support)
 - 3,600 extra health staff
 - hospital beds rising from 1,305 to 1,945, including 185 ICU beds
-- a 10-bed temporary hospital at Nandur Sadhugram
+- a temporary hospital at Sadhugram (reports differ on its size and site, so we give no bed count)
 - a digital disease-surveillance system
 
 That is 640 more beds than today. The temporary facilities and the extra staff are meant for the mela period, on top of the hospitals Nashik already has.
@@ -60,7 +61,7 @@ That is 640 more beds than today. The temporary facilities and the extra staff a
 
 The scale of the mela explains the size of the plan. The NTKMA plan expects about 12 crore pilgrims in total. On an Amrit Snan day it expects about 1.5 crore people in Nashik and about 0.75 crore in Trimbak.
 
-The sadhu population is also expected to grow sharply. TOI has reported that about 10 lakh sadhus are expected, against about 2.5 lakh in 2015. The akhadas are housed at Sadhugram, and NMC expects sadhus to start arriving at Tapovan Sadhugram from July 2027. That is why the plan includes a temporary hospital at Nandur Sadhugram.
+The sadhu population is also expected to grow sharply. TOI has reported that about 10 lakh sadhus are expected, against about 2.5 lakh in 2015. The akhadas are housed at Sadhugram, and NMC expects sadhus to start arriving at Tapovan Sadhugram from July 2027. That is why the plan includes a temporary hospital at Sadhugram.
 
 The digital disease-surveillance system is meant to help health officials watch for illness across the mela area. When crores of people gather in one place, an early warning matters.
 
@@ -86,7 +87,7 @@ For travel, stay and other planning, read our [pilgrim guide](/guide). The Simha
 - 190 एम्बुलेंस, ALS (एडवांस्ड लाइफ सपोर्ट) और BLS (बेसिक लाइफ सपोर्ट) दोनों तरह की
 - 3,600 अतिरिक्त स्वास्थ्य कर्मचारी
 - अस्पताल बेड 1,305 से बढ़कर 1,945, जिनमें 185 ICU बेड
-- नांदूर साधुग्राम में 10 बेड का अस्थायी अस्पताल
+- साधुग्राम में एक अस्थायी अस्पताल (इसके आकार और जगह पर रिपोर्टों में अंतर है, इसलिए बेड की संख्या नहीं दी गई)
 - डिजिटल रोग निगरानी व्यवस्था
 
 यानी आज के मुकाबले 640 बेड ज़्यादा। अस्थायी केंद्र और अतिरिक्त कर्मचारी मेले की अवधि के लिए होंगे, नाशिक के मौजूदा अस्पतालों के अलावा।
@@ -95,7 +96,7 @@ For travel, stay and other planning, read our [pilgrim guide](/guide). The Simha
 
 योजना का आकार मेले के आकार से समझ में आता है। NTKMA योजना के अनुसार कुल करीब 12 करोड़ श्रद्धालु आएँगे। अमृत स्नान के दिन नाशिक में करीब 1.5 करोड़ और त्र्यंबक में करीब 0.75 करोड़ लोगों का अनुमान है।
 
-साधुओं की संख्या भी काफी बढ़ने की उम्मीद है। TOI की रिपोर्ट के अनुसार करीब 10 लाख साधु आ सकते हैं, जबकि 2015 में करीब 2.5 लाख आए थे। अखाड़ों का डेरा साधुग्राम में होता है, और NMC को उम्मीद है कि जुलाई 2027 से तपोवन साधुग्राम में साधु आने लगेंगे। इसीलिए नांदूर साधुग्राम में अस्थायी अस्पताल योजना का हिस्सा है।
+साधुओं की संख्या भी काफी बढ़ने की उम्मीद है। TOI की रिपोर्ट के अनुसार करीब 10 लाख साधु आ सकते हैं, जबकि 2015 में करीब 2.5 लाख आए थे। अखाड़ों का डेरा साधुग्राम में होता है, और NMC को उम्मीद है कि जुलाई 2027 से तपोवन साधुग्राम में साधु आने लगेंगे। इसीलिए साधुग्राम में अस्थायी अस्पताल योजना का हिस्सा है।
 
 डिजिटल रोग निगरानी व्यवस्था का मकसद है कि स्वास्थ्य अधिकारी पूरे मेला क्षेत्र में बीमारियों पर नज़र रख सकें। जब करोड़ों लोग एक जगह जुटते हैं, तब समय पर चेतावनी बहुत ज़रूरी होती है।
 
@@ -121,7 +122,7 @@ For travel, stay and other planning, read our [pilgrim guide](/guide). The Simha
 - १९० रुग्णवाहिका, ALS (ॲडव्हान्स्ड लाइफ सपोर्ट) आणि BLS (बेसिक लाइफ सपोर्ट) दोन्ही प्रकारच्या
 - ३,६०० जादा आरोग्य कर्मचारी
 - रुग्णालयातील खाटा १,३०५ वरून १,९४५, त्यात १८५ ICU खाटा
-- नांदूर साधुग्राम येथे १० खाटांचे तात्पुरते रुग्णालय
+- साधुग्राममध्ये एक तात्पुरते रुग्णालय (त्याच्या आकाराबाबत आणि जागेबाबत वृत्तांमध्ये फरक असल्याने खाटांची संख्या दिलेली नाही)
 - डिजिटल रोग सर्वेक्षण यंत्रणा
 
 म्हणजे सध्यापेक्षा ६४० खाटा जास्त. तात्पुरती केंद्रे आणि जादा कर्मचारी मेळ्याच्या काळासाठी असतील, नाशिकमधील सध्याच्या रुग्णालयांव्यतिरिक्त.
@@ -130,7 +131,7 @@ For travel, stay and other planning, read our [pilgrim guide](/guide). The Simha
 
 मेळ्याचा आवाका पाहिला की आराखड्याचा आकार लक्षात येतो. NTKMA आराखड्यानुसार एकूण सुमारे १२ कोटी भाविक येतील. अमृत स्नानाच्या दिवशी नाशिकमध्ये सुमारे १.५ कोटी आणि त्र्यंबकमध्ये सुमारे ०.७५ कोटी लोक अपेक्षित आहेत.
 
-साधूंची संख्याही मोठ्या प्रमाणात वाढण्याची अपेक्षा आहे. TOI च्या वृत्तानुसार सुमारे १० लाख साधू येतील, तर २०१५ मध्ये ही संख्या सुमारे २.५ लाख होती. आखाड्यांचा मुक्काम साधुग्राममध्ये असतो, आणि जुलै २०२७ पासून तपोवन साधुग्राममध्ये साधू येऊ लागतील, अशी महापालिकेची अपेक्षा आहे. म्हणूनच नांदूर साधुग्राममधील तात्पुरते रुग्णालय आराखड्यात आहे.
+साधूंची संख्याही मोठ्या प्रमाणात वाढण्याची अपेक्षा आहे. TOI च्या वृत्तानुसार सुमारे १० लाख साधू येतील, तर २०१५ मध्ये ही संख्या सुमारे २.५ लाख होती. आखाड्यांचा मुक्काम साधुग्राममध्ये असतो, आणि जुलै २०२७ पासून तपोवन साधुग्राममध्ये साधू येऊ लागतील, अशी महापालिकेची अपेक्षा आहे. म्हणूनच साधुग्राममधील तात्पुरते रुग्णालय आराखड्यात आहे.
 
 संपूर्ण मेळा परिसरात आजारांवर लक्ष ठेवता यावे, यासाठी डिजिटल रोग सर्वेक्षण यंत्रणा आहे. कोट्यवधी लोक एकाच ठिकाणी जमतात तेव्हा वेळेत धोक्याची सूचना मिळणे फार महत्त्वाचे असते.
 
