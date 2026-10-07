@@ -1,6 +1,14 @@
 import { NEWS_AUTHOR, blogArticles } from "@/data/blogData";
 import type { Locale } from "@/i18n/translations";
 import { SITE_NAME, SITE_URL, localeUrl } from "@/lib/seo";
+import { newsStatus } from "@/components/blog/newsMeta";
+import { STATUS_LABEL } from "@/components/blog/newsCopy";
+
+/** Summary with its status up front ("Media report: ..."), as the site shows a badge. */
+function feedSummary(a: (typeof blogArticles)[number], locale: Locale): string {
+  const status = newsStatus(a);
+  return status ? `${STATUS_LABEL[status][locale]}: ${a.summary[locale]}` : a.summary[locale];
+}
 
 const esc = (s: string) =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -26,7 +34,7 @@ export function rssFeed(locale: Locale): string {
       <pubDate>${pubDate(a.date).toUTCString()}</pubDate>
       <dc:creator>${esc(NEWS_AUTHOR.name)}</dc:creator>
       <category>${esc(a.category)}</category>
-      <description>${esc(a.summary[locale])}</description>
+      <description>${esc(feedSummary(a, locale))}</description>
     </item>`;
     })
     .join("\n");
@@ -37,7 +45,7 @@ export function rssFeed(locale: Locale): string {
     <title>${esc(FEED_TITLE[locale])}</title>
     <link>${localeUrl(locale, "/blog")}</link>
     <atom:link href="${locale === "en" ? `${SITE_URL}/feed` : localeUrl(locale, "/feed")}" rel="self" type="application/rss+xml" />
-    <description>${esc(`${SITE_NAME}: independent, sourced news on the Nashik–Trimbakeshwar Simhastha Kumbh Mela 2027.`)}</description>
+    <description>${esc(`${SITE_NAME}: independent, sourced news on the Nashik-Trimbakeshwar Simhastha Kumbh Mela 2027.`)}</description>
     <language>${locale}-IN</language>
     <lastBuildDate>${pubDate(blogArticles[0]?.updated ?? blogArticles[0]?.date ?? "2026-10-06").toUTCString()}</lastBuildDate>
 ${items}
