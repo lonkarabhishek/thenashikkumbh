@@ -21,5 +21,19 @@ export const chatbotUI: Record<string, I18nText> = {
     mr: "मला याबद्दल अजून पूर्ण माहिती नाही, पण मी शिकत आहे! कुंभाच्या तारखा, नाशिकला कसे पोहोचावे, पवित्र घाट, निवास किंवा ताज्या बातम्यांबद्दल विचारा.",
   },
   readMore: { en: "Read more on our site", hi: "हमारी साइट पर और पढ़ें", mr: "आमच्या साइटवर अधिक वाचा" },
-  poweredBy: { en: "Powered by Kumbh AI", hi: "कुंभ AI द्वारा संचालित", mr: "कुंभ AI द्वारे संचालित" },
+  aiNote: {
+    en: "Answers are written by Claude AI from this site's verified content only. They can still be wrong. Check official notices before you travel.",
+    hi: "उत्तर Claude AI इस साइट की जाँची हुई सामग्री से ही लिखता है। फिर भी गलती हो सकती है। यात्रा से पहले आधिकारिक सूचना देखें।",
+    mr: "उत्तरे Claude AI या साइटवरील पडताळलेल्या माहितीतूनच लिहिते. तरीही चूक होऊ शकते. प्रवासापूर्वी अधिकृत सूचना पाहा.",
+  },
+  localNote: {
+    en: "Answers come from this site's verified content. For any emergency dial 112.",
+    hi: "उत्तर इस साइट की जाँची हुई सामग्री से आते हैं। किसी भी आपात स्थिति में 112 डायल करें।",
+    mr: "उत्तरे या साइटवरील पडताळलेल्या माहितीतून येतात. कोणत्याही आपत्कालीन स्थितीत ११२ डायल करा.",
+  },
+  busyNote: {
+    en: "The AI assistant has reached today's limit, so answers now come from the site's built-in guide.",
+    hi: "AI सहायक की आज की सीमा पूरी हो गई है, इसलिए अब उत्तर साइट की अपनी गाइड से आ रहे हैं।",
+    mr: "AI सहायकाची आजची मर्यादा संपली आहे, त्यामुळे आता उत्तरे साइटच्या स्वतःच्या मार्गदर्शकातून येत आहेत.",
+  },
 };

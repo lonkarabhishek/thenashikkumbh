@@ -33,8 +33,8 @@ interface MatchResult {
   score: number;
 }
 
-/** Chat-only labels for answers taken from a news post. */
-export type NewsStatus = "news_confirmed" | "news_reported";
+/** Chat-only labels: answers taken from a news post, or written by the AI. */
+export type NewsStatus = "news_confirmed" | "news_reported" | "ai_grounded";
 
 export interface ChatLink {
   href: string;

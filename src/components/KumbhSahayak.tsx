@@ -16,6 +16,8 @@ import {
   type ChatResponse,
 } from "@/lib/chatbotEngine";
 import { formatDate } from "@/lib/dates";
+import { askAi } from "@/lib/sahayakClient";
+import RichText from "@/components/RichText";
 
 interface ChatMessage {
   id: string;
@@ -60,6 +62,7 @@ const STATUS_LABEL: Record<string, { en: string; hi: string; mr: string }> = {
   unverified: { en: "Unverified", hi: "असत्यापित", mr: "असत्यापित" },
   news_confirmed: { en: "News: confirmed", hi: "खबर: पुष्ट", mr: "बातमी: पुष्ट" },
   news_reported: { en: "News: partly reported", hi: "खबर: कुछ बातें रिपोर्टेड", mr: "बातमी: काही तपशील माध्यमांतील" },
+  ai_grounded: { en: "AI answer from site content", hi: "साइट की सामग्री से AI उत्तर", mr: "साइटवरील माहितीतून AI उत्तर" },
   commercial: { en: "Commercial", hi: "व्यावसायिक", mr: "व्यावसायिक" },
 };
 
@@ -70,6 +73,8 @@ export default function KumbhSahayak() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
+  /** Which engine answered last: decides the note under the composer. */
+  const [aiMode, setAiMode] = useState<"ai" | "local" | "busy" | null>(null);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -106,26 +111,48 @@ export default function KumbhSahayak() {
   }, [isOpen, close]);
 
   const handleSend = useCallback(async () => {
-    if (!inputValue.trim()) return;
+    const question = inputValue.trim();
+    if (!question) return;
 
-    const userMsg: ChatMessage = {
-      id: Date.now().toString(),
-      role: "user",
-      content: inputValue.trim(),
-    };
+    const userMsg: ChatMessage = { id: Date.now().toString(), role: "user", content: question };
+    // The last few turns go along so follow-ups ("and in Trimbak?") make sense.
+    const history = messages.slice(-8).map((m) => ({ role: m.role, content: m.content }));
 
     setMessages((prev) => [...prev, userMsg]);
     setInputValue("");
     setIsTyping(true);
 
-    const delay = 800 + Math.random() * 700;
-    const response: ChatResponse = await getResponse(inputValue.trim(), locale);
-
-    setTimeout(() => {
+    const aiId = `${Date.now()}-ai`;
+    const showDelta = (text: string) => {
       setIsTyping(false);
-      setMessages((prev) => [...prev, toMessage(response)]);
-    }, delay);
-  }, [inputValue, locale]);
+      setMessages((prev) => {
+        const existing = prev.find((m) => m.id === aiId);
+        const draft: ChatMessage = { id: aiId, role: "assistant", content: text, provenance: { status: "ai_grounded" } };
+        return existing ? prev.map((m) => (m.id === aiId ? { ...m, content: text } : m)) : [...prev, draft];
+      });
+    };
+
+    const result = await askAi(locale, [...history, { role: "user", content: question }], showDelta);
+
+    if (result.kind === "fallback") {
+      // No key, budget spent, or an error before any text: the built-in engine answers.
+      setAiMode(result.reason === "daily_cap" || result.reason === "visitor_day" ? "busy" : "local");
+      const response: ChatResponse = await getResponse(question, locale);
+      setTimeout(() => {
+        setIsTyping(false);
+        setMessages((prev) => [...prev, toMessage(response)]);
+      }, 500 + Math.random() * 400);
+      return;
+    }
+
+    setAiMode("ai");
+    setIsTyping(false);
+    setMessages((prev) =>
+      prev.map((m) =>
+        m.id === aiId ? { ...m, content: result.text, quickReplies: [NEWS_TOPIC_ID, "kumbh-dates"] } : m
+      )
+    );
+  }, [inputValue, locale, messages]);
 
   const handleQuickReply = useCallback(
     async (topicId: string) => {
@@ -261,6 +288,8 @@ export default function KumbhSahayak() {
                             ? "bg-river-100 text-river-800"
                             : msg.provenance.status === "awaiting_confirmation"
                               ? "bg-saffron-100 text-saffron-800"
+                              : msg.provenance.status === "ai_grounded"
+                              ? "bg-indigo-50 text-indigo-800"
                               : msg.provenance.status === "historical" ||
                                   msg.provenance.status === "religious_tradition"
                                 ? "bg-cream-200 text-temple-700"
@@ -420,8 +449,12 @@ export default function KumbhSahayak() {
               </button>
             </div>
 
-            <p className="mt-2.5 text-center text-[0.6875rem] text-temple-300">
-              {chatbotUI.poweredBy[locale]}
+            <p className="mt-2.5 text-center text-[0.6875rem] leading-snug text-temple-400">
+              {aiMode === "ai"
+                ? chatbotUI.aiNote[locale]
+                : aiMode === "busy"
+                  ? chatbotUI.busyNote[locale]
+                  : chatbotUI.localNote[locale]}
             </p>
           </div>
         </div>
@@ -439,17 +472,17 @@ function Avatar() {
 }
 
 /** An assistant message, with the avatar rail the quick replies align to. */
-function Bubble({ children, deva }: { children: React.ReactNode; deva: boolean }) {
+function Bubble({ children, deva }: { children: string; deva: boolean }) {
   return (
     <div className="flex items-end gap-3">
       <Avatar />
-      <p
-        className={`max-w-[85%] whitespace-pre-line rounded-2xl rounded-bl-sm border border-temple-100 bg-cream-100 px-4 py-3 leading-relaxed text-temple-800 ${
+      <div
+        className={`max-w-[85%] rounded-2xl rounded-bl-sm border border-temple-100 bg-cream-100 px-4 py-3 ${
           deva ? "font-devanagari" : ""
         }`}
       >
-        {children}
-      </p>
+        <RichText text={children} compact />
+      </div>
     </div>
   );
 }
