@@ -54,9 +54,10 @@ const SECTIONS = [
     id: "ai",
     title: "AI assistant limits",
     body: [
-      "The Kumbh Sahayak assistant answers only from the approved content registry. Every answer displays its information status and, where applicable, a link to the underlying source and the date on which we verified it.",
-      "Safety-critical questions that we cannot answer confidently are refused honestly; the assistant will route the pilgrim to NTKMA and to 112 rather than guess.",
-      "The assistant does not personalise, remember conversations, or transmit user messages to external providers.",
+      "The Kumbh Sahayak assistant answers only from this site's approved content: the verified schedule and helplines, the guide topics, the long-form pages and the news posts that carry linked sources. Every answer shows whether it came from the AI model or from the built-in guide, and links the pages it drew on.",
+      "Typed questions are answered by Claude, an AI model from Anthropic. We send your question, the last few messages of your chat and the matching passages of our own content to Anthropic's API to write the reply. The model is instructed to use only that content and to say so when something is not published yet. It can still make mistakes. Check official notices before you travel.",
+      "We do not store your questions or the answers. To keep the feature affordable and to stop misuse we count requests per visitor for one day, using a one-way hash of your network address and browser that cannot be reversed; the counts are discarded after two days. Anthropic handles the request under its own API data policy.",
+      "Safety-critical questions that cannot be answered from our content are refused honestly; the assistant routes the pilgrim to NTKMA and to 112 rather than guess. When the daily budget for the AI model is used up, the chat falls back to the built-in guide and says so.",
     ],
   },
   {
