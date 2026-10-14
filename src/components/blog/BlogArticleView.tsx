@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "@/components/LocaleLink";
+import NewsRelatedGuides from "@/components/seo/NewsRelatedGuides";
 import { ArrowLeft, ArrowUpRight, Check, Clock, Share2 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import type { Locale } from "@/i18n/translations";
@@ -201,6 +202,8 @@ export default function BlogArticleView({
           )}
 
           {/* Sources */}
+          <NewsRelatedGuides currentSlug={article.slug} />
+
           {article.sources && article.sources.length > 0 && (
             <aside
               className="mt-12 rounded-card border border-temple-100 bg-cream-100/70 p-5 sm:p-6"

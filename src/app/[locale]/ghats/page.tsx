@@ -14,6 +14,7 @@ import {
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { ghatsI18n } from "@/data/siteDataI18n";
+import RamkundNotice from "@/components/seo/RamkundNotice";
 import NewGhats2027 from "@/components/NewGhats2027";
 
 /* ───────────────── Warm gradient palettes for each ghat ───────────────────── */
@@ -96,6 +97,8 @@ export default function GhatsPage() {
           </div>
         </div>
       </section>
+
+      <RamkundNotice />
 
       {/* ═══════════════════ (b) INTRO ABOUT THE GHATS ═══════════════════════ */}
       <section className="relative py-20 md:py-28 bg-cream-50">
