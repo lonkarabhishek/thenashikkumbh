@@ -46,7 +46,7 @@ const SECTIONS = [
     id: "corrections",
     title: "Corrections policy",
     body: [
-      "If you notice a factual error, please write to the site's editorial address (see Contact below). We will respond within seven working days. Corrections to factual claims are logged in the public changelog.",
+      "If you notice a factual error, please tell us through the contact page (see Contact below). We will respond within seven working days. Corrections to factual claims are logged in the public changelog.",
       "If a correction affects an emergency-critical claim (helpline numbers, evacuation guidance, medical facilities, transport that pilgrims are relying on), we will apply the correction immediately and note it in the changelog on publication.",
     ],
   },
@@ -151,8 +151,7 @@ export default function PoliciesPage() {
             <h2 className="font-heading text-title text-temple-900">Contact</h2>
             <p className="mt-3 leading-relaxed text-temple-600">
               For factual corrections, accessibility issues, or content complaints,
-              please write to <span className="font-mono text-temple-800">editorial@thenashikkumbh.com</span>{" "}
-              (address to be published once monitored).
+              please use the links on our <a href="/en/contact" className="underline decoration-temple-200 underline-offset-2 hover:text-saffron-700">contact page</a>. The site is owned and run by Abhishek Lonkar.
             </p>
             <p className="mt-3 leading-relaxed text-temple-600">
               For official Kumbh matters, please contact the Nashik–Trimbakeshwar

@@ -1,5 +1,6 @@
+import { OWNER_SAME_AS, SITE_OWNER } from "@/data/siteOwner";
 import { Metadata } from "next";
-import { NEWS_AUTHOR, getArticleBySlug, getAllSlugs } from "@/data/blogData";
+import { getArticleBySlug, getAllSlugs } from "@/data/blogData";
 import { getPhoto, isPhotoAvailable } from "@/data/photos";
 import JsonLd from "@/components/JsonLd";
 import { LOCALES } from "@/i18n/locales";
@@ -39,7 +40,7 @@ export function generateMetadata({ params }: Omit<Props, "children">): Metadata 
     keywords: ["Kumbh Mela", "Nashik", article.category, "Simhastha 2027", "Godavari"],
     type: "article",
     publishedTime: article.date,
-    authors: [NEWS_AUTHOR.name],
+    authors: [SITE_OWNER.name],
   });
 }
 
@@ -78,9 +79,11 @@ export default function BlogSlugLayout({ params, children }: Props) {
     datePublished: article.date,
     dateModified: article.updated ?? article.date,
     author: {
-      "@type": "Organization",
-      name: NEWS_AUTHOR.name,
-      url: localeUrl(locale, NEWS_AUTHOR.path),
+      "@type": "Person",
+      "@id": `${SITE_URL}/#owner`,
+      name: SITE_OWNER.name,
+      url: localeUrl(locale, "/about#who-runs-this-site"),
+      sameAs: OWNER_SAME_AS,
     },
     // The original reporting or official document, credited as the source.
     ...(article.sources?.length
