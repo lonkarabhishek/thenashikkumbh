@@ -52,6 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...localized("/naga-sadhus", "monthly", 0.7),
     ...localized("/gallery", "monthly", 0.7),
     ...localized("/credits", "monthly", 0.2),
+    ...localized("/contact", "yearly", 0.3),
     ...localized("/blog", "daily", 0.85),
     // Games and Kumbh Run are secondary interest surfaces, not part of the
     // pilgrim's operational path, so they stay at low priority.

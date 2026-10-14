@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "@/components/LocaleLink";
-import { Facebook, Instagram, Mail, Phone, Twitter, Youtube } from "lucide-react";
+import { Facebook, Instagram, Mail, Phone } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { navExtra } from "@/i18n/navExtra";
@@ -46,8 +46,6 @@ const COLUMNS = [
 const SOCIALS = [
   { icon: Facebook, href: "https://facebook.com/thenashikkumbh", label: "Facebook" },
   { icon: Instagram, href: "https://instagram.com/thenashikkumbh", label: "Instagram" },
-  { icon: Youtube, href: "https://youtube.com/@thenashikkumbh", label: "YouTube" },
-  { icon: Twitter, href: "https://twitter.com/thenashikkumbh", label: "X" },
 ];
 
 /** Numbers that work without a data connection, worth repeating on every page. */
@@ -209,6 +207,16 @@ export default function Footer() {
             <li>
               <Link href="/policies" className="hover:text-cream-50">
                 {t({ en: "Policies", hi: "नीतियाँ", mr: "धोरणे" })}
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-cream-50">
+                {t({ en: "Contact and legal notice", hi: "संपर्क और क़ानूनी सूचना", mr: "संपर्क आणि कायदेशीर सूचना" })}
+              </Link>
+            </li>
+            <li>
+              <Link href="/credits" className="hover:text-cream-50">
+                {t({ en: "Photo credits", hi: "फोटो श्रेय", mr: "फोटो श्रेय" })}
               </Link>
             </li>
             <li>

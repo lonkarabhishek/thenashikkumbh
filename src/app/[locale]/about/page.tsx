@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
+import AboutThisSite from "@/components/trust/AboutThisSite";
 
 /* ───────────────────── Samudra Manthan timeline data ───────────────────────── */
 
@@ -110,6 +111,8 @@ export default function AboutKumbhMelaPage() {
           </div>
         </div>
       </section>
+
+      <AboutThisSite />
 
       {/* ════════════════════ (b) WHAT IS KUMBH MELA? ════════════════════════ */}
       <section className="relative py-20 md:py-28 bg-cream-50">

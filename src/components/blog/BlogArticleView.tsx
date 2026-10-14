@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import Link from "@/components/LocaleLink";
+import AuthorBox from "@/components/trust/AuthorBox";
+import DatesCanonicalNote from "@/components/trust/DatesCanonicalNote";
+import { DATE_INTENT_SLUGS } from "@/data/siteOwner";
 import NewsRelatedGuides from "@/components/seo/NewsRelatedGuides";
 import { ArrowLeft, ArrowUpRight, Check, Clock, Share2 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
@@ -183,6 +186,7 @@ export default function BlogArticleView({
 
         {/* ══════ Body ══════ */}
         <div className="mx-auto mt-10 max-w-[46rem] px-4 sm:px-6">
+          {DATE_INTENT_SLUGS.includes(article.slug) && <DatesCanonicalNote />}
           <RichText text={article.content[locale]} tone="light" />
 
           {article.faq && article.faq.length > 0 && (
@@ -200,6 +204,8 @@ export default function BlogArticleView({
               </div>
             </section>
           )}
+
+          <AuthorBox />
 
           {/* Sources */}
           <NewsRelatedGuides currentSlug={article.slug} />
