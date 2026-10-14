@@ -6,15 +6,27 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Link from "@/components/LocaleLink";
 import PhotoCredit from "@/components/photos/PhotoCredit";
 import { useLanguage } from "@/context/LanguageContext";
+import { galleryFaqs, galleryPhotoCount } from "@/data/galleryFaq";
 import { PHOTO_TOPICS, TOPIC_LABEL, availablePhotos, type CommonsPhoto } from "@/data/photos";
 
+const PHOTO_COUNT = galleryPhotoCount();
 
 const COPY = {
   title: { en: "Photos of Kumbh Mela Nashik", hi: "नाशिक कुंभ मेला फोटो", mr: "नाशिक कुंभमेळा फोटो" },
   intro: {
-    en: "Photos of Nashik, Trimbakeshwar and earlier Simhasthas, freely licensed on Wikimedia Commons. Every photo is credited to its photographer.",
-    hi: "नाशिक, त्र्यंबकेश्वर और पिछले सिंहस्थों की तस्वीरें, विकिमीडिया कॉमन्स पर मुक्त लाइसेंस के साथ। हर फोटो पर फोटोग्राफर का श्रेय दिया गया है।",
-    mr: "नाशिक, त्र्यंबकेश्वर आणि आधीच्या सिंहस्थांची छायाचित्रे, विकिमीडिया कॉमन्सवर मुक्त परवान्यासह. प्रत्येक फोटोवर छायाचित्रकाराचे श्रेय दिले आहे.",
+    en: `This gallery shows ${PHOTO_COUNT} freely licensed photos of Nashik, Trimbakeshwar and earlier Simhasthas. Every photo is credited to its photographer.`,
+    hi: `इस गैलरी में नाशिक, त्र्यंबकेश्वर और पहले के सिंहस्थों की ${PHOTO_COUNT} मुक्त-लाइसेंस तस्वीरें हैं। हर फोटो पर फोटोग्राफर का श्रेय दिया गया है।`,
+    mr: `या गॅलरीत नाशिक, त्र्यंबकेश्वर आणि आधीच्या सिंहस्थांची ${PHOTO_COUNT} मुक्त-परवाना छायाचित्रे आहेत. प्रत्येक फोटोवर छायाचित्रकाराचे श्रेय दिले आहे.`,
+  },
+  relatedTitle: {
+    en: "Related guides",
+    hi: "संबंधित गाइड",
+    mr: "संबंधित मार्गदर्शक",
+  },
+  faqTitle: {
+    en: "Common questions about these photos",
+    hi: "इन तस्वीरों के बारे में आम सवाल",
+    mr: "या छायाचित्रांबद्दल नेहमीचे प्रश्न",
   },
   credits: { en: "All photo credits", hi: "सभी फोटो श्रेय", mr: "सर्व फोटो श्रेय" },
   close: { en: "Close", hi: "बंद करें", mr: "बंद करा" },
@@ -22,8 +34,36 @@ const COPY = {
   next: { en: "Next photo", hi: "अगली फोटो", mr: "पुढील फोटो" },
 };
 
+const RELATED = [
+  {
+    href: "/ghats",
+    label: {
+      en: "Ramkund and Godavari ghats guide",
+      hi: "रामकुंड और गोदावरी घाट गाइड",
+      mr: "रामकुंड व गोदावरी घाट मार्गदर्शक",
+    },
+  },
+  {
+    href: "/dates",
+    label: {
+      en: "Amrit Snan dates 2027 (all Kumbh dates)",
+      hi: "अमृत स्नान तिथियाँ 2027 (सभी कुंभ तिथियाँ)",
+      mr: "अमृत स्नान तारखा २०२७ (सर्व कुंभ तारखा)",
+    },
+  },
+  {
+    href: "/naga-sadhus",
+    label: {
+      en: "Naga Sadhus and akhadas at Nashik Kumbh",
+      hi: "नाशिक कुंभ में नागा साधु और अखाड़े",
+      mr: "नाशिक कुंभातील नागा साधू आणि आखाडे",
+    },
+  },
+];
+
 export default function CommonsGallery() {
-  const { t } = useLanguage();
+  const { locale, t } = useLanguage();
+  const faqs = galleryFaqs();
   const groups = PHOTO_TOPICS.map((topic) => ({
     topic,
     items: availablePhotos.filter((p) => p.topic === topic),
@@ -54,6 +94,20 @@ export default function CommonsGallery() {
       <div className="section-container">
         <h1 className="font-heading text-4xl font-bold text-temple-900 md:text-5xl">{t(COPY.title)}</h1>
         <p className="mt-4 max-w-3xl text-lg text-temple-600">{t(COPY.intro)}</p>
+
+        <nav aria-label={COPY.relatedTitle[locale]} className="mt-6 rounded-xl border border-temple-200 bg-cream-100 p-4 sm:p-5">
+          <h2 className="font-heading text-base font-bold text-temple-900">{t(COPY.relatedTitle)}</h2>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-temple-800">
+            {RELATED.map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="underline">
+                  {l.label[locale]}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         <nav className="mt-6 flex flex-wrap gap-2" aria-label="Topics">
           {groups.map((g) => (
             <a
@@ -99,6 +153,20 @@ export default function CommonsGallery() {
             </ul>
           </section>
         ))}
+
+        <section className="mt-16 max-w-3xl" aria-labelledby="gallery-faq-title">
+          <h2 id="gallery-faq-title" className="font-heading text-2xl font-bold text-temple-900 md:text-3xl">
+            {t(COPY.faqTitle)}
+          </h2>
+          <div className="mt-6 divide-y divide-temple-100 rounded-card border border-temple-100 bg-cream-50">
+            {faqs.map((f) => (
+              <div key={f.q.en} className="p-5 sm:p-6">
+                <h3 className="font-semibold text-temple-900">{t(f.q)}</h3>
+                <p className="mt-2 leading-relaxed text-temple-600">{t(f.a)}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <p className="mt-14 text-sm">
           <Link href="/credits" className="rich-link text-[#a0522d]">
