@@ -22,8 +22,22 @@ import { article as ramjhula } from "./ramjhula-ram-figure-proposal";
 import { article as samarth } from "./swami-samarth-kendra-protest";
 import { article as godavariSample } from "./godavari-water-sampled-high-court";
 
-/** News posts published from the 6 and 7 October 2026 briefings, one file each. */
+import { article as dhwajDeadline } from "./dhwajarohan-prep-deadline-oct-20";
+import { article as ramkundClosed } from "./ramkund-closed-15-20-days";
+import { article as mahaAarti } from "./joint-maha-aarti-shankhnaad";
+import { article as cmInspects } from "./cm-fadnavis-inspects-kumbh-works";
+import { article as chromium } from "./chromium-nandini-ambad";
+import { article as digitalKumbh } from "./digital-kumbh-kumbhdoot";
+
+/** News posts published from the 6, 7 and 14 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 14 October 2026
+  dhwajDeadline,
+  ramkundClosed,
+  mahaAarti,
+  cmInspects,
+  chromium,
+  digitalKumbh,
   // 7 October 2026
   police,
   banks,

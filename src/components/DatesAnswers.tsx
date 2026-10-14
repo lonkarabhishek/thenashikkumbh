@@ -2,7 +2,9 @@
 
 import { CalendarDays } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
-import { scheduleUpdated } from "@/data/verified";
+import { schedule, scheduleUpdated } from "@/data/verified";
+
+const opening = schedule.find((e) => e.id === "dhwajarohan");
 import { amritSnans, datesFaqs, formatScheduleDate as formatDate } from "@/data/datesFaq";
 
 /**
@@ -15,15 +17,17 @@ import { amritSnans, datesFaqs, formatScheduleDate as formatDate } from "@/data/
 
 const COPY = {
   quickTitle: {
-    en: "Shahi Snan (Amrit Snan) dates at a glance",
-    hi: "शाही स्नान (अमृत स्नान) की तिथियाँ एक नज़र में",
-    mr: "नाशिक कुंभमेळा कधी आहे? शाही स्नान (अमृत स्नान) तारखा",
+    en: "Amrit Snan dates 2027 (Shahi Snan) at a glance",
+    hi: "अमृत स्नान तिथियाँ 2027 (शाही स्नान) एक नज़र में",
+    mr: "नाशिक कुंभमेळा कधी आहे? अमृत स्नान (शाही स्नान) तारखा 2027",
   },
   quickNote: {
-    en: "Shahi Snan is now officially called Amrit Snan. It is the same royal bath.",
-    hi: "शाही स्नान को अब आधिकारिक रूप से अमृत स्नान कहा जाता है। यह वही शाही स्नान है।",
-    mr: "शाही स्नानाला आता अधिकृतपणे अमृत स्नान म्हणतात. हे तेच शाही स्नान आहे.",
+    en: "Shahi Snan has been renamed Amrit Snan; it is the same royal bath. Times are in IST.",
+    hi: "शाही स्नान का नाम बदलकर अमृत स्नान कर दिया गया है; यह वही शाही स्नान है। समय IST में है।",
+    mr: "शाही स्नानाचे नाव बदलून अमृत स्नान केले आहे; हे तेच शाही स्नान आहे. वेळ IST मध्ये आहे.",
   },
+  colDate: { en: "Date", hi: "तिथि", mr: "तारीख" },
+  colEvent: { en: "Event and place", hi: "कार्यक्रम और स्थान", mr: "कार्यक्रम आणि ठिकाण" },
   updated: { en: "Last updated", hi: "अंतिम अपडेट", mr: "अखेरचे अद्ययावत" },
   faqTitle: {
     en: "Common questions about the dates",
@@ -45,18 +49,29 @@ export function DatesQuickAnswer() {
           <CalendarDays className="h-6 w-6 shrink-0 text-saffron-600" />
           {t(COPY.quickTitle)}
         </h2>
-        <ol className="mt-5 divide-y divide-temple-100">
-          {amritSnans.map((e) => (
-            <li key={e.id} className="flex flex-col gap-1 py-3 sm:flex-row sm:items-baseline sm:gap-6">
-              <time dateTime={e.isoDate} className="w-48 shrink-0 font-semibold text-temple-900">
-                {formatDate(e.isoDate, locale)}
-              </time>
-              <span className="text-temple-600">
-                {t(e.name)} · {t(e.location)}
-              </span>
-            </li>
-          ))}
-        </ol>
+        <table className="mt-5 w-full text-left">
+          <thead>
+            <tr className="border-b border-temple-200 text-sm text-temple-500">
+              <th scope="col" className="py-2 pr-4 font-medium">{t(COPY.colDate)}</th>
+              <th scope="col" className="py-2 font-medium">{t(COPY.colEvent)}</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-temple-100">
+            {[...(opening ? [opening] : []), ...amritSnans].map((e) => (
+              <tr key={e.id}>
+                <td className="py-3 pr-4 align-top font-semibold text-temple-900">
+                  <time dateTime={e.startTime ? `${e.isoDate}T${e.startTime}` : e.isoDate}>
+                    {formatDate(e.isoDate, locale)}
+                    {e.startTime ? `, ${e.startTime}` : ""}
+                  </time>
+                </td>
+                <td className="py-3 text-temple-600">
+                  {t(e.name)} · {t(e.location)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
         <p className="mt-4 text-sm text-temple-500">{t(COPY.quickNote)}</p>
         <p className="mt-2 text-xs text-temple-400">
           {t(COPY.updated)}: <time dateTime={scheduleUpdated}>{formatDate(scheduleUpdated, locale)}</time>

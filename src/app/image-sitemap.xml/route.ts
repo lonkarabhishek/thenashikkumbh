@@ -11,6 +11,7 @@ export function GET() {
     .map(
       (p) => `    <image:image>
       <image:loc>${SITE_URL}${p.file}</image:loc>
+      <image:title>${esc(`Nashik Kumbh Mela photo: ${p.caption}`)}</image:title>
       <image:caption>${esc(p.caption)}</image:caption>
       <image:license>${esc(p.licenseUrl)}</image:license>
     </image:image>`

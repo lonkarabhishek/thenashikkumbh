@@ -10,7 +10,7 @@ import { PHOTO_TOPICS, TOPIC_LABEL, availablePhotos, type CommonsPhoto } from "@
 
 
 const COPY = {
-  title: { en: "Kumbh Mela Photos", hi: "कुंभ मेला फोटो", mr: "कुंभमेळा फोटो" },
+  title: { en: "Photos of Kumbh Mela Nashik", hi: "नाशिक कुंभ मेला फोटो", mr: "नाशिक कुंभमेळा फोटो" },
   intro: {
     en: "Photos of Nashik, Trimbakeshwar and earlier Simhasthas, freely licensed on Wikimedia Commons. Every photo is credited to its photographer.",
     hi: "नाशिक, त्र्यंबकेश्वर और पिछले सिंहस्थों की तस्वीरें, विकिमीडिया कॉमन्स पर मुक्त लाइसेंस के साथ। हर फोटो पर फोटोग्राफर का श्रेय दिया गया है।",
@@ -82,7 +82,7 @@ export default function CommonsGallery() {
                     >
                       <Image
                         src={p.file}
-                        alt={p.alt}
+                        alt={`${p.alt} (Nashik Kumbh Mela photo gallery)`}
                         width={p.width}
                         height={p.height}
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
@@ -126,7 +126,7 @@ export default function CommonsGallery() {
             </button>
             <Image
               src={current.file}
-              alt={current.alt}
+              alt={`${current.alt} (Nashik Kumbh Mela photo gallery)`}
               width={current.width}
               height={current.height}
               sizes="100vw"

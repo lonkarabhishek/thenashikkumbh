@@ -10,6 +10,8 @@ export function generateMetadata({ params }: Params): Metadata {
     path: "/gallery",
     image: "/images/og/kumbh-11.jpg",
     keywords: [
+    "photos of kumbh mela nashik",
+    "Nashik Kumbh Mela photo",
     "Kumbh Mela photos",
     "Nashik Kumbh images",
     "Shahi Snan photos",

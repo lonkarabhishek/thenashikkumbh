@@ -13,6 +13,9 @@ export function generateMetadata({ params }: Params): Metadata {
     absoluteTitle: true,
     image: "/images/og/kumbh-7.jpg",
     keywords: [
+    "amrit snan dates 2027",
+    "shahi snan dates",
+    "kumbh snan date",
     "Shahi Snan dates 2027",
     "Kumbh Mela schedule",
     "sacred bathing calendar",

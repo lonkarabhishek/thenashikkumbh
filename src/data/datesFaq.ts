@@ -52,6 +52,18 @@ export function datesFaqs(locale: Locale): { q: L10n; a: L10n }[] {
     },
     {
       q: {
+        en: "What is the Kumbh snan date in Nashik?",
+        hi: "नाशिक में कुंभ स्नान की तिथि क्या है?",
+        mr: "नाशिकमध्ये कुंभ स्नानाची तारीख कोणती?",
+      },
+      a: {
+        en: `There are three Amrit Snan (Shahi Snan) days in 2027: ${first}, ${second}, and ${thirdNashik} at Ramkund in Nashik (${thirdTrimbak} at Kushavarta in Trimbakeshwar). Before that, the Kumbh opens with flag hoisting on ${d(opening?.isoDate)} at 12:02 PM.`,
+        hi: `2027 में तीन अमृत स्नान (शाही स्नान) हैं: ${first}, ${second}, और नाशिक के रामकुंड में ${thirdNashik} (त्र्यंबकेश्वर के कुशावर्त में ${thirdTrimbak})। इससे पहले ${d(opening?.isoDate)} को दोपहर 12:02 बजे ध्वजारोहण से कुंभ शुरू होगा।`,
+        mr: `२०२७ मध्ये तीन अमृत स्नाने (शाही स्नान) आहेत: ${first}, ${second}, आणि नाशिकच्या रामकुंडावर ${thirdNashik} (त्र्यंबकेश्वरच्या कुशावर्तावर ${thirdTrimbak}). त्याआधी ${d(opening?.isoDate)} रोजी दुपारी १२:०२ वाजता ध्वजारोहणाने कुंभमेळा सुरू होईल.`,
+      },
+    },
+    {
+      q: {
         en: "Is Shahi Snan the same as Amrit Snan?",
         hi: "क्या शाही स्नान और अमृत स्नान एक ही हैं?",
         mr: "शाही स्नान आणि अमृत स्नान एकच आहे का?",
