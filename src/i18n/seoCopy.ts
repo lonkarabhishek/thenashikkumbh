@@ -110,19 +110,19 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
   },
   dates: {
     en: {
-      title: "Nashik Kumbh 2027 Shahi (Amrit) Snan Dates: 2 Aug, 31 Aug, 11 and 12 Sep",
+      title: "Amrit Snan Dates 2027 (Shahi Snan): Nashik Kumbh Snan Dates 2 Aug, 31 Aug, 11/12 Sep",
       description:
         "Official Nashik Kumbh 2027 dates: Dhwajarohan 31 Oct 2026 at 12:02 PM; Amrit (Shahi) Snan 2 Aug, 31 Aug, 11 Sep (Nashik), 12 Sep (Trimbak).",
       crumb: "Important Dates",
     },
     mr: {
-      title: "नाशिक कुंभमेळा 2027 शाही (अमृत) स्नान तारखा: २ ऑगस्ट, ३१ ऑगस्ट, ११ व १२ सप्टेंबर",
+      title: "अमृत स्नान तारखा 2027 (शाही स्नान): नाशिक कुंभ स्नान तारखा २ ऑगस्ट, ३१ ऑगस्ट, ११/१२ सप्टेंबर",
       description:
         "नाशिक कुंभमेळा 2027 तारखा: ध्वजारोहण ३१ ऑक्टोबर २०२६, दुपारी १२:०२; अमृत (शाही) स्नान २ ऑगस्ट, ३१ ऑगस्ट, ११ सप्टेंबर (नाशिक), १२ सप्टेंबर (त्र्यंबक).",
       crumb: "महत्त्वाच्या तारखा",
     },
     hi: {
-      title: "नाशिक कुंभ 2027 शाही (अमृत) स्नान तिथियाँ: 2 अगस्त, 31 अगस्त, 11 और 12 सितंबर",
+      title: "अमृत स्नान तिथियाँ 2027 (शाही स्नान): नाशिक कुंभ स्नान तिथि 2 अगस्त, 31 अगस्त, 11/12 सितंबर",
       description:
         "नाशिक कुंभ 2027 की आधिकारिक तिथियाँ: ध्वजारोहण 31 अक्टूबर 2026, दोपहर 12:02; अमृत (शाही) स्नान 2 अगस्त, 31 अगस्त, 11 सितंबर (नाशिक), 12 सितंबर (त्र्यंबक)।",
       crumb: "महत्वपूर्ण तिथियाँ",
@@ -150,19 +150,19 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
   },
   gallery: {
     en: {
-      title: "Kumbh Mela Photos: Pictures of Shahi Snan, Sadhus and Ghats",
+      title: "Photos of Kumbh Mela Nashik: Pictures of Ramkund, Sadhus and Ghats",
       description:
         "Kumbh Mela photos and pictures: Shahi Snan crowds, Naga sadhu processions, evening aarti, temples and river ghats, all in one gallery.",
       crumb: "Gallery",
     },
     mr: {
-      title: "कुंभमेळा फोटो: शाही स्नान, साधू आणि घाटांची छायाचित्रे",
+      title: "नाशिक कुंभमेळा फोटो: रामकुंड, साधू आणि घाटांची छायाचित्रे",
       description:
         "कुंभमेळ्याचे फोटो आणि छायाचित्रे: शाही स्नानाची गर्दी, नागा साधूंच्या मिरवणुका, संध्याकाळची आरती, मंदिरे आणि नदीचे घाट, सगळे एकाच दालनात.",
       crumb: "छायाचित्रे",
     },
     hi: {
-      title: "कुंभ मेला फोटो: शाही स्नान, साधुओं और घाटों की तस्वीरें",
+      title: "नाशिक कुंभ मेला फोटो: रामकुंड, साधुओं और घाटों की तस्वीरें",
       description:
         "कुंभ मेले की फोटो और तस्वीरें: शाही स्नान की भीड़, नागा साधुओं की शोभायात्रा, संध्या आरती, मंदिर और नदी के घाट, सब एक गैलरी में।",
       crumb: "गैलरी",

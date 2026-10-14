@@ -9,6 +9,7 @@ export const article: BlogArticle = {
     mr: "कुंभमेळ्यासाठी बँकांची तयारी: रोकड मर्यादा वाढवण्याची मागणी, घाट व साधुग्राममध्ये मोबाइल ATM",
   },
   date: "2026-10-07",
+  updated: "2026-10-14",
   source: "Times of India",
   sources: [
     {
@@ -47,6 +48,8 @@ The State Level Bankers' Committee reviewed the banking needs for the Kumbh. The
 
 The new cash limit has not been fixed yet. The RBI meeting on 9 October is meant to finalise these details.
 
+**Update, 14 October 2026:** the outcome of the 9 October RBI meeting with banks has not been reported yet. No new cash limit has been announced.
+
 ## What this means for pilgrims
 
 - **Cash near the ghats:** if the plan goes ahead, you should find mobile ATM vans at parking grounds, at Sadhugram and at the main ghats.
@@ -75,6 +78,8 @@ We will update this post after the RBI meeting.`,
 
 नई नकद सीमा अभी तय नहीं हुई है। 9 अक्टूबर की RBI बैठक में ये बातें पक्की होनी हैं।
 
+**अपडेट, 14 अक्टूबर 2026:** बैंकों के साथ 9 अक्टूबर की RBI बैठक का नतीजा अभी सामने नहीं आया है। कोई नई नकद सीमा घोषित नहीं हुई है।
+
 ## श्रद्धालुओं के लिए इसका मतलब
 
 - **घाटों के पास नकदी:** योजना लागू हुई तो पार्किंग मैदानों, साधुग्राम और मुख्य घाटों पर मोबाइल ATM वैन मिलेंगी।
@@ -102,6 +107,8 @@ RBI की बैठक के बाद हम यह पोस्ट अपड
 - छोट्या विक्रेत्यांसाठी POS मशीन, म्हणजे कार्डने पैसे घेण्याची मशीन, देण्याचे नियोजन आहे.
 
 नवी रोकड मर्यादा अजून ठरलेली नाही. ती किती वाढवायची, हे जाहीर झालेले नाही. ९ ऑक्टोबरच्या RBI बैठकीत हे तपशील अंतिम होणार आहेत.
+
+**अद्ययावत, १४ ऑक्टोबर २०२६:** बँकांसोबतच्या ९ ऑक्टोबरच्या RBI बैठकीचा निर्णय अजून समोर आलेला नाही. नवी रोकड मर्यादा जाहीर झालेली नाही.
 
 ## भाविकांसाठी याचा अर्थ
 

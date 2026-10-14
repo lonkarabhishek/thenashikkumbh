@@ -184,6 +184,22 @@ export default function BlogArticleView({
         <div className="mx-auto mt-10 max-w-[46rem] px-4 sm:px-6">
           <RichText text={article.content[locale]} tone="light" />
 
+          {article.faq && article.faq.length > 0 && (
+            <section className="mt-12" aria-labelledby="faq-title">
+              <h2 id="faq-title" className="font-heading text-2xl font-bold text-temple-900">
+                {t({ en: "Frequently asked questions", hi: "अक्सर पूछे जाने वाले सवाल", mr: "नेहमी विचारले जाणारे प्रश्न" })}
+              </h2>
+              <div className="mt-5 divide-y divide-temple-100 rounded-card border border-temple-100 bg-cream-50">
+                {article.faq.map((f) => (
+                  <div key={f.q.en} className="p-5">
+                    <h3 className="font-semibold text-temple-900">{f.q[locale]}</h3>
+                    <p className="mt-2 leading-relaxed text-temple-600">{f.a[locale]}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
           {/* Sources */}
           {article.sources && article.sources.length > 0 && (
             <aside

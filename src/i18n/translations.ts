@@ -554,7 +554,7 @@ export const translations = {
 
   // ─── DATES PAGE ──────────────────────────────────────────
   datesPage: {
-    heroTitle: { en: "Nashik Kumbh 2027 Shahi (Amrit) Snan Dates", hi: "नाशिक कुंभ 2027 शाही (अमृत) स्नान तिथियाँ", mr: "नाशिक कुंभमेळा 2027 शाही (अमृत) स्नान तारखा" },
+    heroTitle: { en: "Amrit Snan Dates 2027: Nashik Kumbh Shahi Snan Dates", hi: "अमृत स्नान तिथियाँ 2027: नाशिक कुंभ शाही स्नान तिथि", mr: "अमृत स्नान तारखा 2027: नाशिक कुंभ शाही स्नान तारखा" },
     heroSubtitle: { en: "Amrit Snan (Shahi Snan) schedule for Nashik and Trimbakeshwar", hi: "नाशिक और त्र्यंबकेश्वर का अमृत स्नान (शाही स्नान) कार्यक्रम", mr: "नाशिक आणि त्र्यंबकेश्वरचे अमृत स्नान (शाही स्नान) वेळापत्रक" },
     periodLabel: { en: "Oct 2026 – Jul 2028 · baths Aug–Sep 2027", hi: "अक्टूबर 2026 – जुलाई 2028 · स्नान अगस्त–सितंबर 2027", mr: "ऑक्टोबर २०२६ – जुलै २०२८ · स्नाने ऑगस्ट–सप्टेंबर २०२७" },
     whySacredTitle: { en: "Why These Dates Are Sacred", hi: "ये तिथियाँ पवित्र क्यों हैं", mr: "या तिथी पवित्र का आहेत" },
@@ -671,7 +671,7 @@ export const translations = {
 
   // ─── GALLERY PAGE ────────────────────────────────────────
   galleryPage: {
-    heroTitle: { en: "Kumbh Mela Photos", hi: "कुंभ मेला फोटो", mr: "कुंभमेळा फोटो" },
+    heroTitle: { en: "Photos of Kumbh Mela Nashik", hi: "नाशिक कुंभ मेला फोटो", mr: "नाशिक कुंभमेळा फोटो" },
     heroSubtitle: { en: "Pictures of Shahi Snan, sadhus, aarti and the ghats", hi: "शाही स्नान, साधुओं, आरती और घाटों की तस्वीरें", mr: "शाही स्नान, साधू, आरती आणि घाटांची छायाचित्रे" },
     filterLabel: { en: "Filter:", hi: "फ़िल्टर:", mr: "फिल्टर:" },
     filterAll: { en: "All", hi: "सभी", mr: "सर्व" },

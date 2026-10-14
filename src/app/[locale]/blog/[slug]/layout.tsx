@@ -99,6 +99,19 @@ export default function BlogSlugLayout({ params, children }: Props) {
   return (
     <>
       <JsonLd data={articleSchema} />
+      {article.faq && article.faq.length > 0 && (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: article.faq.map((f) => ({
+              "@type": "Question",
+              name: f.q[locale],
+              acceptedAnswer: { "@type": "Answer", text: f.a[locale] },
+            })),
+          }}
+        />
+      )}
       <JsonLd
         data={breadcrumbSchema(locale, [
           { name: SEO_COPY.blog[locale].crumb, path: "/blog" },
