@@ -3,7 +3,8 @@ import commons from "./commons.json";
 import available from "./available.json";
 
 /**
- * 50 freely licensed Wikimedia Commons photos (see /credits).
+ * Freely licensed Wikimedia Commons photos (see /credits). Count of files that
+ * actually render is available.json / availablePhotos — currently ~78.
  *
  * The files are self-hosted under public/images/commons (never hotlinked) and
  * imported with scripts/import-commons-photos.mjs, which also writes
