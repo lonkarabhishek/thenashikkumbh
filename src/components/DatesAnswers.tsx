@@ -40,6 +40,7 @@ const COPY = {
 const TOOLS = {
   lead: { en: "Counting the days?", hi: "दिन गिन रहे हैं?", mr: "दिवस मोजताय?" },
   c: { en: "Live Nashik Kumbh 2027 countdown with calendar reminders", hi: "कैलेंडर रिमाइंडर के साथ लाइव नाशिक कुंभ 2027 काउंटडाउन", mr: "कॅलेंडर रिमाइंडरसह थेट नाशिक कुंभ २०२७ काउंटडाउन" },
+  w: { en: "make a WhatsApp reminder card with the dates", hi: "तिथियों वाला WhatsApp रिमाइंडर कार्ड बनाएँ", mr: "तारखांचे WhatsApp रिमाइंडर कार्ड बनवा" },
   s: { en: "see what is open or closed right now on the Kumbh status board", hi: "अभी क्या खुला या बंद है, कुंभ स्टेटस बोर्ड पर देखें", mr: "सध्या काय खुले किंवा बंद आहे ते कुंभ स्टेटस बोर्डवर पाहा" },
 };
 
@@ -49,6 +50,8 @@ export function DatesToolsLinks() {
     <p className="section-container mx-auto max-w-3xl pb-6 text-temple-700">
       <strong>{TOOLS.lead[locale]}</strong>{" "}
       <Link href="/kumbh-countdown" className="font-semibold text-saffron-700 underline">{TOOLS.c[locale]}</Link>
+      {" · "}
+      <Link href="/share-snan-card" className="font-semibold text-saffron-700 underline">{TOOLS.w[locale]}</Link>
       {" · "}
       <Link href="/kumbh-status" className="font-semibold text-saffron-700 underline">{TOOLS.s[locale]}</Link>.
     </p>
