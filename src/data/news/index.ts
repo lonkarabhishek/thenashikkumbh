@@ -28,9 +28,16 @@ import { article as mahaAarti } from "./joint-maha-aarti-shankhnaad";
 import { article as cmInspects } from "./cm-fadnavis-inspects-kumbh-works";
 import { article as chromium } from "./chromium-nandini-ambad";
 import { article as digitalKumbh } from "./digital-kumbh-kumbhdoot";
+import { article as waterReservation } from "./nmc-water-reservation-8005-mcft";
+import { article as mukaneWtp } from "./mukane-wtp-370-crore";
+import { article as sadhugramLand } from "./sadhugram-land-acquisition-slow";
 
-/** News posts published from the 6, 7 and 14 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14 and 15 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 15 October 2026
+  waterReservation,
+  mukaneWtp,
+  sadhugramLand,
   // 14 October 2026
   dhwajDeadline,
   ramkundClosed,
