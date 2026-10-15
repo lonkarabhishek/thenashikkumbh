@@ -9,6 +9,7 @@ import type { Locale } from "@/i18n/translations";
 import { DatesFaq, DatesQuickAnswer, DatesToolsLinks } from "@/components/DatesAnswers";
 import PreDhwajarohanEvents from "@/components/seo/PreDhwajarohanEvents";
 import CommonsPhoto from "@/components/photos/CommonsPhoto";
+import AuthorBox from "@/components/trust/AuthorBox";
 import { formatDate as fmtDate, formatTime as fmtTime, localDigits } from "@/lib/dates";
 
 /* ───────────────────────────── page ─────────────────────────────── */
@@ -54,6 +55,55 @@ const PERIOD_COPY = {
   },
   days: { en: "days", hi: "दिन", mr: "दिवस" },
 };
+
+const RELATED_GUIDES_TITLE = {
+  en: "Related guides",
+  hi: "संबंधित गाइड",
+  mr: "संबंधित मार्गदर्शक",
+};
+
+const RELATED_GUIDES = [
+  {
+    href: "/ghats",
+    label: {
+      en: "Ramkund and Godavari bathing places",
+      hi: "रामकुंड और गोदावरी स्नान स्थल",
+      mr: "रामकुंड व गोदावरी स्नानस्थळे",
+    },
+  },
+  {
+    href: "/guide",
+    label: {
+      en: "Pilgrim guide to Nashik Kumbh 2027",
+      hi: "नाशिक कुंभ 2027 यात्री गाइड",
+      mr: "नाशिक कुंभ २०२७ भाविक मार्गदर्शक",
+    },
+  },
+  {
+    href: "/gallery",
+    label: {
+      en: "Photos of Kumbh Mela Nashik",
+      hi: "नाशिक कुंभ मेला की तस्वीरें",
+      mr: "नाशिक कुंभमेळ्याचे फोटो",
+    },
+  },
+  {
+    href: "/kumbh-countdown",
+    label: {
+      en: "Nashik Kumbh 2027 countdown",
+      hi: "नाशिक कुंभ 2027 काउंटडाउन",
+      mr: "नाशिक कुंभ २०२७ काउंटडाउन",
+    },
+  },
+  {
+    href: "/trimbakeshwar-kumbh-2027",
+    label: {
+      en: "Trimbakeshwar Kumbh 2027 guide",
+      hi: "त्र्यंबकेश्वर कुंभ 2027 गाइड",
+      mr: "त्र्यंबकेश्वर कुंभ २०२७ मार्गदर्शक",
+    },
+  },
+];
 
 export default function ImportantDatesPage() {
   const { locale, t } = useLanguage();
@@ -344,6 +394,27 @@ export default function ImportantDatesPage() {
         <CommonsPhoto id={28} className="mt-12" />
       </div>
       <DatesFaq />
+
+      <div className="section-container mx-auto max-w-3xl pb-8">
+        <nav
+          aria-label={RELATED_GUIDES_TITLE[locale]}
+          className="mt-10 rounded-xl border border-temple-200 bg-cream-50 p-5"
+        >
+          <h2 className="font-heading text-lg font-bold text-temple-900">
+            {RELATED_GUIDES_TITLE[locale]}
+          </h2>
+          <ul className="mt-3 list-disc space-y-1 pl-5">
+            {RELATED_GUIDES.map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="text-temple-900 underline">
+                  {l.label[locale]}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <AuthorBox />
+      </div>
 
       <section
         className="relative overflow-hidden py-20 md:py-28"

@@ -110,19 +110,19 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
   },
   dates: {
     en: {
-      title: "Amrit Snan Dates 2027 (Shahi Snan): Nashik Kumbh Snan Dates 2 Aug, 31 Aug, 11/12 Sep",
+      title: "Amrit Snan Dates 2027 (Shahi Snan) | Nashik Kumbh",
       description:
         "Official Nashik Kumbh 2027 dates: Dhwajarohan 31 Oct 2026 at 12:02 PM; Amrit (Shahi) Snan 2 Aug, 31 Aug, 11 Sep (Nashik), 12 Sep (Trimbak).",
       crumb: "Important Dates",
     },
     mr: {
-      title: "अमृत स्नान तारखा 2027 (शाही स्नान): नाशिक कुंभ स्नान तारखा २ ऑगस्ट, ३१ ऑगस्ट, ११/१२ सप्टेंबर",
+      title: "अमृत स्नान तारखा २०२७ (शाही स्नान) | नाशिक कुंभमेळा",
       description:
         "नाशिक कुंभमेळा 2027 तारखा: ध्वजारोहण ३१ ऑक्टोबर २०२६, दुपारी १२:०२; अमृत (शाही) स्नान २ ऑगस्ट, ३१ ऑगस्ट, ११ सप्टेंबर (नाशिक), १२ सप्टेंबर (त्र्यंबक).",
       crumb: "महत्त्वाच्या तारखा",
     },
     hi: {
-      title: "अमृत स्नान तिथियाँ 2027 (शाही स्नान): नाशिक कुंभ स्नान तिथि 2 अगस्त, 31 अगस्त, 11/12 सितंबर",
+      title: "अमृत स्नान तिथियाँ 2027 (शाही स्नान) | नाशिक कुंभ",
       description:
         "नाशिक कुंभ 2027 की आधिकारिक तिथियाँ: ध्वजारोहण 31 अक्टूबर 2026, दोपहर 12:02; अमृत (शाही) स्नान 2 अगस्त, 31 अगस्त, 11 सितंबर (नाशिक), 12 सितंबर (त्र्यंबक)।",
       crumb: "महत्वपूर्ण तिथियाँ",
