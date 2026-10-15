@@ -128,6 +128,7 @@ export default function CountdownTool() {
       <p className="mt-6 rounded-xl border-l-4 border-saffron-500 bg-cream-100 p-4 text-temple-800">
         {C.datesLead[locale]}{" "}
         <Link href="/dates" className="font-semibold text-saffron-700 underline">{C.datesLink[locale]}</Link>.{" "}
+        <Link href="/share-snan-card" className="font-semibold text-saffron-700 underline">{{ en: "Make a shareable reminder card", hi: "शेयर करने लायक रिमाइंडर कार्ड बनाएँ", mr: "शेअर करण्यासाठी रिमाइंडर कार्ड बनवा" }[locale]}</Link>.{" "}
         <span className="text-sm text-temple-600">{C.updated[locale]}: {formatDate(countdownDataUpdated, locale)}</span>
       </p>
       <section className="mt-12" aria-labelledby="checklist">
