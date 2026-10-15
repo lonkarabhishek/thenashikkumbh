@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...localized("/kumbh-countdown", "weekly", 0.85),
     ...localized("/map", "monthly", 0.7),
     ...localized("/share-snan-card", "monthly", 0.6),
+    ...localized("/plan-your-visit", "weekly", 0.8),
     ...localized("/kumbh-status", "daily", 0.85),
     ...localized("/dhwajarohan-2026", "daily", 0.95),
     ...localized("/parva-snan-calendar", "weekly", 0.9),

@@ -18,6 +18,7 @@ const COLUMNS = [
       { href: "/kumbh-countdown", label: { en: "Kumbh countdown", hi: "कुंभ काउंटडाउन", mr: "कुंभ काउंटडाउन" } },
       { href: "/map", label: { en: "Kumbh map", hi: "कुंभ नक्शा", mr: "कुंभ नकाशा" } },
       { href: "/share-snan-card", label: { en: "Snan reminder card", hi: "स्नान रिमाइंडर कार्ड", mr: "स्नान रिमाइंडर कार्ड" } },
+      { href: "/plan-your-visit", label: { en: "Plan your Kumbh visit", hi: "कुंभ यात्रा की योजना", mr: "कुंभ भेटीचे नियोजन" } },
       { href: "/kumbh-status", label: { en: "Status board: open or closed", hi: "स्टेटस बोर्ड: खुला या बंद", mr: "स्टेटस बोर्ड: खुले की बंद" } },
       { href: "/guide", label: translations.nav.guide },
       { href: "/how-to-reach", label: { en: "How to reach", hi: "कैसे पहुँचें", mr: "कसे पोहोचाल" } },
