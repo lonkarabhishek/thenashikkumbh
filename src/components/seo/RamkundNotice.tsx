@@ -31,6 +31,7 @@ export default function RamkundNotice() {
           <p className="mt-2 text-sm">
             <a href={TOI} target="_blank" rel="noopener noreferrer" className="underline">{COPY.src[locale]}</a> ·{" "}
             <Link href={POST} className="font-semibold underline">{COPY.more[locale]}</Link> ·{" "}
+            <Link href="/map" className="underline">Kumbh map</Link> ·{" "}
             <Link href="/kumbh-status" className="font-semibold underline">Kumbh status board</Link> ·{" "}
             <Link href="/dates" className="underline">Amrit Snan Dates 2027</Link>
           </p>

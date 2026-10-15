@@ -16,6 +16,7 @@ const COLUMNS = [
     links: [
       { href: "/dates", label: translations.nav.dates },
       { href: "/kumbh-countdown", label: { en: "Kumbh countdown", hi: "कुंभ काउंटडाउन", mr: "कुंभ काउंटडाउन" } },
+      { href: "/map", label: { en: "Kumbh map", hi: "कुंभ नक्शा", mr: "कुंभ नकाशा" } },
       { href: "/kumbh-status", label: { en: "Status board: open or closed", hi: "स्टेटस बोर्ड: खुला या बंद", mr: "स्टेटस बोर्ड: खुले की बंद" } },
       { href: "/guide", label: translations.nav.guide },
       { href: "/how-to-reach", label: { en: "How to reach", hi: "कैसे पहुँचें", mr: "कसे पोहोचाल" } },

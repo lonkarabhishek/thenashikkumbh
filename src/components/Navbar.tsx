@@ -46,6 +46,7 @@ const GROUPS = [
       { href: "/dates", label: translations.nav.dates },
       { href: "/parva-snan-calendar", label: { en: "Parva Snan calendar", hi: "पर्व स्नान कैलेंडर", mr: "पर्व स्नान दिनदर्शिका" } },
       { href: "/kumbh-countdown", label: { en: "Kumbh countdown", hi: "कुंभ काउंटडाउन", mr: "कुंभ काउंटडाउन" } },
+      { href: "/map", label: { en: "Kumbh map", hi: "कुंभ नक्शा", mr: "कुंभ नकाशा" } },
       { href: "/kumbh-status", label: { en: "Status board: open or closed", hi: "स्टेटस बोर्ड: खुला या बंद", mr: "स्टेटस बोर्ड: खुले की बंद" } },
       { href: "/dhwajarohan-2026", label: { en: "Dhwajarohan 31 Oct", hi: "ध्वजारोहण 31 अक्टूबर", mr: "ध्वजारोहण ३१ ऑक्टोबर" } },
       { href: "/guide", label: translations.nav.guide },
