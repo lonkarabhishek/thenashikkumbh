@@ -52,6 +52,14 @@ const RELATED = [
     },
   },
   {
+    href: "/kumbh-countdown",
+    label: { en: "Nashik Kumbh 2027 countdown", hi: "नाशिक कुंभ 2027 काउंटडाउन", mr: "नाशिक कुंभ २०२७ काउंटडाउन" },
+  },
+  {
+    href: "/kumbh-status",
+    label: { en: "Kumbh status board: what is open or closed", hi: "कुंभ स्टेटस बोर्ड: क्या खुला या बंद", mr: "कुंभ स्टेटस बोर्ड: काय खुले किंवा बंद" },
+  },
+  {
     href: "/naga-sadhus",
     label: {
       en: "Naga Sadhus and akhadas at Nashik Kumbh",

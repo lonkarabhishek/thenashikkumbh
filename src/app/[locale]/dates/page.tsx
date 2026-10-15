@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { majorMelaPeriod, schedule, type ScheduleEvent } from "@/data/verified";
 import type { Locale } from "@/i18n/translations";
-import { DatesFaq, DatesQuickAnswer } from "@/components/DatesAnswers";
+import { DatesFaq, DatesQuickAnswer, DatesToolsLinks } from "@/components/DatesAnswers";
 import PreDhwajarohanEvents from "@/components/seo/PreDhwajarohanEvents";
 import CommonsPhoto from "@/components/photos/CommonsPhoto";
 import { formatDate as fmtDate, formatTime as fmtTime, localDigits } from "@/lib/dates";
@@ -111,6 +111,7 @@ export default function ImportantDatesPage() {
       {/* ═══════════════════ INTRODUCTION ═══════════════════ */}
       <DatesQuickAnswer />
       <PreDhwajarohanEvents />
+      <DatesToolsLinks />
 
       <section className="relative bg-cream-50 py-16 md:py-24">
         <div className="absolute inset-0 mandala-bg" />

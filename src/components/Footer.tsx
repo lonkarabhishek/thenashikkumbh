@@ -15,6 +15,8 @@ const COLUMNS = [
     heading: navExtra.groupPlan,
     links: [
       { href: "/dates", label: translations.nav.dates },
+      { href: "/kumbh-countdown", label: { en: "Kumbh countdown", hi: "कुंभ काउंटडाउन", mr: "कुंभ काउंटडाउन" } },
+      { href: "/kumbh-status", label: { en: "Status board: open or closed", hi: "स्टेटस बोर्ड: खुला या बंद", mr: "स्टेटस बोर्ड: खुले की बंद" } },
       { href: "/guide", label: translations.nav.guide },
       { href: "/how-to-reach", label: { en: "How to reach", hi: "कैसे पहुँचें", mr: "कसे पोहोचाल" } },
       { href: "/accommodation", label: { en: "Where to stay", hi: "कहाँ ठहरें", mr: "कुठे राहाल" } },

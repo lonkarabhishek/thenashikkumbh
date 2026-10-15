@@ -8,6 +8,8 @@ const LINKS = [
   { href: "/blog/ring-road-project-8000-crore", label: { en: "Nashik Ring Road project: full guide", hi: "नाशिक रिंग रोड परियोजना: पूरी जानकारी", mr: "नाशिक रिंग रोड प्रकल्प: संपूर्ण माहिती" } },
   { href: "/parva-snan-calendar", label: { en: "Parva Snan calendar: every bathing day", hi: "पर्व स्नान कैलेंडर: हर स्नान का दिन", mr: "पर्व स्नान दिनदर्शिका: प्रत्येक स्नानाचा दिवस" } },
   { href: "/guide", label: { en: "Pilgrim guide to Nashik Kumbh 2027", hi: "नाशिक कुंभ 2027 यात्री गाइड", mr: "नाशिक कुंभ २०२७ भाविक मार्गदर्शक" } },
+  { href: "/kumbh-countdown", label: { en: "Nashik Kumbh 2027 countdown", hi: "नाशिक कुंभ 2027 काउंटडाउन", mr: "नाशिक कुंभ २०२७ काउंटडाउन" } },
+  { href: "/kumbh-status", label: { en: "Kumbh status board: what is open or closed", hi: "कुंभ स्टेटस बोर्ड: क्या खुला या बंद", mr: "कुंभ स्टेटस बोर्ड: काय खुले किंवा बंद" } },
   { href: "/gallery", label: { en: "Photos of Kumbh Mela Nashik", hi: "नाशिक कुंभ मेला की तस्वीरें", mr: "नाशिक कुंभमेळ्याचे फोटो" } },
 ];
 const TITLE = { en: "Kumbh 2027 guides", hi: "कुंभ 2027 गाइड", mr: "कुंभ २०२७ मार्गदर्शक" };
