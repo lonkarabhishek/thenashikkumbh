@@ -39,6 +39,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...localized("/", "daily", 1),
     ...localized("/dates", "weekly", 0.95),
+    ...localized("/kumbh-countdown", "weekly", 0.85),
+    ...localized("/kumbh-status", "daily", 0.85),
     ...localized("/dhwajarohan-2026", "daily", 0.95),
     ...localized("/parva-snan-calendar", "weekly", 0.9),
     ...localized("/trimbakeshwar-kumbh-2027", "weekly", 0.9),

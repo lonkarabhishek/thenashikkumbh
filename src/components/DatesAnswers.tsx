@@ -1,6 +1,7 @@
 "use client";
 
 import { CalendarDays } from "lucide-react";
+import Link from "@/components/LocaleLink";
 import { useLanguage } from "@/context/LanguageContext";
 import { schedule, scheduleUpdated } from "@/data/verified";
 
@@ -35,6 +36,24 @@ const COPY = {
     mr: "तारखांबद्दल नेहमीचे प्रश्न",
   },
 };
+
+const TOOLS = {
+  lead: { en: "Counting the days?", hi: "दिन गिन रहे हैं?", mr: "दिवस मोजताय?" },
+  c: { en: "Live Nashik Kumbh 2027 countdown with calendar reminders", hi: "कैलेंडर रिमाइंडर के साथ लाइव नाशिक कुंभ 2027 काउंटडाउन", mr: "कॅलेंडर रिमाइंडरसह थेट नाशिक कुंभ २०२७ काउंटडाउन" },
+  s: { en: "see what is open or closed right now on the Kumbh status board", hi: "अभी क्या खुला या बंद है, कुंभ स्टेटस बोर्ड पर देखें", mr: "सध्या काय खुले किंवा बंद आहे ते कुंभ स्टेटस बोर्डवर पाहा" },
+};
+
+export function DatesToolsLinks() {
+  const { locale } = useLanguage();
+  return (
+    <p className="section-container mx-auto max-w-3xl pb-6 text-temple-700">
+      <strong>{TOOLS.lead[locale]}</strong>{" "}
+      <Link href="/kumbh-countdown" className="font-semibold text-saffron-700 underline">{TOOLS.c[locale]}</Link>
+      {" · "}
+      <Link href="/kumbh-status" className="font-semibold text-saffron-700 underline">{TOOLS.s[locale]}</Link>.
+    </p>
+  );
+}
 
 export function DatesQuickAnswer() {
   const { locale, t } = useLanguage();
