@@ -40,6 +40,30 @@ export function datesFaqs(locale: Locale): { q: L10n; a: L10n }[] {
     },
     {
       q: {
+        en: "What are the Amrit Snan dates 2027?",
+        hi: "अमृत स्नान तिथियाँ 2027 कौन-सी हैं?",
+        mr: "अमृत स्नान तारखा २०२७ कोणत्या?",
+      },
+      a: {
+        en: `First Amrit Snan: ${first}. Second: ${second}. Third: ${thirdNashik} at Ramkund in Nashik and ${thirdTrimbak} at Kushavarta in Trimbakeshwar.`,
+        hi: `पहला अमृत स्नान: ${first}। दूसरा: ${second}। तीसरा: नाशिक के रामकुंड में ${thirdNashik} और त्र्यंबकेश्वर के कुशावर्त में ${thirdTrimbak}।`,
+        mr: `पहिले अमृत स्नान: ${first}. दुसरे: ${second}. तिसरे: नाशिकच्या रामकुंडावर ${thirdNashik} आणि त्र्यंबकेश्वरच्या कुशावर्तावर ${thirdTrimbak}.`,
+      },
+    },
+    {
+      q: {
+        en: "What are the Nashik Kumbh Mela 2027 dates?",
+        hi: "नाशिक कुंभ मेला 2027 की तिथियाँ क्या हैं?",
+        mr: "नाशिक कुंभमेळा २०२७ च्या तारखा कोणत्या?",
+      },
+      a: {
+        en: `Opening (Dhwajarohan) is ${d(opening?.isoDate)} at 12:02 PM. The Amrit Snans fall on ${first}, ${second}, and ${thirdNashik} (Nashik) / ${thirdTrimbak} (Trimbak). Closing is ${d(closing?.isoDate)} in Nashik and ${d(closingTrimbak?.isoDate)} in Trimbakeshwar.`,
+        hi: `उद्घाटन (ध्वजारोहण) ${d(opening?.isoDate)} को दोपहर 12:02 बजे है। अमृत स्नान ${first}, ${second}, और ${thirdNashik} (नाशिक) / ${thirdTrimbak} (त्र्यंबक) को हैं। समापन नाशिक में ${d(closing?.isoDate)} और त्र्यंबकेश्वर में ${d(closingTrimbak?.isoDate)} को है।`,
+        mr: `उद्घाटन (ध्वजारोहण) ${d(opening?.isoDate)} रोजी दुपारी १२:०२ वाजता आहे. अमृत स्नाने ${first}, ${second}, आणि ${thirdNashik} (नाशिक) / ${thirdTrimbak} (त्र्यंबक) रोजी आहेत. सांगता नाशिकमध्ये ${d(closing?.isoDate)} व त्र्यंबकेश्वरमध्ये ${d(closingTrimbak?.isoDate)} रोजी आहे.`,
+      },
+    },
+    {
+      q: {
         en: "What are the Shahi Snan dates for Nashik Kumbh 2027?",
         hi: "नाशिक कुंभ 2027 की शाही स्नान तिथियाँ क्या हैं?",
         mr: "नाशिक कुंभ २०२७ च्या शाही स्नानाच्या तारखा कोणत्या?",
