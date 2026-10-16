@@ -7,9 +7,9 @@ export const MAP_COPY = {
     mr: "नाशिक कुंभ नकाशा: रामकुंड, काळाराम, पंचवटी आणि त्र्यंबकेश्वर मंदिर",
   },
   desc: {
-    en: "Map of key Kumbh places in Nashik and Trimbakeshwar with sourced coordinates: Ramkund, Kalaram Temple, Kapaleshwar and Trimbakeshwar Temple, on OpenStreetMap.",
-    hi: "नाशिक और त्र्यंबकेश्वर के प्रमुख कुंभ स्थलों का स्रोत-सहित निर्देशांकों वाला नक्शा: रामकुंड, कालाराम मंदिर, कपालेश्वर और त्र्यंबकेश्वर मंदिर, OpenStreetMap पर।",
-    mr: "नाशिक आणि त्र्यंबकेश्वरमधील प्रमुख कुंभ स्थळांचा स्रोतांसह निर्देशांकांचा नकाशा: रामकुंड, काळाराम मंदिर, कपालेश्वर आणि त्र्यंबकेश्वर मंदिर, OpenStreetMap वर.",
+    en: "Map of key Kumbh places in Nashik and Trimbakeshwar with sourced coordinates: Ramkund, Kalaram Temple, Kapaleshwar and Trimbakeshwar Temple, on Google Maps.",
+    hi: "नाशिक और त्र्यंबकेश्वर के प्रमुख कुंभ स्थलों का स्रोत-सहित निर्देशांकों वाला नक्शा: रामकुंड, कालाराम मंदिर, कपालेश्वर और त्र्यंबकेश्वर मंदिर, Google Maps पर।",
+    mr: "नाशिक आणि त्र्यंबकेश्वरमधील प्रमुख कुंभ स्थळांचा स्रोतांसह निर्देशांकांचा नकाशा: रामकुंड, काळाराम मंदिर, कपालेश्वर आणि त्र्यंबकेश्वर मंदिर, Google Maps वर.",
   },
   crumb: { en: "Kumbh map", hi: "कुंभ नक्शा", mr: "कुंभ नकाशा" },
   h1: { en: "Nashik and Trimbakeshwar Kumbh Map", hi: "नाशिक और त्र्यंबकेश्वर कुंभ नक्शा", mr: "नाशिक आणि त्र्यंबकेश्वर कुंभ नकाशा" },
@@ -19,7 +19,8 @@ export const MAP_COPY = {
     mr: "नकाशावर पाहण्यासाठी एखादे ठिकाण निवडा. प्रत्येक पिनचे निर्देशांक OpenStreetMap किंवा विकिपीडियावर तपासलेले असून स्रोत दिला आहे. आम्ही फक्त पडताळता येईल तेच पिन करतो.",
   },
   pick: { en: "Choose a place", hi: "स्थान चुनें", mr: "ठिकाण निवडा" },
-  open: { en: "Open in OpenStreetMap", hi: "OpenStreetMap में खोलें", mr: "OpenStreetMap मध्ये उघडा" },
+  open: { en: "Open in Google Maps", hi: "Google Maps में खोलें", mr: "Google Maps मध्ये उघडा" },
+  directions: { en: "Get directions", hi: "रास्ता देखें", mr: "दिशा मिळवा" },
   source: { en: "Coordinates source", hi: "निर्देशांक का स्रोत", mr: "निर्देशांकांचा स्रोत" },
   more: { en: "More about this place", hi: "इस स्थान के बारे में और", mr: "या ठिकाणाविषयी अधिक" },
   coords: { en: "Coordinates", hi: "निर्देशांक", mr: "निर्देशांक" },
@@ -29,7 +30,7 @@ export const MAP_COPY = {
     hi: "कुशावर्त तीर्थ, साधुग्राम, गोदाघाट, नए घाट और पार्किंग क्षेत्र पिन नहीं किए गए हैं, क्योंकि उनके निर्देशांक किसी आधिकारिक सूचना या OpenStreetMap/Wikidata ऑब्जेक्ट से सत्यापित नहीं हो सके। संभव होते ही हम इन्हें जोड़ेंगे।",
     mr: "कुशावर्त तीर्थ, साधुग्राम, गोदाघाट, नवे घाट आणि पार्किंग क्षेत्रे पिन केलेली नाहीत, कारण त्यांचे निर्देशांक अधिकृत सूचना किंवा OpenStreetMap/Wikidata ऑब्जेक्टवरून पडताळता आले नाहीत. शक्य होताच आम्ही ती जोडू.",
   },
-  attribution: { en: "Map data © OpenStreetMap contributors", hi: "नक्शा डेटा © OpenStreetMap योगदानकर्ता", mr: "नकाशा डेटा © OpenStreetMap योगदानकर्ते" },
+  attribution: { en: "Map: Google Maps", hi: "नक्शा: Google Maps", mr: "नकाशा: Google Maps" },
   faqH: { en: "Questions about the map", hi: "नक्शे के बारे में सवाल", mr: "नकाशाविषयी प्रश्न" },
   relatedH: { en: "Related pages", hi: "संबंधित पेज", mr: "संबंधित पाने" },
 };
@@ -37,9 +38,9 @@ export const MAP_FAQS: Faq[] = [
   {
     q: { en: "Where is Ramkund in Nashik?", hi: "नाशिक में रामकुंड कहाँ है?", mr: "नाशिकमध्ये रामकुंड कुठे आहे?" },
     a: {
-      en: "Ramkund is in Panchavati, on the Godavari, a short distance from Kalaram Temple. Select it above to see the pin and the OpenStreetMap source.",
-      hi: "रामकुंड पंचवटी में गोदावरी पर है, कालाराम मंदिर से थोड़ी दूरी पर। पिन और OpenStreetMap स्रोत देखने के लिए ऊपर इसे चुनें।",
-      mr: "रामकुंड पंचवटीत गोदावरीवर, काळाराम मंदिरापासून थोड्या अंतरावर आहे. पिन आणि OpenStreetMap स्रोत पाहण्यासाठी वर ते निवडा.",
+      en: "Ramkund is in Panchavati, on the Godavari, a short distance from Kalaram Temple. Select it above to see it on Google Maps, with the coordinates source linked.",
+      hi: "रामकुंड पंचवटी में गोदावरी पर है, कालाराम मंदिर से थोड़ी दूरी पर। Google Maps पर देखने के लिए ऊपर इसे चुनें; निर्देशांक का स्रोत भी दिया गया है।",
+      mr: "रामकुंड पंचवटीत गोदावरीवर, काळाराम मंदिरापासून थोड्या अंतरावर आहे. Google Maps वर पाहण्यासाठी वर ते निवडा; निर्देशांकांचा स्रोतही दिला आहे.",
     },
   },
   {
@@ -53,9 +54,9 @@ export const MAP_FAQS: Faq[] = [
   {
     q: { en: "Is the map free to use?", hi: "क्या नक्शा उपयोग के लिए मुफ़्त है?", mr: "नकाशा वापरण्यास मोफत आहे का?" },
     a: {
-      en: "Yes. It is an embedded OpenStreetMap map, with data © OpenStreetMap contributors.",
-      hi: "हाँ। यह OpenStreetMap का एम्बेडेड नक्शा है, डेटा © OpenStreetMap योगदानकर्ता।",
-      mr: "हो. हा OpenStreetMap चा एम्बेड केलेला नकाशा आहे, डेटा © OpenStreetMap योगदानकर्ते.",
+      en: "Yes. It is an embedded Google Maps view that needs no sign-in, with buttons to open the place in Google Maps or get directions.",
+      hi: "हाँ। यह Google Maps का एम्बेडेड दृश्य है, जिसके लिए साइन-इन नहीं चाहिए; स्थान को Google Maps में खोलने या रास्ता देखने के बटन भी हैं।",
+      mr: "हो. हा Google Maps चा एम्बेड केलेला नकाशा आहे, साइन-इन लागत नाही; ठिकाण Google Maps मध्ये उघडण्यासाठी किंवा दिशा मिळवण्यासाठी बटणेही आहेत.",
     },
   },
 ];

@@ -83,9 +83,6 @@ export const mapPlaces: MapPlace[] = [
 
 export const mapDataUpdated = "2026-10-15";
 
-export function osmEmbed(p: MapPlace): string {
-  const d = 0.006;
-  const bbox = [p.lon - d, p.lat - d / 1.5, p.lon + d, p.lat + d / 1.5].map((n) => n.toFixed(6)).join("%2C");
-  return `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${p.lat}%2C${p.lon}`;
-}
-export const osmLink = (p: MapPlace) => `https://www.openstreetmap.org/?mlat=${p.lat}&mlon=${p.lon}#map=17/${p.lat}/${p.lon}`;
+export const googleEmbed = (p: MapPlace) => `https://www.google.com/maps?q=${p.lat},${p.lon}&z=16&output=embed`;
+export const googleLink = (p: MapPlace) => `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lon}`;
+export const googleDirections = (p: MapPlace) => `https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}`;
