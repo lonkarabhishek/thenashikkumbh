@@ -3,6 +3,10 @@
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import type { Locale } from "@/i18n/translations";
+import { countdownTargets, nearestTargetIndex } from "@/data/kumbhCountdown";
+import { formatDate, formatTime } from "@/lib/dates";
+
+const UNTIL: Record<Locale, string> = { en: "until", hi: "तक", mr: "पर्यंत" };
 
 const UNITS = {
   days: { en: "days", hi: "दिन", mr: "दिवस" },
@@ -41,21 +45,30 @@ function remaining(target: Date) {
  * Live countdown to the first Shahi Snan, sized to stand in for the year in the
  * hero. Renders nothing until mounted so the server and client markup agree.
  */
-export default function Countdown({
-  target,
-  caption,
-}: {
-  target: Date;
-  caption: string;
-}) {
+export default function Countdown() {
   const { locale } = useLanguage();
   const [time, setTime] = useState<ReturnType<typeof remaining> | null>(null);
+  const [label, setLabel] = useState("");
 
   useEffect(() => {
-    setTime(remaining(target));
-    const id = setInterval(() => setTime(remaining(target)), 1000);
+    // Re-pick the nearest upcoming date every tick, so it advances on its own.
+    const tick = () => {
+      const now = Date.now();
+      const i = nearestTargetIndex(now);
+      const t = i >= 0 ? countdownTargets[i] : null;
+      setTime(t ? remaining(new Date(t.targetIso)) : { days: 0, hours: 0, minutes: 0, seconds: 0, done: true });
+      setLabel(
+        t
+          ? locale === "en"
+            ? `until ${t.event.name.en}: ${formatDate(t.event.isoDate, locale)}${t.hasOfficialTime ? `, ${formatTime(t.event.startTime!, locale)} IST` : ""}`
+            : `${t.event.name[locale]}: ${formatDate(t.event.isoDate, locale)}${t.hasOfficialTime ? `, ${formatTime(t.event.startTime!, locale)} IST` : ""} ${UNTIL[locale]}`
+          : "",
+      );
+    };
+    tick();
+    const id = setInterval(tick, 1000);
     return () => clearInterval(id);
-  }, [target]);
+  }, [locale]);
 
   const cells = (
     [
@@ -98,7 +111,7 @@ export default function Countdown({
         ))}
       </div>
 
-      <p className="mt-5 text-sm text-temple-500">{caption}</p>
+      <p className="mt-5 text-sm text-temple-500">{label}</p>
     </div>
   );
 }

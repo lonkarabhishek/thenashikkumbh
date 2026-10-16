@@ -33,3 +33,14 @@ export const countdownTargets: CountdownTarget[] = COUNTDOWN_IDS.map((id) => {
 }).sort((a, b) => a.targetIso.localeCompare(b.targetIso));
 
 export const countdownDataUpdated = scheduleUpdated;
+
+/**
+ * Index of the nearest upcoming target at `nowMs` (epoch ms), or -1 when every
+ * date has passed. Targets are sorted by instant and compared as absolute
+ * instants (each carries an explicit +05:30 offset), so the result does not
+ * depend on the viewer's time zone. Nothing here is hard-coded: the "next"
+ * date moves on by itself as time passes.
+ */
+export function nearestTargetIndex(nowMs: number, targets: CountdownTarget[] = countdownTargets): number {
+  return targets.findIndex((t) => new Date(t.targetIso).getTime() > nowMs);
+}

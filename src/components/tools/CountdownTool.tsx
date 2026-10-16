@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "@/components/LocaleLink";
 import { Calendar, Download, Share2 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
-import { countdownTargets, countdownDataUpdated, type CountdownTarget } from "@/data/kumbhCountdown";
+import { countdownTargets, countdownDataUpdated, nearestTargetIndex, type CountdownTarget } from "@/data/kumbhCountdown";
 import { formatDate, formatTime, localDigits } from "@/lib/dates";
 import { SITE_URL, localeUrl } from "@/lib/seo";
 import { CHECKLIST, COUNTDOWN_COPY as C } from "@/components/tools/toolCopy";
@@ -20,6 +20,12 @@ function parts(targetIso: string, now: number) {
     s: Math.floor(ms / 1000) % 60,
   };
 }
+
+const NEXT_LABEL: Record<Locale, string> = {
+  en: "Counting down to the next date",
+  hi: "अगली तिथि तक की गिनती",
+  mr: "पुढील तारखेपर्यंतची मोजणी",
+};
 
 const pad = (n: number) => String(n).padStart(2, "0");
 const compact = (iso: string) => iso.replace(/-/g, "");
@@ -92,12 +98,24 @@ export default function CountdownTool() {
   const { locale } = useLanguage();
   const pageUrl = `${SITE_URL}/${locale}${C.path}`;
   const wa = `https://wa.me/?text=${encodeURIComponent(`${C.shareText[locale]} ${pageUrl}`)}`;
-  const [first, ...rest] = countdownTargets;
+  // null until mounted: server HTML and first client render are identical (no
+  // "nearest" guess at build time); the real nearest date is chosen on mount
+  // and re-evaluated every second, so it moves on by itself after each date.
+  const [now, setNow] = useState<number | null>(null);
+  useEffect(() => {
+    setNow(Date.now());
+    const id = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(id);
+  }, []);
+  const idx = now === null ? -1 : nearestTargetIndex(now);
+  const next = idx >= 0 ? countdownTargets[idx] : null;
+  const others = countdownTargets.filter((t) => t !== next);
 
   const Row = ({ t, big }: { t: CountdownTarget; big?: boolean }) => {
     const e = t.event;
     return (
-      <article className={`rounded-2xl border border-temple-200 bg-white p-5 ${big ? "sm:p-8" : ""}`}>
+      <article className={`rounded-2xl border bg-white p-5 ${big ? "border-saffron-400 sm:p-8" : "border-temple-200"}`}>
+        {big && <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-saffron-700">{NEXT_LABEL[locale]}</p>}
         <h2 className={`font-heading font-bold text-temple-900 ${big ? "text-2xl" : "text-lg"}`}>{e.name[locale]}</h2>
         <p className="mt-1 text-temple-700">
           {formatDate(e.isoDate, locale, { weekday: true })}
@@ -116,14 +134,16 @@ export default function CountdownTool() {
 
   return (
     <>
-      <Row t={first} big />
+      {next ? <Row t={next} big /> : (
+        <div className="h-48 rounded-2xl border border-temple-200 bg-white" aria-hidden="true" />
+      )}
       <p className="mt-4">
         <a href={wa} target="_blank" rel="noopener noreferrer" className="btn-gold inline-flex items-center gap-2">
           <Share2 className="h-4 w-4" />{C.share[locale]}
         </a>
       </p>
       <div className="mt-8 grid gap-4 sm:grid-cols-2">
-        {rest.map((t) => <Row key={t.event.id} t={t} />)}
+        {others.map((t) => <Row key={t.event.id} t={t} />)}
       </div>
       <p className="mt-6 rounded-xl border-l-4 border-saffron-500 bg-cream-100 p-4 text-temple-800">
         {C.datesLead[locale]}{" "}

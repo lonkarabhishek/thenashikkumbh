@@ -38,9 +38,6 @@ import { formatDate as fmtDate } from "@/lib/dates";
 
 const MAJOR_DATES = schedule.filter((e) => e.isAmritSnan);
 
-/** First Amrit Snan, the date the whole calendar hangs off. */
-const FIRST_SNAN = new Date("2027-08-02T04:00:00+05:30");
-
 const HOME_COPY = {
   nextSnan: { en: "Next Amrit Snan", hi: "अगला अमृत स्नान", mr: "पुढचे अमृत स्नान" },
   storyMore: {
@@ -181,7 +178,7 @@ export default function HomePage({ news, glimpses }: { news: LatestItem[]; glimp
 
           <Reveal delay={70}>
             <div className="mt-8">
-              <Countdown target={FIRST_SNAN} caption={t(HOME_COPY.countdownCaption)} />
+              <Countdown />
             </div>
           </Reveal>
 
