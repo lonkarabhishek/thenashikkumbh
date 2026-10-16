@@ -587,3 +587,9 @@
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+
+/* News ticker: dismissed for this session (set before first paint). */
+[data-ticker-hidden] .ticker-bar,
+[data-ticker-hidden] .ticker-spacer {
+  display: none;
+}
