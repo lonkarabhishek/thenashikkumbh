@@ -96,7 +96,7 @@ export default function NewsTicker({ items }: { items: TickerItem[] }) {
       }}
     >
       <div className="section-container flex h-full items-center gap-2 text-xs">
-        <span className="shrink-0 font-semibold uppercase tracking-wide text-saffron-800">
+        <span className="ticker-badge shrink-0 rounded px-1.5 font-semibold uppercase tracking-wide text-saffron-800">
           {t(COPY.label)}
         </span>
         <span className="h-3 w-px shrink-0 bg-temple-200" aria-hidden="true" />
@@ -106,8 +106,9 @@ export default function NewsTicker({ items }: { items: TickerItem[] }) {
           aria-live={rotating ? "polite" : "off"}
         >
           <Link
+            key={item.slug}
             href={`/blog/${item.slug}`}
-            className="hover:text-saffron-800 hover:underline focus-visible:underline"
+            className="ticker-headline rounded-sm hover:text-saffron-800 hover:underline focus-visible:underline"
           >
             {item.title[locale]}
           </Link>
