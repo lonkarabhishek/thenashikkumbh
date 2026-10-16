@@ -24,7 +24,7 @@ import { trails } from "@/data/yatraData";
 import Reveal from "@/components/Reveal";
 import Countdown from "@/components/Countdown";
 import AskSahayak from "@/components/AskSahayak";
-import NewsNudge, { type NewsHeadline } from "@/components/NewsNudge";
+import LatestNews, { type LatestItem } from "@/components/home/LatestNews";
 import PhotoDrift, { type DriftPhoto } from "@/components/home/PhotoDrift";
 import {
   GhatPanorama,
@@ -140,7 +140,7 @@ function formatHomeDate(iso: string, locale: Locale) {
   return fmtDate(iso, locale, { weekday: true });
 }
 
-export default function HomePage({ news, glimpses }: { news: NewsHeadline[]; glimpses: DriftPhoto[] }) {
+export default function HomePage({ news, glimpses }: { news: LatestItem[]; glimpses: DriftPhoto[] }) {
   const { locale, t } = useLanguage();
   const { open: openChat } = useChat();
 
@@ -212,6 +212,9 @@ export default function HomePage({ news, glimpses }: { news: NewsHeadline[]; gli
         {/* the ghats, drawn */}
         <GhatPanorama className="mt-4 w-full" />
       </section>
+
+      {/* ═══ Latest news, directly under the hero ═════════ */}
+      <LatestNews items={news} />
 
       {/* ═══ Ask Sahayak, first thing after the hero ═══════ */}
       <AskSahayak />
@@ -362,7 +365,6 @@ export default function HomePage({ news, glimpses }: { news: NewsHeadline[]; gli
       <PhotoDrift photos={glimpses} />
 
       {/* ═══ News, a pointer to /blog, headlines only ═══════ */}
-      <NewsNudge items={news} />
 
       {/* ═══ Ghats ══════════════════════════════════════════ */}
       <section className="section-paper py-20 sm:py-28">
