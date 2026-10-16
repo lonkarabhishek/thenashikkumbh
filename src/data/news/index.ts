@@ -31,9 +31,16 @@ import { article as digitalKumbh } from "./digital-kumbh-kumbhdoot";
 import { article as waterReservation } from "./nmc-water-reservation-8005-mcft";
 import { article as mukaneWtp } from "./mukane-wtp-370-crore";
 import { article as sadhugramLand } from "./sadhugram-land-acquisition-slow";
+import { article as kushavartaPuja } from "./kushavarta-flagstaff-puja-temple-closure";
+import { article as sadhugramTrees } from "./sadhugram-without-cutting-trees";
+import { article as healthStaff } from "./nmc-1638-temporary-health-staff";
 
-/** News posts published from the 6, 7, 14 and 15 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15 and 16 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 16 October 2026
+  kushavartaPuja,
+  sadhugramTrees,
+  healthStaff,
   // 15 October 2026
   waterReservation,
   mukaneWtp,
