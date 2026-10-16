@@ -5,6 +5,8 @@ import { ChatProvider } from "@/context/ChatContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import KumbhSahayakLazy from "@/components/KumbhSahayakLazy";
+import NewsTicker from "@/components/NewsTicker";
+import { blogArticles } from "@/data/blogData";
 import SOSButton from "@/components/SOSButton";
 
 import { Analytics } from "@vercel/analytics/next";
@@ -136,10 +138,19 @@ export default function LocaleLayout({
   const { locale } = params;
   if (!isLocale(locale)) notFound();
 
+  // Three newest posts; blogArticles is already sorted by date.
+  const tickerItems = blogArticles.slice(0, 3).map((a) => ({ slug: a.slug, title: a.title }));
+
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <SchemaMarkup />
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              'try{if(sessionStorage.getItem("news-ticker-dismissed"))document.documentElement.dataset.tickerHidden="1"}catch(e){}',
+          }}
+        />
       </head>
       <body
         className={`${inter.variable} ${fraunces.variable} ${notoSerifDevanagari.variable} antialiased`}
@@ -151,7 +162,9 @@ export default function LocaleLayout({
         </a>
         <LanguageProvider locale={locale}>
           <ChatProvider>
-            <Navbar />
+            <Navbar ticker={<NewsTicker items={tickerItems} />} />
+            {/* Reserves the ticker's 28px, since the navbar is fixed. */}
+            <div className="ticker-spacer h-7" aria-hidden="true" />
             <main id="main-content">{children}</main>
             <Footer />
             <KumbhSahayakLazy />

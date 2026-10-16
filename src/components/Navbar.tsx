@@ -113,7 +113,7 @@ const LANGUAGES: { code: Locale; short: string; full: string }[] = [
   { code: "en", short: "EN", full: "English" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ ticker }: { ticker?: React.ReactNode }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
@@ -174,6 +174,7 @@ export default function Navbar() {
           scrolled ? "border-b border-temple-100 shadow-soft" : "border-b border-temple-100/60"
         }`}
       >
+        {ticker}
         <AdvisoryBanner />
         <div className="section-container">
           <div className="flex h-16 items-center justify-between gap-3 lg:h-20 lg:gap-6">
