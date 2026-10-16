@@ -90,21 +90,21 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
   },
   blog: {
     en: {
-      title: "Kumbh Mela Blog - Latest News, Updates and Stories from Nashik",
+      title: "Nashik Kumbh 2027 News: Latest Simhastha Updates",
       description:
-        "Latest Nashik Kumbh Mela 2027 news: dates, works, budget, safety, stay and travel. Every story is sourced and dated.",
+        "Latest Nashik Kumbh Mela 2027 news, dated and sourced: Ramkund and ghat works, roads, water, Sadhugram and safety. Confirmed and reported marked.",
       crumb: "Blog",
     },
     mr: {
-      title: "नाशिक कुंभमेळा बातम्या आणि ताज्या घडामोडी",
+      title: "नाशिक कुंभमेळा २०२७ बातम्या: सिंहस्थाच्या ताज्या घडामोडी",
       description:
-        "नाशिक सिंहस्थ कुंभमेळा २०२७ संबंधी ताज्या बातम्या: पायाभूत सुविधा, शासनाच्या योजना, सांस्कृतिक कार्यक्रम आणि गोदावरीकाठच्या सिंहस्थासाठी भाविकांना मार्गदर्शन.",
+        "नाशिक सिंहस्थ कुंभमेळा २०२७ च्या ताज्या बातम्या, तारीख आणि स्रोतासह: रामकुंड व घाटांची कामे, रस्ते, पाणी, साधुग्राम आणि सुरक्षा. अधिकृत की वृत्त, ते स्पष्ट.",
       crumb: "बातम्या",
     },
     hi: {
-      title: "नाशिक कुंभ मेला समाचार और ताज़ा अपडेट",
+      title: "नाशिक कुंभ 2027 समाचार: सिंहस्थ की ताज़ा खबरें",
       description:
-        "नाशिक सिंहस्थ कुंभ मेला 2027 से जुड़ी ताज़ा खबरें: बुनियादी ढाँचा, सरकारी योजनाएँ, सांस्कृतिक कार्यक्रम और गोदावरी तट के सिंहस्थ के लिए तीर्थयात्री गाइड।",
+        "नाशिक सिंहस्थ कुंभ मेला 2027 की ताज़ा खबरें, तारीख और स्रोत के साथ: रामकुंड व घाटों का काम, सड़कें, पानी, साधुग्राम और सुरक्षा। पुष्ट या रिपोर्ट, साफ़ लिखा।",
       crumb: "समाचार",
     },
   },
