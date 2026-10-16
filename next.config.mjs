@@ -15,7 +15,7 @@ const nextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "upgrade-insecure-requests",
+            value: "upgrade-insecure-requests; frame-src 'self' https://www.google.com",
           },
           {
             key: "Strict-Transport-Security",

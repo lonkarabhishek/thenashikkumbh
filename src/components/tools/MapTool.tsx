@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "@/components/LocaleLink";
 import { useLanguage } from "@/context/LanguageContext";
-import { mapPlaces, osmEmbed, osmLink } from "@/data/mapPlaces";
+import { mapPlaces, googleEmbed, googleLink, googleDirections } from "@/data/mapPlaces";
 import { MAP_COPY as C } from "@/components/tools/mapCopy";
 
 export default function MapTool() {
@@ -26,7 +26,7 @@ export default function MapTool() {
         ))}
       </div>
       <div className="mt-4 overflow-hidden rounded-2xl border border-temple-200 bg-white">
-        <iframe key={p.id} title={p.name[locale]} src={osmEmbed(p)} className="h-80 w-full sm:h-96" loading="lazy" />
+        <iframe key={p.id} title={p.name[locale]} src={googleEmbed(p)} className="h-80 w-full sm:h-96" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
       </div>
       <p className="mt-1 text-xs text-temple-500">{C.attribution[locale]}</p>
       <section className="mt-4 rounded-2xl border border-temple-200 bg-white p-5">
@@ -34,7 +34,8 @@ export default function MapTool() {
         <p className="mt-2 leading-relaxed text-temple-700">{p.note[locale]}</p>
         <p className="mt-2 text-sm text-temple-600">{C.coords[locale]}: {p.lat.toFixed(5)}, {p.lon.toFixed(5)}</p>
         <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
-          <a href={osmLink(p)} target="_blank" rel="noopener noreferrer" className="font-semibold underline">{C.open[locale]}</a>
+          <a href={googleLink(p)} target="_blank" rel="noopener noreferrer" className="font-semibold underline">{C.open[locale]}</a>
+          <a href={googleDirections(p)} target="_blank" rel="noopener noreferrer" className="font-semibold underline">{C.directions[locale]}</a>
           <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline">{C.source[locale]}: {p.sourceLabel}</a>
           <Link href={p.page} className="font-semibold text-saffron-700 underline">{C.more[locale]}</Link>
         </p>
