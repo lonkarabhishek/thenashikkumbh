@@ -9,7 +9,9 @@ import { useLanguage } from "@/context/LanguageContext";
 import { useChat } from "@/context/ChatContext";
 import type { Locale } from "@/i18n/translations";
 import type { BlogArticle } from "@/data/blogData";
-import { formatDate } from "@/lib/dates";
+import { formatDate, formatTime } from "@/lib/dates";
+import AuthorBox from "@/components/trust/AuthorBox";
+import NewsRelatedGuides from "@/components/seo/NewsRelatedGuides";
 import type { NewsStatus, NewsThumb } from "./newsMeta";
 import { CATEGORY_LABEL, NEWS_UI } from "./newsCopy";
 import StatusBadge from "./StatusBadge";
@@ -19,8 +21,18 @@ export type ArticleCard = Pick<
   "id" | "slug" | "title" | "date" | "summary" | "category" | "source"
 > & { status: NewsStatus; thumb: NewsThumb | null };
 
+/** Official dates quoted in the "in brief" answer; the server reads them from the verified registry. */
+export interface NewsBrief {
+  dhwajarohan: { isoDate: string; startTime: string | null };
+  /** The three Nashik Amrit Snan dates, in order. */
+  amrit: string[];
+  /** The third Amrit Snan at Trimbakeshwar. */
+  amritTrimbak: string;
+  source: { org: string; url: string };
+}
+
 const COPY = {
-  title: { en: "Kumbh News", hi: "कुंभ समाचार", mr: "कुंभ बातम्या" },
+  title: { en: "Nashik Kumbh 2027 News", hi: "नाशिक कुंभ 2027 समाचार", mr: "नाशिक कुंभमेळा २०२७ बातम्या" },
   subtitle: {
     en: "News on the Nashik-Trimbakeshwar Simhastha 2027, in plain words. Every story links to where it came from.",
     hi: "नाशिक-त्र्यंबकेश्वर सिंहस्थ 2027 की खबरें, आसान शब्दों में। हर खबर के साथ उसका स्रोत।",
@@ -41,13 +53,20 @@ const COPY = {
     hi: "हमारा फ़ीड किसी भी न्यूज़ रीडर में जोड़ें, या कुंभ सहायक से अपनी भाषा में ताज़ा खबर पूछें।",
     mr: "आमचा फीड कोणत्याही न्यूज रीडरमध्ये जोडा, किंवा कुंभ सहायकाला तुमच्या भाषेत ताज्या बातम्या विचारा.",
   },
+  briefTitle: { en: "Nashik Kumbh 2027 in brief", hi: "नाशिक कुंभ 2027 संक्षेप में", mr: "नाशिक कुंभमेळा २०२७ थोडक्यात" },
+  briefSource: { en: "Dates source", hi: "तिथियों का स्रोत", mr: "तारखांचा स्रोत" },
+  briefAllDates: {
+    en: "Full schedule and every Parva Snan date",
+    hi: "पूरा कार्यक्रम और हर पर्व स्नान की तिथि",
+    mr: "संपूर्ण वेळापत्रक आणि प्रत्येक पर्व स्नानाची तारीख",
+  },
   rss: { en: "RSS feed", hi: "RSS फ़ीड", mr: "RSS फीड" },
   ask: { en: "Ask Sahayak", hi: "सहायक से पूछें", mr: "सहायकाला विचारा" },
 };
 
 type Filter = "all" | BlogArticle["category"];
 
-export default function BlogIndexView({ articles }: { articles: ArticleCard[] }) {
+export default function BlogIndexView({ articles, brief }: { articles: ArticleCard[]; brief: NewsBrief }) {
   const { t, locale } = useLanguage();
   const { openWithTopic } = useChat();
   const [filter, setFilter] = useState<Filter>("all");
@@ -117,6 +136,29 @@ export default function BlogIndexView({ articles }: { articles: ArticleCard[] })
       </header>
 
       <div className="bg-cream-50">
+        {/* ══════ In brief: a plain answer up top, dates from the verified registry ══════ */}
+        <section aria-labelledby="news-brief" className="section-container max-w-5xl pt-8 md:pt-10">
+          <div className="rounded-card border border-temple-100 bg-cream-100/60 p-5 sm:p-6">
+            <h2 id="news-brief" className="font-heading text-lg font-bold text-temple-900">
+              {t(COPY.briefTitle)}
+            </h2>
+            <p className="mt-2 leading-relaxed text-temple-700">
+              <BriefText brief={brief} locale={locale} latest={sourced[0]} />
+            </p>
+            <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+              <Link href="/dates" className="font-semibold text-temple-900 underline">
+                {t(COPY.briefAllDates)}
+              </Link>
+              <span className="text-temple-500">
+                {t(COPY.briefSource)}:{" "}
+                <a href={brief.source.url} target="_blank" rel="noopener noreferrer" className="underline">
+                  {brief.source.org}
+                </a>
+              </span>
+            </p>
+          </div>
+        </section>
+
         {/* ══════ Category tabs ══════ */}
         <nav
           aria-label={t(COPY.title)}
@@ -206,6 +248,10 @@ export default function BlogIndexView({ articles }: { articles: ArticleCard[] })
             </details>
           )}
 
+          {/* ══════ Related guides and who writes this ══════ */}
+          <NewsRelatedGuides />
+          <AuthorBox />
+
           {/* ══════ Follow ══════ */}
           <aside className="mt-16 flex flex-col gap-6 rounded-card bg-temple-900 p-6 text-cream-50 sm:p-8 md:flex-row md:items-center md:justify-between">
             <div className="max-w-xl">
@@ -228,6 +274,50 @@ export default function BlogIndexView({ articles }: { articles: ArticleCard[] })
           </aside>
         </div>
       </div>
+    </>
+  );
+}
+
+/** One paragraph, written per language rather than templated word by word. */
+function BriefText({ brief, locale, latest }: { brief: NewsBrief; locale: Locale; latest?: ArticleCard }) {
+  const d = (iso: string) => formatDate(iso, locale);
+  const dh = d(brief.dhwajarohan.isoDate);
+  const tm = brief.dhwajarohan.startTime ? formatTime(brief.dhwajarohan.startTime, locale) : null;
+  const [a1, a2, a3] = brief.amrit.map(d);
+  const at = d(brief.amritTrimbak);
+  const newest = latest ? (
+    <>
+      {" "}
+      {locale === "en" && <>The newest story here is from {d(latest.date)}: </>}
+      {locale === "hi" && <>इस पेज की सबसे नई खबर {d(latest.date)} की है: </>}
+      {locale === "mr" && <>या पानावरील सर्वात नवी बातमी {d(latest.date)} ची आहे: </>}
+      <Link href={`/blog/${latest.slug}`} className="font-semibold text-temple-900 underline">
+        {latest.title[locale]}
+      </Link>
+      {locale === "en" ? "." : locale === "hi" ? "।" : "."}
+    </>
+  ) : null;
+  if (locale === "mr")
+    return (
+      <>
+        नाशिक–त्र्यंबकेश्वर सिंहस्थ कुंभमेळ्याची औपचारिक सुरुवात {dh} रोजी{tm ? ` ${tm} वाजता` : ""} ध्वजारोहणाने
+        होईल. पहिले दोन अमृत स्नान (शाही स्नान) {a1} आणि {a2} रोजी रामकुंड व कुशावर्त दोन्ही ठिकाणी; तिसरे अमृत
+        स्नान नाशिकमध्ये {a3} आणि त्र्यंबकेश्वरला {at} रोजी होईल.{newest}
+      </>
+    );
+  if (locale === "hi")
+    return (
+      <>
+        नाशिक–त्र्यंबकेश्वर सिंहस्थ कुंभ की औपचारिक शुरुआत {dh} को{tm ? ` ${tm} बजे` : ""} ध्वजारोहण से होगी। पहले दो अमृत
+        स्नान (शाही स्नान) {a1} और {a2} को रामकुंड व कुशावर्त दोनों जगह होंगे; तीसरा अमृत स्नान नाशिक में {a3} और
+        त्र्यंबकेश्वर में {at} को होगा।{newest}
+      </>
+    );
+  return (
+    <>
+      The Nashik–Trimbakeshwar Simhastha Kumbh formally begins with Dhwajarohan (flag hoisting) on {dh}
+      {tm ? ` at ${tm}` : ""}. The first two Amrit Snan (Shahi Snan) days, {a1} and {a2}, are at both Ramkund and
+      Kushavarta; the third is on {a3} in Nashik and {at} at Trimbakeshwar.{newest}
     </>
   );
 }
