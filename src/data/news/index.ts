@@ -22,6 +22,8 @@ import { article as ramjhula } from "./ramjhula-ram-figure-proposal";
 import { article as samarth } from "./swami-samarth-kendra-protest";
 import { article as godavariSample } from "./godavari-water-sampled-high-court";
 
+import { article as mayorWaterCut } from "./nashik-mayor-10-percent-water-cut";
+import { article as templeOpposition } from "./trimbak-trust-priests-oppose-temple-closure";
 import { article as dhwajDeadline } from "./dhwajarohan-prep-deadline-oct-20";
 import { article as ramkundClosed } from "./ramkund-closed-15-20-days";
 import { article as mahaAarti } from "./joint-maha-aarti-shankhnaad";
@@ -37,6 +39,9 @@ import { article as healthStaff } from "./nmc-1638-temporary-health-staff";
 
 /** News posts published from the 6, 7, 14, 15 and 16 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 17 October 2026
+  mayorWaterCut,
+  templeOpposition,
   // 16 October 2026
   kushavartaPuja,
   sadhugramTrees,
