@@ -70,21 +70,21 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
   },
   about: {
     en: {
-      title: "About Kumbh Mela - History, Origins & Spiritual Significance",
+      title: "What Is Kumbh Mela? History, Simhastha and Nashik",
       description:
-        "The ancient origins of Kumbh Mela, the Samudra Manthan story, and why Nashik on the Godavari is one of its four sacred cities.",
+        "What Kumbh Mela is, why Nashik's is called Simhastha, why it is held at Nashik and Trimbakeshwar, and when the last (2015) and next (2027) were.",
       crumb: "About",
     },
     mr: {
-      title: "कुंभमेळा माहिती मराठीत: इतिहास, उगम आणि महत्त्व",
+      title: "कुंभमेळा माहिती मराठीत: इतिहास, सिंहस्थ आणि नाशिक",
       description:
-        "कुंभमेळ्याचा प्राचीन उगम, समुद्रमंथनाची कथा आणि गोदावरीकाठचे नाशिक हे या दिव्य सोहळ्यासाठी निवडलेल्या चार पवित्र नगरांपैकी एक का आहे, ते जाणून घ्या.",
+        "कुंभमेळा म्हणजे काय, नाशिकच्या कुंभाला सिंहस्थ का म्हणतात, तो नाशिक व त्र्यंबकेश्वरला का भरतो, आणि मागचा (२०१५) व पुढचा (२०२७) कधी, ते जाणून घ्या.",
       crumb: "कुंभमेळ्याविषयी",
     },
     hi: {
-      title: "कुंभ मेला जानकारी: इतिहास, उत्पत्ति और महत्व",
+      title: "कुंभ मेला क्या है? इतिहास, सिंहस्थ और नाशिक",
       description:
-        "कुंभ मेले की प्राचीन उत्पत्ति, समुद्र मंथन की कथा, और गोदावरी तट पर बसा नाशिक इस दिव्य समागम के लिए चुने गए चार पवित्र नगरों में से एक क्यों है, जानिए।",
+        "कुंभ मेला क्या है, नाशिक के कुंभ को सिंहस्थ क्यों कहते हैं, यह नाशिक और त्र्यंबकेश्वर में क्यों लगता है, और पिछला (2015) व अगला (2027) कब है, जानिए।",
       crumb: "कुंभ के बारे में",
     },
   },
