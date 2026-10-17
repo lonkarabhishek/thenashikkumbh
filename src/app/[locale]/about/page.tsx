@@ -17,6 +17,7 @@ import {
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
 import AboutThisSite from "@/components/trust/AboutThisSite";
+import { AboutFaq, AboutInBrief } from "@/components/AboutAnswers";
 
 /* ───────────────────── Samudra Manthan timeline data ───────────────────────── */
 
@@ -111,6 +112,8 @@ export default function AboutKumbhMelaPage() {
           </div>
         </div>
       </section>
+
+      <AboutInBrief />
 
       <AboutThisSite />
 
@@ -579,6 +582,10 @@ export default function AboutKumbhMelaPage() {
           </div>
         </div>
       </section>
+
+      <div className="bg-cream-50">
+        <AboutFaq />
+      </div>
 
       {/* ══════════════════════ (g) CTA BANNER ═══════════════════════════════ */}
       <section className="relative overflow-hidden">
