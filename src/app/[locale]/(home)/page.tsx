@@ -4,6 +4,7 @@ import { newsStatus } from "@/components/blog/newsMeta";
 import JsonLd from "@/components/JsonLd";
 import { SITE_URL } from "@/lib/seo";
 import type { Locale } from "@/i18n/translations";
+import { homeFaqs } from "@/data/homeFaq";
 import { getPhoto, isPhotoAvailable } from "@/data/photos";
 
 /** Photos for the home page's drifting strip, in display order. */
@@ -37,6 +38,17 @@ export default function Page({ params }: { params: { locale: Locale } }) {
   return (
     <>
       <JsonLd data={itemList} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: homeFaqs(params.locale).map((f) => ({
+            "@type": "Question",
+            name: f.q[params.locale],
+            acceptedAnswer: { "@type": "Answer", text: f.a[params.locale] },
+          })),
+        }}
+      />
       <HomePage news={news} glimpses={glimpses} />
     </>
   );

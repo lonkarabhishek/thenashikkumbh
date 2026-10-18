@@ -5,7 +5,7 @@
  * Blog posts use their own `updated`/`date` fields instead.
  */
 export const PAGE_LASTMOD: Record<string, string> = {
-  "/": "2026-10-07",
+  "/": "2026-10-18",
   "/dates": "2026-10-15",
   "/kumbh-countdown": "2026-10-15",
   "/kumbh-status": "2026-10-15",
