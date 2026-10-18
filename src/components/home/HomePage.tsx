@@ -24,6 +24,7 @@ import { trails } from "@/data/yatraData";
 import Reveal from "@/components/Reveal";
 import Countdown from "@/components/Countdown";
 import AskSahayak from "@/components/AskSahayak";
+import { HomeFaq, HomeInBrief } from "@/components/home/HomeAnswers";
 import LatestNews, { type LatestItem } from "@/components/home/LatestNews";
 import PhotoDrift, { type DriftPhoto } from "@/components/home/PhotoDrift";
 import {
@@ -212,6 +213,9 @@ export default function HomePage({ news, glimpses }: { news: LatestItem[]; glimp
 
       {/* ═══ Latest news, directly under the hero ═════════ */}
       <LatestNews items={news} />
+
+      {/* ═══ Direct answer: when and where ════════════════ */}
+      <HomeInBrief />
 
       {/* ═══ Ask Sahayak, first thing after the hero ═══════ */}
       <AskSahayak />
@@ -462,6 +466,11 @@ export default function HomePage({ news, glimpses }: { news: LatestItem[]; glimp
       </section>
 
       {/* ═══ Closing ════════════════════════════════════════ */}
+      {/* ═══ Common questions (FAQPage schema in the page wrapper) ═══ */}
+      <div className="bg-cream-50">
+        <HomeFaq />
+      </div>
+
       <section className="section-container py-20 text-center sm:py-28">
         <Reveal>
           <div className="mx-auto max-w-xl">
