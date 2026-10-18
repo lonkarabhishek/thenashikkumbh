@@ -22,6 +22,10 @@ import { article as ramjhula } from "./ramjhula-ram-figure-proposal";
 import { article as samarth } from "./swami-samarth-kendra-protest";
 import { article as godavariSample } from "./godavari-water-sampled-high-court";
 
+import { article as gangapurRelease } from "./gangapur-release-ramtirth-dhwajarohan";
+import { article as bitumenRoads } from "./nmc-bitumen-asphalting-16-roads";
+import { article as trimbakNagarSabha } from "./trimbak-nagar-sabha-residents-anger";
+import { article as policeDrive } from "./police-drive-hotels-lodges-tenants";
 import { article as mayorWaterCut } from "./nashik-mayor-10-percent-water-cut";
 import { article as templeOpposition } from "./trimbak-trust-priests-oppose-temple-closure";
 import { article as dhwajDeadline } from "./dhwajarohan-prep-deadline-oct-20";
@@ -37,8 +41,13 @@ import { article as kushavartaPuja } from "./kushavarta-flagstaff-puja-temple-cl
 import { article as sadhugramTrees } from "./sadhugram-without-cutting-trees";
 import { article as healthStaff } from "./nmc-1638-temporary-health-staff";
 
-/** News posts published from the 6, 7, 14, 15 and 16 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17 and 18 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 18 October 2026
+  gangapurRelease,
+  bitumenRoads,
+  trimbakNagarSabha,
+  policeDrive,
   // 17 October 2026
   mayorWaterCut,
   templeOpposition,
