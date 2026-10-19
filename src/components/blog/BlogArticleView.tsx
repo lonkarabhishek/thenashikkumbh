@@ -6,7 +6,9 @@ import AuthorBox from "@/components/trust/AuthorBox";
 import DatesCanonicalNote from "@/components/trust/DatesCanonicalNote";
 import { DATE_INTENT_SLUGS } from "@/data/siteOwner";
 import NewsRelatedGuides from "@/components/seo/NewsRelatedGuides";
-import { ArrowLeft, ArrowUpRight, Check, Clock, Share2 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Check, Clock, Copy, Send, Share2 } from "lucide-react";
+import { SITE_URL } from "@/lib/siteUrl";
+import { buildShareMessage, telegramHref, whatsappHref, xHref } from "@/lib/share";
 import { useLanguage } from "@/context/LanguageContext";
 import type { Locale } from "@/i18n/translations";
 import { NEWS_AUTHOR, type BlogArticle } from "@/data/blogData";
@@ -57,20 +59,38 @@ export default function BlogArticleView({
   const photo = thumb?.own && article.photoId && isPhotoAvailable(article.photoId) ? getPhoto(article.photoId) : undefined;
   const updated = article.updated && article.updated !== article.date ? article.updated : undefined;
 
-  const share = async () => {
-    const url = window.location.href;
+  // Title, short summary and link, in the language this page is read in.
+  const shareMsg = buildShareMessage(
+    article.title[locale],
+    article.summary[locale],
+    `${SITE_URL}/${locale}/blog/${article.slug}`
+  );
+
+  const copyMessage = async () => {
     try {
-      if (navigator.share) {
-        await navigator.share({ title: article.title[locale], url });
-        return;
-      }
-      await navigator.clipboard.writeText(url);
+      await navigator.clipboard.writeText(shareMsg.full);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      // The reader closed the share sheet; nothing to do.
+      // Clipboard blocked; nothing else to do.
     }
   };
+
+  const share = async () => {
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: shareMsg.title, text: shareMsg.textOnly, url: shareMsg.url });
+        return;
+      }
+    } catch (err) {
+      // The reader closed the share sheet.
+      if ((err as DOMException)?.name === "AbortError") return;
+    }
+    await copyMessage();
+  };
+
+  const shareLinkClass =
+    "inline-flex h-9 w-9 items-center justify-center rounded-full border border-temple-200 text-temple-700 transition-colors hover:border-saffron-400 hover:text-saffron-700";
 
   return (
     <div className="bg-cream-50">
@@ -137,13 +157,58 @@ export default function BlogArticleView({
                 </p>
               </div>
             </div>
-            <button
-              onClick={share}
-              className="inline-flex items-center gap-2 rounded-full border border-temple-200 px-4 py-2 text-sm font-semibold text-temple-700 transition-colors hover:border-saffron-400 hover:text-saffron-700"
-            >
-              {copied ? <Check className="h-4 w-4" /> : <Share2 className="h-4 w-4" />}
-              {copied ? t(NEWS_UI.copied) : t(NEWS_UI.share)}
-            </button>
+<div className="flex flex-wrap items-center gap-2">
+              <button
+                onClick={share}
+                className="inline-flex items-center gap-2 rounded-full border border-temple-200 px-4 py-2 text-sm font-semibold text-temple-700 transition-colors hover:border-saffron-400 hover:text-saffron-700"
+              >
+                {copied ? <Check className="h-4 w-4" /> : <Share2 className="h-4 w-4" />}
+                {copied ? t(NEWS_UI.copied) : t(NEWS_UI.share)}
+              </button>
+              <a
+                href={whatsappHref(shareMsg)}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={t(NEWS_UI.shareWhatsapp)}
+                title={t(NEWS_UI.shareWhatsapp)}
+                data-share="whatsapp"
+                className={shareLinkClass}
+              >
+                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
+                  <path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.8h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.72.97 1-3.62-.24-.37a9.8 9.8 0 1 1 8.33 4.6zm8.35-18.16A11.75 11.75 0 0 0 12.04.17C5.5.17.2 5.46.2 12c0 2.09.55 4.12 1.59 5.92L.1 24l6.23-1.63a11.8 11.8 0 0 0 5.7 1.45h.01c6.53 0 11.84-5.3 11.84-11.83 0-3.16-1.23-6.13-3.47-8.36z" />
+                </svg>
+              </a>
+              <a
+                href={telegramHref(shareMsg)}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram"
+                title="Telegram"
+                data-share="telegram"
+                className={shareLinkClass}
+              >
+                <Send className="h-4 w-4" />
+              </a>
+              <a
+                href={xHref(shareMsg)}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+                title="X"
+                data-share="x"
+                className={shareLinkClass}
+              >
+                <span aria-hidden className="text-sm font-bold leading-none">𝕏</span>
+              </a>
+              <button
+                onClick={copyMessage}
+                aria-label={t(NEWS_UI.copyMessage)}
+                title={t(NEWS_UI.copyMessage)}
+                className={shareLinkClass}
+              >
+                {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+              </button>
+            </div>
           </div>
 
           {/* What kind of story this is */}
