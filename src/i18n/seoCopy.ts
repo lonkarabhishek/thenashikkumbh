@@ -192,19 +192,19 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
     en: {
       title: "Nashik Ghats: Ram Kund, Panchavati and Other Sacred Ghats",
       description:
-        "Explore the holy bathing ghats of Nashik including Ram Kund, Godavari Ghats, Kapaleshwar Temple, and Panchavati - where Lord Rama walked during his exile.",
+        "Nashik ghat names and where the Amrit Snan happens: Ramkund, Godavari and Kapaleshwar ghats, Panchavati, Kushavarta in Trimbak, and the 12 new ghats for 2027.",
       crumb: "Sacred Ghats",
     },
     mr: {
       title: "नाशिकचे पवित्र घाट: रामकुंड, गोदावरी आणि पंचवटी",
       description:
-        "रामकुंड, गोदावरी घाट, कपालेश्वर मंदिर आणि पंचवटीसह नाशिकचे पवित्र स्नान घाट पाहा. वनवासकाळात प्रभू श्रीराम जिथे वावरले ती ही भूमी.",
+        "नाशिकच्या घाटांची नावे आणि अमृत स्नान कुठे होते: रामकुंड, गोदावरी व कपालेश्वर घाट, पंचवटी, त्र्यंबकचे कुशावर्त आणि सिंहस्थ २०२७ चे १२ नवे घाट.",
       crumb: "पवित्र घाट",
     },
     hi: {
       title: "नाशिक के पवित्र घाट: रामकुंड, गोदावरी और पंचवटी",
       description:
-        "रामकुंड, गोदावरी घाट, कपालेश्वर मंदिर और पंचवटी सहित नाशिक के पवित्र स्नान घाट देखिए, जहाँ वनवास के दौरान भगवान राम ने विचरण किया था।",
+        "नाशिक के घाटों के नाम और अमृत स्नान कहाँ होता है: रामकुंड, गोदावरी व कपालेश्वर घाट, पंचवटी, त्र्यंबक का कुशावर्त और सिंहस्थ 2027 के 12 नए घाट।",
       crumb: "पवित्र घाट",
     },
   },

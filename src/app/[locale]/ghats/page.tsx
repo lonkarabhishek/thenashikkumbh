@@ -16,6 +16,7 @@ import { translations } from "@/i18n/translations";
 import { ghatsI18n } from "@/data/siteDataI18n";
 import RamkundNotice from "@/components/seo/RamkundNotice";
 import NewGhats2027 from "@/components/NewGhats2027";
+import { GhatsFaq, GhatsInBrief } from "@/components/GhatsAnswers";
 
 /* ───────────────── Warm gradient palettes for each ghat ───────────────────── */
 
@@ -99,6 +100,7 @@ export default function GhatsPage() {
       </section>
 
       <RamkundNotice />
+      <GhatsInBrief />
 
       {/* ═══════════════════ (b) INTRO ABOUT THE GHATS ═══════════════════════ */}
       <section className="relative py-20 md:py-28 bg-cream-50">
@@ -403,6 +405,8 @@ export default function GhatsPage() {
           </div>
         </div>
       </section>
+
+      <GhatsFaq />
 
       {/* ══════════════════════ (e) CTA BANNER ═══════════════════════════════ */}
       <section className="relative overflow-hidden">
