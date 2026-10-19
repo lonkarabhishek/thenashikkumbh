@@ -1,14 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "@/components/LocaleLink";
 import AuthorBox from "@/components/trust/AuthorBox";
 import DatesCanonicalNote from "@/components/trust/DatesCanonicalNote";
 import { DATE_INTENT_SLUGS } from "@/data/siteOwner";
 import NewsRelatedGuides from "@/components/seo/NewsRelatedGuides";
-import { ArrowLeft, ArrowUpRight, Check, Clock, Copy, Send, Share2 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Check, Clock, Copy, MessageCircle, Share2 } from "lucide-react";
 import { SITE_URL } from "@/lib/siteUrl";
-import { buildShareMessage, telegramHref, whatsappHref, xHref } from "@/lib/share";
+import { buildShareMessage, smsHref, smsSeparator, whatsappHref, xHref } from "@/lib/share";
 import { useLanguage } from "@/context/LanguageContext";
 import type { Locale } from "@/i18n/translations";
 import { NEWS_AUTHOR, type BlogArticle } from "@/data/blogData";
@@ -39,6 +39,11 @@ export default function BlogArticleView({
 }) {
   const { locale, t } = useLanguage();
   const [copied, setCopied] = useState(false);
+  // "&" (iOS and most Androids) until the browser tells us it is Android.
+  const [smsSep, setSmsSep] = useState<"&" | "?">("&");
+  useEffect(() => {
+    setSmsSep(smsSeparator(navigator.userAgent));
+  }, []);
 
   if (!article) {
     return (
@@ -179,15 +184,13 @@ export default function BlogArticleView({
                 </svg>
               </a>
               <a
-                href={telegramHref(shareMsg)}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Telegram"
-                title="Telegram"
-                data-share="telegram"
+                href={smsHref(shareMsg, smsSep)}
+                aria-label={t(NEWS_UI.shareSms)}
+                title={t(NEWS_UI.shareSms)}
+                data-share="sms"
                 className={shareLinkClass}
               >
-                <Send className="h-4 w-4" />
+                <MessageCircle className="h-4 w-4" />
               </a>
               <a
                 href={xHref(shareMsg)}

@@ -38,7 +38,17 @@ export function buildShareMessage(title: string, summary: string | undefined, ur
 
 /** encodeURIComponent encodes UTF-8, so Marathi and Hindi survive the trip into WhatsApp. */
 export const whatsappHref = (m: ShareMessage) => `https://wa.me/?text=${encodeURIComponent(m.full)}`;
-export const telegramHref = (m: ShareMessage) =>
-  `https://t.me/share/url?url=${encodeURIComponent(m.url)}&text=${encodeURIComponent(m.textOnly)}`;
+/**
+ * SMS / iMessage. iOS wants "sms:&body=", Android "sms:?body="; "&" is the
+ * default because it also works on most Androids.
+ */
+export const smsHref = (m: ShareMessage, sep: "&" | "?" = "&") => `sms:${sep}body=${encodeURIComponent(m.full)}`;
+
+/** "?" only on Android that is not iOS; otherwise the "&" default. Client-only. */
+export function smsSeparator(userAgent: string): "&" | "?" {
+  const ios = /iPad|iPhone|iPod/i.test(userAgent) || (/Macintosh/i.test(userAgent) && /Mobile/i.test(userAgent));
+  if (ios) return "&";
+  return /Android/i.test(userAgent) ? "?" : "&";
+}
 export const xHref = (m: ShareMessage) =>
   `https://x.com/intent/post?text=${encodeURIComponent(m.title)}&url=${encodeURIComponent(m.url)}`;

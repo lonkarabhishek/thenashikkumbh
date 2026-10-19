@@ -38,6 +38,7 @@ export const NEWS_UI = {
   share: { en: "Share", hi: "शेयर करें", mr: "शेअर करा" },
   copied: { en: "Copied", hi: "कॉपी हुआ", mr: "कॉपी झाले" },
   shareWhatsapp: { en: "Share on WhatsApp", hi: "व्हॉट्सऐप पर शेयर करें", mr: "व्हॉट्सॲपवर शेअर करा" },
+  shareSms: { en: "iMessage", hi: "iMessage / मैसेज", mr: "iMessage / मेसेज" },
   copyMessage: { en: "Copy message", hi: "संदेश कॉपी करें", mr: "संदेश कॉपी करा" },
   sourcesTitle: { en: "Where this comes from", hi: "यह जानकारी कहाँ से है", mr: "ही माहिती कुठून आली" },
   originally: { en: "First announced on", hi: "पहली घोषणा:", mr: "पहिली घोषणा:" },
