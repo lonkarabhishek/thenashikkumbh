@@ -22,6 +22,9 @@ import { article as ramjhula } from "./ramjhula-ram-figure-proposal";
 import { article as samarth } from "./swami-samarth-kendra-protest";
 import { article as godavariSample } from "./godavari-water-sampled-high-court";
 
+import { article as worldRecords } from "./world-record-shankhnaad-maha-goda-aarti";
+import { article as ramkundFlagMasts } from "./ramkund-dharmadhwaja-flag-masts-installed";
+import { article as colourSigns } from "./colour-coded-signboards-sectors-dawale-review";
 import { article as gangapurRelease } from "./gangapur-release-ramtirth-dhwajarohan";
 import { article as bitumenRoads } from "./nmc-bitumen-asphalting-16-roads";
 import { article as trimbakNagarSabha } from "./trimbak-nagar-sabha-residents-anger";
@@ -41,8 +44,12 @@ import { article as kushavartaPuja } from "./kushavarta-flagstaff-puja-temple-cl
 import { article as sadhugramTrees } from "./sadhugram-without-cutting-trees";
 import { article as healthStaff } from "./nmc-1638-temporary-health-staff";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17 and 18 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18 and 19 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 19 October 2026
+  worldRecords,
+  ramkundFlagMasts,
+  colourSigns,
   // 18 October 2026
   gangapurRelease,
   bitumenRoads,
