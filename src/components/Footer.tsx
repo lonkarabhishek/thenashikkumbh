@@ -53,6 +53,14 @@ const SOCIALS = [
   { icon: Instagram, href: "https://instagram.com/thenashikkumbh", label: "Instagram" },
 ];
 
+const MAKER_LINKS = [
+  { href: "https://studio.workwithabhi.online", label: "Studio", desc: { en: "websites", hi: "वेबसाइट", mr: "वेबसाइट" } },
+  { href: "https://tapturf.in", label: "TapTurf", desc: { en: "turf booking", hi: "टर्फ बुकिंग", mr: "टर्फ बुकिंग" } },
+  { href: "https://gymnerve.com", label: "GymNerve", desc: { en: "gym software", hi: "जिम सॉफ़्टवेयर", mr: "जिम सॉफ्टवेअर" } },
+  { href: "https://biodataji.in", label: "BiodataJi", desc: { en: "biodata maker", hi: "बायोडाटा मेकर", mr: "बायोडाटा मेकर" } },
+  { href: "https://makeinvoice.si", label: "MakeInvoice", desc: { en: "invoice maker", hi: "इनवॉइस मेकर", mr: "इनव्हॉइस मेकर" } },
+];
+
 /** Numbers that work without a data connection, worth repeating on every page. */
 const HELPLINES = [
   { number: "112", label: { en: "Police", hi: "पुलिस", mr: "पोलीस" } },
@@ -245,6 +253,21 @@ export default function Footer() {
               </a>
             </p>
           </div>
+
+          <p className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-[0.6875rem] text-cream-200/35">
+            <span>{t({ en: "More from the maker:", hi: "निर्माता की ओर से और:", mr: "निर्मात्याकडून आणखी:" })}</span>
+            {MAKER_LINKS.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                target="_blank"
+                rel="noopener"
+                className="hover:text-cream-100"
+              >
+                {l.label} <span className="text-cream-200/25">· {t(l.desc)}</span>
+              </a>
+            ))}
+          </p>
         </div>
       </div>
     </footer>
