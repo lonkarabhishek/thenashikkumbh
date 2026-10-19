@@ -9,6 +9,7 @@ export const article: BlogArticle = {
     mr: "ध्वजारोहण ३१ ऑक्टोबर २०२६ रोजी दुपारी १२:०२ वाजता: कुंभ प्रारंभ सोहळ्याचा आतापर्यंतचा कार्यक्रम",
   },
   date: "2026-10-06",
+  updated: "2026-10-19",
   originallyAnnounced: "2025-06-01",
   source: "eSakal",
   sources: [
@@ -50,7 +51,9 @@ export const article: BlogArticle = {
     mr: "नाशिक-त्र्यंबकेश्वर सिंहस्थाची औपचारिक सुरुवात शनिवार, ३१ ऑक्टोबर २०२६ रोजी दुपारी १२:०२ वाजता ध्वजारोहणाने होणार आहे. पंचवटीतील रामकुंड आणि त्र्यंबकेश्वरचे कुशावर्त येथे एकाच वेळी ध्वज फडकणार आहेत. राष्ट्रपती द्रौपदी मुर्मू उपस्थित राहण्याची अपेक्षा आहे. काय निश्चित आहे, काय केवळ वृत्तांमध्ये आहे आणि काय अजून स्पष्ट नाही, ते जाणून घ्या.",
   },
   content: {
-    en: `The Nashik-Trimbakeshwar Simhastha Kumbh formally begins later this month. Dhwajarohan, the flag hoisting that marks the start of the Simhastha, is on **Saturday 31 October 2026**.
+    en: `**Update, 19 October 2026:** At an NTKMA press conference on 18 October, the evening Maha Goda Aarti at Ramkund was announced with about 6,500 participants from 650 tribal villages, as a world-record attempt. Prahaar gives its time as 6 PM, not the 7 PM in the reports below. A 501-conch Shankhnaad is set for 25 October. See [the latest on the 25 and 31 October events](/blog/two-world-record-attempts-501-conch-shankhnaad-6500-maha-goda-aarti).
+
+The Nashik-Trimbakeshwar Simhastha Kumbh formally begins later this month. Dhwajarohan, the flag hoisting that marks the start of the Simhastha, is on **Saturday 31 October 2026**.
 
 The date and the two venues are in the official NTKMA Kumbh Mela Plan published in June 2026. Flags will go up at the same moment at Ramkund (Ramtirth) in Panchavati, Nashik, and at Kushavarta in Trimbakeshwar.
 
@@ -93,7 +96,9 @@ In Trimbakeshwar, the Kushavarta Tirth is closed to pilgrims for renovation, and
 - Road closures, parking and traffic plans for 30 and 31 October have not been published yet. Check again closer to the date.
 
 We will update this page when the official programme is released.`,
-    hi: `नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभ (जिसे नासिक कुंभ भी लिखा जाता है) की औपचारिक शुरुआत इसी महीने के अंत में होगी। सिंहस्थ के आरंभ का प्रतीक ध्वजारोहण **शनिवार 31 अक्टूबर 2026** को होगा।
+    hi: `**अपडेट, 19 अक्टूबर 2026:** 18 अक्टूबर की NTKMA प्रेस कॉन्फ़्रेंस में बताया गया कि रामकुंड पर शाम की महा गोदा आरती में 650 जनजातीय गाँवों से करीब 6,500 लोग शामिल होंगे और इसे विश्व रिकॉर्ड प्रयास के रूप में किया जाएगा। प्रहार ने इसका समय शाम 6 बजे बताया है, नीचे की रिपोर्टों में दिए शाम 7 बजे नहीं। 25 अक्टूबर को 501 लोगों का शंखनाद होगा। देखें: [25 और 31 अक्टूबर के कार्यक्रमों की ताज़ा खबर](/blog/two-world-record-attempts-501-conch-shankhnaad-6500-maha-goda-aarti)।
+
+नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभ (जिसे नासिक कुंभ भी लिखा जाता है) की औपचारिक शुरुआत इसी महीने के अंत में होगी। सिंहस्थ के आरंभ का प्रतीक ध्वजारोहण **शनिवार 31 अक्टूबर 2026** को होगा।
 
 यह तारीख और दोनों स्थान जून 2026 में जारी NTKMA की आधिकारिक कुंभ मेला योजना में दर्ज हैं। पंचवटी, नाशिक के रामकुंड (रामतीर्थ) और त्र्यंबकेश्वर के कुशावर्त पर एक ही समय ध्वज फहराए जाएँगे।
 
@@ -136,7 +141,9 @@ NTKMA योजना (खंड 10.3) के अनुसार 31 अक्ट
 - 30 और 31 अक्टूबर के लिए सड़क बंदी, पार्किंग और यातायात योजना अभी जारी नहीं हुई है। तारीख नज़दीक आने पर फिर देखें।
 
 आधिकारिक कार्यक्रम जारी होते ही हम यह पेज अपडेट करेंगे।`,
-    mr: `नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभमेळा 2027 ची औपचारिक सुरुवात याच महिन्याच्या शेवटी होत आहे. सिंहस्थाचा प्रारंभ दर्शवणारे ध्वजारोहण **शनिवार, ३१ ऑक्टोबर २०२६** रोजी होणार आहे.
+    mr: `**अपडेट, १९ ऑक्टोबर २०२६:** १८ ऑक्टोबरच्या प्राधिकरणाच्या पत्रकार परिषदेत रामकुंडावरील सायंकाळच्या महा गोदा आरतीत ६५० जनजातीय गावांतील सुमारे ६,५०० बांधव सहभागी होतील आणि हा विश्वविक्रमी प्रयत्न असेल, असे जाहीर झाले. प्रहारने आरतीची वेळ सायंकाळी ६ वाजता दिली आहे, खालील वृत्तांतील ७ वाजता नव्हे. २५ ऑक्टोबरला ५०१ जणांचा शंखनाद होणार आहे. पाहा: [२५ आणि ३१ ऑक्टोबरच्या कार्यक्रमांची ताजी बातमी](/blog/two-world-record-attempts-501-conch-shankhnaad-6500-maha-goda-aarti).
+
+नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभमेळा 2027 ची औपचारिक सुरुवात याच महिन्याच्या शेवटी होत आहे. सिंहस्थाचा प्रारंभ दर्शवणारे ध्वजारोहण **शनिवार, ३१ ऑक्टोबर २०२६** रोजी होणार आहे.
 
 ही तारीख आणि दोन्ही ठिकाणे जून २०२६ मध्ये प्रसिद्ध झालेल्या NTKMA च्या अधिकृत कुंभमेळा आराखड्यात आहेत. पंचवटीतील रामकुंड (रामतीर्थ) आणि त्र्यंबकेश्वरचे कुशावर्त येथे एकाच वेळी ध्वज फडकणार आहेत.
 
