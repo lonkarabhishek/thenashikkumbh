@@ -5,6 +5,7 @@ import { Facebook, Instagram, Mail, Phone } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { navExtra } from "@/i18n/navExtra";
+import AuthorBox from "@/components/trust/AuthorBox";
 import { BorderStrip } from "@/components/art/Motifs";
 import { offices, siteAttribution } from "@/data/verified";
 
@@ -253,6 +254,8 @@ export default function Footer() {
               </a>
             </p>
           </div>
+
+          <AuthorBox variant="footer" />
 
           <p className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-[0.6875rem] text-cream-200/35">
             <span>{t({ en: "More from the maker:", hi: "निर्माता की ओर से और:", mr: "निर्मात्याकडून आणखी:" })}</span>
