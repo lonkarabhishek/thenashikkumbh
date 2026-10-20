@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "ध्वजारोहणाला गोदावरी पुन्हा खळाळणार: रामतीर्थ भरण्यासाठी गंगापूरमधून आवर्तनाची तयारी",
   },
   date: "2026-10-18",
+  updated: "2026-10-20",
+  followUp: { slug: "no-dam-water-for-dhwajarohan-collector-ramkund-dry", date: "2026-10-20" },
   originallyAnnounced: "2026-10-17",
   source: "Sakal",
   sources: [

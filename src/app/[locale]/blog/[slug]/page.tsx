@@ -17,6 +17,10 @@ export default function Page({ params }: { params: { slug: string } }) {
     .slice(0, 3)
     .map((a) => ({ id: a.id, slug: a.slug, title: a.title, date: a.date, category: a.category, thumb: newsThumb(a) }));
 
+  // A newer follow-up story, announced at the top of this post.
+  const next = article.followUp ? getArticleBySlug(article.followUp.slug) : undefined;
+  const followUp = next ? { slug: next.slug, title: next.title, date: next.date } : undefined;
+
   return (
     <BlogArticleView
       article={article}
@@ -24,6 +28,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       thumb={newsThumb(article)}
       minutes={readingTimes(article.content)}
       related={related}
+      followUp={followUp}
     />
   );
 }

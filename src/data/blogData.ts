@@ -49,6 +49,11 @@ export interface BlogArticle {
   greeting?: L10n;
   /** Optional Q&A shown after the body and emitted as FAQPage JSON-LD. */
   faq?: { q: L10n; a: L10n }[];
+  /**
+   * Set on an older post when a genuine follow-up has been published. A note
+   * at the top of this post (mr/hi/en) then links readers to the newer story.
+   */
+  followUp?: { slug: string; date: string };
 }
 
 /** The byline on every post. Never a government office. */

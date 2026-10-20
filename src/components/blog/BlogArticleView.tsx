@@ -6,7 +6,7 @@ import AuthorBox from "@/components/trust/AuthorBox";
 import DatesCanonicalNote from "@/components/trust/DatesCanonicalNote";
 import { DATE_INTENT_SLUGS } from "@/data/siteOwner";
 import NewsRelatedGuides from "@/components/seo/NewsRelatedGuides";
-import { ArrowLeft, ArrowUpRight, Check, Clock, Copy, MessageCircle, Share2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, BellRing, Check, Clock, Copy, MessageCircle, Share2 } from "lucide-react";
 import { SITE_URL } from "@/lib/siteUrl";
 import { ogImageFor } from "@/lib/seo";
 import { buildShareMessage, smsHref, smsSeparator, whatsappHref, xHref } from "@/lib/share";
@@ -31,12 +31,14 @@ export default function BlogArticleView({
   thumb = null,
   minutes,
   related,
+  followUp,
 }: {
   article: BlogArticle | undefined;
   status?: NewsStatus;
   thumb?: NewsThumb | null;
   minutes?: Record<Locale, number>;
   related: RelatedArticle[];
+  followUp?: Pick<BlogArticle, "slug" | "title" | "date">;
 }) {
   const { locale, t } = useLanguage();
   const [copied, setCopied] = useState(false);
@@ -139,6 +141,30 @@ export default function BlogArticleView({
               {CATEGORY_LABEL[article.category]?.[locale] ?? article.category}
             </span>
           </nav>
+
+          {followUp && (
+            <aside
+              role="note"
+              className="mt-6 flex items-start gap-3 rounded-xl border border-saffron-300 bg-saffron-50 px-4 py-3 text-saffron-900"
+            >
+              <BellRing aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-saffron-700" />
+              <div className="text-sm leading-relaxed">
+                <p className="font-semibold">
+                  {t(NEWS_UI.followUpTitle)}{" "}
+                  <span className="font-normal text-saffron-800">
+                    (<time dateTime={followUp.date}>{formatDate(followUp.date, locale)}</time>)
+                  </span>
+                </p>
+                <Link
+                  href={`/blog/${followUp.slug}`}
+                  className="mt-1 inline-flex items-center gap-1 font-semibold text-saffron-800 underline underline-offset-2 hover:text-saffron-900"
+                >
+                  {t(NEWS_UI.followUpRead)}: {followUp.title[locale]}
+                  <ArrowRight aria-hidden className="h-4 w-4 shrink-0" />
+                </Link>
+              </div>
+            </aside>
+          )}
 
           <h1 className="mt-6 font-heading text-[2rem] font-bold leading-[1.15] text-temple-900 text-balance md:text-[2.75rem]">
             {article.title[locale]}

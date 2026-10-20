@@ -44,4 +44,6 @@ export const NEWS_UI = {
   originally: { en: "First announced on", hi: "पहली घोषणा:", mr: "पहिली घोषणा:" },
   more: { en: "More news", hi: "और खबरें", mr: "आणखी बातम्या" },
   read: { en: "Read", hi: "पढ़ें", mr: "वाचा" },
+  followUpTitle: { en: "Updated news available", hi: "इस खबर पर नया अपडेट उपलब्ध है", mr: "या बातमीची नवी अपडेट उपलब्ध आहे" },
+  followUpRead: { en: "Read the latest update", hi: "ताज़ा अपडेट पढ़ें", mr: "ताजी अपडेट वाचा" },
 } satisfies Record<string, L>;
