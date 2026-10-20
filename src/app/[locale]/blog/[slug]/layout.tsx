@@ -36,7 +36,7 @@ export function generateMetadata({ params }: Omit<Props, "children">): Metadata 
     title: article.title[params.locale],
     description: article.summary[params.locale],
     path: `/blog/${article.slug}`,
-    image: ogImageFor(article.image),
+    image: article.shareImage?.[params.locale] ?? ogImageFor(article.image),
     keywords: ["Kumbh Mela", "Nashik", article.category, "Simhastha 2027", "Godavari"],
     type: "article",
     publishedTime: article.date,
@@ -75,7 +75,7 @@ export default function BlogSlugLayout({ params, children }: Props) {
     "@type": "NewsArticle",
     headline: article.title[locale],
     description: article.summary[locale],
-    image: [`${SITE_URL}${ogImageFor(article.image)}`, ...photoImage],
+    image: [`${SITE_URL}${article.shareImage?.[locale] ?? ogImageFor(article.image)}`, ...photoImage],
     datePublished: article.date,
     dateModified: article.updated ?? article.date,
     author: {

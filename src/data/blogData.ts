@@ -43,6 +43,10 @@ export interface BlogArticle {
    * the reader's language prefix automatically).
    */
   content: L10n;
+  /** Optional per-language share image (1200x630), used as og:image and attached by Web Share. */
+  shareImage?: L10n;
+  /** Optional short forwardable greeting, shown in a box with its own WhatsApp share. */
+  greeting?: L10n;
   /** Optional Q&A shown after the body and emitted as FAQPage JSON-LD. */
   faq?: { q: L10n; a: L10n }[];
 }
