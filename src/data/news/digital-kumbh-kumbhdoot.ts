@@ -37,7 +37,9 @@ export const article: BlogArticle = {
 - **QR-code based services.**
 - **Crowd monitoring through CCTV.**
 
-We will link the official app or service here once it launches. Until then see the [Guide](/guide) and [Emergency numbers](/emergency).`,
+We will link the official app or service here once it launches. Until then see the [Guide](/guide) and [Emergency numbers](/emergency).
+
+For the full picture of how crowds will be managed, see our [Nashik Kumbh crowd management explainer](/blog/ai-crowd-management-kumbh-authority).`,
     hi: `फ्री प्रेस जर्नल ने 7 अक्टूबर को बताया कि सिंहस्थ 2027 के लिए **'डिजिटल कुंभ'** पहल प्रस्तावित है। यह **रिपोर्ट** है; आधिकारिक विवरण अभी घोषित नहीं हुए हैं।
 
 ## प्रस्ताव में क्या है
@@ -47,7 +49,9 @@ We will link the official app or service here once it launches. Until then see t
 - **QR कोड आधारित सेवाएँ।**
 - **CCTV से भीड़ की निगरानी।**
 
-आधिकारिक ऐप या सेवा शुरू होने पर हम यहाँ लिंक देंगे। तब तक [गाइड](/guide) और [आपातकालीन नंबर](/emergency) देखें।`,
+आधिकारिक ऐप या सेवा शुरू होने पर हम यहाँ लिंक देंगे। तब तक [गाइड](/guide) और [आपातकालीन नंबर](/emergency) देखें।
+
+भीड़ प्रबंधन की पूरी तस्वीर के लिए हमारा [नाशिक कुंभ भीड़ प्रबंधन लेख](/blog/ai-crowd-management-kumbh-authority) पढ़ें।`,
     mr: `सिंहस्थ २०२७ साठी **'डिजिटल कुंभ'** उपक्रम प्रस्तावित असल्याचे फ्री प्रेस जर्नलने ७ ऑक्टोबरला दिले आहे. हे **वृत्त** आहे; अधिकृत तपशील अजून जाहीर झालेले नाहीत.
 
 ## प्रस्तावात काय आहे
@@ -57,6 +61,8 @@ We will link the official app or service here once it launches. Until then see t
 - **QR कोडवर आधारित सेवा.**
 - **CCTV द्वारे गर्दीचे निरीक्षण.**
 
-अधिकृत ॲप किंवा सेवा सुरू झाल्यावर आम्ही येथे दुवा देऊ. तोपर्यंत [मार्गदर्शक](/guide) आणि [आपत्कालीन क्रमांक](/emergency) पाहा.`,
+अधिकृत ॲप किंवा सेवा सुरू झाल्यावर आम्ही येथे दुवा देऊ. तोपर्यंत [मार्गदर्शक](/guide) आणि [आपत्कालीन क्रमांक](/emergency) पाहा.
+
+गर्दी व्यवस्थापनाचे संपूर्ण चित्र समजून घेण्यासाठी आमचा [नाशिक कुंभमेळा गर्दी व्यवस्थापन लेख](/blog/ai-crowd-management-kumbh-authority) वाचा.`,
   },
 };
