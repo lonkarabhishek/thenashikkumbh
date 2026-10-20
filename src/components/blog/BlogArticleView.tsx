@@ -8,6 +8,7 @@ import { DATE_INTENT_SLUGS } from "@/data/siteOwner";
 import NewsRelatedGuides from "@/components/seo/NewsRelatedGuides";
 import { ArrowLeft, ArrowUpRight, Check, Clock, Copy, MessageCircle, Share2 } from "lucide-react";
 import { SITE_URL } from "@/lib/siteUrl";
+import { ogImageFor } from "@/lib/seo";
 import { buildShareMessage, smsHref, smsSeparator, whatsappHref, xHref } from "@/lib/share";
 import { useLanguage } from "@/context/LanguageContext";
 import type { Locale } from "@/i18n/translations";
@@ -81,9 +82,30 @@ export default function BlogArticleView({
     }
   };
 
+  const shareImagePath = article.shareImage?.[locale] ?? (article.image ? ogImageFor(article.image) : undefined);
+  const shareImageFile = async (): Promise<File[] | undefined> => {
+    if (!shareImagePath || typeof File === "undefined" || !navigator.canShare) return undefined;
+    try {
+      const res = await fetch(shareImagePath);
+      if (!res.ok) return undefined;
+      const blob = await res.blob();
+      const name = shareImagePath.split("/").pop() || "share.jpg";
+      return [new File([blob], name, { type: blob.type || "image/jpeg" })];
+    } catch {
+      return undefined;
+    }
+  };
+
   const share = async () => {
     try {
       if (navigator.share) {
+        // Attach the post's share image as a file where the browser allows it
+        // (mobile WhatsApp etc. then send the picture with the message).
+        const files = await shareImageFile();
+        if (files && navigator.canShare?.({ files })) {
+          await navigator.share({ title: shareMsg.title, text: shareMsg.full, files });
+          return;
+        }
         await navigator.share({ title: shareMsg.title, text: shareMsg.textOnly, url: shareMsg.url });
         return;
       }
@@ -256,6 +278,22 @@ export default function BlogArticleView({
         <div className="mx-auto mt-10 max-w-[46rem] px-4 sm:px-6">
           {DATE_INTENT_SLUGS.includes(article.slug) && <DatesCanonicalNote />}
           <RichText text={article.content[locale]} tone="light" />
+
+          {article.greeting && (
+            <aside className="mt-10 rounded-card border border-saffron-200 bg-saffron-50 p-5 sm:p-6" aria-label="greeting">
+              <p className="whitespace-pre-line text-lg leading-relaxed text-temple-900">{article.greeting[locale]}</p>
+              <a
+                href={whatsappHref(buildShareMessage(article.greeting[locale], undefined, shareMsg.url))}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-share="whatsapp-greeting"
+                className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
+              >
+                <MessageCircle className="h-4 w-4" />
+                {t({ en: "Send this greeting on WhatsApp", hi: "यह शुभकामना व्हॉट्सऐप पर भेजें", mr: "ही शुभेच्छा व्हॉट्सॲपवर पाठवा" })}
+              </a>
+            </aside>
+          )}
 
           {article.faq && article.faq.length > 0 && (
             <section className="mt-12" aria-labelledby="faq-title">
