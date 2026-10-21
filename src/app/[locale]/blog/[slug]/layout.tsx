@@ -57,11 +57,15 @@ export default function BlogSlugLayout({ params, children }: Props) {
 
   const url = localeUrl(locale, `/blog/${article.slug}`);
   const photo = article.photoId && isPhotoAvailable(article.photoId) ? getPhoto(article.photoId) : undefined;
-  const photoImage = photo
+  // Google Discover wants images at least 1200px wide; smaller photos stay
+  // on the page but are left out of the schema so they are never picked.
+  const photoImage = photo && photo.width >= 1200
     ? [
         {
           "@type": "ImageObject",
           url: `${SITE_URL}${photo.file}`,
+          width: photo.width,
+          height: photo.height,
           caption: photo.caption,
           creator: { "@type": "Person", name: photo.author },
           creditText: `${photo.author} / Wikimedia Commons`,
@@ -75,9 +79,20 @@ export default function BlogSlugLayout({ params, children }: Props) {
     "@type": "NewsArticle",
     headline: article.title[locale],
     description: article.summary[locale],
-    image: [`${SITE_URL}${article.shareImage?.[locale] ?? ogImageFor(article.image)}`, ...photoImage],
-    datePublished: article.date,
-    dateModified: article.updated ?? article.date,
+    // Every share/OG image is a 1200x630 JPEG (checked by scripts/verify-news.mjs).
+    image: [
+      {
+        "@type": "ImageObject",
+        url: `${SITE_URL}${article.shareImage?.[locale] ?? ogImageFor(article.image)}`,
+        width: 1200,
+        height: 630,
+      },
+      ...photoImage,
+    ],
+    // Full ISO 8601 with the IST offset; matches the news sitemap (09:00 IST).
+    datePublished: `${article.date}T09:00:00+05:30`,
+    dateModified: `${article.updated ?? article.date}T09:00:00+05:30`,
+    isAccessibleForFree: true,
     author: {
       "@type": "Person",
       "@id": `${SITE_URL}/#owner`,
@@ -92,7 +107,8 @@ export default function BlogSlugLayout({ params, children }: Props) {
     publisher: {
       "@type": "Organization",
       name: SITE_NAME,
-      logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.png` },
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.png`, width: 192, height: 192 },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     url,
