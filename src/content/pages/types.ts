@@ -38,6 +38,8 @@ export interface InfoPageContent {
   faq?: { q: L10n; a: L10n }[];
   /** Optional per-language 1200x630 share image, used as og:image. */
   shareImage?: L10n;
+  /** Optional forwardable info block shown with image share + WhatsApp buttons. */
+  forward?: L10n;
 }
 
 export interface LiveUpdate {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import RichText from "@/components/RichText";
+import ForwardCard from "@/components/share/ForwardCard";
 import CommonsPhoto from "@/components/photos/CommonsPhoto";
 import type { InfoPageContent } from "@/content/pages/types";
 import type { Locale } from "@/i18n/translations";
@@ -144,6 +145,10 @@ export default function InfoPage({ page, locale }: { page: InfoPageContent; loca
               ))}
             </ol>
           </section>
+        )}
+
+        {page.forward && (
+          <ForwardCard text={page.forward[locale]} url={url} imagePath={page.shareImage?.[locale]} locale={locale} />
         )}
 
         {page.sections.map((section, i) => (

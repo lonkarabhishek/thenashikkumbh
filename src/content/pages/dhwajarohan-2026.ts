@@ -455,6 +455,16 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
     mr: "ध्वजारोहण २०२६",
   },
   photoIds: [1, 13, 41],
+  shareImage: {
+    mr: "/images/og/share/dhwajarohan-2026-mr.jpg",
+    hi: "/images/og/share/dhwajarohan-2026-hi.jpg",
+    en: "/images/og/share/dhwajarohan-2026-en.jpg",
+  },
+  forward: {
+    mr: "🚩 सिंहस्थ कुंभमेळ्याचे ध्वजारोहण\n📅 शनिवार, ३१ ऑक्टोबर २०२६\n🕛 दुपारी १२:०२\n📍 रामकुंड, नाशिक आणि कुशावर्त, त्र्यंबकेश्वर\n🪔 सायंकाळी सुमारे ६ वाजता महा गोदा आरती (वृत्त)\nवाहतूक, पार्किंग आणि थेट अपडेट:",
+    hi: "🚩 सिंहस्थ कुंभ मेले का ध्वजारोहण\n📅 शनिवार, 31 अक्टूबर 2026\n🕛 दोपहर 12:02\n📍 रामकुंड, नाशिक और कुशावर्त, त्र्यंबकेश्वर\n🪔 शाम करीब 6 बजे महा गोदा आरती (रिपोर्ट)\nट्रैफ़िक, पार्किंग और लाइव अपडेट:",
+    en: "🚩 Simhastha Kumbh flag hoisting\n📅 Saturday 31 October 2026\n🕛 12:02 PM\n📍 Ramkund, Nashik and Kushavarta, Trimbakeshwar\n🪔 Maha Goda Aarti at about 6 PM (reported)\nTraffic, parking and live updates:",
+  },
   liveEvent: {
     name: {
       en: "Nashik-Trimbakeshwar Simhastha Dhwajarohan (flag hoisting)",

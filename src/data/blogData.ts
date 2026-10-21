@@ -47,6 +47,8 @@ export interface BlogArticle {
   shareImage?: L10n;
   /** Optional short forwardable greeting, shown in a box with its own WhatsApp share. */
   greeting?: L10n;
+  /** Optional forwardable info block (event card) with image share + WhatsApp. */
+  forward?: L10n;
   /** Optional Q&A shown after the body and emitted as FAQPage JSON-LD. */
   faq?: { q: L10n; a: L10n }[];
   /**

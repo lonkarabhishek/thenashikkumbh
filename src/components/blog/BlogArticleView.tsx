@@ -14,6 +14,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import type { Locale } from "@/i18n/translations";
 import { NEWS_AUTHOR, type BlogArticle } from "@/data/blogData";
 import RichText from "@/components/RichText";
+import ForwardCard from "@/components/share/ForwardCard";
 import PhotoCredit from "@/components/photos/PhotoCredit";
 import { getPhoto, isPhotoAvailable } from "@/data/photos";
 import { formatDate } from "@/lib/dates";
@@ -319,6 +320,10 @@ export default function BlogArticleView({
                 {t({ en: "Send this greeting on WhatsApp", hi: "यह शुभकामना व्हॉट्सऐप पर भेजें", mr: "ही शुभेच्छा व्हॉट्सॲपवर पाठवा" })}
               </a>
             </aside>
+          )}
+
+          {article.forward && (
+            <ForwardCard text={article.forward[locale]} url={shareMsg.url} imagePath={shareImagePath} locale={locale} />
           )}
 
           {article.faq && article.faq.length > 0 && (
