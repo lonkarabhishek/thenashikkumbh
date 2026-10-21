@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "साधुग्राम जमीन प्रक्रिया मंद — कुंभ प्राधिकरण चिंतित; ~१,४०० एकरांची योजना",
   },
   date: "2026-10-09",
+  updated: "2026-10-21",
+  followUp: { slug: "nmc-starts-acquiring-191-acres-for-tapovan-sadhugram-objections-15-days", date: "2026-10-21" },
   source: "Times of India",
   sources: [
     {
