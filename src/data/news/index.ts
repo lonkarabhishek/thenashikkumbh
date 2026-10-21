@@ -22,6 +22,9 @@ import { article as ramjhula } from "./ramjhula-ram-figure-proposal";
 import { article as samarth } from "./swami-samarth-kendra-protest";
 import { article as godavariSample } from "./godavari-water-sampled-high-court";
 
+import { article as sadhugram191 } from "./sadhugram-191-acres-acquisition-notice";
+import { article as religiousInstitutions } from "./sixty-three-religious-institutions-infra-proposals";
+import { article as mastKnobKushavarta } from "./ramkund-flag-mast-brass-knob-stolen-kushavarta-works";
 import { article as noDamWater } from "./no-dam-water-dhwajarohan-collector";
 import { article as dussehra2026 } from "./dussehra-2026-nashik-ramayana-panchavati";
 import { article as worldRecords } from "./world-record-shankhnaad-maha-goda-aarti";
@@ -46,8 +49,12 @@ import { article as kushavartaPuja } from "./kushavarta-flagstaff-puja-temple-cl
 import { article as sadhugramTrees } from "./sadhugram-without-cutting-trees";
 import { article as healthStaff } from "./nmc-1638-temporary-health-staff";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19 and 20 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20 and 21 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 21 October 2026
+  sadhugram191,
+  mastKnobKushavarta,
+  religiousInstitutions,
   // 20 October 2026
   noDamWater,
   dussehra2026,

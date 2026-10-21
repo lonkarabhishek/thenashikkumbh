@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "रामकुंडावर धर्मध्वज उभे: ५१ फूट आणि ३१ फुटांचे ध्वजस्तंभ बसवले, उरलेली कामे पाच दिवसांत पूर्ण होणार",
   },
   date: "2026-10-19",
+  updated: "2026-10-21",
+  followUp: { slug: "brass-fitting-stolen-from-ramkund-flag-mast-kushavarta-works-speeded-up", date: "2026-10-21" },
   originallyAnnounced: "2026-10-18",
   source: "Free Press Journal",
   sources: [
