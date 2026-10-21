@@ -13,7 +13,7 @@ export const PAGE_LASTMOD: Record<string, string> = {
   "/share-snan-card": "2026-10-15",
   "/map": "2026-10-15",
   "/parva-snan-calendar": "2026-10-07",
-  "/dhwajarohan-2026": "2026-10-07",
+  "/dhwajarohan-2026": "2026-10-21",
   "/trimbakeshwar-kumbh-2027": "2026-10-07",
   "/how-to-reach": "2026-10-06",
   "/accommodation": "2026-10-06",
