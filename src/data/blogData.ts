@@ -122,13 +122,13 @@ const archiveArticles: BlogArticle[] = [
     id: 102,
     slug: "shahi-snan-renamed-amrit-snan",
     title: {
-      en: "'Shahi Snan' to Be Called 'Amrit Snan' at the Nashik Simhastha",
-      hi: "नाशिक सिंहस्थ में 'शाही स्नान' अब 'अमृत स्नान' कहलाएगा",
-      mr: "नाशिक सिंहस्थात 'शाही स्नान' आता 'अमृत स्नान' म्हटले जाणार",
+      en: "Shahi Snan Is Now Amrit Snan at Nashik Kumbh 2027: What Changed and Why",
+      hi: "नाशिक कुंभ 2027: शाही स्नान अब अमृत स्नान, क्या बदला और क्यों",
+      mr: "नाशिक कुंभमेळा २०२७: शाही स्नान आता अमृत स्नान, काय बदलले आणि का",
     },
     date: "2026-04-08",
     originallyAnnounced: "2025-06-01",
-    updated: "2026-10-06",
+    updated: "2026-10-21",
     source: "ANI",
     sources: [
       {
@@ -138,19 +138,96 @@ const archiveArticles: BlogArticle[] = [
         url: "https://www.aninews.in/news/national/politics/in-a-spiritual-shift-nashik-simhastha-kumbh-mela-2027-to-replace-shahi-snan-with-amrit-snan20250601232326",
         status: "confirmed",
       },
+      {
+        title: "Mahant Rajender Das : ‘शाही नव्हे, अमृतस्नान म्हणा’ ; महंत राजेंद्रदास",
+        publisher: "eSakal",
+        date: "2025-06-01",
+        url: "https://www.esakal.com/uttar-maharashtra/nashik/nashikkumbh-mela-2027-nashik-akharas-demand-1500-acre-land-amrit-snan-authority-representation-pilgrim-arrangements-nmk01",
+        status: "reported",
+      },
+      {
+        title: "कुंभमेळ्यात आता शाही स्नान नव्हे तर अमृत स्नान? मुख्यमंत्री जाहीर करणार तारखा",
+        publisher: "TV9 Marathi",
+        date: "2025-06-01",
+        url: "https://www.tv9marathi.com/maharashtra/kumbh-mela-meeting-in-nashik-today-chief-minister-to-announce-dates-for-amrit-snan-1415519.html",
+        status: "reported",
+      },
+      {
+        title: "Kumbh Mela Plan, Nashik-Trimbakeshwar Simhastha 2027",
+        publisher: "Nashik-Trimbakeshwar Kumbh Mela Authority (NTKMA)",
+        date: "2026-06-15",
+        url: "https://cdnbbsr.s3waas.gov.in/s36048ff4e8cb07aa60b6777b6f7384d52/uploads/2026/06/20260615229440107.pdf",
+        status: "confirmed",
+      },
+      {
+        title: "ABAP passes resolution to replace 'Shahi' and 'Peshwai' with Hindi or Sanskrit words",
+        publisher: "Times of India",
+        date: "2024-10-05",
+        url: "https://timesofindia.indiatimes.com/city/allahabad/abap-calls-for-replacement-of-shahi-and-peshwai-with-sanskrit-terms-in-kumbh-traditions/articleshow/113969993.cms",
+        status: "reported",
+      },
+      {
+        title: "Maha Kumbh Gets Sanatani Spin As Shahi Snan Makes Way For Rajasi, Amrit Snans",
+        publisher: "News18",
+        date: "2025-01-14",
+        url: "https://www.news18.com/india/maha-kumbh-gets-sanatani-spin-as-shahi-snan-makes-way-for-rajasi-amrit-snans-9188599.html",
+        status: "reported",
+      },
     ],
     category: "govt",
     image: "/images/gallery/kumbh-7.webp",
     summary: {
-      en: "At the Chief Minister's meeting with the 13 akhadas on 1 June 2025, it was decided that the Shahi Snan of the Nashik-Trimbakeshwar Simhastha will officially be called Amrit Snan.",
-      hi: "1 जून 2025 को मुख्यमंत्री की 13 अखाड़ों के साथ बैठक में तय हुआ कि नाशिक-त्र्यंबकेश्वर सिंहस्थ का शाही स्नान अब आधिकारिक रूप से अमृत स्नान कहलाएगा।",
-      mr: "१ जून २०२५ रोजी मुख्यमंत्र्यांच्या १३ आखाड्यांसोबतच्या बैठकीत नाशिक-त्र्यंबकेश्वर सिंहस्थातील शाही स्नानाला अधिकृतपणे अमृत स्नान म्हणण्याचा निर्णय झाला.",
+      en: "Shahi Snan and Amrit Snan are the same bath: the main bathing days of the Kumbh, led by the akharas. At the Nashik-Trimbakeshwar Simhastha the official name is now Amrit Snan, decided at Chief Minister Devendra Fadnavis's meeting with the 13 akharas on 1 June 2025. The dates did not change: 2 August, 31 August and 11 September 2027 (12 September in Trimbakeshwar).",
+      hi: "शाही स्नान और अमृत स्नान एक ही स्नान हैं: कुंभ के मुख्य स्नान, जिनकी अगुवाई अखाड़े करते हैं। नाशिक-त्र्यंबकेश्वर सिंहस्थ में अब आधिकारिक नाम अमृत स्नान है। यह फैसला 1 जून 2025 को मुख्यमंत्री देवेंद्र फडणवीस की 13 अखाड़ों के साथ बैठक में हुआ। तिथियाँ नहीं बदलीं: 2 अगस्त, 31 अगस्त और 11 सितंबर 2027 (त्र्यंबकेश्वर में 12 सितंबर)।",
+      mr: "शाही स्नान आणि अमृत स्नान हे एकच स्नान आहे: आखाड्यांच्या नेतृत्वाखाली होणारी कुंभमेळ्यातील मुख्य स्नाने. नाशिक-त्र्यंबकेश्वर सिंहस्थात आता अधिकृत नाव अमृत स्नान आहे. १ जून २०२५ रोजी मुख्यमंत्री देवेंद्र फडणवीस यांच्या १३ आखाड्यांसोबतच्या बैठकीत हा निर्णय झाला. तारखा बदललेल्या नाहीत: २ ऑगस्ट, ३१ ऑगस्ट आणि ११ सप्टेंबर २०२७ (त्र्यंबकेश्वरमध्ये १२ सप्टेंबर).",
     },
     content: {
-      en: "The three royal baths of the Nashik-Trimbakeshwar Simhastha will officially be called Amrit Snan, not Shahi Snan. The decision was taken at Chief Minister Devendra Fadnavis's meeting with the 13 akhadas on 1 June 2025, ANI reported the same day.\n\n## Why the new name\n\n'Amrit' is the nectar that came from the churning of the ocean. In Hindu belief, drops of it fell at the Kumbh sites, and that is why the Kumbh is held. The new name puts the focus on the holy dip itself.\n\n## Both names will be heard\n\nIn practice, both names will be heard at the mela for a long time. Signs, official notices and government schedules will use Amrit Snan. Many sadhus, priests and pilgrims will still say Shahi Snan. Both mean the same thing.\n\n## The dates do not change\n\nFor visitors, the new name changes nothing in practice. The dates stay the same:\n\n- Monday 2 August 2027 (Ashadh Somvati Amavasya)\n- Tuesday 31 August 2027 (Shravan Amavasya)\n- Saturday 11 September 2027 in Nashik, and Sunday 12 September 2027 in Trimbakeshwar\n\nAmrit Snan timings have not been published yet. See the full list on our [Dates](/dates) page and the bathing sites on [Ghats](/ghats).",
-      hi: "नाशिक-त्र्यंबकेश्वर सिंहस्थ के तीनों शाही स्नान अब आधिकारिक रूप से अमृत स्नान कहलाएँगे। ANI के अनुसार यह फैसला 1 जून 2025 को मुख्यमंत्री देवेंद्र फडणवीस की 13 अखाड़ों के साथ बैठक में लिया गया।\n\n## नया नाम क्यों\n\n'अमृत' वह है जो समुद्र मंथन से निकला। मान्यता है कि इसकी बूँदें कुंभ स्थलों पर गिरीं, और इसी कारण कुंभ होता है। नया नाम पवित्र स्नान पर ही ध्यान देता है।\n\n## दोनों नाम सुनाई देंगे\n\nव्यवहार में दोनों नाम मेले में लंबे समय तक सुनाई देंगे। साइनबोर्ड, सरकारी सूचनाएँ और कार्यक्रम अमृत स्नान लिखेंगे। कई साधु, पुरोहित और श्रद्धालु शाही स्नान ही कहते रहेंगे। दोनों का मतलब एक ही है।\n\n## तिथियाँ नहीं बदलीं\n\nश्रद्धालुओं के लिए नए नाम से कुछ नहीं बदलता। तिथियाँ वही हैं:\n\n- सोमवार 2 अगस्त 2027 (आषाढ़ सोमवती अमावस्या)\n- मंगलवार 31 अगस्त 2027 (श्रावण अमावस्या)\n- शनिवार 11 सितंबर 2027 को नाशिक में, और रविवार 12 सितंबर 2027 को त्र्यंबकेश्वर में\n\nअमृत स्नान का समय अभी प्रकाशित नहीं हुआ है। पूरी सूची हमारे [तिथियाँ](/dates) पेज पर और स्नान स्थल [घाट](/ghats) पेज पर देखें।",
-      mr: "नाशिक-त्र्यंबकेश्वर सिंहस्थातील तिन्ही शाही स्नाने आता अधिकृतपणे अमृत स्नान म्हणून ओळखली जातील. ANI च्या वृत्तानुसार हा निर्णय १ जून २०२५ रोजी मुख्यमंत्री देवेंद्र फडणवीस यांच्या १३ आखाड्यांसोबतच्या बैठकीत झाला.\n\n## नवे नाव का\n\n'अमृत' म्हणजे समुद्रमंथनातून निघालेले. त्याचे थेंब कुंभ स्थळांवर पडले अशी श्रद्धा आहे, आणि म्हणूनच कुंभ भरतो. नवे नाव पवित्र स्नानावरच लक्ष केंद्रित करते.\n\n## दोन्ही नावे ऐकू येतील\n\nप्रत्यक्षात दोन्ही नावे मेळ्यात बराच काळ ऐकू येतील. फलक, शासकीय सूचना आणि वेळापत्रकात अमृत स्नान लिहिले जाईल. अनेक साधू, पुरोहित आणि भाविक शाही स्नानच म्हणत राहतील. दोन्हींचा अर्थ एकच आहे.\n\n## तारखा बदललेल्या नाहीत\n\nभाविकांसाठी नव्या नावाने काहीच बदलत नाही. तारखा त्याच आहेत:\n\n- सोमवार, २ ऑगस्ट २०२७ (आषाढ सोमवती अमावस्या)\n- मंगळवार, ३१ ऑगस्ट २०२७ (श्रावण अमावस्या)\n- शनिवार, ११ सप्टेंबर २०२७ रोजी नाशिक, आणि रविवार, १२ सप्टेंबर २०२७ रोजी त्र्यंबकेश्वर\n\nअमृत स्नानाच्या वेळा अद्याप जाहीर झालेल्या नाहीत. नाशिक कुंभमेळा 2027 ची संपूर्ण यादी आमच्या [तारखा](/dates) पानावर आणि स्नानस्थळे [घाट](/ghats) पानावर पाहा.",
+      en: "Update (21 October 2026): We have added who asked for the new name and why, how Prayagraj made the same change in 2025, and answers to common questions.\n\nIn brief: Shahi Snan and Amrit Snan mean the same thing. Both are the names for the main bathing days of the Kumbh, when the akharas go in procession to bathe. At the Nashik-Trimbakeshwar Simhastha, the official name is now Amrit Snan. The decision was taken on 1 June 2025, at Chief Minister Devendra Fadnavis's meeting in Nashik with the 13 akharas (ANI, 1 June 2025). The dates and places stay the same.\n\n## Who asked for the change\n\nThe demand came from the sadhus. On the morning of the meeting, eSakal and TV9 Marathi reported that Mahant Rajendradas Maharaj wanted the bath to be called Amrit Snan instead of Shahi Snan. According to TV9 Marathi, he said the word 'Shahi' is linked to the Mughals.\n\nAfter the meeting, Mahant Bhakti Charan Das, spokesperson of the All India Vaishnav Akhara, told ANI: \"The term Shahi Snan was introduced during the Mughal era. Therefore, this tradition is now being changed, and the Shahi Snan will henceforth be referred to as Amrit Snan.\"\n\n## Why 'Amrit'\n\n'Amrit' is the nectar that came out of the churning of the ocean (Samudra Manthan). In Hindu belief, drops of it fell at the four Kumbh sites, Nashik among them, and that is why the Kumbh is held there. ANI reported that saints from several akharas want the bath to stand for spiritual discipline rather than royal pageantry, and that is the reason for the new name.\n\n## Prayagraj made the same change first\n\nNashik is not the first. In October 2024, the Akhil Bharatiya Akhara Parishad passed a resolution in Prayagraj to replace the words 'Shahi' and 'Peshwai' with Hindi or Sanskrit words (Times of India, 5 October 2024). At the Prayagraj Maha Kumbh in January 2025, the baths were called Amrit Snan or Rajasi Snan, and Peshwai became Chhavni Pravesh (News18, 14 January 2025). Nashik took up the Amrit Snan name for its 2027 Simhastha a few months later.\n\n## Both names will be heard\n\nOfficial papers now use the new name. The NTKMA Kumbh Mela Plan (June 2026) calls the three bathing days Amrit Snan throughout, although its list of works still has an item for 'Shahi Marg' electrical works. In daily speech, many sadhus, priests and pilgrims will still say Shahi Snan for a long time. If you hear either name, it means the same bath.\n\n## The dates do not change\n\nThe new name changes nothing for visitors. The three Amrit Snans are:\n\n- Monday 2 August 2027 (Ashadh Somvati Amavasya), at Ramkund and Kushavarta\n- Tuesday 31 August 2027 (Shravan Amavasya), in Nashik and Trimbakeshwar\n- Saturday 11 September 2027 in Nashik, and Sunday 12 September 2027 in Trimbakeshwar\n\nAmrit Snan timings (the hours) have not been published yet. For the full schedule, with Dhwajarohan, Nagar Pradakshina and the close of the Simhastha, see our [Nashik Kumbh 2027 dates page](/dates). How these dates were announced is in our report on the [confirmed Amrit Snan dates](/blog/amrit-snan-dates-confirmed-2027). The bathing sites are on the [Nashik and Trimbakeshwar ghats guide](/ghats), and the akharas who lead the procession are explained on our page about [Naga sadhus and the akharas](/naga-sadhus).",
+      hi: "अपडेट (21 अक्टूबर 2026): इस लेख में जोड़ा गया है कि नया नाम किसने माँगा और क्यों, 2025 में प्रयागराज ने यही बदलाव कैसे किया, और आम सवालों के जवाब।\n\nसंक्षेप में: शाही स्नान और अमृत स्नान का मतलब एक ही है। दोनों कुंभ के मुख्य स्नान के नाम हैं, जब अखाड़े शोभायात्रा के साथ स्नान के लिए निकलते हैं। नाशिक-त्र्यंबकेश्वर सिंहस्थ में अब आधिकारिक नाम अमृत स्नान है। यह फैसला 1 जून 2025 को नाशिक में मुख्यमंत्री देवेंद्र फडणवीस की 13 अखाड़ों के साथ बैठक में हुआ (ANI, 1 जून 2025)। तिथियाँ और स्थान वही हैं।\n\n## बदलाव की माँग किसने की\n\nयह माँग साधु-संतों की ओर से आई। बैठक वाले दिन सुबह eSakal और TV9 मराठी ने बताया कि महंत राजेंद्रदास महाराज चाहते हैं कि इस स्नान को शाही स्नान की जगह अमृत स्नान कहा जाए। TV9 मराठी के अनुसार उन्होंने कहा कि 'शाही' शब्द मुगलों से जुड़ा है।\n\nबैठक के बाद अखिल भारतीय वैष्णव अखाड़े के प्रवक्ता महंत भक्ति चरण दास ने ANI से कहा कि शाही स्नान शब्द मुगल काल में आया था, इसलिए अब यह परंपरा बदली जा रही है और आगे से शाही स्नान को अमृत स्नान कहा जाएगा।\n\n## 'अमृत' ही क्यों\n\n'अमृत' वह है जो समुद्र मंथन से निकला। मान्यता है कि इसकी बूँदें कुंभ के चारों स्थलों पर गिरीं, जिनमें नाशिक भी है, और इसी कारण वहाँ कुंभ लगता है। ANI के अनुसार कई अखाड़ों के संत चाहते हैं कि यह स्नान शाही ठाठ-बाट का नहीं, आध्यात्मिक अनुशासन का प्रतीक बने, और नया नाम इसी वजह से है।\n\n## प्रयागराज ने यह बदलाव पहले किया\n\nनाशिक पहला नहीं है। अक्टूबर 2024 में अखिल भारतीय अखाड़ा परिषद ने प्रयागराज में प्रस्ताव पारित किया कि 'शाही' और 'पेशवाई' शब्दों की जगह हिंदी या संस्कृत शब्द लाए जाएँ (टाइम्स ऑफ इंडिया, 5 अक्टूबर 2024)। जनवरी 2025 के प्रयागराज महाकुंभ में स्नान को अमृत स्नान या राजसी स्नान कहा गया, और पेशवाई को छावनी प्रवेश (News18, 14 जनवरी 2025)। कुछ महीने बाद नाशिक ने भी 2027 के सिंहस्थ के लिए अमृत स्नान नाम अपना लिया।\n\n## दोनों नाम सुनाई देंगे\n\nसरकारी कागज़ों में अब नया नाम है। NTKMA की कुंभ मेला योजना (जून 2026) में तीनों मुख्य स्नानों को हर जगह अमृत स्नान लिखा गया है, हालाँकि कामों की सूची में 'शाही मार्ग' के बिजली कामों का ज़िक्र अब भी है। बोलचाल में कई साधु, पुरोहित और श्रद्धालु लंबे समय तक शाही स्नान ही कहेंगे। कोई भी नाम सुनें, मतलब एक ही स्नान है।\n\n## तिथियाँ नहीं बदलीं\n\nनए नाम से श्रद्धालुओं के लिए कुछ नहीं बदलता। तीनों अमृत स्नान:\n\n- सोमवार 2 अगस्त 2027 (आषाढ़ सोमवती अमावस्या), रामकुंड और कुशावर्त पर\n- मंगलवार 31 अगस्त 2027 (श्रावण अमावस्या), नाशिक और त्र्यंबकेश्वर में\n- शनिवार 11 सितंबर 2027 को नाशिक में, और रविवार 12 सितंबर 2027 को त्र्यंबकेश्वर में\n\nअमृत स्नान का समय (घंटे) अभी प्रकाशित नहीं हुआ है। ध्वजारोहण, नगर प्रदक्षिणा और सिंहस्थ समापन समेत पूरा कार्यक्रम हमारे [नाशिक कुंभ 2027 तिथियाँ पेज](/dates) पर देखें। ये तिथियाँ कैसे घोषित हुईं, यह [अमृत स्नान की तय तिथियों वाली खबर](/blog/amrit-snan-dates-confirmed-2027) में है। स्नान स्थलों के लिए [नाशिक और त्र्यंबकेश्वर घाट गाइड](/ghats) देखें, और शोभायात्रा की अगुवाई करने वाले अखाड़ों के बारे में [नागा साधु और अखाड़े](/naga-sadhus) पेज पढ़ें।",
+      mr: "अपडेट (२१ ऑक्टोबर २०२६): नवे नाव कोणी मागितले आणि का, प्रयागराजने २०२५ मध्ये हाच बदल कसा केला, आणि नेहमीच्या प्रश्नांची उत्तरे या लेखात जोडली आहेत.\n\nथोडक्यात: शाही स्नान आणि अमृत स्नान याचा अर्थ एकच. आखाडे मिरवणुकीने स्नानाला निघतात त्या कुंभमेळ्यातील मुख्य स्नानांची ही दोन नावे आहेत. नाशिक-त्र्यंबकेश्वर सिंहस्थात आता अधिकृत नाव अमृत स्नान आहे. १ जून २०२५ रोजी नाशिकमध्ये मुख्यमंत्री देवेंद्र फडणवीस यांच्या १३ आखाड्यांसोबतच्या बैठकीत हा निर्णय झाला (ANI, १ जून २०२५). तारखा आणि ठिकाणे तीच आहेत.\n\n## बदलाची मागणी कोणाची\n\nही मागणी साधू-महंतांकडून आली. बैठकीच्या दिवशी सकाळीच ई-सकाळ आणि TV9 मराठीने वृत्त दिले की महंत राजेंद्रदास महाराज यांना या स्नानाला शाही स्नानऐवजी अमृत स्नान म्हटले जावे असे वाटते. TV9 मराठीनुसार 'शाही' हा शब्द मुघलांशी संबंधित आहे, असे त्यांनी सांगितले.\n\nबैठकीनंतर अखिल भारतीय वैष्णव आखाड्याचे प्रवक्ते महंत भक्ती चरण दास यांनी ANI ला सांगितले की शाही स्नान हा शब्द मुघल काळात आला, म्हणून आता ही परंपरा बदलली जात असून यापुढे शाही स्नानाला अमृत स्नान म्हटले जाईल.\n\n## 'अमृत'च का\n\n'अमृत' म्हणजे समुद्रमंथनातून निघालेले. त्याचे थेंब कुंभमेळ्याच्या चारही स्थळांवर, नाशिकसह, पडले अशी श्रद्धा आहे, आणि म्हणूनच तिथे कुंभ भरतो. ANI च्या वृत्तानुसार अनेक आखाड्यांच्या संतांना हे स्नान शाही थाटमाटाचे नव्हे, तर आध्यात्मिक शिस्तीचे प्रतीक व्हावे असे वाटते, आणि नवे नाव त्याचसाठी आहे.\n\n## प्रयागराजने हा बदल आधी केला\n\nनाशिक पहिले नाही. ऑक्टोबर २०२४ मध्ये अखिल भारतीय आखाडा परिषदेने प्रयागराजमध्ये 'शाही' आणि 'पेशवाई' या शब्दांऐवजी हिंदी किंवा संस्कृत शब्द वापरण्याचा ठराव केला (टाइम्स ऑफ इंडिया, ५ ऑक्टोबर २०२४). जानेवारी २०२५ च्या प्रयागराज महाकुंभात स्नानाला अमृत स्नान किंवा राजसी स्नान म्हटले गेले, आणि पेशवाईला छावणी प्रवेश (News18, १४ जानेवारी २०२५). काही महिन्यांनी नाशिकनेही २०२७ च्या सिंहस्थासाठी अमृत स्नान हेच नाव स्वीकारले.\n\n## दोन्ही नावे ऐकू येतील\n\nशासकीय कागदपत्रांत आता नवे नाव आहे. NTKMA च्या कुंभमेळा आराखड्यात (जून २०२६) तिन्ही मुख्य स्नानांना सगळीकडे अमृत स्नान म्हटले आहे, मात्र कामांच्या यादीत 'शाही मार्ग' विद्युत कामांचा उल्लेख अजूनही आहे. बोलीभाषेत अनेक साधू, पुरोहित आणि भाविक बराच काळ शाही स्नानच म्हणत राहतील. कोणतेही नाव ऐकले तरी अर्थ एकाच स्नानाचा आहे.\n\n## तारखा बदललेल्या नाहीत\n\nनव्या नावाने भाविकांसाठी काहीच बदलत नाही. तिन्ही अमृत स्नान:\n\n- सोमवार, २ ऑगस्ट २०२७ (आषाढ सोमवती अमावस्या), रामकुंड आणि कुशावर्त येथे\n- मंगळवार, ३१ ऑगस्ट २०२७ (श्रावण अमावस्या), नाशिक आणि त्र्यंबकेश्वर येथे\n- शनिवार, ११ सप्टेंबर २०२७ रोजी नाशिक, आणि रविवार, १२ सप्टेंबर २०२७ रोजी त्र्यंबकेश्वर\n\nअमृत स्नानाच्या वेळा (तास) अद्याप जाहीर झालेल्या नाहीत. ध्वजारोहण, नगर प्रदक्षिणा आणि सिंहस्थ समाप्तीसह संपूर्ण वेळापत्रक आमच्या [नाशिक कुंभमेळा २०२७ तारखा पानावर](/dates) पाहा. या तारखा कशा जाहीर झाल्या ते [अमृत स्नानाच्या निश्चित तारखांच्या बातमीत](/blog/amrit-snan-dates-confirmed-2027) आहे. स्नानस्थळांसाठी [नाशिक आणि त्र्यंबकेश्वर घाट मार्गदर्शक](/ghats) पाहा, आणि मिरवणुकीचे नेतृत्व करणाऱ्या आखाड्यांबद्दल [नागा साधू आणि आखाडे](/naga-sadhus) हे पान वाचा.",
     },
+    faq: [
+      {
+        q: { en: "Is Shahi Snan the same as Amrit Snan?", hi: "क्या शाही स्नान और अमृत स्नान एक ही हैं?", mr: "शाही स्नान आणि अमृत स्नान एकच आहे का?" },
+        a: {
+          en: "Yes. Both names refer to the main bathing days of the Kumbh, when the akharas bathe in procession. At the Nashik-Trimbakeshwar Simhastha 2027 the official name is Amrit Snan, but many people will still say Shahi Snan.",
+          hi: "हाँ। दोनों नाम कुंभ के मुख्य स्नान के दिनों के हैं, जब अखाड़े शोभायात्रा के साथ स्नान करते हैं। नाशिक-त्र्यंबकेश्वर सिंहस्थ 2027 में आधिकारिक नाम अमृत स्नान है, पर कई लोग अब भी शाही स्नान कहेंगे।",
+          mr: "हो. दोन्ही नावे कुंभमेळ्यातील मुख्य स्नानाच्या दिवसांची आहेत, जेव्हा आखाडे मिरवणुकीने स्नान करतात. नाशिक-त्र्यंबकेश्वर सिंहस्थ २०२७ मध्ये अधिकृत नाव अमृत स्नान आहे, पण अनेक जण अजूनही शाही स्नानच म्हणतील.",
+        },
+      },
+      {
+        q: { en: "When was Shahi Snan renamed Amrit Snan for Nashik?", hi: "नाशिक में शाही स्नान का नाम अमृत स्नान कब हुआ?", mr: "नाशिकमध्ये शाही स्नानाचे नाव अमृत स्नान कधी झाले?" },
+        a: {
+          en: "On 1 June 2025, at Chief Minister Devendra Fadnavis's meeting with the 13 akharas at the Nashik Collector's office. Mahant Rajendradas Maharaj had asked for the change, and the same meeting announced the Simhastha dates.",
+          hi: "1 जून 2025 को, नाशिक कलेक्टर कार्यालय में मुख्यमंत्री देवेंद्र फडणवीस की 13 अखाड़ों के साथ बैठक में। महंत राजेंद्रदास महाराज ने यह बदलाव माँगा था, और उसी बैठक में सिंहस्थ की तिथियाँ भी घोषित हुईं।",
+          mr: "१ जून २०२५ रोजी, नाशिक जिल्हाधिकारी कार्यालयात मुख्यमंत्री देवेंद्र फडणवीस यांच्या १३ आखाड्यांसोबतच्या बैठकीत. महंत राजेंद्रदास महाराज यांनी हा बदल मागितला होता, आणि त्याच बैठकीत सिंहस्थाच्या तारखाही जाहीर झाल्या.",
+        },
+      },
+      {
+        q: { en: "Why was the name Shahi Snan changed?", hi: "शाही स्नान का नाम क्यों बदला गया?", mr: "शाही स्नानाचे नाव का बदलले?" },
+        a: {
+          en: "Akhara leaders say the word 'Shahi' came in during the Mughal era. They want a name tied to the Samudra Manthan story, in which drops of amrit fell at the Kumbh sites, and a bath that stands for spiritual discipline rather than royal display (ANI, 1 June 2025).",
+          hi: "अखाड़ों के प्रमुखों का कहना है कि 'शाही' शब्द मुगल काल में आया। वे ऐसा नाम चाहते हैं जो समुद्र मंथन की कथा से जुड़ा हो, जिसमें अमृत की बूँदें कुंभ स्थलों पर गिरीं, और ऐसा स्नान जो शाही दिखावे का नहीं, आध्यात्मिक अनुशासन का प्रतीक हो (ANI, 1 जून 2025)।",
+          mr: "'शाही' हा शब्द मुघल काळात आला, असे आखाड्यांच्या प्रमुखांचे म्हणणे आहे. अमृताचे थेंब कुंभ स्थळांवर पडले त्या समुद्रमंथनाच्या कथेशी जोडलेले नाव, आणि शाही दिखाव्याचे नव्हे तर आध्यात्मिक शिस्तीचे प्रतीक असलेले स्नान त्यांना हवे आहे (ANI, १ जून २०२५).",
+        },
+      },
+      {
+        q: { en: "Was Shahi Snan also renamed at the Prayagraj Maha Kumbh?", hi: "क्या प्रयागराज महाकुंभ में भी शाही स्नान का नाम बदला गया था?", mr: "प्रयागराज महाकुंभातही शाही स्नानाचे नाव बदलले होते का?" },
+        a: {
+          en: "Yes. The Akhil Bharatiya Akhara Parishad passed a resolution in October 2024, and at the Prayagraj Maha Kumbh in 2025 the baths were called Amrit Snan or Rajasi Snan, while Peshwai became Chhavni Pravesh.",
+          hi: "हाँ। अखिल भारतीय अखाड़ा परिषद ने अक्टूबर 2024 में प्रस्ताव पारित किया, और 2025 के प्रयागराज महाकुंभ में स्नान को अमृत स्नान या राजसी स्नान कहा गया, और पेशवाई को छावनी प्रवेश।",
+          mr: "हो. अखिल भारतीय आखाडा परिषदेने ऑक्टोबर २०२४ मध्ये ठराव केला, आणि २०२५ च्या प्रयागराज महाकुंभात स्नानाला अमृत स्नान किंवा राजसी स्नान, तर पेशवाईला छावणी प्रवेश म्हटले गेले.",
+        },
+      },
+      {
+        q: { en: "What are the Shahi Snan (Amrit Snan) dates for Nashik Kumbh 2027?", hi: "नाशिक कुंभ 2027 में शाही स्नान (अमृत स्नान) की तिथियाँ क्या हैं?", mr: "नाशिक कुंभमेळा २०२७ मधील शाही स्नानाच्या (अमृत स्नान) तारखा कोणत्या?" },
+        a: {
+          en: "2 August 2027, 31 August 2027, and 11 September 2027 in Nashik (12 September 2027 in Trimbakeshwar). The hours have not been published yet. The full schedule is on our Dates page.",
+          hi: "2 अगस्त 2027, 31 अगस्त 2027, और नाशिक में 11 सितंबर 2027 (त्र्यंबकेश्वर में 12 सितंबर 2027)। स्नान का समय अभी प्रकाशित नहीं हुआ है। पूरा कार्यक्रम हमारे तिथियाँ पेज पर है।",
+          mr: "२ ऑगस्ट २०२७, ३१ ऑगस्ट २०२७, आणि नाशिकमध्ये ११ सप्टेंबर २०२७ (त्र्यंबकेश्वरमध्ये १२ सप्टेंबर २०२७). स्नानाच्या वेळा अद्याप जाहीर झालेल्या नाहीत. संपूर्ण वेळापत्रक आमच्या तारखा पानावर आहे.",
+        },
+      },
+    ],
   },
   {
     id: 103,
