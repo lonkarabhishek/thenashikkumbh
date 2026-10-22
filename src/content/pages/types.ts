@@ -40,6 +40,8 @@ export interface InfoPageContent {
   shareImage?: L10n;
   /** Optional forwardable info block shown with image share + WhatsApp buttons. */
   forward?: L10n;
+  /** Cards pinned near the top (after live updates), each with its own image share. */
+  pinnedCards?: { id: string; heading: L10n; text: L10n; image: L10n }[];
 }
 
 export interface LiveUpdate {

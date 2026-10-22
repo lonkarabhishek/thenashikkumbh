@@ -140,7 +140,17 @@ export default function LocaleLayout({
   if (!isLocale(locale)) notFound();
 
   // Three newest posts; blogArticles is already sorted by date.
-  const tickerItems = blogArticles.slice(0, 3).map((a) => ({ slug: a.slug, title: a.title }));
+  // Pinned first: the 25 Oct / 31 Oct share cards on the live hub (remove after 1 Nov 2026).
+  const hubItem = {
+    slug: "dhwajarohan-2026-cards",
+    href: "/dhwajarohan-2026#cards",
+    title: {
+      mr: "शंखनाद २५ ऑक्टो. व ध्वजारोहण ३१ ऑक्टो.: वेळ, ठिकाण, कसे पोहोचाल, व्हॉट्सॲप कार्ड",
+      hi: "शंखनाद 25 अक्टू. और ध्वजारोहण 31 अक्टू.: समय, जगह, कैसे पहुँचें, व्हॉट्सऐप कार्ड",
+      en: "Shankhnaad 25 Oct and flag hoisting 31 Oct: time, venue, getting there, WhatsApp cards",
+    },
+  };
+  const tickerItems = [hubItem, ...blogArticles.slice(0, 2).map((a) => ({ slug: a.slug, title: a.title }))];
 
   return (
     <html lang={locale} suppressHydrationWarning>
