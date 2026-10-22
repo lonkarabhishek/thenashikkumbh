@@ -21,6 +21,7 @@ import { formatDate } from "@/lib/dates";
 import type { NewsStatus, NewsThumb } from "./newsMeta";
 import { CATEGORY_LABEL, NEWS_UI, STATUS_HINT } from "./newsCopy";
 import StatusBadge from "./StatusBadge";
+import ListenPlayer from "./ListenPlayer";
 
 export type RelatedArticle = Pick<BlogArticle, "id" | "slug" | "title" | "date" | "category"> & {
   thumb: NewsThumb | null;
@@ -33,6 +34,7 @@ export default function BlogArticleView({
   minutes,
   related,
   followUp,
+  audio,
 }: {
   article: BlogArticle | undefined;
   status?: NewsStatus;
@@ -40,6 +42,8 @@ export default function BlogArticleView({
   minutes?: Record<Locale, number>;
   related: RelatedArticle[];
   followUp?: Pick<BlogArticle, "slug" | "title" | "date">;
+  /** Pre-generated narration per language; the player is hidden where missing. */
+  audio?: Partial<Record<Locale, string>>;
 }) {
   const { locale, t } = useLanguage();
   const [copied, setCopied] = useState(false);
@@ -172,6 +176,8 @@ export default function BlogArticleView({
           </h1>
 
           <p className="mt-5 text-lg leading-relaxed text-temple-600 md:text-xl">{article.summary[locale]}</p>
+
+          {audio?.[locale] && <ListenPlayer src={audio[locale]!} locale={locale} />}
 
           {/* Byline */}
           <div className="mt-7 flex flex-wrap items-center justify-between gap-4 border-y border-temple-100 py-4">
