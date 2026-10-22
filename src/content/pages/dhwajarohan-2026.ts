@@ -462,7 +462,7 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
       status: "reported",
     },
   ],
-  updated: "2026-10-22",
+  updated: "2026-10-23",
   crumb: {
     en: "Dhwajarohan 2026",
     hi: "ध्वजारोहण 2026",
@@ -479,6 +479,44 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
     hi: "🚩 सिंहस्थ कुंभ मेले का ध्वजारोहण\n📅 शनिवार, 31 अक्टूबर 2026\n🕛 दोपहर 12:02\n📍 रामकुंड, नाशिक और कुशावर्त, त्र्यंबकेश्वर\n🪔 शाम करीब 6 बजे महा गोदा आरती (रिपोर्ट)\nट्रैफ़िक, पार्किंग और लाइव अपडेट:",
     en: "🚩 Simhastha Kumbh flag hoisting\n📅 Saturday 31 October 2026\n🕛 12:02 PM\n📍 Ramkund, Nashik and Kushavarta, Trimbakeshwar\n🪔 Maha Goda Aarti at about 6 PM (reported)\nTraffic, parking and live updates:",
   },
+  pinnedCards: [
+    {
+      id: "card-shankhnaad",
+      heading: {
+        mr: "🐚 २५ ऑक्टोबर: शंखनाद कार्ड पुढे पाठवा",
+        hi: "🐚 25 अक्टूबर: शंखनाद कार्ड आगे भेजें",
+        en: "🐚 25 October: forward the Shankhnaad card",
+      },
+      image: {
+        mr: "/images/og/share/shankhnaad-card-2026-mr.jpg",
+        hi: "/images/og/share/shankhnaad-card-2026-hi.jpg",
+        en: "/images/og/share/shankhnaad-card-2026-en.jpg",
+      },
+      text: {
+        mr: "🐚 नाशिकमध्ये ५०१ शंखांचा शंखनाद, विश्वविक्रमाचा प्रयत्न\n📅 रविवार, २५ ऑक्टोबर २०२६ (कोजागिरी पौर्णिमा)\n🕕 सायंकाळी सुमारे ६ वाजता (एका वृत्तात ५ वाजता, म्हणून ५ पर्यंत पोहोचा)\n📍 देवमामलेदार पटांगणाजवळ, गोदाकाठ, रामकुंड परिसर, नाशिक\n🚶 पंचवटीतल्या गल्ल्यांत गाडी नेऊ नका, दूर पार्क करून चालत या. पोलिसांची वाहतूक सूचना अजून जाहीर नाही.\nसविस्तर:",
+        hi: "🐚 नाशिक में 501 शंखों का शंखनाद, विश्व रिकॉर्ड का प्रयास\n📅 रविवार, 25 अक्टूबर 2026 (कोजागिरी पूर्णिमा)\n🕕 शाम करीब 6 बजे (एक रिपोर्ट में 5 बजे, इसलिए 5 बजे तक पहुँचें)\n📍 देवमामलेदार मैदान के पास, गोदावरी तट, रामकुंड के पास, नाशिक\n🚶 पंचवटी की गलियों में गाड़ी न ले जाएँ, दूर पार्क कर पैदल आएँ। पुलिस की ट्रैफ़िक सूचना अभी जारी नहीं हुई है।\nपूरी जानकारी:",
+        en: "🐚 501 conches, one Shankhnaad: a world-record attempt in Nashik\n📅 Sunday 25 October 2026 (Kojagiri Purnima)\n🕕 About 6 PM (one report says 5 PM, so arrive by 5)\n📍 Near Devmamledar grounds, Godavari bank, near Ramkund, Nashik\n🚶 Don't drive into Panchavati's lanes; park further out and walk. The police traffic notice is not out yet.\nFull details:",
+      },
+    },
+    {
+      id: "card-dhwajarohan",
+      heading: {
+        mr: "🚩 ३१ ऑक्टोबर: ध्वजारोहण कार्ड पुढे पाठवा",
+        hi: "🚩 31 अक्टूबर: ध्वजारोहण कार्ड आगे भेजें",
+        en: "🚩 31 October: forward the flag-hoisting card",
+      },
+      image: {
+        mr: "/images/og/share/dhwajarohan-card-2026-mr.jpg",
+        hi: "/images/og/share/dhwajarohan-card-2026-hi.jpg",
+        en: "/images/og/share/dhwajarohan-card-2026-en.jpg",
+      },
+      text: {
+        mr: "🚩 सिंहस्थ कुंभमेळ्याचे ध्वजारोहण\n📅 शनिवार, ३१ ऑक्टोबर २०२६\n🕛 दुपारी १२.०२ (अधिकृत)\n📍 रामकुंड, पंचवटी, नाशिक आणि कुशावर्त, त्र्यंबकेश्वर (एकाच वेळी)\n🪔 महा गोदा आरती सायंकाळी सुमारे ६ वाजता (वृत्त)\n🚶 पंचवटीत गाडी नेऊ नका. ३१ ऑक्टोबरची पार्किंग सूचना अजून जाहीर नाही; जूनच्या कार्यक्रमात पार्किंग रोकडोबा व कपूरथळा मैदानावर होते.\nथेट अपडेट:",
+        hi: "🚩 सिंहस्थ कुंभ मेले का ध्वजारोहण\n📅 शनिवार, 31 अक्टूबर 2026\n🕛 दोपहर 12:02 (आधिकारिक)\n📍 रामकुंड, पंचवटी, नाशिक और कुशावर्त, त्र्यंबकेश्वर (एक साथ)\n🪔 महा गोदा आरती शाम करीब 6 बजे (रिपोर्ट)\n🚶 पंचवटी में गाड़ी न ले जाएँ। 31 अक्टूबर की पार्किंग सूचना अभी जारी नहीं; जून के कार्यक्रम में पार्किंग रोकडोबा और कपूरथला मैदान पर थी।\nलाइव अपडेट:",
+        en: "🚩 Simhastha Kumbh flag hoisting\n📅 Saturday 31 October 2026\n🕛 12:02 PM (official)\n📍 Ramkund, Panchavati, Nashik and Kushavarta, Trimbakeshwar (same moment)\n🪔 Maha Goda Aarti at about 6 PM (reported)\n🚶 Don't drive into Panchavati. The 31 October parking notice is not out yet; at the June event parking was at Rokdoba and Kapurthala grounds.\nLive updates:",
+      },
+    },
+  ],
   liveEvent: {
     name: {
       en: "Nashik-Trimbakeshwar Simhastha Dhwajarohan (flag hoisting)",
@@ -491,6 +529,21 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   },
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
+    {
+      time: "2026-10-23T00:30:00+05:30",
+      headline: {
+        en: "WhatsApp cards for 25 Oct Shankhnaad and 31 Oct flag hoisting",
+        hi: "25 अक्टूबर शंखनाद और 31 अक्टूबर ध्वजारोहण के व्हॉट्सऐप कार्ड",
+        mr: "२५ ऑक्टो. शंखनाद व ३१ ऑक्टो. ध्वजारोहणाची व्हॉट्सॲप कार्ड",
+      },
+      body: {
+        en: "Two forwardable cards with date, time, venue and how to get there are pinned [just below](#cards). Shankhnaad: Sunday 25 Oct, about 6 PM, near Devmamledar grounds. Flag hoisting: Saturday 31 Oct, 12:02 PM, Ramkund and Kushavarta. Police traffic and parking notices for both days are not out yet; we will update the cards when they are.",
+        hi: "तारीख, समय, जगह और कैसे पहुँचें वाले दो कार्ड [ठीक नीचे](#cards) पिन किए गए हैं। शंखनाद: रविवार 25 अक्टूबर, शाम करीब 6 बजे, देवमामलेदार मैदान के पास। ध्वजारोहण: शनिवार 31 अक्टूबर, दोपहर 12:02, रामकुंड और कुशावर्त। दोनों दिनों की पुलिस ट्रैफ़िक व पार्किंग सूचना अभी जारी नहीं हुई; जारी होते ही कार्ड अपडेट करेंगे।",
+        mr: "तारीख, वेळ, ठिकाण आणि कसे पोहोचाल अशी दोन कार्ड [खाली](#cards) पिन केली आहेत. शंखनाद: रविवार २५ ऑक्टोबर, सायं. सुमारे ६, देवमामलेदार पटांगणाजवळ. ध्वजारोहण: शनिवार ३१ ऑक्टोबर, दुपारी १२.०२, रामकुंड व कुशावर्त. दोन्ही दिवसांची पोलिसांची वाहतूक व पार्किंग सूचना अजून आलेली नाही; आल्यावर कार्ड अद्ययावत करू.",
+      },
+      status: "confirmed",
+      source: "NTKMA, District Information Office Nashik; Prahaar, Lokmat Times (aarti time)",
+    },
     {
       time: "2026-10-22T09:00:00+05:30",
       headline: {

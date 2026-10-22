@@ -147,7 +147,15 @@ export default function InfoPage({ page, locale }: { page: InfoPageContent; loca
           </section>
         )}
 
-        {page.forward && (
+        {page.pinnedCards && page.pinnedCards.length > 0 && (
+          <div id="cards" className="scroll-mt-24">
+            {page.pinnedCards.map((c) => (
+              <ForwardCard key={c.id} id={c.id} heading={c.heading[locale]} text={c.text[locale]} url={url} imagePath={c.image[locale]} locale={locale} />
+            ))}
+          </div>
+        )}
+
+        {!page.pinnedCards?.length && page.forward && (
           <ForwardCard text={page.forward[locale]} url={url} imagePath={page.shareImage?.[locale]} locale={locale} />
         )}
 

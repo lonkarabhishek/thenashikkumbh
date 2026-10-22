@@ -22,11 +22,15 @@ export default function ForwardCard({
   url,
   imagePath,
   locale,
+  heading,
+  id,
 }: {
   text: string;
   url: string;
   imagePath?: string;
   locale: Locale;
+  heading?: string;
+  id?: string;
 }) {
   const [copied, setCopied] = useState(false);
   const msg = buildShareMessage(text, undefined, url);
@@ -65,8 +69,8 @@ export default function ForwardCard({
   };
 
   return (
-    <aside className="mt-10 rounded-2xl border border-[#25D366]/40 bg-[#f0fbf4] p-5 sm:p-6" aria-label={UI.heading[locale]}>
-      <h2 className="font-heading text-lg font-bold text-temple-900">{UI.heading[locale]}</h2>
+    <aside id={id} className="mt-10 scroll-mt-24 rounded-2xl border border-[#25D366]/40 bg-[#f0fbf4] p-5 sm:p-6" aria-label={heading ?? UI.heading[locale]}>
+      <h2 className="font-heading text-lg font-bold text-temple-900">{heading ?? UI.heading[locale]}</h2>
       {imagePath && (
         // eslint-disable-next-line @next/next/no-img-element
         <img src={imagePath} alt="" width={1200} height={630} loading="lazy" className="mt-4 w-full rounded-xl border border-temple-100" />

@@ -7,6 +7,8 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export interface TickerItem {
   slug: string;
+  /** Optional non-blog target, e.g. a live hub. Defaults to /blog/{slug}. */
+  href?: string;
   title: { en: string; hi: string; mr: string };
 }
 
@@ -107,7 +109,7 @@ export default function NewsTicker({ items }: { items: TickerItem[] }) {
         >
           <Link
             key={item.slug}
-            href={`/blog/${item.slug}`}
+            href={item.href ?? `/blog/${item.slug}`}
             className="ticker-headline rounded-sm hover:text-saffron-800 hover:underline focus-visible:underline"
           >
             {item.title[locale]}
