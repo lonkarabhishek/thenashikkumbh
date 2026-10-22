@@ -10,6 +10,7 @@ import { blogArticles } from "@/data/blogData";
 import SOSButton from "@/components/SOSButton";
 
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import PWARegistrar from "@/components/PWARegistrar";
 import { notFound } from "next/navigation";
@@ -170,6 +171,14 @@ export default function LocaleLayout({
             <KumbhSahayakLazy />
             <SOSButton />
             <Analytics />
+            {/* Google tag (gtag.js) */}
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-G2LMJP7X4F"
+              strategy="afterInteractive"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-G2LMJP7X4F');`}
+            </Script>
             <PWARegistrar />
           </ChatProvider>
         </LanguageProvider>
