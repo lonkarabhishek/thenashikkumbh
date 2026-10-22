@@ -22,6 +22,9 @@ import { article as ramjhula } from "./ramjhula-ram-figure-proposal";
 import { article as samarth } from "./swami-samarth-kendra-protest";
 import { article as godavariSample } from "./godavari-water-sampled-high-court";
 
+import { article as trimbakTempleOpen } from "./trimbakeshwar-temple-open-31-october-3000-passes";
+import { article as presidentInvite } from "./president-murmu-invited-31-october-shinde-says-will-attend";
+import { article as hcGodavari } from "./high-court-nmc-godavari-pollution-plan";
 import { article as shankhnaadGuide } from "./shankhnaad-25-october-501-conch-world-record-guide";
 import { article as sadhugram191 } from "./sadhugram-191-acres-acquisition-notice";
 import { article as religiousInstitutions } from "./sixty-three-religious-institutions-infra-proposals";
@@ -50,8 +53,12 @@ import { article as kushavartaPuja } from "./kushavarta-flagstaff-puja-temple-cl
 import { article as sadhugramTrees } from "./sadhugram-without-cutting-trees";
 import { article as healthStaff } from "./nmc-1638-temporary-health-staff";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20 and 21 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21 and 22 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 22 October 2026
+  trimbakTempleOpen,
+  presidentInvite,
+  hcGodavari,
   // 21 October 2026
   shankhnaadGuide,
   sadhugram191,
