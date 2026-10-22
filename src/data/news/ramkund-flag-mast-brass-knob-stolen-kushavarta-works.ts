@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "ध्वजारोहणाला दहा दिवस असताना रामकुंडावरील ध्वजस्तंभाचा पितळी नॉब चोरीला; कुशावर्तावरील कामांना गती देण्याचे निर्देश",
   },
   date: "2026-10-21",
+  updated: "2026-10-22",
+  followUp: { slug: "trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25", date: "2026-10-22" },
   originallyAnnounced: "2026-10-20",
   source: "Lokmat",
   sources: [

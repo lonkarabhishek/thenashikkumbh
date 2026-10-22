@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "उच्च न्यायालयातील प्रदूषण प्रकरणासाठी गोदावरीच्या पाण्याचे नमुने घेतले",
   },
   date: "2026-10-07",
+  updated: "2026-10-22",
+  followUp: { slug: "high-court-asks-nmc-for-godavari-pollution-plan-within-two-weeks-hearing-october-27", date: "2026-10-22" },
   source: "Pudhari",
   sources: [
     {

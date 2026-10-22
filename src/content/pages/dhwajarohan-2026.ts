@@ -128,17 +128,17 @@ Navarashtra ने बताया है कि कार्यक्रम ब
       body: {
         en: `Girish Mahajan announced on record (eSakal, 19 September 2026) that President Droupadi Murmu, Chief Minister Devendra Fadnavis and Deputy Chief Ministers Eknath Shinde and Sunetra Pawar will attend on 31 October.
 
-Which venue the President will attend, Nashik or Trimbak, is not yet clear. **Update, 21 October (CONFIRMED):** Chief Minister Fadnavis, with Deputy CMs Shinde and Pawar, formally invited President Murmu at Rashtrapati Bhavan to the flag hoisting, the Maha Goda Aarti, and the launch of the authority's website, the Kumbh anthem, a coffee-table book and a postage stamp, according to the official release. Rashtrapati Bhavan has not yet published her itinerary, so her attendance is still not confirmed.
+Which venue the President will attend, Nashik or Trimbak, is not yet clear. **Update, 21 October (CONFIRMED):** Chief Minister Fadnavis, with Deputy CMs Shinde and Pawar, formally invited President Murmu at Rashtrapati Bhavan to the flag hoisting, the Maha Goda Aarti, and the launch of the authority's website, the Kumbh anthem, a coffee-table book and a postage stamp, according to the official release. Rashtrapati Bhavan has not yet published her itinerary. **Update, 22 October (REPORTED):** Deputy CM Eknath Shinde told reporters in Delhi that she has accepted and will attend (Deccan Chronicle), and Sakal reports she is to perform puja at the Trimbakraj temple. Trimbakeshwar temple stays open on 31 October, but only for 3,000 pass holders ([details](/blog/trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25)).
 
 What this means for you: NTKMA Commissioner Shekhar Singh has asked the Nashik Municipal Corporation (NMC) for separate entry and exit routes for VIPs and for the public at Ramkund (Times of India, 5 October 2026). So expect separate lanes for VIPs and the public.`,
         hi: `गिरीश महाजन ने आधिकारिक रूप से घोषणा की (eSakal, 19 सितंबर 2026) कि राष्ट्रपति द्रौपदी मुर्मू, मुख्यमंत्री देवेंद्र फडणवीस और उपमुख्यमंत्री एकनाथ शिंदे तथा सुनेत्रा पवार 31 अक्टूबर को उपस्थित रहेंगे।
 
-राष्ट्रपति नाशिक जाएंगी या त्र्यंबक, यह अभी साफ नहीं है। **अपडेट, 21 अक्टूबर (पुष्ट):** आधिकारिक विज्ञप्ति के अनुसार मुख्यमंत्री फडणवीस ने उपमुख्यमंत्री शिंदे और पवार के साथ राष्ट्रपति भवन में राष्ट्रपति मुर्मू को ध्वजारोहण, महा गोदा आरती, और प्राधिकरण की वेबसाइट, कुंभ गीत, कॉफ़ी-टेबल बुक व डाक टिकट के लोकार्पण का औपचारिक निमंत्रण दिया। राष्ट्रपति भवन ने अभी उनका कार्यक्रम जारी नहीं किया है, इसलिए उनका आना अभी पुष्ट नहीं है।
+राष्ट्रपति नाशिक जाएंगी या त्र्यंबक, यह अभी साफ नहीं है। **अपडेट, 21 अक्टूबर (पुष्ट):** आधिकारिक विज्ञप्ति के अनुसार मुख्यमंत्री फडणवीस ने उपमुख्यमंत्री शिंदे और पवार के साथ राष्ट्रपति भवन में राष्ट्रपति मुर्मू को ध्वजारोहण, महा गोदा आरती, और प्राधिकरण की वेबसाइट, कुंभ गीत, कॉफ़ी-टेबल बुक व डाक टिकट के लोकार्पण का औपचारिक निमंत्रण दिया। राष्ट्रपति भवन ने अभी उनका कार्यक्रम जारी नहीं किया है। **अपडेट, 22 अक्टूबर (रिपोर्ट):** उपमुख्यमंत्री एकनाथ शिंदे ने दिल्ली में पत्रकारों से कहा कि राष्ट्रपति ने निमंत्रण स्वीकार कर लिया है और वे आएँगी (डेक्कन क्रॉनिकल), और सकाळ के अनुसार वे त्र्यंबकराज मंदिर में पूजन करेंगी। 31 अक्टूबर को त्र्यंबकेश्वर मंदिर खुला रहेगा, लेकिन सिर्फ़ 3,000 पासधारकों के लिए ([विवरण](/blog/trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25))।
 
 आपके लिए इसका मतलब: NTKMA आयुक्त शेखर सिंह ने नाशिक महानगरपालिका (NMC) से रामकुंड पर VIP और आम लोगों के लिए अलग प्रवेश और निकास मार्ग बनाने को कहा है (Times of India, 5 अक्टूबर 2026)। इसलिए VIP और आम लोगों के लिए अलग रास्तों की उम्मीद रखें।`,
         mr: `राष्ट्रपती द्रौपदी मुर्मू, मुख्यमंत्री देवेंद्र फडणवीस आणि उपमुख्यमंत्री एकनाथ शिंदे व सुनेत्रा पवार ३१ ऑक्टोबरला उपस्थित राहणार असल्याचे गिरीश महाजन यांनी अधिकृतपणे जाहीर केले (eSakal, १९ सप्टेंबर २०२६).
 
-राष्ट्रपती नाशिकला येणार की त्र्यंबकला, हे अद्याप स्पष्ट नाही. **अपडेट, २१ ऑक्टोबर (अधिकृत):** मुख्यमंत्री फडणवीस यांनी उपमुख्यमंत्री शिंदे व पवार यांच्यासह राष्ट्रपती भवनात राष्ट्रपती मुर्मू यांना ध्वजारोहण, महा गोदा आरती, तसेच प्राधिकरणाचे संकेतस्थळ, कुंभ गीत, कॉफी-टेबल बुक आणि टपाल तिकिटाच्या प्रकाशनासाठी औपचारिक निमंत्रण दिले, असे अधिकृत निवेदनात म्हटले आहे. राष्ट्रपती भवनाने अद्याप दौरा जाहीर केलेला नाही, त्यामुळे त्यांची उपस्थिती अजून निश्चित नाही.
+राष्ट्रपती नाशिकला येणार की त्र्यंबकला, हे अद्याप स्पष्ट नाही. **अपडेट, २१ ऑक्टोबर (अधिकृत):** मुख्यमंत्री फडणवीस यांनी उपमुख्यमंत्री शिंदे व पवार यांच्यासह राष्ट्रपती भवनात राष्ट्रपती मुर्मू यांना ध्वजारोहण, महा गोदा आरती, तसेच प्राधिकरणाचे संकेतस्थळ, कुंभ गीत, कॉफी-टेबल बुक आणि टपाल तिकिटाच्या प्रकाशनासाठी औपचारिक निमंत्रण दिले, असे अधिकृत निवेदनात म्हटले आहे. राष्ट्रपती भवनाने अद्याप दौरा जाहीर केलेला नाही. **अपडेट, २२ ऑक्टोबर (वृत्त):** राष्ट्रपतींनी निमंत्रण स्वीकारले असून त्या उपस्थित राहतील, असे उपमुख्यमंत्री एकनाथ शिंदे यांनी दिल्लीत माध्यमांना सांगितले (डेक्कन क्रॉनिकल), आणि त्या त्र्यंबकराज मंदिरात पूजन करणार असल्याचे सकाळने दिले आहे. ३१ ऑक्टोबरला त्र्यंबकेश्वर मंदिर खुले राहील, पण फक्त ३ हजार पासधारकांसाठी ([सविस्तर](/blog/trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25)).
 
 तुमच्यासाठी याचा अर्थ: NTKMA आयुक्त शेखर सिंह यांनी नाशिक महापालिकेला (NMC) रामकुंडावर व्हीआयपी आणि सर्वसामान्यांसाठी स्वतंत्र प्रवेश व बाहेर पडण्याचे मार्ग करण्यास सांगितले आहे (Times of India, ५ ऑक्टोबर २०२६). त्यामुळे व्हीआयपी आणि भाविकांसाठी वेगवेगळे मार्ग असतील, हे लक्षात ठेवा.`,
       },
@@ -308,6 +308,20 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   ],
   sources: [
     {
+      title: "त्र्यंबकेश्‍वर मंदिर ३१ ऑक्टेबरला खुले",
+      publisher: "eSakal",
+      date: "2026-10-21",
+      url: "https://www.esakal.com/uttar-maharashtra/nashik/todays-latest-marathi-news-nsk26h40329-txt-nskmain3-20261021160415",
+      status: "reported",
+    },
+    {
+      title: "President Murmu Invited To Flag-Off Nashik Kumbh Mela",
+      publisher: "Deccan Chronicle",
+      date: "2026-10-21",
+      url: "https://www.deccanchronicle.com/nation/president-murmu-invited-to-flag-off-nashik-kumbh-mela-1997671",
+      status: "reported",
+    },
+    {
       title: "Nashik-Trimbakeshwar Kumbh Mela Plan (NTKMA, June 2026)",
       publisher: "NTKMA / Divisional Commissioner, Nashik",
       date: "2026-06-15",
@@ -448,7 +462,7 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
       status: "reported",
     },
   ],
-  updated: "2026-10-21",
+  updated: "2026-10-22",
   crumb: {
     en: "Dhwajarohan 2026",
     hi: "ध्वजारोहण 2026",
@@ -477,6 +491,36 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   },
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
+    {
+      time: "2026-10-22T09:00:00+05:30",
+      headline: {
+        en: "Trimbakeshwar temple to stay open on 31 October, 3,000 passes",
+        hi: "31 अक्टूबर को त्र्यंबकेश्वर मंदिर खुला, 3,000 पास",
+        mr: "३१ ऑक्टोबरला त्र्यंबकेश्वर मंदिर खुले, ३ हजार पास",
+      },
+      body: {
+        en: "Collector Ayush Prasad says the temple will not close on 30–31 October; darshan on 31 October is limited to 3,000 pass holders, with some passes reserved for tribal communities. How to get a pass is not yet announced. 32 Kushavarta works are due by 25 October. [Full story](/blog/trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25).",
+        hi: "कलेक्टर आयुष प्रसाद के अनुसार 30–31 अक्टूबर को मंदिर बंद नहीं होगा; 31 अक्टूबर को दर्शन 3,000 पासधारकों तक सीमित, कुछ पास आदिवासी बंधुओं के लिए आरक्षित। पास कैसे मिलेगा, अभी घोषित नहीं। कुशावर्त के 32 काम 25 अक्टूबर तक। [पूरी ख़बर](/blog/trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25)।",
+        mr: "३०–३१ ऑक्टोबरला मंदिर बंद राहणार नाही, असे जिल्हाधिकारी आयुष प्रसाद म्हणाले; ३१ ऑक्टोबरला दर्शन ३ हजार पासधारकांपुरते, काही पास आदिवासी बांधवांसाठी राखीव. पास कसा मिळेल, अद्याप जाहीर नाही. कुशावर्तावरील ३२ कामे २५ ऑक्टोबरपर्यंत. [सविस्तर बातमी](/blog/trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25).",
+      },
+      status: "reported",
+      source: "Sakal, Pudhari, Prahaar",
+    },
+    {
+      time: "2026-10-21T22:00:00+05:30",
+      headline: {
+        en: "Shinde: President has accepted, will attend",
+        hi: "शिंदे: राष्ट्रपति ने निमंत्रण स्वीकारा, आएँगी",
+        mr: "शिंदे: राष्ट्रपतींनी निमंत्रण स्वीकारले, उपस्थित राहणार",
+      },
+      body: {
+        en: "Deputy CM Eknath Shinde told reporters in Delhi that President Murmu will attend on 31 October. Rashtrapati Bhavan has not published her programme. Police rehearse the procession (21 Oct, 4–7 PM, Tapovan–Ramkund), flag hoisting (22 Oct, 11 AM–1 PM) and Goda Aarti (22 Oct, 4:30–7:30 PM). [Full story](/blog/president-murmu-invited-to-31-october-flag-hoisting-shinde-says-she-will-attend).",
+        hi: "उपमुख्यमंत्री एकनाथ शिंदे ने दिल्ली में कहा कि राष्ट्रपति मुर्मू 31 अक्टूबर को आएँगी। राष्ट्रपति भवन ने कार्यक्रम जारी नहीं किया है। पुलिस की तालीम: शोभायात्रा (21 अक्टूबर, शाम 4–7, तपोवन–रामकुंड), ध्वजारोहण (22 अक्टूबर, सुबह 11–1) और गोदा आरती (22 अक्टूबर, शाम 4:30–7:30)। [पूरी ख़बर](/blog/president-murmu-invited-to-31-october-flag-hoisting-shinde-says-she-will-attend)।",
+        mr: "राष्ट्रपती मुर्मू ३१ ऑक्टोबरला उपस्थित राहतील, असे उपमुख्यमंत्री एकनाथ शिंदे यांनी दिल्लीत सांगितले. राष्ट्रपती भवनाने दौरा जाहीर केलेला नाही. पोलिसांची तालीम: शोभायात्रा (२१ ऑक्टो., सायं. ४–७, तपोवन–रामकुंड), ध्वजारोहण (२२ ऑक्टो., सकाळी ११–१) आणि गोदा आरती (२२ ऑक्टो., सायं. ४.३०–७.३०). [सविस्तर बातमी](/blog/president-murmu-invited-to-31-october-flag-hoisting-shinde-says-she-will-attend).",
+      },
+      status: "reported",
+      source: "Deccan Chronicle, Sakal, Pudhari",
+    },
     {
       time: "2026-10-21T21:30:00+05:30",
       headline: {

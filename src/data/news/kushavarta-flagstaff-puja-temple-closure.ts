@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "कुशावर्तावर ध्वजस्तंभ पूजन झाले; त्र्यंबकेश्वर मंदिर बंद ठेवण्याचा निर्णय अद्याप नाही",
   },
   date: "2026-10-16",
+  updated: "2026-10-22",
+  followUp: { slug: "trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25", date: "2026-10-22" },
   originallyAnnounced: "2026-10-15",
   source: "Times of India / PTI",
   sources: [

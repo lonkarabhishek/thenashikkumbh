@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "त्र्यंबकेश्वर पुरोहित संघ व देवस्थान ट्रस्टचा दोन महिने मंदिर बंद ठेवण्यास विरोध; ध्वजस्तंभ बोधचिन्ह वाद म्हणजे षडयंत्र: महाजन",
   },
   date: "2026-10-17",
+  updated: "2026-10-22",
+  followUp: { slug: "trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25", date: "2026-10-22" },
   originallyAnnounced: "2026-10-16",
   source: "Sakal / UNI",
   sources: [
