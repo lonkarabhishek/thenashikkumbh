@@ -37,6 +37,27 @@ function formatStamp(iso: string, locale: Locale) {
   return `${day}, ${time} IST`;
 }
 
+
+function eventPlaces(liveEvent: NonNullable<InfoPageContent["liveEvent"]>) {
+  if (liveEvent.places?.length) {
+    return liveEvent.places.map((pl) => ({
+      "@type": "Place" as const,
+      name: pl.name,
+      address: {
+        "@type": "PostalAddress" as const,
+        addressLocality: pl.addressLocality,
+        ...(pl.addressRegion ? { addressRegion: pl.addressRegion } : {}),
+        addressCountry: pl.addressCountry ?? "IN",
+      },
+    }));
+  }
+  return {
+    "@type": "Place" as const,
+    name: liveEvent.location,
+    address: liveEvent.location,
+  };
+}
+
 export function infoPageMetadata(page: InfoPageContent, locale: Locale): Metadata {
   return pageMetadata({
     locale,
@@ -81,7 +102,7 @@ export default function InfoPage({ page, locale }: { page: InfoPageContent; loca
             endDate: page.liveEvent.end,
             eventStatus: "https://schema.org/EventScheduled",
             eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-            location: { "@type": "Place", name: page.liveEvent.location, address: page.liveEvent.location },
+            location: eventPlaces(page.liveEvent),
           },
           liveBlogUpdate: updates.map((u) => ({
             "@type": "BlogPosting",
@@ -93,9 +114,29 @@ export default function InfoPage({ page, locale }: { page: InfoPageContent; loca
         }
       : null;
 
+  const eventSchema = page.liveEvent
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "@id": `${url}#event`,
+        name: page.liveEvent.name[locale],
+        description: page.description[locale],
+        startDate: page.liveEvent.start,
+        endDate: page.liveEvent.end,
+        eventStatus: "https://schema.org/EventScheduled",
+        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        location: eventPlaces(page.liveEvent),
+        image: [`${SITE_URL}${page.shareImage?.[locale] ?? "/images/og-image.jpg"}`],
+        isAccessibleForFree: true,
+        inLanguage: locale,
+        url,
+      }
+    : null;
+
   return (
     <div className="bg-cream-50 pb-20 pt-28 sm:pt-36">
       <JsonLd data={breadcrumbSchema(locale, [{ name: page.crumb[locale], path: page.path }])} />
+      {eventSchema && <JsonLd data={eventSchema} />}
       {liveSchema && <JsonLd data={liveSchema} />}
       {page.faq && page.faq.length > 0 && (
         <JsonLd

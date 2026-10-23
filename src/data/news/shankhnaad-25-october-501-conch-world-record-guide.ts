@@ -4,9 +4,9 @@ export const article: BlogArticle = {
   id: 249,
   slug: "shankhnaad-25-october-2026-nashik-501-conch-world-record-time-venue",
   title: {
-    mr: "शंखनाद २५ ऑक्टोबर २०२६: नाशिकमध्ये ५०१ शंखांचा विश्वविक्रम प्रयत्न, वेळ, ठिकाण आणि कसे पाहाल",
+    mr: "२५ ऑक्टो. देवमामलेदारजवळ: ५०१ शंखांचा शंखनाद (सायं. सुमारे ६)",
     hi: "शंखनाद 25 अक्टूबर 2026: नाशिक में 501 शंखों का विश्व रिकॉर्ड प्रयास, समय, जगह और कैसे देखें",
-    en: "Shankhnaad 25 October 2026: Nashik's 501-Conch World-Record Attempt, Time, Venue and How to Watch",
+    en: "25 Oct Near Devmamledar: Nashik's 501-Conch Shankhnaad (~6 PM)",
   },
   date: "2026-10-21",
   originallyAnnounced: "2026-10-18",
@@ -76,12 +76,12 @@ export const article: BlogArticle = {
     en: "🐚 501 conches, one Shankhnaad, in Nashik!\n📅 Sunday 25 October (Kojagiri Purnima)\n🕕 About 6 PM\n📍 Near Devmamledar grounds, Godavari bank\n🏆 World-record attempt by the Kumbh Mela Authority\nEntry, parking and live-stream details:",
   },
   summary: {
-    mr: "रविवार, २५ ऑक्टोबरला (कोजागिरी पौर्णिमा) सायंकाळी सुमारे ६ वाजता नाशिकमध्ये गोदाकाठच्या देवमामलेदार पटांगणाजवळ ५०१ जण एकाच वेळी शंखनाद करून विश्वविक्रमाचा प्रयत्न करणार आहेत. वेळ, ठिकाण, विक्रम कसा मोजला जातो, आणि प्रवेश-पार्किंग-थेट प्रक्षेपणाबद्दल काय जाहीर झाले आहे व काय नाही.",
+    mr: "रविवार २५ ऑक्टोबर (कोजागिरी), सायं. सुमारे ६, देवमामलेदार पटांगणाजवळ: ५०१ जण एकत्र शंखनाद — जिल्हा माहिती कार्यालय व NTKMA च्या जाहीरातीनुसार. वेळ, ठिकाण, प्रवेश-पार्किंग आणि थेट प्रक्षेपणाबद्दल काय निश्चित आहे व काय नाही.",
     hi: "रविवार, 25 अक्टूबर (कोजागिरी पूर्णिमा) को शाम करीब 6 बजे नाशिक में गोदावरी किनारे देवमामलेदार मैदान के पास 501 लोग एक साथ शंख बजाकर विश्व रिकॉर्ड की कोशिश करेंगे। समय, जगह, रिकॉर्ड कैसे गिना जाएगा, और प्रवेश, पार्किंग व लाइव प्रसारण पर क्या घोषित हुआ है और क्या नहीं।",
-    en: "On Sunday 25 October (Kojagiri Purnima), at about 6 PM, 501 people will blow conches together near Devmamledar grounds on the Godavari in Nashik to attempt a world record. Here is the time, the venue, why it counts as a record attempt, and what has and has not been announced about entry, parking and live streaming.",
+    en: "Sunday 25 Oct, about 6 PM, near Devmamledar grounds on the Godavari: 501 conches in one Shankhnaad — per the District Information Office and NTKMA. What is confirmed on time, venue, entry, parking and live stream, and what is not.",
   },
   content: {
-    mr: `**थोडक्यात:** रविवार, **२५ ऑक्टोबर २०२६** (कोजागिरी पौर्णिमा), **सायंकाळी सुमारे ६ वाजता**, नाशिकमध्ये गोदावरीकाठच्या **देवमामलेदार पटांगणाजवळ** **५०१ जण एकाच वेळी शंखनाद** करतील. हा **विश्वविक्रमाचा प्रयत्न** आहे, विक्रम अजून नोंदलेला नाही. हे आयोजन नाशिक-त्र्यंबकेश्वर कुंभमेळा प्राधिकरणाचे (NTKMA) असून ३१ ऑक्टोबरच्या [ध्वजारोहणाच्या](/dhwajarohan-2026) आधीचा पहिला मोठा सोहळा आहे.
+    mr: `**थोडक्यात:** रविवार, **२५ ऑक्टोबर २०२६** (कोजागिरी पौर्णिमा), **सायंकाळी सुमारे ६ वाजता**, नाशिकमध्ये गोदावरीकाठच्या **देवमामलेदार पटांगणाजवळ** **५०१ जण एकाच वेळी शंखनाद** करतील. हा **विश्वविक्रमाचा प्रयत्न** आहे, विक्रम अजून नोंदलेला नाही. **जिल्हा माहिती कार्यालय, नाशिक** आणि नाशिक-त्र्यंबकेश्वर कुंभमेळा प्राधिकरण (NTKMA) यांनी हे ३१ ऑक्टोबरच्या [ध्वजारोहणाच्या](/dhwajarohan-2026) आधीचा पहिला मोठा सोहळा म्हणून जाहीर केले.
 
 ## काय निश्चित आहे (CONFIRMED)
 
@@ -155,7 +155,7 @@ export const article: BlogArticle = {
 - **डाक टिकट, वेबसाइट, कॉफ़ी-टेबल बुक:** 13 अक्टूबर की ख़बरों में ये शंखनाद के दिन बताए गए थे। लेकिन 21 अक्टूबर की आधिकारिक विज्ञप्ति के अनुसार राष्ट्रपति को **31 अक्टूबर** को वेबसाइट शुरू करने, कुंभ गीत, कॉफ़ी-टेबल बुक और डाक टिकट जारी करने के लिए आमंत्रित किया गया है।
 
 पूरे दिन के लाइव अपडेट: [ध्वजारोहण 2026 लाइव](/dhwajarohan-2026)। दोनों रिकॉर्ड की मूल ख़बर: [दो विश्व रिकॉर्ड की कोशिश](/blog/two-world-record-attempts-501-conch-shankhnaad-6500-maha-goda-aarti)। सभी तिथियाँ: [तिथियाँ](/dates)।`,
-    en: `**The short answer:** on **Sunday 25 October 2026** (Kojagiri Purnima), at **about 6 PM**, **501 people will blow conch shells together** near the **Devmamledar grounds** on the Godavari in Nashik. It is a **world-record attempt**; no record has been certified yet. The Nashik-Trimbakeshwar Kumbh Mela Authority (NTKMA) is organising it as the first big event before the 31 October [flag hoisting](/dhwajarohan-2026).
+    en: `**The short answer:** on **Sunday 25 October 2026** (Kojagiri Purnima), at **about 6 PM**, **501 people will blow conch shells together** near the **Devmamledar grounds** on the Godavari in Nashik. It is a **world-record attempt**; no record has been certified yet. The **District Information Office, Nashik** and the Nashik-Trimbakeshwar Kumbh Mela Authority (NTKMA) announced it as the first big event before the 31 October [flag hoisting](/dhwajarohan-2026).
 
 ## What is confirmed
 
@@ -192,6 +192,26 @@ A record exists only once the record body checks it against its rules (head coun
 - **Stamp, website, coffee-table book:** reports on 13 October placed these at the Shankhnaad. But the official release of 21 October says the President has been invited to launch the authority's website, the Kumbh anthem, the coffee-table book and the stamp on **31 October**.
 
 Follow the day live: [Dhwajarohan 2026 live](/dhwajarohan-2026). The original story on both records: [two world-record attempts](/blog/two-world-record-attempts-501-conch-shankhnaad-6500-maha-goda-aarti). Every date: [Kumbh dates](/dates).`,
+  },
+  event: {
+    name: {
+      en: "Shankhnaad: 501-conch world-record attempt, Nashik",
+      hi: "शंखनाद: 501 शंखों का विश्व रिकॉर्ड प्रयास, नाशिक",
+      mr: "शंखनाद: ५०१ शंखांचा विश्वविक्रम प्रयत्न, नाशिक",
+    },
+    // Official line is "about 6 PM"; one report says 5 PM — date-only startDate marks the clock as not exact.
+    startDate: "2026-10-25",
+    description: {
+      en: "About 6 PM (official; one report says 5 PM) near Devmamledar grounds on the Godavari bank, close to Ramkund. Announced by NTKMA and the District Information Office, Nashik.",
+      hi: "शाम करीब 6 बजे (आधिकारिक; एक रिपोर्ट में 5 बजे) गोदावरी किनारे देवमामलेदार मैदान के पास, रामकुंड इलाके के करीब। NTKMA और जिला सूचना कार्यालय, नाशिक की घोषणा।",
+      mr: "सायंकाळी सुमारे ६ वाजता (अधिकृत; एका वृत्तात ५ वाजता) गोदाकाठच्या देवमामलेदार पटांगणाजवळ, रामकुंड परिसराजवळ. NTKMA व जिल्हा माहिती कार्यालय, नाशिक यांची जाहीरात.",
+    },
+    location: {
+      name: "Near Devmamledar grounds (Patangan), Godavari bank",
+      addressLocality: "Nashik",
+      addressRegion: "Maharashtra",
+      addressCountry: "IN",
+    },
   },
   faq: [
     {

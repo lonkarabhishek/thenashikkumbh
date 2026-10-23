@@ -3,14 +3,14 @@ import type { InfoPageContent } from "@/content/pages/types";
 export const page: InfoPageContent = {
   path: "/dhwajarohan-2026",
   seoTitle: {
-    en: "Dhwajarohan 2026: Nashik Kumbh Flag Hoisting, 31 Oct",
+    en: "31 Oct at Ramkund: Dhwajarohan That Opens the Simhastha",
     hi: "ध्वजारोहण 2026: नाशिक सिंहस्थ कुंभ की शुरुआत, 31 अक्टूबर",
-    mr: "ध्वजारोहण २०२६: नाशिक सिंहस्थ कुंभमेळ्याचा प्रारंभ, ३१ ऑक्टोबर",
+    mr: "३१ ऑक्टो. रामकुंडावर: सिंहस्थ सुरू करणारे ध्वजारोहण",
   },
   description: {
-    en: "Live: Dhwajarohan on 31 Oct 2026, 12:02 PM, at Ramkund and Kushavarta. Timings, 6 PM Maha Goda Aarti, routes, closures, parking, how to watch.",
+    en: "31 Oct 2026, 12:02 PM at Ramkund and Kushavarta — Dhwajarohan (NTKMA plan; Mahajan on record). Live timings, Maha Goda Aarti, routes, closures, parking.",
     hi: "लाइव: 31 अक्टूबर 2026, दोपहर 12:02 बजे रामकुंड और कुशावर्त पर ध्वजारोहण। समय, शाम 6 बजे महा गोदा आरती, रास्ते, बंदी, पार्किंग, कैसे देखें।",
-    mr: "थेट: ३१ ऑक्टोबर २०२६ दुपारी १२.०२ वाजता रामकुंड व कुशावर्तावर ध्वजारोहण. वेळा, सायं. ६ ची महा गोदा आरती, मार्ग, बंदी, पार्किंग, कसे पाहाल.",
+    mr: "३१ ऑक्टो. दुपारी १२.०२, रामकुंड व कुशावर्त — ध्वजारोहण (NTKMA आराखडा; महाजन अधिकृत). थेट वेळा, महा गोदा आरती, मार्ग, बंदी, पार्किंग.",
   },
   h1: {
     en: "Dhwajarohan 2026: the flag hoisting that starts the Simhastha",
@@ -20,13 +20,13 @@ export const page: InfoPageContent = {
   intro: {
     en: `On Saturday 31 October 2026, at 12:02 PM, flags will go up at the same moment at Ramkund in Nashik and at Kushavarta in Trimbakeshwar. This Dhwajarohan (flag hoisting) is the formal start of the Nashik-Trimbakeshwar Simhastha Kumbh Mela.
 
-This independent guide explains what happens, where, who is expected and how to plan if you want to be there. We are not an official site. Every source is listed at the foot of this page.`,
+The date and both venues are in the NTKMA Kumbh Mela Plan; Kumbh Mela Minister Girish Mahajan confirmed the 12:02 PM muhurat on record (eSakal, 19 September 2026). This independent guide covers who is expected, routes, closures and how to plan. We are not an official site. Every source is listed at the foot of this page.`,
     hi: `शनिवार, 31 अक्टूबर 2026 को दोपहर 12:02 बजे नाशिक के रामकुंड और त्र्यंबकेश्वर के कुशावर्त पर एक ही समय पर ध्वज फहराया जाएगा। यही ध्वजारोहण नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभ मेले (कई लोग इसे नासिक कुंभ भी कहते हैं) की औपचारिक शुरुआत है।
 
 यह स्वतंत्र गाइड बताती है कि उस दिन क्या होगा, कहां होगा, कौन आ सकता है और अगर आप जाना चाहते हैं तो योजना कैसे बनाएं। यह कोई सरकारी साइट नहीं है। सभी स्रोत पेज के नीचे दिए गए हैं।`,
     mr: `शनिवार, ३१ ऑक्टोबर २०२६ रोजी दुपारी १२.०२ वाजता नाशिकच्या रामकुंडावर आणि त्र्यंबकेश्वरच्या कुशावर्तावर एकाच वेळी ध्वज फडकणार आहे. हे ध्वजारोहण म्हणजे नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभमेळा 2027 चा औपचारिक प्रारंभ.
 
-त्या दिवशी नेमके काय होणार, कुठे, कोण येणार आणि जायचे असेल तर नियोजन कसे करावे, हे या स्वतंत्र मार्गदर्शकात दिले आहे. हे संकेतस्थळ सरकारी नाही. सर्व स्रोत पानाच्या शेवटी दिले आहेत.`,
+तारीख व दोन्ही ठिकाणे NTKMA च्या कुंभमेळा आराखड्यात आहेत; कुंभमेळा मंत्री गिरीश महाजन यांनी १२.०२ च्या मुहूर्ताला अधिकृत दुजोरा दिला (eSakal, १९ सप्टेंबर २०२६). कोण येणार, मार्ग, बंदी आणि नियोजन कसे करावे, हे या स्वतंत्र मार्गदर्शकात आहे. हे संकेतस्थळ सरकारी नाही. सर्व स्रोत पानाच्या शेवटी दिले आहेत.`,
   },
   sections: [
     {
@@ -561,6 +561,20 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
     start: "2026-10-31T12:02:00+05:30",
     end: "2026-10-31T23:00:00+05:30",
     location: "Ramkund, Panchavati, Nashik and Kushavarta, Trimbakeshwar, Maharashtra, India",
+    places: [
+      {
+        name: "Ramkund (Ramtirth), Panchavati",
+        addressLocality: "Nashik",
+        addressRegion: "Maharashtra",
+        addressCountry: "IN",
+      },
+      {
+        name: "Kushavarta",
+        addressLocality: "Trimbakeshwar",
+        addressRegion: "Maharashtra",
+        addressCountry: "IN",
+      },
+    ],
   },
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
