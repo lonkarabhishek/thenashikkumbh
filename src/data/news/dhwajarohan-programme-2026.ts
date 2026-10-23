@@ -9,7 +9,11 @@ export const article: BlogArticle = {
     mr: "ध्वजारोहण ३१ ऑक्टोबर २०२६ रोजी दुपारी १२:०२ वाजता: कुंभ प्रारंभ सोहळ्याचा आतापर्यंतचा कार्यक्रम",
   },
   date: "2026-10-06",
-  updated: "2026-10-19",
+  updated: "2026-10-23",
+  followUp: {
+    slug: "gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29",
+    date: "2026-10-23",
+  },
   originallyAnnounced: "2025-06-01",
   source: "eSakal",
   sources: [

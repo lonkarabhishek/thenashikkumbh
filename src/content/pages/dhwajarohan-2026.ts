@@ -95,26 +95,26 @@ Trimbak is a separate town from Nashik, so you can be at only one venue at 12:02
       body: {
         en: `Only the flag hoisting itself is confirmed in an official document. The rest of this programme comes from media reports and may change.
 
-- **Friday 30 October: Gram Pradakshina** in Nashik, before the flag hoisting. Lokmat Times reported (27 September 2026) that around one lakh devotees are expected. The route was still being finalised.
+- **Friday 30 October: Gram Pradakshina** in Nashik, before the flag hoisting. Lokmat Times reported (27 September 2026) that around one lakh devotees are expected. **Update, 23 October (REPORTED):** welcome at Modi Maidan, Tapovan at 1 PM; the procession, with ten tableaux, leaves at 2 PM (Sakal; Navbharat says 3 PM) and is due at Ramtirth around 6:30 PM for a sandhya aarti. Route as given by NMC to the Times of India: Tapovan, Panchavati, flower market, Delhi Darwaza, Nehru Chowk, Main Road, Ravivar Karanja, Ahilyabai Holkar Bridge, Ramkund. NMC anti-encroachment squads on the route 24–29 October. No official traffic notice yet. [Full story](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29).
 - **30 October to 1 November: rituals at Ramkund.** Puja and havan over three days, according to the same report.
 - **Saturday 31 October, 12:02 PM: Dhwajarohan** at Ramkund and Kushavarta. Confirmed.
-- **Saturday 31 October, about 6 PM: Maha Goda Aarti** at Ramkund, with about **6,500 people from 650 tribal villages** of Nashik district, the second world-record attempt (REPORTED: Prahaar and Lokmat Times give 6 PM; NTKMA and the District Information Office announced the aarti and the 6,500 figure on 18 October). Lokmat Times says the aarti will run along the stretch between Ekmukhi Datta temple and Rokdoba temple. *Earlier reports in late September said 7 PM and about 5,000 seats; those figures are now out of date.*
+- **Saturday 31 October, about 6 PM: Maha Goda Aarti** at Ramkund, with about **6,500 people from 650 tribal villages** of Nashik district, the second world-record attempt (REPORTED: Prahaar and Lokmat Times give 6 PM; NTKMA and the District Information Office announced the aarti and the 6,500 figure on 18 October). Lokmat Times says the aarti will run along the stretch between Ekmukhi Datta temple and Rokdoba temple. *Earlier reports in late September said 7 PM and about 5,000 seats; those figures are now out of date.* Navbharat (21 October) gives **6:50 PM** for the aarti; sources differ, so plan for about 6 PM.
 
 Navarashtra has noted that the programme may change. We will update this page when an official programme is published.`,
         hi: `केवल ध्वजारोहण की पुष्टि सरकारी दस्तावेज़ में है। बाकी कार्यक्रम मीडिया रिपोर्टों पर आधारित है और इसमें बदलाव हो सकता है।
 
-- **शुक्रवार, 30 अक्टूबर: ग्राम प्रदक्षिणा**, नाशिक में, ध्वजारोहण से पहले। Lokmat Times की रिपोर्ट (27 सितंबर 2026) के अनुसार लगभग एक लाख श्रद्धालुओं के आने की उम्मीद है। मार्ग अभी तय किया जा रहा था।
+- **शुक्रवार, 30 अक्टूबर: ग्राम प्रदक्षिणा**, नाशिक में, ध्वजारोहण से पहले। Lokmat Times की रिपोर्ट (27 सितंबर 2026) के अनुसार लगभग एक लाख श्रद्धालुओं के आने की उम्मीद है। **अपडेट, 23 अक्टूबर (रिपोर्ट):** दोपहर 1 बजे तपोवन के मोदी मैदान पर स्वागत; दस चित्ररथों वाली यात्रा दोपहर 2 बजे निकलेगी (सकाळ; नवभारत के अनुसार 3 बजे) और शाम करीब 6:30 बजे संध्या आरती के लिए रामतीर्थ पहुँचेगी। NMC ने टाइम्स ऑफ इंडिया को जो मार्ग बताया: तपोवन, पंचवटी, फूल बाज़ार, दिल्ली दरवाज़ा, नेहरू चौक, मेन रोड, रविवार कारंजा, अहिल्याबाई होलकर पुल, रामकुंड। 24–29 अक्टूबर तक मार्ग पर NMC के अतिक्रमण हटाओ दस्ते। आधिकारिक ट्रैफ़िक सूचना अभी नहीं आई। [पूरी ख़बर](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29)।
 - **30 अक्टूबर से 1 नवंबर तक: रामकुंड पर धार्मिक अनुष्ठान।** उसी रिपोर्ट के अनुसार तीन दिन पूजा और हवन होंगे।
 - **शनिवार, 31 अक्टूबर, दोपहर 12:02 बजे: ध्वजारोहण**, रामकुंड और कुशावर्त पर। इसकी पुष्टि है।
-- **शनिवार, 31 अक्टूबर, शाम करीब 6 बजे: महा गोदा आरती**, रामकुंड पर, नाशिक ज़िले के **650 जनजातीय गाँवों के करीब 6,500 लोगों** के साथ, यह दूसरा विश्व रिकॉर्ड प्रयास है (रिपोर्ट: प्रहार और Lokmat Times ने शाम 6 बजे लिखा है; आरती और 6,500 की संख्या NTKMA और ज़िला सूचना कार्यालय ने 18 अक्टूबर को घोषित की)। Lokmat Times के मुताबिक आरती एकमुखी दत्त मंदिर से रोकडोबा मंदिर के बीच के घाट पर होगी। *सितंबर के आख़िर की रिपोर्टों में शाम 7 बजे और करीब 5,000 सीटें बताई गई थीं; वह जानकारी अब पुरानी है।*
+- **शनिवार, 31 अक्टूबर, शाम करीब 6 बजे: महा गोदा आरती**, रामकुंड पर, नाशिक ज़िले के **650 जनजातीय गाँवों के करीब 6,500 लोगों** के साथ, यह दूसरा विश्व रिकॉर्ड प्रयास है (रिपोर्ट: प्रहार और Lokmat Times ने शाम 6 बजे लिखा है; आरती और 6,500 की संख्या NTKMA और ज़िला सूचना कार्यालय ने 18 अक्टूबर को घोषित की)। Lokmat Times के मुताबिक आरती एकमुखी दत्त मंदिर से रोकडोबा मंदिर के बीच के घाट पर होगी। *सितंबर के आख़िर की रिपोर्टों में शाम 7 बजे और करीब 5,000 सीटें बताई गई थीं; वह जानकारी अब पुरानी है।* नवभारत (21 अक्टूबर) ने आरती का समय **शाम 6:50** बताया है; ख़बरों में फ़र्क है, इसलिए करीब 6 बजे तक पहुँचने की योजना रखें।
 
 Navarashtra ने बताया है कि कार्यक्रम बदल सकता है। आधिकारिक कार्यक्रम जारी होने पर हम यह पेज अपडेट करेंगे।`,
         mr: `केवळ ध्वजारोहणाची नोंद अधिकृत दस्तऐवजात आहे. बाकीचा कार्यक्रम माध्यमांतील वृत्तांवर आधारित असून त्यात बदल होऊ शकतो.
 
-- **शुक्रवार, ३० ऑक्टोबर: ग्रामप्रदक्षिणा**, नाशिकमध्ये, ध्वजारोहणाआधी. सुमारे एक लाख भाविक येतील अशी अपेक्षा असल्याचे Lokmat Times ने (२७ सप्टेंबर २०२६) दिले आहे. मार्ग अजून निश्चित होत होता.
+- **शुक्रवार, ३० ऑक्टोबर: ग्रामप्रदक्षिणा**, नाशिकमध्ये, ध्वजारोहणाआधी. सुमारे एक लाख भाविक येतील अशी अपेक्षा असल्याचे Lokmat Times ने (२७ सप्टेंबर २०२६) दिले आहे. **अपडेट, २३ ऑक्टोबर (वृत्त):** दुपारी १ वाजता तपोवनातील मोदी मैदानावर स्वागत; दहा चित्ररथांची परिक्रमा दुपारी २ वाजता निघेल (सकाळ; नवभारतनुसार ३ वाजता) आणि सायंकाळी साडेसहाच्या सुमारास संध्या आरतीसाठी रामतीर्थावर पोहोचेल. महापालिकेने टाइम्स ऑफ इंडियाला सांगितलेला मार्ग: तपोवन, पंचवटी, फुलबाजार, दिल्ली दरवाजा, नेहरू चौक, मेन रोड, रविवार कारंजा, अहिल्याबाई होळकर पूल, रामकुंड. २४–२९ ऑक्टोबरदरम्यान मार्गावर महापालिकेची अतिक्रमण हटाव पथके. अधिकृत वाहतूक अधिसूचना अद्याप नाही. [सविस्तर बातमी](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29).
 - **३० ऑक्टोबर ते १ नोव्हेंबर: रामकुंडावर धार्मिक विधी.** त्याच वृत्तानुसार तीन दिवस पूजा आणि हवन होणार आहे.
 - **शनिवार, ३१ ऑक्टोबर, दुपारी १२.०२: ध्वजारोहण**, रामकुंड आणि कुशावर्त येथे. याला अधिकृत दुजोरा आहे.
-- **शनिवार, ३१ ऑक्टोबर, सायंकाळी सुमारे ६ वाजता: महा गोदा आरती**, रामकुंडावर, नाशिक जिल्ह्यातील **६५० जनजातीय गावांमधील सुमारे ६,५०० जणांच्या** सहभागाने; हा दुसरा विश्वविक्रम प्रयत्न (वृत्त: प्रहार आणि Lokmat Times नुसार सायंकाळी ६; आरती आणि ६,५०० ही संख्या NTKMA व जिल्हा माहिती कार्यालयाने १८ ऑक्टोबरला जाहीर केली). एकमुखी दत्त मंदिर ते रोकडोबा मंदिर या घाटपट्ट्यात आरती होईल, असे Lokmat Times चे वृत्त आहे. *सप्टेंबरअखेरच्या वृत्तांत सायंकाळी ७ आणि सुमारे ५,००० आसने असे होते; ती माहिती आता जुनी झाली आहे.*
+- **शनिवार, ३१ ऑक्टोबर, सायंकाळी सुमारे ६ वाजता: महा गोदा आरती**, रामकुंडावर, नाशिक जिल्ह्यातील **६५० जनजातीय गावांमधील सुमारे ६,५०० जणांच्या** सहभागाने; हा दुसरा विश्वविक्रम प्रयत्न (वृत्त: प्रहार आणि Lokmat Times नुसार सायंकाळी ६; आरती आणि ६,५०० ही संख्या NTKMA व जिल्हा माहिती कार्यालयाने १८ ऑक्टोबरला जाहीर केली). एकमुखी दत्त मंदिर ते रोकडोबा मंदिर या घाटपट्ट्यात आरती होईल, असे Lokmat Times चे वृत्त आहे. *सप्टेंबरअखेरच्या वृत्तांत सायंकाळी ७ आणि सुमारे ५,००० आसने असे होते; ती माहिती आता जुनी झाली आहे.* नवभारतने (२१ ऑक्टोबर) आरतीची वेळ **सायंकाळी ६.५०** दिली आहे; वृत्तांमध्ये फरक असल्याने सुमारे ६ पर्यंत पोहोचण्याचे नियोजन करा.
 
 कार्यक्रमात बदल होऊ शकतो, असे Navarashtra ने नमूद केले आहे. अधिकृत कार्यक्रम जाहीर झाल्यावर हे पान अद्ययावत केले जाईल.`,
       },
@@ -155,7 +155,7 @@ What this means for you: NTKMA Commissioner Shekhar Singh has asked the Nashik M
 Plan with what is known today:
 
 - Do not expect to reach the water's edge at 12:02 PM without an invitation. Space is small and invitations are limited.
-- Expect big crowds on 30 October too. About one lakh devotees are reported to be expected for the Gram Pradakshina.
+- Expect big crowds on 30 October too. About one lakh devotees are reported to be expected for the Gram Pradakshina. Avoid driving on Main Road and in Panchavati that afternoon and evening.
 - The police traffic and parking notice for 31 October has not been published yet. See "Routes, closures and parking" below.
 - Kushavarta in Trimbak is closed for renovation until about 31 October (see below). Do not plan a bath there before it reopens.
 - Works at Ramkund were still unfinished on 5 October, so some areas may be screened off.
@@ -172,7 +172,7 @@ On 2 September, Singh had said Ramkund would be finished by 15 October. That dea
 आज की जानकारी के आधार पर योजना बनाएं:
 
 - बिना निमंत्रण के 12:02 बजे पानी के किनारे तक पहुंचने की उम्मीद न रखें। जगह कम है और निमंत्रण सीमित हैं।
-- 30 अक्टूबर को भी भारी भीड़ की उम्मीद रखें। रिपोर्ट के अनुसार ग्राम प्रदक्षिणा में लगभग एक लाख श्रद्धालु आ सकते हैं।
+- 30 अक्टूबर को भी भारी भीड़ की उम्मीद रखें। रिपोर्ट के अनुसार ग्राम प्रदक्षिणा में लगभग एक लाख श्रद्धालु आ सकते हैं। उस दिन दोपहर-शाम मेन रोड और पंचवटी में गाड़ी ले जाने से बचें।
 - 31 अक्टूबर के लिए पुलिस की ट्रैफ़िक और पार्किंग अधिसूचना अभी जारी नहीं हुई है। नीचे "रास्ते, बंदी और पार्किंग" देखें।
 - त्र्यंबक का कुशावर्त लगभग 31 अक्टूबर तक मरम्मत के लिए बंद है (नीचे देखें)। दोबारा खुलने से पहले वहां स्नान की योजना न बनाएं।
 - 5 अक्टूबर तक रामकुंड के काम अधूरे थे, इसलिए कुछ हिस्से घेरकर ढके जा सकते हैं।
@@ -189,7 +189,7 @@ Times of India ने 5 अक्टूबर 2026 को बताया कि
 आजच्या माहितीवर आधारित नियोजन:
 
 - निमंत्रणाशिवाय १२.०२ वाजता थेट पाण्याजवळ पोहोचता येईल, असे गृहीत धरू नका. जागा कमी आहे आणि निमंत्रणे मर्यादित आहेत.
-- ३० ऑक्टोबरलाही मोठी गर्दी अपेक्षित आहे. ग्रामप्रदक्षिणेला सुमारे एक लाख भाविक येतील, असे वृत्त आहे.
+- ३० ऑक्टोबरलाही मोठी गर्दी अपेक्षित आहे. ग्रामप्रदक्षिणेला सुमारे एक लाख भाविक येतील, असे वृत्त आहे. त्या दिवशी दुपारी-सायंकाळी मेन रोड व पंचवटीत वाहन नेणे टाळा.
 - ३१ ऑक्टोबरसाठी पोलिसांची वाहतूक व पार्किंग अधिसूचना अजून जाहीर झालेली नाही. खाली "मार्ग, बंदी आणि पार्किंग" पाहा.
 - त्र्यंबकचे कुशावर्त साधारण ३१ ऑक्टोबरपर्यंत नूतनीकरणासाठी बंद आहे (खाली पाहा). ते पुन्हा खुले होईपर्यंत तिथे स्नानाचे नियोजन करू नका.
 - ५ ऑक्टोबरपर्यंत रामकुंडाची कामे अपूर्ण होती, त्यामुळे काही भाग झाकून बंद केलेले असू शकतात.
@@ -307,6 +307,41 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
     },
   ],
   sources: [
+    {
+      title: "NMC plans special anti-encroachment drive ahead of Simhastha flag-hoisting ceremony",
+      publisher: "Times of India",
+      date: "2026-10-22",
+      url: "https://timesofindia.indiatimes.com/city/nashik/nmc-plans-special-anti-encroachment-drive-ahead-of-simhastha-flag-hoisting-ceremony/articleshow/135125176.cms",
+      status: "reported",
+    },
+    {
+      title: "धर्म ध्वज ग्राम परिक्रमा: दहा चित्ररथांच्या भोवती कडेकोट पोलिस बंदोबस्त",
+      publisher: "eSakal",
+      date: "2026-10-21",
+      url: "https://www.esakal.com/uttar-maharashtra/nashik/dharm-dhwaj-village-parikrama",
+      status: "reported",
+    },
+    {
+      title: "नासिक सिंहस्थ कुंभ का काउंटडाउन शुरू: एक लाख दीपों से होगी गोदा आरती",
+      publisher: "Navbharat",
+      date: "2026-10-21",
+      url: "https://navbharatlive.com/maharashtra/nashik/nashik-simhastha-kumbh-flag-hoisting-godavari-deep-pujan-auk01",
+      status: "reported",
+    },
+    {
+      title: "Nashik: Police Hold Security Rehearsal Ahead Of Simhastha Kumbh Flag-Hoisting On October 31",
+      publisher: "Free Press Journal",
+      date: "2026-10-22",
+      url: "https://www.freepressjournal.in/pune/nashik-police-hold-security-rehearsal-ahead-of-simhastha-kumbh-flag-hoisting-on-october-31",
+      status: "reported",
+    },
+    {
+      title: "Nashik Kumbh Mela website to launch on October 31st with flag hoisting ceremony",
+      publisher: "Lokmat Times (PTI)",
+      date: "2026-10-22",
+      url: "https://www.lokmattimes.com/national/nashik-kumbh-mela-website-to-launch-on-october-31st-with-flag-hoisting-ceremony-a001-w03/",
+      status: "reported",
+    },
     {
       title: "त्र्यंबकेश्‍वर मंदिर ३१ ऑक्टेबरला खुले",
       publisher: "eSakal",
@@ -529,6 +564,36 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   },
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
+    {
+      time: "2026-10-23T09:30:00+05:30",
+      headline: {
+        en: "30 Oct Gram Pradakshina route: Tapovan to Ramkund; encroachment drive 24–29 Oct",
+        hi: "30 अक्टूबर ग्राम प्रदक्षिणा का मार्ग: तपोवन से रामकुंड; 24–29 अक्टूबर अतिक्रमण हटाओ अभियान",
+        mr: "३० ऑक्टो. ग्रामप्रदक्षिणेचा मार्ग: तपोवन ते रामकुंड; २४–२९ ऑक्टो. अतिक्रमण हटाव मोहीम",
+      },
+      body: {
+        en: "Procession leaves Modi Maidan, Tapovan at 2 PM (one report says 3 PM) via Panchavati, Delhi Darwaza, Main Road and Ahilyabai Holkar Bridge, reaching Ramtirth around 6:30 PM. NMC squads clear stalls and handcarts on the route 24–29 Oct; police held a full rehearsal at Ramkund on 22 Oct. Avoid driving on Main Road and in Panchavati on 30 Oct afternoon. [Full story](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29).",
+        hi: "यात्रा तपोवन के मोदी मैदान से दोपहर 2 बजे (एक ख़बर में 3 बजे) निकलकर पंचवटी, दिल्ली दरवाज़ा, मेन रोड और अहिल्याबाई होलकर पुल होते हुए शाम करीब 6:30 बजे रामतीर्थ पहुँचेगी। 24–29 अक्टूबर तक NMC के दस्ते मार्ग से ठेले-स्टॉल हटाएँगे; 22 अक्टूबर को रामकुंड पर पुलिस ने पूरी रिहर्सल की। 30 अक्टूबर दोपहर मेन रोड और पंचवटी में गाड़ी ले जाने से बचें। [पूरी ख़बर](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29)।",
+        mr: "परिक्रमा तपोवनातील मोदी मैदानातून दुपारी २ वाजता (एका वृत्तानुसार ३ वाजता) निघून पंचवटी, दिल्ली दरवाजा, मेन रोड व अहिल्याबाई होळकर पूलमार्गे सायंकाळी साडेसहाच्या सुमारास रामतीर्थावर पोहोचेल. २४–२९ ऑक्टोबरदरम्यान महापालिकेची पथके मार्गावरील हातगाड्या-स्टॉल हटवतील; २२ ऑक्टोबरला पोलिसांनी रामकुंडावर संपूर्ण रंगीत तालीम घेतली. ३० ऑक्टोबरला दुपारी मेन रोड व पंचवटीत वाहन नेणे टाळा. [सविस्तर बातमी](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29).",
+      },
+      status: "reported",
+      source: "Times of India, Sakal, Navbharat, Free Press Journal",
+    },
+    {
+      time: "2026-10-23T09:15:00+05:30",
+      headline: {
+        en: "Official Kumbh website to go live at the 31 Oct flag hoisting",
+        hi: "कुंभ की आधिकारिक वेबसाइट 31 अक्टूबर के ध्वजारोहण पर शुरू होगी",
+        mr: "कुंभमेळ्याचे अधिकृत संकेतस्थळ ३१ ऑक्टोबरच्या ध्वजारोहणाला सुरू होणार",
+      },
+      body: {
+        en: "A basic, static version of NTKMA's official website is to be unveiled on 31 Oct; parking, diversions and shuttle details will be added in phases. The address has not been announced, so be wary of sites calling themselves official. Commissioner Shekhar Singh also told Prahaar most permanent works are due by about 1 March 2027. [Full story](/blog/kumbh-commissioner-shekhar-singh-works-by-1-march-5000-buses-official-website-october-31).",
+        hi: "NTKMA की आधिकारिक वेबसाइट का बुनियादी, स्थिर संस्करण 31 अक्टूबर को शुरू होगा; पार्किंग, डायवर्ज़न और शटल की जानकारी चरणों में जुड़ेगी। पता अभी घोषित नहीं हुआ, इसलिए ख़ुद को आधिकारिक बताने वाली साइटों से सावधान रहें। आयुक्त शेखर सिंह ने प्रहार से यह भी कहा कि ज़्यादातर स्थायी काम करीब 1 मार्च 2027 तक पूरे होंगे। [पूरी ख़बर](/blog/kumbh-commissioner-shekhar-singh-works-by-1-march-5000-buses-official-website-october-31)।",
+        mr: "NTKMA च्या अधिकृत संकेतस्थळाची प्राथमिक, स्थिर आवृत्ती ३१ ऑक्टोबरला सुरू होईल; पार्किंग, वळवलेले मार्ग व शटलची माहिती टप्प्याटप्प्याने जोडली जाईल. पत्ता अद्याप जाहीर नाही, त्यामुळे स्वतःला अधिकृत म्हणवणाऱ्या साइट्सपासून सावध राहा. बहुतेक कायमस्वरूपी कामे साधारण १ मार्च २०२७ पर्यंत पूर्ण होतील, असेही आयुक्त शेखर सिंह यांनी प्रहारला सांगितले. [सविस्तर बातमी](/blog/kumbh-commissioner-shekhar-singh-works-by-1-march-5000-buses-official-website-october-31).",
+      },
+      status: "reported",
+      source: "PTI (Lokmat Times), UNI, Prahaar",
+    },
     {
       time: "2026-10-23T00:30:00+05:30",
       headline: {
