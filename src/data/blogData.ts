@@ -52,6 +52,29 @@ export interface BlogArticle {
   /** Optional Q&A shown after the body and emitted as FAQPage JSON-LD. */
   faq?: { q: L10n; a: L10n }[];
   /**
+   * Optional schema.org Event for a post that covers a dated ceremony.
+   * Use only verified name / startDate / place facts already in the body.
+   * Prefer date-only startDate when the clock time is approximate.
+   */
+  event?: {
+    name: L10n;
+    /** ISO 8601 date or date-time with offset, e.g. 2026-10-25 or 2026-10-31T12:02:00+05:30 */
+    startDate: string;
+    endDate?: string;
+    description?: L10n;
+    location: {
+      name: string;
+      addressLocality: string;
+      addressRegion?: string;
+      addressCountry?: string;
+    } | {
+      name: string;
+      addressLocality: string;
+      addressRegion?: string;
+      addressCountry?: string;
+    }[];
+  };
+  /**
    * Set on an older post when a genuine follow-up has been published. A note
    * at the top of this post (mr/hi/en) then links readers to the newer story.
    */
@@ -512,6 +535,33 @@ const archiveArticles: BlogArticle[] = [
       en: "Update (6 October 2026): We have added the Dhwajarohan time and places, the correct tithis, the official close dates and the official pilgrim estimate.\n\nThe Nashik Simhastha Kumbh Mela 2027 will formally begin with Dhwajarohan, the flag hoisting, on Saturday 31 October 2026 at 12:02 PM. Chief Minister Devendra Fadnavis announced the start date on 1 June 2025, after a meeting with the akhadas. According to the NTKMA Kumbh Mela Plan, flags go up at the same moment at Ramkund in Panchavati, Nashik, and at Kushavarta in Trimbakeshwar. Kumbh Mela Minister Girish Mahajan confirmed the 12:02 PM muhurat on 19 September 2026. The ceremony, also called Dhwaja Sthapana, is the formal invitation to saints, sadhus and devotees.\n\n## The Amrit Snan dates\n\n- Monday 2 August 2027, Ashadh Somvati Amavasya: first Amrit Snan\n- Tuesday 31 August 2027, Shravan Amavasya: second Amrit Snan\n- Saturday 11 September 2027: third Amrit Snan in Nashik\n- Sunday 12 September 2027: third Amrit Snan in Trimbakeshwar\n\nDevotees believe a dip in the Godavari on these days washes away sins. Amrit Snan timings have not been published yet.\n\n## How long the mela runs\n\nAccording to the NTKMA plan, the mela runs for 20 months and 3 weeks (632 days). It closes on 29 July 2028 in Nashik and on 24 July 2028 in Trimbakeshwar. All 13 akhadas take part.\n\n## How many pilgrims\n\nThe NTKMA plan estimates about 12 crore pilgrims in total, with about 1.5 crore in Nashik and 0.75 crore in Trimbakeshwar on an Amrit Snan day. Preparations cover roads, transport, sanitation and security, along with new ghats on the Godavari.\n\nSee the full calendar on our [Dates](/dates) page, the bathing sites on [Ghats](/ghats), and the flag hoisting details on [Dhwajarohan 2026](/dhwajarohan-2026).",
       hi: "अपडेट (6 अक्टूबर 2026): इस लेख में ध्वजारोहण का समय और स्थान, सही तिथियाँ, समापन की आधिकारिक तिथियाँ और श्रद्धालुओं का आधिकारिक अनुमान जोड़ा गया है।\n\nनासिक (नाशिक) सिंहस्थ कुंभ मेला 2027 की औपचारिक शुरुआत शनिवार 31 अक्टूबर 2026 को दोपहर 12:02 बजे ध्वजारोहण से होगी। मुख्यमंत्री देवेंद्र फडणवीस ने 1 जून 2025 को अखाड़ों के साथ बैठक के बाद यह तिथि घोषित की थी। NTKMA की कुंभ मेला योजना के अनुसार पंचवटी, नाशिक के रामकुंड और त्र्यंबकेश्वर के कुशावर्त पर एक ही समय ध्वज फहराए जाएँगे। कुंभ मेला मंत्री गिरीश महाजन ने 19 सितंबर 2026 को 12:02 बजे के मुहूर्त की पुष्टि की। 'ध्वज स्थापना' कहलाने वाली यह रस्म संतों, साधुओं और श्रद्धालुओं के लिए औपचारिक निमंत्रण है।\n\n## अमृत स्नान की तिथियाँ\n\n- सोमवार 2 अगस्त 2027, आषाढ़ सोमवती अमावस्या: पहला अमृत स्नान\n- मंगलवार 31 अगस्त 2027, श्रावण अमावस्या: दूसरा अमृत स्नान\n- शनिवार 11 सितंबर 2027: नाशिक में तीसरा अमृत स्नान\n- रविवार 12 सितंबर 2027: त्र्यंबकेश्वर में तीसरा अमृत स्नान\n\nमान्यता है कि इन दिनों गोदावरी में स्नान से पाप धुल जाते हैं। अमृत स्नान का समय अभी प्रकाशित नहीं हुआ है।\n\n## मेला कितने दिन चलेगा\n\nNTKMA योजना के अनुसार मेला 20 महीने 3 सप्ताह (632 दिन) चलेगा। इसका समापन नाशिक में 29 जुलाई 2028 और त्र्यंबकेश्वर में 24 जुलाई 2028 को होगा। सभी 13 अखाड़े इसमें भाग लेते हैं।\n\n## कितने श्रद्धालु आएँगे\n\nNTKMA योजना के अनुसार कुल लगभग 12 करोड़ श्रद्धालु आने का अनुमान है। अमृत स्नान के दिन नाशिक में लगभग 1.5 करोड़ और त्र्यंबकेश्वर में लगभग 0.75 करोड़ श्रद्धालु आ सकते हैं। तैयारियों में सड़कें, परिवहन, स्वच्छता और सुरक्षा के साथ गोदावरी पर नए घाट भी शामिल हैं।\n\nपूरा कैलेंडर हमारे [तिथियाँ](/dates) पेज पर, स्नान स्थल [घाट](/ghats) पेज पर, और ध्वजारोहण की जानकारी [ध्वजारोहण 2026](/dhwajarohan-2026) पेज पर देखें।",
       mr: "अपडेट (६ ऑक्टोबर २०२६): या बातमीत ध्वजारोहणाची वेळ व ठिकाणे, अचूक तिथी, समाप्तीच्या अधिकृत तारखा आणि भाविकांचा अधिकृत अंदाज जोडला आहे.\n\nनाशिक सिंहस्थ कुंभमेळ्याची औपचारिक सुरुवात शनिवार, ३१ ऑक्टोबर २०२६ रोजी दुपारी १२:०२ वाजता ध्वजारोहणाने होईल. मुख्यमंत्री देवेंद्र फडणवीस यांनी १ जून २०२५ रोजी आखाड्यांसोबतच्या बैठकीनंतर ही तारीख जाहीर केली. NTKMA च्या कुंभमेळा आराखड्यानुसार पंचवटीतील रामकुंड आणि त्र्यंबकेश्वरमधील कुशावर्त येथे एकाच वेळी ध्वज फडकतील. कुंभमेळा मंत्री गिरीश महाजन यांनी १९ सप्टेंबर २०२६ रोजी १२:०२ च्या मुहूर्ताला दुजोरा दिला. 'ध्वज स्थापना' म्हणून ओळखला जाणारा हा सोहळा संत, साधू आणि भाविकांना औपचारिक निमंत्रण आहे.\n\n## अमृत स्नानाच्या तारखा\n\n- सोमवार, २ ऑगस्ट २०२७, आषाढ सोमवती अमावस्या: पहिले अमृत स्नान\n- मंगळवार, ३१ ऑगस्ट २०२७, श्रावण अमावस्या: दुसरे अमृत स्नान\n- शनिवार, ११ सप्टेंबर २०२७: नाशिकमध्ये तिसरे अमृत स्नान\n- रविवार, १२ सप्टेंबर २०२७: त्र्यंबकेश्वरमध्ये तिसरे अमृत स्नान\n\nया दिवशी गोदावरीत स्नान केल्याने पापांचा नाश होतो, अशी श्रद्धा आहे. अमृत स्नानाच्या वेळा अद्याप जाहीर झालेल्या नाहीत.\n\n## मेळा किती काळ चालणार\n\nNTKMA आराखड्यानुसार मेळा २० महिने ३ आठवडे (६३२ दिवस) चालेल. समाप्ती नाशिकमध्ये २९ जुलै २०२८ रोजी आणि त्र्यंबकेश्वरमध्ये २४ जुलै २०२८ रोजी आहे. सर्व १३ आखाडे यात सहभागी होतात.\n\n## किती भाविक येणार\n\nNTKMA आराखड्यानुसार एकूण सुमारे १२ कोटी भाविक येतील असा अंदाज आहे. अमृत स्नानाच्या दिवशी नाशिकमध्ये सुमारे १.५ कोटी आणि त्र्यंबकेश्वरमध्ये सुमारे ०.७५ कोटी भाविक येऊ शकतात. तयारीत रस्ते, वाहतूक, स्वच्छता आणि सुरक्षेसोबत गोदावरीवरील नवे घाटही आहेत.\n\nसंपूर्ण वेळापत्रक आमच्या [तारखा](/dates) पानावर, स्नानस्थळे [घाट](/ghats) पानावर, आणि ध्वजारोहणाची माहिती [ध्वजारोहण २०२६](/dhwajarohan-2026) पानावर पाहा.",
+    },
+    event: {
+      name: {
+        en: "Nashik-Trimbakeshwar Simhastha Dhwajarohan (flag hoisting)",
+        hi: "नाशिक-त्र्यंबकेश्वर सिंहस्थ ध्वजारोहण",
+        mr: "नाशिक-त्र्यंबकेश्वर सिंहस्थ ध्वजारोहण",
+      },
+      startDate: "2026-10-31T12:02:00+05:30",
+      description: {
+        en: "Flags go up at 12:02 PM at Ramkund in Panchavati, Nashik, and at Kushavarta in Trimbakeshwar at the same moment. Muhurat confirmed on record by Kumbh Mela Minister Girish Mahajan (eSakal, 19 Sep 2026); date and venues in the NTKMA plan.",
+        hi: "दोपहर 12:02 बजे पंचवटी, नाशिक के रामकुंड और त्र्यंबकेश्वर के कुशावर्त पर एक ही समय ध्वज फहराए जाएँगे। मुहूर्त कुंभ मेला मंत्री गिरीश महाजन ने आधिकारिक रूप से पुष्टि की (eSakal, 19 सितंबर 2026); तारीख और स्थान NTKMA योजना में हैं।",
+        mr: "दुपारी १२:०२ वाजता पंचवटीतील रामकुंड आणि त्र्यंबकेश्वरमधील कुशावर्त येथे एकाच वेळी ध्वज फडकतील. मुहूर्ताला कुंभमेळा मंत्री गिरीश महाजन यांनी अधिकृत दुजोरा दिला (eSakal, १९ सप्टेंबर २०२६); तारीख व ठिकाणे NTKMA आराखड्यात आहेत.",
+      },
+      location: [
+        {
+          name: "Ramkund (Ramtirth), Panchavati",
+          addressLocality: "Nashik",
+          addressRegion: "Maharashtra",
+          addressCountry: "IN",
+        },
+        {
+          name: "Kushavarta",
+          addressLocality: "Trimbakeshwar",
+          addressRegion: "Maharashtra",
+          addressCountry: "IN",
+        },
+      ],
     },
   },
   {

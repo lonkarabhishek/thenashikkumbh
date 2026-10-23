@@ -115,9 +115,45 @@ export default function BlogSlugLayout({ params, children }: Props) {
     inLanguage: locale,
   };
 
+  const toPlace = (loc: NonNullable<typeof article.event>["location"]) => {
+    const one = (pl: { name: string; addressLocality: string; addressRegion?: string; addressCountry?: string }) => ({
+      "@type": "Place" as const,
+      name: pl.name,
+      address: {
+        "@type": "PostalAddress" as const,
+        addressLocality: pl.addressLocality,
+        ...(pl.addressRegion ? { addressRegion: pl.addressRegion } : {}),
+        addressCountry: pl.addressCountry ?? "IN",
+      },
+    });
+    return Array.isArray(loc) ? loc.map(one) : one(loc);
+  };
+
+  const eventSchema = article.event
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "@id": `${url}#event`,
+        name: article.event.name[locale],
+        description: article.event.description?.[locale] ?? article.summary[locale],
+        startDate: article.event.startDate,
+        ...(article.event.endDate ? { endDate: article.event.endDate } : {}),
+        eventStatus: "https://schema.org/EventScheduled",
+        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        location: toPlace(article.event.location),
+        image: [
+          `${SITE_URL}${article.shareImage?.[locale] ?? ogImageFor(article.image)}`,
+        ],
+        isAccessibleForFree: true,
+        inLanguage: locale,
+        url,
+      }
+    : null;
+
   return (
     <>
       <JsonLd data={articleSchema} />
+      {eventSchema && <JsonLd data={eventSchema} />}
       {article.faq && article.faq.length > 0 && (
         <JsonLd
           data={{
