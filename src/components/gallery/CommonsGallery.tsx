@@ -5,8 +5,9 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Link from "@/components/LocaleLink";
 import PhotoCredit from "@/components/photos/PhotoCredit";
+import AuthorBox from "@/components/trust/AuthorBox";
 import { useLanguage } from "@/context/LanguageContext";
-import { galleryFaqs, galleryPhotoCount } from "@/data/galleryFaq";
+import { GALLERY_SOURCES, TOPIC_GUIDE, galleryFaqs, galleryInBrief, galleryPhotoCount } from "@/data/galleryFaq";
 import { PHOTO_TOPICS, TOPIC_LABEL, availablePhotos, type CommonsPhoto } from "@/data/photos";
 
 const PHOTO_COUNT = galleryPhotoCount();
@@ -28,6 +29,14 @@ const COPY = {
     hi: "इन तस्वीरों के बारे में आम सवाल",
     mr: "या छायाचित्रांबद्दल नेहमीचे प्रश्न",
   },
+  brief: { en: "In brief", hi: "संक्षेप में", mr: "थोडक्यात" },
+  datesLink: {
+    en: "See all Amrit Snan dates",
+    hi: "अमृत स्नान की सभी तिथियाँ देखें",
+    mr: "अमृत स्नानाच्या सर्व तारखा पाहा",
+  },
+  guide: { en: "Guide", hi: "गाइड", mr: "मार्गदर्शक" },
+  sources: { en: "Sources", hi: "स्रोत", mr: "स्रोत" },
   credits: { en: "All photo credits", hi: "सभी फोटो श्रेय", mr: "सर्व फोटो श्रेय" },
   close: { en: "Close", hi: "बंद करें", mr: "बंद करा" },
   prev: { en: "Previous photo", hi: "पिछली फोटो", mr: "मागील फोटो" },
@@ -103,6 +112,21 @@ export default function CommonsGallery() {
         <h1 className="font-heading text-4xl font-bold text-temple-900 md:text-5xl">{t(COPY.title)}</h1>
         <p className="mt-4 max-w-3xl text-lg text-temple-600">{t(COPY.intro)}</p>
 
+        <section
+          aria-labelledby="gallery-in-brief"
+          className="mt-6 max-w-3xl rounded-card border border-saffron-200 bg-white p-5 shadow-lift sm:p-6"
+        >
+          <h2 id="gallery-in-brief" className="font-heading text-xl font-bold text-temple-900">
+            {t(COPY.brief)}
+          </h2>
+          <p className="mt-2 leading-relaxed text-temple-700">{galleryInBrief(locale)}</p>
+          <p className="mt-3">
+            <Link href="/dates" className="font-semibold text-saffron-700 underline">
+              {t(COPY.datesLink)}
+            </Link>
+          </p>
+        </section>
+
         <nav aria-label={COPY.relatedTitle[locale]} className="mt-6 rounded-xl border border-temple-200 bg-cream-100 p-4 sm:p-5">
           <h2 className="font-heading text-base font-bold text-temple-900">{t(COPY.relatedTitle)}</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-temple-800">
@@ -133,6 +157,14 @@ export default function CommonsGallery() {
             <h2 className="font-heading text-2xl font-bold text-temple-900">
               {t(TOPIC_LABEL[g.topic] ?? { en: g.topic, hi: g.topic, mr: g.topic })}
             </h2>
+            {TOPIC_GUIDE[g.topic] && (
+              <p className="mt-2 text-sm text-temple-600">
+                {t(COPY.guide)}:{" "}
+                <Link href={TOPIC_GUIDE[g.topic].href} className="text-saffron-700 underline">
+                  {TOPIC_GUIDE[g.topic].label[locale]}
+                </Link>
+              </p>
+            )}
             <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {g.items.map((p) => (
                 <li key={p.id}>
@@ -174,6 +206,20 @@ export default function CommonsGallery() {
               </div>
             ))}
           </div>
+
+          <p className="mt-6 text-sm text-temple-500">
+            {t(COPY.sources)}:{" "}
+            {GALLERY_SOURCES.map((src, i) => (
+              <span key={src.url}>
+                {i > 0 && "; "}
+                <a href={src.url} target="_blank" rel="noopener noreferrer" className="underline">
+                  {src.label}
+                </a>
+              </span>
+            ))}
+          </p>
+
+          <AuthorBox />
         </section>
 
         <p className="mt-14 text-sm">

@@ -152,19 +152,19 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
     en: {
       title: "Photos of Kumbh Mela Nashik: Pictures of Ramkund, Sadhus and Ghats",
       description:
-        "Kumbh Mela photos and pictures: Shahi Snan crowds, Naga sadhu processions, evening aarti, temples and river ghats, all in one gallery.",
+        "Credited Kumbh Mela photos and pictures from Nashik and Trimbakeshwar: 2015 Simhastha sadhus and snan crowds, Ramkund ghats, evening aarti, temples and 2027 works.",
       crumb: "Gallery",
     },
     mr: {
       title: "नाशिक कुंभमेळा फोटो: रामकुंड, साधू आणि घाटांची छायाचित्रे",
       description:
-        "कुंभमेळ्याचे फोटो आणि छायाचित्रे: शाही स्नानाची गर्दी, नागा साधूंच्या मिरवणुका, संध्याकाळची आरती, मंदिरे आणि नदीचे घाट, सगळे एकाच दालनात.",
+        "नाशिक व त्र्यंबकेश्वरमधील कुंभमेळ्याचे श्रेयासह फोटो: २०१५ च्या सिंहस्थातील साधू व स्नानाची गर्दी, रामकुंडाचे घाट, संध्याकाळची आरती, मंदिरे आणि २०२७ ची कामे.",
       crumb: "छायाचित्रे",
     },
     hi: {
       title: "नाशिक कुंभ मेला फोटो: रामकुंड, साधुओं और घाटों की तस्वीरें",
       description:
-        "कुंभ मेले की फोटो और तस्वीरें: शाही स्नान की भीड़, नागा साधुओं की शोभायात्रा, संध्या आरती, मंदिर और नदी के घाट, सब एक गैलरी में।",
+        "नाशिक और त्र्यंबकेश्वर के कुंभ मेले की श्रेय सहित तस्वीरें: 2015 सिंहस्थ के साधु और स्नान की भीड़, रामकुंड के घाट, संध्या आरती, मंदिर और 2027 के काम।",
       crumb: "गैलरी",
     },
   },
