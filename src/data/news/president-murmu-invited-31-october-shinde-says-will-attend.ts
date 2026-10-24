@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "३१ ऑक्टोबरच्या ध्वजारोहणासाठी राष्ट्रपती मुर्मू यांना निमंत्रण; निमंत्रण स्वीकारल्याचे शिंदे यांचे म्हणणे. नाशिकमध्ये पोलिसांची रंगीत तालीम",
   },
   date: "2026-10-22",
+  updated: "2026-10-24",
+  followUp: { slug: "governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs", date: "2026-10-24" },
   originallyAnnounced: "2026-10-21",
   source: "Times of India",
   sources: [

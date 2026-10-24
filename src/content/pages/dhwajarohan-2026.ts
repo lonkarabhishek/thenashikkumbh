@@ -95,26 +95,26 @@ Trimbak is a separate town from Nashik, so you can be at only one venue at 12:02
       body: {
         en: `Only the flag hoisting itself is confirmed in an official document. The rest of this programme comes from media reports and may change.
 
-- **Friday 30 October: Gram Pradakshina** in Nashik, before the flag hoisting. Lokmat Times reported (27 September 2026) that around one lakh devotees are expected. **Update, 23 October (REPORTED):** welcome at Modi Maidan, Tapovan at 1 PM; the procession, with ten tableaux, leaves at 2 PM (Sakal; Navbharat says 3 PM) and is due at Ramtirth around 6:30 PM for a sandhya aarti. Route as given by NMC to the Times of India: Tapovan, Panchavati, flower market, Delhi Darwaza, Nehru Chowk, Main Road, Ravivar Karanja, Ahilyabai Holkar Bridge, Ramkund. NMC anti-encroachment squads on the route 24–29 October. No official traffic notice yet. [Full story](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29).
+- **Friday 30 October: Gram Pradakshina** in Nashik, before the flag hoisting. Lokmat Times reported (27 September 2026) that around one lakh devotees are expected. **Update, 23 October (REPORTED):** welcome at Modi Maidan, Tapovan at 1 PM; the procession, with ten tableaux, leaves at 2 PM (Sakal; Navbharat says 3 PM) and is due at Ramtirth around 6:30 PM for a sandhya aarti. Route as given by NMC to the Times of India: Tapovan, Panchavati, flower market, Delhi Darwaza, Nehru Chowk, Main Road, Ravivar Karanja, Ahilyabai Holkar Bridge, Ramkund. NMC anti-encroachment squads on the route 24–29 October. No official traffic notice yet. [Full story](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29). **Update, 24 October (REPORTED):** Saamana gives a different route (Tapovan, Panchmukhi Hanuman temple, Sant Gadge Maharaj Chowk, Nehru Chowk, Dhumal Point, Main Road, Ravivar Karanja, Malegaon Stand), **21 tableaux** instead of 10, and a **7 PM** Godavari maha aarti at Ramkund with one lakh diyas. Sources differ; wait for the police notice. [Details](/blog/dhwajarohan-30-31-october-parking-grounds-liquor-shops-shut-2-km-ramkund-city-buses).
 - **30 October to 1 November: rituals at Ramkund.** Puja and havan over three days, according to the same report.
 - **Saturday 31 October, 12:02 PM: Dhwajarohan** at Ramkund and Kushavarta. Confirmed.
-- **Saturday 31 October, about 6 PM: Maha Goda Aarti** at Ramkund, with about **6,500 people from 650 tribal villages** of Nashik district, the second world-record attempt (REPORTED: Prahaar and Lokmat Times give 6 PM; NTKMA and the District Information Office announced the aarti and the 6,500 figure on 18 October). Lokmat Times says the aarti will run along the stretch between Ekmukhi Datta temple and Rokdoba temple. *Earlier reports in late September said 7 PM and about 5,000 seats; those figures are now out of date.* Navbharat (21 October) gives **6:50 PM** for the aarti; sources differ, so plan for about 6 PM.
+- **Saturday 31 October, about 6 PM: Maha Goda Aarti** at Ramkund, with about **6,500 people from 650 tribal villages** of Nashik district, the second world-record attempt (REPORTED: Prahaar and Lokmat Times give 6 PM; NTKMA and the District Information Office announced the aarti and the 6,500 figure on 18 October). Lokmat Times says the aarti will run along the stretch between Ekmukhi Datta temple and Rokdoba temple. *Earlier reports in late September said 7 PM and about 5,000 seats; those figures are now out of date.* Navbharat (21 October) gives **6:50 PM** for the aarti; sources differ, so plan for about 6 PM. **Update, 24 October (REPORTED):** Kumbh Commissioner Shekhar Singh now puts the aarti at **6,559 tribal participants from seven talukas**, from Ahilyabai Holkar bridge to Ramkund, with the Ramtirth Godavari Seva Samiti (ETV Bharat). [Details](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs).
 
 Navarashtra has noted that the programme may change. We will update this page when an official programme is published.`,
         hi: `केवल ध्वजारोहण की पुष्टि सरकारी दस्तावेज़ में है। बाकी कार्यक्रम मीडिया रिपोर्टों पर आधारित है और इसमें बदलाव हो सकता है।
 
-- **शुक्रवार, 30 अक्टूबर: ग्राम प्रदक्षिणा**, नाशिक में, ध्वजारोहण से पहले। Lokmat Times की रिपोर्ट (27 सितंबर 2026) के अनुसार लगभग एक लाख श्रद्धालुओं के आने की उम्मीद है। **अपडेट, 23 अक्टूबर (रिपोर्ट):** दोपहर 1 बजे तपोवन के मोदी मैदान पर स्वागत; दस चित्ररथों वाली यात्रा दोपहर 2 बजे निकलेगी (सकाळ; नवभारत के अनुसार 3 बजे) और शाम करीब 6:30 बजे संध्या आरती के लिए रामतीर्थ पहुँचेगी। NMC ने टाइम्स ऑफ इंडिया को जो मार्ग बताया: तपोवन, पंचवटी, फूल बाज़ार, दिल्ली दरवाज़ा, नेहरू चौक, मेन रोड, रविवार कारंजा, अहिल्याबाई होलकर पुल, रामकुंड। 24–29 अक्टूबर तक मार्ग पर NMC के अतिक्रमण हटाओ दस्ते। आधिकारिक ट्रैफ़िक सूचना अभी नहीं आई। [पूरी ख़बर](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29)।
+- **शुक्रवार, 30 अक्टूबर: ग्राम प्रदक्षिणा**, नाशिक में, ध्वजारोहण से पहले। Lokmat Times की रिपोर्ट (27 सितंबर 2026) के अनुसार लगभग एक लाख श्रद्धालुओं के आने की उम्मीद है। **अपडेट, 23 अक्टूबर (रिपोर्ट):** दोपहर 1 बजे तपोवन के मोदी मैदान पर स्वागत; दस चित्ररथों वाली यात्रा दोपहर 2 बजे निकलेगी (सकाळ; नवभारत के अनुसार 3 बजे) और शाम करीब 6:30 बजे संध्या आरती के लिए रामतीर्थ पहुँचेगी। NMC ने टाइम्स ऑफ इंडिया को जो मार्ग बताया: तपोवन, पंचवटी, फूल बाज़ार, दिल्ली दरवाज़ा, नेहरू चौक, मेन रोड, रविवार कारंजा, अहिल्याबाई होलकर पुल, रामकुंड। 24–29 अक्टूबर तक मार्ग पर NMC के अतिक्रमण हटाओ दस्ते। आधिकारिक ट्रैफ़िक सूचना अभी नहीं आई। [पूरी ख़बर](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29)। **अपडेट, 24 अक्टूबर (रिपोर्ट):** सामना ने अलग मार्ग दिया है (तपोवन, पंचमुखी हनुमान मंदिर, संत गाडगे महाराज चौक, नेहरू चौक, धुमाल पॉइंट, मेन रोड, रविवार कारंजा, मालेगाँव स्टैंड), 10 की जगह **21 चित्ररथ**, और रामकुंड पर **शाम 7 बजे** एक लाख दीपों के साथ गोदावरी महाआरती। ख़बरों में फ़र्क है; पुलिस की सूचना का इंतज़ार करें। [पूरी ख़बर](/blog/dhwajarohan-30-31-october-parking-grounds-liquor-shops-shut-2-km-ramkund-city-buses)।
 - **30 अक्टूबर से 1 नवंबर तक: रामकुंड पर धार्मिक अनुष्ठान।** उसी रिपोर्ट के अनुसार तीन दिन पूजा और हवन होंगे।
 - **शनिवार, 31 अक्टूबर, दोपहर 12:02 बजे: ध्वजारोहण**, रामकुंड और कुशावर्त पर। इसकी पुष्टि है।
-- **शनिवार, 31 अक्टूबर, शाम करीब 6 बजे: महा गोदा आरती**, रामकुंड पर, नाशिक ज़िले के **650 जनजातीय गाँवों के करीब 6,500 लोगों** के साथ, यह दूसरा विश्व रिकॉर्ड प्रयास है (रिपोर्ट: प्रहार और Lokmat Times ने शाम 6 बजे लिखा है; आरती और 6,500 की संख्या NTKMA और ज़िला सूचना कार्यालय ने 18 अक्टूबर को घोषित की)। Lokmat Times के मुताबिक आरती एकमुखी दत्त मंदिर से रोकडोबा मंदिर के बीच के घाट पर होगी। *सितंबर के आख़िर की रिपोर्टों में शाम 7 बजे और करीब 5,000 सीटें बताई गई थीं; वह जानकारी अब पुरानी है।* नवभारत (21 अक्टूबर) ने आरती का समय **शाम 6:50** बताया है; ख़बरों में फ़र्क है, इसलिए करीब 6 बजे तक पहुँचने की योजना रखें।
+- **शनिवार, 31 अक्टूबर, शाम करीब 6 बजे: महा गोदा आरती**, रामकुंड पर, नाशिक ज़िले के **650 जनजातीय गाँवों के करीब 6,500 लोगों** के साथ, यह दूसरा विश्व रिकॉर्ड प्रयास है (रिपोर्ट: प्रहार और Lokmat Times ने शाम 6 बजे लिखा है; आरती और 6,500 की संख्या NTKMA और ज़िला सूचना कार्यालय ने 18 अक्टूबर को घोषित की)। Lokmat Times के मुताबिक आरती एकमुखी दत्त मंदिर से रोकडोबा मंदिर के बीच के घाट पर होगी। *सितंबर के आख़िर की रिपोर्टों में शाम 7 बजे और करीब 5,000 सीटें बताई गई थीं; वह जानकारी अब पुरानी है।* नवभारत (21 अक्टूबर) ने आरती का समय **शाम 6:50** बताया है; ख़बरों में फ़र्क है, इसलिए करीब 6 बजे तक पहुँचने की योजना रखें। **अपडेट, 24 अक्टूबर (रिपोर्ट):** कुंभ आयुक्त शेखर सिंह अब आरती में **सात तालुकों के 6,559 जनजातीय प्रतिभागी** बताते हैं, अहिल्याबाई होलकर पुल से रामकुंड तक, रामतीर्थ गोदावरी सेवा समिति के साथ (ETV भारत)। [पूरी ख़बर](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs)।
 
 Navarashtra ने बताया है कि कार्यक्रम बदल सकता है। आधिकारिक कार्यक्रम जारी होने पर हम यह पेज अपडेट करेंगे।`,
         mr: `केवळ ध्वजारोहणाची नोंद अधिकृत दस्तऐवजात आहे. बाकीचा कार्यक्रम माध्यमांतील वृत्तांवर आधारित असून त्यात बदल होऊ शकतो.
 
-- **शुक्रवार, ३० ऑक्टोबर: ग्रामप्रदक्षिणा**, नाशिकमध्ये, ध्वजारोहणाआधी. सुमारे एक लाख भाविक येतील अशी अपेक्षा असल्याचे Lokmat Times ने (२७ सप्टेंबर २०२६) दिले आहे. **अपडेट, २३ ऑक्टोबर (वृत्त):** दुपारी १ वाजता तपोवनातील मोदी मैदानावर स्वागत; दहा चित्ररथांची परिक्रमा दुपारी २ वाजता निघेल (सकाळ; नवभारतनुसार ३ वाजता) आणि सायंकाळी साडेसहाच्या सुमारास संध्या आरतीसाठी रामतीर्थावर पोहोचेल. महापालिकेने टाइम्स ऑफ इंडियाला सांगितलेला मार्ग: तपोवन, पंचवटी, फुलबाजार, दिल्ली दरवाजा, नेहरू चौक, मेन रोड, रविवार कारंजा, अहिल्याबाई होळकर पूल, रामकुंड. २४–२९ ऑक्टोबरदरम्यान मार्गावर महापालिकेची अतिक्रमण हटाव पथके. अधिकृत वाहतूक अधिसूचना अद्याप नाही. [सविस्तर बातमी](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29).
+- **शुक्रवार, ३० ऑक्टोबर: ग्रामप्रदक्षिणा**, नाशिकमध्ये, ध्वजारोहणाआधी. सुमारे एक लाख भाविक येतील अशी अपेक्षा असल्याचे Lokmat Times ने (२७ सप्टेंबर २०२६) दिले आहे. **अपडेट, २३ ऑक्टोबर (वृत्त):** दुपारी १ वाजता तपोवनातील मोदी मैदानावर स्वागत; दहा चित्ररथांची परिक्रमा दुपारी २ वाजता निघेल (सकाळ; नवभारतनुसार ३ वाजता) आणि सायंकाळी साडेसहाच्या सुमारास संध्या आरतीसाठी रामतीर्थावर पोहोचेल. महापालिकेने टाइम्स ऑफ इंडियाला सांगितलेला मार्ग: तपोवन, पंचवटी, फुलबाजार, दिल्ली दरवाजा, नेहरू चौक, मेन रोड, रविवार कारंजा, अहिल्याबाई होळकर पूल, रामकुंड. २४–२९ ऑक्टोबरदरम्यान मार्गावर महापालिकेची अतिक्रमण हटाव पथके. अधिकृत वाहतूक अधिसूचना अद्याप नाही. [सविस्तर बातमी](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29). **अपडेट, २४ ऑक्टोबर (वृत्त):** सामनाने वेगळा मार्ग दिला आहे (तपोवन, पंचमुखी हनुमान मंदिर, संत गाडगे महाराज चौक, नेहरू चौक, धुमाळ पॉइंट, मेनरोड, रविवार कारंजा, मालेगाव स्टँड), १० ऐवजी **२१ चित्ररथ**, आणि रामकुंडावर **सायंकाळी ७ वाजता** एक लाख दिव्यांसह गोदावरी महाआरती. वृत्तांत फरक आहे; पोलिसांच्या अधिसूचनेची वाट पाहा. [सविस्तर](/blog/dhwajarohan-30-31-october-parking-grounds-liquor-shops-shut-2-km-ramkund-city-buses).
 - **३० ऑक्टोबर ते १ नोव्हेंबर: रामकुंडावर धार्मिक विधी.** त्याच वृत्तानुसार तीन दिवस पूजा आणि हवन होणार आहे.
 - **शनिवार, ३१ ऑक्टोबर, दुपारी १२.०२: ध्वजारोहण**, रामकुंड आणि कुशावर्त येथे. याला अधिकृत दुजोरा आहे.
-- **शनिवार, ३१ ऑक्टोबर, सायंकाळी सुमारे ६ वाजता: महा गोदा आरती**, रामकुंडावर, नाशिक जिल्ह्यातील **६५० जनजातीय गावांमधील सुमारे ६,५०० जणांच्या** सहभागाने; हा दुसरा विश्वविक्रम प्रयत्न (वृत्त: प्रहार आणि Lokmat Times नुसार सायंकाळी ६; आरती आणि ६,५०० ही संख्या NTKMA व जिल्हा माहिती कार्यालयाने १८ ऑक्टोबरला जाहीर केली). एकमुखी दत्त मंदिर ते रोकडोबा मंदिर या घाटपट्ट्यात आरती होईल, असे Lokmat Times चे वृत्त आहे. *सप्टेंबरअखेरच्या वृत्तांत सायंकाळी ७ आणि सुमारे ५,००० आसने असे होते; ती माहिती आता जुनी झाली आहे.* नवभारतने (२१ ऑक्टोबर) आरतीची वेळ **सायंकाळी ६.५०** दिली आहे; वृत्तांमध्ये फरक असल्याने सुमारे ६ पर्यंत पोहोचण्याचे नियोजन करा.
+- **शनिवार, ३१ ऑक्टोबर, सायंकाळी सुमारे ६ वाजता: महा गोदा आरती**, रामकुंडावर, नाशिक जिल्ह्यातील **६५० जनजातीय गावांमधील सुमारे ६,५०० जणांच्या** सहभागाने; हा दुसरा विश्वविक्रम प्रयत्न (वृत्त: प्रहार आणि Lokmat Times नुसार सायंकाळी ६; आरती आणि ६,५०० ही संख्या NTKMA व जिल्हा माहिती कार्यालयाने १८ ऑक्टोबरला जाहीर केली). एकमुखी दत्त मंदिर ते रोकडोबा मंदिर या घाटपट्ट्यात आरती होईल, असे Lokmat Times चे वृत्त आहे. *सप्टेंबरअखेरच्या वृत्तांत सायंकाळी ७ आणि सुमारे ५,००० आसने असे होते; ती माहिती आता जुनी झाली आहे.* नवभारतने (२१ ऑक्टोबर) आरतीची वेळ **सायंकाळी ६.५०** दिली आहे; वृत्तांमध्ये फरक असल्याने सुमारे ६ पर्यंत पोहोचण्याचे नियोजन करा. **अपडेट, २४ ऑक्टोबर (वृत्त):** कुंभ आयुक्त शेखर सिंह यांनी आरतीत आता **सात तालुक्यांतील ६,५५९ आदिवासी बांधव** असतील, असे सांगितले; अहिल्याबाई होळकर पूल ते रामकुंड, रामतीर्थ गोदावरी सेवा समितीसोबत (ETV भारत). [सविस्तर](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs).
 
 कार्यक्रमात बदल होऊ शकतो, असे Navarashtra ने नमूद केले आहे. अधिकृत कार्यक्रम जाहीर झाल्यावर हे पान अद्ययावत केले जाईल.`,
       },
@@ -128,17 +128,17 @@ Navarashtra ने बताया है कि कार्यक्रम ब
       body: {
         en: `Girish Mahajan announced on record (eSakal, 19 September 2026) that President Droupadi Murmu, Chief Minister Devendra Fadnavis and Deputy Chief Ministers Eknath Shinde and Sunetra Pawar will attend on 31 October.
 
-Which venue the President will attend, Nashik or Trimbak, is not yet clear. **Update, 21 October (CONFIRMED):** Chief Minister Fadnavis, with Deputy CMs Shinde and Pawar, formally invited President Murmu at Rashtrapati Bhavan to the flag hoisting, the Maha Goda Aarti, and the launch of the authority's website, the Kumbh anthem, a coffee-table book and a postage stamp, according to the official release. Rashtrapati Bhavan has not yet published her itinerary. **Update, 22 October (REPORTED):** Deputy CM Eknath Shinde told reporters in Delhi that she has accepted and will attend (Deccan Chronicle), and Sakal reports she is to perform puja at the Trimbakraj temple. Trimbakeshwar temple stays open on 31 October, but only for 3,000 pass holders ([details](/blog/trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25)).
+Which venue the President will attend, Nashik or Trimbak, is not yet clear. **Update, 21 October (CONFIRMED):** Chief Minister Fadnavis, with Deputy CMs Shinde and Pawar, formally invited President Murmu at Rashtrapati Bhavan to the flag hoisting, the Maha Goda Aarti, and the launch of the authority's website, the Kumbh anthem, a coffee-table book and a postage stamp, according to the official release. Rashtrapati Bhavan has not yet published her itinerary. **Update, 22 October (REPORTED):** Deputy CM Eknath Shinde told reporters in Delhi that she has accepted and will attend (Deccan Chronicle), and Sakal reports she is to perform puja at the Trimbakraj temple. Trimbakeshwar temple stays open on 31 October, but only for 3,000 pass holders ([details](/blog/trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25)). **Update, 23 October (CONFIRMED):** Kumbh Mela Minister Girish Mahajan invited **Governor Jishnu Dev Varma** to the ceremony in Mumbai, according to an official Lok Bhavan release. **Update, 24 October (REPORTED):** a local channel reports the President is likely to come with **three helicopters**, probably from Ozar, with the Police Academy ground checked for landing, and may also visit Trimbakeshwar. Her final itinerary has not been announced. [Details](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs).
 
 What this means for you: NTKMA Commissioner Shekhar Singh has asked the Nashik Municipal Corporation (NMC) for separate entry and exit routes for VIPs and for the public at Ramkund (Times of India, 5 October 2026). So expect separate lanes for VIPs and the public.`,
         hi: `गिरीश महाजन ने आधिकारिक रूप से घोषणा की (eSakal, 19 सितंबर 2026) कि राष्ट्रपति द्रौपदी मुर्मू, मुख्यमंत्री देवेंद्र फडणवीस और उपमुख्यमंत्री एकनाथ शिंदे तथा सुनेत्रा पवार 31 अक्टूबर को उपस्थित रहेंगे।
 
-राष्ट्रपति नाशिक जाएंगी या त्र्यंबक, यह अभी साफ नहीं है। **अपडेट, 21 अक्टूबर (पुष्ट):** आधिकारिक विज्ञप्ति के अनुसार मुख्यमंत्री फडणवीस ने उपमुख्यमंत्री शिंदे और पवार के साथ राष्ट्रपति भवन में राष्ट्रपति मुर्मू को ध्वजारोहण, महा गोदा आरती, और प्राधिकरण की वेबसाइट, कुंभ गीत, कॉफ़ी-टेबल बुक व डाक टिकट के लोकार्पण का औपचारिक निमंत्रण दिया। राष्ट्रपति भवन ने अभी उनका कार्यक्रम जारी नहीं किया है। **अपडेट, 22 अक्टूबर (रिपोर्ट):** उपमुख्यमंत्री एकनाथ शिंदे ने दिल्ली में पत्रकारों से कहा कि राष्ट्रपति ने निमंत्रण स्वीकार कर लिया है और वे आएँगी (डेक्कन क्रॉनिकल), और सकाळ के अनुसार वे त्र्यंबकराज मंदिर में पूजन करेंगी। 31 अक्टूबर को त्र्यंबकेश्वर मंदिर खुला रहेगा, लेकिन सिर्फ़ 3,000 पासधारकों के लिए ([विवरण](/blog/trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25))।
+राष्ट्रपति नाशिक जाएंगी या त्र्यंबक, यह अभी साफ नहीं है। **अपडेट, 21 अक्टूबर (पुष्ट):** आधिकारिक विज्ञप्ति के अनुसार मुख्यमंत्री फडणवीस ने उपमुख्यमंत्री शिंदे और पवार के साथ राष्ट्रपति भवन में राष्ट्रपति मुर्मू को ध्वजारोहण, महा गोदा आरती, और प्राधिकरण की वेबसाइट, कुंभ गीत, कॉफ़ी-टेबल बुक व डाक टिकट के लोकार्पण का औपचारिक निमंत्रण दिया। राष्ट्रपति भवन ने अभी उनका कार्यक्रम जारी नहीं किया है। **अपडेट, 22 अक्टूबर (रिपोर्ट):** उपमुख्यमंत्री एकनाथ शिंदे ने दिल्ली में पत्रकारों से कहा कि राष्ट्रपति ने निमंत्रण स्वीकार कर लिया है और वे आएँगी (डेक्कन क्रॉनिकल), और सकाळ के अनुसार वे त्र्यंबकराज मंदिर में पूजन करेंगी। 31 अक्टूबर को त्र्यंबकेश्वर मंदिर खुला रहेगा, लेकिन सिर्फ़ 3,000 पासधारकों के लिए ([विवरण](/blog/trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25))। **अपडेट, 23 अक्टूबर (पुष्ट):** लोक भवन की आधिकारिक विज्ञप्ति के अनुसार कुंभ मेला मंत्री गिरीश महाजन ने मुंबई में **राज्यपाल जिष्णु देव वर्मा** को समारोह का न्योता दिया। **अपडेट, 24 अक्टूबर (रिपोर्ट):** एक स्थानीय चैनल के अनुसार राष्ट्रपति **तीन हेलिकॉप्टरों** के साथ, शायद ओझर से, आ सकती हैं; लैंडिंग के लिए पुलिस अकादमी मैदान देखा जा रहा है, और वे त्र्यंबकेश्वर भी जा सकती हैं। अंतिम कार्यक्रम घोषित नहीं हुआ है। [पूरी ख़बर](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs)।
 
 आपके लिए इसका मतलब: NTKMA आयुक्त शेखर सिंह ने नाशिक महानगरपालिका (NMC) से रामकुंड पर VIP और आम लोगों के लिए अलग प्रवेश और निकास मार्ग बनाने को कहा है (Times of India, 5 अक्टूबर 2026)। इसलिए VIP और आम लोगों के लिए अलग रास्तों की उम्मीद रखें।`,
         mr: `राष्ट्रपती द्रौपदी मुर्मू, मुख्यमंत्री देवेंद्र फडणवीस आणि उपमुख्यमंत्री एकनाथ शिंदे व सुनेत्रा पवार ३१ ऑक्टोबरला उपस्थित राहणार असल्याचे गिरीश महाजन यांनी अधिकृतपणे जाहीर केले (eSakal, १९ सप्टेंबर २०२६).
 
-राष्ट्रपती नाशिकला येणार की त्र्यंबकला, हे अद्याप स्पष्ट नाही. **अपडेट, २१ ऑक्टोबर (अधिकृत):** मुख्यमंत्री फडणवीस यांनी उपमुख्यमंत्री शिंदे व पवार यांच्यासह राष्ट्रपती भवनात राष्ट्रपती मुर्मू यांना ध्वजारोहण, महा गोदा आरती, तसेच प्राधिकरणाचे संकेतस्थळ, कुंभ गीत, कॉफी-टेबल बुक आणि टपाल तिकिटाच्या प्रकाशनासाठी औपचारिक निमंत्रण दिले, असे अधिकृत निवेदनात म्हटले आहे. राष्ट्रपती भवनाने अद्याप दौरा जाहीर केलेला नाही. **अपडेट, २२ ऑक्टोबर (वृत्त):** राष्ट्रपतींनी निमंत्रण स्वीकारले असून त्या उपस्थित राहतील, असे उपमुख्यमंत्री एकनाथ शिंदे यांनी दिल्लीत माध्यमांना सांगितले (डेक्कन क्रॉनिकल), आणि त्या त्र्यंबकराज मंदिरात पूजन करणार असल्याचे सकाळने दिले आहे. ३१ ऑक्टोबरला त्र्यंबकेश्वर मंदिर खुले राहील, पण फक्त ३ हजार पासधारकांसाठी ([सविस्तर](/blog/trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25)).
+राष्ट्रपती नाशिकला येणार की त्र्यंबकला, हे अद्याप स्पष्ट नाही. **अपडेट, २१ ऑक्टोबर (अधिकृत):** मुख्यमंत्री फडणवीस यांनी उपमुख्यमंत्री शिंदे व पवार यांच्यासह राष्ट्रपती भवनात राष्ट्रपती मुर्मू यांना ध्वजारोहण, महा गोदा आरती, तसेच प्राधिकरणाचे संकेतस्थळ, कुंभ गीत, कॉफी-टेबल बुक आणि टपाल तिकिटाच्या प्रकाशनासाठी औपचारिक निमंत्रण दिले, असे अधिकृत निवेदनात म्हटले आहे. राष्ट्रपती भवनाने अद्याप दौरा जाहीर केलेला नाही. **अपडेट, २२ ऑक्टोबर (वृत्त):** राष्ट्रपतींनी निमंत्रण स्वीकारले असून त्या उपस्थित राहतील, असे उपमुख्यमंत्री एकनाथ शिंदे यांनी दिल्लीत माध्यमांना सांगितले (डेक्कन क्रॉनिकल), आणि त्या त्र्यंबकराज मंदिरात पूजन करणार असल्याचे सकाळने दिले आहे. ३१ ऑक्टोबरला त्र्यंबकेश्वर मंदिर खुले राहील, पण फक्त ३ हजार पासधारकांसाठी ([सविस्तर](/blog/trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25)). **अपडेट, २३ ऑक्टोबर (अधिकृत):** लोकभवनच्या अधिकृत निवेदनानुसार कुंभमेळा मंत्री गिरीश महाजन यांनी मुंबईत **राज्यपाल जिष्णु देव वर्मा** यांना सोहळ्याचे निमंत्रण दिले. **अपडेट, २४ ऑक्टोबर (वृत्त):** एका स्थानिक वाहिनीनुसार राष्ट्रपती **तीन हेलिकॉप्टरसह**, बहुधा ओझरहून, येण्याची शक्यता आहे; लँडिंगसाठी पोलिस अकादमी मैदानाची पाहणी सुरू आहे, आणि त्या त्र्यंबकेश्वरलाही जाऊ शकतात. अंतिम दौरा जाहीर नाही. [सविस्तर](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs).
 
 तुमच्यासाठी याचा अर्थ: NTKMA आयुक्त शेखर सिंह यांनी नाशिक महापालिकेला (NMC) रामकुंडावर व्हीआयपी आणि सर्वसामान्यांसाठी स्वतंत्र प्रवेश व बाहेर पडण्याचे मार्ग करण्यास सांगितले आहे (Times of India, ५ ऑक्टोबर २०२६). त्यामुळे व्हीआयपी आणि भाविकांसाठी वेगवेगळे मार्ग असतील, हे लक्षात ठेवा.`,
       },
@@ -247,6 +247,9 @@ Lokmat Times ने यह भी बताया कि पितृपक्�
 
 What is known now:
 
+- **Parking grounds named (REPORTED, Sakal, 23 October):** a traffic police letter to the NMC lists B.D. Bhalekar ground (Shalimar), Chhatrapati Sambhaji Maharaj Garden, Chhatrapati Shivaji Maharaj Sports Complex (CBS), Rungtha High School, Government Girls' School (CBS), Malegaon Stand to Makhmalabad Naka, Holkar bridge and Indrakund as reserved for parking on 30–31 October, and asks for no stalls there or at Ravivar Karanja, Dhumal Point and Main Road. [Details](/blog/dhwajarohan-30-31-october-parking-grounds-liquor-shops-shut-2-km-ramkund-city-buses).
+- **Liquor shops shut on 30 and 31 October** within 2 km of Ramtirth and across Trimbakeshwar municipal limits, under a revised Collector's order of 22 October (REPORTED, Sakal).
+- **Special city buses** from parts of Nashik to Ramkund on 31 October; routes and timings not yet published (REPORTED, Times of India, 23 October).
 - **Ramkund is restricted** between Ahilyabai Holkar bridge and Talukteshwar temple while works finish; Dashkriya rituals continue at the designated spot (CONFIRMED, NMC Commissioner Manisha Khatri, Times of India, 13 October). Read [why Ramkund is closed](/blog/ramkund-ghats-closed-15-20-days-before-flag-hoisting).
 - **Police have been told** to finalise bandobast, barricading, security passes, traffic regulation, parking and VVIP routes (CONFIRMED, NTKMA review, Times of India, 13 October).
 - **Separate entry and exit** routes for VIPs, invitees and the public are planned at Ramkund (CONFIRMED, NTKMA letter to NMC, Times of India, 5 October).
@@ -257,6 +260,9 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
 
 अभी तक जो पता है:
 
+- **पार्किंग के मैदान तय (रिपोर्ट, सकाळ, 23 अक्टूबर):** ट्रैफ़िक पुलिस के NMC को लिखे पत्र में बी.डी. भालेकर मैदान (शालीमार), छत्रपति संभाजी महाराज उद्यान, छत्रपति शिवाजी महाराज क्रीड़ा संकुल (CBS), रुंगठा हाईस्कूल, शासकीय कन्या विद्यालय (CBS), मालेगाँव स्टैंड से मखमलाबाद नाका, होलकर पुल और इंद्रकुंड 30–31 अक्टूबर की पार्किंग के लिए आरक्षित बताए गए हैं, और वहाँ तथा रविवार कारंजा, धुमाल पॉइंट और मेन रोड पर स्टॉल न लगाने को कहा गया है। [पूरी ख़बर](/blog/dhwajarohan-30-31-october-parking-grounds-liquor-shops-shut-2-km-ramkund-city-buses)।
+- **30 और 31 अक्टूबर को शराब की दुकानें बंद**: रामतीर्थ के 2 किमी दायरे में और पूरी त्र्यंबकेश्वर नगर परिषद सीमा में, कलेक्टर के 22 अक्टूबर के संशोधित आदेश के अनुसार (रिपोर्ट, सकाळ)।
+- 31 अक्टूबर को नाशिक के अलग-अलग हिस्सों से रामकुंड तक **विशेष सिटी बसें**; रूट और समय अभी जारी नहीं (रिपोर्ट, Times of India, 23 अक्टूबर)।
 - **रामकुंड पर प्रवेश सीमित** है, अहिल्याबाई होलकर पुल से तालुकेश्वर मंदिर तक, जब तक काम पूरे न हों; दशक्रिया विधि तय जगह पर जारी है (पुष्ट, नगर आयुक्त मनीषा खत्री, Times of India, 13 अक्टूबर)। पढ़ें [रामकुंड क्यों बंद है](/blog/ramkund-ghats-closed-15-20-days-before-flag-hoisting)।
 - **पुलिस को निर्देश** दिए गए हैं कि बंदोबस्त, बैरिकेडिंग, सुरक्षा पास, ट्रैफ़िक, पार्किंग और VVIP रास्ते तय करें (पुष्ट, NTKMA समीक्षा बैठक, Times of India, 13 अक्टूबर)।
 - रामकुंड पर VIP, आमंत्रितों और आम लोगों के लिए **अलग प्रवेश और निकास** की योजना है (पुष्ट, NTKMA का NMC को पत्र, Times of India, 5 अक्टूबर)।
@@ -267,6 +273,9 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
 
 आत्तापर्यंत माहीत असलेले:
 
+- **पार्किंगची मैदाने ठरली (वृत्त, सकाळ, २३ ऑक्टोबर):** वाहतूक पोलिसांच्या महापालिकेला दिलेल्या पत्रात बी. डी. भालेकर मैदान (शालीमार), छत्रपती संभाजी महाराज उद्यान, छत्रपती शिवाजी महाराज क्रीडा संकुल (सीबीएस), रुंगठा हायस्कूल, शासकीय कन्या विद्यालय (सीबीएस), मालेगाव स्टँड ते मखमलाबाद नाका, होळकर पूल आणि इंद्रकुंड ही ठिकाणे ३०–३१ ऑक्टोबरच्या पार्किंगसाठी राखीव असून तेथे आणि रविवार कारंजा, धुमाळ पॉइंट, मेनरोड येथे स्टॉल लावू नयेत, असे म्हटले आहे. [सविस्तर](/blog/dhwajarohan-30-31-october-parking-grounds-liquor-shops-shut-2-km-ramkund-city-buses).
+- **३० व ३१ ऑक्टोबरला मद्यविक्री बंद**: रामतीर्थापासून २ किमी परिघात आणि संपूर्ण त्र्यंबकेश्वर नगरपालिका हद्दीत, जिल्हाधिकाऱ्यांच्या २२ ऑक्टोबरच्या सुधारित आदेशानुसार (वृत्त, सकाळ).
+- ३१ ऑक्टोबरला शहराच्या विविध भागांतून रामकुंडापर्यंत **विशेष सिटी बस**; मार्ग व वेळा अद्याप जाहीर नाहीत (वृत्त, Times of India, २३ ऑक्टोबर).
 - कामे पूर्ण होईपर्यंत **अहिल्याबाई होळकर पूल ते तालुकेश्वर मंदिर** या भागात रामकुंडावर प्रवेश मर्यादित आहे; दशक्रिया विधी ठरलेल्या जागी सुरू आहेत (अधिकृत, मनपा आयुक्त मनीषा खत्री, Times of India, १३ ऑक्टोबर). वाचा: [रामकुंड का बंद आहे](/blog/ramkund-ghats-closed-15-20-days-before-flag-hoisting).
 - बंदोबस्त, बॅरिकेडिंग, सुरक्षा पास, वाहतूक नियमन, पार्किंग आणि VVIP मार्ग निश्चित करण्याचे **निर्देश पोलिसांना** दिले आहेत (अधिकृत, NTKMA आढावा बैठक, Times of India, १३ ऑक्टोबर).
 - रामकुंडावर VIP, निमंत्रित आणि सर्वसामान्यांसाठी **स्वतंत्र प्रवेश व बाहेर पडण्याचे मार्ग** नियोजित आहेत (अधिकृत, NTKMA चे NMC ला पत्र, Times of India, ५ ऑक्टोबर).
@@ -307,6 +316,48 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
     },
   ],
   sources: [
+    {
+      title: "Minister Girish Mahajan invites Governor to Kumbh Mela Flag Hoisting Ceremony",
+      publisher: "Lok Bhavan, Maharashtra",
+      date: "2026-10-23",
+      url: "https://lokbhavan.maharashtra.gov.in/en/23-10-2026-minister-girish-mahajan-invites-governor-to-kumbh-mela-flag-hoisting-ceremony/",
+      status: "confirmed",
+    },
+    {
+      title: "वाहतूक कोंडी टाळण्यासाठी पोलिस ॲक्शन मोडमध्ये: रामतीर्थ परिसर आणि पार्किंगच्या जागांवर स्टॉल्स न उभारण्याचे पत्र",
+      publisher: "eSakal",
+      date: "2026-10-23",
+      url: "https://www.esakal.com/uttar-maharashtra/nashik/nashik-traffic-management-ramteerth-stalls",
+      status: "reported",
+    },
+    {
+      title: "दोनदिवस मद्यविक्री बंदी आदेशात बदल: जिल्हाधिकारी कार्यालयाकडून सुधारित आदेश",
+      publisher: "eSakal",
+      date: "2026-10-22",
+      url: "https://www.esakal.com/uttar-maharashtra/nashik/nashik-kumbh-mela-liquor-sales-ban-changes",
+      status: "reported",
+    },
+    {
+      title: "Preparations at Ramkund in full swing for Oct 31 Dhwajarohan",
+      publisher: "Times of India",
+      date: "2026-10-23",
+      url: "https://timesofindia.indiatimes.com/city/nashik/preparations-at-ramkund-in-full-swing-for-oct-31-dhwajarohan/articleshow/135152137.cms",
+      status: "reported",
+    },
+    {
+      title: "नाशिक, त्र्यंबकेश्वरमध्ये ३१ ऑक्टोबरला कुंभमेळा ध्वजारोहण, राष्ट्रपतींची प्रमुख उपस्थिती; तयारीला वेग",
+      publisher: "Saamana",
+      date: "2026-10-23",
+      url: "https://www.saamana.com/nashik-trimbakeshwar-kumbh-mela-flag-hoisting-october-31-president-droupadi-murmu-preparations-godavari/",
+      status: "reported",
+    },
+    {
+      title: "सिंहस्थ कुंभमेळा ध्वजारोहण सोहळ्यासाठी मंत्री गिरीश महाजन यांचे राज्यपालांना निमंत्रण",
+      publisher: "ETV Bharat Marathi",
+      date: "2026-10-23",
+      url: "https://www.etvbharat.com/mr/state/nashik-simhastha-kumbh-mela-minister-girish-mahajan-invitation-to-governor-for-flag-hoisting-ceremony-mhs26102307175",
+      status: "reported",
+    },
     {
       title: "NMC plans special anti-encroachment drive ahead of Simhastha flag-hoisting ceremony",
       publisher: "Times of India",
@@ -578,6 +629,36 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   },
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
+    {
+      time: "2026-10-24T09:30:00+05:30",
+      headline: {
+        en: "Parking grounds named for 30–31 Oct; liquor shops shut within 2 km of Ramkund",
+        hi: "30–31 अक्टूबर के लिए पार्किंग मैदान तय; रामकुंड के 2 किमी में शराब दुकानें बंद",
+        mr: "३०–३१ ऑक्टो.साठी पार्किंग मैदाने ठरली; रामकुंडापासून २ किमीत मद्यविक्री बंद",
+      },
+      body: {
+        en: "Traffic police have asked the NMC to keep eight spots, from Bhalekar ground to Indrakund, free of stalls for parking. A revised Collector's order shuts liquor shops within 2 km of Ramtirth and in all of Trimbakeshwar on 30 and 31 Oct. Special city buses and six ambulances on 31 Oct. Police traffic notice still awaited. [Details](/blog/dhwajarohan-30-31-october-parking-grounds-liquor-shops-shut-2-km-ramkund-city-buses)",
+        hi: "ट्रैफ़िक पुलिस ने NMC से भालेकर मैदान से इंद्रकुंड तक आठ जगहें पार्किंग के लिए स्टॉल-मुक्त रखने को कहा है। कलेक्टर के संशोधित आदेश से 30 और 31 अक्टूबर को रामतीर्थ के 2 किमी में और पूरे त्र्यंबकेश्वर में शराब दुकानें बंद। 31 अक्टूबर को विशेष सिटी बसें और छह एंबुलेंस। पुलिस की ट्रैफ़िक सूचना का इंतज़ार। [पूरी ख़बर](/blog/dhwajarohan-30-31-october-parking-grounds-liquor-shops-shut-2-km-ramkund-city-buses)",
+        mr: "भालेकर मैदान ते इंद्रकुंड अशी आठ ठिकाणे पार्किंगसाठी स्टॉलमुक्त ठेवावीत, असे वाहतूक पोलिसांनी महापालिकेला सांगितले. जिल्हाधिकाऱ्यांच्या सुधारित आदेशानुसार ३० व ३१ ऑक्टोबरला रामतीर्थापासून २ किमीत आणि संपूर्ण त्र्यंबकेश्वरमध्ये मद्यविक्री बंद. ३१ ऑक्टोबरला विशेष सिटी बस व सहा रुग्णवाहिका. पोलिसांची वाहतूक अधिसूचना प्रतीक्षेत. [सविस्तर](/blog/dhwajarohan-30-31-october-parking-grounds-liquor-shops-shut-2-km-ramkund-city-buses)",
+      },
+      status: "reported",
+      source: "Sakal, Times of India, Saamana",
+    },
+    {
+      time: "2026-10-24T09:15:00+05:30",
+      headline: {
+        en: "Governor invited to the 31 Oct flag hoisting",
+        hi: "राज्यपाल को 31 अक्टूबर के ध्वजारोहण का न्योता",
+        mr: "राज्यपालांना ३१ ऑक्टोबरच्या ध्वजारोहणाचे निमंत्रण",
+      },
+      body: {
+        en: "Minister Girish Mahajan invited Governor Jishnu Dev Varma in Mumbai on 23 Oct (official Lok Bhavan release). Reported: the President may come with three helicopters and visit Trimbakeshwar; the aarti is now put at 6,559 tribal participants from seven talukas. [Details](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs)",
+        hi: "मंत्री गिरीश महाजन ने 23 अक्टूबर को मुंबई में राज्यपाल जिष्णु देव वर्मा को न्योता दिया (लोक भवन की आधिकारिक विज्ञप्ति)। रिपोर्ट: राष्ट्रपति तीन हेलिकॉप्टरों के साथ आ सकती हैं और त्र्यंबकेश्वर जा सकती हैं; आरती में अब सात तालुकों के 6,559 जनजातीय प्रतिभागी। [पूरी ख़बर](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs)",
+        mr: "मंत्री गिरीश महाजन यांनी २३ ऑक्टोबरला मुंबईत राज्यपाल जिष्णु देव वर्मा यांना निमंत्रण दिले (लोकभवनचे अधिकृत निवेदन). वृत्त: राष्ट्रपती तीन हेलिकॉप्टरसह येऊन त्र्यंबकेश्वरलाही जाण्याची शक्यता; आरतीत आता सात तालुक्यांतील ६,५५९ आदिवासी बांधव. [सविस्तर](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs)",
+      },
+      status: "confirmed",
+      source: "Lok Bhavan Maharashtra, ETV Bharat, Aapla Nashik 24",
+    },
     {
       time: "2026-10-23T09:30:00+05:30",
       headline: {

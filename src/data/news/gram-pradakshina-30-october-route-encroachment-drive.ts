@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "३० ऑक्टोबरची ग्रामप्रदक्षिणा: तपोवन ते रामकुंड मार्ग ठरला, महापालिका २४ ते २९ ऑक्टोबर अतिक्रमणे हटवणार, घाटांवर पोलिसांची रंगीत तालीम",
   },
   date: "2026-10-23",
+  updated: "2026-10-24",
+  followUp: { slug: "dhwajarohan-30-31-october-parking-grounds-liquor-shops-shut-2-km-ramkund-city-buses", date: "2026-10-24" },
   originallyAnnounced: "2026-10-21",
   source: "Times of India",
   sources: [
