@@ -22,6 +22,8 @@ import { article as ramjhula } from "./ramjhula-ram-figure-proposal";
 import { article as samarth } from "./swami-samarth-kendra-protest";
 import { article as godavariSample } from "./godavari-water-sampled-high-court";
 
+import { article as parkingDryDay } from "./dhwajarohan-parking-grounds-liquor-shops-2-km-city-buses";
+import { article as governorInvite } from "./governor-invited-31-october-president-helicopters-trimbak-works";
 import { article as gramPradakshinaRoute } from "./gram-pradakshina-30-october-route-encroachment-drive";
 import { article as shekharSinghInterview } from "./shekhar-singh-interview-works-by-march-official-website-october-31";
 import { article as trimbakTempleOpen } from "./trimbakeshwar-temple-open-31-october-3000-passes";
@@ -55,8 +57,11 @@ import { article as kushavartaPuja } from "./kushavarta-flagstaff-puja-temple-cl
 import { article as sadhugramTrees } from "./sadhugram-without-cutting-trees";
 import { article as healthStaff } from "./nmc-1638-temporary-health-staff";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22 and 23 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 and 24 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 24 October 2026
+  parkingDryDay,
+  governorInvite,
   // 23 October 2026
   gramPradakshinaRoute,
   shekharSinghInterview,
