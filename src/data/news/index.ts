@@ -56,9 +56,16 @@ import { article as sadhugramLand } from "./sadhugram-land-acquisition-slow";
 import { article as kushavartaPuja } from "./kushavarta-flagstaff-puja-temple-closure";
 import { article as sadhugramTrees } from "./sadhugram-without-cutting-trees";
 import { article as healthStaff } from "./nmc-1638-temporary-health-staff";
+import { article as shankhnaadToday } from "./shankhnaad-today-5-50-pm-251-conch-players-flag-hoisting-week-programme";
+import { article as trimbakPresidentPlan } from "./trimbak-31-october-president-puja-shankaracharya-flag";
+import { article as ramkundGhatWorks } from "./ramkund-ghat-works-hc-order-allegation";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 and 24 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24 and 25 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 25 October 2026
+  shankhnaadToday,
+  trimbakPresidentPlan,
+  ramkundGhatWorks,
   // 24 October 2026
   parkingDryDay,
   governorInvite,

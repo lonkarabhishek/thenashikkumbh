@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     en: "25 Oct Near Devmamledar: Nashik's 501-Conch Shankhnaad (~6 PM)",
   },
   date: "2026-10-21",
+  updated: "2026-10-25",
+  followUp: { slug: "shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme", date: "2026-10-25" },
   originallyAnnounced: "2026-10-18",
   source: "NTKMA press conference, District Information Office Nashik",
   sources: [
