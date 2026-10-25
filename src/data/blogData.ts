@@ -695,6 +695,7 @@ const archiveArticles: BlogArticle[] = [
         status: "confirmed",
       },
     ],
+    followUp: { slug: "kumbh-budget-22425-crore-plan-34732-crore-total-outlay", date: "2026-10-06" },
     category: "govt",
     image: "/images/gallery/kumbh-4.webp",
     summary: {
