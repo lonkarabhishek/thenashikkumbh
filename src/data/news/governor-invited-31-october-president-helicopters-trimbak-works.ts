@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "राज्यपालांना ३१ ऑक्टोबरच्या ध्वजारोहणाचे निमंत्रण; राष्ट्रपती हेलिकॉप्टरने येण्याची शक्यता; आरतीत आता ६,५५९ आदिवासी बांधव; त्र्यंबकेश्वरमध्ये रस्ते दुरुस्तीला मंजुरी",
   },
   date: "2026-10-24",
+  updated: "2026-10-25",
+  followUp: { slug: "president-12-minute-godavari-puja-kushavarta-2-pm-trimbakeshwar-plan-31-october-shankaracharya-flag", date: "2026-10-25" },
   originallyAnnounced: "2026-10-23",
   source: "Lok Bhavan Maharashtra",
   sources: [

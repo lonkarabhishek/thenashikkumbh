@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "कुंभमेळ्यापूर्वी गोदावरीचे प्रदूषण कसे रोखणार? उच्च न्यायालयाने महापालिकेकडून दोन आठवड्यांत उपाययोजना मागवल्या",
   },
   date: "2026-10-22",
+  updated: "2026-10-25",
+  followUp: { slug: "ramkund-ghat-works-high-court-2018-order-allegation-nmc-denies-hearing-october-27", date: "2026-10-25" },
   originallyAnnounced: "2026-10-13",
   source: "Times of India",
   sources: [
