@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "३०–३१ ऑक्टोबर नाशिक: पार्किंगची मैदाने ठरली, रामकुंडापासून २ किमी परिसरात मद्यविक्री बंद, ध्वजारोहणाला सिटी बस आणि सहा रुग्णवाहिका",
   },
   date: "2026-10-24",
+  updated: "2026-10-26",
+  followUp: { slug: "nashik-traffic-notice-30-31-october-godaghat-no-vehicle-zone-ramtirth-roads-shut-diversions-parking-iim-nagpur-crowd-plan", date: "2026-10-26" },
   originallyAnnounced: "2026-10-22",
   source: "Sakal",
   sources: [

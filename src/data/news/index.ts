@@ -59,9 +59,14 @@ import { article as healthStaff } from "./nmc-1638-temporary-health-staff";
 import { article as shankhnaadToday } from "./shankhnaad-today-5-50-pm-251-conch-players-flag-hoisting-week-programme";
 import { article as trimbakPresidentPlan } from "./trimbak-31-october-president-puja-shankaracharya-flag";
 import { article as ramkundGhatWorks } from "./ramkund-ghat-works-hc-order-allegation";
+import { article as shankhnaadRecord } from "./shankhnaad-guinness-world-record-517-conches-certificate-31-october";
+import { article as trafficNotice } from "./traffic-notice-30-31-october-godaghat-no-vehicle-zone-diversions-parking";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24 and 25 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 and 26 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 26 October 2026
+  shankhnaadRecord,
+  trafficNotice,
   // 25 October 2026
   shankhnaadToday,
   trimbakPresidentPlan,
