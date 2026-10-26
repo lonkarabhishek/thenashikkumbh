@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "आज शंखनाद: दुपारी ४ पासून गिनीज पडताळणी, सायंकाळी सुमारे ५.५० वाजता ५०१ शंख; ३१ ऑक्टोबरच्या ध्वजारोहणावेळी त्यांपैकी २५१ पुन्हा शंखनाद करणार; आठवडाभराचा कार्यक्रम",
   },
   date: "2026-10-25",
+  updated: "2026-10-26",
+  followUp: { slug: "shankhnaad-guinness-world-record-set-nashik-517-or-501-conches-certificate-on-31-october", date: "2026-10-26" },
   originallyAnnounced: "2026-10-24",
   source: "Prahaar",
   sources: [
