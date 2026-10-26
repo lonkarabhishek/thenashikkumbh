@@ -21,6 +21,7 @@ import { formatDate } from "@/lib/dates";
 import type { NewsStatus, NewsThumb } from "./newsMeta";
 import { CATEGORY_LABEL, NEWS_UI, STATUS_HINT } from "./newsCopy";
 import StatusBadge from "./StatusBadge";
+import AdSlot from "@/components/ads/AdSlot";
 import ListenPlayer from "./ListenPlayer";
 
 export type RelatedArticle = Pick<BlogArticle, "id" | "slug" | "title" | "date" | "category"> & {
@@ -388,6 +389,9 @@ export default function BlogArticleView({
               </ol>
             </aside>
           )}
+
+          {/* One ad, after the story and its sources have been read. */}
+          <AdSlot placement="articleEnd" />
         </div>
       </article>
 

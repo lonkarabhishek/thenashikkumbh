@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import RichText from "@/components/RichText";
+import AdSlot from "@/components/ads/AdSlot";
 import ForwardCard from "@/components/share/ForwardCard";
 import CommonsPhoto from "@/components/photos/CommonsPhoto";
 import type { InfoPageContent } from "@/content/pages/types";
@@ -246,6 +247,8 @@ export default function InfoPage({ page, locale }: { page: InfoPageContent; loca
             </ol>
           </aside>
         )}
+        {/* One ad, after the guide and its sources have been read. */}
+        <AdSlot placement="guideEnd" />
         <p className="mt-8 text-xs text-temple-400">{UI.independent[locale]}</p>
       </article>
     </div>
