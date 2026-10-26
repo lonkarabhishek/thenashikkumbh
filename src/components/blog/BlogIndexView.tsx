@@ -15,6 +15,7 @@ import NewsRelatedGuides from "@/components/seo/NewsRelatedGuides";
 import type { NewsStatus, NewsThumb } from "./newsMeta";
 import { CATEGORY_LABEL, NEWS_UI } from "./newsCopy";
 import StatusBadge from "./StatusBadge";
+import AdSlot from "@/components/ads/AdSlot";
 
 export type ArticleCard = Pick<
   BlogArticle,
@@ -197,8 +198,10 @@ export default function BlogIndexView({ articles, brief }: { articles: ArticleCa
           {lead && <LeadStory article={lead} locale={locale} label={t(COPY.topStory)} />}
 
           {/* ══════ Stories by day ══════ */}
-          {groups.map(([date, items]) => (
+          {groups.map(([date, items], gi) => (
             <section key={date} className="mt-12 md:mt-16" aria-labelledby={`day-${date}`}>
+              {/* One ad in the list, as a break after the first day's stories. */}
+              {gi === 1 && <AdSlot placement="newsList" className="-mt-4 mb-10" />}
               <h2
                 id={`day-${date}`}
                 className="flex items-baseline justify-between gap-4 border-b-2 border-temple-900 pb-2 font-heading text-xl font-bold text-temple-900"
