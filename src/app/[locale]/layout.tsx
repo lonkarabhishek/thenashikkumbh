@@ -156,6 +156,13 @@ export default function LocaleLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <SchemaMarkup />
+        {/* Google AdSense, in the head and async as Google asks, so its site
+            check finds it in the HTML. ads.txt is in /public. */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4556049898419830"
+          crossOrigin="anonymous"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html:
