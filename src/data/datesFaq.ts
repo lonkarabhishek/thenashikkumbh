@@ -1,6 +1,6 @@
-import { schedule } from "@/data/verified";
+import { majorMelaPeriod, schedule } from "@/data/verified";
 import type { Locale } from "@/i18n/translations";
-import { formatDate as fmtDate } from "@/lib/dates";
+import { formatDate as fmtDate, localDigits } from "@/lib/dates";
 
 /**
  * Plain-language answers to the date questions people search for. Shared by
@@ -24,6 +24,7 @@ type L10n = Record<Locale, string>;
 export function datesFaqs(locale: Locale): { q: L10n; a: L10n }[] {
   const d = (iso?: string) => (iso ? formatScheduleDate(iso, locale) : "");
   const [first, second, thirdNashik, thirdTrimbak] = amritSnans.map((e) => d(e.isoDate));
+  const days = localDigits(String(majorMelaPeriod.days), locale);
 
   return [
     {
@@ -36,6 +37,18 @@ export function datesFaqs(locale: Locale): { q: L10n; a: L10n }[] {
         en: `It starts with flag hoisting (Dhwajarohan) on ${d(opening?.isoDate)} and closes on ${d(closing?.isoDate)} in Nashik and ${d(closingTrimbak?.isoDate)} in Trimbakeshwar. The main bathing days, the Amrit Snans, are in August and September 2027.`,
         hi: `यह ${d(opening?.isoDate)} को ध्वजारोहण से शुरू होता है और नाशिक में ${d(closing?.isoDate)} तथा त्र्यंबकेश्वर में ${d(closingTrimbak?.isoDate)} को समाप्त होता है। मुख्य स्नान, यानी अमृत स्नान, अगस्त और सितंबर 2027 में हैं।`,
         mr: `तो ${d(opening?.isoDate)} रोजी ध्वजारोहणाने सुरू होतो आणि नाशिकमध्ये ${d(closing?.isoDate)} व त्र्यंबकेश्वरमध्ये ${d(closingTrimbak?.isoDate)} रोजी संपतो. मुख्य स्नाने, म्हणजे अमृत स्नान, ऑगस्ट आणि सप्टेंबर २०२७ मध्ये आहेत.`,
+      },
+    },
+    {
+      q: {
+        en: "How long does the Nashik Kumbh Mela last?",
+        hi: "नासिक कुंभ मेला कितने दिन चलेगा?",
+        mr: "नाशिक कुंभमेळा किती दिवस चालणार?",
+      },
+      a: {
+        en: `The Simhastha runs from the flag hoisting on ${d(opening?.isoDate)} to its close on ${d(closingTrimbak?.isoDate)} in Trimbakeshwar and ${d(closing?.isoDate)} in Nashik. Within that, the authority's plan sets a main mela period of ${days} days, from ${d(majorMelaPeriod.startIso)} to ${d(majorMelaPeriod.endIso)}, when most pilgrims are expected and all three Amrit Snans take place.`,
+        hi: `सिंहस्थ ${d(opening?.isoDate)} के ध्वजारोहण से शुरू होकर त्र्यंबकेश्वर में ${d(closingTrimbak?.isoDate)} और नासिक में ${d(closing?.isoDate)} को समाप्त होता है। इसके भीतर, कुंभ मेला प्राधिकरण की योजना के अनुसार मुख्य मेला अवधि ${d(majorMelaPeriod.startIso)} से ${d(majorMelaPeriod.endIso)} तक ${days} दिन की है, जब सबसे ज़्यादा श्रद्धालु आएँगे और तीनों अमृत स्नान होंगे।`,
+        mr: `सिंहस्थ ${d(opening?.isoDate)} रोजीच्या ध्वजारोहणापासून सुरू होऊन त्र्यंबकेश्वरला ${d(closingTrimbak?.isoDate)} व नाशिकला ${d(closing?.isoDate)} रोजी संपतो. त्यातला मुख्य मेळा कालावधी, कुंभमेळा प्राधिकरणाच्या आराखड्यानुसार, ${d(majorMelaPeriod.startIso)} ते ${d(majorMelaPeriod.endIso)} असा ${days} दिवसांचा आहे. याच काळात सर्वाधिक भाविक येतील आणि तिन्ही अमृत स्नाने होतील.`,
       },
     },
     {

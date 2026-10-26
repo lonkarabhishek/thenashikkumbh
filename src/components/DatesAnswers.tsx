@@ -3,10 +3,43 @@
 import { CalendarDays } from "lucide-react";
 import Link from "@/components/LocaleLink";
 import { useLanguage } from "@/context/LanguageContext";
-import { schedule, scheduleUpdated } from "@/data/verified";
+import { majorMelaPeriod, schedule, scheduleUpdated } from "@/data/verified";
+import { amritSnans, datesFaqs, formatScheduleDate as formatDate } from "@/data/datesFaq";
+import { formatTime, localDigits } from "@/lib/dates";
+import type { Locale } from "@/i18n/translations";
 
 const opening = schedule.find((e) => e.id === "dhwajarohan");
-import { amritSnans, datesFaqs, formatScheduleDate as formatDate } from "@/data/datesFaq";
+const closing = schedule.find((e) => e.id === "conclusion");
+const closingTrimbak = schedule.find((e) => e.id === "conclusion-trimbak");
+
+/**
+ * One plain sentence answering "when is the Nashik Kumbh" (नाशिक कुंभमेळा कधी
+ * आहे / नासिक कुंभ मेला कब है), built from the verified schedule so it can be
+ * quoted as is and never drifts from the table below it.
+ */
+function leadAnswer(locale: Locale): string {
+  const d = (iso?: string) => (iso ? formatDate(iso, locale) : "");
+  const time = opening?.startTime ? formatTime(opening.startTime, locale) : "";
+  const [first, second, thirdNashik, thirdTrimbak] = amritSnans.map((e) => d(e.isoDate));
+  const start = d(majorMelaPeriod.startIso);
+  const end = d(majorMelaPeriod.endIso);
+  const days = localDigits(String(majorMelaPeriod.days), locale);
+  if (locale === "mr")
+    return `नाशिक–त्र्यंबकेश्वर सिंहस्थ कुंभमेळ्याची सुरुवात ${d(opening?.isoDate)} रोजी ${time} वाजता ध्वजारोहणाने होते. भाविकांची सर्वाधिक गर्दी अपेक्षित असलेला मुख्य मेळा कालावधी ${start} ते ${end} असा ${days} दिवसांचा आहे. तीन अमृत स्नाने ${first}, ${second} आणि ${thirdNashik} (नाशिक) / ${thirdTrimbak} (त्र्यंबकेश्वर) रोजी आहेत. सिंहस्थाची सांगता त्र्यंबकेश्वरला ${d(closingTrimbak?.isoDate)} व नाशिकला ${d(closing?.isoDate)} रोजी होईल.`;
+  if (locale === "hi")
+    return `नासिक–त्र्यंबकेश्वर सिंहस्थ कुंभ मेला ${d(opening?.isoDate)} को ${time} बजे ध्वजारोहण से शुरू होता है। मुख्य मेला अवधि, जब सबसे ज़्यादा श्रद्धालु आने की उम्मीद है, ${start} से ${end} तक ${days} दिन की है। तीन अमृत स्नान ${first}, ${second} और ${thirdNashik} (नासिक) / ${thirdTrimbak} (त्र्यंबकेश्वर) को हैं। सिंहस्थ का समापन त्र्यंबकेश्वर में ${d(closingTrimbak?.isoDate)} और नासिक में ${d(closing?.isoDate)} को होगा।`;
+  return `The Nashik–Trimbakeshwar Simhastha Kumbh Mela opens with flag hoisting (Dhwajarohan) on ${d(opening?.isoDate)} at ${time}. The main mela period, when most pilgrims are expected, runs ${days} days from ${start} to ${end}. The three Amrit Snans fall on ${first}, ${second}, and ${thirdNashik} (Nashik) / ${thirdTrimbak} (Trimbakeshwar). The Simhastha closes on ${d(closingTrimbak?.isoDate)} in Trimbakeshwar and ${d(closing?.isoDate)} in Nashik.`;
+}
+
+/** Unique official sources behind the dates shown in the quick answer. */
+const QUICK_SOURCES = (() => {
+  const events = [opening, ...amritSnans, closingTrimbak, closing].filter(Boolean) as typeof schedule;
+  const seen = new Map<string, { org: string; title: string; url: string }>();
+  for (const e of events) {
+    if (!seen.has(e.sourceUrl)) seen.set(e.sourceUrl, { org: e.sourceOrganisation, title: e.sourceTitle, url: e.sourceUrl });
+  }
+  return Array.from(seen.values());
+})();
 
 /**
  * Plain-text answers to what people actually search for ("shahi snan dates",
@@ -29,6 +62,7 @@ const COPY = {
   },
   colDate: { en: "Date", hi: "तिथि", mr: "तारीख" },
   colEvent: { en: "Event and place", hi: "कार्यक्रम और स्थान", mr: "कार्यक्रम आणि ठिकाण" },
+  sources: { en: "Sources", hi: "स्रोत", mr: "स्रोत" },
   updated: { en: "Last updated", hi: "अंतिम अपडेट", mr: "अखेरचे अद्ययावत" },
   faqTitle: {
     en: "Common questions about the dates",
@@ -74,6 +108,7 @@ export function DatesQuickAnswer() {
           <CalendarDays className="h-6 w-6 shrink-0 text-saffron-600" />
           {t(COPY.quickTitle)}
         </h2>
+        <p className="mt-4 leading-relaxed text-temple-700">{leadAnswer(locale)}</p>
         <table className="mt-5 w-full text-left">
           <thead>
             <tr className="border-b border-temple-200 text-sm text-temple-500">
@@ -98,6 +133,17 @@ export function DatesQuickAnswer() {
           </tbody>
         </table>
         <p className="mt-4 text-sm text-temple-500">{t(COPY.quickNote)}</p>
+        <p className="mt-2 text-xs text-temple-500">
+          {t(COPY.sources)}:{" "}
+          {QUICK_SOURCES.map((src, i) => (
+            <span key={src.url}>
+              {i > 0 ? "; " : ""}
+              <a href={src.url} target="_blank" rel="noopener noreferrer" className="underline">
+                {src.org}, {src.title}
+              </a>
+            </span>
+          ))}
+        </p>
         <p className="mt-2 text-xs text-temple-400">
           {t(COPY.updated)}: <time dateTime={scheduleUpdated}>{formatDate(scheduleUpdated, locale)}</time>
         </p>
