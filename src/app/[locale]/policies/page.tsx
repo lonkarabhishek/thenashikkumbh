@@ -75,6 +75,7 @@ const SECTIONS = [
       "The site does not require an account, does not ask for personal information, and does not store user messages sent to the assistant on any server we operate.",
       "Location data is used only when the user explicitly grants location permission, and only for the specific action initiated (sharing your location from the SOS panel, or opening Flow mode on an audio walk). Location is not retained after the action.",
       "The site uses Vercel Web Analytics for aggregate visit measurement (page views, referrer, country). This is not personally identifiable and is not sold or shared.",
+      "The site shows advertisements served by Google AdSense. Google and its partners may use cookies or device identifiers to show ads based on your visits to this and other sites, and to measure them. You can opt out of personalised advertising at Google's Ads Settings (adssettings.google.com). Where the law requires consent for such cookies, ads are shown only after you give it.",
     ],
   },
   {
