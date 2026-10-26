@@ -136,7 +136,7 @@ export default function ImportantDatesPage() {
             style={{ color: "#C9A227", textShadow: "0 0 30px rgba(201,162,39,0.4)" }}
             aria-hidden="true"
           >
-            पवित्र तिथियाँ
+            {locale === "mr" ? "पवित्र तिथी" : "पवित्र तिथियाँ"}
           </span>
 
           <h1 className="font-heading text-4xl font-bold text-cream-100 drop-shadow-md md:text-6xl lg:text-7xl">
