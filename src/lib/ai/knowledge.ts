@@ -82,7 +82,7 @@ export function coreFacts(locale: Locale): string {
     ...lines,
     ntkma ? `- NTKMA office: ${ntkma.phone}, ${ntkma.email}` : "",
     "## Site pages (link as /path, no language prefix)",
-    "- /dates (key dates), /parva-snan-calendar (every bathing day), /dhwajarohan-2026, /trimbakeshwar-kumbh-2027, /how-to-reach, /accommodation, /guide (what to carry, dos and don'ts), /ghats, /events, /blog (news), /gallery, /emergency, /naga-sadhus, /about",
+    "- /dates (key dates), /parva-snan-calendar (every bathing day), /dhwajarohan-2026, /trimbakeshwar-kumbh-2027, /how-to-reach, /accommodation, /guide (what to carry, dos and don'ts), /family-card (Khoya-Paya card made in the browser; name, phone and meeting point are not saved on the server), /ghats, /events, /blog (news), /gallery, /emergency, /naga-sadhus, /about",
   ]
     .filter(Boolean)
     .join("\n");
@@ -111,6 +111,21 @@ let passages: Passage[] | null = null;
 
 function buildPassages(): Passage[] {
   const out: Passage[] = [];
+
+  out.push({
+    id: "tool:family-card",
+    title: {
+      en: "Khoya-Paya family card if someone is lost in the crowd",
+      hi: "भीड़ में बिछड़ने पर खोया-पाया परिवार कार्ड",
+      mr: "गर्दीत हरवल्यास खोया-पाया कुटुंब कार्ड",
+    },
+    body: {
+      en: "The site has a family safety card at /family-card. A visitor types a name, a phone number, an optional place they are staying, a meeting point and a short note. The card and its QR code are made in the browser. Nothing is uploaded or saved on the server. The QR code is plain text with the name, phone number and meeting point, so someone who finds them can call. The stay and the note are on the card only. This is not an official lost-and-found desk. Official lost-and-found locations are not published yet. In an emergency dial 112.",
+      hi: "साइट पर /family-card पर परिवार का सुरक्षा कार्ड है। आगंतुक नाम, फ़ोन नंबर, ठहरने की वैकल्पिक जगह, मिलने की जगह और एक छोटा नोट लिखता है। कार्ड और QR कोड ब्राउज़र में बनते हैं। सर्वर पर कुछ भी अपलोड या सेव नहीं होता। QR कोड में नाम, फ़ोन नंबर और मिलने की जगह सादे टेक्स्ट में होती है, ताकि खोजने वाला कॉल कर सके। ठहरने की जगह और नोट केवल कार्ड पर होते हैं। यह आधिकारिक खोया-पाया केंद्र नहीं है। आधिकारिक खोया-पाया स्थान अभी प्रकाशित नहीं हुए। आपात स्थिति में 112 डायल करें।",
+      mr: "साइटवर /family-card येथे कुटुंबाचे सुरक्षा कार्ड आहे. भेट देणारा नाव, फोन क्रमांक, राहण्याचे ऐच्छिक ठिकाण, भेटीचे ठिकाण आणि छोटी टीप टाइप करतो. कार्ड आणि QR कोड ब्राउझरमध्ये बनतात. सर्व्हरवर काहीही अपलोड किंवा सेव्ह होत नाही. QR कोडमध्ये नाव, फोन क्रमांक आणि भेटीचे ठिकाण साध्या मजकुरात असते, म्हणजे शोधणारा कॉल करू शकतो. राहण्याचे ठिकाण आणि टीप फक्त कार्डावर असतात. हा अधिकृत हरवले-सापडले कक्ष नाही. अधिकृत हरवले-सापडले ठिकाणे अजून जाहीर झालेली नाहीत. आपत्कालीन स्थितीत ११२ डायल करा.",
+    },
+    meta: "page: /family-card; general_guidance; personal details are not stored",
+  });
 
   for (const t of chatTopics) {
     out.push({
