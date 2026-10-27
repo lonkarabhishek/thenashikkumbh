@@ -110,9 +110,9 @@ export const SEO_COPY: Record<PageKey, Record<Locale, SeoCopy>> = {
   },
   dates: {
     en: {
-      title: "Amrit Snan Dates 2027 (Shahi Snan) | Nashik Kumbh",
+      title: "Nashik Kumbh Mela 2027 Date: Amrit Snan (Shahi Snan) Schedule",
       description:
-        "Official Nashik Kumbh 2027 dates: Dhwajarohan 31 Oct 2026 at 12:02 PM; Amrit (Shahi) Snan 2 Aug, 31 Aug, 11 Sep (Nashik), 12 Sep (Trimbak).",
+        "When is the Kumbh Mela in Nashik? Flag hoisting 31 Oct 2026, 12:02 PM; main mela 15 Jun to 30 Sep 2027; Amrit (Shahi) Snan 2 Aug, 31 Aug, 11 Sep (Nashik), 12 Sep (Trimbak).",
       crumb: "Important Dates",
     },
     mr: {
