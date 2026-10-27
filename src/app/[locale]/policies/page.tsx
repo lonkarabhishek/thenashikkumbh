@@ -74,8 +74,8 @@ const SECTIONS = [
     body: [
       "The site does not require an account, does not ask for personal information, and does not store user messages sent to the assistant on any server we operate.",
       "Location data is used only when the user explicitly grants location permission, and only for the specific action initiated (sharing your location from the SOS panel, or opening Flow mode on an audio walk). Location is not retained after the action.",
-      "The site uses Vercel Web Analytics for aggregate visit measurement (page views, referrer, country). This is not personally identifiable and is not sold or shared.",
-      "The site shows advertisements served by Google AdSense. Google and its partners may use cookies or device identifiers to show ads based on your visits to this and other sites, and to measure them. You can opt out of personalised advertising at Google's Ads Settings (adssettings.google.com). Where the law requires consent for such cookies, ads are shown only after you give it.",
+      "Nothing from a third party loads until you choose. The first time you visit, a cookie notice offers Accept all or Essentials only. Until you choose Accept all, the site loads no analytics, no advertising script and no Google Maps embed; the map tool shows a button to load the map instead. Your choice is stored in your own browser (localStorage key consent-v1) and you can change it any time from Cookie settings in the footer. Changing from Accept all to Essentials only removes the Google Analytics cookies this site can reach and reloads the page; cookies Google set on its own domains are outside our control.",
+      "With Accept all, the site uses Google Analytics and Vercel Web Analytics for aggregate visit measurement (page views, referrer, country), and shows advertisements served by Google AdSense. Google and its partners may use cookies or device identifiers to show ads based on your visits to this and other sites, and to measure them. You can opt out of personalised advertising at Google's Ads Settings (adssettings.google.com).",
     ],
   },
   {

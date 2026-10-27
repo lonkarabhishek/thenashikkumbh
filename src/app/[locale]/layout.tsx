@@ -9,8 +9,8 @@ import NewsTicker from "@/components/NewsTicker";
 import { blogArticles } from "@/data/blogData";
 import SOSButton from "@/components/SOSButton";
 
-import { Analytics } from "@vercel/analytics/next";
-import Script from "next/script";
+import ThirdPartyScripts from "@/components/consent/ThirdPartyScripts";
+import ConsentBanner from "@/components/consent/ConsentBanner";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import PWARegistrar from "@/components/PWARegistrar";
 import { notFound } from "next/navigation";
@@ -156,13 +156,9 @@ export default function LocaleLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <SchemaMarkup />
-        {/* Google AdSense, in the head and async as Google asks, so its site
-            check finds it in the HTML. ads.txt is in /public. */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4556049898419830"
-          crossOrigin="anonymous"
-        />
+        {/* AdSense site verification without loading any script. The loader
+            itself is in ThirdPartyScripts and waits for cookie consent. */}
+        <meta name="google-adsense-account" content="ca-pub-4556049898419830" />
         <script
           dangerouslySetInnerHTML={{
             __html:
@@ -187,15 +183,9 @@ export default function LocaleLayout({
             <Footer />
             <KumbhSahayakLazy />
             <SOSButton />
-            <Analytics />
-            {/* Google tag (gtag.js) */}
-            <Script
-              src="https://www.googletagmanager.com/gtag/js?id=G-G2LMJP7X4F"
-              strategy="afterInteractive"
-            />
-            <Script id="gtag-init" strategy="afterInteractive">
-              {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-G2LMJP7X4F');`}
-            </Script>
+            {/* Analytics, Google tag and AdSense load only after "Accept all". */}
+            <ThirdPartyScripts />
+            <ConsentBanner />
             <PWARegistrar />
           </ChatProvider>
         </LanguageProvider>

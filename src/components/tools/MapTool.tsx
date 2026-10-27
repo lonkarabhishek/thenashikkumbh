@@ -5,10 +5,23 @@ import Link from "@/components/LocaleLink";
 import { useLanguage } from "@/context/LanguageContext";
 import { mapPlaces, googleEmbed, googleLink, googleDirections } from "@/data/mapPlaces";
 import { MAP_COPY as C } from "@/components/tools/mapCopy";
+import { useConsent } from "@/lib/consent";
+
+const EMBED = {
+  note: {
+    en: "This map is loaded from Google Maps, which sets Google cookies. It stays off until you accept cookies or tap Show map.",
+    hi: "यह नक्शा Google Maps से लोड होता है और Google की कुकीज़ रखता है। जब तक आप कुकीज़ स्वीकार न करें या \"नक्शा दिखाएँ\" न दबाएँ, यह बंद रहता है।",
+    mr: "हा नकाशा Google Maps वरून लोड होतो आणि Google च्या कुकीज ठेवतो. तुम्ही कुकीज स्वीकारेपर्यंत किंवा \"नकाशा दाखवा\" दाबेपर्यंत तो बंद राहतो.",
+  },
+  show: { en: "Show map", hi: "नक्शा दिखाएँ", mr: "नकाशा दाखवा" },
+};
 
 export default function MapTool() {
   const { locale } = useLanguage();
   const [id, setId] = useState(mapPlaces[0].id);
+  const [showMap, setShowMap] = useState(false);
+  const consent = useConsent();
+  const mapAllowed = consent === "all" || showMap;
   const p = mapPlaces.find((x) => x.id === id) ?? mapPlaces[0];
   return (
     <>
@@ -26,7 +39,23 @@ export default function MapTool() {
         ))}
       </div>
       <div className="mt-4 overflow-hidden rounded-2xl border border-temple-200 bg-white">
-        <iframe key={p.id} title={p.name[locale]} src={googleEmbed(p)} className="h-80 w-full sm:h-96" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+        {mapAllowed ? (
+          <iframe key={p.id} title={p.name[locale]} src={googleEmbed(p)} className="h-80 w-full sm:h-96" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+        ) : (
+          <div className="flex h-80 flex-col items-center justify-center gap-4 bg-cream-100 px-6 text-center sm:h-96">
+            <p className="max-w-md text-sm leading-relaxed text-temple-700">{EMBED.note[locale]}</p>
+            <button
+              type="button"
+              onClick={() => setShowMap(true)}
+              className="rounded-full bg-temple-900 px-5 py-2.5 text-sm font-semibold text-cream-50"
+            >
+              {EMBED.show[locale]}
+            </button>
+            <a href={googleLink(p)} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold underline">
+              {C.open[locale]}
+            </a>
+          </div>
+        )}
       </div>
       <p className="mt-1 text-xs text-temple-500">{C.attribution[locale]}</p>
       <section className="mt-4 rounded-2xl border border-temple-200 bg-white p-5">
