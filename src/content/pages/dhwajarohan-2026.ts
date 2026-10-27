@@ -99,7 +99,7 @@ Trimbak is a separate town from Nashik, so you can be at only one venue at 12:02
 - **Friday 30 October: Trimbakeshwar, and morning rituals.** **Update, 25 October (REPORTED):** NTKMA information carried by Pudhari lists morning rituals on 30 October by the Shri Ganga-Godavari Panchkoti Tirth Purohit Sangh (sankalp, tirth pujan, Ganesh pujan, Navagraha and Rudra sthapana, swarnapad vidhi) and evening processions in both Nashik and Trimbak. Sarkarnama says the Trimbak procession leaves Kushavarta at **4 PM**, via the Trimbakeshwar temple to the municipal council office. [Details](/blog/president-12-minute-godavari-puja-kushavarta-2-pm-trimbakeshwar-plan-31-october-shankaracharya-flag).
 - **30 October to 1 November: rituals at Ramkund.** Puja and havan over three days, according to the same report.
 - **Saturday 31 October, 12:02 PM: Dhwajarohan** at Ramkund and Kushavarta. Confirmed. **Update, 25 October (REPORTED):** 251 conch players are to sound conches at the 12:02 moment (Prahaar, Nashik Calling). At Kushavarta, Sarkarnama says the Shringeri Shankaracharya hoists the flag with about 100 invitees; Pudhari says the Governor and Chief Minister will be present. [Details](/blog/shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme).
-- **Saturday 31 October, about 6 PM: Maha Goda Aarti** at Ramkund, with about **6,500 people from 650 tribal villages** of Nashik district, the second world-record attempt (REPORTED: Prahaar and Lokmat Times give 6 PM; NTKMA and the District Information Office announced the aarti and the 6,500 figure on 18 October). Lokmat Times says the aarti will run along the stretch between Ekmukhi Datta temple and Rokdoba temple. *Earlier reports in late September said 7 PM and about 5,000 seats; those figures are now out of date.* Navbharat (21 October) gives **6:50 PM** for the aarti; sources differ, so plan for about 6 PM. **Update, 24 October (REPORTED):** Kumbh Commissioner Shekhar Singh now puts the aarti at **6,559 tribal participants from seven talukas**, from Ahilyabai Holkar bridge to Ramkund, with the Ramtirth Godavari Seva Samiti (ETV Bharat). [Details](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs). **Update, 25 October (REPORTED):** Pudhari (NTKMA information) says people from 650 villages in seven talukas and 28 city settlements have registered, and that the Ramtirth Godavari Seva Samiti and the Nashik Purohit Sangh will hold a **joint** maha aarti. [Details](/blog/shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme).
+- **Saturday 31 October, about 6 PM: Maha Goda Aarti** at Ramkund, with about **6,500 people from 650 tribal villages** of Nashik district, the second world-record attempt (REPORTED: Prahaar and Lokmat Times give 6 PM; NTKMA and the District Information Office announced the aarti and the 6,500 figure on 18 October). Lokmat Times says the aarti will run along the stretch between Ekmukhi Datta temple and Rokdoba temple. *Earlier reports in late September said 7 PM and about 5,000 seats; those figures are now out of date.* Navbharat (21 October) gives **6:50 PM** for the aarti; sources differ, so plan for about 6 PM. **Update, 24 October (REPORTED):** Kumbh Commissioner Shekhar Singh now puts the aarti at **6,559 tribal participants from seven talukas**, from Ahilyabai Holkar bridge to Ramkund, with the Ramtirth Godavari Seva Samiti (ETV Bharat). [Details](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs). **Update, 25 October (REPORTED):** Pudhari (NTKMA information) says people from 650 villages in seven talukas and 28 city settlements have registered, and that the Ramtirth Godavari Seva Samiti and the Nashik Purohit Sangh will hold a **joint** maha aarti. [Details](/blog/shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme). **Update, 27 October (REPORTED):** the police notice, as reported by the Times of India, puts the aarti at **7 PM** and bars entry to the ghats from Ekmukhi Datta temple to Gharpure Ghat and to Main Road, Nehru Chowk and Dhumal Point. [Details](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route).
 
 Navarashtra has noted that the programme may change. We will update this page when an official programme is published.`,
         hi: `केवल ध्वजारोहण की पुष्टि सरकारी दस्तावेज़ में है। बाकी कार्यक्रम मीडिया रिपोर्टों पर आधारित है और इसमें बदलाव हो सकता है।
@@ -108,7 +108,7 @@ Navarashtra has noted that the programme may change. We will update this page wh
 - **शुक्रवार, 30 अक्टूबर: त्र्यंबकेश्वर, और सुबह के अनुष्ठान।** **अपडेट, 25 अक्टूबर (रिपोर्ट):** पुढारी में छपी NTKMA की जानकारी के अनुसार 30 अक्टूबर सुबह श्री गंगा-गोदावरी पंचकोटी तीर्थ पुरोहित संघ की ओर से विधि (संकल्प, तीर्थ पूजन, गणेश पूजन, नवग्रह व रुद्र स्थापना, स्वर्णपाद विधि) और शाम को नाशिक व त्र्यंबक दोनों जगह शोभायात्रा। सरकारनामा के अनुसार त्र्यंबक की शोभायात्रा **शाम 4 बजे** कुशावर्त से त्र्यंबकेश्वर मंदिर होते हुए नगर परिषद कार्यालय तक जाएगी। [पूरी ख़बर](/blog/president-12-minute-godavari-puja-kushavarta-2-pm-trimbakeshwar-plan-31-october-shankaracharya-flag)।
 - **30 अक्टूबर से 1 नवंबर तक: रामकुंड पर धार्मिक अनुष्ठान।** उसी रिपोर्ट के अनुसार तीन दिन पूजा और हवन होंगे।
 - **शनिवार, 31 अक्टूबर, दोपहर 12:02 बजे: ध्वजारोहण**, रामकुंड और कुशावर्त पर। इसकी पुष्टि है। **अपडेट, 25 अक्टूबर (रिपोर्ट):** 12:02 के क्षण 251 शंखवादक शंखनाद करेंगे (प्रहार, नाशिक कॉलिंग)। सरकारनामा के अनुसार कुशावर्त पर शृंगेरी शंकराचार्य करीब 100 आमंत्रितों के बीच ध्वज फहराएँगे; पुढारी के अनुसार वहाँ राज्यपाल और मुख्यमंत्री उपस्थित रहेंगे। [पूरी ख़बर](/blog/shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme)।
-- **शनिवार, 31 अक्टूबर, शाम करीब 6 बजे: महा गोदा आरती**, रामकुंड पर, नाशिक ज़िले के **650 जनजातीय गाँवों के करीब 6,500 लोगों** के साथ, यह दूसरा विश्व रिकॉर्ड प्रयास है (रिपोर्ट: प्रहार और Lokmat Times ने शाम 6 बजे लिखा है; आरती और 6,500 की संख्या NTKMA और ज़िला सूचना कार्यालय ने 18 अक्टूबर को घोषित की)। Lokmat Times के मुताबिक आरती एकमुखी दत्त मंदिर से रोकडोबा मंदिर के बीच के घाट पर होगी। *सितंबर के आख़िर की रिपोर्टों में शाम 7 बजे और करीब 5,000 सीटें बताई गई थीं; वह जानकारी अब पुरानी है।* नवभारत (21 अक्टूबर) ने आरती का समय **शाम 6:50** बताया है; ख़बरों में फ़र्क है, इसलिए करीब 6 बजे तक पहुँचने की योजना रखें। **अपडेट, 24 अक्टूबर (रिपोर्ट):** कुंभ आयुक्त शेखर सिंह अब आरती में **सात तालुकों के 6,559 जनजातीय प्रतिभागी** बताते हैं, अहिल्याबाई होलकर पुल से रामकुंड तक, रामतीर्थ गोदावरी सेवा समिति के साथ (ETV भारत)। [पूरी ख़बर](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs)। **अपडेट, 25 अक्टूबर (रिपोर्ट):** पुढारी (NTKMA की जानकारी) के अनुसार सात तालुकों के 650 गाँवों और शहर की 28 बस्तियों से पंजीकरण हुआ है, और रामतीर्थ गोदावरी सेवा समिति व नाशिक पुरोहित संघ **संयुक्त** महाआरती करेंगे। [पूरी ख़बर](/blog/shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme)।
+- **शनिवार, 31 अक्टूबर, शाम करीब 6 बजे: महा गोदा आरती**, रामकुंड पर, नाशिक ज़िले के **650 जनजातीय गाँवों के करीब 6,500 लोगों** के साथ, यह दूसरा विश्व रिकॉर्ड प्रयास है (रिपोर्ट: प्रहार और Lokmat Times ने शाम 6 बजे लिखा है; आरती और 6,500 की संख्या NTKMA और ज़िला सूचना कार्यालय ने 18 अक्टूबर को घोषित की)। Lokmat Times के मुताबिक आरती एकमुखी दत्त मंदिर से रोकडोबा मंदिर के बीच के घाट पर होगी। *सितंबर के आख़िर की रिपोर्टों में शाम 7 बजे और करीब 5,000 सीटें बताई गई थीं; वह जानकारी अब पुरानी है।* नवभारत (21 अक्टूबर) ने आरती का समय **शाम 6:50** बताया है; ख़बरों में फ़र्क है, इसलिए करीब 6 बजे तक पहुँचने की योजना रखें। **अपडेट, 24 अक्टूबर (रिपोर्ट):** कुंभ आयुक्त शेखर सिंह अब आरती में **सात तालुकों के 6,559 जनजातीय प्रतिभागी** बताते हैं, अहिल्याबाई होलकर पुल से रामकुंड तक, रामतीर्थ गोदावरी सेवा समिति के साथ (ETV भारत)। [पूरी ख़बर](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs)। **अपडेट, 25 अक्टूबर (रिपोर्ट):** पुढारी (NTKMA की जानकारी) के अनुसार सात तालुकों के 650 गाँवों और शहर की 28 बस्तियों से पंजीकरण हुआ है, और रामतीर्थ गोदावरी सेवा समिति व नाशिक पुरोहित संघ **संयुक्त** महाआरती करेंगे। [पूरी ख़बर](/blog/shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme)। **अपडेट, 27 अक्टूबर (रिपोर्ट):** टाइम्स ऑफ इंडिया के अनुसार पुलिस अधिसूचना में आरती **शाम 7 बजे** है, और एकमुखी दत्त मंदिर से घारपुरे घाट तक के घाटों और मेन रोड, नेहरू चौक व धुमाल पॉइंट पर प्रवेशबंदी है। [पूरी ख़बर](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route)।
 
 Navarashtra ने बताया है कि कार्यक्रम बदल सकता है। आधिकारिक कार्यक्रम जारी होने पर हम यह पेज अपडेट करेंगे।`,
         mr: `केवळ ध्वजारोहणाची नोंद अधिकृत दस्तऐवजात आहे. बाकीचा कार्यक्रम माध्यमांतील वृत्तांवर आधारित असून त्यात बदल होऊ शकतो.
@@ -117,7 +117,7 @@ Navarashtra ने बताया है कि कार्यक्रम ब
 - **शुक्रवार, ३० ऑक्टोबर: त्र्यंबकेश्वर, आणि सकाळचे विधी.** **अपडेट, २५ ऑक्टोबर (वृत्त):** पुढारीत आलेल्या NTKMA च्या माहितीनुसार ३० ऑक्टोबरला सकाळी श्री गंगा-गोदावरी पंचकोटी तीर्थ पुरोहित संघातर्फे विधी (संकल्प, तीर्थपूजन, गणेशपूजन, नवग्रह व रुद्र स्थापना, स्वर्णपाद विधी) आणि सायंकाळी नाशिक व त्र्यंबक दोन्हीकडे शोभायात्रा. सरकारनामानुसार त्र्यंबकची शोभायात्रा **दुपारी ४ वाजता** कुशावर्तावरून त्र्यंबकेश्वर मंदिरमार्गे नगर परिषद कार्यालयापर्यंत जाईल. [सविस्तर](/blog/president-12-minute-godavari-puja-kushavarta-2-pm-trimbakeshwar-plan-31-october-shankaracharya-flag).
 - **३० ऑक्टोबर ते १ नोव्हेंबर: रामकुंडावर धार्मिक विधी.** त्याच वृत्तानुसार तीन दिवस पूजा आणि हवन होणार आहे.
 - **शनिवार, ३१ ऑक्टोबर, दुपारी १२.०२: ध्वजारोहण**, रामकुंड आणि कुशावर्त येथे. याला अधिकृत दुजोरा आहे. **अपडेट, २५ ऑक्टोबर (वृत्त):** १२.०२ च्या क्षणी २५१ शंखवादक शंखनाद करतील (प्रहार, नाशिक कॉलिंग). सरकारनामानुसार कुशावर्तावर सुमारे १०० निमंत्रितांच्या उपस्थितीत शृंगेरी शंकराचार्यांच्या हस्ते ध्वजारोहण; पुढारीनुसार तेथे राज्यपाल व मुख्यमंत्री उपस्थित राहतील. [सविस्तर](/blog/shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme).
-- **शनिवार, ३१ ऑक्टोबर, सायंकाळी सुमारे ६ वाजता: महा गोदा आरती**, रामकुंडावर, नाशिक जिल्ह्यातील **६५० जनजातीय गावांमधील सुमारे ६,५०० जणांच्या** सहभागाने; हा दुसरा विश्वविक्रम प्रयत्न (वृत्त: प्रहार आणि Lokmat Times नुसार सायंकाळी ६; आरती आणि ६,५०० ही संख्या NTKMA व जिल्हा माहिती कार्यालयाने १८ ऑक्टोबरला जाहीर केली). एकमुखी दत्त मंदिर ते रोकडोबा मंदिर या घाटपट्ट्यात आरती होईल, असे Lokmat Times चे वृत्त आहे. *सप्टेंबरअखेरच्या वृत्तांत सायंकाळी ७ आणि सुमारे ५,००० आसने असे होते; ती माहिती आता जुनी झाली आहे.* नवभारतने (२१ ऑक्टोबर) आरतीची वेळ **सायंकाळी ६.५०** दिली आहे; वृत्तांमध्ये फरक असल्याने सुमारे ६ पर्यंत पोहोचण्याचे नियोजन करा. **अपडेट, २४ ऑक्टोबर (वृत्त):** कुंभ आयुक्त शेखर सिंह यांनी आरतीत आता **सात तालुक्यांतील ६,५५९ आदिवासी बांधव** असतील, असे सांगितले; अहिल्याबाई होळकर पूल ते रामकुंड, रामतीर्थ गोदावरी सेवा समितीसोबत (ETV भारत). [सविस्तर](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs). **अपडेट, २५ ऑक्टोबर (वृत्त):** पुढारीनुसार (NTKMA ची माहिती) सात तालुक्यांतील ६५० गावे आणि शहरातील २८ वस्त्यांमधून नोंदणी झाली आहे, आणि रामतीर्थ गोदावरी सेवा समिती व नाशिक पुरोहित संघ **संयुक्त** महाआरती करतील. [सविस्तर](/blog/shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme).
+- **शनिवार, ३१ ऑक्टोबर, सायंकाळी सुमारे ६ वाजता: महा गोदा आरती**, रामकुंडावर, नाशिक जिल्ह्यातील **६५० जनजातीय गावांमधील सुमारे ६,५०० जणांच्या** सहभागाने; हा दुसरा विश्वविक्रम प्रयत्न (वृत्त: प्रहार आणि Lokmat Times नुसार सायंकाळी ६; आरती आणि ६,५०० ही संख्या NTKMA व जिल्हा माहिती कार्यालयाने १८ ऑक्टोबरला जाहीर केली). एकमुखी दत्त मंदिर ते रोकडोबा मंदिर या घाटपट्ट्यात आरती होईल, असे Lokmat Times चे वृत्त आहे. *सप्टेंबरअखेरच्या वृत्तांत सायंकाळी ७ आणि सुमारे ५,००० आसने असे होते; ती माहिती आता जुनी झाली आहे.* नवभारतने (२१ ऑक्टोबर) आरतीची वेळ **सायंकाळी ६.५०** दिली आहे; वृत्तांमध्ये फरक असल्याने सुमारे ६ पर्यंत पोहोचण्याचे नियोजन करा. **अपडेट, २४ ऑक्टोबर (वृत्त):** कुंभ आयुक्त शेखर सिंह यांनी आरतीत आता **सात तालुक्यांतील ६,५५९ आदिवासी बांधव** असतील, असे सांगितले; अहिल्याबाई होळकर पूल ते रामकुंड, रामतीर्थ गोदावरी सेवा समितीसोबत (ETV भारत). [सविस्तर](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs). **अपडेट, २५ ऑक्टोबर (वृत्त):** पुढारीनुसार (NTKMA ची माहिती) सात तालुक्यांतील ६५० गावे आणि शहरातील २८ वस्त्यांमधून नोंदणी झाली आहे, आणि रामतीर्थ गोदावरी सेवा समिती व नाशिक पुरोहित संघ **संयुक्त** महाआरती करतील. [सविस्तर](/blog/shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme). **अपडेट, २७ ऑक्टोबर (वृत्त):** टाइम्स ऑफ इंडियानुसार पोलिस अधिसूचनेत आरती **सायंकाळी ७ वाजता** असून एकमुखी दत्त मंदिर ते घारपुरे घाटापर्यंतचे घाट आणि मेनरोड, नेहरू चौक व धुमाळ पॉइंट येथे प्रवेशबंदी आहे. [सविस्तर](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route).
 
 कार्यक्रमात बदल होऊ शकतो, असे Navarashtra ने नमूद केले आहे. अधिकृत कार्यक्रम जाहीर झाल्यावर हे पान अद्ययावत केले जाईल.`,
       },
@@ -160,6 +160,7 @@ Plan with what is known today:
 - Do not expect to reach the water's edge at 12:02 PM without an invitation. Space is small and invitations are limited.
 - Expect big crowds on 30 October too. About one lakh devotees are reported to be expected for the Gram Pradakshina. Avoid driving on Main Road and in Panchavati that afternoon and evening.
 - The police traffic notice is out (REPORTED, Sakal, 25 October): Ramtirth and the whole Godaghat are a no-vehicle zone on 30 and 31 October, and the main roads to Ramtirth close from 6 AM to midnight on 31 October. See "Routes, closures and parking" below.
+- **Trimbakeshwar on 30–31 October:** the usual Nashik–Trimbak road is closed from 8 AM on 30 October to 8 PM on 31 October; the detour via Girnare is about twice as long (REPORTED, 26 October). See "Routes, closures and parking" below.
 - Kushavarta in Trimbak is closed for renovation until about 31 October (see below). Do not plan a bath there before it reopens.
 - Works at Ramkund were still unfinished on 5 October, so some areas may be screened off.
 - No official pilgrim e-pass or registration has been announced. Treat any such claim as unverified.
@@ -177,6 +178,7 @@ On 2 September, Singh had said Ramkund would be finished by 15 October. That dea
 - बिना निमंत्रण के 12:02 बजे पानी के किनारे तक पहुंचने की उम्मीद न रखें। जगह कम है और निमंत्रण सीमित हैं।
 - 30 अक्टूबर को भी भारी भीड़ की उम्मीद रखें। रिपोर्ट के अनुसार ग्राम प्रदक्षिणा में लगभग एक लाख श्रद्धालु आ सकते हैं। उस दिन दोपहर-शाम मेन रोड और पंचवटी में गाड़ी ले जाने से बचें।
 - पुलिस की ट्रैफ़िक अधिसूचना आ गई है (रिपोर्ट, सकाळ, 25 अक्टूबर): 30 और 31 अक्टूबर को रामतीर्थ और पूरा गोदाघाट 'नो व्हीकल ज़ोन' रहेगा, और 31 अक्टूबर को सुबह 6 बजे से आधी रात तक रामतीर्थ जाने वाली मुख्य सड़कें बंद रहेंगी। नीचे "रास्ते, बंदी और पार्किंग" देखें।
+- **30–31 अक्टूबर को त्र्यंबकेश्वर:** नाशिक–त्र्यंबक का नियमित मार्ग 30 अक्टूबर सुबह 8 बजे से 31 अक्टूबर रात 8 बजे तक बंद है; गिरणारे होकर वैकल्पिक मार्ग लगभग दोगुना लंबा है (रिपोर्ट, 26 अक्टूबर)। नीचे "रास्ते, बंदी और पार्किंग" देखें।
 - त्र्यंबक का कुशावर्त लगभग 31 अक्टूबर तक मरम्मत के लिए बंद है (नीचे देखें)। दोबारा खुलने से पहले वहां स्नान की योजना न बनाएं।
 - 5 अक्टूबर तक रामकुंड के काम अधूरे थे, इसलिए कुछ हिस्से घेरकर ढके जा सकते हैं।
 - कोई आधिकारिक ई-पास या तीर्थयात्री पंजीकरण घोषित नहीं हुआ है। ऐसे किसी भी दावे को अपुष्ट मानें।
@@ -194,6 +196,7 @@ Times of India ने 5 अक्टूबर 2026 को बताया कि
 - निमंत्रणाशिवाय १२.०२ वाजता थेट पाण्याजवळ पोहोचता येईल, असे गृहीत धरू नका. जागा कमी आहे आणि निमंत्रणे मर्यादित आहेत.
 - ३० ऑक्टोबरलाही मोठी गर्दी अपेक्षित आहे. ग्रामप्रदक्षिणेला सुमारे एक लाख भाविक येतील, असे वृत्त आहे. त्या दिवशी दुपारी-सायंकाळी मेन रोड व पंचवटीत वाहन नेणे टाळा.
 - पोलिसांची वाहतूक अधिसूचना आली आहे (वृत्त, सकाळ, २५ ऑक्टोबर): ३० व ३१ ऑक्टोबरला रामतीर्थ आणि संपूर्ण गोदाघाट 'नो व्हेईकल झोन' राहील, आणि ३१ ऑक्टोबरला सकाळी ६ ते मध्यरात्रीपर्यंत रामतीर्थाकडे जाणारे मुख्य रस्ते बंद राहतील. खाली "मार्ग, बंदी आणि पार्किंग" पाहा.
+- **३०–३१ ऑक्टोबरला त्र्यंबकेश्वर:** नेहमीचा नाशिक–त्र्यंबक रस्ता ३० ऑक्टोबर सकाळी ८ ते ३१ ऑक्टोबर रात्री ८ पर्यंत बंद; गिरणारेमार्गे पर्यायी रस्ता जवळपास दुप्पट लांब (वृत्त, २६ ऑक्टोबर). खाली "मार्ग, बंदी आणि पार्किंग" पाहा.
 - त्र्यंबकचे कुशावर्त साधारण ३१ ऑक्टोबरपर्यंत नूतनीकरणासाठी बंद आहे (खाली पाहा). ते पुन्हा खुले होईपर्यंत तिथे स्नानाचे नियोजन करू नका.
 - ५ ऑक्टोबरपर्यंत रामकुंडाची कामे अपूर्ण होती, त्यामुळे काही भाग झाकून बंद केलेले असू शकतात.
 - कोणताही अधिकृत ई-पास किंवा भाविक नोंदणी जाहीर झालेली नाही. असा दावा असल्यास तो अपुष्ट समजा.
@@ -246,7 +249,9 @@ Lokmat Times ने यह भी बताया कि पितृपक्�
         mr: "मार्ग, बंदी आणि पार्किंग",
       },
       body: {
-        en: `**Police traffic notice (REPORTED, Sakal, 25 October):** Deputy Commissioner of Police (Traffic) Chandrakant Gawali has issued a special notice for 30 and 31 October. We have seen Sakal's summary, not the notice itself. [Full routes, diversions and walking routes](/blog/nashik-traffic-notice-30-31-october-godaghat-no-vehicle-zone-ramtirth-roads-shut-diversions-parking-iim-nagpur-crowd-plan).
+        en: `**Update, 27 October: Nashik–Trimbakeshwar road closed (REPORTED, Prahaar, Sakal, Times of India, 26 October):** an order by Additional District Magistrate Rohitkumar Rajput closes the usual Nashik–Trimbak road (Pimpalgaon Bahula, Khambale, Pegalwadi) from **8 AM on 30 October to 8 PM on 31 October**. Use Amrut Chowk, Bardan Phata, Govardhan, Girnare, Dhondegaon, Devargaon, Waghera Phata, Amboli Phata, Sapgaon. TOI says that is about 61 km instead of 30 km, and that the Ghoti–Trimbak road is also closed (about 104 km via Nashik). TOI's fuller account of the city notice gives a procession route via Phul Bazaar, Delhi Gate, Nehru Chowk, Dhumal Point, Main Road and Ravivar Karanja, Goda Aarti entry bans and more no-parking stretches. [All routes](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route)
+
+**Police traffic notice (REPORTED, Sakal, 25 October):** Deputy Commissioner of Police (Traffic) Chandrakant Gawali has issued a special notice for 30 and 31 October. We have seen Sakal's summary, not the notice itself. [Full routes, diversions and walking routes](/blog/nashik-traffic-notice-30-31-october-godaghat-no-vehicle-zone-ramtirth-roads-shut-diversions-parking-iim-nagpur-crowd-plan).
 
 - **Ramtirth and the whole Godaghat: no vehicles** on both days.
 - **30 October, from 6 AM until the procession ends:** procession route Tapovan ground, Tapovan crossing, Panchmukhi Hanuman, Katya Maruti Chowk, Devi Chowk, Ganeshwadi, Gadge Maharaj bridge, Ahilyabai Holkar bridge, Ramtirth. Closed: Ashok Stambh to Ravivar Karanja, Red Cross signal to Dhumal Point, Malegaon Stand to Makhmalabad Naka, Dindori Naka to Malegaon Stand.
@@ -265,7 +270,9 @@ Earlier, and still useful:
 - **How it worked last time:** for the flagstaff foundation event at Ramkund on 11 June 2026, vehicles were barred around Ramkund and the old Bhaji Patangan from 5 AM, and parking was at **Rokdoba and Kapurthala grounds**, with a walk in from there (Nashik Calling). That is a guide only, not the 31 October plan.
 
 Practical advice: do not drive into Panchavati. Park outside and walk, carry water, and keep elders away from the densest stretch near the ghats.`,
-        hi: `**पुलिस की ट्रैफ़िक अधिसूचना (रिपोर्ट, सकाळ, 25 अक्टूबर):** यातायात पुलिस उपायुक्त चंद्रकांत गवली ने 30 और 31 अक्टूबर के लिए विशेष अधिसूचना जारी की है। हमने सकाळ में छपा सार देखा है, अधिसूचना खुद नहीं। [पूरे रास्ते, वैकल्पिक मार्ग और पैदल रास्ते](/blog/nashik-traffic-notice-30-31-october-godaghat-no-vehicle-zone-ramtirth-roads-shut-diversions-parking-iim-nagpur-crowd-plan)।
+        hi: `**अपडेट, 27 अक्टूबर: नाशिक–त्र्यंबकेश्वर मार्ग बंद (रिपोर्ट, प्रहार, सकाळ, टाइम्स ऑफ इंडिया, 26 अक्टूबर):** अपर ज़िला दंडाधिकारी रोहितकुमार राजपूत के आदेश से नाशिक–त्र्यंबक का नियमित मार्ग (पिंपलगाँव बहुला, खंबाले, पेगलवाड़ी) **30 अक्टूबर सुबह 8 बजे से 31 अक्टूबर रात 8 बजे तक** बंद रहेगा। अमृत चौक, बारदान फाटा, गोवर्धन, गिरणारे, धोंडेगाँव, देवरगाँव, वाघेरा फाटा, अंबोली फाटा, सापगाँव होकर जाएँ। TOI के अनुसार यह 30 की जगह करीब 61 किमी है, और घोटी–त्र्यंबक मार्ग भी बंद है (नाशिक होकर करीब 104 किमी)। शहर की अधिसूचना के TOI वाले विस्तृत ब्योरे में फूल बाज़ार, दिल्ली दरवाज़ा, नेहरू चौक, धुमाल पॉइंट, मेन रोड और रविवार कारंजा होकर शोभायात्रा मार्ग, गोदा आरती की प्रवेशबंदी और और नो-पार्किंग हिस्से हैं। [सभी मार्ग](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route)
+
+**पुलिस की ट्रैफ़िक अधिसूचना (रिपोर्ट, सकाळ, 25 अक्टूबर):** यातायात पुलिस उपायुक्त चंद्रकांत गवली ने 30 और 31 अक्टूबर के लिए विशेष अधिसूचना जारी की है। हमने सकाळ में छपा सार देखा है, अधिसूचना खुद नहीं। [पूरे रास्ते, वैकल्पिक मार्ग और पैदल रास्ते](/blog/nashik-traffic-notice-30-31-october-godaghat-no-vehicle-zone-ramtirth-roads-shut-diversions-parking-iim-nagpur-crowd-plan)।
 
 - **रामतीर्थ और पूरा गोदाघाट: दोनों दिन गाड़ियाँ बंद।**
 - **30 अक्टूबर, सुबह 6 बजे से यात्रा ख़त्म होने तक:** यात्रा मार्ग तपोवन मैदान, तपोवन क्रॉसिंग, पंचमुखी हनुमान, काट्या मारुति चौक, देवी चौक, गणेशवाड़ी, गाडगे महाराज पुल, अहिल्याबाई होलकर पुल, रामतीर्थ। बंद: अशोक स्तंभ से रविवार कारंजा, रेड क्रॉस सिग्नल से धुमाल पॉइंट, मालेगाँव स्टैंड से मखमलाबाद नाका, दिंडोरी नाका से मालेगाँव स्टैंड।
@@ -284,7 +291,9 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
 - **पिछली बार कैसा था:** 11 जून 2026 को रामकुंड पर ध्वज स्तंभ शिलान्यास के दिन सुबह 5 बजे से रामकुंड और पुराने भाजी पटांगण के आसपास गाड़ियाँ बंद थीं, और पार्किंग **रोकडोबा और कपूरथला मैदान** पर थी, वहाँ से पैदल जाना था (Nashik Calling)। यह सिर्फ़ अंदाज़े के लिए है, 31 अक्टूबर की योजना नहीं।
 
 सलाह: पंचवटी के अंदर गाड़ी न ले जाएँ। बाहर पार्क करके पैदल जाएँ, पानी साथ रखें, और बुज़ुर्गों को घाट के सबसे भीड़ वाले हिस्से से दूर रखें।`,
-        mr: `**पोलिसांची वाहतूक अधिसूचना (वृत्त, सकाळ, २५ ऑक्टोबर):** वाहतूक शाखेचे पोलिस उपायुक्त चंद्रकांत गवळी यांनी ३० आणि ३१ ऑक्टोबरसाठी विशेष अधिसूचना जारी केली आहे. आम्ही सकाळमधील सारांश पाहिला आहे, अधिसूचना स्वतः नाही. [संपूर्ण मार्ग, पर्यायी मार्ग आणि पायी मार्ग](/blog/nashik-traffic-notice-30-31-october-godaghat-no-vehicle-zone-ramtirth-roads-shut-diversions-parking-iim-nagpur-crowd-plan).
+        mr: `**अपडेट, २७ ऑक्टोबर: नाशिक–त्र्यंबकेश्वर रस्ता बंद (वृत्त, प्रहार, सकाळ, टाइम्स ऑफ इंडिया, २६ ऑक्टोबर):** अपर जिल्हादंडाधिकारी रोहितकुमार राजपूत यांच्या आदेशानुसार नेहमीचा नाशिक–त्र्यंबक रस्ता (पिंपळगाव बहुला, खंबाळे, पेगलवाडी) **३० ऑक्टोबर सकाळी ८ ते ३१ ऑक्टोबर रात्री ८ पर्यंत** बंद राहील. अमृत चौक, बारदान फाटा, गोवर्धन, गिरणारे, धोंडेगाव, देवरगाव, वाघेरा फाटा, अंबोली फाटा, सापगावमार्गे जा. TOI नुसार हा प्रवास ३० ऐवजी सुमारे ६१ किमीचा आहे, आणि घोटी–त्र्यंबक रस्ताही बंद आहे (नाशिकमार्गे सुमारे १०४ किमी). शहराच्या अधिसूचनेच्या TOI मधील सविस्तर तपशिलात फूल बाजार, दिल्ली दरवाजा, नेहरू चौक, धुमाळ पॉइंट, मेनरोड व रविवार कारंजामार्गे मिरवणूक मार्ग, गोदा आरतीसाठी प्रवेशबंदी आणि आणखी नो-पार्किंग पट्टे आहेत. [सर्व मार्ग](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route)
+
+**पोलिसांची वाहतूक अधिसूचना (वृत्त, सकाळ, २५ ऑक्टोबर):** वाहतूक शाखेचे पोलिस उपायुक्त चंद्रकांत गवळी यांनी ३० आणि ३१ ऑक्टोबरसाठी विशेष अधिसूचना जारी केली आहे. आम्ही सकाळमधील सारांश पाहिला आहे, अधिसूचना स्वतः नाही. [संपूर्ण मार्ग, पर्यायी मार्ग आणि पायी मार्ग](/blog/nashik-traffic-notice-30-31-october-godaghat-no-vehicle-zone-ramtirth-roads-shut-diversions-parking-iim-nagpur-crowd-plan).
 
 - **रामतीर्थ आणि संपूर्ण गोदाघाट: दोन्ही दिवस वाहनांना बंदी.**
 - **३० ऑक्टोबर, सकाळी ६ पासून मिरवणूक संपेपर्यंत:** मिरवणूक मार्ग तपोवन मैदान, तपोवन क्रॉसिंग, पंचमुखी हनुमान, काट्या मारुती चौक, देवी चौक, गणेशवाडी, गाडगे महाराज पूल, अहिल्याबाई होळकर पूल, रामतीर्थ. बंद: अशोक स्तंभ ते रविवार कारंजा, रेडक्रॉस सिग्नल ते धुमाळ पॉइंट, मालेगाव स्टँड ते मखमलाबाद नाका, दिंडोरी नाका ते मालेगाव स्टँड.
@@ -337,6 +346,20 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
     },
   ],
   sources: [
+    {
+      title: "Police announce traffic restrictions for Dhwajarohan ceremony on Oct 30 and 31",
+      publisher: "Times of India",
+      date: "2026-10-26",
+      url: "https://timesofindia.indiatimes.com/city/nashik/police-announce-traffic-restrictions-for-dhwajarohan-ceremony-on-oct-30-and-31/articleshow/135216705.cms",
+      status: "reported",
+    },
+    {
+      title: "Changes to routes leading to Trimbakeshwar for the Simhastha flag hoisting ceremony, 30 and 31 October",
+      publisher: "Prahaar",
+      date: "2026-10-26",
+      url: "https://www.prahaar.in/2026/10/26/changes-to-routes-leading-to-trimbakeshwar-for-the-simhastha-flag-hoisting-ceremony-traffic-restrictions-to-be-in-effect-on-october-30-and-31/",
+      status: "reported",
+    },
     {
       title: "Nashik sets world record with 517 people blowing conch shells ahead of Kumbh Mela",
       publisher: "PTI",
@@ -624,9 +647,9 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
     en: "/images/og/share/dhwajarohan-2026-en.jpg",
   },
   forward: {
-    mr: "🚩 सिंहस्थ कुंभमेळ्याचे ध्वजारोहण\n📅 शनिवार, ३१ ऑक्टोबर २०२६\n🕛 दुपारी १२:०२\n📍 रामकुंड, नाशिक आणि कुशावर्त, त्र्यंबकेश्वर\n🪔 सायंकाळी सुमारे ६ वाजता महा गोदा आरती (वृत्त)\nवाहतूक, पार्किंग आणि थेट अपडेट:",
-    hi: "🚩 सिंहस्थ कुंभ मेले का ध्वजारोहण\n📅 शनिवार, 31 अक्टूबर 2026\n🕛 दोपहर 12:02\n📍 रामकुंड, नाशिक और कुशावर्त, त्र्यंबकेश्वर\n🪔 शाम करीब 6 बजे महा गोदा आरती (रिपोर्ट)\nट्रैफ़िक, पार्किंग और लाइव अपडेट:",
-    en: "🚩 Simhastha Kumbh flag hoisting\n📅 Saturday 31 October 2026\n🕛 12:02 PM\n📍 Ramkund, Nashik and Kushavarta, Trimbakeshwar\n🪔 Maha Goda Aarti at about 6 PM (reported)\nTraffic, parking and live updates:",
+    mr: "🚩 सिंहस्थ कुंभमेळ्याचे ध्वजारोहण\n📅 शनिवार, ३१ ऑक्टोबर २०२६\n🕛 दुपारी १२:०२\n📍 रामकुंड, नाशिक आणि कुशावर्त, त्र्यंबकेश्वर\n🪔 सायंकाळी ६–७ दरम्यान महा गोदा आरती (वृत्तांत फरक)\nवाहतूक, पार्किंग आणि थेट अपडेट:",
+    hi: "🚩 सिंहस्थ कुंभ मेले का ध्वजारोहण\n📅 शनिवार, 31 अक्टूबर 2026\n🕛 दोपहर 12:02\n📍 रामकुंड, नाशिक और कुशावर्त, त्र्यंबकेश्वर\n🪔 शाम 6–7 बजे महा गोदा आरती (ख़बरों में फ़र्क़)\nट्रैफ़िक, पार्किंग और लाइव अपडेट:",
+    en: "🚩 Simhastha Kumbh flag hoisting\n📅 Saturday 31 October 2026\n🕛 12:02 PM\n📍 Ramkund, Nashik and Kushavarta, Trimbakeshwar\n🪔 Maha Goda Aarti at 6–7 PM (reports differ)\nTraffic, parking and live updates:",
   },
   pinnedCards: [
     {
@@ -642,9 +665,9 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
         en: "/images/og/share/dhwajarohan-card-2026-en.jpg",
       },
       text: {
-        mr: "🚩 सिंहस्थ कुंभमेळ्याचे ध्वजारोहण\n📅 शनिवार, ३१ ऑक्टोबर २०२६\n🕛 दुपारी १२.०२ (अधिकृत)\n📍 रामकुंड, पंचवटी, नाशिक आणि कुशावर्त, त्र्यंबकेश्वर (एकाच वेळी)\n🪔 महा गोदा आरती सायंकाळी सुमारे ६ वाजता (वृत्त)\n🚶 गोदाघाट 'नो व्हेईकल झोन'; रामतीर्थाकडील रस्ते सकाळी ६ ते मध्यरात्री बंद (वृत्त). संभाजी उद्यान, शिवाजी स्टेडियम, भालेकर मैदान, रुंगठा स्कूल, शिंदे मळा किंवा गौरी पटांगण येथे गाडी लावून चालत जा.\nथेट अपडेट:",
-        hi: "🚩 सिंहस्थ कुंभ मेले का ध्वजारोहण\n📅 शनिवार, 31 अक्टूबर 2026\n🕛 दोपहर 12:02 (आधिकारिक)\n📍 रामकुंड, पंचवटी, नाशिक और कुशावर्त, त्र्यंबकेश्वर (एक साथ)\n🪔 महा गोदा आरती शाम करीब 6 बजे (रिपोर्ट)\n🚶 गोदाघाट 'नो व्हीकल ज़ोन'; रामतीर्थ के रास्ते सुबह 6 से आधी रात तक बंद (रिपोर्ट)। संभाजी उद्यान, शिवाजी स्टेडियम, भालेकर मैदान, रुंगठा स्कूल, शिंदे मळा या गौरी पटांगण पर गाड़ी लगाकर पैदल जाएँ।\nलाइव अपडेट:",
-        en: "🚩 Simhastha Kumbh flag hoisting\n📅 Saturday 31 October 2026\n🕛 12:02 PM (official)\n📍 Ramkund, Panchavati, Nashik and Kushavarta, Trimbakeshwar (same moment)\n🪔 Maha Goda Aarti at about 6 PM (reported)\n🚶 Godaghat is a no-vehicle zone; roads to Ramtirth shut 6 AM to midnight (reported). Park at Sambhaji Garden, Shivaji Stadium, Bhalekar ground, Rungtha School, Shinde Mala or Gauri Patangan and walk.\nLive updates:",
+        mr: "🚩 सिंहस्थ कुंभमेळ्याचे ध्वजारोहण\n📅 शनिवार, ३१ ऑक्टोबर २०२६\n🕛 दुपारी १२.०२ (अधिकृत)\n📍 रामकुंड, पंचवटी, नाशिक आणि कुशावर्त, त्र्यंबकेश्वर (एकाच वेळी)\n🪔 महा गोदा आरती सायंकाळी ६–७ दरम्यान (वृत्तांत फरक)\n🚶 गोदाघाट 'नो व्हेईकल झोन'; रामतीर्थाकडील रस्ते सकाळी ६ ते मध्यरात्री बंद (वृत्त). संभाजी उद्यान, शिवाजी स्टेडियम, भालेकर मैदान, रुंगठा स्कूल, शिंदे मळा किंवा गौरी पटांगण येथे गाडी लावून चालत जा.\nथेट अपडेट:",
+        hi: "🚩 सिंहस्थ कुंभ मेले का ध्वजारोहण\n📅 शनिवार, 31 अक्टूबर 2026\n🕛 दोपहर 12:02 (आधिकारिक)\n📍 रामकुंड, पंचवटी, नाशिक और कुशावर्त, त्र्यंबकेश्वर (एक साथ)\n🪔 महा गोदा आरती शाम 6–7 बजे (ख़बरों में फ़र्क़)\n🚶 गोदाघाट 'नो व्हीकल ज़ोन'; रामतीर्थ के रास्ते सुबह 6 से आधी रात तक बंद (रिपोर्ट)। संभाजी उद्यान, शिवाजी स्टेडियम, भालेकर मैदान, रुंगठा स्कूल, शिंदे मळा या गौरी पटांगण पर गाड़ी लगाकर पैदल जाएँ।\nलाइव अपडेट:",
+        en: "🚩 Simhastha Kumbh flag hoisting\n📅 Saturday 31 October 2026\n🕛 12:02 PM (official)\n📍 Ramkund, Panchavati, Nashik and Kushavarta, Trimbakeshwar (same moment)\n🪔 Maha Goda Aarti at 6–7 PM (reports differ)\n🚶 Godaghat is a no-vehicle zone; roads to Ramtirth shut 6 AM to midnight (reported). Park at Sambhaji Garden, Shivaji Stadium, Bhalekar ground, Rungtha School, Shinde Mala or Gauri Patangan and walk.\nLive updates:",
       },
     },
   ],
@@ -674,6 +697,36 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   },
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
+    {
+      time: "2026-10-27T09:45:00+05:30",
+      headline: {
+        en: "Nashik–Trimbak road closed 8 AM 30 Oct to 8 PM 31 Oct; detour via Girnare; Goda Aarti entry bans listed",
+        hi: "नाशिक–त्र्यंबक मार्ग 30 अक्टूबर सुबह 8 से 31 अक्टूबर रात 8 बजे तक बंद; गिरणारे होकर रास्ता; गोदा आरती की प्रवेशबंदी तय",
+        mr: "नाशिक–त्र्यंबक रस्ता ३० ऑक्टो. सकाळी ८ ते ३१ ऑक्टो. रात्री ८ बंद; गिरणारेमार्गे पर्याय; गोदा आरतीसाठी प्रवेशबंदी",
+      },
+      body: {
+        en: "ADM Rohitkumar Rajput's order sends Trimbak traffic via Govardhan, Girnare and Sapgaon (Prahaar, Sakal); TOI puts it at 61 km instead of 30 and says the Ghoti–Trimbak road is also shut. TOI's account of the city police notice gives the procession route via Main Road, the Goda Aarti at 7 PM (others said 6 PM or 6:45 PM), entry bans from Ekmukhi Datta to Gharpure Ghat, and the President's route Ozar–Ramkund–Trimbak–Ramkund. [Details](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route)",
+        hi: "अपर ज़िला दंडाधिकारी रोहितकुमार राजपूत के आदेश से त्र्यंबक का ट्रैफ़िक गोवर्धन, गिरणारे और सापगाँव होकर (प्रहार, सकाळ); TOI के अनुसार 30 की जगह 61 किमी, और घोटी–त्र्यंबक मार्ग भी बंद। शहर पुलिस अधिसूचना के TOI ब्योरे में मेन रोड होकर शोभायात्रा, शाम 7 बजे गोदा आरती (दूसरों ने 6 या 6:45 बताया था), एकमुखी दत्त से घारपुरे घाट तक प्रवेशबंदी, और राष्ट्रपति का मार्ग ओझर–रामकुंड–त्र्यंबक–रामकुंड। [पूरी ख़बर](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route)",
+        mr: "अपर जिल्हादंडाधिकारी रोहितकुमार राजपूत यांच्या आदेशाने त्र्यंबकची वाहतूक गोवर्धन, गिरणारे, सापगावमार्गे (प्रहार, सकाळ); TOI नुसार ३० ऐवजी ६१ किमी, आणि घोटी–त्र्यंबक रस्ताही बंद. शहर पोलिस अधिसूचनेच्या TOI तपशिलात मेनरोडमार्गे मिरवणूक, सायंकाळी ७ वाजता गोदा आरती (इतरांनी ६ किंवा पावणेसात सांगितले होते), एकमुखी दत्त ते घारपुरे घाट प्रवेशबंदी, आणि राष्ट्रपतींचा मार्ग ओझर–रामकुंड–त्र्यंबक–रामकुंड. [सविस्तर](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route)",
+      },
+      status: "reported",
+      source: "Times of India, Prahaar, Sakal",
+    },
+    {
+      time: "2026-10-27T09:40:00+05:30",
+      headline: {
+        en: "Shinde: Shiv Sena to arrange meals for saints of all 13 akhadas",
+        hi: "शिंदे: सभी 13 अखाड़ों के संतों के भोजन की व्यवस्था शिवसेना करेगी",
+        mr: "शिंदे: १३ आखाड्यांतील संतांच्या भोजनाची व्यवस्था शिवसेना करणार",
+      },
+      body: {
+        en: "At a Shiv Sena saints' meet in Trimbak on 26 Oct, Deputy CM Eknath Shinde also promised pucca homes for families displaced by Kumbh works, compensation for traders and farmers, land for a Trimbak stadium and a 100-bed sub-district hospital; in Nashik he broke ground for the parallel Gangapur Road. No written order yet. [Details](/blog/shinde-shiv-sena-to-feed-saints-of-13-akhadas-trimbak-sant-sammelan-rehab-homes-stadium-gangapur-road)",
+        hi: "26 अक्टूबर को त्र्यंबक में शिवसेना के संत सम्मेलन में उपमुख्यमंत्री एकनाथ शिंदे ने कुंभ कामों से विस्थापित परिवारों को पक्के घर, व्यापारियों और किसानों को मुआवज़ा, त्र्यंबक स्टेडियम के लिए ज़मीन और 100 बेड के उपजिला अस्पताल का वादा भी किया; नाशिक में समानांतर गंगापुर रोड का भूमिपूजन किया। अभी कोई लिखित आदेश नहीं। [पूरी ख़बर](/blog/shinde-shiv-sena-to-feed-saints-of-13-akhadas-trimbak-sant-sammelan-rehab-homes-stadium-gangapur-road)",
+        mr: "२६ ऑक्टोबरला त्र्यंबकमधील शिवसेनेच्या संत संमेलनात उपमुख्यमंत्री एकनाथ शिंदे यांनी कुंभ कामांमुळे बाधित कुटुंबांना पक्की घरे, व्यापारी व शेतकऱ्यांना नुकसानभरपाई, त्र्यंबक स्टेडियमसाठी जागा आणि १०० खाटांचे उपजिल्हा रुग्णालय अशी आश्वासनेही दिली; नाशिकमध्ये समांतर गंगापूर रोडचे भूमिपूजन केले. अद्याप लेखी आदेश नाही. [सविस्तर](/blog/shinde-shiv-sena-to-feed-saints-of-13-akhadas-trimbak-sant-sammelan-rehab-homes-stadium-gangapur-road)",
+      },
+      status: "reported",
+      source: "Sarkarnama, Prahaar, FPJ",
+    },
     {
       time: "2026-10-26T09:50:00+05:30",
       headline: {
@@ -912,9 +965,9 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
     {
       q: { mr: "महा गोदा आरती किती वाजता आहे?", hi: "महा गोदा आरती कितने बजे है?", en: "What time is the Maha Goda Aarti?" },
       a: {
-        mr: "३१ ऑक्टोबरच्या सायंकाळी सुमारे ६ वाजता रामकुंडावर, असे वृत्त आहे. अधिकृत छापील कार्यक्रम अजून आलेला नाही.",
-        hi: "रिपोर्ट के अनुसार 31 अक्टूबर की शाम करीब 6 बजे, रामकुंड पर। आधिकारिक छपा कार्यक्रम अभी नहीं आया है।",
-        en: "About 6 PM on 31 October at Ramkund, as reported. No official printed programme has been published yet.",
+        mr: "३१ ऑक्टोबरच्या सायंकाळी, रामकुंडावर. वेळेबाबत वृत्तांत फरक आहे: टाइम्स ऑफ इंडियानुसार पोलिस अधिसूचनेत ७ वाजता, तर आधीच्या वृत्तांत ६ किंवा पावणेसात. अधिकृत छापील कार्यक्रम अजून आलेला नाही.",
+        hi: "31 अक्टूबर की शाम, रामकुंड पर। समय पर ख़बरों में फ़र्क़ है: टाइम्स ऑफ इंडिया के अनुसार पुलिस अधिसूचना में 7 बजे, जबकि पहले की ख़बरों में 6 या 6:45 बजे। आधिकारिक छपा कार्यक्रम अभी नहीं आया है।",
+        en: "On the evening of 31 October at Ramkund. Reports differ on the time: the police notice, as reported by the Times of India, says 7 PM; earlier reports said 6 PM or 6:45 PM. No official printed programme has been published yet.",
       },
     },
     {

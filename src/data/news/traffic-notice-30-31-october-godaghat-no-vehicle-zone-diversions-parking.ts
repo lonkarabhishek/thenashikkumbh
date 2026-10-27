@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "३०–३१ ऑक्टोबरची पोलिस वाहतूक अधिसूचना: गोदाघाट 'नो व्हेईकल झोन', ३१ ऑक्टोबरला सकाळी ६ ते मध्यरात्रीपर्यंत रामतीर्थाकडील रस्ते बंद, पर्यायी मार्ग आणि आठ वाहनतळ; अमृत स्नानाला सव्वा दोन कोटी भाविकांचा IIM नागपूरचा अंदाज",
   },
   date: "2026-10-26",
+  updated: "2026-10-27",
+  followUp: { slug: "nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route", date: "2026-10-27" },
   originallyAnnounced: "2026-10-25",
   source: "Sakal",
   sources: [
