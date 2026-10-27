@@ -44,6 +44,24 @@
   outline-offset: 2px;
 }
 
+/* Print only the Khoya-Paya card. The class is added for that print call. */
+@media print {
+  body.family-card-printing * {
+    visibility: hidden;
+  }
+  body.family-card-printing #family-safety-card {
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 180mm;
+    max-width: none;
+    height: auto;
+    border: none;
+    box-shadow: none;
+  }
+}
+
 /* Honour prefers-reduced-motion: kill site-wide transitions and animations,
    and disable smooth scroll. Individual components can override with a
    `.motion-safe:` variant if the motion is essential to meaning. */

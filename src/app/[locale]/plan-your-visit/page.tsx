@@ -22,6 +22,7 @@ const RELATED = [
   { href: "/kumbh-countdown", label: { en: 'Nashik Kumbh 2027 countdown', hi: 'नाशिक कुंभ 2027 काउंटडाउन', mr: 'नाशिक कुंभ २०२७ काउंटडाउन' } },
   { href: "/dates", label: { en: 'Amrit Snan and Kumbh dates 2027', hi: 'अमृत स्नान और कुंभ तिथियाँ 2027', mr: 'अमृत स्नान आणि कुंभ तारखा २०२७' } },
   { href: "/map", label: { en: 'Kumbh map of Nashik and Trimbakeshwar', hi: 'नाशिक और त्र्यंबकेश्वर का कुंभ नक्शा', mr: 'नाशिक आणि त्र्यंबकेश्वरचा कुंभ नकाशा' } },
+  { href: "/family-card", label: { en: 'Khoya-Paya family card if someone is lost in the crowd', hi: 'भीड़ में बिछड़ने पर खोया-पाया परिवार कार्ड', mr: 'गर्दीत हरवल्यास खोया-पाया कुटुंब कार्ड' } },
 ];
 
 export default function Page({ params }: Params) {

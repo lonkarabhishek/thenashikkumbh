@@ -350,6 +350,12 @@ const essentialTips: {
   },
 ];
 
+const FAMILY_CARD_LINK: T = {
+  en: "Make a Khoya-Paya family card",
+  hi: "खोया-पाया परिवार कार्ड बनाएँ",
+  mr: "खोया-पाया कुटुंब कार्ड तयार करा",
+};
+
 /* ───────────────────────────── page ───────────────────────────── */
 
 export default function PilgrimGuidePage() {
@@ -785,6 +791,15 @@ export default function PilgrimGuidePage() {
                 ) : (
                   <p className="mt-3 leading-relaxed text-cream-300/60">
                     {tip.content && t(tip.content)}
+                    {tip.titleKey === translations.guidePage.generalSafetyTitle && (
+                      <>
+                        {" "}
+                        <Link href="/family-card" className="font-semibold text-gold-300 underline">
+                          {t(FAMILY_CARD_LINK)}
+                        </Link>
+                        .
+                      </>
+                    )}
                   </p>
                 )}
               </div>

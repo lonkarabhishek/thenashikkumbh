@@ -2,7 +2,7 @@ import type { InfoPageContent } from "@/content/pages/types";
 
 export const page: InfoPageContent = {
   path: "/how-to-reach",
-  updated: "2026-10-06",
+  updated: "2026-10-27",
   crumb: {
     en: "How to reach",
     hi: "कैसे पहुंचें",
@@ -327,15 +327,18 @@ If you see these on social media or other websites before an official release, t
         en: `- Check the snan dates first on [Kumbh 2027 dates](/dates), so you know which days will have the bus-only rules.
 - Look for a place to stay on [Accommodation](/accommodation).
 - Going to Kushavarta? Read [Trimbakeshwar Kumbh 2027](/trimbakeshwar-kumbh-2027).
-- For packing, safety and general tips, see the [pilgrim guide](/guide).`,
+- For packing, safety and general tips, see the [pilgrim guide](/guide).
+- Before you travel, make a [Khoya-Paya family card](/family-card) with a name, a phone number and a meeting point. It is created in your browser and is not saved on our servers.`,
         hi: `- पहले [कुंभ 2027 की तिथियां](/dates) देखें, ताकि पता रहे किन दिनों में केवल बस वाले नियम लागू होंगे।
 - रहने की जगह के लिए [आवास](/accommodation) पेज देखें।
 - कुशावर्त जा रहे हैं? [त्र्यंबकेश्वर कुंभ 2027](/trimbakeshwar-kumbh-2027) पढ़ें।
-- सामान, सुरक्षा और सामान्य सलाह के लिए [श्रद्धालु गाइड](/guide) देखें।`,
+- सामान, सुरक्षा और सामान्य सलाह के लिए [श्रद्धालु गाइड](/guide) देखें।
+- यात्रा से पहले नाम, फ़ोन नंबर और मिलने की जगह वाला [खोया-पाया परिवार कार्ड](/family-card) बना लें। यह आपके ब्राउज़र में बनता है और हमारे सर्वर पर सेव नहीं होता।`,
         mr: `- आधी [कुंभ २०२७ च्या तारखा](/dates) पाहा, म्हणजे कोणत्या दिवशी फक्त बसचे नियम लागू असतील ते कळेल.
 - राहण्याच्या सोयीसाठी [निवास](/accommodation) हे पान पाहा.
 - कुशावर्ताला जाणार असाल तर [त्र्यंबकेश्वर कुंभ २०२७](/trimbakeshwar-kumbh-2027) वाचा.
-- सामान, सुरक्षितता आणि इतर सूचनांसाठी [भाविक मार्गदर्शक](/guide) पाहा.`,
+- सामान, सुरक्षितता आणि इतर सूचनांसाठी [भाविक मार्गदर्शक](/guide) पाहा.
+- प्रवासापूर्वी नाव, फोन क्रमांक आणि भेटीचे ठिकाण असलेले [खोया-पाया कुटुंब कार्ड](/family-card) तयार करा. ते ब्राउझरमध्ये बनते आणि आमच्या सर्व्हरवर सेव्ह होत नाही.`,
       },
     },
   ],

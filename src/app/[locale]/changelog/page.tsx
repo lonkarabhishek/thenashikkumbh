@@ -29,6 +29,13 @@ interface Entry {
 
 const ENTRIES: Entry[] = [
   {
+    date: "2026-10-27",
+    title: "Khoya-Paya family card",
+    body: [
+      "Added a family safety card at /family-card in Marathi, Hindi and English. A visitor types a name, phone number, optional stay, meeting point and a short note. The card, QR code, PNG and PDF are made in the browser. Nothing is uploaded or saved on the server. The QR code contains only the name, phone number and meeting point. This is not an official lost-and-found desk.",
+    ],
+  },
+  {
     date: "2026-10-07",
     title: "Nine news posts, a cleaner news section, 50 credited photos",
     body: [

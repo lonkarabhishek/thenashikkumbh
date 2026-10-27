@@ -5,19 +5,20 @@
  * Blog posts use their own `updated`/`date` fields instead.
  */
 export const PAGE_LASTMOD: Record<string, string> = {
-  "/": "2026-10-18",
+  "/": "2026-10-27",
   "/dates": "2026-10-26",
   "/kumbh-countdown": "2026-10-15",
   "/kumbh-status": "2026-10-15",
-  "/plan-your-visit": "2026-10-15",
+  "/plan-your-visit": "2026-10-27",
   "/share-snan-card": "2026-10-15",
+  "/family-card": "2026-10-27",
   "/map": "2026-10-15",
   "/parva-snan-calendar": "2026-10-07",
   "/dhwajarohan-2026": "2026-10-27",
   "/trimbakeshwar-kumbh-2027": "2026-10-07",
-  "/how-to-reach": "2026-10-06",
+  "/how-to-reach": "2026-10-27",
   "/accommodation": "2026-10-06",
-  "/guide": "2026-10-07",
+  "/guide": "2026-10-27",
   "/ghats": "2026-10-19",
   "/events": "2026-10-06",
   "/blog": "2026-10-27",
@@ -31,7 +32,7 @@ export const PAGE_LASTMOD: Record<string, string> = {
   "/kumbhrun": "2026-09-27",
   "/emergency": "2026-09-27",
   "/policies": "2026-09-27",
-  "/changelog": "2026-10-07",
+  "/changelog": "2026-10-27",
   "/businesses": "2026-09-27",
 };
 

@@ -240,9 +240,9 @@ export const chatTopics: ChatTopic[] = [
   {
     id: "safety",
     keywords: {
-      en: ["safety", "security", "safe", "police", "cctv", "crowd", "hospital", "war room"],
-      hi: ["सुरक्षा", "पुलिस", "भीड़", "अस्पताल", "सीसीटीवी"],
-      mr: ["सुरक्षा", "पोलीस", "गर्दी", "रुग्णालय", "सीसीटीव्ही"],
+      en: ["safety", "security", "safe", "police", "cctv", "crowd", "hospital", "war room", "lost", "khoya", "family card"],
+      hi: ["सुरक्षा", "पुलिस", "भीड़", "अस्पताल", "सीसीटीवी", "खोया", "खोया-पाया"],
+      mr: ["सुरक्षा", "पोलीस", "गर्दी", "रुग्णालय", "सीसीटीव्ही", "खोया", "हरवले"],
     },
     question: {
       en: "Is Kumbh Mela safe to visit?",
@@ -250,9 +250,9 @@ export const chatTopics: ChatTopic[] = [
       mr: "कुंभमेळ्याला जाणे सुरक्षित आहे का?",
     },
     answer: {
-      en: "For any real emergency, dial 112 first. What has been announced so far: about 4,000 CCTV cameras in Nashik and 1,000 in Trimbakeshwar, a third command centre, a ₹260 crore health plan and a ₹92 crore fire and disaster plan. The ghat-wise crowd plan and lost-and-found locations are not published yet. Stay with your group, agree a meeting point that is a place not a person, and follow police directions.",
-      hi: "किसी भी आपात स्थिति में पहले 112 डायल करें। अब तक घोषित: नाशिक में लगभग 4,000 और त्र्यंबकेश्वर में 1,000 CCTV कैमरे, तीसरा कमांड सेंटर, ₹260 करोड़ की स्वास्थ्य योजना और ₹92 करोड़ की अग्नि व आपदा योजना। घाटवार भीड़ योजना और खोया-पाया केंद्रों की जगह अभी घोषित नहीं हुई। अपने समूह के साथ रहें, मिलने की जगह (व्यक्ति नहीं, स्थान) तय करें और पुलिस के निर्देश मानें।",
-      mr: "कोणत्याही आपत्कालीन स्थितीत आधी ११२ डायल करा. आतापर्यंत जाहीर: नाशिकमध्ये सुमारे ४,००० आणि त्र्यंबकेश्वरमध्ये १,००० CCTV कॅमेरे, तिसरे कमांड सेंटर, ₹२६० कोटींची आरोग्य योजना आणि ₹९२ कोटींची अग्नी व आपत्ती योजना. घाटनिहाय गर्दी योजना आणि हरवले-सापडले केंद्रांची ठिकाणे अजून जाहीर झालेली नाहीत. गटासोबत राहा, भेटण्याची जागा (माणूस नव्हे, ठिकाण) ठरवा आणि पोलिसांच्या सूचना पाळा.",
+      en: "For any real emergency, dial 112 first. What has been announced so far: about 4,000 CCTV cameras in Nashik and 1,000 in Trimbakeshwar, a third command centre, a ₹260 crore health plan and a ₹92 crore fire and disaster plan. The ghat-wise crowd plan and lost-and-found locations are not published yet. Stay with your group, agree a meeting point that is a place not a person, and follow police directions. You can make a Khoya-Paya family card on this site (/family-card): a name, phone number and meeting point, with a QR code, created in the browser and not saved on our servers.",
+      hi: "किसी भी आपात स्थिति में पहले 112 डायल करें। अब तक घोषित: नाशिक में लगभग 4,000 और त्र्यंबकेश्वर में 1,000 CCTV कैमरे, तीसरा कमांड सेंटर, ₹260 करोड़ की स्वास्थ्य योजना और ₹92 करोड़ की अग्नि व आपदा योजना। घाटवार भीड़ योजना और खोया-पाया केंद्रों की जगह अभी घोषित नहीं हुई। अपने समूह के साथ रहें, मिलने की जगह (व्यक्ति नहीं, स्थान) तय करें और पुलिस के निर्देश मानें। इस साइट पर खोया-पाया परिवार कार्ड (/family-card) बना सकते हैं: नाम, फ़ोन नंबर और मिलने की जगह, QR कोड के साथ, ब्राउज़र में बनता है और हमारे सर्वर पर सेव नहीं होता।",
+      mr: "कोणत्याही आपत्कालीन स्थितीत आधी ११२ डायल करा. आतापर्यंत जाहीर: नाशिकमध्ये सुमारे ४,००० आणि त्र्यंबकेश्वरमध्ये १,००० CCTV कॅमेरे, तिसरे कमांड सेंटर, ₹२६० कोटींची आरोग्य योजना आणि ₹९२ कोटींची अग्नी व आपत्ती योजना. घाटनिहाय गर्दी योजना आणि हरवले-सापडले केंद्रांची ठिकाणे अजून जाहीर झालेली नाहीत. गटासोबत राहा, भेटण्याची जागा (माणूस नव्हे, ठिकाण) ठरवा आणि पोलिसांच्या सूचना पाळा. या साइटवर खोया-पाया कुटुंब कार्ड (/family-card) तयार करता येते: नाव, फोन क्रमांक आणि भेटीचे ठिकाण, QR कोडासह, ब्राउझरमध्ये बनते आणि आमच्या सर्व्हरवर सेव्ह होत नाही.",
     },
     relatedTopics: ["emergency", "dos-donts", "what-to-carry"],
     pageLink: "/guide",

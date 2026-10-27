@@ -120,6 +120,7 @@ const HOME_COPY = {
     hi: "आपातकालीन नंबर बिना इंटरनेट काम करते हैं: 112 पुलिस, 108 एम्बुलेंस, 101 अग्निशमन। कमरे से निकलने से पहले सहेज लें।",
     mr: "आपत्कालीन क्रमांक इंटरनेटशिवाय चालतात: ११२ पोलीस, १०८ रुग्णवाहिका, १०१ अग्निशमन. खोलीतून निघण्यापूर्वी जतन करा.",
   },
+  familyCard: { en: "Khoya-Paya card", hi: "खोया-पाया कार्ड", mr: "खोया-पाया कार्ड" },
 
   akhadaKicker: { en: "The orders", hi: "अखाड़े", mr: "आखाडे" },
   akhadaTitle: {
@@ -416,6 +417,9 @@ export default function HomePage({ news, glimpses }: { news: LatestItem[]; glimp
               <Link href="/guide" className="btn-secondary">
                 <Navigation className="h-4 w-4" />
                 {t(translations.nav.guide)}
+              </Link>
+              <Link href="/family-card" className="btn-secondary">
+                {t(HOME_COPY.familyCard)}
               </Link>
             </div>
           </Reveal>
