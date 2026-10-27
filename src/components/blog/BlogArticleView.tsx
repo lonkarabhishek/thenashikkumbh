@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "@/components/LocaleLink";
-import AuthorBox from "@/components/trust/AuthorBox";
 import DatesCanonicalNote from "@/components/trust/DatesCanonicalNote";
 import { DATE_INTENT_SLUGS } from "@/data/siteOwner";
 import NewsRelatedGuides from "@/components/seo/NewsRelatedGuides";
@@ -348,8 +347,6 @@ export default function BlogArticleView({
               </div>
             </section>
           )}
-
-          <AuthorBox />
 
           {/* Sources */}
           <NewsRelatedGuides currentSlug={article.slug} />
