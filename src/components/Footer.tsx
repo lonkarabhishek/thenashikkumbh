@@ -1,5 +1,6 @@
 "use client";
 
+import CookieSettingsLink from "@/components/consent/CookieSettingsLink";
 import Link from "@/components/LocaleLink";
 import { Facebook, Instagram, Mail, Phone } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
@@ -230,6 +231,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
+              <CookieSettingsLink className="hover:text-cream-50" />
               <Link href="/credits" className="hover:text-cream-50">
                 {t({ en: "Photo credits", hi: "फोटो श्रेय", mr: "फोटो श्रेय" })}
               </Link>
