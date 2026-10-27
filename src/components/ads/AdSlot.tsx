@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { AD_CLIENT, AD_SLOTS, type AdPlacement } from "@/data/ads";
+import { useConsent } from "@/lib/consent";
 
 declare global {
   interface Window {
@@ -21,19 +22,21 @@ const LABEL = { en: "Advertisement", hi: "विज्ञापन", mr: "जा
 export default function AdSlot({ placement, className = "" }: { placement: AdPlacement; className?: string }) {
   const { locale } = useLanguage();
   const slot = AD_SLOTS[placement];
+  const consent = useConsent();
+  const active = Boolean(slot) && consent === "all";
   const pushed = useRef(false);
 
   useEffect(() => {
-    if (!slot || pushed.current) return;
+    if (!active || pushed.current) return;
     pushed.current = true;
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch {
       // An ad blocker or a failed script load; the box stays empty.
     }
-  }, [slot]);
+  }, [active]);
 
-  if (!slot) return null;
+  if (!active) return null;
 
   return (
     <aside aria-label={LABEL[locale]} className={`my-10 ${className}`}>
