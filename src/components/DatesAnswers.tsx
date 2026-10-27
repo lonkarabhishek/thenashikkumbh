@@ -51,7 +51,7 @@ const QUICK_SOURCES = (() => {
 
 const COPY = {
   quickTitle: {
-    en: "Amrit Snan dates 2027 (Shahi Snan) at a glance",
+    en: "When is the Kumbh Mela in Nashik? 2027 dates at a glance",
     hi: "अमृत स्नान तिथियाँ 2027 (शाही स्नान) एक नज़र में",
     mr: "नाशिक कुंभमेळा कधी आहे? अमृत स्नान (शाही स्नान) तारखा 2027",
   },

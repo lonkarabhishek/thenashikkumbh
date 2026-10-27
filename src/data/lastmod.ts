@@ -6,7 +6,7 @@
  */
 export const PAGE_LASTMOD: Record<string, string> = {
   "/": "2026-10-27",
-  "/dates": "2026-10-26",
+  "/dates": "2026-10-27",
   "/kumbh-countdown": "2026-10-15",
   "/kumbh-status": "2026-10-15",
   "/plan-your-visit": "2026-10-27",
