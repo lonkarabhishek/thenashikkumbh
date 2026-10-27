@@ -61,9 +61,14 @@ import { article as trimbakPresidentPlan } from "./trimbak-31-october-president-
 import { article as ramkundGhatWorks } from "./ramkund-ghat-works-hc-order-allegation";
 import { article as shankhnaadRecord } from "./shankhnaad-guinness-world-record-517-conches-certificate-31-october";
 import { article as trafficNotice } from "./traffic-notice-30-31-october-godaghat-no-vehicle-zone-diversions-parking";
+import { article as trimbakRoadClosed } from "./trimbak-road-closed-30-31-october-girnare-detour-goda-aarti-entry-bans";
+import { article as shindeAkhadaMeals } from "./shinde-shiv-sena-meals-13-akhadas-trimbak-pledges-gangapur-road";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 and 26 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 and 27 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 27 October 2026
+  trimbakRoadClosed,
+  shindeAkhadaMeals,
   // 26 October 2026
   shankhnaadRecord,
   trafficNotice,

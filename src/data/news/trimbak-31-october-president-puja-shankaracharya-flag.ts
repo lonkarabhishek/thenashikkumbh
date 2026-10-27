@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "३१ ऑक्टोबर, त्र्यंबकेश्वर: वृत्तानुसार राष्ट्रपती दुपारी २ वाजता कुशावर्तावर १२ मिनिटांचे गोदापूजन करणार; ध्वजारोहण शंकराचार्यांच्या हस्ते; नाशिकसाठी पास आणि बैठक व्यवस्था",
   },
   date: "2026-10-25",
+  updated: "2026-10-27",
+  followUp: { slug: "nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route", date: "2026-10-27" },
   originallyAnnounced: "2026-10-24",
   source: "Sarkarnama (eSakal)",
   sources: [
