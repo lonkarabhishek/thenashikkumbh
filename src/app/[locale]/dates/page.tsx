@@ -64,6 +64,14 @@ const RELATED_GUIDES_TITLE = {
 
 const RELATED_GUIDES = [
   {
+    href: "/parva-snan-calendar",
+    label: {
+      en: "Full Nashik Kumbh Mela time table: every snan day to July 2028",
+      hi: "पूरा नाशिक कुंभ मेला टाइम टेबल: जुलाई 2028 तक हर स्नान का दिन",
+      mr: "संपूर्ण नाशिक कुंभमेळा वेळापत्रक: जुलै २०२८ पर्यंतची प्रत्येक पर्वणी",
+    },
+  },
+  {
     href: "/ghats",
     label: {
       en: "Ramkund and Godavari bathing places",
