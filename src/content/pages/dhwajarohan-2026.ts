@@ -158,6 +158,7 @@ What this means for you: NTKMA Commissioner Shekhar Singh has asked the Nashik M
 Plan with what is known today:
 
 - Do not expect to reach the water's edge at 12:02 PM without an invitation. Space is small and invitations are limited.
+- **No direct entry to Ramkund for the general public on 31 October** (REPORTED, Navbharat, 28 October): only VVIPs and special guests get in. Up to 1 lakh people are expected against a Godaghat capacity of about 30,000 to 35,000. Citizen seating is reported from Devmamledar ground to Rokdoba ground, with barricades on Godaghat roads from 30 October. [Details](/blog/ramkund-no-general-entry-31-october-1-lakh-crowd-cctv-control-rooms-rehearsal-president-day-plan)
 - Expect big crowds on 30 October too. About one lakh devotees are reported to be expected for the Gram Pradakshina. Avoid driving on Main Road and in Panchavati that afternoon and evening.
 - The police traffic notice is out (REPORTED, Sakal, 25 October): Ramtirth and the whole Godaghat are a no-vehicle zone on 30 and 31 October, and the main roads to Ramtirth close from 6 AM to midnight on 31 October. See "Routes, closures and parking" below.
 - **Trimbakeshwar on 30–31 October:** the usual Nashik–Trimbak road is closed from 8 AM on 30 October to 8 PM on 31 October; the detour via Girnare is about twice as long (REPORTED, 26 October). See "Routes, closures and parking" below.
@@ -176,6 +177,7 @@ On 2 September, Singh had said Ramkund would be finished by 15 October. That dea
 आज की जानकारी के आधार पर योजना बनाएं:
 
 - बिना निमंत्रण के 12:02 बजे पानी के किनारे तक पहुंचने की उम्मीद न रखें। जगह कम है और निमंत्रण सीमित हैं।
+- **31 अक्टूबर को आम श्रद्धालुओं का रामकुंड में सीधा प्रवेश नहीं** (रिपोर्ट, नवभारत, 28 अक्टूबर): सिर्फ़ VVIP और विशेष अतिथि जा सकेंगे। करीब 30 से 35 हज़ार क्षमता वाले गोदाघाट पर 1 लाख तक लोगों का अनुमान है। नागरिकों के बैठने की जगह देवमामलेदार मैदान से रोकडोबा मैदान तक बताई गई है, और 30 अक्टूबर से गोदाघाट की सड़कों पर बैरिकेड लगेंगे। [पूरी ख़बर](/blog/ramkund-no-general-entry-31-october-1-lakh-crowd-cctv-control-rooms-rehearsal-president-day-plan)
 - 30 अक्टूबर को भी भारी भीड़ की उम्मीद रखें। रिपोर्ट के अनुसार ग्राम प्रदक्षिणा में लगभग एक लाख श्रद्धालु आ सकते हैं। उस दिन दोपहर-शाम मेन रोड और पंचवटी में गाड़ी ले जाने से बचें।
 - पुलिस की ट्रैफ़िक अधिसूचना आ गई है (रिपोर्ट, सकाळ, 25 अक्टूबर): 30 और 31 अक्टूबर को रामतीर्थ और पूरा गोदाघाट 'नो व्हीकल ज़ोन' रहेगा, और 31 अक्टूबर को सुबह 6 बजे से आधी रात तक रामतीर्थ जाने वाली मुख्य सड़कें बंद रहेंगी। नीचे "रास्ते, बंदी और पार्किंग" देखें।
 - **30–31 अक्टूबर को त्र्यंबकेश्वर:** नाशिक–त्र्यंबक का नियमित मार्ग 30 अक्टूबर सुबह 8 बजे से 31 अक्टूबर रात 8 बजे तक बंद है; गिरणारे होकर वैकल्पिक मार्ग लगभग दोगुना लंबा है (रिपोर्ट, 26 अक्टूबर)। नीचे "रास्ते, बंदी और पार्किंग" देखें।
@@ -194,6 +196,7 @@ Times of India ने 5 अक्टूबर 2026 को बताया कि
 आजच्या माहितीवर आधारित नियोजन:
 
 - निमंत्रणाशिवाय १२.०२ वाजता थेट पाण्याजवळ पोहोचता येईल, असे गृहीत धरू नका. जागा कमी आहे आणि निमंत्रणे मर्यादित आहेत.
+- **३१ ऑक्टोबरला सामान्य भाविकांना रामकुंडात थेट प्रवेश नाही** (वृत्त, नवभारत, २८ ऑक्टोबर): फक्त अतिमहत्त्वाच्या व्यक्ती व विशेष निमंत्रितांना प्रवेश. सुमारे ३० ते ३५ हजार क्षमतेच्या गोदाघाटावर १ लाखापर्यंत गर्दीचा अंदाज. नागरिकांची आसनव्यवस्था देवमामलेदार मैदान ते रोकडोबा मैदान अशी असल्याचे वृत्त असून ३० ऑक्टोबरपासून गोदाघाटाच्या रस्त्यांवर बॅरिकेड्स लागतील. [सविस्तर](/blog/ramkund-no-general-entry-31-october-1-lakh-crowd-cctv-control-rooms-rehearsal-president-day-plan)
 - ३० ऑक्टोबरलाही मोठी गर्दी अपेक्षित आहे. ग्रामप्रदक्षिणेला सुमारे एक लाख भाविक येतील, असे वृत्त आहे. त्या दिवशी दुपारी-सायंकाळी मेन रोड व पंचवटीत वाहन नेणे टाळा.
 - पोलिसांची वाहतूक अधिसूचना आली आहे (वृत्त, सकाळ, २५ ऑक्टोबर): ३० व ३१ ऑक्टोबरला रामतीर्थ आणि संपूर्ण गोदाघाट 'नो व्हेईकल झोन' राहील, आणि ३१ ऑक्टोबरला सकाळी ६ ते मध्यरात्रीपर्यंत रामतीर्थाकडे जाणारे मुख्य रस्ते बंद राहतील. खाली "मार्ग, बंदी आणि पार्किंग" पाहा.
 - **३०–३१ ऑक्टोबरला त्र्यंबकेश्वर:** नेहमीचा नाशिक–त्र्यंबक रस्ता ३० ऑक्टोबर सकाळी ८ ते ३१ ऑक्टोबर रात्री ८ पर्यंत बंद; गिरणारेमार्गे पर्यायी रस्ता जवळपास दुप्पट लांब (वृत्त, २६ ऑक्टोबर). खाली "मार्ग, बंदी आणि पार्किंग" पाहा.
@@ -697,6 +700,21 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   },
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
+    {
+      time: "2026-10-28T09:50:00+05:30",
+      headline: {
+        en: "No direct public entry to Ramkund on 31 Oct; up to 1 lakh expected; CCTV, two control rooms; rehearsal held",
+        hi: "31 अक्टूबर को रामकुंड में आम लोगों का सीधा प्रवेश नहीं; 1 लाख तक भीड़ का अनुमान; CCTV, दो कंट्रोल रूम; रिहर्सल हुई",
+        mr: "३१ ऑक्टो.ला रामकुंडात सामान्यांना थेट प्रवेश नाही; १ लाखापर्यंत गर्दीचा अंदाज; सीसीटीव्ही, दोन कंट्रोल रूम; रंगीत तालीम",
+      },
+      body: {
+        en: "Navbharat says only VVIPs and special guests will enter the Ramkund area, with 80,000 to 1 lakh expected against a ghat capacity of about 30,000 to 35,000. Sakal reports citizen seating from Devmamledar to Rokdoba ground, 100 to 150 CCTV cameras, control rooms at Leva Patidar Bhavan and Sardar Chowk police post, and about 1,000 traffic police. A rehearsal was held on 27 October; the programme still awaits approval from the President's office. The President is also reported to release two 'My Stamp' postage stamps (ETV Bharat). [Details](/blog/ramkund-no-general-entry-31-october-1-lakh-crowd-cctv-control-rooms-rehearsal-president-day-plan)",
+        hi: "नवभारत के अनुसार रामकुंड परिसर में सिर्फ़ VVIP और विशेष अतिथि जाएँगे; करीब 30 से 35 हज़ार क्षमता वाले घाट पर 80 हज़ार से 1 लाख लोगों का अनुमान है। सकाळ के अनुसार नागरिकों की बैठक देवमामलेदार से रोकडोबा मैदान तक, 100 से 150 CCTV कैमरे, लेवा पाटीदार भवन और सरदार चौक पुलिस चौकी पर कंट्रोल रूम, और करीब 1,000 ट्रैफ़िक पुलिस। 27 अक्टूबर को रिहर्सल हुई; कार्यक्रम को राष्ट्रपति कार्यालय की मंज़ूरी बाकी है। राष्ट्रपति दो 'माय स्टैंप' डाक टिकट भी जारी कर सकती हैं (ETV भारत)। [पूरी ख़बर](/blog/ramkund-no-general-entry-31-october-1-lakh-crowd-cctv-control-rooms-rehearsal-president-day-plan)",
+        mr: "नवभारतनुसार रामकुंड परिसरात फक्त अतिमहत्त्वाच्या व्यक्ती व विशेष निमंत्रितांना प्रवेश; सुमारे ३० ते ३५ हजार क्षमतेच्या घाटावर ८० हजार ते १ लाख लोकांचा अंदाज. सकाळनुसार नागरिकांची आसनव्यवस्था देवमामलेदार ते रोकडोबा मैदान, १०० ते १५० सीसीटीव्ही, लेवा पाटीदार भवन व सरदार चौक पोलिस चौकीत कंट्रोल रूम, आणि सुमारे १,००० वाहतूक पोलिस. २७ ऑक्टोबरला रंगीत तालीम झाली; कार्यक्रमाला राष्ट्रपती कार्यालयाची मंजुरी बाकी. राष्ट्रपती दोन 'माय स्टॅम्प' टपाल तिकिटांचे अनावरणही करणार असल्याचे वृत्त (ETV भारत). [सविस्तर](/blog/ramkund-no-general-entry-31-october-1-lakh-crowd-cctv-control-rooms-rehearsal-president-day-plan)",
+      },
+      status: "reported",
+      source: "Navbharat, Sakal, ETV Bharat",
+    },
     {
       time: "2026-10-27T09:45:00+05:30",
       headline: {
