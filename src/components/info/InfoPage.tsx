@@ -159,7 +159,11 @@ export default function InfoPage({ page, locale }: { page: InfoPageContent; loca
         <p className="mt-3 text-sm text-temple-500">
           {UI.updated[locale]}: <time dateTime={page.updated}>{formatDate(page.updated, locale)}</time>
         </p>
-        <p className="mt-6 text-lg leading-relaxed text-temple-700 md:text-xl">{page.intro[locale]}</p>
+        {page.intro[locale].split(/\n\s*\n/).map((para, i) => (
+          <p key={i} className={`${i === 0 ? "mt-6" : "mt-4"} text-lg leading-relaxed text-temple-700 md:text-xl`}>
+            {para}
+          </p>
+        ))}
 
         {photos[0] !== undefined && <CommonsPhoto id={photos[0]} priority className="mt-8" />}
 
