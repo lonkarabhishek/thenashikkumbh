@@ -13,6 +13,8 @@ export const article: BlogArticle = {
     mr: "नाशिक–त्र्यंबकेश्वर मार्ग ३० ऑक्टोबर सकाळी ८ ते ३१ ऑक्टोबर रात्री ८ पर्यंत बंद: गिरणारेमार्गे पर्यायी रस्ता, घोटी मार्गही बंद; गोदा आरतीसाठी प्रवेशबंदी आणि मिरवणुकीचा पूर्ण मार्ग पोलिसांकडून जाहीर",
   },
   date: "2026-10-27",
+  updated: "2026-10-28",
+  followUp: { slug: "ramkund-no-general-entry-31-october-1-lakh-crowd-cctv-control-rooms-rehearsal-president-day-plan", date: "2026-10-28" },
   originallyAnnounced: "2026-10-26",
   source: "Times of India",
   sources: [

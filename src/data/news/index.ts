@@ -63,9 +63,16 @@ import { article as shankhnaadRecord } from "./shankhnaad-guinness-world-record-
 import { article as trafficNotice } from "./traffic-notice-30-31-october-godaghat-no-vehicle-zone-diversions-parking";
 import { article as trimbakRoadClosed } from "./trimbak-road-closed-30-31-october-girnare-detour-goda-aarti-entry-bans";
 import { article as shindeAkhadaMeals } from "./shinde-shiv-sena-meals-13-akhadas-trimbak-pledges-gangapur-road";
+import { article as ramkundNoEntryDayPlan } from "./ramkund-no-general-entry-31-october-cctv-control-rooms-rehearsal-president-day-plan";
+import { article as sadhugramFacilities } from "./sadhugram-3-29-crore-akhada-facilities-standing-committee";
+import { article as trimbakHeliport } from "./trimbakeshwar-heliport-private-helicopter-flights-from-2-november";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 and 27 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 and 28 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 28 October 2026
+  ramkundNoEntryDayPlan,
+  trimbakHeliport,
+  sadhugramFacilities,
   // 27 October 2026
   trimbakRoadClosed,
   shindeAkhadaMeals,
