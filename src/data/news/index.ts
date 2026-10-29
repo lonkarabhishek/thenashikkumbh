@@ -66,9 +66,16 @@ import { article as shindeAkhadaMeals } from "./shinde-shiv-sena-meals-13-akhada
 import { article as ramkundNoEntryDayPlan } from "./ramkund-no-general-entry-31-october-cctv-control-rooms-rehearsal-president-day-plan";
 import { article as sadhugramFacilities } from "./sadhugram-3-29-crore-akhada-facilities-standing-committee";
 import { article as trimbakHeliport } from "./trimbakeshwar-heliport-private-helicopter-flights-from-2-november";
+import { article as noDroneZone } from "./no-drone-zone-nashik-city-rural-30-31-october-paragliding-balloons-banned";
+import { article as ntkmaMinutes21Oct } from "./kumbh-authority-21-october-minutes-16-crore-publicity-43-crore-media-plan-iit-bombay-fee";
+import { article as akhadaParishadDemands } from "./akhada-parishad-sanjay-das-gyan-das-sadhugram-land-farmer-compensation-ramkund-steps-demands";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 and 28 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28 and 29 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 29 October 2026
+  noDroneZone,
+  ntkmaMinutes21Oct,
+  akhadaParishadDemands,
   // 28 October 2026
   ramkundNoEntryDayPlan,
   trimbakHeliport,
