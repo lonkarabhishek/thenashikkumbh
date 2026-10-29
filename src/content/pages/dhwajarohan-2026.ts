@@ -162,6 +162,7 @@ Plan with what is known today:
 - Expect big crowds on 30 October too. About one lakh devotees are reported to be expected for the Gram Pradakshina. Avoid driving on Main Road and in Panchavati that afternoon and evening.
 - The police traffic notice is out (REPORTED, Sakal, 25 October): Ramtirth and the whole Godaghat are a no-vehicle zone on 30 and 31 October, and the main roads to Ramtirth close from 6 AM to midnight on 31 October. See "Routes, closures and parking" below.
 - **Trimbakeshwar on 30–31 October:** the usual Nashik–Trimbak road is closed from 8 AM on 30 October to 8 PM on 31 October; the detour via Girnare is about twice as long (REPORTED, 26 October). See "Routes, closures and parking" below.
+- **No drones** (REPORTED, Prahaar, 28 October): drones, paragliders and hot-air balloons are banned over Nashik city until midnight on 31 October and over the rural district on 30 and 31 October without prior permission. See [the drone ban story](/blog/no-drone-zone-nashik-city-and-rural-district-30-31-october-paragliders-hot-air-balloons-banned-flag-hoisting).
 - Kushavarta in Trimbak is closed for renovation until about 31 October (see below). Do not plan a bath there before it reopens.
 - Works at Ramkund were still unfinished on 5 October, so some areas may be screened off.
 - No official pilgrim e-pass or registration has been announced. Treat any such claim as unverified.
@@ -181,6 +182,7 @@ On 2 September, Singh had said Ramkund would be finished by 15 October. That dea
 - 30 अक्टूबर को भी भारी भीड़ की उम्मीद रखें। रिपोर्ट के अनुसार ग्राम प्रदक्षिणा में लगभग एक लाख श्रद्धालु आ सकते हैं। उस दिन दोपहर-शाम मेन रोड और पंचवटी में गाड़ी ले जाने से बचें।
 - पुलिस की ट्रैफ़िक अधिसूचना आ गई है (रिपोर्ट, सकाळ, 25 अक्टूबर): 30 और 31 अक्टूबर को रामतीर्थ और पूरा गोदाघाट 'नो व्हीकल ज़ोन' रहेगा, और 31 अक्टूबर को सुबह 6 बजे से आधी रात तक रामतीर्थ जाने वाली मुख्य सड़कें बंद रहेंगी। नीचे "रास्ते, बंदी और पार्किंग" देखें।
 - **30–31 अक्टूबर को त्र्यंबकेश्वर:** नाशिक–त्र्यंबक का नियमित मार्ग 30 अक्टूबर सुबह 8 बजे से 31 अक्टूबर रात 8 बजे तक बंद है; गिरणारे होकर वैकल्पिक मार्ग लगभग दोगुना लंबा है (रिपोर्ट, 26 अक्टूबर)। नीचे "रास्ते, बंदी और पार्किंग" देखें।
+- **ड्रोन पर रोक** (रिपोर्ट, प्रहार, 28 अक्टूबर): बिना पूर्व अनुमति नाशिक शहर में 31 अक्टूबर आधी रात तक और ग्रामीण ज़िले में 30 और 31 अक्टूबर को ड्रोन, पैराग्लाइडर और हॉट-एयर बलून पर रोक है। देखें [ड्रोन रोक वाली ख़बर](/blog/no-drone-zone-nashik-city-and-rural-district-30-31-october-paragliders-hot-air-balloons-banned-flag-hoisting)।
 - त्र्यंबक का कुशावर्त लगभग 31 अक्टूबर तक मरम्मत के लिए बंद है (नीचे देखें)। दोबारा खुलने से पहले वहां स्नान की योजना न बनाएं।
 - 5 अक्टूबर तक रामकुंड के काम अधूरे थे, इसलिए कुछ हिस्से घेरकर ढके जा सकते हैं।
 - कोई आधिकारिक ई-पास या तीर्थयात्री पंजीकरण घोषित नहीं हुआ है। ऐसे किसी भी दावे को अपुष्ट मानें।
@@ -200,6 +202,7 @@ Times of India ने 5 अक्टूबर 2026 को बताया कि
 - ३० ऑक्टोबरलाही मोठी गर्दी अपेक्षित आहे. ग्रामप्रदक्षिणेला सुमारे एक लाख भाविक येतील, असे वृत्त आहे. त्या दिवशी दुपारी-सायंकाळी मेन रोड व पंचवटीत वाहन नेणे टाळा.
 - पोलिसांची वाहतूक अधिसूचना आली आहे (वृत्त, सकाळ, २५ ऑक्टोबर): ३० व ३१ ऑक्टोबरला रामतीर्थ आणि संपूर्ण गोदाघाट 'नो व्हेईकल झोन' राहील, आणि ३१ ऑक्टोबरला सकाळी ६ ते मध्यरात्रीपर्यंत रामतीर्थाकडे जाणारे मुख्य रस्ते बंद राहतील. खाली "मार्ग, बंदी आणि पार्किंग" पाहा.
 - **३०–३१ ऑक्टोबरला त्र्यंबकेश्वर:** नेहमीचा नाशिक–त्र्यंबक रस्ता ३० ऑक्टोबर सकाळी ८ ते ३१ ऑक्टोबर रात्री ८ पर्यंत बंद; गिरणारेमार्गे पर्यायी रस्ता जवळपास दुप्पट लांब (वृत्त, २६ ऑक्टोबर). खाली "मार्ग, बंदी आणि पार्किंग" पाहा.
+- **ड्रोनबंदी** (वृत्त, प्रहार, २८ ऑक्टोबर): पूर्वपरवानगीशिवाय नाशिक शहरात ३१ ऑक्टोबर मध्यरात्रीपर्यंत आणि ग्रामीण जिल्ह्यात ३० व ३१ ऑक्टोबरला ड्रोन, पॅराग्लायडर आणि हॉट-एअर बलूनला मनाई आहे. पाहा [ड्रोनबंदीची बातमी](/blog/no-drone-zone-nashik-city-and-rural-district-30-31-october-paragliders-hot-air-balloons-banned-flag-hoisting).
 - त्र्यंबकचे कुशावर्त साधारण ३१ ऑक्टोबरपर्यंत नूतनीकरणासाठी बंद आहे (खाली पाहा). ते पुन्हा खुले होईपर्यंत तिथे स्नानाचे नियोजन करू नका.
 - ५ ऑक्टोबरपर्यंत रामकुंडाची कामे अपूर्ण होती, त्यामुळे काही भाग झाकून बंद केलेले असू शकतात.
 - कोणताही अधिकृत ई-पास किंवा भाविक नोंदणी जाहीर झालेली नाही. असा दावा असल्यास तो अपुष्ट समजा.
@@ -700,6 +703,21 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   },
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
+    {
+      time: "2026-10-29T09:30:00+05:30",
+      headline: {
+        en: "No-drone zone: drones, paragliders and hot-air balloons banned over Nashik city until midnight 31 Oct, and over rural district on 30-31 Oct",
+        hi: "नो ड्रोन ज़ोन: नाशिक शहर में 31 अक्टूबर आधी रात तक और ग्रामीण ज़िले में 30-31 अक्टूबर को ड्रोन, पैराग्लाइडर, हॉट-एयर बलून पर रोक",
+        mr: "नो ड्रोन झोन: नाशिक शहरात ३१ ऑक्टो. मध्यरात्रीपर्यंत आणि ग्रामीण जिल्ह्यात ३०-३१ ऑक्टो.ला ड्रोन, पॅराग्लायडर, हॉट-एअर बलूनला मनाई",
+      },
+      body: {
+        en: "Police Commissioner Sandeep Karnik has declared the whole commissionerate area a no-drone-fly zone (Prahaar quotes 12:01 AM on 29 Oct to midnight on 31 Oct), citing a possible drone threat at Ramkund, Godaghat and Devmamledar temple. ADM Rohitkumar Rajput has made the rural police area a no-drone and no-paragliding zone on 30 and 31 Oct. Flying needs prior permission. Details: [our story](/blog/no-drone-zone-nashik-city-and-rural-district-30-31-october-paragliders-hot-air-balloons-banned-flag-hoisting).",
+        hi: "पुलिस आयुक्त संदीप कर्णिक ने पूरे आयुक्तालय क्षेत्र को 'नो ड्रोन फ्लाय ज़ोन' घोषित किया है (प्रहार के अनुसार 29 अक्टूबर रात 12:01 से 31 अक्टूबर आधी रात तक), रामकुंड, गोदाघाट और देवमामलेदार मंदिर पर ड्रोन ख़तरे का हवाला देकर। अपर ज़िला दंडाधिकारी रोहितकुमार राजपूत ने ग्रामीण पुलिस क्षेत्र को 30 और 31 अक्टूबर को 'नो ड्रोन' और 'नो पैराग्लाइडिंग' ज़ोन बनाया है। उड़ान के लिए पहले अनुमति ज़रूरी। विवरण: [हमारी ख़बर](/blog/no-drone-zone-nashik-city-and-rural-district-30-31-october-paragliders-hot-air-balloons-banned-flag-hoisting)।",
+        mr: "पोलीस आयुक्त संदीप कर्णिक यांनी संपूर्ण आयुक्तालय क्षेत्र 'नो ड्रोन फ्लाय झोन' घोषित केले आहे (प्रहारनुसार २९ ऑक्टो. रात्री १२.०१ ते ३१ ऑक्टो. मध्यरात्रीपर्यंत), रामकुंड, गोदाघाट आणि देवमामलेदार मंदिर येथे ड्रोन धोक्याचा उल्लेख करून. अपर जिल्हादंडाधिकारी रोहितकुमार राजपूत यांनी ग्रामीण पोलीस हद्द ३० आणि ३१ ऑक्टोबरला 'नो ड्रोन' व 'नो पॅराग्लायडिंग' झोन केली आहे. उड्डाणासाठी पूर्वपरवानगी आवश्यक. तपशील: [आमची बातमी](/blog/no-drone-zone-nashik-city-and-rural-district-30-31-october-paragliders-hot-air-balloons-banned-flag-hoisting).",
+      },
+      status: "reported",
+      source: "Prahaar, Vegvan Maharashtra",
+    },
     {
       time: "2026-10-28T09:50:00+05:30",
       headline: {
