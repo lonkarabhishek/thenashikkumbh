@@ -8,6 +8,7 @@ import type { InfoPageContent } from "@/content/pages/types";
 import type { Locale } from "@/i18n/translations";
 import { SITE_NAME, SITE_URL, breadcrumbSchema, localeUrl, pageMetadata } from "@/lib/seo";
 import { formatDate as fmtDate } from "@/lib/dates";
+import { SITE_OWNER } from "@/data/siteOwner";
 
 const UI = {
   updated: { en: "Last updated", hi: "अंतिम अपडेट", mr: "अखेरचे अद्ययावत" },
@@ -134,8 +135,38 @@ export default function InfoPage({ page, locale }: { page: InfoPageContent; loca
       }
     : null;
 
+  // Evergreen guides (no live feed): Article with the site owner as the
+  // author, pointing at the sitewide Person and Organization entities.
+  const articleSchema = page.liveEvent
+    ? null
+    : {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": `${url}#article`,
+        headline: page.h1[locale],
+        description: page.description[locale],
+        inLanguage: locale,
+        url,
+        mainEntityOfPage: url,
+        dateModified: page.updated,
+        image: [`${SITE_URL}${page.shareImage?.[locale] ?? "/images/og-image.jpg"}`],
+        author: {
+          "@type": "Person",
+          "@id": `${SITE_URL}/#owner`,
+          name: SITE_OWNER.name,
+          url: `${SITE_URL}/en/about#who-runs-this-site`,
+        },
+        publisher: {
+          "@type": "Organization",
+          "@id": `${SITE_URL}/#organization`,
+          name: SITE_NAME,
+          logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.png` },
+        },
+      };
+
   return (
     <div className="bg-cream-50 pb-20 pt-28 sm:pt-36">
+      {articleSchema && <JsonLd data={articleSchema} />}
       <JsonLd data={breadcrumbSchema(locale, [{ name: page.crumb[locale], path: page.path }])} />
       {eventSchema && <JsonLd data={eventSchema} />}
       {liveSchema && <JsonLd data={liveSchema} />}
