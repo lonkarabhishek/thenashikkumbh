@@ -32,6 +32,8 @@ export interface InfoPageContent {
    * LiveBlogPosting JSON-LD when `liveEvent` is set.
    */
   liveUpdates?: LiveUpdate[];
+  /** Route of a dedicated live page showing the same updates, e.g. "/dhwajarohan-2026/live". */
+  livePage?: string;
   /** The event the live feed covers (LiveBlogPosting coverage window + Event JSON-LD). */
   liveEvent?: {
     name: L10n;
