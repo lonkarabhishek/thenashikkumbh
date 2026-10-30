@@ -69,9 +69,18 @@ import { article as trimbakHeliport } from "./trimbakeshwar-heliport-private-hel
 import { article as noDroneZone } from "./no-drone-zone-nashik-city-rural-30-31-october-paragliding-balloons-banned";
 import { article as ntkmaMinutes21Oct } from "./kumbh-authority-21-october-minutes-16-crore-publicity-43-crore-media-plan-iit-bombay-fee";
 import { article as akhadaParishadDemands } from "./akhada-parishad-sanjay-das-gyan-das-sadhugram-land-farmer-compensation-ramkund-steps-demands";
+import { article as trimbakTempleClosed } from "./trimbakeshwar-temple-closed-30-31-october-collector-order-town-traffic";
+import { article as presidentByRoad } from "./president-by-road-rain-71-schools-shut-godaghat-shops-1317-vips";
+import { article as gangapurEklahare } from "./gangapur-eklahare-release-nmc-6973-mcft-water-reservation";
+import { article as mahajanWorksPromise } from "./mahajan-works-before-amrit-snans-sanjay-das-ramkund-steps-warning";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28 and 29 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 and 30 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 30 October 2026
+  trimbakTempleClosed,
+  presidentByRoad,
+  gangapurEklahare,
+  mahajanWorksPromise,
   // 29 October 2026
   noDroneZone,
   ntkmaMinutes21Oct,

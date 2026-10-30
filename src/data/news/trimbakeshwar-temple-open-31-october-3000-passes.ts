@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "३१ ऑक्टोबरला त्र्यंबकेश्वर मंदिर खुले राहणार, ३ हजार पासधारकांनाच दर्शन; कुशावर्तावरील कामे २५ ऑक्टोबरपर्यंत पूर्ण करण्याचे निर्देश",
   },
   date: "2026-10-22",
+  updated: "2026-10-30",
+  followUp: { slug: "trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic", date: "2026-10-30" },
   originallyAnnounced: "2026-10-21",
   source: "Sakal",
   sources: [

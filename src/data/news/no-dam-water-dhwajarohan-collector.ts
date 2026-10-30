@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "ध्वजारोहणासाठी धरणातून पाणी नाही: जिल्हाधिकाऱ्यांनी स्पष्ट केले, रामकुंड सध्या कोरडेच",
   },
   date: "2026-10-20",
+  updated: "2026-10-30",
+  followUp: { slug: "gangapur-release-for-eklahare-to-flow-past-ramkund-before-flag-hoisting-nmc-gets-6973-mcft-not-8005", date: "2026-10-30" },
   originallyAnnounced: "2026-10-19",
   source: "Times of India",
   sources: [

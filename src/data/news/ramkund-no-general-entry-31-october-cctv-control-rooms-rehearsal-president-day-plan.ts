@@ -14,6 +14,8 @@ export const article: BlogArticle = {
     mr: "३१ ऑक्टोबरला रामकुंड: सामान्य भाविकांना थेट प्रवेश नाही, ३० ते ३५ हजार क्षमतेच्या घाटावर १ लाखापर्यंत गर्दीचा अंदाज; १०० ते १५० सीसीटीव्ही, दोन कंट्रोल रूम, रंगीत तालीम पार",
   },
   date: "2026-10-28",
+  updated: "2026-10-30",
+  followUp: { slug: "president-murmu-to-travel-by-road-not-helicopter-rain-forecast-71-schools-shut-31-october-godaghat-shops-closed-1317-vips", date: "2026-10-30" },
   originallyAnnounced: "2026-10-27",
   source: "Navbharat",
   sources: [
