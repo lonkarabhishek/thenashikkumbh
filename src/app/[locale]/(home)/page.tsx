@@ -49,7 +49,19 @@ export default function Page({ params }: { params: { locale: Locale } }) {
           })),
         }}
       />
-      <HomePage news={news} glimpses={glimpses} />
+      <HomePage
+        news={news}
+        glimpses={glimpses}
+        // Points at the live page for the flag-hoisting days. Remove after 1 November 2026.
+        live={{
+          href: "/dhwajarohan-2026/live",
+          label: {
+            en: "Dhwajarohan 30-31 Oct: closures, Ramkund access, the President's visit",
+            hi: "ध्वजारोहण 30-31 अक्टूबर: बंदी, रामकुंड प्रवेश, राष्ट्रपति का दौरा",
+            mr: "ध्वजारोहण ३०-३१ ऑक्टो.: बंदी, रामकुंड प्रवेश, राष्ट्रपतींचा दौरा",
+          },
+        }}
+      />
     </>
   );
 }

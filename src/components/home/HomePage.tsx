@@ -25,7 +25,7 @@ import Reveal from "@/components/Reveal";
 import Countdown from "@/components/Countdown";
 import AskSahayak from "@/components/AskSahayak";
 import { HomeFaq, HomeInBrief } from "@/components/home/HomeAnswers";
-import LatestNews, { type LatestItem } from "@/components/home/LatestNews";
+import LatestNews, { type LatestItem, type LiveLink } from "@/components/home/LatestNews";
 import PhotoDrift, { type DriftPhoto } from "@/components/home/PhotoDrift";
 import {
   GhatPanorama,
@@ -139,7 +139,7 @@ function formatHomeDate(iso: string, locale: Locale) {
   return fmtDate(iso, locale, { weekday: true });
 }
 
-export default function HomePage({ news, glimpses }: { news: LatestItem[]; glimpses: DriftPhoto[] }) {
+export default function HomePage({ news, glimpses, live }: { news: LatestItem[]; glimpses: DriftPhoto[]; live?: LiveLink }) {
   const { locale, t } = useLanguage();
   const { open: openChat } = useChat();
 
@@ -213,7 +213,7 @@ export default function HomePage({ news, glimpses }: { news: LatestItem[]; glimp
       </section>
 
       {/* ═══ Latest news, directly under the hero ═════════ */}
-      <LatestNews items={news} />
+      <LatestNews items={news} live={live} />
 
       {/* ═══ Direct answer: when and where ════════════════ */}
       <HomeInBrief />
