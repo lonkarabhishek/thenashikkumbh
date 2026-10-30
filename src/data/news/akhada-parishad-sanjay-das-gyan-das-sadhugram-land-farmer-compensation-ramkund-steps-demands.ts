@@ -15,6 +15,8 @@ export const article: BlogArticle = {
     mr: "ध्वजारोहणासाठी आखाडा परिषदेचे नेते नाशिकमध्ये: महंत संजय दास यांची साधुग्रामचे भूखंड आणि शेतकऱ्यांच्या मोबदल्याची मागणी, रामकुंडाच्या पायऱ्यांवर प्रश्न",
   },
   date: "2026-10-29",
+  updated: "2026-10-30",
+  followUp: { slug: "mahajan-promises-all-kumbh-works-before-amrit-snans-as-akhada-parishad-sanjay-das-warns-ramkund-steps-could-cause-accidents", date: "2026-10-30" },
   originallyAnnounced: "2026-10-28",
   source: "Sarkarnama",
   sources: [
