@@ -710,6 +710,7 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
       },
     ],
   },
+  livePage: "/dhwajarohan-2026/live",
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
     {

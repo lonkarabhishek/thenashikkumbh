@@ -17,6 +17,12 @@ const COPY = {
 };
 
 /** What one card needs; the server passes it in so post bodies stay out of the JS. */
+/** A live page to point at above the grid (remove the prop when the event is over). */
+export interface LiveLink {
+  href: string;
+  label: { en: string; hi: string; mr: string };
+}
+
 export interface LatestItem {
   slug: string;
   date: string;
@@ -26,10 +32,23 @@ export interface LatestItem {
 }
 
 /** Newest posts, straight under the hero. Plain server-rendered HTML: no images, no animation, fixed layout. */
-export default function LatestNews({ items }: { items: LatestItem[] }) {
+export default function LatestNews({ items, live }: { items: LatestItem[]; live?: LiveLink }) {
   const { locale, t } = useLanguage();
   return (
     <section className="section-container py-10 sm:py-14" aria-labelledby="latest-news-title">
+      {live && (
+        <Link
+          href={live.href}
+          className="mb-6 inline-flex items-center gap-3 rounded-full border border-red-200 bg-red-50 py-2 pl-3 pr-4 text-sm font-semibold text-temple-900 hover:border-red-400"
+        >
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-red-600 px-2 py-0.5 text-[0.6875rem] font-bold uppercase tracking-wider text-white">
+            <span className="live-dot h-1.5 w-1.5 text-white" aria-hidden />
+            {{ en: "Live", hi: "लाइव", mr: "थेट" }[locale]}
+          </span>
+          {t(live.label)}
+          <ArrowRight className="h-4 w-4 text-saffron-700" />
+        </Link>
+      )}
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <span className="eyebrow">{t(COPY.kicker)}</span>

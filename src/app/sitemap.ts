@@ -46,6 +46,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...localized("/plan-your-visit", "weekly", 0.8),
     ...localized("/kumbh-status", "daily", 0.85),
     ...localized("/dhwajarohan-2026", "daily", 0.95),
+    ...localized("/dhwajarohan-2026/live", "hourly", 0.95),
+    ...localized("/nashik-30-31-october-disruptions", "daily", 0.9),
     ...localized("/parva-snan-calendar", "weekly", 0.9),
     ...localized("/trimbakeshwar-kumbh-2027", "weekly", 0.9),
     ...localized("/how-to-reach", "weekly", 0.9),

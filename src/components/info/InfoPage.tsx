@@ -4,6 +4,7 @@ import RichText from "@/components/RichText";
 import AdSlot from "@/components/ads/AdSlot";
 import ForwardCard from "@/components/share/ForwardCard";
 import CommonsPhoto from "@/components/photos/CommonsPhoto";
+import Link from "@/components/LocaleLink";
 import type { InfoPageContent } from "@/content/pages/types";
 import type { Locale } from "@/i18n/translations";
 import { SITE_NAME, SITE_URL, breadcrumbSchema, localeUrl, pageMetadata } from "@/lib/seo";
@@ -16,6 +17,7 @@ const UI = {
   confirmed: { en: "Confirmed (official)", hi: "पुष्ट (आधिकारिक)", mr: "पुष्टी (अधिकृत)" },
   reported: { en: "Reported (media)", hi: "रिपोर्ट (मीडिया)", mr: "वृत्त (माध्यमे)" },
   live: { en: "Live updates", hi: "लाइव अपडेट", mr: "थेट अपडेट" },
+  livePage: { en: "Open the live page", hi: "लाइव पेज खोलें", mr: "थेट पान उघडा" },
   faq: { en: "Frequently asked questions", hi: "अक्सर पूछे जाने वाले सवाल", mr: "नेहमी विचारले जाणारे प्रश्न" },
   statusConfirmed: { en: "CONFIRMED", hi: "पुष्ट", mr: "अधिकृत" },
   statusReported: { en: "REPORTED", hi: "रिपोर्ट", mr: "वृत्त" },
@@ -200,10 +202,17 @@ export default function InfoPage({ page, locale }: { page: InfoPageContent; loca
 
         {updates.length > 0 && (
           <section id="live" className="mt-10 rounded-2xl border border-saffron-200 bg-saffron-50 p-5 sm:p-6" aria-labelledby="live-title">
-            <h2 id="live-title" className="flex items-center gap-2 font-heading text-2xl font-bold text-temple-900">
-              <span className="inline-block h-2.5 w-2.5 animate-pulse rounded-full bg-red-600" aria-hidden="true" />
-              {UI.live[locale]}
-            </h2>
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <h2 id="live-title" className="flex items-center gap-2 font-heading text-2xl font-bold text-temple-900">
+                <span className="inline-block h-2.5 w-2.5 animate-pulse rounded-full bg-red-600" aria-hidden="true" />
+                {UI.live[locale]}
+              </h2>
+              {page.livePage && (
+                <Link href={page.livePage} className="text-sm font-semibold text-saffron-700 underline underline-offset-2">
+                  {UI.livePage[locale]}
+                </Link>
+              )}
+            </div>
             <ol className="mt-4 space-y-5 border-l-2 border-saffron-300 pl-4">
               {updates.map((u) => (
                 <li key={u.time} id={`update-${u.time.slice(0, 16).replace(/[^0-9]/g, "")}`}>
