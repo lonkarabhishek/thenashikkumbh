@@ -9,6 +9,8 @@ export const article: BlogArticle = {
     mr: "कुंभ २०२७साठी एनएमसीने ८,००५ एमसीएफटी पाणी आरक्षण मागितले — सुमारे २५% अधिक",
   },
   date: "2026-10-15",
+  updated: "2026-10-30",
+  followUp: { slug: "gangapur-release-for-eklahare-to-flow-past-ramkund-before-flag-hoisting-nmc-gets-6973-mcft-not-8005", date: "2026-10-30" },
   source: "Times of India",
   sources: [
     {

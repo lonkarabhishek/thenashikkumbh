@@ -22,6 +22,8 @@ const GUIDE_PATH = "/nashik-30-31-october-disruptions";
 
 /** Our posts about the two days, newest first in blogArticles order. */
 const RELATED_SLUGS = [
+  "trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic",
+  "president-murmu-to-travel-by-road-not-helicopter-rain-forecast-71-schools-shut-31-october-godaghat-shops-closed-1317-vips",
   "no-drone-zone-nashik-city-and-rural-district-30-31-october-paragliders-hot-air-balloons-banned-flag-hoisting",
   "ramkund-no-general-entry-31-october-1-lakh-crowd-cctv-control-rooms-rehearsal-president-day-plan",
   "nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route",
