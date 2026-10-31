@@ -20,13 +20,13 @@ export const page: InfoPageContent = {
   intro: {
     en: `The flags went up at 12:02 PM on Saturday 31 October 2026, formally opening the Nashik-Trimbakeshwar Simhastha Kumbh Mela. President Droupadi Murmu hoisted the religious flag at Ramkund in Nashik after rituals on the Godavari bank, and Chief Minister Devendra Fadnavis hoisted the flag at Kushavarta in Trimbakeshwar at the same moment (PTI, DD News, Lokmat). Lokmat notes it is the first time a President has attended a Kumbh flag hoisting in Nashik.
 
-The evening public programme and Maha Goda Aarti at Ramkund are still to come; follow them in the live updates on this page. This independent guide also covers routes, closures and how to plan. We are not an official site. Every source is listed at the foot of this page.`,
+In the evening, about 6,500 tribal devotees performed the Maha Goda Aarti on the Godavari ghats and the President addressed the Ramkund programme, calling the Kumbh a symbol of India's cultural and spiritual strength (REPORTED: PTI, ABP Majha, TV9 Marathi). A Guinness World Records team was present for the aarti, but the record will be announced only after final verification (Asianet News Marathi). Details are in the live updates on this page. This independent guide also covers routes, closures and how to plan. We are not an official site. Every source is listed at the foot of this page.`,
     hi: `शनिवार, 31 अक्टूबर 2026 को दोपहर 12:02 बजे ध्वज फहराए गए और इसी के साथ नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभ मेले की औपचारिक शुरुआत हो गई। राष्ट्रपति द्रौपदी मुर्मू ने गोदावरी तट पर पूजा-विधि के बाद नाशिक के रामकुंड पर धार्मिक ध्वज फहराया, और उसी समय मुख्यमंत्री देवेंद्र फडणवीस ने त्र्यंबकेश्वर के कुशावर्त पर ध्वज फहराया (PTI, DD News, लोकमत)। लोकमत के अनुसार नाशिक में कुंभ ध्वजारोहण में राष्ट्रपति पहली बार शामिल हुई हैं।
 
-शाम का सार्वजनिक कार्यक्रम और रामकुंड पर महा गोदा आरती अभी बाकी है; इनकी जानकारी इसी पेज के लाइव अपडेट में मिलेगी। यह स्वतंत्र गाइड रास्ते, बंदी और योजना की जानकारी भी देती है। यह कोई सरकारी साइट नहीं है। सभी स्रोत पेज के नीचे दिए गए हैं।`,
+शाम को करीब 6,500 जनजातीय श्रद्धालुओं ने गोदावरी घाट पर महा गोदा आरती की और राष्ट्रपति ने रामकुंड के कार्यक्रम को संबोधित करते हुए कुंभ को भारत की सांस्कृतिक और आध्यात्मिक शक्ति का प्रतीक बताया (रिपोर्ट: PTI, ABP माझा, TV9 मराठी)। आरती के समय गिनीज वर्ल्ड रिकॉर्ड्स की टीम मौजूद थी, लेकिन रिकॉर्ड की घोषणा अंतिम सत्यापन के बाद ही होगी (Asianet News मराठी)। पूरी जानकारी इसी पेज के लाइव अपडेट में है। यह स्वतंत्र गाइड रास्ते, बंदी और योजना की जानकारी भी देती है। यह कोई सरकारी साइट नहीं है। सभी स्रोत पेज के नीचे दिए गए हैं।`,
     mr: `शनिवार, ३१ ऑक्टोबर २०२६ रोजी दुपारी १२.०२ वाजता ध्वज फडकले आणि नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभमेळ्याचा औपचारिक प्रारंभ झाला. गोदाकाठी पूजाविधीनंतर राष्ट्रपती द्रौपदी मुर्मू यांनी नाशिकच्या रामकुंडावर धर्मध्वज फडकवला, तर त्याच क्षणी मुख्यमंत्री देवेंद्र फडणवीस यांनी त्र्यंबकेश्वरच्या कुशावर्तावर ध्वजारोहण केले (PTI, DD News, लोकमत). नाशिकमध्ये कुंभाच्या ध्वजारोहणाला राष्ट्रपती प्रथमच उपस्थित राहिल्या, असे लोकमतने नमूद केले आहे.
 
-सायंकाळचा सार्वजनिक कार्यक्रम आणि रामकुंडावरील महा गोदा आरती अजून व्हायची आहे; त्याचे अपडेट याच पानावरील थेट अपडेटमध्ये मिळतील. कोण आले, मार्ग, बंदी आणि नियोजन यांचीही माहिती या स्वतंत्र मार्गदर्शकात आहे. हे संकेतस्थळ सरकारी नाही. सर्व स्रोत पानाच्या शेवटी दिले आहेत.`,
+सायंकाळी सुमारे ६,५०० आदिवासी बांधवांनी गोदाघाटावर महा गोदा आरती केली आणि रामकुंडावरील कार्यक्रमात राष्ट्रपतींनी कुंभमेळा हे भारताच्या सांस्कृतिक व आध्यात्मिक शक्तीचे प्रतीक असल्याचे सांगितले (वृत्त: PTI, एबीपी माझा, TV9 मराठी). आरतीवेळी गिनीज वर्ल्ड रेकॉर्ड्सचे पथक उपस्थित होते, मात्र विक्रमाची अधिकृत घोषणा अंतिम पडताळणीनंतरच होईल (Asianet News मराठी). सविस्तर माहिती याच पानावरील थेट अपडेटमध्ये आहे. कोण आले, मार्ग, बंदी आणि नियोजन यांचीही माहिती या स्वतंत्र मार्गदर्शकात आहे. हे संकेतस्थळ सरकारी नाही. सर्व स्रोत पानाच्या शेवटी दिले आहेत.`,
   },
   sections: [
     {
@@ -361,6 +361,27 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
     },
   ],
   sources: [
+    {
+      title: "Murmu says Simhastha Maha Kumbh will connect India's ancient heritage with modern dimensions",
+      publisher: "PTI",
+      date: "2026-10-31",
+      url: "https://www.ptinews.com/detail/national/Murmu-says-Simhastha-Maha-Kumbh-will-connect-India%E2%80%99s-ancient-heritage-with-modern-dimensions/4218733",
+      status: "reported",
+    },
+    {
+      title: "सांस्कृतिक आणि अध्यात्मिक शक्तीचं प्रतिक म्हणजे कुंभमेळा, इथं येऊन मला प्रसन्न वाटलं : राष्ट्रपती द्रौपदी मुर्मू",
+      publisher: "ABP Majha",
+      date: "2026-10-31",
+      url: "https://marathi.abplive.com/news/nashik/kumbh-mela-nashik-news-the-kumbh-mela-is-a-symbol-of-cultural-and-spiritual-strength-i-feel-delighted-to-have-come-here-president-droupadi-murmu-1444138",
+      status: "reported",
+    },
+    {
+      title: "Nashik Simhastha Kumbh 2027 Begins With Maha Goda Aarti For Guinness Record",
+      publisher: "Asianet News Marathi",
+      date: "2026-10-31",
+      url: "https://marathi.asianetnews.com/india/nashik-simhastha-kumbh-2027-begins-with-maha-goda-aarti-for-guinness-record/articleshow-w5fugir",
+      status: "reported",
+    },
     {
       title: "नाशिक सिंहस्थ कुंभ मेळ्यात महागंगा आरतीचा सोहळा रंगला, 6,500 आदिवासी बांधवांचा सहभाग",
       publisher: "TV9 Marathi",
@@ -825,6 +846,21 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   livePage: "/dhwajarohan-2026/live",
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
+    {
+      time: "2026-10-31T19:15:00+05:30",
+      headline: {
+        en: "President Murmu addresses Ramkund: the Kumbh will connect our ancient heritage with modern dimensions, PTI reports; Guinness team watched the aarti, result after verification",
+        hi: "रामकुंड पर राष्ट्रपति मुर्मू का संबोधन: कुंभ हमारी प्राचीन विरासत को आधुनिक आयामों से जोड़ेगा, PTI की रिपोर्ट; गिनीज टीम ने आरती देखी, नतीजा सत्यापन के बाद",
+        mr: "रामकुंडावर राष्ट्रपती मुर्मू यांचे भाषण: कुंभमेळा प्राचीन वारशाला आधुनिक आयामांशी जोडेल, PTI चे वृत्त; गिनीज पथकाने आरती पाहिली, निकाल पडताळणीनंतर",
+      },
+      body: {
+        en: "Addressing the evening ceremony, President Droupadi Murmu said, as PTI reports: \"The Nashik-Trimbakeshwar Simhastha Maha Kumbh 2027 will connect our ancient heritage with modern dimensions. This event will provide an excellent opportunity to connect the younger generation with India's great heritage and values.\" PTI adds that she called the centuries-old Kumbh tradition a living example of India's cultural and spiritual unity. ABP Majha (6:53 PM) reports she said she felt delighted to be there, called the Kumbh a symbol of cultural and spiritual strength, faith and social harmony, bowed to Mother Godavari and the land touched by Shri Ram's feet, and mentioned that she had already had darshan at Trimbakeshwar and Kushavarta Tirtha. That is the first report we have of her Trimbakeshwar darshan. On the Maha Goda Aarti, Asianet News Marathi reports that more than 6,500 tribal devotees from about 650 villages and hamlets across seven talukas took part, lamps were lit on both banks from the Ekmukhi Datta temple to the Rokadoba temple, and a Guinness World Records team observed it; the record will be officially announced only after final verification. ABP Majha's photo story already calls it a world record, but we will treat it as unconfirmed until Guinness announces it.",
+        hi: "शाम के समारोह को संबोधित करते हुए राष्ट्रपति द्रौपदी मुर्मू ने कहा, PTI की रिपोर्ट के अनुसार: \"नाशिक-त्र्यंबकेश्वर सिंहस्थ महाकुंभ 2027 हमारी प्राचीन विरासत को आधुनिक आयामों से जोड़ेगा। यह आयोजन युवा पीढ़ी को भारत की महान विरासत और मूल्यों से जोड़ने का उत्कृष्ट अवसर देगा।\" (अंग्रेज़ी रिपोर्ट से अनुवाद)। PTI के अनुसार उन्होंने सदियों पुरानी कुंभ परंपरा को भारत की सांस्कृतिक और आध्यात्मिक एकता का जीवंत उदाहरण बताया। ABP माझा (शाम 6:53) के अनुसार उन्होंने कहा कि यहाँ आकर उन्हें प्रसन्नता हुई, कुंभ को सांस्कृतिक-आध्यात्मिक शक्ति, आस्था और सामाजिक सद्भाव का प्रतीक बताया, माँ गोदावरी और श्रीराम के चरणों से पवित्र इस धरती को प्रणाम किया, और बताया कि त्र्यंबकेश्वर और कुशावर्त तीर्थ के दर्शन हो चुके हैं। त्र्यंबकेश्वर दर्शन की यह पहली रिपोर्ट है जो हमें मिली है। महा गोदा आरती पर Asianet News मराठी के अनुसार सात तालुकों के करीब 650 गाँवों और पाड़ों से 6,500 से अधिक जनजातीय श्रद्धालु शामिल हुए, एकमुखी दत्त मंदिर से रोकडोबा मंदिर तक दोनों तटों पर दीप जले, और गिनीज वर्ल्ड रिकॉर्ड्स की टीम मौजूद थी; रिकॉर्ड की आधिकारिक घोषणा अंतिम सत्यापन के बाद ही होगी। ABP माझा की फोटो स्टोरी इसे पहले ही विश्व रिकॉर्ड कह रही है, लेकिन गिनीज की घोषणा तक हम इसे अपुष्ट मानेंगे।",
+        mr: "सायंकाळच्या सोहळ्यात बोलताना राष्ट्रपती द्रौपदी मुर्मू म्हणाल्या, PTI च्या वृत्तानुसार: \"नाशिक-त्र्यंबकेश्वर सिंहस्थ महाकुंभ २०२७ आपल्या प्राचीन वारशाला आधुनिक आयामांशी जोडेल. नव्या पिढीला भारताच्या महान वारशाशी आणि मूल्यांशी जोडण्याची ही उत्तम संधी असेल.\" (इंग्रजी वृत्ताचा अनुवाद). शतकानुशतकांची कुंभ परंपरा भारताच्या सांस्कृतिक व आध्यात्मिक एकतेचे जिवंत उदाहरण असल्याचे त्या म्हणाल्या, असे PTI ने म्हटले आहे. एबीपी माझाच्या (सायं. ६.५३) वृत्तानुसार इथे येऊन प्रसन्न वाटले, कुंभमेळा हे सांस्कृतिक-आध्यात्मिक शक्ती, आस्था आणि सामाजिकतेचे प्रतीक आहे, असे त्या म्हणाल्या; माँ गोदावरी आणि श्रीरामांच्या पदस्पर्शाने पावन झालेल्या भूमीला त्यांनी प्रणाम केला आणि त्र्यंबकेश्वर व कुशावर्त तीर्थाचे दर्शन झाल्याचे सांगितले. त्र्यंबकेश्वर दर्शनाचे हे आम्हाला मिळालेले पहिले वृत्त आहे. महा गोदा आरतीबाबत Asianet News मराठीनुसार सात तालुक्यांतील सुमारे ६५० गावे-पाड्यांतून ६,५०० हून अधिक आदिवासी बांधव सहभागी झाले, एकमुखी दत्त मंदिर ते रोकडोबा मंदिरापर्यंत दोन्ही तीरांवर दिवे उजळले आणि गिनीज वर्ल्ड रेकॉर्ड्सचे पथक उपस्थित होते; विक्रमाची अधिकृत घोषणा अंतिम पडताळणीनंतरच होईल. एबीपी माझाच्या फोटो स्टोरीत याला विश्वविक्रम म्हटले आहे, पण गिनीजची घोषणा होईपर्यंत आम्ही ते अपुष्ट मानतो.",
+      },
+      status: "reported",
+      source: "PTI, ABP Majha, Asianet News Marathi",
+    },
     {
       time: "2026-10-31T17:40:00+05:30",
       headline: {
