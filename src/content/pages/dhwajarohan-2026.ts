@@ -362,6 +362,27 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   ],
   sources: [
     {
+      title: "President Droupadi Murmu participated in the flag-hoisting ceremony at Kushavarta Tirtha in Trimbakeshwar (ANI video post)",
+      publisher: "Hindustan Times (on X)",
+      date: "2026-10-31",
+      url: "https://x.com/htTweets/status/2116442974993404134",
+      status: "reported",
+    },
+    {
+      title: "त्र्यंबकेश्वरमध्ये सिंहस्थ कुंभमेळ्याला प्रारंभ",
+      publisher: "Loksatta",
+      date: "2026-10-31",
+      url: "https://www.loksatta.com/nashik/nashik-simhastha-kumbh-mela-flag-hoisting-droupadi-murmu-rnb-99-6223703/",
+      status: "reported",
+    },
+    {
+      title: "President hoists flag to mark the start of Nashik-Trimbakeshwar Simhastha Kumbh Mela",
+      publisher: "Akashvani News",
+      date: "2026-10-31",
+      url: "https://newsonair.gov.in/president-murmu-inaugurates-simhastha-kumbh-mela-celebrations-in-nashik/",
+      status: "confirmed",
+    },
+    {
       title: "President Murmu hoists flag to mark start of Nashik-Trimbakeshwar Simhastha Kumbh Mela",
       publisher: "PTI",
       date: "2026-10-31",
@@ -790,6 +811,21 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   livePage: "/dhwajarohan-2026/live",
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
+    {
+      time: "2026-10-31T15:10:00+05:30",
+      headline: {
+        en: "President Murmu at Kushavarta Tirtha in Trimbakeshwar, video reports show; temple darshan not yet reported",
+        hi: "त्र्यंबकेश्वर के कुशावर्त तीर्थ पर पहुँचीं राष्ट्रपति मुर्मू, वीडियो रिपोर्ट; मंदिर दर्शन की खबर अभी नहीं",
+        mr: "राष्ट्रपती मुर्मू त्र्यंबकेश्वरच्या कुशावर्त तीर्थावर, व्हिडिओ वृत्त; मंदिरातील दर्शनाचे वृत्त अजून नाही",
+      },
+      body: {
+        en: "After the Ramkund hoisting, President Droupadi Murmu went to Trimbakeshwar. A news agency ANI video carried by Hindustan Times at 1:41 PM shows her taking part in the flag ceremony at Kushavarta Tirtha, and Loksatta and Bharat 24 reported the same in the early afternoon. Her darshan at the Trimbakeshwar Jyotirlinga temple was planned right after (about 15 minutes of rituals, Sarkarnama), but we have not yet seen a report that it happened. Akashvani (All India Radio) says she will address the main public programme at Ramkund this evening, where about 6,500 members of tribal communities will perform the Goda Aarti in a world-record attempt, according to Kumbh Mela Commissioner Shekhar Singh. Under the Collector's order, the Trimbakeshwar temple and Kushavarta stay closed to outside devotees until 6 PM today or until the programme ends.",
+        hi: "रामकुंड पर ध्वजारोहण के बाद राष्ट्रपति द्रौपदी मुर्मू त्र्यंबकेश्वर गईं। हिंदुस्तान टाइम्स द्वारा दोपहर 1:41 बजे साझा किए गए समाचार एजेंसी ANI के वीडियो में वे कुशावर्त तीर्थ पर ध्वज समारोह में शामिल दिखती हैं, और लोकसत्ता तथा भारत 24 ने भी दोपहर में यही बताया। इसके बाद त्र्यंबकेश्वर ज्योतिर्लिंग मंदिर में दर्शन तय थे (लगभग 15 मिनट की पूजा, सरकारनामा), लेकिन यह हो गया, ऐसी रिपोर्ट हमें अभी नहीं मिली है। आकाशवाणी के अनुसार राष्ट्रपति आज शाम रामकुंड पर मुख्य सार्वजनिक कार्यक्रम को संबोधित करेंगी, जहाँ कुंभ मेला आयुक्त शेखर सिंह के मुताबिक करीब 6,500 जनजातीय समुदाय के सदस्य विश्व रिकॉर्ड के प्रयास में गोदा आरती करेंगे। कलेक्टर के आदेश के अनुसार त्र्यंबकेश्वर मंदिर और कुशावर्त आज शाम 6 बजे तक या कार्यक्रम खत्म होने तक बाहरी श्रद्धालुओं के लिए बंद हैं।",
+        mr: "रामकुंडावरील ध्वजारोहणानंतर राष्ट्रपती द्रौपदी मुर्मू त्र्यंबकेश्वरला गेल्या. हिंदुस्तान टाइम्सने दुपारी १.४१ वाजता दिलेल्या ANI वृत्तसंस्थेच्या व्हिडिओत त्या कुशावर्त तीर्थावरील ध्वज सोहळ्यात सहभागी दिसतात; लोकसत्ता आणि भारत २४ नेही दुपारी हेच वृत्त दिले. त्यानंतर त्र्यंबकेश्वर ज्योतिर्लिंग मंदिरात दर्शन नियोजित होते (सुमारे १५ मिनिटांचा पूजाविधी, सरकारनामा), मात्र ते झाल्याचे वृत्त आम्हाला अजून मिळालेले नाही. आकाशवाणीनुसार राष्ट्रपती आज सायंकाळी रामकुंडावरील मुख्य सार्वजनिक कार्यक्रमात संबोधित करतील; कुंभमेळा आयुक्त शेखर सिंह यांच्या माहितीनुसार तिथे सुमारे ६,५०० आदिवासी बांधव विश्वविक्रमाच्या प्रयत्नात गोदा आरती करणार आहेत. जिल्हाधिकाऱ्यांच्या आदेशानुसार त्र्यंबकेश्वर मंदिर व कुशावर्त आज सायंकाळी ६ पर्यंत किंवा कार्यक्रम संपेपर्यंत बाहेरील भाविकांसाठी बंद आहेत.",
+      },
+      status: "reported",
+      source: "ANI via Hindustan Times (on X), Loksatta, Bharat 24, Akashvani, Sarkarnama",
+    },
     {
       time: "2026-10-31T13:00:00+05:30",
       headline: {
