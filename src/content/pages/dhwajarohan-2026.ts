@@ -8,9 +8,9 @@ export const page: InfoPageContent = {
     mr: "३१ ऑक्टो. रामकुंडावर: सिंहस्थ सुरू करणारे ध्वजारोहण",
   },
   description: {
-    en: "31 Oct 2026, 12:02 PM at Ramkund and Kushavarta — Dhwajarohan (NTKMA plan; Mahajan on record). Live timings, Maha Goda Aarti, routes, closures, parking.",
-    hi: "लाइव: 31 अक्टूबर 2026, दोपहर 12:02 बजे रामकुंड और कुशावर्त पर ध्वजारोहण। समय, शाम 6 बजे महा गोदा आरती, रास्ते, बंदी, पार्किंग, कैसे देखें।",
-    mr: "३१ ऑक्टो. दुपारी १२.०२, रामकुंड व कुशावर्त — ध्वजारोहण (NTKMA आराखडा; महाजन अधिकृत). थेट वेळा, महा गोदा आरती, मार्ग, बंदी, पार्किंग.",
+    en: "Flags hoisted 31 Oct 2026 at 12:02 PM: President Murmu at Ramkund, CM Fadnavis at Kushavarta, Trimbak. Live updates, Maha Goda Aarti, routes, closures.",
+    hi: "31 अक्टूबर 2026, दोपहर 12:02 बजे ध्वजारोहण संपन्न: रामकुंड पर राष्ट्रपति मुर्मू, कुशावर्त पर मुख्यमंत्री फडणवीस। लाइव अपडेट, महा गोदा आरती, रास्ते, बंदी।",
+    mr: "३१ ऑक्टो. दुपारी १२.०२ वाजता ध्वजारोहण झाले: रामकुंडावर राष्ट्रपती मुर्मू, कुशावर्तावर मुख्यमंत्री फडणवीस. थेट अपडेट, महा गोदा आरती, मार्ग, बंदी.",
   },
   h1: {
     en: "Dhwajarohan 2026: the flag hoisting that starts the Simhastha",
@@ -18,15 +18,15 @@ export const page: InfoPageContent = {
     mr: "ध्वजारोहण २०२६: सिंहस्थ कुंभमेळ्याचा औपचारिक प्रारंभ",
   },
   intro: {
-    en: `On Saturday 31 October 2026, at 12:02 PM, flags will go up at the same moment at Ramkund in Nashik and at Kushavarta in Trimbakeshwar. This Dhwajarohan (flag hoisting) is the formal start of the Nashik-Trimbakeshwar Simhastha Kumbh Mela.
+    en: `The flags went up at 12:02 PM on Saturday 31 October 2026, formally opening the Nashik-Trimbakeshwar Simhastha Kumbh Mela. President Droupadi Murmu hoisted the religious flag at Ramkund in Nashik after rituals on the Godavari bank, and Chief Minister Devendra Fadnavis hoisted the flag at Kushavarta in Trimbakeshwar at the same moment (PTI, DD News, Lokmat). Lokmat notes it is the first time a President has attended a Kumbh flag hoisting in Nashik.
 
-The date and both venues are in the NTKMA Kumbh Mela Plan; Kumbh Mela Minister Girish Mahajan confirmed the 12:02 PM muhurat on record (eSakal, 19 September 2026). This independent guide covers who is expected, routes, closures and how to plan. We are not an official site. Every source is listed at the foot of this page.`,
-    hi: `शनिवार, 31 अक्टूबर 2026 को दोपहर 12:02 बजे नाशिक के रामकुंड और त्र्यंबकेश्वर के कुशावर्त पर एक ही समय पर ध्वज फहराया जाएगा। यही ध्वजारोहण नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभ मेले (कई लोग इसे नासिक कुंभ भी कहते हैं) की औपचारिक शुरुआत है।
+The evening public programme and Maha Goda Aarti at Ramkund are still to come; follow them in the live updates on this page. This independent guide also covers routes, closures and how to plan. We are not an official site. Every source is listed at the foot of this page.`,
+    hi: `शनिवार, 31 अक्टूबर 2026 को दोपहर 12:02 बजे ध्वज फहराए गए और इसी के साथ नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभ मेले की औपचारिक शुरुआत हो गई। राष्ट्रपति द्रौपदी मुर्मू ने गोदावरी तट पर पूजा-विधि के बाद नाशिक के रामकुंड पर धार्मिक ध्वज फहराया, और उसी समय मुख्यमंत्री देवेंद्र फडणवीस ने त्र्यंबकेश्वर के कुशावर्त पर ध्वज फहराया (PTI, DD News, लोकमत)। लोकमत के अनुसार नाशिक में कुंभ ध्वजारोहण में राष्ट्रपति पहली बार शामिल हुई हैं।
 
-यह स्वतंत्र गाइड बताती है कि उस दिन क्या होगा, कहां होगा, कौन आ सकता है और अगर आप जाना चाहते हैं तो योजना कैसे बनाएं। यह कोई सरकारी साइट नहीं है। सभी स्रोत पेज के नीचे दिए गए हैं।`,
-    mr: `शनिवार, ३१ ऑक्टोबर २०२६ रोजी दुपारी १२.०२ वाजता नाशिकच्या रामकुंडावर आणि त्र्यंबकेश्वरच्या कुशावर्तावर एकाच वेळी ध्वज फडकणार आहे. हे ध्वजारोहण म्हणजे नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभमेळा 2027 चा औपचारिक प्रारंभ.
+शाम का सार्वजनिक कार्यक्रम और रामकुंड पर महा गोदा आरती अभी बाकी है; इनकी जानकारी इसी पेज के लाइव अपडेट में मिलेगी। यह स्वतंत्र गाइड रास्ते, बंदी और योजना की जानकारी भी देती है। यह कोई सरकारी साइट नहीं है। सभी स्रोत पेज के नीचे दिए गए हैं।`,
+    mr: `शनिवार, ३१ ऑक्टोबर २०२६ रोजी दुपारी १२.०२ वाजता ध्वज फडकले आणि नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभमेळ्याचा औपचारिक प्रारंभ झाला. गोदाकाठी पूजाविधीनंतर राष्ट्रपती द्रौपदी मुर्मू यांनी नाशिकच्या रामकुंडावर धर्मध्वज फडकवला, तर त्याच क्षणी मुख्यमंत्री देवेंद्र फडणवीस यांनी त्र्यंबकेश्वरच्या कुशावर्तावर ध्वजारोहण केले (PTI, DD News, लोकमत). नाशिकमध्ये कुंभाच्या ध्वजारोहणाला राष्ट्रपती प्रथमच उपस्थित राहिल्या, असे लोकमतने नमूद केले आहे.
 
-तारीख व दोन्ही ठिकाणे NTKMA च्या कुंभमेळा आराखड्यात आहेत; कुंभमेळा मंत्री गिरीश महाजन यांनी १२.०२ च्या मुहूर्ताला अधिकृत दुजोरा दिला (eSakal, १९ सप्टेंबर २०२६). कोण येणार, मार्ग, बंदी आणि नियोजन कसे करावे, हे या स्वतंत्र मार्गदर्शकात आहे. हे संकेतस्थळ सरकारी नाही. सर्व स्रोत पानाच्या शेवटी दिले आहेत.`,
+सायंकाळचा सार्वजनिक कार्यक्रम आणि रामकुंडावरील महा गोदा आरती अजून व्हायची आहे; त्याचे अपडेट याच पानावरील थेट अपडेटमध्ये मिळतील. कोण आले, मार्ग, बंदी आणि नियोजन यांचीही माहिती या स्वतंत्र मार्गदर्शकात आहे. हे संकेतस्थळ सरकारी नाही. सर्व स्रोत पानाच्या शेवटी दिले आहेत.`,
   },
   sections: [
     {
@@ -361,6 +361,41 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
     },
   ],
   sources: [
+    {
+      title: "President Murmu hoists flag to mark start of Nashik-Trimbakeshwar Simhastha Kumbh Mela",
+      publisher: "PTI",
+      date: "2026-10-31",
+      url: "https://www.ptinews.com/story/national/president-murmu-hoists-flag-to-mark-start-of-nashik-trimbakeshwar-simhastha-kumbh-mela/4217408",
+      status: "confirmed",
+    },
+    {
+      title: "President Droupadi Murmu participates in rituals during Dhwajarohan ceremony at Shri Ramkund (video post)",
+      publisher: "DD News (on X)",
+      date: "2026-10-31",
+      url: "https://x.com/DDNewslive/status/2116418073649660170",
+      status: "confirmed",
+    },
+    {
+      title: "Governor and Deputy Chief Ministers received President Droupadi Murmu on her arrival at Nashik (post)",
+      publisher: "President of India (on X)",
+      date: "2026-10-31",
+      url: "https://x.com/rashtrapatibhvn/status/2116417501194334378",
+      status: "confirmed",
+    },
+    {
+      title: "राष्ट्रपतींच्या हस्ते नाशकात ध्वजारोहण; नाशिकमध्ये घडला इतिहास, पार पडला भव्य दिव्य सोहळा",
+      publisher: "Lokmat",
+      date: "2026-10-31",
+      url: "https://www.lokmat.com/nashik/kumbh-mela-flag-hoisting-in-nashik-by-the-president-droupadi-murmu-new-history-was-made-in-nashik-a629/",
+      status: "confirmed",
+    },
+    {
+      title: "मुख्यमंत्री देवेंद्र फडणवीस यांच्या हस्ते श्री चंद्र घाट येथे ध्वजस्तंभ व पवित्र ध्वजाचे पूजन व ध्वजारोहण (live post)",
+      publisher: "CMO Maharashtra (on X)",
+      date: "2026-10-31",
+      url: "https://x.com/CMOMaharashtra/status/2116430668007628884",
+      status: "confirmed",
+    },
     {
       title: "President Murmu to Visit Maharashtra, Haryana from October 31 to November 1 (President's Secretariat release)",
       publisher: "DD News",
@@ -755,6 +790,36 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   livePage: "/dhwajarohan-2026/live",
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
+    {
+      time: "2026-10-31T13:00:00+05:30",
+      headline: {
+        en: "CM Fadnavis performs flag puja and flag hoisting at the new Shri Chandra Ghat",
+        hi: "नए श्री चंद्र घाट पर मुख्यमंत्री फडणवीस ने किया ध्वज पूजन और ध्वजारोहण",
+        mr: "नव्या श्री चंद्र घाटावर मुख्यमंत्री फडणवीसांच्या हस्ते ध्वजपूजन व ध्वजारोहण",
+      },
+      body: {
+        en: "CMO Maharashtra and Devendra Fadnavis went live on X at 12:52 PM from Shri Chandra Ghat, where the CM performed the puja of the flagstaff and holy flag and a flag hoisting for the Nashik-Trimbakeshwar Simhastha. Earlier at Kushavarta, CMO Maharashtra posted that he welcomed seers and sought their blessings during the flag puja. Pudhari reports Shri Chandra Ghat is a new ghat built for the Simhastha, known as a 'prati Kushavarta', and that its flag shows the 14 jewels from the churning of the ocean. The President's Trimbakeshwar visit (Kushavarta Goda puja and temple darshan, planned from 2 PM per Pudhari) has not been reported as done yet.",
+        hi: "CMO महाराष्ट्र और देवेंद्र फडणवीस ने दोपहर 12:52 बजे श्री चंद्र घाट से X पर लाइव किया, जहाँ मुख्यमंत्री ने नाशिक-त्र्यंबकेश्वर सिंहस्थ के ध्वज स्तंभ और पवित्र ध्वज का पूजन कर ध्वजारोहण किया। इससे पहले कुशावर्त पर ध्वज पूजन के दौरान उन्होंने साधु-संतों का स्वागत कर आशीर्वाद लिया, ऐसा CMO महाराष्ट्र ने पोस्ट किया। पुढारी के अनुसार श्री चंद्र घाट सिंहस्थ के लिए नया बना घाट है, जिसे 'प्रति कुशावर्त' कहा जाता है, और यहाँ के ध्वज पर समुद्र मंथन से निकले 14 रत्न दिखाए गए हैं। राष्ट्रपति का त्र्यंबकेश्वर दौरा (पुढारी के अनुसार दोपहर 2 बजे से कुशावर्त पर गोदा पूजन और मंदिर दर्शन) अभी हुआ है, ऐसी कोई रिपोर्ट नहीं आई है।",
+        mr: "CMO महाराष्ट्र आणि देवेंद्र फडणवीस यांनी दुपारी १२.५२ वाजता श्री चंद्र घाटावरून X वर थेट प्रक्षेपण केले; तिथे मुख्यमंत्र्यांच्या हस्ते नाशिक-त्र्यंबकेश्वर सिंहस्थाच्या ध्वजस्तंभाचे व पवित्र ध्वजाचे पूजन आणि ध्वजारोहण झाले. त्याआधी कुशावर्तावर ध्वजपूजनाच्या वेळी त्यांनी साधू-संत-महंतांचे स्वागत करून आशीर्वाद घेतले, असे CMO महाराष्ट्रने म्हटले आहे. पुढारीच्या वृत्तानुसार श्री चंद्र घाट हा सिंहस्थासाठी नव्याने बांधलेला घाट असून त्याला 'प्रति कुशावर्त' म्हणून ओळखले जाते; येथील ध्वजावर समुद्रमंथनातून निघालेली १४ रत्ने दाखवली आहेत. राष्ट्रपतींचा त्र्यंबकेश्वर दौरा (पुढारीनुसार दुपारी २ पासून कुशावर्तावर गोदापूजन व मंदिरात दर्शन) झाल्याचे वृत्त अजून आलेले नाही.",
+      },
+      status: "confirmed",
+      source: "CMO Maharashtra (on X), Devendra Fadnavis (on X), Pudhari",
+    },
+    {
+      time: "2026-10-31T12:55:00+05:30",
+      headline: {
+        en: "Hoisting confirmed: President Murmu raised the Simhastha flag at Ramkund, CM Fadnavis at Trimbakeshwar, at 12:02 PM",
+        hi: "ध्वजारोहण की पुष्टि: 12:02 बजे रामकुंड पर राष्ट्रपति मुर्मू और त्र्यंबकेश्वर में मुख्यमंत्री फडणवीस ने फहराया सिंहस्थ ध्वज",
+        mr: "ध्वजारोहणाला दुजोरा: १२.०२ वाजता रामकुंडावर राष्ट्रपती मुर्मू, त्र्यंबकेश्वरात मुख्यमंत्री फडणवीस यांनी फडकवला सिंहस्थ ध्वज",
+      },
+      body: {
+        en: "PTI and DD News now confirm the 12:02 PM hoisting. PTI reports President Droupadi Murmu hoisted the religious flag at Ramkund after rituals on the Godavari bank, with Governor Jishnu Dev Varma, Deputy CMs Eknath Shinde and Sunetra Pawar and senior officials present, while CM Devendra Fadnavis hoisted the traditional flag at a parallel ceremony in Trimbakeshwar at 12:02 PM. Lokmat says the President reached Ramkund at 11:40 AM, performed Goda puja, had darshan at the Ganga Godavari temple and worshipped the flagstaff before the hoisting, and calls it the first time a President has attended a Kumbh flag hoisting in Nashik. Rashtrapati Bhavan posted that the Governor and both Deputy CMs received her on arrival. Lokmat adds that the three-day yajna on the Godavari ends on 1 November with the purnahuti by Shankaracharya Vidhushekhara Bharati of Sringeri. Her address is due at the evening public programme; we will add only verified quotes.",
+        hi: "PTI और DD News ने अब 12:02 बजे के ध्वजारोहण की पुष्टि कर दी है। PTI के अनुसार राष्ट्रपति द्रौपदी मुर्मू ने गोदावरी तट पर पूजा-विधि के बाद रामकुंड पर धार्मिक ध्वज फहराया; इस दौरान राज्यपाल जिष्णु देव वर्मा, उपमुख्यमंत्री एकनाथ शिंदे और सुनेत्रा पवार तथा वरिष्ठ अधिकारी मौजूद थे। उधर मुख्यमंत्री देवेंद्र फडणवीस ने त्र्यंबकेश्वर में समानांतर समारोह में दोपहर 12:02 बजे पारंपरिक ध्वज फहराया। लोकमत के अनुसार राष्ट्रपति सुबह 11:40 बजे रामकुंड पहुँचीं, गोदा पूजन किया, गंगा गोदावरी मंदिर में दर्शन किए और ध्वजारोहण से पहले ध्वज स्तंभ का पूजन किया; अखबार के मुताबिक नाशिक में कुंभ ध्वजारोहण में राष्ट्रपति पहली बार शामिल हुई हैं। राष्ट्रपति भवन ने पोस्ट किया कि राज्यपाल और दोनों उपमुख्यमंत्रियों ने आगमन पर उनका स्वागत किया। लोकमत यह भी बताता है कि गोदावरी तट पर चल रहे तीन दिन के यज्ञ की पूर्णाहुति 1 नवंबर को शृंगेरी पीठ के शंकराचार्य विधुशेखर भारती करेंगे। राष्ट्रपति का संबोधन शाम के सार्वजनिक कार्यक्रम में होना है; हम केवल पुष्टि किए गए उद्धरण ही देंगे।",
+        mr: "PTI आणि DD News ने आता १२.०२ वाजताच्या ध्वजारोहणाला दुजोरा दिला आहे. PTI नुसार राष्ट्रपती द्रौपदी मुर्मू यांनी गोदाकाठी पूजाविधीनंतर रामकुंडावर धर्मध्वज फडकवला; या वेळी राज्यपाल जिष्णू देव वर्मा, उपमुख्यमंत्री एकनाथ शिंदे व सुनेत्रा पवार आणि वरिष्ठ अधिकारी उपस्थित होते. तर मुख्यमंत्री देवेंद्र फडणवीस यांनी त्र्यंबकेश्वरमधील समांतर सोहळ्यात दुपारी १२.०२ वाजता पारंपरिक ध्वज फडकवला. लोकमतनुसार राष्ट्रपती सकाळी ११.४० वाजता रामकुंडावर दाखल झाल्या; गोदापूजन, गंगा गोदावरी मंदिरात दर्शन आणि ध्वजस्तंभपूजनानंतर ध्वजारोहण झाले. कुंभाच्या ध्वजारोहणाला राष्ट्रपती उपस्थित राहण्याची नाशिकच्या इतिहासातील ही पहिलीच वेळ असल्याचे लोकमतने म्हटले आहे. आगमनावेळी राज्यपाल आणि दोन्ही उपमुख्यमंत्र्यांनी स्वागत केल्याचे राष्ट्रपती भवनाने पोस्ट केले. गोदाकाठी सुरू असलेल्या तीन दिवसीय यज्ञाची पूर्णाहुती १ नोव्हेंबरला शृंगेरी पीठाचे शंकराचार्य विधुशेखर भारती यांच्या हस्ते होईल, असेही लोकमतने दिले आहे. राष्ट्रपतींचे भाषण सायंकाळच्या सार्वजनिक कार्यक्रमात अपेक्षित आहे; आम्ही फक्त खात्री केलेलीच वाक्ये देऊ.",
+      },
+      status: "confirmed",
+      source: "PTI, DD News, Lokmat, President of India (on X)",
+    },
     {
       time: "2026-10-31T12:10:00+05:30",
       headline: {
@@ -1238,11 +1303,11 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   ],
   faq: [
     {
-      q: { mr: "ध्वजारोहण किती वाजता आहे?", hi: "ध्वजारोहण कितने बजे है?", en: "What time is the Dhwajarohan?" },
+      q: { mr: "ध्वजारोहण किती वाजता झाले?", hi: "ध्वजारोहण कितने बजे हुआ?", en: "What time was the Dhwajarohan?" },
       a: {
-        mr: "शनिवार, ३१ ऑक्टोबर २०२६, दुपारी १२:०२ वाजता, नाशिकच्या रामकुंडावर आणि त्र्यंबकेश्वरच्या कुशावर्तावर एकाच वेळी.",
-        hi: "शनिवार, 31 अक्टूबर 2026, दोपहर 12:02 बजे, नाशिक के रामकुंड और त्र्यंबकेश्वर के कुशावर्त पर एक साथ।",
-        en: "Saturday 31 October 2026 at 12:02 PM, at Ramkund in Nashik and Kushavarta in Trimbakeshwar at the same time.",
+        mr: "ध्वजारोहण शनिवार, ३१ ऑक्टोबर २०२६ रोजी दुपारी १२:०२ वाजता झाले: नाशिकच्या रामकुंडावर राष्ट्रपती द्रौपदी मुर्मू आणि त्र्यंबकेश्वरच्या कुशावर्तावर मुख्यमंत्री देवेंद्र फडणवीस यांच्या हस्ते, एकाच वेळी (PTI, DD News, लोकमत).",
+        hi: "ध्वजारोहण शनिवार, 31 अक्टूबर 2026 को दोपहर 12:02 बजे हुआ: नाशिक के रामकुंड पर राष्ट्रपति द्रौपदी मुर्मू ने और त्र्यंबकेश्वर के कुशावर्त पर मुख्यमंत्री देवेंद्र फडणवीस ने एक साथ ध्वज फहराया (PTI, DD News, लोकमत)।",
+        en: "It took place on Saturday 31 October 2026 at 12:02 PM: President Droupadi Murmu hoisted the flag at Ramkund in Nashik and CM Devendra Fadnavis at Kushavarta in Trimbakeshwar, at the same moment (PTI, DD News, Lokmat).",
       },
     },
     {
