@@ -362,6 +362,20 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   ],
   sources: [
     {
+      title: "नाशिक सिंहस्थ कुंभ मेळ्यात महागंगा आरतीचा सोहळा रंगला, 6,500 आदिवासी बांधवांचा सहभाग",
+      publisher: "TV9 Marathi",
+      date: "2026-10-31",
+      url: "https://www.tv9marathi.com/festival/mahaganga-aarti-at-nashik-simhastha-kumbh-mela-in-guinness-book-of-records-1793715.html",
+      status: "reported",
+    },
+    {
+      title: "राष्ट्रपती द्रौपदी मुर्मू यांच्या हस्ते कुशावर्त येथे सिंहस्थ ध्वजपूजन",
+      publisher: "Pudhari",
+      date: "2026-10-31",
+      url: "https://pudhari.news/kumbh-mela/simhastha-kumbh-mela-nashik-2027-president-draupadi-murmu-performs-singhastha-flag-worship-at-kushavarta-nashik-as80",
+      status: "reported",
+    },
+    {
       title: "President Droupadi Murmu participated in the flag-hoisting ceremony at Kushavarta Tirtha in Trimbakeshwar (ANI video post)",
       publisher: "Hindustan Times (on X)",
       date: "2026-10-31",
@@ -811,6 +825,21 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   livePage: "/dhwajarohan-2026/live",
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
+    {
+      time: "2026-10-31T17:40:00+05:30",
+      headline: {
+        en: "Goda Aarti by about 6,500 tribal devotees held on the Godavari ghats, TV9 Marathi reports; Guinness record not yet confirmed",
+        hi: "गोदावरी घाट पर करीब 6,500 जनजातीय श्रद्धालुओं की गोदा आरती हुई, TV9 मराठी की रिपोर्ट; गिनीज रिकॉर्ड की पुष्टि अभी नहीं",
+        mr: "गोदाघाटावर सुमारे ६,५०० आदिवासी बांधवांची गोदा आरती पार पडली, TV9 मराठीचे वृत्त; गिनीज विक्रमाची पुष्टी अजून नाही",
+      },
+      body: {
+        en: "TV9 Marathi reported at 5:13 PM and 5:25 PM that the mass Goda Aarti by about 6,500 tribal men and women has taken place on the Godavari ghats, with lamps lighting up the whole riverfront and residents watching from nearby terraces. Its later report says the President, CM Devendra Fadnavis and Deputy CMs Eknath Shinde and Sunetra Pawar were present. Organisers aim to enter it in Guinness World Records, but no record certificate has been reported yet. Note that published timings differed: Pudhari had said the record attempt itself would be at 4 PM, with another aarti in the President's presence at 6:30 PM. Earlier in Trimbakeshwar, Pudhari and Prahaar report, the President worshipped the Gautami Ganga Godavari at Kushavarta, performed the Simhastha flag puja, offered a special arghya and did the Godavari aarti; the Purohit Sangh (priests' association) presented her with a tamrapat (an engraved copper plate). We still have no report of her Jyotirlinga temple darshan or of her evening speech.",
+        hi: "TV9 मराठी ने शाम 5:13 और 5:25 बजे बताया कि करीब 6,500 जनजातीय पुरुषों और महिलाओं की सामूहिक गोदा आरती गोदावरी घाट पर हो चुकी है; दीयों से पूरा घाट जगमगा उठा और आसपास के लोग छतों से देखते रहे। बाद की रिपोर्ट के अनुसार राष्ट्रपति, मुख्यमंत्री देवेंद्र फडणवीस और उपमुख्यमंत्री एकनाथ शिंदे व सुनेत्रा पवार मौजूद थे। आयोजक इसे गिनीज वर्ल्ड रिकॉर्ड्स में दर्ज कराना चाहते हैं, लेकिन रिकॉर्ड प्रमाणपत्र मिलने की खबर अभी नहीं है। ध्यान दें कि समय को लेकर रिपोर्टें अलग थीं: पुढारी के अनुसार रिकॉर्ड प्रयास दोपहर 4 बजे और राष्ट्रपति की मौजूदगी में दूसरी आरती शाम 6:30 बजे होनी थी। इससे पहले त्र्यंबकेश्वर में, पुढारी और प्रहार के अनुसार, राष्ट्रपति ने कुशावर्त पर गौतमी गंगा गोदावरी पूजन, सिंहस्थ ध्वज पूजन, विशेष अर्घ्य और गोदावरी आरती की; पुरोहित संघ ने उन्हें ताम्रपट भेंट किया। ज्योतिर्लिंग मंदिर में उनके दर्शन या शाम के भाषण की रिपोर्ट हमें अभी नहीं मिली है।",
+        mr: "TV9 मराठीने सायंकाळी ५.१३ आणि ५.२५ वाजता दिलेल्या वृत्तानुसार सुमारे ६,५०० आदिवासी महिला व पुरुषांची सामूहिक गोदा आरती गोदाघाटावर पार पडली; दिव्यांनी संपूर्ण गोदाघाट उजळला आणि परिसरातील नागरिक गच्चीवरून सोहळा पाहत होते. नंतरच्या वृत्तानुसार राष्ट्रपती, मुख्यमंत्री देवेंद्र फडणवीस आणि उपमुख्यमंत्री एकनाथ शिंदे व सुनेत्रा पवार उपस्थित होते. या आरतीची गिनीज वर्ल्ड रेकॉर्ड्समध्ये नोंद करण्याचा आयोजकांचा प्रयत्न आहे, मात्र विक्रमाचे प्रमाणपत्र मिळाल्याचे वृत्त अजून नाही. वेळेबाबत वृत्तांत फरक होता: पुढारीनुसार विक्रमाचा प्रयत्न दुपारी ४ वाजता आणि राष्ट्रपतींच्या उपस्थितीत दुसरी आरती सायंकाळी ६.३० वाजता होणार होती. त्याआधी त्र्यंबकेश्वरमध्ये, पुढारी व प्रहारच्या वृत्तानुसार, राष्ट्रपतींनी कुशावर्तावर गौतमी गंगा गोदावरी पूजन, सिंहस्थ ध्वजपूजन, विशेष अर्घ्य आणि गोदावरी आरती केली; पुरोहित संघाने त्यांना ताम्रपट प्रदान केला. ज्योतिर्लिंग मंदिरातील दर्शन किंवा सायंकाळच्या भाषणाचे वृत्त आम्हाला अजून मिळालेले नाही.",
+      },
+      status: "reported",
+      source: "TV9 Marathi, Pudhari, Prahaar",
+    },
     {
       time: "2026-10-31T15:10:00+05:30",
       headline: {
