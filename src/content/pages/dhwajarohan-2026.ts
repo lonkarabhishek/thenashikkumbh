@@ -756,6 +756,21 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
     {
+      time: "2026-10-31T12:10:00+05:30",
+      headline: {
+        en: "Flags hoisted at 12:02 PM: President Murmu at Ramkund, CM Fadnavis at Kushavarta; Simhastha Kumbh formally begins",
+        hi: "12:02 बजे ध्वजारोहण: रामकुंड पर राष्ट्रपति मुर्मू, कुशावर्त पर मुख्यमंत्री फडणवीस; सिंहस्थ कुंभ की औपचारिक शुरुआत",
+        mr: "१२.०२ वाजता ध्वजारोहण: रामकुंडावर राष्ट्रपती मुर्मू, कुशावर्तावर मुख्यमंत्री फडणवीस; सिंहस्थ कुंभपर्वाचा औपचारिक प्रारंभ",
+      },
+      body: {
+        en: "News4Social, citing the news agency IANS, reports that the flags went up at both places together at 12:02 PM: President Droupadi Murmu hoisted the Kumbh flag at Ramkund in Nashik and Chief Minister Devendra Fadnavis hoisted the Dharma Dhwaj at Kushavarta, Trimbakeshwar, after the flagstaff and flag were worshipped with chanting. The same report says Deputy CM Eknath Shinde assured that development works would be finished ahead of time. We have not yet seen an official release or a main local outlet's post-ceremony report, so this stays REPORTED until we do.",
+        hi: "News4Social ने समाचार एजेंसी IANS के हवाले से बताया है कि दोपहर 12:02 बजे दोनों जगह एक साथ ध्वज फहराए गए: नासिक के रामकुंड पर राष्ट्रपति द्रौपदी मुर्मू ने कुंभ ध्वज फहराया और त्र्यंबकेश्वर के कुशावर्त तीर्थ पर मुख्यमंत्री देवेंद्र फडणवीस ने धर्मध्वजा फहराई; इससे पहले मंत्रोच्चार के बीच ध्वज स्तंभ और ध्वज का पूजन हुआ। इसी रिपोर्ट के अनुसार उपमुख्यमंत्री एकनाथ शिंदे ने विकास कार्य समय से पहले पूरे करने का आश्वासन दिया। आधिकारिक विज्ञप्ति या किसी बड़े स्थानीय अखबार की समारोह के बाद की रिपोर्ट हमें अभी नहीं मिली है, इसलिए यह फ़िलहाल रिपोर्ट ही है।",
+        mr: "News4Social ने IANS वृत्तसंस्थेच्या हवाल्याने दिलेल्या वृत्तानुसार दुपारी १२.०२ वाजता दोन्ही ठिकाणी एकाच वेळी ध्वजारोहण झाले: नाशिकच्या रामकुंडावर राष्ट्रपती द्रौपदी मुर्मू यांनी कुंभध्वज फडकवला, तर त्र्यंबकेश्वरच्या कुशावर्त तीर्थावर मुख्यमंत्री देवेंद्र फडणवीस यांनी धर्मध्वज फडकवला; त्याआधी मंत्रोच्चारात ध्वजस्तंभ आणि ध्वजाचे पूजन झाले. विकासकामे वेळेआधी पूर्ण होतील, असे आश्वासन उपमुख्यमंत्री एकनाथ शिंदे यांनी दिल्याचेही या वृत्तात आहे. अधिकृत पत्रक किंवा प्रमुख स्थानिक वृत्तपत्राचे सोहळ्यानंतरचे वृत्त आम्हाला अजून मिळालेले नाही, त्यामुळे सध्या हे वृत्त म्हणूनच आहे.",
+      },
+      status: "reported",
+      source: "News4Social (citing IANS)",
+    },
+    {
       time: "2026-10-31T11:50:00+05:30",
       headline: {
         en: "President Murmu reaches Ramkund, yajna rituals begin ahead of the 12:02 PM hoisting",
