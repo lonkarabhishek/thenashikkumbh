@@ -4,12 +4,14 @@ import RichText from "@/components/RichText";
 import AdSlot from "@/components/ads/AdSlot";
 import ForwardCard from "@/components/share/ForwardCard";
 import CommonsPhoto from "@/components/photos/CommonsPhoto";
+import YouTubeEmbed from "@/components/live/YouTubeEmbed";
 import Link from "@/components/LocaleLink";
 import type { InfoPageContent } from "@/content/pages/types";
 import type { Locale } from "@/i18n/translations";
 import { SITE_NAME, SITE_URL, breadcrumbSchema, localeUrl, pageMetadata } from "@/lib/seo";
 import { formatDate as fmtDate } from "@/lib/dates";
 import { SITE_OWNER } from "@/data/siteOwner";
+import { youtubeEmbedUrl } from "@/lib/youtube";
 
 const UI = {
   updated: { en: "Last updated", hi: "अंतिम अपडेट", mr: "अखेरचे अद्ययावत" },
@@ -114,6 +116,16 @@ export default function InfoPage({ page, locale }: { page: InfoPageContent; loca
             articleBody: u.body[locale],
             datePublished: u.time,
             url: `${url}#update-${u.time.slice(0, 16).replace(/[^0-9]/g, "")}`,
+            ...(u.media && youtubeEmbedUrl(u.media.id)
+              ? {
+                  video: {
+                    "@type": "VideoObject",
+                    name: typeof u.media.caption === "string" ? u.media.caption : u.media.caption[locale],
+                    embedUrl: youtubeEmbedUrl(u.media.id),
+                    creditText: u.media.credit,
+                  },
+                }
+              : {}),
           })),
         }
       : null;
@@ -226,6 +238,14 @@ export default function InfoPage({ page, locale }: { page: InfoPageContent; loca
                   <div className="mt-1">
                     <RichText text={u.body[locale]} tone="light" />
                   </div>
+                  {u.media && youtubeEmbedUrl(u.media.id) && (
+                    <YouTubeEmbed
+                      id={u.media.id}
+                      caption={typeof u.media.caption === "string" ? u.media.caption : u.media.caption[locale]}
+                      credit={u.media.credit}
+                      locale={locale}
+                    />
+                  )}
                   <p className="mt-1 text-xs text-temple-500">{u.source}</p>
                 </li>
               ))}
