@@ -825,6 +825,16 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
       },
       status: "reported",
       source: "ANI via Hindustan Times (on X), Loksatta, Bharat 24, Akashvani, Sarkarnama",
+      media: {
+        type: "youtube",
+        id: "gfmsETVWarw",
+        caption: {
+          en: "President Murmu at Kushavarta Tirtha, Trimbakeshwar.",
+          hi: "त्र्यंबकेश्वर के कुशावर्त तीर्थ पर राष्ट्रपति मुर्मू।",
+          mr: "त्र्यंबकेश्वरच्या कुशावर्त तीर्थावर राष्ट्रपती मुर्मू.",
+        },
+        credit: "News18 India",
+      },
     },
     {
       time: "2026-10-31T13:00:00+05:30",
@@ -855,6 +865,16 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
       },
       status: "confirmed",
       source: "PTI, DD News, Lokmat, President of India (on X)",
+      media: {
+        type: "youtube",
+        id: "WNLbkZwI8Nw",
+        caption: {
+          en: "President Droupadi Murmu hoists the Dharma Dhwaj at Ramkund, Nashik.",
+          hi: "राष्ट्रपति द्रौपदी मुर्मू नाशिक के रामकुंड पर धर्मध्वज फहराती हैं।",
+          mr: "राष्ट्रपती द्रौपदी मुर्मू नाशिकच्या रामकुंडावर धर्मध्वज फडकवतात.",
+        },
+        credit: "DD News",
+      },
     },
     {
       time: "2026-10-31T12:10:00+05:30",
@@ -870,6 +890,16 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
       },
       status: "reported",
       source: "News4Social (citing IANS)",
+      media: {
+        type: "youtube",
+        id: "1n5IaXHetjQ",
+        caption: {
+          en: "Flags hoisted together at Ramkund (President) and Kushavarta, Trimbakeshwar (CM Fadnavis).",
+          hi: "रामकुंड (राष्ट्रपति) और कुशावर्त, त्र्यंबकेश्वर (मुख्यमंत्री फडणवीस) पर एक साथ ध्वज फहराए गए।",
+          mr: "रामकुंड (राष्ट्रपती) आणि कुशावर्त, त्र्यंबकेश्वर (मुख्यमंत्री फडणवीस) येथे एकाच वेळी ध्वज फडकवले गेले.",
+        },
+        credit: "News18 Marathi",
+      },
     },
     {
       time: "2026-10-31T11:50:00+05:30",

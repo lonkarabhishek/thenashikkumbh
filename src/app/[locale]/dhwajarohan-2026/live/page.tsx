@@ -3,6 +3,8 @@ import JsonLd from "@/components/JsonLd";
 import Link from "@/components/LocaleLink";
 import LiveFeed, { type LiveItem, type RelatedStory } from "@/components/live/LiveFeed";
 import { page as hub } from "@/content/pages/dhwajarohan-2026";
+import type { YouTubeMedia } from "@/content/pages/types";
+import { youtubeEmbedUrl } from "@/lib/youtube";
 import { blogArticles } from "@/data/blogData";
 import { newsStatus } from "@/components/blog/newsMeta";
 import type { Locale } from "@/i18n/translations";
@@ -95,6 +97,29 @@ function stamp(iso: string, locale: Locale): string {
 
 const idFor = (time: string) => `update-${time.slice(0, 16).replace(/[^0-9]/g, "")}`;
 
+function mediaFor(media: YouTubeMedia | undefined, locale: Locale): LiveItem["media"] {
+  if (!media || !youtubeEmbedUrl(media.id)) return undefined;
+  return {
+    type: "youtube",
+    id: media.id,
+    caption: typeof media.caption === "string" ? media.caption : media.caption[locale],
+    credit: media.credit,
+  };
+}
+
+function videoSchema(media: YouTubeMedia | undefined, locale: Locale) {
+  const embedUrl = media ? youtubeEmbedUrl(media.id) : null;
+  if (!media || !embedUrl) return {};
+  return {
+    video: {
+      "@type": "VideoObject",
+      name: typeof media.caption === "string" ? media.caption : media.caption[locale],
+      embedUrl,
+      creditText: media.credit,
+    },
+  };
+}
+
 export default function Page({ params }: Params) {
   const l = params.locale;
   const url = localeUrl(l, PATH);
@@ -108,6 +133,7 @@ export default function Page({ params }: Params) {
     body: u.body[l],
     status: u.status,
     source: u.source,
+    media: mediaFor(u.media, l),
   }));
 
   const related: RelatedStory[] = RELATED_SLUGS.map((slug) => blogArticles.find((a) => a.slug === slug))
@@ -140,6 +166,7 @@ export default function Page({ params }: Params) {
             articleBody: u.body[l],
             datePublished: u.time,
             url: `${url}#${idFor(u.time)}`,
+            ...videoSchema(u.media, l),
           })),
         }
       : null;

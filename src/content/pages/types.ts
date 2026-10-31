@@ -59,6 +59,16 @@ export interface InfoPageContent {
   pinnedCards?: { id: string; heading: L10n; text: L10n; image: L10n }[];
 }
 
+/** A news video attached to one live update. The player is YouTube's privacy-enhanced embed. */
+export interface YouTubeMedia {
+  type: "youtube";
+  /** 11-character YouTube video id. */
+  id: string;
+  caption: L10n | string;
+  /** Publisher credit shown under the player, e.g. "DD News". */
+  credit: string;
+}
+
 export interface LiveUpdate {
   /** ISO 8601 with +05:30 offset. */
   time: string;
@@ -67,4 +77,6 @@ export interface LiveUpdate {
   status: "confirmed" | "reported";
   /** Short source name(s) shown under the update. */
   source: string;
+  /** Optional clip of this moment. Does not change the update's confirmed/reported label. */
+  media?: YouTubeMedia;
 }

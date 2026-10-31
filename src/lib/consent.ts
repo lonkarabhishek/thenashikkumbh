@@ -7,8 +7,8 @@ import { useSyncExternalStore } from "react";
  *
  *   null         no choice yet: the banner shows, nothing third-party loads
  *   "essential"  only what the site needs to work; no analytics, no ads
- *   "all"        Google Analytics, Vercel Analytics, AdSense and the Google
- *                Maps embed may load
+ *   "all"        Google Analytics, Vercel Analytics, AdSense, the Google
+ *                Maps embed and live-page YouTube players may load
  *
  * Every third-party loader reads this through useConsent(), so a script
  * cannot slip in before the visitor has chosen.
