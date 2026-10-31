@@ -336,13 +336,13 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
         mr: "कसे पाहाल",
       },
       body: {
-        en: `- **Live stream:** no official live-stream link has been announced yet. We will post it in the live updates when NTKMA or the District Information Office shares one.
+        en: `- **Live stream (REPORTED, 31 October):** [Vegvan Maharashtra](https://vegvanmaharashtra.in/2026/10/31/nashik-trimbakeshwar-dhwajarohan-live-stream-links-oct-31/) lists YouTube streams for the [12:02 PM flag hoisting](https://www.youtube.com/live/ttVrkbJnsZQ) and the [7 PM Maha Goda aarti](https://www.youtube.com/live/Ok7grlPic3E), plus Facebook links. We could not confirm they are run by NTKMA or the District Information Office.
 - **Big screens:** large screens are planned in the city for people who cannot get close to the evening aarti (REPORTED, Shekhar Singh at a 3 October press conference, Super Fast Nashik). **Update, 31 October (REPORTED, ETV Bharat):** LED screens for the live broadcast are at **Ramkund, Gadge Maharaj bridge and the Kapaleshwar temple area**.
 - **This page:** we update the live feed above through 30 and 31 October, with each item marked CONFIRMED or REPORTED.`,
-        hi: `- **लाइव स्ट्रीम:** आधिकारिक लाइव स्ट्रीम का लिंक अभी घोषित नहीं हुआ है। NTKMA या ज़िला सूचना कार्यालय की ओर से आते ही हम इसे लाइव अपडेट में देंगे।
+        hi: `- **लाइव स्ट्रीम (रिपोर्ट, 31 अक्टूबर):** [वेगवान महाराष्ट्र](https://vegvanmaharashtra.in/2026/10/31/nashik-trimbakeshwar-dhwajarohan-live-stream-links-oct-31/) ने [12:02 बजे के ध्वजारोहण](https://www.youtube.com/live/ttVrkbJnsZQ) और [शाम 7 बजे की महा गोदा आरती](https://www.youtube.com/live/Ok7grlPic3E) के YouTube लाइव लिंक, साथ में Facebook लिंक दिए हैं। ये NTKMA या ज़िला सूचना कार्यालय के हैं, इसकी पुष्टि हम नहीं कर पाए।
 - **बड़ी स्क्रीन:** शाम की आरती के पास न पहुँच पाने वालों के लिए शहर में बड़ी स्क्रीन लगाने की योजना है (रिपोर्ट, 3 अक्टूबर की प्रेस वार्ता में शेखर सिंह, Super Fast Nashik)। **अपडेट, 31 अक्टूबर (रिपोर्ट, ETV भारत):** सीधे प्रसारण के लिए LED स्क्रीन **रामकुंड, गाडगे महाराज पुल और कपालेश्वर मंदिर परिसर** में हैं।
 - **यह पेज:** 30 और 31 अक्टूबर को ऊपर का लाइव फ़ीड लगातार अपडेट होगा, हर बात पर पुष्ट या रिपोर्ट लिखा होगा।`,
-        mr: `- **थेट प्रक्षेपण:** अधिकृत लाइव्ह स्ट्रीमची लिंक अजून जाहीर झालेली नाही. NTKMA किंवा जिल्हा माहिती कार्यालयाकडून ती आल्यावर आम्ही थेट अपडेटमध्ये देऊ.
+        mr: `- **थेट प्रक्षेपण (वृत्त, ३१ ऑक्टोबर):** [वेगवान महाराष्ट्र](https://vegvanmaharashtra.in/2026/10/31/nashik-trimbakeshwar-dhwajarohan-live-stream-links-oct-31/)ने [१२.०२ वाजताच्या ध्वजारोहणाची](https://www.youtube.com/live/ttVrkbJnsZQ) आणि [सायंकाळी ७ वाजताच्या महा गोदा आरतीची](https://www.youtube.com/live/Ok7grlPic3E) YouTube थेट लिंक, तसेच Facebook लिंक दिल्या आहेत. त्या NTKMA किंवा जिल्हा माहिती कार्यालयाच्या आहेत का, याची खात्री आम्ही करू शकलो नाही.
 - **मोठे पडदे:** सायंकाळच्या आरतीजवळ पोहोचू न शकणाऱ्यांसाठी शहरात मोठे स्क्रीन लावण्याचे नियोजन आहे (वृत्त, ३ ऑक्टोबरच्या पत्रकार परिषदेत शेखर सिंह, Super Fast Nashik). **अपडेट, ३१ ऑक्टोबर (वृत्त, ETV भारत):** थेट प्रक्षेपणासाठी LED स्क्रीन **रामकुंड, गाडगे महाराज पूल आणि कपालेश्वर मंदिर परिसरात** आहेत.
 - **हे पान:** ३० आणि ३१ ऑक्टोबरला वरचे थेट अपडेट सतत अद्ययावत होतील; प्रत्येक बाब अधिकृत की वृत्त, हे नमूद असेल.`,
       },
@@ -755,6 +755,36 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   livePage: "/dhwajarohan-2026/live",
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
+    {
+      time: "2026-10-31T11:05:00+05:30",
+      headline: {
+        en: "CM Fadnavis to hoist the flag at Kushavarta, Trimbak; Kumbh website, song and stamp launch at Ramkund",
+        hi: "त्र्यंबक के कुशावर्त पर ध्वज फहराएँगे मुख्यमंत्री फडणवीस; रामकुंड पर कुंभ वेबसाइट, गीत और डाक टिकट का लोकार्पण",
+        mr: "त्र्यंबकच्या कुशावर्तावर मुख्यमंत्री फडणवीसांच्या हस्ते ध्वजारोहण; रामकुंडावर कुंभ वेबसाइट, गीत आणि टपाल तिकिटाचे लोकार्पण",
+      },
+      body: {
+        en: "Lokshahi reports the Kushavarta flag at 12:02 PM will be hoisted by CM Devendra Fadnavis, while the President hoists at Ramkund. Navbharat Times says the Ramkund programme also includes the launch of the Kumbh Mela Authority website, the Kumbh song, a commemorative postage stamp and a coffee table book. Navbharat lists sankalp, Ganesh puja and tirth puja with the President from 11 AM to 12:30 PM. Governor Jishnu Dev Varma, both Deputy CMs and about a dozen ministers are due (Maharashtra Times).",
+        hi: "लोकशाही के अनुसार 12:02 बजे कुशावर्त पर ध्वज मुख्यमंत्री देवेंद्र फडणवीस फहराएँगे, जबकि राष्ट्रपति रामकुंड पर ध्वजारोहण करेंगी। नवभारत टाइम्स के अनुसार रामकुंड के कार्यक्रम में कुंभ मेला प्राधिकरण की वेबसाइट, कुंभ गीत, स्मारक डाक टिकट और कॉफ़ी टेबल बुक का लोकार्पण भी है। नवभारत के अनुसार सुबह 11 से 12:30 बजे तक राष्ट्रपति की उपस्थिति में संकल्प, गणेश पूजन और तीर्थपूजन होगा। राज्यपाल जिष्णु देव वर्मा, दोनों उपमुख्यमंत्री और करीब दर्जन भर मंत्री मौजूद रहेंगे (महाराष्ट्र टाइम्स)।",
+        mr: "लोकशाहीच्या वृत्तानुसार १२.०२ वाजता कुशावर्तावर ध्वजारोहण मुख्यमंत्री देवेंद्र फडणवीस यांच्या हस्ते होईल, तर रामकुंडावर राष्ट्रपतींच्या हस्ते. नवभारत टाइम्सनुसार रामकुंडावरील कार्यक्रमात कुंभमेळा प्राधिकरणाची वेबसाइट, कुंभ गीत, स्मरणार्थ टपाल तिकीट आणि कॉफी टेबल बुकचे लोकार्पणही आहे. नवभारतनुसार सकाळी ११ ते १२.३० या वेळेत राष्ट्रपतींच्या उपस्थितीत संकल्प, गणेश पूजन आणि तीर्थपूजन होईल. राज्यपाल जिष्णू देव वर्मा, दोन्ही उपमुख्यमंत्री आणि सुमारे डझनभर मंत्री उपस्थित राहणार आहेत (महाराष्ट्र टाइम्स).",
+      },
+      status: "reported",
+      source: "Lokshahi, Navbharat Times, Navbharat, Maharashtra Times",
+    },
+    {
+      time: "2026-10-31T11:00:00+05:30",
+      headline: {
+        en: "Live stream links for the flag hoisting and evening Goda aarti are out on YouTube and Facebook",
+        hi: "ध्वजारोहण और शाम की गोदा आरती के लाइव स्ट्रीम लिंक YouTube और Facebook पर",
+        mr: "ध्वजारोहण आणि सायंकाळच्या गोदा आरतीच्या थेट प्रक्षेपणाच्या लिंक YouTube व Facebook वर",
+      },
+      body: {
+        en: "Vegvan Maharashtra has published YouTube and Facebook live links for the 12:02 PM Ramkund flag hoisting and the 7 PM Maha Goda aarti. We have not been able to confirm that these are run by NTKMA or the District Information Office. The links are in the How to watch section of our Dhwajarohan 2026 hub.",
+        hi: "वेगवान महाराष्ट्र ने 12:02 बजे रामकुंड ध्वजारोहण और शाम 7 बजे की महा गोदा आरती के YouTube और Facebook लाइव लिंक प्रकाशित किए हैं। ये NTKMA या ज़िला सूचना कार्यालय के हैं, इसकी हम पुष्टि नहीं कर पाए हैं। लिंक हमारे ध्वजारोहण 2026 हब के 'कैसे देखें' हिस्से में हैं।",
+        mr: "वेगवान महाराष्ट्रने १२.०२ वाजताच्या रामकुंड ध्वजारोहणाच्या आणि सायंकाळी ७ वाजताच्या महा गोदा आरतीच्या YouTube व Facebook थेट लिंक प्रसिद्ध केल्या आहेत. त्या NTKMA किंवा जिल्हा माहिती कार्यालयाच्या आहेत का, याची आम्ही खात्री करू शकलो नाही. लिंक आमच्या ध्वजारोहण २०२६ हबमधील 'कसे पाहाल' भागात आहेत.",
+      },
+      status: "reported",
+      source: "Vegvan Maharashtra",
+    },
     {
       time: "2026-10-31T09:50:00+05:30",
       headline: {
@@ -1197,9 +1227,9 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
     {
       q: { mr: "ध्वजारोहण थेट कुठे पाहता येईल?", hi: "ध्वजारोहण लाइव कहाँ देखें?", en: "Where can I watch the flag hoisting live?" },
       a: {
-        mr: "अधिकृत लाइव्ह स्ट्रीम अजून जाहीर झालेले नाही. शहरात मोठे स्क्रीन लावण्याचे नियोजन असल्याचे वृत्त आहे. लिंक आल्यावर आम्ही या पानावर देऊ.",
-        hi: "आधिकारिक लाइव स्ट्रीम अभी घोषित नहीं हुई है। शहर में बड़ी स्क्रीन लगाने की योजना की रिपोर्ट है। लिंक आते ही हम इस पेज पर देंगे।",
-        en: "No official live stream has been announced yet. Big screens in the city are reported to be planned. We will post the link here when it is out.",
+        mr: "वेगवान महाराष्ट्रने ध्वजारोहण आणि सायंकाळच्या गोदा आरतीच्या YouTube व Facebook थेट लिंक दिल्या आहेत (वृत्त; अधिकृत असल्याची खात्री नाही). लिंक वरील 'कसे पाहाल' भागात आहेत. रामकुंड, गाडगे महाराज पूल आणि कपालेश्वर मंदिर परिसरात LED स्क्रीनही आहेत (वृत्त, ETV भारत).",
+        hi: "वेगवान महाराष्ट्र ने ध्वजारोहण और शाम की गोदा आरती के YouTube और Facebook लाइव लिंक दिए हैं (रिपोर्ट; आधिकारिक होने की पुष्टि नहीं)। लिंक ऊपर 'कैसे देखें' हिस्से में हैं। रामकुंड, गाडगे महाराज पुल और कपालेश्वर मंदिर परिसर में LED स्क्रीन भी हैं (रिपोर्ट, ETV भारत)।",
+        en: "Vegvan Maharashtra has listed YouTube and Facebook live links for the flag hoisting and the evening Goda aarti (REPORTED; we could not confirm they are official). The links are in the How to watch section above. LED screens are also up at Ramkund, Gadge Maharaj bridge and the Kapaleshwar temple area (REPORTED, ETV Bharat).",
       },
     },
   ],
