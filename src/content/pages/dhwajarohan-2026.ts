@@ -362,6 +362,27 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   ],
   sources: [
     {
+      title: "President of India graces the Dhwaj Stambh Pujan, Dhwaja Pujan and Dhwajarohan ceremony of Simhastha Maha Kumbh at Nashik",
+      publisher: "PIB (President's Secretariat)",
+      date: "2026-10-31",
+      url: "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2331006&lang=2&reg=48",
+      status: "confirmed",
+    },
+    {
+      title: "President Murmu attends Godavari Aarti, launches song and special postage stamps for Nashik-Trimbakeshwar Kumbh Mela 2027",
+      publisher: "Mid-day",
+      date: "2026-10-31",
+      url: "https://www.mid-day.com/news/india-news/article/president-murmu-attends-godavari-aarti-launches-song-and-special-postage-stamps-for-nashik-trimbakeshwar-kumbh-mela-2027-23657885",
+      status: "reported",
+    },
+    {
+      title: "नाशिकच्या सिंहस्थ कुंभमेळ्याचा जगभर डंका, गोदावरी महाआरतीची गिनीज बुकमध्ये नोंद",
+      publisher: "Prahaar",
+      date: "2026-10-31",
+      url: "https://prahaar.in/rppl/2026/10/31/nashiks-simhastha-kumbh-mela-gains-global-acclaim-godavari-maha-aarti-enters-the-guinness-book/",
+      status: "reported",
+    },
+    {
       title: "President Murmu hoists flag to mark start of Nashik-Trimbakeshwar Simhastha Kumbh Mela",
       publisher: "CNBC TV18 (PTI)",
       date: "2026-10-31",
@@ -860,6 +881,21 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   livePage: "/dhwajarohan-2026/live",
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
+    {
+      time: "2026-10-31T22:15:00+05:30",
+      headline: {
+        en: "Official: PIB confirms the President attended the flag hoisting and addressed Nashik; Kumbh song, website and two postage stamps launched",
+        hi: "आधिकारिक: PIB ने पुष्टि की, राष्ट्रपति ध्वजारोहण में शामिल हुईं और नाशिक में संबोधन दिया; कुंभ गीत, वेबसाइट और दो डाक टिकट जारी",
+        mr: "अधिकृत: राष्ट्रपती ध्वजारोहणाला उपस्थित राहिल्या व नाशिकमध्ये भाषण केले, PIB ची पुष्टी; कुंभ गीत, संकेतस्थळ आणि दोन टपाल तिकिटांचे अनावरण",
+      },
+      body: {
+        en: "The President's Secretariat, through PIB at 8:41 PM, confirmed that President Droupadi Murmu attended the Dhwaj Stambh Pujan, Dhwaja Pujan and Dhwajarohan ceremony of the Simhastha Maha Kumbh at Nashik today and addressed a public programme. In the official text she says the Kumbh gatherings have for centuries been living proof of India's cultural and spiritual unity, that the 2027 Nashik-Trimbakeshwar Kumbh will be a bridge between ancient heritage and modern times, and that it should help connect the younger generation with India's heritage. She also mentioned drought hitting farmers in Maharashtra and urged sustained public effort on cleanliness, expressing confidence that the Nashik Kumbh will set an exemplary standard for cleanliness and waste management. Mid-day, citing an official statement, reports that she launched the Kumbh Mela song and website and released special postage stamps featuring Ram Tirtha in Nashik and Kushavarta Tirtha in Trimbakeshwar. On the Goda Aarti record, Prahaar (9:11 PM) also says it has been entered in Guinness World Records and the Kumbh Mela Authority got the certificate, but Guinness has still not announced it publicly that we can find, so it stays reported. This is our last live update for the day.",
+        hi: "राष्ट्रपति सचिवालय ने PIB के ज़रिए रात 8:41 बजे पुष्टि की कि राष्ट्रपति द्रौपदी मुर्मू आज नाशिक में सिंहस्थ महाकुंभ के ध्वज स्तंभ पूजन, ध्वज पूजन और ध्वजारोहण समारोह में शामिल हुईं और एक सार्वजनिक कार्यक्रम को संबोधित किया। आधिकारिक पाठ के अनुसार उन्होंने कहा कि सदियों से कुंभ मेलों में श्रद्धालुओं का संगम भारत की सांस्कृतिक और आध्यात्मिक एकता का जीवंत प्रमाण रहा है, 2027 का नाशिक-त्र्यंबकेश्वर कुंभ प्राचीन विरासत को आधुनिक समय से जोड़ने वाला सेतु बनेगा, और इससे युवा पीढ़ी भारत की विरासत से जुड़ेगी। उन्होंने महाराष्ट्र में किसानों पर सूखे के असर का ज़िक्र किया और स्वच्छता के लिए लगातार जनप्रयास की अपील की, यह भरोसा जताते हुए कि नाशिक कुंभ स्वच्छता और कचरा प्रबंधन का आदर्श बनेगा। Mid-day ने एक आधिकारिक बयान के हवाले से बताया कि उन्होंने कुंभ मेला गीत और वेबसाइट का शुभारंभ किया और नाशिक के रामतीर्थ तथा त्र्यंबकेश्वर के कुशावर्त तीर्थ वाले विशेष डाक टिकट जारी किए। गोदा आरती के रिकॉर्ड पर प्रहार (रात 9:11) ने भी कहा कि इसकी गिनीज वर्ल्ड रिकॉर्ड्स में नोंद हुई और कुंभ मेला प्राधिकरण को प्रमाणपत्र मिला, लेकिन गिनीज की ओर से हमें अभी कोई सार्वजनिक घोषणा नहीं मिली, इसलिए यह अभी रिपोर्ट ही है। आज का यह हमारा आखिरी लाइव अपडेट है।",
+        mr: "राष्ट्रपती सचिवालयाने PIB मार्फत रात्री ८.४१ वाजता पुष्टी केली की राष्ट्रपती द्रौपदी मुर्मू आज नाशिक येथे सिंहस्थ महाकुंभाच्या ध्वजस्तंभ पूजन, ध्वजपूजन आणि ध्वजारोहण सोहळ्याला उपस्थित राहिल्या आणि जाहीर कार्यक्रमाला संबोधित केले. अधिकृत मजकुरानुसार त्यांनी सांगितले की शतकानुशतके कुंभमेळ्यांतील भाविकांचा संगम हा भारताच्या सांस्कृतिक व आध्यात्मिक एकतेचा जिवंत पुरावा आहे, २०२७ चा नाशिक-त्र्यंबकेश्वर कुंभ प्राचीन वारसा आणि आधुनिक काळ यांना जोडणारा सेतू ठरेल आणि त्यातून तरुण पिढी भारताच्या वारशाशी जोडली जावी. महाराष्ट्रातील शेतकऱ्यांना दुष्काळाचा फटका बसल्याचा उल्लेख करत त्यांनी स्वच्छतेसाठी सातत्यपूर्ण लोकसहभागाचे आवाहन केले आणि नाशिक कुंभ स्वच्छता व कचरा व्यवस्थापनाचा आदर्श घालून देईल, असा विश्वास व्यक्त केला. Mid-day ने अधिकृत निवेदनाच्या हवाल्याने म्हटले आहे की त्यांनी कुंभमेळा गीत व संकेतस्थळाचे उद्घाटन केले आणि नाशिकचे रामतीर्थ व त्र्यंबकेश्वरचे कुशावर्त तीर्थ असलेली विशेष टपाल तिकिटे प्रकाशित केली. गोदा आरतीच्या विक्रमाबाबत प्रहारनेही (रात्री ९.११) गिनीज बुकमध्ये नोंद झाल्याचे आणि कुंभमेळा प्राधिकरणाला प्रमाणपत्र मिळाल्याचे म्हटले आहे, मात्र गिनीजकडून आम्हाला अद्याप जाहीर घोषणा आढळलेली नाही, म्हणून तो वृत्तच मानतो. आजचा हा आमचा शेवटचा थेट अपडेट आहे.",
+      },
+      status: "confirmed",
+      source: "PIB (President's Secretariat), Mid-day, Prahaar",
+    },
     {
       time: "2026-10-31T20:10:00+05:30",
       headline: {
