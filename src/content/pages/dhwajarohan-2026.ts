@@ -756,6 +756,51 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
     {
+      time: "2026-10-31T12:10:00+05:30",
+      headline: {
+        en: "Flags hoisted at 12:02 PM: President Murmu at Ramkund, CM Fadnavis at Kushavarta; Simhastha Kumbh formally begins",
+        hi: "12:02 बजे ध्वजारोहण: रामकुंड पर राष्ट्रपति मुर्मू, कुशावर्त पर मुख्यमंत्री फडणवीस; सिंहस्थ कुंभ की औपचारिक शुरुआत",
+        mr: "१२.०२ वाजता ध्वजारोहण: रामकुंडावर राष्ट्रपती मुर्मू, कुशावर्तावर मुख्यमंत्री फडणवीस; सिंहस्थ कुंभपर्वाचा औपचारिक प्रारंभ",
+      },
+      body: {
+        en: "News4Social, citing the news agency IANS, reports that the flags went up at both places together at 12:02 PM: President Droupadi Murmu hoisted the Kumbh flag at Ramkund in Nashik and Chief Minister Devendra Fadnavis hoisted the Dharma Dhwaj at Kushavarta, Trimbakeshwar, after the flagstaff and flag were worshipped with chanting. The same report says Deputy CM Eknath Shinde assured that development works would be finished ahead of time. We have not yet seen an official release or a main local outlet's post-ceremony report, so this stays REPORTED until we do.",
+        hi: "News4Social ने समाचार एजेंसी IANS के हवाले से बताया है कि दोपहर 12:02 बजे दोनों जगह एक साथ ध्वज फहराए गए: नासिक के रामकुंड पर राष्ट्रपति द्रौपदी मुर्मू ने कुंभ ध्वज फहराया और त्र्यंबकेश्वर के कुशावर्त तीर्थ पर मुख्यमंत्री देवेंद्र फडणवीस ने धर्मध्वजा फहराई; इससे पहले मंत्रोच्चार के बीच ध्वज स्तंभ और ध्वज का पूजन हुआ। इसी रिपोर्ट के अनुसार उपमुख्यमंत्री एकनाथ शिंदे ने विकास कार्य समय से पहले पूरे करने का आश्वासन दिया। आधिकारिक विज्ञप्ति या किसी बड़े स्थानीय अखबार की समारोह के बाद की रिपोर्ट हमें अभी नहीं मिली है, इसलिए यह फ़िलहाल रिपोर्ट ही है।",
+        mr: "News4Social ने IANS वृत्तसंस्थेच्या हवाल्याने दिलेल्या वृत्तानुसार दुपारी १२.०२ वाजता दोन्ही ठिकाणी एकाच वेळी ध्वजारोहण झाले: नाशिकच्या रामकुंडावर राष्ट्रपती द्रौपदी मुर्मू यांनी कुंभध्वज फडकवला, तर त्र्यंबकेश्वरच्या कुशावर्त तीर्थावर मुख्यमंत्री देवेंद्र फडणवीस यांनी धर्मध्वज फडकवला; त्याआधी मंत्रोच्चारात ध्वजस्तंभ आणि ध्वजाचे पूजन झाले. विकासकामे वेळेआधी पूर्ण होतील, असे आश्वासन उपमुख्यमंत्री एकनाथ शिंदे यांनी दिल्याचेही या वृत्तात आहे. अधिकृत पत्रक किंवा प्रमुख स्थानिक वृत्तपत्राचे सोहळ्यानंतरचे वृत्त आम्हाला अजून मिळालेले नाही, त्यामुळे सध्या हे वृत्त म्हणूनच आहे.",
+      },
+      status: "reported",
+      source: "News4Social (citing IANS)",
+    },
+    {
+      time: "2026-10-31T11:50:00+05:30",
+      headline: {
+        en: "President Murmu reaches Ramkund, yajna rituals begin ahead of the 12:02 PM hoisting",
+        hi: "राष्ट्रपति मुर्मू रामकुंड पहुँचीं, 12:02 बजे के ध्वजारोहण से पहले यज्ञ विधि शुरू",
+        mr: "राष्ट्रपती मुर्मू रामकुंडावर दाखल, १२.०२ वाजताच्या ध्वजारोहणापूर्वी यज्ञविधींना सुरुवात",
+      },
+      body: {
+        en: "Prahaar reports President Droupadi Murmu has arrived at Ramkund and the yajna has begun in her presence, to be followed by Godavari puja and then the 12:02 PM Maha Dhwajarohan. Deputy CMs Eknath Shinde and Sunetra Pawar and Kumbh minister Girish Mahajan are present. Earlier she landed at Ozar airport, where Governor Jishnu Dev Varma received her (Pudhari); Pudhari says she travels from Ozar to Nashik by car, with 700 police on the route and about 5,000 police on duty in all. Pudhari also reports some corporators were upset after being refused entry to the seating they had passes for. We will post the hoisting outcome once it is reported.",
+        hi: "प्रहार के अनुसार राष्ट्रपति द्रौपदी मुर्मू रामकुंड पहुँच गई हैं और उनकी उपस्थिति में यज्ञ शुरू हो गया है; इसके बाद गोदावरी पूजन और फिर 12:02 बजे महाध्वजारोहण होगा। उपमुख्यमंत्री एकनाथ शिंदे, सुनेत्रा पवार और कुंभ मंत्री गिरीश महाजन मौजूद हैं। इससे पहले वे ओझर हवाई अड्डे पर उतरीं, जहाँ राज्यपाल जिष्णु देव वर्मा ने उनका स्वागत किया (पुढारी)। पुढारी के अनुसार ओझर से नासिक तक का सफ़र कार से है, रास्ते पर 700 और कुल करीब 5,000 पुलिसकर्मी तैनात हैं। पुढारी यह भी बताता है कि पास होने के बावजूद तय जगह पर प्रवेश न मिलने से कुछ नगरसेवक नाराज़ हुए। ध्वजारोहण की खबर आते ही हम यहाँ देंगे।",
+        mr: "प्रहारच्या वृत्तानुसार राष्ट्रपती द्रौपदी मुर्मू रामकुंडावर दाखल झाल्या असून त्यांच्या उपस्थितीत यज्ञाला सुरुवात झाली आहे; त्यानंतर गोदावरी पूजन आणि दुपारी १२.०२ वाजता महाध्वजारोहण होईल. उपमुख्यमंत्री एकनाथ शिंदे, सुनेत्रा पवार आणि कुंभमेळा मंत्री गिरीश महाजन उपस्थित आहेत. त्याआधी ओझर विमानतळावर राज्यपाल जिष्णू देव वर्मा यांनी त्यांचे स्वागत केले (पुढारी). पुढारीनुसार ओझर ते नाशिक प्रवास मोटारीने असून मार्गावर ७०० आणि एकूण सुमारे ५,००० पोलीस तैनात आहेत. पास असूनही ठरलेल्या जागी प्रवेश नाकारल्याने काही नगरसेवक नाराज झाल्याचेही पुढारीने म्हटले आहे. ध्वजारोहणाची बातमी येताच आम्ही ती येथे देऊ.",
+      },
+      status: "reported",
+      source: "Prahaar, Pudhari",
+    },
+    {
+      time: "2026-10-31T11:45:00+05:30",
+      headline: {
+        en: "President's day plan: Trimbak Kushavarta Goda puja at 2 PM, temple darshan at 2:30, Goda aarti programme at 5:30",
+        hi: "राष्ट्रपति का कार्यक्रम: दोपहर 2 बजे कुशावर्त पर गोदा पूजन, 2:30 बजे त्र्यंबकेश्वर दर्शन, शाम 5:30 बजे गोदा आरती कार्यक्रम",
+        mr: "राष्ट्रपतींचा दिवसभराचा कार्यक्रम: दुपारी २ वाजता कुशावर्तावर गोदापूजन, २.३० वाजता त्र्यंबकेश्वर दर्शन, सायंकाळी ५.३० वाजता गोदा आरती सोहळा",
+      },
+      body: {
+        en: "Pudhari has published the President's planned schedule: return to the MPA guest house at 12:30 PM after the Ramkund hoisting, Godavari puja at Kushavarta, Trimbakeshwar at 2 PM, darshan and rituals at the Trimbakeshwar Jyotirlinga temple at 2:30 PM, back to the MPA guest house at 4 PM, and the public programme with Shankhnaad, cultural events and the Godavari Maha Aarti from 5:30 PM. This is a reported plan, not an official release, and timings can shift. The Trimbakeshwar temple stays closed to outside devotees until 6 PM.",
+        hi: "पुढारी ने राष्ट्रपति का तय कार्यक्रम छापा है: रामकुंड ध्वजारोहण के बाद 12:30 बजे MPA अतिथिगृह वापसी, दोपहर 2 बजे त्र्यंबकेश्वर के कुशावर्त तीर्थ पर गोदावरी पूजन, 2:30 बजे त्र्यंबकेश्वर ज्योतिर्लिंग मंदिर में दर्शन और पूजा, 4 बजे MPA अतिथिगृह वापसी, और शाम 5:30 बजे से शंखनाद, सांस्कृतिक कार्यक्रम और गोदावरी महाआरती के साथ सार्वजनिक कार्यक्रम। यह रिपोर्ट किया गया कार्यक्रम है, आधिकारिक विज्ञप्ति नहीं, समय बदल सकता है। त्र्यंबकेश्वर मंदिर बाहर के श्रद्धालुओं के लिए शाम 6 बजे तक बंद है।",
+        mr: "पुढारीने राष्ट्रपतींचा नियोजित दौरा प्रसिद्ध केला आहे: रामकुंड ध्वजारोहणानंतर १२.३० वाजता एमपीए अतिथिगृहात परत, दुपारी २ वाजता त्र्यंबकेश्वरच्या कुशावर्त तीर्थावर गोदापूजन, २.३० वाजता त्र्यंबकेश्वर ज्योतिर्लिंग मंदिरात दर्शन व पूजाविधी, ४ वाजता एमपीए अतिथिगृहात परत, आणि सायंकाळी ५.३० पासून शंखनाद, सांस्कृतिक कार्यक्रम व गोदावरी महाआरतीसह सार्वजनिक कार्यक्रम. हा वृत्तातील नियोजित कार्यक्रम आहे, अधिकृत पत्रक नव्हे; वेळा बदलू शकतात. त्र्यंबकेश्वर मंदिर बाहेरील भाविकांसाठी सायंकाळी ६ पर्यंत बंद आहे.",
+      },
+      status: "reported",
+      source: "Pudhari",
+    },
+    {
       time: "2026-10-31T11:05:00+05:30",
       headline: {
         en: "CM Fadnavis to hoist the flag at Kushavarta, Trimbak; Kumbh website, song and stamp launch at Ramkund",
