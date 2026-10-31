@@ -73,9 +73,14 @@ import { article as trimbakTempleClosed } from "./trimbakeshwar-temple-closed-30
 import { article as presidentByRoad } from "./president-by-road-rain-71-schools-shut-godaghat-shops-1317-vips";
 import { article as gangapurEklahare } from "./gangapur-eklahare-release-nmc-6973-mcft-water-reservation";
 import { article as mahajanWorksPromise } from "./mahajan-works-before-amrit-snans-sanjay-das-ramkund-steps-warning";
+import { article as gramParikramaHeld } from "./gram-parikrama-held-30-october-president-programme-31-october-led-screens";
+import { article as akhadaBoycottWarning } from "./akhada-boycott-warning-sadhugram-one-month-mahajan-four-months";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 and 30 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 and 31 October 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 31 October 2026
+  gramParikramaHeld,
+  akhadaBoycottWarning,
   // 30 October 2026
   trimbakTempleClosed,
   presidentByRoad,
