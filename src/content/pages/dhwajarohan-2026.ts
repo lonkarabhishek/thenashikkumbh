@@ -20,13 +20,13 @@ export const page: InfoPageContent = {
   intro: {
     en: `The flags went up at 12:02 PM on Saturday 31 October 2026, formally opening the Nashik-Trimbakeshwar Simhastha Kumbh Mela. President Droupadi Murmu hoisted the religious flag at Ramkund in Nashik after rituals on the Godavari bank, and Chief Minister Devendra Fadnavis hoisted the flag at Kushavarta in Trimbakeshwar at the same moment (PTI, DD News, Lokmat). Lokmat notes it is the first time a President has attended a Kumbh flag hoisting in Nashik.
 
-In the evening, about 6,500 tribal devotees performed the Maha Goda Aarti on the Godavari ghats and the President addressed the Ramkund programme, calling the Kumbh a symbol of India's cultural and spiritual strength (REPORTED: PTI, ABP Majha, TV9 Marathi). A Guinness World Records team was present for the aarti, but the record will be announced only after final verification (Asianet News Marathi). Details are in the live updates on this page. This independent guide also covers routes, closures and how to plan. We are not an official site. Every source is listed at the foot of this page.`,
+In the evening, about 6,500 tribal devotees performed the Maha Goda Aarti on the Godavari ghats and the President addressed the Ramkund programme, calling the Kumbh a symbol of India's cultural and spiritual strength (REPORTED: PTI, ABP Majha, TV9 Marathi). A Guinness World Records team was present for the aarti, and Times Now Marathi reports a record certificate was handed to the Kumbh Mela Authority, but Guinness has not announced it publicly yet, so we treat the record as reported (Asianet News Marathi, Times Now Marathi). PTI reports the President also had darshan and puja at the Trimbakeshwar temple in the afternoon. Details are in the live updates on this page. This independent guide also covers routes, closures and how to plan. We are not an official site. Every source is listed at the foot of this page.`,
     hi: `शनिवार, 31 अक्टूबर 2026 को दोपहर 12:02 बजे ध्वज फहराए गए और इसी के साथ नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभ मेले की औपचारिक शुरुआत हो गई। राष्ट्रपति द्रौपदी मुर्मू ने गोदावरी तट पर पूजा-विधि के बाद नाशिक के रामकुंड पर धार्मिक ध्वज फहराया, और उसी समय मुख्यमंत्री देवेंद्र फडणवीस ने त्र्यंबकेश्वर के कुशावर्त पर ध्वज फहराया (PTI, DD News, लोकमत)। लोकमत के अनुसार नाशिक में कुंभ ध्वजारोहण में राष्ट्रपति पहली बार शामिल हुई हैं।
 
-शाम को करीब 6,500 जनजातीय श्रद्धालुओं ने गोदावरी घाट पर महा गोदा आरती की और राष्ट्रपति ने रामकुंड के कार्यक्रम को संबोधित करते हुए कुंभ को भारत की सांस्कृतिक और आध्यात्मिक शक्ति का प्रतीक बताया (रिपोर्ट: PTI, ABP माझा, TV9 मराठी)। आरती के समय गिनीज वर्ल्ड रिकॉर्ड्स की टीम मौजूद थी, लेकिन रिकॉर्ड की घोषणा अंतिम सत्यापन के बाद ही होगी (Asianet News मराठी)। पूरी जानकारी इसी पेज के लाइव अपडेट में है। यह स्वतंत्र गाइड रास्ते, बंदी और योजना की जानकारी भी देती है। यह कोई सरकारी साइट नहीं है। सभी स्रोत पेज के नीचे दिए गए हैं।`,
+शाम को करीब 6,500 जनजातीय श्रद्धालुओं ने गोदावरी घाट पर महा गोदा आरती की और राष्ट्रपति ने रामकुंड के कार्यक्रम को संबोधित करते हुए कुंभ को भारत की सांस्कृतिक और आध्यात्मिक शक्ति का प्रतीक बताया (रिपोर्ट: PTI, ABP माझा, TV9 मराठी)। आरती के समय गिनीज वर्ल्ड रिकॉर्ड्स की टीम मौजूद थी, और Times Now मराठी के अनुसार कुंभ मेला प्राधिकरण को रिकॉर्ड का प्रमाणपत्र सौंपा गया, लेकिन गिनीज ने अभी सार्वजनिक घोषणा नहीं की, इसलिए हम इसे रिपोर्ट मानते हैं (Asianet News मराठी, Times Now मराठी)। PTI के अनुसार राष्ट्रपति ने दोपहर में त्र्यंबकेश्वर मंदिर में दर्शन और पूजा भी की। पूरी जानकारी इसी पेज के लाइव अपडेट में है। यह स्वतंत्र गाइड रास्ते, बंदी और योजना की जानकारी भी देती है। यह कोई सरकारी साइट नहीं है। सभी स्रोत पेज के नीचे दिए गए हैं।`,
     mr: `शनिवार, ३१ ऑक्टोबर २०२६ रोजी दुपारी १२.०२ वाजता ध्वज फडकले आणि नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभमेळ्याचा औपचारिक प्रारंभ झाला. गोदाकाठी पूजाविधीनंतर राष्ट्रपती द्रौपदी मुर्मू यांनी नाशिकच्या रामकुंडावर धर्मध्वज फडकवला, तर त्याच क्षणी मुख्यमंत्री देवेंद्र फडणवीस यांनी त्र्यंबकेश्वरच्या कुशावर्तावर ध्वजारोहण केले (PTI, DD News, लोकमत). नाशिकमध्ये कुंभाच्या ध्वजारोहणाला राष्ट्रपती प्रथमच उपस्थित राहिल्या, असे लोकमतने नमूद केले आहे.
 
-सायंकाळी सुमारे ६,५०० आदिवासी बांधवांनी गोदाघाटावर महा गोदा आरती केली आणि रामकुंडावरील कार्यक्रमात राष्ट्रपतींनी कुंभमेळा हे भारताच्या सांस्कृतिक व आध्यात्मिक शक्तीचे प्रतीक असल्याचे सांगितले (वृत्त: PTI, एबीपी माझा, TV9 मराठी). आरतीवेळी गिनीज वर्ल्ड रेकॉर्ड्सचे पथक उपस्थित होते, मात्र विक्रमाची अधिकृत घोषणा अंतिम पडताळणीनंतरच होईल (Asianet News मराठी). सविस्तर माहिती याच पानावरील थेट अपडेटमध्ये आहे. कोण आले, मार्ग, बंदी आणि नियोजन यांचीही माहिती या स्वतंत्र मार्गदर्शकात आहे. हे संकेतस्थळ सरकारी नाही. सर्व स्रोत पानाच्या शेवटी दिले आहेत.`,
+सायंकाळी सुमारे ६,५०० आदिवासी बांधवांनी गोदाघाटावर महा गोदा आरती केली आणि रामकुंडावरील कार्यक्रमात राष्ट्रपतींनी कुंभमेळा हे भारताच्या सांस्कृतिक व आध्यात्मिक शक्तीचे प्रतीक असल्याचे सांगितले (वृत्त: PTI, एबीपी माझा, TV9 मराठी). आरतीवेळी गिनीज वर्ल्ड रेकॉर्ड्सचे पथक उपस्थित होते, आणि Times Now मराठीनुसार कुंभमेळा प्राधिकरणाला विक्रमाचे प्रमाणपत्र प्रदान करण्यात आले, मात्र गिनीजने अद्याप जाहीर घोषणा केलेली नाही, म्हणून आम्ही तो वृत्त म्हणून मानतो (Asianet News मराठी, Times Now मराठी). दुपारी राष्ट्रपतींनी त्र्यंबकेश्वर मंदिरात दर्शन व पूजा केली, असे PTI ने म्हटले आहे. सविस्तर माहिती याच पानावरील थेट अपडेटमध्ये आहे. कोण आले, मार्ग, बंदी आणि नियोजन यांचीही माहिती या स्वतंत्र मार्गदर्शकात आहे. हे संकेतस्थळ सरकारी नाही. सर्व स्रोत पानाच्या शेवटी दिले आहेत.`,
   },
   sections: [
     {
@@ -361,6 +361,20 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
     },
   ],
   sources: [
+    {
+      title: "President Murmu hoists flag to mark start of Nashik-Trimbakeshwar Simhastha Kumbh Mela",
+      publisher: "CNBC TV18 (PTI)",
+      date: "2026-10-31",
+      url: "https://www.cnbctv18.com/india/president-murmu-hoists-flag-to-mark-start-of-nashik-trimbakeshwar-simhastha-kumbh-mela-20024138.htm",
+      status: "reported",
+    },
+    {
+      title: "गोदाकाठी ऐतिहासिक सोहळा! राष्ट्रपतींसमोर नाशिकमध्ये घडला इतिहास; 6500 बंधू-भगिनींनी रचला महाआरतीचा विश्वविक्रम",
+      publisher: "Times Now Marathi",
+      date: "2026-10-31",
+      url: "https://marathi.timesnownews.com/maharashtra/nashik-kumbh-mela-6500-women-break-world-record-with-grand-goda-aarti-in-presence-of-president-article-156441707",
+      status: "reported",
+    },
     {
       title: "Murmu says Simhastha Maha Kumbh will connect India's ancient heritage with modern dimensions",
       publisher: "PTI",
@@ -846,6 +860,21 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   livePage: "/dhwajarohan-2026/live",
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
+    {
+      time: "2026-10-31T20:10:00+05:30",
+      headline: {
+        en: "President had darshan at Trimbakeshwar temple and got a temple replica, PTI via CNBC TV18 reports; Times Now Marathi says the Goda Aarti record certificate was handed over",
+        hi: "राष्ट्रपति ने त्र्यंबकेश्वर मंदिर में दर्शन-पूजा की और मंदिर की प्रतिकृति भेंट मिली, CNBC TV18 पर PTI की रिपोर्ट; Times Now मराठी के अनुसार गोदा आरती के रिकॉर्ड का प्रमाणपत्र सौंपा गया",
+        mr: "राष्ट्रपतींनी त्र्यंबकेश्वर मंदिरात पूजा व दर्शन घेतले, मंदिराची प्रतिकृती भेट, CNBC TV18 वरील PTI चे वृत्त; Times Now मराठीनुसार गोदा आरतीच्या विक्रमाचे प्रमाणपत्र प्रदान",
+      },
+      body: {
+        en: "PTI's wrap, carried by CNBC TV18, now spells out the afternoon in Trimbak: after the flag worship, Gautami Ganga Godavari puja, arghya and aarti at Kushavarta Tirtha, President Droupadi Murmu visited the Trimbakeshwar Jyotirlinga temple, performed puja, and the temple trust gave her a replica of the temple. Times Now Marathi adds that priest Girish Joshi conducted the temple puja. PTI also names who led the Ramkund rituals: Purohit Sangh president Chandrashekhar Panchakshari and Simhastha Committee main trustee Satish Shukla, and notes the old Shri Ganga Godavari temple at Ramkund opened on Saturday after 11 years. On the Maha Goda Aarti, Times Now Marathi reports the record was set and a world record certificate was presented to the Kumbh Mela Authority, saying it beat an earlier record of 3,800 women performing aarti abroad. Asianet News Marathi, however, said the record would be announced only after final verification, and Guinness World Records itself has not announced anything we can find. So we are still treating the record as reported, not confirmed. Participant figures also differ between reports: about 6,500 in most, 6,657 according to officials quoted by PTI.",
+        hi: "CNBC TV18 पर छपी PTI की रिपोर्ट अब त्र्यंबक की दोपहर का पूरा ब्योरा देती है: कुशावर्त तीर्थ पर ध्वज पूजन, गौतमी गंगा गोदावरी पूजन, अर्घ्य और आरती के बाद राष्ट्रपति द्रौपदी मुर्मू त्र्यंबकेश्वर ज्योतिर्लिंग मंदिर गईं, पूजा की, और मंदिर ट्रस्ट ने उन्हें मंदिर की प्रतिकृति भेंट की। Times Now मराठी के अनुसार मंदिर में पूजा पुरोहित गिरीश जोशी ने करवाई। PTI ने यह भी बताया कि रामकुंड पर विधि पुरोहित संघ अध्यक्ष चंद्रशेखर पंचाक्षरी और सिंहस्थ समिति के मुख्य ट्रस्टी सतीश शुक्ल ने करवाई, और रामकुंड का प्राचीन श्री गंगा गोदावरी मंदिर शनिवार को 11 साल बाद खुला। महा गोदा आरती पर Times Now मराठी की रिपोर्ट है कि रिकॉर्ड बना और कुंभ मेला प्राधिकरण को विश्व रिकॉर्ड का प्रमाणपत्र दिया गया, और इसने विदेश में 3,800 महिलाओं की आरती का पुराना रिकॉर्ड तोड़ा। लेकिन Asianet News मराठी ने कहा था कि रिकॉर्ड की घोषणा अंतिम सत्यापन के बाद होगी, और गिनीज वर्ल्ड रिकॉर्ड्स की ओर से हमें अभी कोई घोषणा नहीं मिली। इसलिए हम रिकॉर्ड को अभी रिपोर्ट मान रहे हैं, पुष्टि नहीं। प्रतिभागियों की संख्या भी अलग-अलग है: ज़्यादातर रिपोर्टों में करीब 6,500, जबकि PTI के हवाले से अधिकारियों के अनुसार 6,657।",
+        mr: "CNBC TV18 वर प्रसिद्ध झालेल्या PTI च्या वृत्तात आता त्र्यंबकमधील दुपारचा पूर्ण तपशील आहे: कुशावर्त तीर्थावर ध्वजपूजन, गौतमी गंगा गोदावरी पूजन, अर्घ्य आणि आरतीनंतर राष्ट्रपती द्रौपदी मुर्मू त्र्यंबकेश्वर ज्योतिर्लिंग मंदिरात गेल्या, पूजा केली आणि मंदिर संस्थानने त्यांना मंदिराची प्रतिकृती भेट दिली. Times Now मराठीनुसार मंदिरातील पूजेचे पौरोहित्य पुरोहित गिरीश जोशी यांनी केले. रामकुंडावरील विधी पुरोहित संघाचे अध्यक्ष चंद्रशेखर पंचाक्षरी आणि सिंहस्थ समितीचे मुख्य विश्वस्त सतीश शुक्ल यांनी केले, तसेच रामकुंडावरील प्राचीन श्री गंगा गोदावरी मंदिर शनिवारी ११ वर्षांनी उघडले, असेही PTI ने म्हटले आहे. महा गोदा आरतीबाबत Times Now मराठीचे वृत्त आहे की विक्रम झाला आणि कुंभमेळा प्राधिकरणाला विश्वविक्रमाचे प्रमाणपत्र प्रदान करण्यात आले; परदेशात ३,८०० महिलांनी केलेल्या आरतीचा आधीचा विक्रम मागे पडला, असे त्यात म्हटले आहे. मात्र विक्रमाची घोषणा अंतिम पडताळणीनंतरच होईल, असे Asianet News मराठीने म्हटले होते आणि गिनीज वर्ल्ड रेकॉर्ड्सकडून आम्हाला अद्याप कोणतीही घोषणा आढळलेली नाही. त्यामुळे आम्ही हा विक्रम अजून वृत्त म्हणूनच मानतो, पुष्टी म्हणून नाही. सहभागींच्या संख्येतही फरक आहे: बहुतेक वृत्तांत सुमारे ६,५००, तर PTI ने उद्धृत केलेल्या अधिकाऱ्यांनुसार ६,६५७.",
+      },
+      status: "reported",
+      source: "PTI via CNBC TV18, Times Now Marathi, Asianet News Marathi",
+    },
     {
       time: "2026-10-31T19:15:00+05:30",
       headline: {
