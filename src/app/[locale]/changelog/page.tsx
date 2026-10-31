@@ -30,6 +30,13 @@ interface Entry {
 const ENTRIES: Entry[] = [
   {
     date: "2026-10-27",
+    title: "Which day should I go?",
+    body: [
+      "Added a day picker at /day-picker in Marathi, Hindi and English. It colours days in the major mela (15 June to 30 September 2027) from the verified schedule: Amrit Snan, Nashik's special parva days (12, 17 and 28 August 2027), and the Sadhugram flag hoisting and Nagar Pradakshina. It does not forecast crowds, and it does not add dates.",
+    ],
+  },
+  {
+    date: "2026-10-27",
     title: "Khoya-Paya family card",
     body: [
       "Added a family safety card at /family-card in Marathi, Hindi and English. A visitor types a name, phone number, optional stay, meeting point and a short note. The card, QR code, PNG and PDF are made in the browser. Nothing is uploaded or saved on the server. The QR code contains only the name, phone number and meeting point. This is not an official lost-and-found desk.",

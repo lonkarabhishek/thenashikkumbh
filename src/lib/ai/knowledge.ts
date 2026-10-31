@@ -82,7 +82,7 @@ export function coreFacts(locale: Locale): string {
     ...lines,
     ntkma ? `- NTKMA office: ${ntkma.phone}, ${ntkma.email}` : "",
     "## Site pages (link as /path, no language prefix)",
-    "- /dates (key dates), /parva-snan-calendar (every bathing day), /dhwajarohan-2026, /trimbakeshwar-kumbh-2027, /how-to-reach, /accommodation, /guide (what to carry, dos and don'ts), /family-card (Khoya-Paya card made in the browser; name, phone and meeting point are not saved on the server), /ghats, /events, /blog (news), /gallery, /emergency, /naga-sadhus, /about",
+    "- /dates (key dates), /day-picker (which day to go: Amrit Snan or a quieter day in the main mela; not a crowd forecast), /parva-snan-calendar (every bathing day), /dhwajarohan-2026, /trimbakeshwar-kumbh-2027, /how-to-reach, /accommodation, /guide (what to carry, dos and don'ts), /family-card (Khoya-Paya card made in the browser; name, phone and meeting point are not saved on the server), /ghats, /events, /blog (news), /gallery, /emergency, /naga-sadhus, /about",
   ]
     .filter(Boolean)
     .join("\n");
@@ -125,6 +125,21 @@ function buildPassages(): Passage[] {
       mr: "साइटवर /family-card येथे कुटुंबाचे सुरक्षा कार्ड आहे. भेट देणारा नाव, फोन क्रमांक, राहण्याचे ऐच्छिक ठिकाण, भेटीचे ठिकाण आणि छोटी टीप टाइप करतो. कार्ड आणि QR कोड ब्राउझरमध्ये बनतात. सर्व्हरवर काहीही अपलोड किंवा सेव्ह होत नाही. QR कोडमध्ये नाव, फोन क्रमांक आणि भेटीचे ठिकाण साध्या मजकुरात असते, म्हणजे शोधणारा कॉल करू शकतो. राहण्याचे ठिकाण आणि टीप फक्त कार्डावर असतात. हा अधिकृत हरवले-सापडले कक्ष नाही. अधिकृत हरवले-सापडले ठिकाणे अजून जाहीर झालेली नाहीत. आपत्कालीन स्थितीत ११२ डायल करा.",
     },
     meta: "page: /family-card; general_guidance; personal details are not stored",
+  });
+
+  out.push({
+    id: "tool:day-picker",
+    title: {
+      en: "Which day should I go to the Nashik Kumbh",
+      hi: "नाशिक कुंभ किस दिन जाएँ",
+      mr: "नाशिक कुंभाला कोणत्या दिवशी जायचे",
+    },
+    body: {
+      en: "The day picker at /day-picker compares days in the major mela, 15 June to 30 September 2027, using the same verified schedule as /dates. Amrit Snan days are 2 August 2027 and 31 August 2027 in Nashik and Trimbakeshwar, 11 September 2027 at Ramkund in Nashik, and 12 September 2027 at Kushavarta in Trimbakeshwar. Nashik's special parva days are 12, 17 and 28 August 2027. A green day is not a promise of a small crowd. Bathing hours are not published. Later parvani dates are on /parva-snan-calendar.",
+      hi: "दिन चुनने का साधन /day-picker मुख्य मेले, 15 जून से 30 सितंबर 2027, के दिनों की तुलना /dates वाले सत्यापित कार्यक्रम से करता है। अमृत स्नान 2 अगस्त 2027 और 31 अगस्त 2027 को नाशिक और त्र्यंबकेश्वर में, 11 सितंबर 2027 को नाशिक के रामकुंड पर, और 12 सितंबर 2027 को त्र्यंबकेश्वर के कुशावर्त पर हैं। नाशिक के विशेष पर्व दिन 12, 17 और 28 अगस्त 2027 हैं। हरा दिन छोटी भीड़ का वादा नहीं है। स्नान के घंटे घोषित नहीं हैं। बाद की पर्वणी तिथियाँ /parva-snan-calendar पर हैं।",
+      mr: "दिवस निवड /day-picker मुख्य मेळ्यातील, १५ जून ते ३० सप्टेंबर २०२७, दिवसांची तुलना /dates च्या तपासलेल्या वेळापत्रकाशी करते. अमृत स्नान २ ऑगस्ट २०२७ आणि ३१ ऑगस्ट २०२७ रोजी नाशिक आणि त्र्यंबकेश्वरमध्ये, ११ सप्टेंबर २०२७ रोजी नाशिकच्या रामकुंडावर आणि १२ सप्टेंबर २०२७ रोजी त्र्यंबकेश्वरच्या कुशावर्तावर आहेत. नाशिकचे विशेष पर्व दिवस १२, १७ आणि २८ ऑगस्ट २०२७ आहेत. हिरवा दिवस कमी गर्दीचे वचन नाही. स्नानाच्या वेळा जाहीर नाहीत. नंतरच्या पर्वण्या /parva-snan-calendar वर आहेत.",
+    },
+    meta: "page: /day-picker; schedule from verified registry; not a crowd forecast",
   });
 
   for (const t of chatTopics) {
