@@ -9,6 +9,7 @@ export const article: BlogArticle = {
     mr: "गोदावरी स्वच्छता: चार नवे मलनिस्सारण प्रकल्प, मे २०२७ पर्यंत स्नानयोग्य पाण्याचे लक्ष्य",
   },
   date: "2026-10-06",
+  followUp: { slug: "kumbh-works-51-percent-done-march-2027-deadline-sadhugram-94-acres-godavari-bathing-quality-march", date: "2026-11-01" },
   originallyAnnounced: "2026-09-05",
   source: "Times of India",
   sources: [
