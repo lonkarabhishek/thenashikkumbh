@@ -51,6 +51,10 @@ export default function Page({ params }: Params) {
       <div className="section-container max-w-3xl py-12 sm:py-20">
         <h1 className="text-title text-temple-900">{C.h1[l]}</h1>
         <p className="mt-4 text-lg leading-relaxed text-temple-700">{C.lead[l]}</p>
+        <div className="mt-5 rounded-2xl border-l-4 border-saffron-500 bg-cream-100 p-4">
+          <h2 className="text-sm font-bold uppercase tracking-wide text-temple-800">{C.inBriefH[l]}</h2>
+          <p className="mt-2 leading-relaxed text-temple-800">{C.inBrief[l]}</p>
+        </div>
         <StatusBoard />
         <ToolFooter faqH={C.faqH} faqs={STATUS_FAQS} relatedH={C.relatedH} related={RELATED} />
       </div>
