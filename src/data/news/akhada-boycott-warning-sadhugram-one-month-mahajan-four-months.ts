@@ -14,6 +14,7 @@ export const article: BlogArticle = {
     mr: "महिनाभरात साधुग्रामची प्रगती दिसली नाही तर कुंभावर बहिष्काराचा साधू-महंतांचा इशारा; चार महिन्यांत कामे पूर्ण करू: महाजन",
   },
   date: "2026-10-31",
+  followUp: { slug: "kumbh-works-51-percent-done-march-2027-deadline-sadhugram-94-acres-godavari-bathing-quality-march", date: "2026-11-01" },
   originallyAnnounced: "2026-10-30",
   source: "Sarkarnama",
   sources: [

@@ -57,6 +57,8 @@ import { article as kushavartaPuja } from "./kushavarta-flagstaff-puja-temple-cl
 import { article as sadhugramTrees } from "./sadhugram-without-cutting-trees";
 import { article as healthStaff } from "./nmc-1638-temporary-health-staff";
 import { article as shankhnaadToday } from "./shankhnaad-today-5-50-pm-251-conch-players-flag-hoisting-week-programme";
+import { article as godaAartiRecord } from "./maha-goda-aarti-guinness-world-record-6233-adjudicator-announced";
+import { article as worksFiftyOne } from "./kumbh-works-51-percent-done-march-2027-sadhugram-94-acres-godavari-march";
 import { article as trimbakPresidentPlan } from "./trimbak-31-october-president-puja-shankaracharya-flag";
 import { article as ramkundGhatWorks } from "./ramkund-ghat-works-hc-order-allegation";
 import { article as shankhnaadRecord } from "./shankhnaad-guinness-world-record-517-conches-certificate-31-october";
@@ -76,8 +78,11 @@ import { article as mahajanWorksPromise } from "./mahajan-works-before-amrit-sna
 import { article as gramParikramaHeld } from "./gram-parikrama-held-30-october-president-programme-31-october-led-screens";
 import { article as akhadaBoycottWarning } from "./akhada-boycott-warning-sadhugram-one-month-mahajan-four-months";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 and 31 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 and 31 October and 1 November 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 1 November 2026
+  godaAartiRecord,
+  worksFiftyOne,
   // 31 October 2026
   gramParikramaHeld,
   akhadaBoycottWarning,
