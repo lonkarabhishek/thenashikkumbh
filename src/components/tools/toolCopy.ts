@@ -163,9 +163,15 @@ export const STATUS_COPY = {
     mr: "कुंभ स्टेटस बोर्ड: नाशिक आणि त्र्यंबकेश्वरमध्ये काय खुले, काय बंद",
   },
   desc: {
-    en: "What is open, closed or restricted right now for Kumbh 2027 in Nashik and Trimbakeshwar: Ramkund access, Kushavarta Tirth, the Trimbakeshwar hospital and upcoming events, each marked confirmed or reported with a source and date.",
-    hi: "नाशिक और त्र्यंबकेश्वर में कुंभ 2027 के लिए अभी क्या खुला, बंद या सीमित है: रामकुंड प्रवेश, कुशावर्त तीर्थ, त्र्यंबकेश्वर अस्पताल और आगामी कार्यक्रम, हर एक पर पुष्ट या रिपोर्टेड का निशान, स्रोत और तारीख के साथ।",
-    mr: "नाशिक आणि त्र्यंबकेश्वरमध्ये कुंभ २०२७ साठी सध्या काय खुले, बंद किंवा मर्यादित आहे: रामकुंड प्रवेश, कुशावर्त तीर्थ, त्र्यंबकेश्वर रुग्णालय आणि आगामी कार्यक्रम, प्रत्येकावर पुष्टी किंवा वृत्त असा शिक्का, स्रोत आणि तारखेसह.",
+    en: "What is open, closed or still unclear in Nashik and Trimbakeshwar after the 31 October 2026 flag hoisting: Ramkund, Trimbakeshwar temple, Kushavarta Tirth, the new heliport and Kumbh works, each marked confirmed or reported with a source and date.",
+    hi: "31 अक्टूबर 2026 के ध्वजारोहण के बाद नाशिक और त्र्यंबकेश्वर में क्या खुला, बंद या अभी अस्पष्ट है: रामकुंड, त्र्यंबकेश्वर मंदिर, कुशावर्त तीर्थ, नया हेलिपोर्ट और कुंभ के काम, हर एक पर पुष्ट या रिपोर्टेड का निशान, स्रोत और तारीख के साथ।",
+    mr: "३१ ऑक्टोबर २०२६ च्या ध्वजारोहणानंतर नाशिक आणि त्र्यंबकेश्वरमध्ये काय खुले, बंद किंवा अजून अस्पष्ट आहे: रामकुंड, त्र्यंबकेश्वर मंदिर, कुशावर्त तीर्थ, नवे हेलिपोर्ट आणि कुंभाची कामे, प्रत्येकावर पुष्टी किंवा वृत्त असा शिक्का, स्रोत आणि तारखेसह.",
+  },
+  inBriefH: { en: "In brief (1 November 2026)", hi: "संक्षेप में (1 नवंबर 2026)", mr: "थोडक्यात (१ नोव्हेंबर २०२६)" },
+  inBrief: {
+    en: "The Simhastha flag was hoisted on 31 October 2026, and the special closures for that day have ended. Ramkund has water again and devotees crowded the ghats on 31 October (reported), though no official reopening notice has been issued. The Collector's order closing Trimbakeshwar temple to outside devotees ran only until 6 PM on 31 October. It is still not announced when ordinary bathing resumes at Kushavarta. Kumbh works are about 51% done, with March 2027 as the deadline (reported).",
+    hi: "सिंहस्थ ध्वजारोहण 31 अक्टूबर 2026 को हो गया, और उस दिन की विशेष बंदियाँ खत्म हो चुकी हैं। रामकुंड में फिर पानी है और 31 अक्टूबर को घाटों पर श्रद्धालुओं की भीड़ थी (रिपोर्टेड), हालाँकि दोबारा खुलने की कोई आधिकारिक सूचना नहीं आई है। बाहर के श्रद्धालुओं के लिए त्र्यंबकेश्वर मंदिर बंद रखने का कलेक्टर का आदेश 31 अक्टूबर शाम 6 बजे तक ही था। कुशावर्त पर आम स्नान कब शुरू होगा, यह अभी घोषित नहीं है। कुंभ के करीब 51% काम पूरे हैं और समय-सीमा मार्च 2027 है (रिपोर्टेड)।",
+    mr: "सिंहस्थाचे ध्वजारोहण ३१ ऑक्टोबर २०२६ रोजी पार पडले आणि त्या दिवसासाठीच्या विशेष बंदी संपल्या आहेत. रामकुंडात पुन्हा पाणी आहे आणि ३१ ऑक्टोबरला घाटांवर भाविकांची गर्दी होती (वृत्त), मात्र पुन्हा खुले झाल्याची अधिकृत सूचना निघालेली नाही. बाहेरगावच्या भाविकांसाठी त्र्यंबकेश्वर मंदिर बंद ठेवण्याचा जिल्हाधिकाऱ्यांचा आदेश ३१ ऑक्टोबर सायंकाळी ६ पर्यंतच होता. कुशावर्तावर सर्वसामान्य स्नान कधी सुरू होणार, हे अजून जाहीर झालेले नाही. कुंभाची सुमारे ५१ टक्के कामे पूर्ण झाली असून मुदत मार्च २०२७ आहे (वृत्त).",
   },
   crumb: { en: "Kumbh status board", hi: "कुंभ स्टेटस बोर्ड", mr: "कुंभ स्टेटस बोर्ड" },
   h1: { en: "Kumbh Status Board: Open or Closed Right Now", hi: "कुंभ स्टेटस बोर्ड: अभी खुला या बंद", mr: "कुंभ स्टेटस बोर्ड: सध्या खुले की बंद" },
@@ -184,6 +190,8 @@ export const STATUS_COPY = {
     mr: "पुष्टी म्हणजे अधिकृत स्रोत किंवा नाव घेऊन अधिकृतपणे बोलणारा अधिकारी हे सांगतो. वृत्त म्हणजे हे फक्त माध्यमांतून आले आहे किंवा अजून प्रस्ताव आहे.",
   },
   states: {
+    open: { en: "Open", hi: "खुला", mr: "खुले" },
+    underway: { en: "Work in progress", hi: "काम जारी", mr: "काम सुरू" },
     closed: { en: "Closed", hi: "बंद", mr: "बंद" },
     restricted: { en: "Restricted", hi: "सीमित", mr: "मर्यादित" },
     upcoming: { en: "Upcoming", hi: "आगामी", mr: "आगामी" },
@@ -203,19 +211,27 @@ export const STATUS_COPY = {
 
 export const STATUS_FAQS: Faq[] = [
   {
-    q: { en: "Is Ramkund open for pilgrims right now?", hi: "क्या रामकुंड अभी श्रद्धालुओं के लिए खुला है?", mr: "रामकुंड सध्या भाविकांसाठी खुले आहे का?" },
+    q: { en: "Is Ramkund open for pilgrims after the flag hoisting?", hi: "क्या ध्वजारोहण के बाद रामकुंड श्रद्धालुओं के लिए खुला है?", mr: "ध्वजारोहणानंतर रामकुंड भाविकांसाठी खुले आहे का?" },
     a: {
-      en: "Public access around Ramkund, between Ahilyabai Holkar bridge and Talukteshwar temple, is restricted for 15 to 20 days from the NMC announcement on 12 October, in phases, while works finish before the 31 October flag hoisting. Dashkriya rituals continue at the designated site. See the board above for the latest check date.",
-      hi: "12 अक्टूबर की NMC घोषणा से 15 से 20 दिन तक अहिल्याबाई होलकर पुल और तालुकतेश्वर मंदिर के बीच रामकुंड परिसर में आम प्रवेश चरणों में सीमित है, ताकि 31 अक्टूबर के ध्वजारोहण से पहले काम पूरे हों। दशक्रिया विधि तय जगह पर जारी है। ताज़ा जाँच की तारीख ऊपर बोर्ड में देखें।",
-      mr: "१२ ऑक्टोबरच्या महापालिकेच्या घोषणेपासून १५ ते २० दिवस अहिल्याबाई होळकर पूल ते तालुकतेश्वर मंदिर दरम्यान रामकुंड परिसरात सर्वसामान्यांचा प्रवेश टप्प्याटप्प्याने मर्यादित आहे, जेणेकरून ३१ ऑक्टोबरच्या ध्वजारोहणापूर्वी कामे पूर्ण होतील. दशक्रिया विधी नेमलेल्या ठिकाणी सुरू आहेत. ताज्या तपासणीची तारीख वरील बोर्डवर पाहा.",
+      en: "Mostly, as reported. Water from Gangapur dam reached Ramkund on 30 October after nearly three months, and devotees crowded the ghats for the 31 October ceremony (Times of India). NMC has not issued a notice formally ending its 12 October work restriction, and ghat works continue towards March 2027, so expect barricades in parts of the riverfront.",
+      hi: "रिपोर्टों के अनुसार ज़्यादातर हाँ। करीब तीन महीने बाद 30 अक्टूबर को गंगापुर बांध का पानी रामकुंड पहुँचा, और 31 अक्टूबर के समारोह में घाटों पर श्रद्धालुओं की भीड़ थी (टाइम्स ऑफ इंडिया)। NMC ने 12 अक्टूबर के काम-प्रतिबंध को औपचारिक रूप से खत्म करने की सूचना नहीं दी है और घाटों का काम मार्च 2027 तक चलेगा, इसलिए नदी किनारे के कुछ हिस्सों में बैरिकेड मिल सकते हैं।",
+      mr: "वृत्तांनुसार बहुतांशी हो. जवळपास तीन महिन्यांनी ३० ऑक्टोबरला गंगापूर धरणाचे पाणी रामकुंडात पोहोचले आणि ३१ ऑक्टोबरच्या सोहळ्यासाठी घाटांवर भाविकांची गर्दी झाली (टाइम्स ऑफ इंडिया). महापालिकेने १२ ऑक्टोबरचा कामांसाठीचा निर्बंध अधिकृतपणे उठवल्याची सूचना काढलेली नाही आणि घाटांची कामे मार्च २०२७ पर्यंत सुरू राहणार आहेत, त्यामुळे काठावरील काही भागांत बॅरिकेड्स असू शकतात.",
     },
   },
   {
-    q: { en: "Is Kushavarta Tirth in Trimbakeshwar open?", hi: "क्या त्र्यंबकेश्वर का कुशावर्त तीर्थ खुला है?", mr: "त्र्यंबकेश्वरचे कुशावर्त तीर्थ खुले आहे का?" },
+    q: { en: "Is Trimbakeshwar temple open again after 31 October?", hi: "क्या 31 अक्टूबर के बाद त्र्यंबकेश्वर मंदिर फिर खुला है?", mr: "३१ ऑक्टोबरनंतर त्र्यंबकेश्वर मंदिर पुन्हा खुले आहे का?" },
     a: {
-      en: "No. It has been closed for renovation since 30 September. The renovated kund is to be inaugurated on 31 October; sources differ by a day on the exact reopening date.",
-      hi: "नहीं। यह 30 सितंबर से नवीनीकरण के लिए बंद है। नए रूप में कुंड का उद्घाटन 31 अक्टूबर को होना है; दोबारा खुलने की सटीक तारीख पर स्रोतों में एक दिन का अंतर है।",
-      mr: "नाही. ते ३० सप्टेंबरपासून नूतनीकरणासाठी बंद आहे. नव्या रूपातील कुंडाचे लोकार्पण ३१ ऑक्टोबरला होणार आहे; पुन्हा खुले होण्याच्या नेमक्या तारखेबाबत स्रोतांमध्ये एका दिवसाचा फरक आहे.",
+      en: "The Collector's order closing the temple and Kushavarta to outside devotees ran from noon on 30 October to 6 PM on 31 October, or the end of the programme, and we have not seen a new closure order. For darshan timings and online booking, check the official Shri Trimbakeshwar Devasthan Trust website before you go.",
+      hi: "बाहर के श्रद्धालुओं के लिए मंदिर और कुशावर्त बंद रखने का कलेक्टर का आदेश 30 अक्टूबर दोपहर 12 बजे से 31 अक्टूबर शाम 6 बजे, या कार्यक्रम खत्म होने तक था, और हमें कोई नया बंदी आदेश नहीं दिखा। दर्शन के समय और ऑनलाइन बुकिंग के लिए जाने से पहले श्री त्र्यंबकेश्वर देवस्थान ट्रस्ट की आधिकारिक वेबसाइट देखें।",
+      mr: "बाहेरगावच्या भाविकांसाठी मंदिर आणि कुशावर्त बंद ठेवण्याचा जिल्हाधिकाऱ्यांचा आदेश ३० ऑक्टोबर दुपारी १२ ते ३१ ऑक्टोबर सायंकाळी ६, किंवा कार्यक्रम संपेपर्यंत होता, आणि नवा बंदी आदेश आमच्या पाहण्यात आलेला नाही. दर्शनवेळा आणि ऑनलाइन बुकिंगसाठी निघण्यापूर्वी श्री त्र्यंबकेश्वर देवस्थान ट्रस्टचे अधिकृत संकेतस्थळ पाहा.",
+    },
+  },
+  {
+    q: { en: "Can I bathe at Kushavarta Tirth in Trimbakeshwar now?", hi: "क्या अब त्र्यंबकेश्वर के कुशावर्त तीर्थ पर स्नान कर सकते हैं?", mr: "आता त्र्यंबकेश्वरच्या कुशावर्त तीर्थावर स्नान करता येते का?" },
+    a: {
+      en: "Not confirmed yet. The kund was closed for renovation from 30 September, and the Simhastha flag was hoisted there on 31 October, but we have not seen a notice or report that ordinary bathing has resumed. More works around Kushavarta are planned for December 2026 to March 2027 (Pudhari). Ask locally before you plan a ritual bath.",
+      hi: "अभी पुष्ट नहीं। कुंड 30 सितंबर से नवीनीकरण के लिए बंद था और 31 अक्टूबर को वहाँ सिंहस्थ ध्वज फहराया गया, पर आम स्नान फिर शुरू होने की कोई सूचना या खबर हमें नहीं मिली। कुशावर्त परिसर में और काम दिसंबर 2026 से मार्च 2027 के बीच होने हैं (पुढारी)। स्नान या विधि की योजना से पहले स्थानीय स्तर पर पूछ लें।",
+      mr: "अजून पुष्टी नाही. कुंड ३० सप्टेंबरपासून नूतनीकरणासाठी बंद होते आणि ३१ ऑक्टोबरला तेथे सिंहस्थाचा ध्वज फडकवला गेला, पण सर्वसामान्य स्नान पुन्हा सुरू झाल्याची सूचना किंवा बातमी आमच्या पाहण्यात आलेली नाही. कुशावर्त परिसरातील आणखी कामे डिसेंबर २०२६ ते मार्च २०२७ दरम्यान होणार आहेत (पुढारी). स्नान किंवा विधीचे नियोजन करण्यापूर्वी स्थानिक पातळीवर चौकशी करा.",
     },
   },
   {

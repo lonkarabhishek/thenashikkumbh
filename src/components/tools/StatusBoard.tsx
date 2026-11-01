@@ -7,9 +7,11 @@ import { formatDate } from "@/lib/dates";
 import { STATUS_COPY as C } from "@/components/tools/toolCopy";
 
 const STATE_STYLE: Record<string, string> = {
+  open: "bg-emerald-100 text-emerald-900",
+  underway: "bg-sky-100 text-sky-900",
   closed: "bg-red-100 text-red-900",
   restricted: "bg-amber-100 text-amber-900",
-  upcoming: "bg-emerald-100 text-emerald-900",
+  upcoming: "bg-violet-100 text-violet-900",
   unsettled: "bg-slate-200 text-slate-900",
 };
 
