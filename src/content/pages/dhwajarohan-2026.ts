@@ -882,6 +882,21 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
   // Newest first. To add an update, put a new object at the TOP of this array.
   liveUpdates: [
     {
+      time: "2026-11-02T09:45:00+05:30",
+      headline: {
+        en: "Residents pulled aside Ramkund barricades after VIP convoys left on 31 October, police averted a crush; Lokmat puts the event bill at about ₹16 crore; police plan a VIP boat route to Ramkund",
+        hi: "31 अक्टूबर को VIP काफ़िले जाते ही लोगों ने रामकुंड के बैरिकेड हटाए, पुलिस ने भगदड़ टाली; लोकमत के अनुसार आयोजन पर करीब ₹16 करोड़; पुलिस की VIP के लिए रामकुंड तक नाव मार्ग की योजना",
+        mr: "३१ ऑक्टोबरला व्हीआयपी ताफे जाताच नागरिकांनी रामकुंडाचे बॅरिकेड हटवले, पोलिसांनी चेंगराचेंगरी टाळली; लोकमतनुसार सोहळ्याचा खर्च सुमारे ₹१६ कोटी; व्हीआयपींसाठी रामकुंडापर्यंत बोटमार्गाचा पोलिसांचा आराखडा",
+      },
+      body: {
+        en: "Navbharat Live (2 November) reports that around 7:30 PM on 31 October, once the guests' convoys left Godaghat, residents removed the barricades and streamed towards Ramkund; for a while there was a stampede-like risk, which police brought under control. Lokmat reports, citing sources, that the flag hoisting and its arrangements cost about ₹16 crore, including ₹2.05 crore for Ramkund electrification and a ₹2.47 crore Trimbak helipad. [Full story](/blog/ramkund-barricades-pulled-aside-after-vip-convoys-left-near-stampede-risk-flag-hoisting-cost-16-crore-lokmat). Separately, Divya Marathi reports a police plan to take VIPs from the KTM College helipad to Ramkund by boat on the Godavari, and a ₹28 crore Kumbh Mela Authority deal to clean Kushavarta's water in about 6 hours. [Full story](/blog/vips-to-reach-ramkund-by-boat-ktm-helipad-godavari-waterway-police-plan-kushavarta-water-cleaned-in-6-hours-28-crore-deal).",
+        hi: "नवभारत लाइव (2 नवंबर) के अनुसार 31 अक्टूबर को शाम करीब 7:30 बजे मेहमानों के काफ़िले गोदाघाट से निकलते ही लोगों ने बैरिकेड हटाए और रामकुंड की ओर बढ़ गए; कुछ देर भगदड़ जैसा ख़तरा बना, जिसे पुलिस ने काबू में किया। लोकमत ने सूत्रों के हवाले से बताया कि ध्वजारोहण और उसकी व्यवस्थाओं पर करीब ₹16 करोड़ खर्च हुए, जिसमें रामकुंड की बिजली व्यवस्था के ₹2.05 करोड़ और त्र्यंबक का ₹2.47 करोड़ का हेलिपैड शामिल है। [पूरी ख़बर](/blog/ramkund-barricades-pulled-aside-after-vip-convoys-left-near-stampede-risk-flag-hoisting-cost-16-crore-lokmat)। अलग से, दिव्य मराठी के अनुसार पुलिस VIP को KTM कॉलेज हेलिपैड से गोदावरी में नाव से रामकुंड ले जाने की योजना बना रही है, और कुंभ मेला प्राधिकरण ने कुशावर्त का पानी करीब 6 घंटे में साफ़ करने के लिए ₹28 करोड़ का करार किया है। [पूरी ख़बर](/blog/vips-to-reach-ramkund-by-boat-ktm-helipad-godavari-waterway-police-plan-kushavarta-water-cleaned-in-6-hours-28-crore-deal)।",
+        mr: "नवभारत लाइव्हनुसार (२ नोव्हेंबर) ३१ ऑक्टोबरला सायंकाळी सुमारे ७.३० वाजता पाहुण्यांचे ताफे गोदाघाटावरून निघताच नागरिकांनी बॅरिकेड हटवून रामकुंडाकडे धाव घेतली; काही काळ चेंगराचेंगरीसदृश धोका निर्माण झाला, तो पोलिसांनी नियंत्रणात आणला. सूत्रांच्या हवाल्याने लोकमतने म्हटले आहे की ध्वजारोहण व व्यवस्थेवर सुमारे ₹१६ कोटी खर्च झाले, त्यात रामकुंडावरील विद्युतीकरणाचे ₹२.०५ कोटी आणि त्र्यंबकचे ₹२.४७ कोटींचे हेलिपॅड आहे. [संपूर्ण बातमी](/blog/ramkund-barricades-pulled-aside-after-vip-convoys-left-near-stampede-risk-flag-hoisting-cost-16-crore-lokmat). स्वतंत्रपणे, दिव्य मराठीनुसार व्हीआयपींना केटीएम कॉलेज हेलिपॅडवरून गोदावरीतून बोटीने रामकुंडावर नेण्याचा पोलिसांचा आराखडा आहे, आणि कुशावर्ताचे पाणी सुमारे ६ तासांत शुद्ध करण्यासाठी कुंभमेळा प्राधिकरणाने ₹२८ कोटींचा करार केला आहे. [संपूर्ण बातमी](/blog/vips-to-reach-ramkund-by-boat-ktm-helipad-godavari-waterway-police-plan-kushavarta-water-cleaned-in-6-hours-28-crore-deal).",
+      },
+      status: "reported",
+      source: "Navbharat Live, Lokmat, Divya Marathi",
+    },
+    {
       time: "2026-11-01T09:30:00+05:30",
       headline: {
         en: "Goda Aarti record announced on site by Guinness (6,233 participants); Kumbh works 51% done with a March 2027 deadline",

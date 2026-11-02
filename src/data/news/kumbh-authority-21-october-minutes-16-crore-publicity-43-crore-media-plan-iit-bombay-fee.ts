@@ -13,6 +13,7 @@ export const article: BlogArticle = {
     mr: "कुंभमेळा प्राधिकरणाचे इतिवृत्त: ध्वजारोहणाच्या देश-विदेशातील प्रचारासाठी ₹१६ कोटी, ₹४३ कोटींचा माध्यम आराखडा ₹२० कोटींच्या मर्यादेत, आणि IIT बॉम्बेला ₹६९ लाख अधिक",
   },
   date: "2026-10-29",
+  followUp: { slug: "ramkund-barricades-pulled-aside-after-vip-convoys-left-near-stampede-risk-flag-hoisting-cost-16-crore-lokmat", date: "2026-11-02" },
   originallyAnnounced: "2026-10-21",
   source: "NTKMA minutes",
   sources: [
