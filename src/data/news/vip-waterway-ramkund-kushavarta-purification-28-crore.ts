@@ -15,6 +15,7 @@ export const article: BlogArticle = {
     mr: "पोलिसांचा आराखडा: व्हीआयपी रस्त्याने नव्हे, गोदावरीतून बोटीने रामकुंडावर पोहोचणार; ₹२८ कोटींच्या करारातून कुशावर्ताचे पाणी ६ तासांत शुद्ध होणार",
   },
   date: "2026-11-02",
+  followUp: { slug: "kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi", date: "2026-11-05" },
   originallyAnnounced: "2026-11-02",
   source: "Divya Marathi",
   sources: [

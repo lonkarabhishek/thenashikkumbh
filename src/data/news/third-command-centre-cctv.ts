@@ -9,6 +9,7 @@ export const article: BlogArticle = {
     mr: "कुंभमेळ्यासाठी तिसऱ्या कमांड सेंटरला मंजुरी, नाशिक आणि त्र्यंबकमध्ये सुमारे ५,००० सीसीटीव्ही कॅमेरे जोडणार",
   },
   date: "2026-10-06",
+  followUp: { slug: "official-kumbh-website-live-simhasthamahakumbh-maharashtra-gov-in-1500-of-5500-cctv-cameras-trial-after-diwali", date: "2026-11-05" },
   source: "Times of India",
   sources: [
     {

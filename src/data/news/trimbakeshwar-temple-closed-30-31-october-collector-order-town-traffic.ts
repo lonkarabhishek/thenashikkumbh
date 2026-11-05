@@ -15,6 +15,7 @@ export const article: BlogArticle = {
     mr: "त्र्यंबकेश्वर मंदिर आणि कुशावर्त ३० ऑक्टोबर दुपारी १२ ते ३१ ऑक्टोबर सायंकाळी ६ पर्यंत बाहेरगावच्या भाविकांसाठी बंद: जिल्हाधिकाऱ्यांचा आदेश, फक्त स्थानिक रहिवासी आणि पासधारकांना प्रवेश",
   },
   date: "2026-10-30",
+  followUp: { slug: "kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi", date: "2026-11-05" },
   originallyAnnounced: "2026-10-29",
   source: "PTI",
   sources: [
