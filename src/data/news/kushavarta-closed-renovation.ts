@@ -9,7 +9,7 @@ export const article: BlogArticle = {
     mr: "त्र्यंबकेश्वरचे कुशावर्त तीर्थ नूतनीकरणासाठी बंद: भाविकांनी काय लक्षात घ्यावे",
   },
   date: "2026-10-06",
-  followUp: { slug: "vips-to-reach-ramkund-by-boat-ktm-helipad-godavari-waterway-police-plan-kushavarta-water-cleaned-in-6-hours-28-crore-deal", date: "2026-11-02" },
+  followUp: { slug: "kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi", date: "2026-11-05" },
   source: "Times of India",
   sources: [
     {

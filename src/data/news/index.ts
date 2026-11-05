@@ -79,9 +79,16 @@ import { article as gangapurEklahare } from "./gangapur-eklahare-release-nmc-697
 import { article as mahajanWorksPromise } from "./mahajan-works-before-amrit-snans-sanjay-das-ramkund-steps-warning";
 import { article as gramParikramaHeld } from "./gram-parikrama-held-30-october-president-programme-31-october-led-screens";
 import { article as akhadaBoycottWarning } from "./akhada-boycott-warning-sadhugram-one-month-mahajan-four-months";
+import { article as officialWebsiteCctvTrial } from "./official-kumbh-website-live-1500-cctv-trial-after-diwali";
+import { article as kushavartaOpenAgain } from "./kushavarta-open-again-10000-devotees-1-november-new-ghats-prayag-tirth";
+import { article as rohitPawarAllegations } from "./rohit-pawar-alleges-corruption-kumbh-works-mahajan-accounts-10-days-mpcb-midc-ultimatum";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 and 31 October and 1 and 2 November 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 and 31 October and 1, 2 and 5 November 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 5 November 2026
+  officialWebsiteCctvTrial,
+  kushavartaOpenAgain,
+  rohitPawarAllegations,
   // 2 November 2026
   ramkundBarricades,
   vipWaterway,
