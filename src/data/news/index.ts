@@ -82,9 +82,16 @@ import { article as akhadaBoycottWarning } from "./akhada-boycott-warning-sadhug
 import { article as officialWebsiteCctvTrial } from "./official-kumbh-website-live-1500-cctv-trial-after-diwali";
 import { article as kushavartaOpenAgain } from "./kushavarta-open-again-10000-devotees-1-november-new-ghats-prayag-tirth";
 import { article as rohitPawarAllegations } from "./rohit-pawar-alleges-corruption-kumbh-works-mahajan-accounts-10-days-mpcb-midc-ultimatum";
+import { article as asphaltingAfterDiwali } from "./nmc-asphalting-after-diwali";
+import { article as sapkalAllegations } from "./sapkal-alleges-half-kumbh-funds-siphoned";
+import { article as parkingSadhugramDeadlines } from "./parking-eoi-sadhugram-plot-deadlines";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 and 31 October and 1, 2 and 5 November 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 and 31 October and 1, 2, 5 and 6 November 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 6 November 2026
+  asphaltingAfterDiwali,
+  sapkalAllegations,
+  parkingSadhugramDeadlines,
   // 5 November 2026
   officialWebsiteCctvTrial,
   kushavartaOpenAgain,
