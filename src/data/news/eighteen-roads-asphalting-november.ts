@@ -9,7 +9,8 @@ export const article: BlogArticle = {
     mr: "नाशिकमधील १८ प्रमुख रस्त्यांची कामे सुरू, नोव्हेंबरपासून डांबरीकरण",
   },
   date: "2026-10-07",
-  updated: "2026-10-18",
+  updated: "2026-11-06",
+  followUp: { slug: "nmc-to-start-large-scale-kumbh-road-asphalting-after-diwali", date: "2026-11-06" },
   source: "Swarajya",
   sources: [
     {
@@ -29,7 +30,9 @@ export const article: BlogArticle = {
     mr: "नाशिकमधील १८ प्रमुख रस्त्यांची कामे सुरू असून नोव्हेंबरपासून डांबरीकरणाला वेग येईल, असे महापालिकेने सांगितले. मंत्री गिरीश महाजन यांनी कामांना गती देण्यास सांगितले.",
   },
   content: {
-    en: `**Update, 18 October 2026:** NMC commissioner Manisha Khatri now says asphalting of **16 major Kumbh roads** will start within days, with about 60,000 tonnes of bitumen arriving from this month and a March 2027 deadline. See [the latest on Kumbh road asphalting](/blog/nmc-60000-tonnes-bitumen-asphalting-16-kumbh-roads).
+    en: `**Update, 6 November 2026:** A later Times of India report says large-scale asphalting of the Kumbh roads starts after Diwali, and cites nearly 32 roads, about 150 km and ₹1,400 crore. See [the 6 November update](/blog/nmc-to-start-large-scale-kumbh-road-asphalting-after-diwali). The 18 October note below is kept as it stood then.
+
+**Update, 18 October 2026:** NMC commissioner Manisha Khatri now says asphalting of **16 major Kumbh roads** will start within days, with about 60,000 tonnes of bitumen arriving from this month and a March 2027 deadline. See [the 18 October report](/blog/nmc-60000-tonnes-bitumen-asphalting-16-kumbh-roads).
 
 Work is under way on **18 major roads** in Nashik ahead of the Simhastha Kumbh, according to the Nashik Municipal Corporation (NMC). Asphalting will pick up from **November**. This is a **media report** by Swarajya on 4 October. It has **not yet been officially confirmed**.
 
@@ -60,7 +63,9 @@ The big days are still some way off. The Dhwajarohan is on 31 October 2026 at 12
 For travel options, see our [how to reach Nashik page](/how-to-reach). You can also read about [ring road work on seven stretches](/blog/nashik-ring-road-work-begins-on-seven-stretches).
 
 We will update this post when NMC shares official details.`,
-    hi: `**अपडेट, 18 अक्टूबर 2026:** NMC आयुक्त मनीषा खत्री के अनुसार अब **कुंभ की 16 बड़ी सड़कों** का डामरीकरण कुछ ही दिनों में शुरू होगा। इसी महीने से करीब 60,000 टन डामर आएगा और समय-सीमा मार्च 2027 है। देखें: [कुंभ सड़कों के डामरीकरण की ताज़ा खबर](/blog/nmc-60000-tonnes-bitumen-asphalting-16-kumbh-roads)।
+    hi: `**अपडेट, 6 नवंबर 2026:** टाइम्स ऑफ इंडिया की बाद की ख़बर के अनुसार कुंभ सड़कों का बड़े पैमाने पर डामरीकरण दिवाली के बाद शुरू होगा, और करीब 32 सड़कें, लगभग 150 किमी तथा ₹1,400 करोड़ बताए गए हैं। देखें: [6 नवंबर की अपडेट](/blog/nmc-to-start-large-scale-kumbh-road-asphalting-after-diwali)। नीचे 18 अक्टूबर की टिप्पणी वैसी ही रखी है जैसी तब थी।
+
+**अपडेट, 18 अक्टूबर 2026:** NMC आयुक्त मनीषा खत्री के अनुसार अब **कुंभ की 16 बड़ी सड़कों** का डामरीकरण कुछ ही दिनों में शुरू होगा। इसी महीने से करीब 60,000 टन डामर आएगा और समय-सीमा मार्च 2027 है। देखें: [18 अक्टूबर की खबर](/blog/nmc-60000-tonnes-bitumen-asphalting-16-kumbh-roads)।
 
 नाशिक महानगरपालिका (NMC) के अनुसार, सिंहस्थ कुंभ से पहले शहर की **18 बड़ी सड़कों** पर काम चल रहा है। **नवंबर** से डामरीकरण तेज़ होगा। यह स्वराज्य की 4 अक्टूबर की **मीडिया रिपोर्ट** है। इसकी **अभी आधिकारिक पुष्टि नहीं हुई है**।
 
@@ -91,7 +96,9 @@ NMC आयुक्त मनीषा खत्री ने कहा कि �
 यात्रा के साधनों के लिए हमारा [नाशिक कैसे पहुँचें पेज](/how-to-reach) देखें। आप [सात हिस्सों पर रिंग रोड के काम](/blog/nashik-ring-road-work-begins-on-seven-stretches) के बारे में भी पढ़ सकते हैं।
 
 NMC की आधिकारिक जानकारी आते ही हम यह पोस्ट अपडेट करेंगे।`,
-    mr: `**अपडेट, १८ ऑक्टोबर २०२६:** मनपा आयुक्त मनीषा खत्री यांच्या म्हणण्यानुसार आता **कुंभमेळ्याच्या १६ प्रमुख रस्त्यांचे** डांबरीकरण काही दिवसांत सुरू होईल. याच महिन्यापासून सुमारे ६०,००० टन डांबर येणार असून मुदत मार्च २०२७ आहे. पाहा: [कुंभ रस्त्यांच्या डांबरीकरणाची ताजी बातमी](/blog/nmc-60000-tonnes-bitumen-asphalting-16-kumbh-roads).
+    mr: `**अपडेट, ६ नोव्हेंबर २०२६:** टाइम्स ऑफ इंडियाच्या नंतरच्या वृत्तानुसार कुंभ रस्त्यांचे मोठ्या प्रमाणात डांबरीकरण दिवाळीनंतर सुरू होईल, आणि जवळपास ३२ रस्ते, सुमारे १५० किमी व ₹१,४०० कोटी दिले आहेत. पाहा: [६ नोव्हेंबरची अपडेट](/blog/nmc-to-start-large-scale-kumbh-road-asphalting-after-diwali). खालील १८ ऑक्टोबरची नोंद तेव्हा होती तशी ठेवली आहे.
+
+**अपडेट, १८ ऑक्टोबर २०२६:** मनपा आयुक्त मनीषा खत्री यांच्या म्हणण्यानुसार आता **कुंभमेळ्याच्या १६ प्रमुख रस्त्यांचे** डांबरीकरण काही दिवसांत सुरू होईल. याच महिन्यापासून सुमारे ६०,००० टन डांबर येणार असून मुदत मार्च २०२७ आहे. पाहा: [१८ ऑक्टोबरची बातमी](/blog/nmc-60000-tonnes-bitumen-asphalting-16-kumbh-roads).
 
 सिंहस्थ कुंभमेळ्याच्या पार्श्वभूमीवर नाशिकमधील **१८ प्रमुख रस्त्यांची** कामे सुरू आहेत, असे नाशिक महापालिकेने (NMC) सांगितले आहे. **नोव्हेंबरपासून** डांबरीकरणाला वेग येईल. स्वराज्यने ४ ऑक्टोबरला हे **वृत्त** दिले आहे. याला अजून **अधिकृत दुजोरा मिळालेला नाही**.
 
