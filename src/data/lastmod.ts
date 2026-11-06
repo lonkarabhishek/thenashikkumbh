@@ -14,7 +14,7 @@ export const PAGE_LASTMOD: Record<string, string> = {
   "/family-card": "2026-10-27",
   "/map": "2026-10-15",
   "/parva-snan-calendar": "2026-10-30",
-  "/dhwajarohan-2026": "2026-11-02",
+  "/dhwajarohan-2026": "2026-11-06",
   "/dhwajarohan-2026/live": "2026-11-02",
   "/nashik-30-31-october-disruptions": "2026-10-30",
   "/trimbakeshwar-kumbh-2027": "2026-11-05",

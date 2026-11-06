@@ -31,9 +31,9 @@ In the evening, 6,233 tribal devotees performed the Maha Goda Aarti on the Godav
   sections: [
     {
       heading: {
-        en: "What happens on 31 October",
-        hi: "31 अक्टूबर को क्या होगा",
-        mr: "३१ ऑक्टोबरला काय होणार",
+        en: "What happened on 31 October",
+        hi: "31 अक्टूबर को क्या हुआ",
+        mr: "३१ ऑक्टोबरला काय झाले",
       },
       body: {
         en: `Dhwajarohan means raising the flag. For the Simhastha, it marks the formal opening of the mela period, which runs into 2028.
@@ -42,21 +42,21 @@ The NTKMA Kumbh Mela Plan (June 2026) lists the date and the two venues. Kumbh M
 
 The flag hoisting is not a bathing day. The first Amrit Snan is on Monday 2 August 2027. See every date on our [Kumbh dates page](/dates).
 
-According to the NTKMA plan, new flag poles (Dhwaja Stambhas) are being set up before 31 October at Ramkund, and in Trimbak at Sadhugram/Ghat and at Kushavarta.`,
+According to the NTKMA plan, new flag poles (Dhwaja Stambhas) were to be set up before 31 October at Ramkund, and in Trimbak at Sadhugram/Ghat and at Kushavarta.`,
         hi: `ध्वजारोहण का अर्थ है ध्वज फहराना। सिंहस्थ में इससे मेले की अवधि की औपचारिक शुरुआत होती है, जो 2028 तक चलेगी।
 
 NTKMA की कुंभ मेला योजना (जून 2026) में यह तारीख और दोनों स्थान दर्ज हैं। eSakal की रिपोर्ट के अनुसार, कुंभ मेला मंत्री गिरीश महाजन ने 19 सितंबर 2026 को दोपहर 12:02 बजे के मुहूर्त की आधिकारिक पुष्टि की। यही समय 1 जून 2025 को घोषित मूल कार्यक्रम में भी था।
 
 ध्वजारोहण स्नान का दिन नहीं है। पहला अमृत स्नान सोमवार, 2 अगस्त 2027 को है। सभी तिथियां हमारे [कुंभ तिथि पेज](/dates) पर देखें।
 
-NTKMA योजना के अनुसार, 31 अक्टूबर से पहले रामकुंड पर और त्र्यंबक में साधुग्राम/घाट तथा कुशावर्त पर नए ध्वज स्तंभ लगाए जा रहे हैं।`,
+NTKMA योजना के अनुसार, 31 अक्टूबर से पहले रामकुंड पर और त्र्यंबक में साधुग्राम/घाट तथा कुशावर्त पर नए ध्वज स्तंभ लगाए जाने थे।`,
         mr: `ध्वजारोहण म्हणजे ध्वज उभारणे. सिंहस्थात यातून मेळ्याच्या कालावधीला औपचारिक सुरुवात होते. हा कालावधी २०२८ पर्यंत चालणार आहे.
 
 NTKMA च्या कुंभमेळा आराखड्यात (जून २०२६) ही तारीख आणि दोन्ही ठिकाणे नमूद आहेत. कुंभमेळा मंत्री गिरीश महाजन यांनी १९ सप्टेंबर २०२६ रोजी दुपारी १२.०२ च्या मुहूर्ताला अधिकृत दुजोरा दिला, असे eSakal ने दिले आहे. हीच वेळ १ जून २०२५ रोजी जाहीर झालेल्या मूळ वेळापत्रकातही होती.
 
 ध्वजारोहणाचा दिवस हा स्नानाचा दिवस नाही. पहिले अमृत स्नान सोमवार, २ ऑगस्ट २०२७ रोजी आहे. सर्व तारखा आमच्या [कुंभ तारखा पानावर](/dates) पाहा.
 
-NTKMA आराखड्यानुसार ३१ ऑक्टोबरपूर्वी रामकुंडावर, तसेच त्र्यंबकमध्ये साधुग्राम/घाट आणि कुशावर्त येथे नवे ध्वजस्तंभ उभारले जात आहेत.`,
+NTKMA आराखड्यानुसार ३१ ऑक्टोबरपूर्वी रामकुंडावर, तसेच त्र्यंबकमध्ये साधुग्राम/घाट आणि कुशावर्त येथे नवे ध्वजस्तंभ उभारले जाणार होते.`,
       },
     },
     {
@@ -66,24 +66,24 @@ NTKMA आराखड्यानुसार ३१ ऑक्टोबरपू
         mr: "कुठे: दोन ठिकाणे, एकच वेळ",
       },
       body: {
-        en: `The flags go up at 12:02 PM at both places at the same time:
+        en: `The flags went up at 12:02 PM at both places at the same time:
 
 - **Ramkund (Ramtirth), Panchavati, Nashik.** Ramkund is on the Godavari in Panchavati and is the main bathing spot in Nashik.
 - **Kushavarta, Trimbakeshwar.** The sacred kund in Trimbak town, regarded as the symbolic origin of the Godavari.
 
-Trimbak is a separate town from Nashik, so you can be at only one venue at 12:02 PM. Pick one in advance. Read about the bathing spots on our [ghats page](/ghats), and about the Trimbak side on our [Trimbakeshwar Kumbh 2027 guide](/trimbakeshwar-kumbh-2027).`,
-        hi: `दोपहर 12:02 बजे दोनों जगह एक साथ ध्वज फहराया जाएगा:
+Trimbak is a separate town from Nashik, so on the day you could be at only one venue at 12:02 PM. Read about the bathing spots on our [ghats page](/ghats), and about the Trimbak side on our [Trimbakeshwar Kumbh 2027 guide](/trimbakeshwar-kumbh-2027).`,
+        hi: `दोपहर 12:02 बजे दोनों जगह एक साथ ध्वज फहराए गए:
 
 - **रामकुंड (रामतीर्थ), पंचवटी, नाशिक।** रामकुंड पंचवटी में गोदावरी के किनारे है और नाशिक का मुख्य स्नान स्थल है।
 - **कुशावर्त, त्र्यंबकेश्वर।** त्र्यंबक शहर का पवित्र कुंड, जिसे गोदावरी का प्रतीकात्मक उद्गम माना जाता है।
 
-त्र्यंबक नाशिक से अलग शहर है, इसलिए 12:02 बजे आप किसी एक ही स्थान पर रह पाएंगे। पहले से तय कर लें। स्नान स्थलों के बारे में हमारे [घाट पेज](/ghats) पर और त्र्यंबक के बारे में हमारी [त्र्यंबकेश्वर कुंभ 2027 गाइड](/trimbakeshwar-kumbh-2027) में पढ़ें।`,
-        mr: `दुपारी १२.०२ वाजता दोन्ही ठिकाणी एकाच वेळी ध्वज फडकेल:
+त्र्यंबक नाशिक से अलग शहर है, इसलिए उस दिन 12:02 बजे आप किसी एक ही स्थान पर रह सकते थे। स्नान स्थलों के बारे में हमारे [घाट पेज](/ghats) पर और त्र्यंबक के बारे में हमारी [त्र्यंबकेश्वर कुंभ 2027 गाइड](/trimbakeshwar-kumbh-2027) में पढ़ें।`,
+        mr: `दुपारी १२.०२ वाजता दोन्ही ठिकाणी एकाच वेळी ध्वज फडकले:
 
 - **रामकुंड (रामतीर्थ), पंचवटी, नाशिक.** पंचवटीत गोदावरीकाठी असलेले रामकुंड हे नाशिकमधील मुख्य स्नानस्थळ आहे.
 - **कुशावर्त, त्र्यंबकेश्वर.** त्र्यंबक गावातील पवित्र कुंड, ज्याला गोदावरीचे प्रतीकात्मक उगमस्थान मानले जाते.
 
-त्र्यंबक हे नाशिकपासून वेगळे गाव आहे. त्यामुळे १२.०२ वाजता तुम्ही एकाच ठिकाणी असू शकाल. आधीच ठरवा. स्नानस्थळांविषयी आमच्या [घाट पानावर](/ghats) आणि त्र्यंबकविषयी [त्र्यंबकेश्वर कुंभ २०२७ मार्गदर्शकात](/trimbakeshwar-kumbh-2027) वाचा.`,
+त्र्यंबक हे नाशिकपासून वेगळे गाव आहे. त्यामुळे त्या दिवशी १२.०२ वाजता तुम्ही एकाच ठिकाणी असू शकत होता. स्नानस्थळांविषयी आमच्या [घाट पानावर](/ghats) आणि त्र्यंबकविषयी [त्र्यंबकेश्वर कुंभ २०२७ मार्गदर्शकात](/trimbakeshwar-kumbh-2027) वाचा.`,
       },
     },
     {
@@ -93,7 +93,7 @@ Trimbak is a separate town from Nashik, so you can be at only one venue at 12:02
         mr: "कार्यक्रम: ३० ऑक्टोबर ते १ नोव्हेंबर",
       },
       body: {
-        en: `Only the flag hoisting itself is confirmed in an official document. The rest of this programme comes from media reports and may change.
+        en: `Only the flag hoisting itself is confirmed in an official document. The rest of this programme comes from media reports, and several details shifted in the updates below.
 
 - **Friday 30 October: Gram Pradakshina** in Nashik, before the flag hoisting. Lokmat Times reported (27 September 2026) that around one lakh devotees are expected. **Update, 23 October (REPORTED):** welcome at Modi Maidan, Tapovan at 1 PM; the procession, with ten tableaux, leaves at 2 PM (Sakal; Navbharat says 3 PM) and is due at Ramtirth around 6:30 PM for a sandhya aarti. Route as given by NMC to the Times of India: Tapovan, Panchavati, flower market, Delhi Darwaza, Nehru Chowk, Main Road, Ravivar Karanja, Ahilyabai Holkar Bridge, Ramkund. NMC anti-encroachment squads on the route 24–29 October. No official traffic notice yet. [Full story](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29). **Update, 24 October (REPORTED):** Saamana gives a different route (Tapovan, Panchmukhi Hanuman temple, Sant Gadge Maharaj Chowk, Nehru Chowk, Dhumal Point, Main Road, Ravivar Karanja, Malegaon Stand), **21 tableaux** instead of 10, and a **7 PM** Godavari maha aarti at Ramkund with one lakh diyas. Sources differ; wait for the police notice. [Details](/blog/dhwajarohan-30-31-october-parking-grounds-liquor-shops-shut-2-km-ramkund-city-buses). **Update, 26 October (REPORTED):** the police traffic notice (Sakal) gives the route as Tapovan ground, Aathvan Lawns, Tapovan crossing, Panchmukhi Hanuman temple, Katya Maruti Chowk, Devi Chowk, Ganeshwadi, Gadge Maharaj bridge, Ahilyabai Holkar bridge, Ramtirth, with roads closed from 6 AM until the procession ends. That differs from both earlier versions. [Details](/blog/nashik-traffic-notice-30-31-october-godaghat-no-vehicle-zone-ramtirth-roads-shut-diversions-parking-iim-nagpur-crowd-plan). **Update, 31 October (REPORTED): it was held.** The procession left Modi Maidan, Tapovan on 30 October and ended at Ramkund with a Godavari aarti, with heads of three akhadas, four jagadgurus and 50 tableaux (PTI, Free Press Journal, ETV Bharat). Crowd figures differ: more than 30,000 (ETV Bharat), more than 40,000 (Sanatan Prabhat), "thousands" (PTI). Start time: 2 PM (Free Press Journal) or 3:30 PM (Sanatan Prabhat). [Full story](/blog/dharma-dhwaj-gram-parikrama-held-30-october-tapovan-to-ramkund-president-programme-31-october-led-screens).
 - **Friday 30 October: Trimbakeshwar, and morning rituals.** **Update, 25 October (REPORTED):** NTKMA information carried by Pudhari lists morning rituals on 30 October by the Shri Ganga-Godavari Panchkoti Tirth Purohit Sangh (sankalp, tirth pujan, Ganesh pujan, Navagraha and Rudra sthapana, swarnapad vidhi) and evening processions in both Nashik and Trimbak. Sarkarnama says the Trimbak procession leaves Kushavarta at **4 PM**, via the Trimbakeshwar temple to the municipal council office. [Details](/blog/president-12-minute-godavari-puja-kushavarta-2-pm-trimbakeshwar-plan-31-october-shankaracharya-flag). **Update, 31 October:** the morning rituals at Ramtirth took place with Girish Mahajan and seers (CONFIRMED, District Information Office). Saimat Live gave the Trimbak route as a loop from Kushavarta through the town and the temple back to Kushavarta, with 11 tableaux. We have not found a report on how the Trimbak procession went.
@@ -101,8 +101,8 @@ Trimbak is a separate town from Nashik, so you can be at only one venue at 12:02
 - **Saturday 31 October, 12:02 PM: Dhwajarohan** at Ramkund and Kushavarta. Confirmed. **Update, 25 October (REPORTED):** 251 conch players are to sound conches at the 12:02 moment (Prahaar, Nashik Calling). At Kushavarta, Sarkarnama says the Shringeri Shankaracharya hoists the flag with about 100 invitees; Pudhari says the Governor and Chief Minister will be present. [Details](/blog/shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme).
 - **Saturday 31 October, about 6 PM: Maha Goda Aarti** at Ramkund, with about **6,500 people from 650 tribal villages** of Nashik district, the second world-record attempt (REPORTED: Prahaar and Lokmat Times give 6 PM; NTKMA and the District Information Office announced the aarti and the 6,500 figure on 18 October). Lokmat Times says the aarti will run along the stretch between Ekmukhi Datta temple and Rokdoba temple. *Earlier reports in late September said 7 PM and about 5,000 seats; those figures are now out of date.* Navbharat (21 October) gives **6:50 PM** for the aarti; sources differ, so plan for about 6 PM. **Update, 24 October (REPORTED):** Kumbh Commissioner Shekhar Singh now puts the aarti at **6,559 tribal participants from seven talukas**, from Ahilyabai Holkar bridge to Ramkund, with the Ramtirth Godavari Seva Samiti (ETV Bharat). [Details](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs). **Update, 25 October (REPORTED):** Pudhari (NTKMA information) says people from 650 villages in seven talukas and 28 city settlements have registered, and that the Ramtirth Godavari Seva Samiti and the Nashik Purohit Sangh will hold a **joint** maha aarti. [Details](/blog/shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme). **Update, 27 October (REPORTED):** the police notice, as reported by the Times of India, puts the aarti at **7 PM** and bars entry to the ghats from Ekmukhi Datta temple to Gharpure Ghat and to Main Road, Nehru Chowk and Dhumal Point. [Details](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route).
 
-Navarashtra has noted that the programme may change. We will update this page when an official programme is published.`,
-        hi: `केवल ध्वजारोहण की पुष्टि सरकारी दस्तावेज़ में है। बाकी कार्यक्रम मीडिया रिपोर्टों पर आधारित है और इसमें बदलाव हो सकता है।
+Navarashtra had noted that the programme might change. The flag hoisting and the Maha Goda Aarti have since been held; the dated notes above are the record of the reports.`,
+        hi: `केवल ध्वजारोहण की पुष्टि सरकारी दस्तावेज़ में है। बाकी कार्यक्रम मीडिया रिपोर्टों पर आधारित है, और नीचे के अपडेट में कई बातें बदलीं।
 
 - **शुक्रवार, 30 अक्टूबर: ग्राम प्रदक्षिणा**, नाशिक में, ध्वजारोहण से पहले। Lokmat Times की रिपोर्ट (27 सितंबर 2026) के अनुसार लगभग एक लाख श्रद्धालुओं के आने की उम्मीद है। **अपडेट, 23 अक्टूबर (रिपोर्ट):** दोपहर 1 बजे तपोवन के मोदी मैदान पर स्वागत; दस चित्ररथों वाली यात्रा दोपहर 2 बजे निकलेगी (सकाळ; नवभारत के अनुसार 3 बजे) और शाम करीब 6:30 बजे संध्या आरती के लिए रामतीर्थ पहुँचेगी। NMC ने टाइम्स ऑफ इंडिया को जो मार्ग बताया: तपोवन, पंचवटी, फूल बाज़ार, दिल्ली दरवाज़ा, नेहरू चौक, मेन रोड, रविवार कारंजा, अहिल्याबाई होलकर पुल, रामकुंड। 24–29 अक्टूबर तक मार्ग पर NMC के अतिक्रमण हटाओ दस्ते। आधिकारिक ट्रैफ़िक सूचना अभी नहीं आई। [पूरी ख़बर](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29)। **अपडेट, 24 अक्टूबर (रिपोर्ट):** सामना ने अलग मार्ग दिया है (तपोवन, पंचमुखी हनुमान मंदिर, संत गाडगे महाराज चौक, नेहरू चौक, धुमाल पॉइंट, मेन रोड, रविवार कारंजा, मालेगाँव स्टैंड), 10 की जगह **21 चित्ररथ**, और रामकुंड पर **शाम 7 बजे** एक लाख दीपों के साथ गोदावरी महाआरती। ख़बरों में फ़र्क है; पुलिस की सूचना का इंतज़ार करें। [पूरी ख़बर](/blog/dhwajarohan-30-31-october-parking-grounds-liquor-shops-shut-2-km-ramkund-city-buses)। **अपडेट, 26 अक्टूबर (रिपोर्ट):** पुलिस की ट्रैफ़िक अधिसूचना (सकाळ) में मार्ग: तपोवन मैदान, आठवण लॉन्स, तपोवन क्रॉसिंग, पंचमुखी हनुमान मंदिर, काट्या मारुति चौक, देवी चौक, गणेशवाड़ी, गाडगे महाराज पुल, अहिल्याबाई होलकर पुल, रामतीर्थ; सुबह 6 बजे से यात्रा ख़त्म होने तक सड़कें बंद। यह पहले के दोनों संस्करणों से अलग है। [पूरी ख़बर](/blog/nashik-traffic-notice-30-31-october-godaghat-no-vehicle-zone-ramtirth-roads-shut-diversions-parking-iim-nagpur-crowd-plan)। **अपडेट, 31 अक्टूबर (रिपोर्ट): यात्रा निकली।** 30 अक्टूबर को यात्रा तपोवन के मोदी मैदान से निकलकर गोदावरी आरती के साथ रामकुंड पर ख़त्म हुई; तीन अखाड़ों के प्रमुख, चार जगद्गुरु और 50 चित्ररथ शामिल थे (PTI, फ़्री प्रेस जर्नल, ETV भारत)। भीड़ के आँकड़े अलग: 30,000 से ज़्यादा (ETV भारत), 40,000 से ज़्यादा (सनातन प्रभात), "हज़ारों" (PTI)। शुरुआत: दोपहर 2 बजे (फ़्री प्रेस जर्नल) या 3:30 बजे (सनातन प्रभात)। [पूरी ख़बर](/blog/dharma-dhwaj-gram-parikrama-held-30-october-tapovan-to-ramkund-president-programme-31-october-led-screens)।
 - **शुक्रवार, 30 अक्टूबर: त्र्यंबकेश्वर, और सुबह के अनुष्ठान।** **अपडेट, 25 अक्टूबर (रिपोर्ट):** पुढारी में छपी NTKMA की जानकारी के अनुसार 30 अक्टूबर सुबह श्री गंगा-गोदावरी पंचकोटी तीर्थ पुरोहित संघ की ओर से विधि (संकल्प, तीर्थ पूजन, गणेश पूजन, नवग्रह व रुद्र स्थापना, स्वर्णपाद विधि) और शाम को नाशिक व त्र्यंबक दोनों जगह शोभायात्रा। सरकारनामा के अनुसार त्र्यंबक की शोभायात्रा **शाम 4 बजे** कुशावर्त से त्र्यंबकेश्वर मंदिर होते हुए नगर परिषद कार्यालय तक जाएगी। [पूरी ख़बर](/blog/president-12-minute-godavari-puja-kushavarta-2-pm-trimbakeshwar-plan-31-october-shankaracharya-flag)। **अपडेट, 31 अक्टूबर:** रामतीर्थ पर सुबह के अनुष्ठान गिरीश महाजन और साधु-महंतों की उपस्थिति में हुए (पुष्ट, ज़िला सूचना कार्यालय)। साईमत लाइव के अनुसार त्र्यंबक की यात्रा 11 चित्ररथों के साथ कुशावर्त से शहर और मंदिर होते हुए वापस कुशावर्त तक थी। त्र्यंबक की यात्रा कैसी रही, इसकी रिपोर्ट हमें नहीं मिली।
@@ -110,8 +110,8 @@ Navarashtra has noted that the programme may change. We will update this page wh
 - **शनिवार, 31 अक्टूबर, दोपहर 12:02 बजे: ध्वजारोहण**, रामकुंड और कुशावर्त पर। इसकी पुष्टि है। **अपडेट, 25 अक्टूबर (रिपोर्ट):** 12:02 के क्षण 251 शंखवादक शंखनाद करेंगे (प्रहार, नाशिक कॉलिंग)। सरकारनामा के अनुसार कुशावर्त पर शृंगेरी शंकराचार्य करीब 100 आमंत्रितों के बीच ध्वज फहराएँगे; पुढारी के अनुसार वहाँ राज्यपाल और मुख्यमंत्री उपस्थित रहेंगे। [पूरी ख़बर](/blog/shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme)।
 - **शनिवार, 31 अक्टूबर, शाम करीब 6 बजे: महा गोदा आरती**, रामकुंड पर, नाशिक ज़िले के **650 जनजातीय गाँवों के करीब 6,500 लोगों** के साथ, यह दूसरा विश्व रिकॉर्ड प्रयास है (रिपोर्ट: प्रहार और Lokmat Times ने शाम 6 बजे लिखा है; आरती और 6,500 की संख्या NTKMA और ज़िला सूचना कार्यालय ने 18 अक्टूबर को घोषित की)। Lokmat Times के मुताबिक आरती एकमुखी दत्त मंदिर से रोकडोबा मंदिर के बीच के घाट पर होगी। *सितंबर के आख़िर की रिपोर्टों में शाम 7 बजे और करीब 5,000 सीटें बताई गई थीं; वह जानकारी अब पुरानी है।* नवभारत (21 अक्टूबर) ने आरती का समय **शाम 6:50** बताया है; ख़बरों में फ़र्क है, इसलिए करीब 6 बजे तक पहुँचने की योजना रखें। **अपडेट, 24 अक्टूबर (रिपोर्ट):** कुंभ आयुक्त शेखर सिंह अब आरती में **सात तालुकों के 6,559 जनजातीय प्रतिभागी** बताते हैं, अहिल्याबाई होलकर पुल से रामकुंड तक, रामतीर्थ गोदावरी सेवा समिति के साथ (ETV भारत)। [पूरी ख़बर](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs)। **अपडेट, 25 अक्टूबर (रिपोर्ट):** पुढारी (NTKMA की जानकारी) के अनुसार सात तालुकों के 650 गाँवों और शहर की 28 बस्तियों से पंजीकरण हुआ है, और रामतीर्थ गोदावरी सेवा समिति व नाशिक पुरोहित संघ **संयुक्त** महाआरती करेंगे। [पूरी ख़बर](/blog/shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme)। **अपडेट, 27 अक्टूबर (रिपोर्ट):** टाइम्स ऑफ इंडिया के अनुसार पुलिस अधिसूचना में आरती **शाम 7 बजे** है, और एकमुखी दत्त मंदिर से घारपुरे घाट तक के घाटों और मेन रोड, नेहरू चौक व धुमाल पॉइंट पर प्रवेशबंदी है। [पूरी ख़बर](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route)।
 
-Navarashtra ने बताया है कि कार्यक्रम बदल सकता है। आधिकारिक कार्यक्रम जारी होने पर हम यह पेज अपडेट करेंगे।`,
-        mr: `केवळ ध्वजारोहणाची नोंद अधिकृत दस्तऐवजात आहे. बाकीचा कार्यक्रम माध्यमांतील वृत्तांवर आधारित असून त्यात बदल होऊ शकतो.
+Navarashtra ने बताया था कि कार्यक्रम बदल सकता है। ध्वजारोहण और महा गोदा आरती हो चुकी हैं; ऊपर की दिनांकित टिप्पणियाँ रिपोर्टों का रिकॉर्ड हैं।`,
+        mr: `केवळ ध्वजारोहणाची नोंद अधिकृत दस्तऐवजात आहे. बाकीचा कार्यक्रम माध्यमांतील वृत्तांवर आधारित आहे, आणि खालील अपडेटमध्ये अनेक तपशील बदलले.
 
 - **शुक्रवार, ३० ऑक्टोबर: ग्रामप्रदक्षिणा**, नाशिकमध्ये, ध्वजारोहणाआधी. सुमारे एक लाख भाविक येतील अशी अपेक्षा असल्याचे Lokmat Times ने (२७ सप्टेंबर २०२६) दिले आहे. **अपडेट, २३ ऑक्टोबर (वृत्त):** दुपारी १ वाजता तपोवनातील मोदी मैदानावर स्वागत; दहा चित्ररथांची परिक्रमा दुपारी २ वाजता निघेल (सकाळ; नवभारतनुसार ३ वाजता) आणि सायंकाळी साडेसहाच्या सुमारास संध्या आरतीसाठी रामतीर्थावर पोहोचेल. महापालिकेने टाइम्स ऑफ इंडियाला सांगितलेला मार्ग: तपोवन, पंचवटी, फुलबाजार, दिल्ली दरवाजा, नेहरू चौक, मेन रोड, रविवार कारंजा, अहिल्याबाई होळकर पूल, रामकुंड. २४–२९ ऑक्टोबरदरम्यान मार्गावर महापालिकेची अतिक्रमण हटाव पथके. अधिकृत वाहतूक अधिसूचना अद्याप नाही. [सविस्तर बातमी](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29). **अपडेट, २४ ऑक्टोबर (वृत्त):** सामनाने वेगळा मार्ग दिला आहे (तपोवन, पंचमुखी हनुमान मंदिर, संत गाडगे महाराज चौक, नेहरू चौक, धुमाळ पॉइंट, मेनरोड, रविवार कारंजा, मालेगाव स्टँड), १० ऐवजी **२१ चित्ररथ**, आणि रामकुंडावर **सायंकाळी ७ वाजता** एक लाख दिव्यांसह गोदावरी महाआरती. वृत्तांत फरक आहे; पोलिसांच्या अधिसूचनेची वाट पाहा. [सविस्तर](/blog/dhwajarohan-30-31-october-parking-grounds-liquor-shops-shut-2-km-ramkund-city-buses). **अपडेट, २६ ऑक्टोबर (वृत्त):** पोलिसांच्या वाहतूक अधिसूचनेत (सकाळ) मार्ग: तपोवन मैदान, आठवण लॉन्स, तपोवन क्रॉसिंग, पंचमुखी हनुमान मंदिर, काट्या मारुती चौक, देवी चौक, गणेशवाडी, गाडगे महाराज पूल, अहिल्याबाई होळकर पूल, रामतीर्थ; सकाळी ६ पासून मिरवणूक संपेपर्यंत रस्ते बंद. हा मार्ग आधीच्या दोन्ही वृत्तांपेक्षा वेगळा आहे. [सविस्तर](/blog/nashik-traffic-notice-30-31-october-godaghat-no-vehicle-zone-ramtirth-roads-shut-diversions-parking-iim-nagpur-crowd-plan). **अपडेट, ३१ ऑक्टोबर (वृत्त): परिक्रमा पार पडली.** ३० ऑक्टोबरला तपोवनातील मोदी मैदानापासून निघालेल्या परिक्रमेची गोदावरी आरतीने रामकुंडावर सांगता झाली; तीन आखाड्यांचे प्रमुख, चार जगद्गुरू आणि ५० चित्ररथ सहभागी होते (PTI, फ्री प्रेस जर्नल, ETV भारत). गर्दीचे आकडे वेगवेगळे: ३० हजारांहून अधिक (ETV भारत), ४० हजारांहून अधिक (सनातन प्रभात), "हजारो" (PTI). सुरुवात: दुपारी २ (फ्री प्रेस जर्नल) किंवा दुपारी ३.३० (सनातन प्रभात). [सविस्तर](/blog/dharma-dhwaj-gram-parikrama-held-30-october-tapovan-to-ramkund-president-programme-31-october-led-screens).
 - **शुक्रवार, ३० ऑक्टोबर: त्र्यंबकेश्वर, आणि सकाळचे विधी.** **अपडेट, २५ ऑक्टोबर (वृत्त):** पुढारीत आलेल्या NTKMA च्या माहितीनुसार ३० ऑक्टोबरला सकाळी श्री गंगा-गोदावरी पंचकोटी तीर्थ पुरोहित संघातर्फे विधी (संकल्प, तीर्थपूजन, गणेशपूजन, नवग्रह व रुद्र स्थापना, स्वर्णपाद विधी) आणि सायंकाळी नाशिक व त्र्यंबक दोन्हीकडे शोभायात्रा. सरकारनामानुसार त्र्यंबकची शोभायात्रा **दुपारी ४ वाजता** कुशावर्तावरून त्र्यंबकेश्वर मंदिरमार्गे नगर परिषद कार्यालयापर्यंत जाईल. [सविस्तर](/blog/president-12-minute-godavari-puja-kushavarta-2-pm-trimbakeshwar-plan-31-october-shankaracharya-flag). **अपडेट, ३१ ऑक्टोबर:** रामतीर्थावरील सकाळचे विधी गिरीश महाजन आणि साधू-महंतांच्या उपस्थितीत झाले (अधिकृत, जिल्हा माहिती कार्यालय). साईमत लाइव्हनुसार त्र्यंबकची शोभायात्रा ११ चित्ररथांसह कुशावर्तापासून गावातून आणि मंदिरमार्गे पुन्हा कुशावर्तापर्यंत होती. त्र्यंबकची शोभायात्रा कशी झाली, याचे वृत्त आम्हाला मिळाले नाही.
@@ -119,14 +119,14 @@ Navarashtra ने बताया है कि कार्यक्रम ब
 - **शनिवार, ३१ ऑक्टोबर, दुपारी १२.०२: ध्वजारोहण**, रामकुंड आणि कुशावर्त येथे. याला अधिकृत दुजोरा आहे. **अपडेट, २५ ऑक्टोबर (वृत्त):** १२.०२ च्या क्षणी २५१ शंखवादक शंखनाद करतील (प्रहार, नाशिक कॉलिंग). सरकारनामानुसार कुशावर्तावर सुमारे १०० निमंत्रितांच्या उपस्थितीत शृंगेरी शंकराचार्यांच्या हस्ते ध्वजारोहण; पुढारीनुसार तेथे राज्यपाल व मुख्यमंत्री उपस्थित राहतील. [सविस्तर](/blog/shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme).
 - **शनिवार, ३१ ऑक्टोबर, सायंकाळी सुमारे ६ वाजता: महा गोदा आरती**, रामकुंडावर, नाशिक जिल्ह्यातील **६५० जनजातीय गावांमधील सुमारे ६,५०० जणांच्या** सहभागाने; हा दुसरा विश्वविक्रम प्रयत्न (वृत्त: प्रहार आणि Lokmat Times नुसार सायंकाळी ६; आरती आणि ६,५०० ही संख्या NTKMA व जिल्हा माहिती कार्यालयाने १८ ऑक्टोबरला जाहीर केली). एकमुखी दत्त मंदिर ते रोकडोबा मंदिर या घाटपट्ट्यात आरती होईल, असे Lokmat Times चे वृत्त आहे. *सप्टेंबरअखेरच्या वृत्तांत सायंकाळी ७ आणि सुमारे ५,००० आसने असे होते; ती माहिती आता जुनी झाली आहे.* नवभारतने (२१ ऑक्टोबर) आरतीची वेळ **सायंकाळी ६.५०** दिली आहे; वृत्तांमध्ये फरक असल्याने सुमारे ६ पर्यंत पोहोचण्याचे नियोजन करा. **अपडेट, २४ ऑक्टोबर (वृत्त):** कुंभ आयुक्त शेखर सिंह यांनी आरतीत आता **सात तालुक्यांतील ६,५५९ आदिवासी बांधव** असतील, असे सांगितले; अहिल्याबाई होळकर पूल ते रामकुंड, रामतीर्थ गोदावरी सेवा समितीसोबत (ETV भारत). [सविस्तर](/blog/governor-invited-to-31-october-flag-hoisting-president-helicopters-6559-tribal-aarti-trimbakeshwar-road-repairs). **अपडेट, २५ ऑक्टोबर (वृत्त):** पुढारीनुसार (NTKMA ची माहिती) सात तालुक्यांतील ६५० गावे आणि शहरातील २८ वस्त्यांमधून नोंदणी झाली आहे, आणि रामतीर्थ गोदावरी सेवा समिती व नाशिक पुरोहित संघ **संयुक्त** महाआरती करतील. [सविस्तर](/blog/shankhnaad-today-5-50-pm-guinness-check-251-conch-players-at-31-october-flag-hoisting-week-programme). **अपडेट, २७ ऑक्टोबर (वृत्त):** टाइम्स ऑफ इंडियानुसार पोलिस अधिसूचनेत आरती **सायंकाळी ७ वाजता** असून एकमुखी दत्त मंदिर ते घारपुरे घाटापर्यंतचे घाट आणि मेनरोड, नेहरू चौक व धुमाळ पॉइंट येथे प्रवेशबंदी आहे. [सविस्तर](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route).
 
-कार्यक्रमात बदल होऊ शकतो, असे Navarashtra ने नमूद केले आहे. अधिकृत कार्यक्रम जाहीर झाल्यावर हे पान अद्ययावत केले जाईल.`,
+कार्यक्रमात बदल होऊ शकतो, असे Navarashtra ने नमूद केले होते. ध्वजारोहण आणि महा गोदा आरती आता पार पडल्या आहेत; वरील दिनांकित नोंदी वृत्तांचा मागोवा आहेत.`,
       },
     },
     {
       heading: {
-        en: "Who is expected",
-        hi: "कौन आ सकता है",
-        mr: "कोण येणार",
+        en: "Who was expected",
+        hi: "कौन आने वाले थे",
+        mr: "कोण येणार होते",
       },
       body: {
         en: `Girish Mahajan announced on record (eSakal, 19 September 2026) that President Droupadi Murmu, Chief Minister Devendra Fadnavis and Deputy Chief Ministers Eknath Shinde and Sunetra Pawar will attend on 31 October.
@@ -166,7 +166,7 @@ Plan with what is known today:
 - **Trimbakeshwar temple and Kushavarta closed to outside devotees** from 12 noon on 30 October to 6 PM on 31 October (or the end of the programme): only Trimbak residents and official darshan-pass holders, per a Collector's order (REPORTED, PTI, 29 October). This replaces the earlier "open with 3,000 passes" plan. [Details](/blog/trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic)
 - **71 schools in the Ramkund-Panchavati belt shut on 31 October** and all Godaghat shops closed on 30 and 31 October (REPORTED, Times of India, ETV Bharat). [Details](/blog/president-murmu-to-travel-by-road-not-helicopter-rain-forecast-71-schools-shut-31-october-godaghat-shops-closed-1317-vips)
 - **The Godavari should be flowing at Ramkund:** a 25 MCFT release from Gangapur for the Eklahare power station began at midnight on 29 October and passes through Ramkund. It is not a release for the ceremony (REPORTED, Sakal). [Details](/blog/gangapur-release-for-eklahare-to-flow-past-ramkund-before-flag-hoisting-nmc-gets-6973-mcft-not-8005)
-- Kushavarta in Trimbak is closed for renovation until about 31 October (see below). Do not plan a bath there before it reopens.
+- Kushavarta in Trimbak was closed for renovation from 30 September, with a planned reopen around 31 October. From Sunday 1 November, more than 10,000 devotees bathed there and took darshan once the VIP restrictions lifted (REPORTED, Pudhari, 2 November). [Kushavarta open again: the 1 November report](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi).
 - Works at Ramkund were still unfinished on 5 October, so some areas may be screened off.
 - No official pilgrim e-pass or registration has been announced. Treat any such claim as unverified.
 - Save emergency numbers before you go: see our [emergency page](/emergency).
@@ -189,7 +189,7 @@ On 2 September, Singh had said Ramkund would be finished by 15 October. That dea
 - **त्र्यंबकेश्वर मंदिर और कुशावर्त बाहरी श्रद्धालुओं के लिए बंद** 30 अक्टूबर दोपहर 12 बजे से 31 अक्टूबर शाम 6 बजे (या कार्यक्रम ख़त्म होने) तक: सिर्फ़ त्र्यंबक के निवासी और आधिकारिक दर्शन पास वाले, कलेक्टर के आदेश के अनुसार (रिपोर्ट, PTI, 29 अक्टूबर)। यह पहले की "3,000 पास के साथ खुला" योजना की जगह है। [पूरी ख़बर](/blog/trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic)
 - **31 अक्टूबर को रामकुंड-पंचवटी क्षेत्र के 71 स्कूल बंद**, और 30 व 31 अक्टूबर को गोदाघाट की सभी दुकानें बंद (रिपोर्ट, टाइम्स ऑफ इंडिया, ETV भारत)। [पूरी ख़बर](/blog/president-murmu-to-travel-by-road-not-helicopter-rain-forecast-71-schools-shut-31-october-godaghat-shops-closed-1317-vips)
 - **रामकुंड में गोदावरी बहती रहनी चाहिए:** एकलहरे बिजलीघर के लिए गंगापुर से 25 एमसीएफटी पानी 29 अक्टूबर आधी रात से छोड़ा गया है, जो रामकुंड से होकर जाता है। यह समारोह के लिए नहीं छोड़ा गया (रिपोर्ट, सकाळ)। [पूरी ख़बर](/blog/gangapur-release-for-eklahare-to-flow-past-ramkund-before-flag-hoisting-nmc-gets-6973-mcft-not-8005)
-- त्र्यंबक का कुशावर्त लगभग 31 अक्टूबर तक मरम्मत के लिए बंद है (नीचे देखें)। दोबारा खुलने से पहले वहां स्नान की योजना न बनाएं।
+- त्र्यंबक का कुशावर्त 30 सितंबर से मरम्मत के लिए बंद था; फिर खुलने की योजना लगभग 31 अक्टूबर की थी। रविवार 1 नवंबर से VIP पाबंदियाँ हटते ही 10,000 से ज़्यादा श्रद्धालुओं ने वहाँ स्नान और दर्शन किया (रिपोर्ट, पुढारी, 2 नवंबर)। [कुशावर्त फिर खुला: 1 नवंबर की ख़बर](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi)।
 - 5 अक्टूबर तक रामकुंड के काम अधूरे थे, इसलिए कुछ हिस्से घेरकर ढके जा सकते हैं।
 - कोई आधिकारिक ई-पास या तीर्थयात्री पंजीकरण घोषित नहीं हुआ है। ऐसे किसी भी दावे को अपुष्ट मानें।
 - जाने से पहले आपातकालीन नंबर सेव कर लें: हमारा [आपातकालीन पेज](/emergency) देखें।
@@ -212,7 +212,7 @@ Times of India ने 5 अक्टूबर 2026 को बताया कि
 - **त्र्यंबकेश्वर मंदिर आणि कुशावर्त बाहेरगावच्या भाविकांसाठी बंद** ३० ऑक्टोबर दुपारी १२ ते ३१ ऑक्टोबर सायंकाळी ६ (किंवा कार्यक्रम संपेपर्यंत): फक्त त्र्यंबकचे रहिवासी आणि अधिकृत दर्शन पासधारक, जिल्हाधिकाऱ्यांच्या आदेशानुसार (वृत्त, PTI, २९ ऑक्टोबर). हे आधीच्या "३,००० पासने खुले" नियोजनाऐवजी आहे. [सविस्तर](/blog/trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic)
 - **३१ ऑक्टोबरला रामकुंड-पंचवटी परिसरातील ७१ शाळांना सुटी**, आणि ३० व ३१ ऑक्टोबरला गोदाघाटावरील सर्व दुकाने बंद (वृत्त, टाइम्स ऑफ इंडिया, ETV भारत). [सविस्तर](/blog/president-murmu-to-travel-by-road-not-helicopter-rain-forecast-71-schools-shut-31-october-godaghat-shops-closed-1317-vips)
 - **रामकुंडात गोदावरी वाहती असेल:** एकलहरे वीज केंद्रासाठी गंगापूरमधून २५ दलघफू पाण्याचा विसर्ग २९ ऑक्टोबरच्या मध्यरात्रीपासून सुरू असून ते रामकुंडावरून जाते. हा विसर्ग सोहळ्यासाठी नाही (वृत्त, सकाळ). [सविस्तर](/blog/gangapur-release-for-eklahare-to-flow-past-ramkund-before-flag-hoisting-nmc-gets-6973-mcft-not-8005)
-- त्र्यंबकचे कुशावर्त साधारण ३१ ऑक्टोबरपर्यंत नूतनीकरणासाठी बंद आहे (खाली पाहा). ते पुन्हा खुले होईपर्यंत तिथे स्नानाचे नियोजन करू नका.
+- त्र्यंबकचे कुशावर्त ३० सप्टेंबरपासून नूतनीकरणासाठी बंद होते; पुन्हा उघडण्याची योजना सुमारे ३१ ऑक्टोबरची होती. रविवार, १ नोव्हेंबरपासून व्हीआयपी निर्बंध शिथिल होताच १० हजारांहून अधिक भाविकांनी तिथे स्नान आणि दर्शन घेतले (वृत्त, पुढारी, २ नोव्हेंबर). [कुशावर्त पुन्हा खुले: १ नोव्हेंबरचे वृत्त](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi).
 - ५ ऑक्टोबरपर्यंत रामकुंडाची कामे अपूर्ण होती, त्यामुळे काही भाग झाकून बंद केलेले असू शकतात.
 - कोणताही अधिकृत ई-पास किंवा भाविक नोंदणी जाहीर झालेली नाही. असा दावा असल्यास तो अपुष्ट समजा.
 - निघण्यापूर्वी आपत्कालीन क्रमांक जतन करा: आमचे [आपत्कालीन पान](/emergency) पाहा.
@@ -226,35 +226,32 @@ Times of India ने 5 अक्टूबर 2026 को बताया कि
     },
     {
       heading: {
-        en: "Kushavarta closure in Trimbakeshwar",
-        hi: "त्र्यंबकेश्वर में कुशावर्त बंद",
-        mr: "त्र्यंबकेश्वरमधील कुशावर्त बंद",
+        en: "Kushavarta: open again after renovation (reported)",
+        hi: "कुशावर्त: मरम्मत के बाद फिर खुला (रिपोर्ट)",
+        mr: "कुशावर्त: नूतनीकरणानंतर पुन्हा खुले (वृत्त)",
       },
       body: {
-        en: `Kushavarta Tirth has been closed to pilgrims since 30 September 2026 for renovation. The work covers draining the kund, conserving the steps, a filtration plant and heritage lighting, with the State Archaeology Department leading. The renovated kund is to be inaugurated on 31 October.
+        en: `Updated 6 November 2026. Kushavarta Tirth was closed to pilgrims from 30 September 2026 for renovation: draining the kund, conserving the steps, a filtration plant and heritage lighting, with the State Archaeology Department leading. Collector Ayush Prasad had said the closure would run to 30 October (Times of India, 29 September 2026), and Lokmat Times (4 October 2026) had reported it would reopen on 31 October. The kund, which holds about 9 lakh litres, was to be refilled from the Gangasagar lake (Sarkarnama, 24 October). Lokmat Times also reported that devotees were unhappy about the closure during Pitru Paksha. On Saturday 31 October, Chief Minister Devendra Fadnavis hoisted the flag at this kund at 12:02 PM. The Collector's order that kept outside devotees out of the temple and Kushavarta ran only from noon on 30 October to 6 PM on 31 October.
 
-Sources differ on when it reopens:
+**Now (REPORTED):** from Sunday 1 November, once the VIP restrictions lifted, more than 10,000 devotees bathed at Kushavarta and took darshan, and markets in the town reopened. Devotees also began bathing at the new ghats in the Godavari bed near Prayag Tirth at Pegalwadi; works there are still in progress. Pudhari reported this on 2 November. We have not seen an official notice from the Collector, the Kumbh Mela Authority or the Trimbakeshwar Nagar Parishad giving bathing timings or rules after the renovation, and remaining works could close parts of the area again.
 
-- Collector Ayush Prasad said on record that the closure runs from 30 September to 30 October (Times of India, 29 September 2026).
-- Lokmat Times (4 October 2026) reported that it "will reopen on October 31".
+Divya Marathi reported on 2 November that the Kumbh Mela Authority has signed a ₹28 crore water-cleaning agreement with the Vishwaraj Foundation. [The ₹28 crore Kushavarta water deal](/blog/vips-to-reach-ramkund-by-boat-ktm-helipad-godavari-waterway-police-plan-kushavarta-water-cleaned-in-6-hours-28-crore-deal).
 
-Lokmat Times also reported that devotees were unhappy about the closure during Pitru Paksha. If you plan a ritual bath at Kushavarta, wait until it has clearly reopened. More on Trimbak in our [Trimbakeshwar Kumbh 2027 guide](/trimbakeshwar-kumbh-2027).`,
-        hi: `कुशावर्त तीर्थ 30 सितंबर 2026 से मरम्मत के लिए श्रद्धालुओं के लिए बंद है। इसमें कुंड का पानी निकालना, सीढ़ियों का संरक्षण, फिल्ट्रेशन प्लांट और हेरिटेज लाइटिंग का काम शामिल है। काम राज्य पुरातत्व विभाग की अगुवाई में हो रहा है। नए रूप में कुंड का उद्घाटन 31 अक्टूबर को होना है।
+[Kushavarta open again: the 1 November report](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi). For bathing, the new ghats and the Amrit Snans on the Trimbak side, read our [Trimbakeshwar Kumbh 2027 guide](/trimbakeshwar-kumbh-2027). For what is open now, see the [Kumbh status board](/kumbh-status). The ceremony-day closure: [temple and Kushavarta closed to outside devotees, 30–31 October](/blog/trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic).`,
+        hi: `अपडेट: 6 नवंबर 2026। कुशावर्त तीर्थ 30 सितंबर 2026 से मरम्मत के लिए श्रद्धालुओं के लिए बंद था। इसमें कुंड का पानी निकालना, सीढ़ियों का संरक्षण, फिल्ट्रेशन प्लांट और हेरिटेज लाइटिंग का काम शामिल था, जो राज्य पुरातत्व विभाग की अगुवाई में हुआ। कलेक्टर आयुष प्रसाद ने कहा था कि बंदी 30 अक्टूबर तक रहेगी (Times of India, 29 सितंबर 2026), और Lokmat Times (4 अक्टूबर 2026) ने 31 अक्टूबर को फिर खुलने की बात कही थी। करीब 9 लाख लीटर क्षमता वाले कुंड को गंगासागर तालाब से भरा जाना था (Sarkarnama, 24 अक्टूबर)। Lokmat Times ने यह भी बताया था कि पितृपक्ष के दौरान कुंड बंद रहने से श्रद्धालु नाराज़ थे। शनिवार 31 अक्टूबर को दोपहर 12:02 बजे मुख्यमंत्री देवेंद्र फडणवीस ने इसी कुंड पर ध्वजारोहण किया। मंदिर और कुशावर्त को बाहरी श्रद्धालुओं के लिए बंद रखने वाला कलेक्टर का आदेश सिर्फ़ 30 अक्टूबर दोपहर 12 बजे से 31 अक्टूबर शाम 6 बजे तक था।
 
-दोबारा खुलने की तारीख पर स्रोत अलग-अलग हैं:
+**अभी (रिपोर्ट):** रविवार 1 नवंबर से VIP पाबंदियाँ हटते ही 10,000 से ज़्यादा श्रद्धालुओं ने कुशावर्त में स्नान और दर्शन किया, और शहर के बाज़ार फिर खुल गए। पेगलवाड़ी में प्रयाग तीर्थ के पास गोदावरी पात्र में बने नए घाटों पर भी स्नान शुरू हुआ; वहाँ काम अभी जारी है। यह पुढारी की 2 नवंबर की ख़बर है। मरम्मत के बाद स्नान का समय या नियम बताने वाली कलेक्टर, कुंभ मेला प्राधिकरण या त्र्यंबकेश्वर नगर परिषद की कोई आधिकारिक सूचना हमें नहीं मिली है, और बाकी कामों के कारण परिसर के कुछ हिस्से फिर बंद हो सकते हैं।
 
-- कलेक्टर आयुष प्रसाद ने आधिकारिक रूप से कहा कि कुंड 30 सितंबर से 30 अक्टूबर तक बंद रहेगा (Times of India, 29 सितंबर 2026)।
-- Lokmat Times (4 अक्टूबर 2026) की रिपोर्ट के अनुसार यह 31 अक्टूबर को फिर खुलेगा।
+दिव्य मराठी ने 2 नवंबर को बताया कि कुंभ मेला प्राधिकरण ने विश्वराज फाउंडेशन के साथ ₹28 करोड़ का जल-सफ़ाई करार किया है। [कुशावर्त के पानी का ₹28 करोड़ का करार](/blog/vips-to-reach-ramkund-by-boat-ktm-helipad-godavari-waterway-police-plan-kushavarta-water-cleaned-in-6-hours-28-crore-deal)।
 
-Lokmat Times ने यह भी बताया कि पितृपक्ष के दौरान कुंड बंद रहने से श्रद्धालु नाराज़ थे। अगर आप कुशावर्त में स्नान की योजना बना रहे हैं, तो पक्का खुलने तक इंतज़ार करें। त्र्यंबक के बारे में और जानकारी हमारी [त्र्यंबकेश्वर कुंभ 2027 गाइड](/trimbakeshwar-kumbh-2027) में है।`,
-        mr: `कुशावर्त तीर्थ ३० सप्टेंबर २०२६ पासून नूतनीकरणासाठी भाविकांसाठी बंद आहे. कुंडातील पाणी काढणे, पायऱ्यांचे संवर्धन, गाळणी यंत्रणा (फिल्ट्रेशन प्लांट) आणि हेरिटेज दिवाबत्ती अशी कामे राज्य पुरातत्व विभागाच्या पुढाकाराने सुरू आहेत. नूतनीकृत कुंडाचे लोकार्पण ३१ ऑक्टोबरला होणार आहे.
+[कुशावर्त फिर खुला: 1 नवंबर की ख़बर](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi)। त्र्यंबक के स्नान, नए घाट और अमृत स्नान के लिए हमारी [त्र्यंबकेश्वर कुंभ 2027 गाइड](/trimbakeshwar-kumbh-2027) पढ़ें। अभी क्या खुला है, इसके लिए [कुंभ स्टेटस बोर्ड](/kumbh-status) देखें। समारोह वाले दिन की बंदी: [30–31 अक्टूबर को मंदिर और कुशावर्त बाहरी श्रद्धालुओं के लिए बंद](/blog/trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic)।`,
+        mr: `अद्ययावत: ६ नोव्हेंबर २०२६. कुशावर्त तीर्थ ३० सप्टेंबर २०२६ पासून नूतनीकरणासाठी भाविकांसाठी बंद होते. कुंडातील पाणी काढणे, पायऱ्यांचे संवर्धन, गाळणी यंत्रणा आणि हेरिटेज दिवाबत्ती ही कामे राज्य पुरातत्व विभागाच्या पुढाकाराने झाली. ही बंदी ३० ऑक्टोबरपर्यंत असेल, असे जिल्हाधिकारी आयुष प्रसाद यांनी सांगितले होते (Times of India, २९ सप्टेंबर २०२६), तर Lokmat Times ने (४ ऑक्टोबर २०२६) कुंड ३१ ऑक्टोबरला खुले होईल असे दिले होते. सुमारे ९ लाख लिटर क्षमतेचे कुंड गंगासागर तलावातून भरले जाणार होते (सरकारनामा, २४ ऑक्टोबर). पितृपक्षात कुंड बंद असल्याने भाविक नाराज असल्याचेही Lokmat Times चे वृत्त होते. शनिवार, ३१ ऑक्टोबरला दुपारी १२.०२ वाजता मुख्यमंत्री देवेंद्र फडणवीस यांनी याच कुशावर्तावर ध्वजारोहण केले. बाहेरगावच्या भाविकांसाठी मंदिर आणि कुशावर्त बंद ठेवणारा जिल्हाधिकाऱ्यांचा आदेश फक्त ३० ऑक्टोबर दुपारी १२ ते ३१ ऑक्टोबर सायंकाळी ६ पर्यंत होता.
 
-कुंड पुन्हा कधी खुले होणार, याबाबत स्रोतांमध्ये फरक आहे:
+**सध्या (वृत्त):** रविवार, १ नोव्हेंबरपासून व्हीआयपी निर्बंध शिथिल होताच १० हजारांहून अधिक भाविकांनी कुशावर्तात स्नान केले आणि दर्शन घेतले; गावातील बाजार पुन्हा उघडले. पेगलवाडी येथे प्रयाग तीर्थाजवळ गोदावरी पात्रात उभारलेल्या नव्या घाटांवरही स्नानाला सुरुवात झाली; तेथील कामे अजून सुरू आहेत. हे पुढारीचे २ नोव्हेंबरचे वृत्त आहे. नूतनीकरणानंतर स्नानाच्या वेळा किंवा नियम सांगणारी जिल्हाधिकारी, कुंभमेळा प्राधिकरण किंवा त्र्यंबकेश्वर नगर परिषदेची अधिकृत सूचना आमच्या पाहण्यात आलेली नाही, आणि उर्वरित कामांमुळे परिसराचे काही भाग पुन्हा बंद राहू शकतात.
 
-- जिल्हाधिकारी आयुष प्रसाद यांनी अधिकृतपणे सांगितले की कुंड ३० सप्टेंबर ते ३० ऑक्टोबर बंद राहील (Times of India, २९ सप्टेंबर २०२६).
-- Lokmat Times च्या (४ ऑक्टोबर २०२६) वृत्तानुसार ते ३१ ऑक्टोबरला पुन्हा खुले होईल.
+कुंभमेळा प्राधिकरणाने विश्वराज फाउंडेशनसोबत ₹२८ कोटींचा जलशुद्धीकरण करार केल्याचे दिव्य मराठीने २ नोव्हेंबरला दिले आहे. [कुशावर्ताच्या पाण्यासाठीचा ₹२८ कोटींचा करार](/blog/vips-to-reach-ramkund-by-boat-ktm-helipad-godavari-waterway-police-plan-kushavarta-water-cleaned-in-6-hours-28-crore-deal).
 
-पितृपक्षात कुंड बंद असल्याने भाविक नाराज असल्याचेही Lokmat Times चे वृत्त आहे. कुशावर्तात स्नानाचे नियोजन असेल तर कुंड नक्की खुले झाल्यावरच जा. त्र्यंबकविषयी अधिक माहिती आमच्या [त्र्यंबकेश्वर कुंभ २०२७ मार्गदर्शकात](/trimbakeshwar-kumbh-2027) आहे.`,
+[कुशावर्त पुन्हा खुले: १ नोव्हेंबरचे वृत्त](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi). त्र्यंबकच्या स्नान, नवे घाट आणि अमृत स्नानासाठी आमचे [त्र्यंबकेश्वर कुंभ २०२७ मार्गदर्शक](/trimbakeshwar-kumbh-2027) वाचा. सध्या काय खुले आहे, यासाठी [कुंभ स्टेटस बोर्ड](/kumbh-status) पाहा. सोहळ्याच्या दिवसाची बंदी: [३०–३१ ऑक्टोबरला मंदिर व कुशावर्त बाहेरगावच्या भाविकांसाठी बंद](/blog/trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic).`,
       },
     },
     {
@@ -337,14 +334,14 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
       },
       body: {
         en: `- **Live stream (REPORTED, 31 October):** [Vegvan Maharashtra](https://vegvanmaharashtra.in/2026/10/31/nashik-trimbakeshwar-dhwajarohan-live-stream-links-oct-31/) lists YouTube streams for the [12:02 PM flag hoisting](https://www.youtube.com/live/ttVrkbJnsZQ) and the [7 PM Maha Goda aarti](https://www.youtube.com/live/Ok7grlPic3E), plus Facebook links. We could not confirm they are run by NTKMA or the District Information Office.
-- **Big screens:** large screens are planned in the city for people who cannot get close to the evening aarti (REPORTED, Shekhar Singh at a 3 October press conference, Super Fast Nashik). **Update, 31 October (REPORTED, ETV Bharat):** LED screens for the live broadcast are at **Ramkund, Gadge Maharaj bridge and the Kapaleshwar temple area**.
-- **This page:** we update the live feed above through 30 and 31 October, with each item marked CONFIRMED or REPORTED.`,
+- **Big screens:** large screens were planned in the city for people who could not get close to the evening aarti (REPORTED, Shekhar Singh at a 3 October press conference, Super Fast Nashik). **Update, 31 October (REPORTED, ETV Bharat):** LED screens for the live broadcast were at **Ramkund, Gadge Maharaj bridge and the Kapaleshwar temple area**.
+- **This page:** the live feed above covers 30 and 31 October, with each item marked CONFIRMED or REPORTED.`,
         hi: `- **लाइव स्ट्रीम (रिपोर्ट, 31 अक्टूबर):** [वेगवान महाराष्ट्र](https://vegvanmaharashtra.in/2026/10/31/nashik-trimbakeshwar-dhwajarohan-live-stream-links-oct-31/) ने [12:02 बजे के ध्वजारोहण](https://www.youtube.com/live/ttVrkbJnsZQ) और [शाम 7 बजे की महा गोदा आरती](https://www.youtube.com/live/Ok7grlPic3E) के YouTube लाइव लिंक, साथ में Facebook लिंक दिए हैं। ये NTKMA या ज़िला सूचना कार्यालय के हैं, इसकी पुष्टि हम नहीं कर पाए।
-- **बड़ी स्क्रीन:** शाम की आरती के पास न पहुँच पाने वालों के लिए शहर में बड़ी स्क्रीन लगाने की योजना है (रिपोर्ट, 3 अक्टूबर की प्रेस वार्ता में शेखर सिंह, Super Fast Nashik)। **अपडेट, 31 अक्टूबर (रिपोर्ट, ETV भारत):** सीधे प्रसारण के लिए LED स्क्रीन **रामकुंड, गाडगे महाराज पुल और कपालेश्वर मंदिर परिसर** में हैं।
-- **यह पेज:** 30 और 31 अक्टूबर को ऊपर का लाइव फ़ीड लगातार अपडेट होगा, हर बात पर पुष्ट या रिपोर्ट लिखा होगा।`,
+- **बड़ी स्क्रीन:** शाम की आरती के पास न पहुँच पाने वालों के लिए शहर में बड़ी स्क्रीन लगाने की योजना थी (रिपोर्ट, 3 अक्टूबर की प्रेस वार्ता में शेखर सिंह, Super Fast Nashik)। **अपडेट, 31 अक्टूबर (रिपोर्ट, ETV भारत):** सीधे प्रसारण के लिए LED स्क्रीन **रामकुंड, गाडगे महाराज पुल और कपालेश्वर मंदिर परिसर** में थीं।
+- **यह पेज:** ऊपर का लाइव फ़ीड 30 और 31 अक्टूबर का है, हर बात पर पुष्ट या रिपोर्ट लिखा है।`,
         mr: `- **थेट प्रक्षेपण (वृत्त, ३१ ऑक्टोबर):** [वेगवान महाराष्ट्र](https://vegvanmaharashtra.in/2026/10/31/nashik-trimbakeshwar-dhwajarohan-live-stream-links-oct-31/)ने [१२.०२ वाजताच्या ध्वजारोहणाची](https://www.youtube.com/live/ttVrkbJnsZQ) आणि [सायंकाळी ७ वाजताच्या महा गोदा आरतीची](https://www.youtube.com/live/Ok7grlPic3E) YouTube थेट लिंक, तसेच Facebook लिंक दिल्या आहेत. त्या NTKMA किंवा जिल्हा माहिती कार्यालयाच्या आहेत का, याची खात्री आम्ही करू शकलो नाही.
-- **मोठे पडदे:** सायंकाळच्या आरतीजवळ पोहोचू न शकणाऱ्यांसाठी शहरात मोठे स्क्रीन लावण्याचे नियोजन आहे (वृत्त, ३ ऑक्टोबरच्या पत्रकार परिषदेत शेखर सिंह, Super Fast Nashik). **अपडेट, ३१ ऑक्टोबर (वृत्त, ETV भारत):** थेट प्रक्षेपणासाठी LED स्क्रीन **रामकुंड, गाडगे महाराज पूल आणि कपालेश्वर मंदिर परिसरात** आहेत.
-- **हे पान:** ३० आणि ३१ ऑक्टोबरला वरचे थेट अपडेट सतत अद्ययावत होतील; प्रत्येक बाब अधिकृत की वृत्त, हे नमूद असेल.`,
+- **मोठे पडदे:** सायंकाळच्या आरतीजवळ पोहोचू न शकणाऱ्यांसाठी शहरात मोठे स्क्रीन लावण्याचे नियोजन होते (वृत्त, ३ ऑक्टोबरच्या पत्रकार परिषदेत शेखर सिंह, Super Fast Nashik). **अपडेट, ३१ ऑक्टोबर (वृत्त, ETV भारत):** थेट प्रक्षेपणासाठी LED स्क्रीन **रामकुंड, गाडगे महाराज पूल आणि कपालेश्वर मंदिर परिसरात** होत्या.
+- **हे पान:** वरील थेट अपडेट ३० आणि ३१ ऑक्टोबरचे आहेत; प्रत्येक बाब अधिकृत की वृत्त, हे नमूद आहे.`,
       },
     },
     {
@@ -361,6 +358,20 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
     },
   ],
   sources: [
+    {
+      title: "सिंहस्थाच्या ऐतिहासिक ध्वजारोहण सोहळ्यानंतर त्र्यंबकेश्वरमध्ये भाविकांचा महापूर; कुशावर्त परिसरात उसळली गर्दी",
+      publisher: "Pudhari",
+      date: "2026-11-02",
+      url: "https://pudhari.news/maharashtra/north-maharashtra/nashik/kushavarta-teerth-overflows-with-devotees-as-restrictions-lifted-after-historic-simhastha-flag-hoisting-sd22",
+      status: "reported",
+    },
+    {
+      title: "पहिल्यांदाच कुंभमेळ्यात जलमार्ग, रस्त्यांवरून व्हीआयपी वाहतूक बंद: व्हीआयपींना रामकुंडापर्यंत स्पेशल वॉटर-वे",
+      publisher: "Divya Marathi",
+      date: "2026-11-02",
+      url: "https://divyamarathi.bhaskar.com/local/maharashtra/nashik/news/for-the-first-time-vip-traffic-on-waterways-and-roads-will-be-closed-during-the-kumbh-mela-special-waterway-for-vips-to-reach-ramkunda-people-will-be-relieved-from-traffic-jams-dbp-139565377.html",
+      status: "reported",
+    },
     {
       title: "President of India graces the Dhwaj Stambh Pujan, Dhwaja Pujan and Dhwajarohan ceremony of Simhastha Maha Kumbh at Nashik",
       publisher: "PIB (President's Secretariat)",
@@ -817,7 +828,7 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
       status: "reported",
     },
   ],
-  updated: "2026-10-31",
+  updated: "2026-11-06",
   crumb: {
     en: "Dhwajarohan 2026",
     hi: "ध्वजारोहण 2026",
@@ -1537,11 +1548,19 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
       },
     },
     {
-      q: { mr: "महा गोदा आरती किती वाजता आहे?", hi: "महा गोदा आरती कितने बजे है?", en: "What time is the Maha Goda Aarti?" },
+      q: { mr: "महा गोदा आरती केव्हा झाली?", hi: "महा गोदा आरती कब हुई?", en: "When was the Maha Goda Aarti?" },
       a: {
-        mr: "३१ ऑक्टोबरच्या सायंकाळी, रामकुंडावर. वेळेबाबत वृत्तांत फरक आहे: टाइम्स ऑफ इंडियानुसार पोलिस अधिसूचनेत ७ वाजता, तर आधीच्या वृत्तांत ६ किंवा पावणेसात. अधिकृत छापील कार्यक्रम अजून आलेला नाही.",
-        hi: "31 अक्टूबर की शाम, रामकुंड पर। समय पर ख़बरों में फ़र्क़ है: टाइम्स ऑफ इंडिया के अनुसार पुलिस अधिसूचना में 7 बजे, जबकि पहले की ख़बरों में 6 या 6:45 बजे। आधिकारिक छपा कार्यक्रम अभी नहीं आया है।",
-        en: "On the evening of 31 October at Ramkund. Reports differ on the time: the police notice, as reported by the Times of India, says 7 PM; earlier reports said 6 PM or 6:45 PM. No official printed programme has been published yet.",
+        mr: "३१ ऑक्टोबरच्या सायंकाळी रामकुंडावर झाली. आधीच्या वृत्तांत वेळेबाबत फरक होता: टाइम्स ऑफ इंडियानुसार पोलिस अधिसूचनेत सायंकाळी ७, तर इतर वृत्तांत ६ किंवा पावणेसात. सायंकाळी ६,२३३ आदिवासी बांधवांनी आरती केली (वृत्त: PTI, एबीपी माझा, TV9 मराठी).",
+        hi: "31 अक्टूबर की शाम रामकुंड पर हुई। पहले की ख़बरों में समय अलग-अलग था: टाइम्स ऑफ इंडिया के अनुसार पुलिस अधिसूचना में शाम 7 बजे, जबकि दूसरी ख़बरों में 6 या 6:45 बजे। शाम को 6,233 जनजातीय श्रद्धालुओं ने आरती की (रिपोर्ट: PTI, ABP माझा, TV9 मराठी)।",
+        en: "It was held on the evening of 31 October at Ramkund. Advance reports differed on the clock time: the police notice, as reported by the Times of India, said 7 PM; earlier reports said 6 PM or 6:45 PM. In the evening, 6,233 tribal devotees performed the aarti (REPORTED: PTI, ABP Majha, TV9 Marathi).",
+      },
+    },
+    {
+      q: { mr: "कुशावर्तात सध्या स्नान करता येते का?", hi: "क्या कुशावर्त में अभी स्नान हो रहा है?", en: "Is Kushavarta open for bathing now?" },
+      a: {
+        mr: "वृत्तानुसार हो. ध्वजारोहणाचे व्हीआयपी निर्बंध शिथिल होताच रविवार, १ नोव्हेंबरला १० हजारांहून अधिक भाविकांनी कुशावर्तात स्नान केले आणि दर्शन घेतले, असे पुढारीने २ नोव्हेंबर २०२६ ला दिले आहे. कुंड ३० सप्टेंबरपासून नूतनीकरणासाठी बंद होते. स्नानाच्या वेळा किंवा नियम सांगणारी अधिकृत सूचना आमच्या पाहण्यात आलेली नाही, त्यामुळे निघण्यापूर्वी स्थानिक पातळीवर खात्री करा.",
+        hi: "खबरों के अनुसार हां। पुढारी ने 2 नवंबर 2026 को बताया कि ध्वजारोहण की VIP पाबंदियाँ हटते ही रविवार 1 नवंबर को 10,000 से ज़्यादा श्रद्धालुओं ने कुशावर्त में स्नान और दर्शन किया। कुंड 30 सितंबर से मरम्मत के लिए बंद था। स्नान का समय या नियम बताने वाली कोई आधिकारिक सूचना हमें नहीं मिली है, इसलिए निकलने से पहले स्थानीय स्तर पर पता कर लें।",
+        en: "Reportedly yes. Pudhari reported on 2 November 2026 that more than 10,000 devotees bathed at Kushavarta and took darshan on Sunday 1 November, once the flag-hoisting VIP restrictions were lifted. The kund had been closed for renovation since 30 September. We have not seen an official notice giving bathing timings or rules, so check locally before you travel.",
       },
     },
     {
