@@ -43,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...localized("/map", "monthly", 0.7),
     ...localized("/share-snan-card", "monthly", 0.6),
     ...localized("/family-card", "monthly", 0.7),
+    ...localized("/day-picker", "weekly", 0.8),
     ...localized("/plan-your-visit", "weekly", 0.8),
     ...localized("/kumbh-status", "daily", 0.85),
     ...localized("/dhwajarohan-2026", "daily", 0.95),
