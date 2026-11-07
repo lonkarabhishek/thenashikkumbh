@@ -9,6 +9,7 @@ export const article: BlogArticle = {
     mr: "कुंभमेळ्यासाठी तिसऱ्या कमांड सेंटरला मंजुरी, नाशिक आणि त्र्यंबकमध्ये सुमारे ५,००० सीसीटीव्ही कॅमेरे जोडणार",
   },
   date: "2026-10-06",
+  updated: "2026-11-07",
   followUp: { slug: "official-kumbh-website-live-simhasthamahakumbh-maharashtra-gov-in-1500-of-5500-cctv-cameras-trial-after-diwali", date: "2026-11-05" },
   source: "Times of India",
   sources: [
@@ -53,9 +54,9 @@ export const article: BlogArticle = {
   image: "/images/og-image.jpg",
   photoId: 27,
   summary: {
-    en: "NTKMA has approved ₹32.8 crore for a third command centre at the Rural Police HQ in Adgaon, due to run by March 2027. About 4,000 CCTV cameras in Nashik and 1,000 in Trimbak are being linked over the Smart City fibre network. An AI \"Digital Twin\" and AI helpers are planned, but are still proposals.",
-    hi: "NTKMA ने आडगांव स्थित ग्रामीण पुलिस मुख्यालय में तीसरे कमांड सेंटर के लिए ₹32.8 करोड़ मंज़ूर किए हैं, जो मार्च 2027 तक शुरू होना है। नाशिक में करीब 4,000 और त्र्यंबक में 1,000 CCTV कैमरे स्मार्ट सिटी फाइबर नेटवर्क से जोड़े जा रहे हैं। AI \"डिजिटल ट्विन\" और AI सहायक अभी प्रस्ताव के स्तर पर हैं।",
-    mr: "आडगाव येथील ग्रामीण पोलीस मुख्यालयात तिसऱ्या कमांड सेंटरसाठी NTKMA ने ₹32.8 कोटी मंजूर केले असून ते मार्च २०२७ पर्यंत सुरू होणार आहे. नाशिकमध्ये सुमारे ४,००० आणि त्र्यंबकमध्ये १,००० सीसीटीव्ही कॅमेरे स्मार्ट सिटीच्या फायबर नेटवर्कने जोडले जात आहेत. AI \"डिजिटल ट्विन\" आणि AI मदतनीस अजून प्रस्तावाच्या टप्प्यावर आहेत.",
+    en: "NTKMA has approved ₹32.8 crore for a third command centre at the Rural Police HQ in Adgaon, due to run by March 2027. About 4,000 CCTV cameras in Nashik and 1,000 in Trimbak are being linked over the Smart City fibre network. An AI \"Digital Twin\" was still a proposal in this October post. Sakal reported on 4 November 2026 a procurement path; the system is not live. See the 7 November news post. AI helpers such as KumbhDoot remain proposals.",
+    hi: "NTKMA ने आडगांव स्थित ग्रामीण पुलिस मुख्यालय में तीसरे कमांड सेंटर के लिए ₹32.8 करोड़ मंज़ूर किए हैं, जो मार्च 2027 तक शुरू होना है। नाशिक में करीब 4,000 और त्र्यंबक में 1,000 CCTV कैमरे स्मार्ट सिटी फाइबर नेटवर्क से जोड़े जा रहे हैं। इस अक्टूबर पोस्ट में AI \"डिजिटल ट्विन\" अभी प्रस्ताव था। सकाळ ने 4 नवंबर 2026 को ख़रीद का रास्ता रिपोर्ट किया; प्रणाली चालू नहीं है। 7 नवंबर की ख़बर देखें। कुंभदूत जैसे AI सहायक अब भी प्रस्ताव हैं।",
+    mr: "आडगाव येथील ग्रामीण पोलीस मुख्यालयात तिसऱ्या कमांड सेंटरसाठी NTKMA ने ₹32.8 कोटी मंजूर केले असून ते मार्च २०२७ पर्यंत सुरू होणार आहे. नाशिकमध्ये सुमारे ४,००० आणि त्र्यंबकमध्ये १,००० सीसीटीव्ही कॅमेरे स्मार्ट सिटीच्या फायबर नेटवर्कने जोडले जात आहेत. या ऑक्टोबर पोस्टमध्ये AI \"डिजिटल ट्विन\" अजून प्रस्ताव होता. सकाळने ४ नोव्हेंबर २०२६ रोजी खरेदीचा मार्ग सांगितला; यंत्रणा सुरू नाही. ७ नोव्हेंबरची बातमी पाहा. कुंभदूतसारखे AI मदतनीस अजून प्रस्ताव आहेत.",
   },
   content: {
     en: `The Nashik-Trimbakeshwar Kumbh Mela Authority (NTKMA) has approved ₹32.8 crore for a third Integrated Command and Control Centre (ICCC) for the 2027 Simhastha. The Times of India reported this on 4 October 2026, based on the official administrative approval and NMC officials. The new centre will come up at the Rural Police headquarters in Adgaon. It is meant to be running by March 2027.
@@ -68,16 +69,18 @@ According to the same report, about 4,000 CCTV cameras in Nashik and about 1,000
 
 Earlier TOI reports also mentioned AI-enabled cameras and 18 drones. These details are reported by the media. We have not seen them in an official document.
 
-## The AI "Digital Twin" is still a plan
+## The AI "Digital Twin": August proposal, November procurement report
 
 NTKMA has planned a GIS-based live dashboard, called a "Digital Twin", to run on the ICCC. As described in a TOI report of 18 August 2026, it would show crowd density and run simulations. It would also cover traffic, health, disaster response and lost-and-found.
+
+Update (7 November 2026): Sakal reported on 4 November that the Authority has started a procurement path, with 10 firms to demonstrate a prototype within 15 days and a meeting on 12 November. The system is not live. That report is in [Kumbh Authority moving on the Digital Twin](/blog/digital-twin-crowd-forecast-shortlist-12-november-meeting). It is not a launch of KumbhDoot.
 
 It is part of a proposed "Maha Simhastha Kumbh AI Stack". The plan includes:
 - an AI call centre
 - an AI lost-and-found system
 - "KumbhDoot", an AI assistant
 
-All of these are meant to link to the official website and app. For now they are proposals, and none of them is live. NTKMA Commissioner Shekhar Singh said on record that the system will run "human-in-the-loop". In simple words, people will stay in charge of the decisions, not the software alone.
+All of these are meant to link to the official website and app. The call centre, lost-and-found and KumbhDoot are still proposals, and none of those three is live. NTKMA Commissioner Shekhar Singh said on record that the system will run "human-in-the-loop". In simple words, people will stay in charge of the decisions, not the software alone.
 
 India Today reported on 5 October 2026 that a Nashik team is studying the AI headcount and facial-recognition system that the Solapur Rural police used at the Ashadhi wari in Pandharpur. No decision to use such a system in Nashik has been announced.
 
@@ -110,16 +113,18 @@ For the full picture of how crowds will be managed, see our [Nashik Kumbh crowd 
 
 TOI की पहले की रिपोर्टों में AI वाले कैमरों और 18 ड्रोन का भी ज़िक्र था। यह जानकारी मीडिया रिपोर्ट पर आधारित है, किसी आधिकारिक दस्तावेज़ में हमने इसे नहीं देखा है।
 
-## AI "डिजिटल ट्विन" अभी योजना है
+## AI "डिजिटल ट्विन": अगस्त का प्रस्ताव, नवंबर की ख़रीद रिपोर्ट
 
 NTKMA ने ICCC पर चलने वाला एक GIS आधारित लाइव डैशबोर्ड, "डिजिटल ट्विन", प्रस्तावित किया है। TOI की 18 अगस्त 2026 की रिपोर्ट के अनुसार इसमें भीड़ का घनत्व और सिमुलेशन दिखेंगे। ट्रैफिक, स्वास्थ्य, आपदा और खोया-पाया की जानकारी भी इसी पर होगी।
+
+अपडेट (7 नवंबर 2026): सकाळ ने 4 नवंबर को रिपोर्ट किया कि प्राधिकरण ने ख़रीद का रास्ता शुरू किया है। 10 कंपनियों को 15 दिन में प्रोटोटाइप दिखाना है और 12 नवंबर को बैठक है। प्रणाली चालू नहीं है। वह रिपोर्ट [कुंभ प्राधिकरण डिजिटल ट्विन पर आगे बढ़ रहा है](/blog/digital-twin-crowd-forecast-shortlist-12-november-meeting) में है। यह कुंभदूत की शुरुआत नहीं है।
 
 यह प्रस्तावित "महा सिंहस्थ कुंभ AI स्टैक" का हिस्सा है। इसमें शामिल हैं:
 - AI कॉल सेंटर
 - AI खोया-पाया व्यवस्था
 - "कुंभदूत" नाम का AI सहायक
 
-ये सभी आधिकारिक वेबसाइट और ऐप से जोड़े जाएँगे। फिलहाल ये प्रस्ताव ही हैं, इनमें से कोई भी सेवा शुरू नहीं हुई है। NTKMA आयुक्त शेखर सिंह ने रिकॉर्ड पर कहा है कि यह व्यवस्था "human-in-the-loop" चलेगी। सीधे शब्दों में, फैसले इंसानों के हाथ में रहेंगे, सब कुछ सॉफ्टवेयर पर नहीं छोड़ा जाएगा।
+ये सभी आधिकारिक वेबसाइट और ऐप से जोड़े जाएँगे। कॉल सेंटर, खोया-पाया और कुंभदूत अभी प्रस्ताव हैं, और इनमें से कोई सेवा शुरू नहीं हुई है। NTKMA आयुक्त शेखर सिंह ने रिकॉर्ड पर कहा है कि यह व्यवस्था "human-in-the-loop" चलेगी। सीधे शब्दों में, फैसले इंसानों के हाथ में रहेंगे, सब कुछ सॉफ्टवेयर पर नहीं छोड़ा जाएगा।
 
 इंडिया टुडे की 5 अक्टूबर 2026 की रिपोर्ट के अनुसार नाशिक की एक टीम उस AI हेडकाउंट और फेशियल रिकग्निशन सिस्टम का अध्ययन कर रही है, जिसे सोलापुर ग्रामीण पुलिस ने पंढरपुर की आषाढ़ी वारी में इस्तेमाल किया था। नाशिक में ऐसा सिस्टम लगाने का कोई फैसला अभी घोषित नहीं हुआ है।
 
@@ -152,16 +157,18 @@ NTKMA योजना के अनुसार कुल करीब 12 कर
 
 यापूर्वी TOI च्या वृत्तांमध्ये AI आधारित कॅमेरे आणि १८ ड्रोनचाही उल्लेख होता. ही माहिती माध्यमांतील वृत्तावर आधारित आहे, ती आम्हाला कोणत्याही अधिकृत कागदपत्रात दिसलेली नाही.
 
-## AI "डिजिटल ट्विन" अजून योजनेतच
+## AI "डिजिटल ट्विन": ऑगस्टचा प्रस्ताव, नोव्हेंबरचे खरेदी वृत्त
 
 ICCC वर चालणारा GIS आधारित थेट डॅशबोर्ड, म्हणजे "डिजिटल ट्विन", NTKMA ने प्रस्तावित केला आहे. TOI च्या १८ ऑगस्ट २०२६ च्या वृत्तानुसार त्यावर गर्दीची घनता आणि सिम्युलेशन दिसतील. वाहतूक, आरोग्य, आपत्ती आणि हरवले-सापडले याची माहितीही तिथेच असेल.
+
+अपडेट (७ नोव्हेंबर २०२६): सकाळने ४ नोव्हेंबर रोजी वृत्त दिले की प्राधिकरणाने खरेदीचा मार्ग सुरू केला आहे. १० कंपन्यांना १५ दिवसांत नमुना दाखवायचा आहे आणि १२ नोव्हेंबरला बैठक आहे. यंत्रणा सुरू नाही. ते वृत्त [कुंभ प्राधिकरण डिजिटल ट्विनकडे सरकत आहे](/blog/digital-twin-crowd-forecast-shortlist-12-november-meeting) या बातमीत आहे. ही कुंभदूतची सुरुवात नाही.
 
 हा प्रस्तावित "महा सिंहस्थ कुंभ AI स्टॅक" चा भाग आहे. त्यात हे असेल:
 - AI कॉल सेंटर
 - AI हरवले-सापडले व्यवस्था
 - "कुंभदूत" नावाचा AI मदतनीस
 
-हे सर्व अधिकृत संकेतस्थळ आणि ॲपशी जोडले जाणार आहे. सध्या हे सगळे प्रस्तावच आहेत, यातील एकही सेवा सुरू झालेली नाही. NTKMA आयुक्त शेखर सिंह यांनी ही यंत्रणा "human-in-the-loop" पद्धतीने चालेल, असे स्पष्ट सांगितले आहे. सोप्या भाषेत, निर्णय माणसांच्याच हातात राहतील, सर्व काही सॉफ्टवेअरवर सोडले जाणार नाही.
+हे सर्व अधिकृत संकेतस्थळ आणि ॲपशी जोडले जाणार आहे. कॉल सेंटर, हरवले-सापडले आणि कुंभदूत अजून प्रस्ताव आहेत, आणि या तिन्हीपैकी एकही सेवा सुरू झालेली नाही. NTKMA आयुक्त शेखर सिंह यांनी ही यंत्रणा "human-in-the-loop" पद्धतीने चालेल, असे स्पष्ट सांगितले आहे. सोप्या भाषेत, निर्णय माणसांच्याच हातात राहतील, सर्व काही सॉफ्टवेअरवर सोडले जाणार नाही.
 
 पंढरपूरच्या आषाढी वारीत सोलापूर ग्रामीण पोलिसांनी वापरलेल्या AI हेडकाउंट आणि चेहरा ओळख प्रणालीचा नाशिकचे एक पथक अभ्यास करत आहे, असे वृत्त इंडिया टुडेने ५ ऑक्टोबर २०२६ रोजी दिले. नाशिकमध्ये अशी प्रणाली वापरण्याचा निर्णय अद्याप जाहीर झालेला नाही.
 
