@@ -87,9 +87,14 @@ import { article as sapkalAllegations } from "./sapkal-alleges-half-kumbh-funds-
 import { article as parkingSadhugramDeadlines } from "./parking-eoi-sadhugram-plot-deadlines";
 import { article as trimbakReviewPasses } from "./trimbakeshwar-review-flag-hoisting-crowd-entry-passes-5-november";
 import { article as digitalTwinShortlist } from "./digital-twin-crowd-forecast-shortlist-12-november-meeting";
+import { article as railwaySpecials24 } from "./railways-plan-24-kumbh-special-trains-split-arrivals-across-five-nashik-stations";
+import { article as mahajanPawarReply } from "./girish-mahajan-replies-to-rohit-pawar-kumbh-corruption-allegations-jalgaon";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 and 31 October and 1, 2, 5, 6 and 7 November 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 and 31 October and 1, 2, 5, 6, 7 and 8 November 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 8 November 2026
+  railwaySpecials24,
+  mahajanPawarReply,
   // 7 November 2026
   trimbakReviewPasses,
   digitalTwinShortlist,

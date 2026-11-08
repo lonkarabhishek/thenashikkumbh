@@ -20,6 +20,8 @@ export const article: BlogArticle = {
     mr: "रोहित पवारांचा नाशिक कुंभमेळा कामांत भ्रष्टाचाराचा आरोप; १० दिवसांत हिशेब मागितला, गोदावरी प्रदूषणावर एमआयडीसी व एमपीसीबीला २० दिवसांचा अल्टिमेटम",
   },
   date: "2026-11-05",
+  updated: "2026-11-08",
+  followUp: { slug: "girish-mahajan-replies-to-rohit-pawar-kumbh-corruption-allegations-jalgaon", date: "2026-11-08" },
   originallyAnnounced: "2026-11-04",
   source: "Times of India, ETV Bharat, eSakal, Divya Marathi",
   sources: [
@@ -75,7 +77,9 @@ export const article: BlogArticle = {
     mr: "राष्ट्रवादी काँग्रेस (शरदचंद्र पवार) पक्षाचे आमदार रोहित पवार यांनी ४ नोव्हेंबरला रामकुंड परिसरातील कुंभमेळा कामांची पाहणी केली आणि कुंभमेळा मंत्री गिरीश महाजन यांच्या निकटवर्तीयांनी सिंहस्थ कामांत ₹७ ते ८ हजार कोटींचा भ्रष्टाचार केल्याचा आरोप केला. विभागीय आयुक्त, जिल्हाधिकारी आणि कुंभमेळा आयुक्तांना पत्र लिहून १० दिवसांत हिशेब मागितल्याचे आणि गोदावरीत जाणारे रासायनिक सांडपाणी थांबवण्यासाठी एमआयडीसी व प्रदूषण नियंत्रण मंडळाला २० दिवसांची मुदत दिल्याचे त्यांनी सांगितले. वृत्त: हे आरोप आहेत; ५ नोव्हेंबर सकाळपर्यंत महाजन किंवा प्राधिकरणाची प्रतिक्रिया आढळली नाही.",
   },
   content: {
-    en: `**REPORTED:** everything below is what Rohit Pawar said, as reported by the Times of India, ETV Bharat, eSakal and Divya Marathi on 4 and 5 November 2026. These are political allegations, not findings. We have not found any response from Kumbh Mela Minister Girish Mahajan, the Nashik-Trimbakeshwar Kumbh Mela Authority or the district administration as of the morning of 5 November. We will add their response when it comes.
+    en: `Update (8 November 2026): Pudhari and Tarun Bharat Live report that on 6 November, in Jalgaon, Kumbh minister Girish Mahajan rejected these allegations and challenged Rohit Pawar to produce documents. The reply does not itself release the accounts or answer the 20-day MIDC and MPCB ultimatum. Read [Girish Mahajan's reply (reported)](/blog/girish-mahajan-replies-to-rohit-pawar-kumbh-corruption-allegations-jalgaon).
+
+**REPORTED:** everything below is what Rohit Pawar said, as reported by the Times of India, ETV Bharat, eSakal and Divya Marathi on 4 and 5 November 2026. These are political allegations, not findings. We have not found any response from Kumbh Mela Minister Girish Mahajan, the Nashik-Trimbakeshwar Kumbh Mela Authority or the district administration as of the morning of 5 November. A reported reply from Mahajan on 6 November is in the update above.
 
 ## What Rohit Pawar did and said (4 November)
 
@@ -100,8 +104,10 @@ export const article: BlogArticle = {
 
 ## The other side so far
 
-There has been no reply yet to these specific claims. In August 2026, replying to earlier opposition criticism, Girish Mahajan said Kumbh tenders were transparent and competitive and that most came in **20 to 42 percent below** estimates (Pudhari, 20 August). The Authority's latest figure is that about 51 percent of works are done, with a March 2027 deadline: see [Kumbh works 51 percent done](${WORKS}).`,
-    hi: `**रिपोर्ट:** नीचे लिखी सारी बातें रोहित पवार ने कहीं, जैसा टाइम्स ऑफ़ इंडिया, ETV भारत, ई-सकाळ और दिव्य मराठी ने 4 और 5 नवंबर 2026 को बताया। ये राजनीतिक आरोप हैं, किसी जाँच के निष्कर्ष नहीं। 5 नवंबर सुबह तक कुंभ मंत्री गिरीश महाजन, नाशिक-त्र्यंबकेश्वर कुंभ मेला प्राधिकरण या ज़िला प्रशासन का कोई जवाब हमें नहीं मिला। जवाब आने पर हम उसे जोड़ेंगे।
+As of the morning of 5 November, there had been no reply to these specific claims. The reported 6 November reply is linked in the update above. In August 2026, replying to earlier opposition criticism, Girish Mahajan said Kumbh tenders were transparent and competitive and that most came in **20 to 42 percent below** estimates (Pudhari, 20 August). The Authority's latest figure is that about 51 percent of works are done, with a March 2027 deadline: see [Kumbh works 51 percent done](${WORKS}).`,
+    hi: `अपडेट (8 नवंबर 2026): पुढारी और तरुण भारत लाइव के अनुसार 6 नवंबर को जलगाँव में कुंभ मंत्री गिरीश महाजन ने ये आरोप खारिज किए और रोहित पवार को दस्तावेज़ पेश करने की चुनौती दी। यह जवाब खुद हिसाब जारी नहीं करता और 20 दिन के MIDC और MPCB अल्टीमेटम का जवाब नहीं है। पढ़ें [गिरीश महाजन का जवाब (रिपोर्ट)](/blog/girish-mahajan-replies-to-rohit-pawar-kumbh-corruption-allegations-jalgaon)।
+
+**रिपोर्ट:** नीचे लिखी सारी बातें रोहित पवार ने कहीं, जैसा टाइम्स ऑफ़ इंडिया, ETV भारत, ई-सकाळ और दिव्य मराठी ने 4 और 5 नवंबर 2026 को बताया। ये राजनीतिक आरोप हैं, किसी जाँच के निष्कर्ष नहीं। 5 नवंबर सुबह तक कुंभ मंत्री गिरीश महाजन, नाशिक-त्र्यंबकेश्वर कुंभ मेला प्राधिकरण या ज़िला प्रशासन का कोई जवाब हमें नहीं मिला। 6 नवंबर का रिपोर्टेड जवाब ऊपर वाले अपडेट में है।
 
 ## रोहित पवार ने क्या किया और कहा (4 नवंबर)
 
@@ -126,8 +132,10 @@ There has been no reply yet to these specific claims. In August 2026, replying t
 
 ## दूसरा पक्ष अब तक
 
-इन ख़ास आरोपों का अभी जवाब नहीं आया है। अगस्त 2026 में विपक्ष की पिछली आलोचना पर गिरीश महाजन ने कहा था कि कुंभ के टेंडर पारदर्शी और प्रतिस्पर्धी हैं और ज़्यादातर अनुमान से **20 से 42 प्रतिशत कम** पर आए (पुढारी, 20 अगस्त)। प्राधिकरण का ताज़ा आँकड़ा है कि करीब 51 प्रतिशत काम पूरे हैं और समय सीमा मार्च 2027 है: देखें [कुंभ के 51 प्रतिशत काम पूरे](${WORKS})।`,
-    mr: `**वृत्त:** खालील सर्व मुद्दे रोहित पवार यांनी मांडले, जसे टाइम्स ऑफ इंडिया, ईटीव्ही भारत, ई-सकाळ आणि दिव्य मराठीने ४ व ५ नोव्हेंबर २०२६ रोजी दिले. हे राजकीय आरोप आहेत, कोणत्याही चौकशीचे निष्कर्ष नाहीत. ५ नोव्हेंबर सकाळपर्यंत कुंभमेळा मंत्री गिरीश महाजन, नाशिक-त्र्यंबकेश्वर कुंभमेळा प्राधिकरण किंवा जिल्हा प्रशासनाची प्रतिक्रिया आम्हाला आढळली नाही. प्रतिक्रिया आल्यावर ती येथे जोडू.
+5 नवंबर की सुबह तक इन ख़ास आरोपों का जवाब नहीं आया था। 6 नवंबर का रिपोर्टेड जवाब ऊपर के अपडेट में है। अगस्त 2026 में विपक्ष की पिछली आलोचना पर गिरीश महाजन ने कहा था कि कुंभ के टेंडर पारदर्शी और प्रतिस्पर्धी हैं और ज़्यादातर अनुमान से **20 से 42 प्रतिशत कम** पर आए (पुढारी, 20 अगस्त)। प्राधिकरण का ताज़ा आँकड़ा है कि करीब 51 प्रतिशत काम पूरे हैं और समय सीमा मार्च 2027 है: देखें [कुंभ के 51 प्रतिशत काम पूरे](${WORKS})।`,
+    mr: `अपडेट (८ नोव्हेंबर २०२६): पुढारी आणि तरुण भारत लाइव्हच्या वृत्तानुसार ६ नोव्हेंबरला जळगावात कुंभमंत्री गिरीश महाजन यांनी हे आरोप फेटाळले आणि रोहित पवार यांना कागदपत्रे सादर करण्याचे आव्हान दिले. हे उत्तर स्वतः हिशेब जाहीर करत नाही आणि २० दिवसांच्या एमआयडीसी व एमपीसीबी अल्टिमेटमचे उत्तर नाही. वाचा [गिरीश महाजन यांचे उत्तर (वृत्त)](/blog/girish-mahajan-replies-to-rohit-pawar-kumbh-corruption-allegations-jalgaon).
+
+**वृत्त:** खालील सर्व मुद्दे रोहित पवार यांनी मांडले, जसे टाइम्स ऑफ इंडिया, ईटीव्ही भारत, ई-सकाळ आणि दिव्य मराठीने ४ व ५ नोव्हेंबर २०२६ रोजी दिले. हे राजकीय आरोप आहेत, कोणत्याही चौकशीचे निष्कर्ष नाहीत. ५ नोव्हेंबर सकाळपर्यंत कुंभमेळा मंत्री गिरीश महाजन, नाशिक-त्र्यंबकेश्वर कुंभमेळा प्राधिकरण किंवा जिल्हा प्रशासनाची प्रतिक्रिया आम्हाला आढळली नाही. ६ नोव्हेंबरची वृत्तपत्रीय प्रतिक्रिया वरील अपडेटमध्ये आहे.
 
 ## रोहित पवार यांनी काय केले आणि काय म्हणाले (४ नोव्हेंबर)
 
@@ -152,6 +160,6 @@ There has been no reply yet to these specific claims. In August 2026, replying t
 
 ## दुसरी बाजू आतापर्यंत
 
-या विशिष्ट आरोपांना अद्याप उत्तर आलेले नाही. ऑगस्ट २०२६ मध्ये विरोधकांच्या आधीच्या टीकेला उत्तर देताना गिरीश महाजन यांनी कुंभमेळ्याच्या निविदा पारदर्शक व स्पर्धात्मक असून बहुतांश निविदा अंदाजापेक्षा **२० ते ४२ टक्के कमी** दराने आल्याचे म्हटले होते (पुढारी, २० ऑगस्ट). प्राधिकरणाच्या ताज्या आकडेवारीनुसार सुमारे ५१ टक्के कामे पूर्ण असून मुदत मार्च २०२७ आहे: [कुंभमेळ्याची ५१ टक्के कामे पूर्ण](${WORKS}) पाहा.`,
+५ नोव्हेंबरच्या सकाळपर्यंत या विशिष्ट आरोपांना उत्तर आलेले नव्हते. ६ नोव्हेंबरचे वृत्त वरील अपडेटमध्ये आहे. ऑगस्ट २०२६ मध्ये विरोधकांच्या आधीच्या टीकेला उत्तर देताना गिरीश महाजन यांनी कुंभमेळ्याच्या निविदा पारदर्शक व स्पर्धात्मक असून बहुतांश निविदा अंदाजापेक्षा **२० ते ४२ टक्के कमी** दराने आल्याचे म्हटले होते (पुढारी, २० ऑगस्ट). प्राधिकरणाच्या ताज्या आकडेवारीनुसार सुमारे ५१ टक्के कामे पूर्ण असून मुदत मार्च २०२७ आहे: [कुंभमेळ्याची ५१ टक्के कामे पूर्ण](${WORKS}) पाहा.`,
   },
 };
