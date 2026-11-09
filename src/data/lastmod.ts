@@ -23,7 +23,7 @@ export const PAGE_LASTMOD: Record<string, string> = {
   "/guide": "2026-10-27",
   "/ghats": "2026-11-01",
   "/events": "2026-10-06",
-  "/blog": "2026-11-08",
+  "/blog": "2026-11-09",
   "/gallery": "2026-10-23",
   "/credits": "2026-10-07",
   "/yatra": "2026-10-06",

@@ -13,6 +13,8 @@ export const article: BlogArticle = {
     mr: "ध्वजारोहणाला रामकुंडात गोदावरी खळाळणार, पण त्यासाठी नाही: गंगापूरमधून एकलहरेसाठी २५ दलघफू पाणी, महापालिकेला ८,००५ ऐवजी ६,९७३ दलघफू",
   },
   date: "2026-10-30",
+  updated: "2026-11-09",
+  followUp: { slug: "nmc-revises-water-demand-to-8280-mcft-635-mcft-for-kumbh-seeks-exemption-from-10-percent-cut", date: "2026-11-09" },
   originallyAnnounced: "2026-10-29",
   source: "Times of India",
   sources: [
@@ -40,7 +42,9 @@ export const article: BlogArticle = {
     mr: "पालकमंत्री गिरीश महाजन यांच्या अध्यक्षतेखालील जिल्हा पाणी आरक्षण समितीने नाशिक महापालिकेसाठी सुमारे ८ टीएमसीच्या मागणीऐवजी ६,९७३ दलघफू (सुमारे ६.९ टीएमसी) पाणी आरक्षित केले, असे टाइम्स ऑफ इंडियाने दिले आहे. साधुग्रामच्या पिण्याच्या पाण्यासाठीचे ६३५ दलघफू यातच आहेत. ध्वजारोहणासाठी स्वतंत्र पाणी सोडले जाणार नाही, मात्र एकलहरे औष्णिक केंद्र व परिसरातील गावांसाठी गंगापूर धरणातून २५ दलघफू पाण्याचा विसर्ग २९ ऑक्टोबरच्या मध्यरात्रीपासून सुरू झाला असून ते पाणी रामकुंडावरून जाते, त्यामुळे ३१ ऑक्टोबरला नदी वाहती असेल, असे सकाळने म्हटले आहे.",
   },
   content: {
-    en: `The question of whether Ramkund would be dry for the President's visit now has an answer. **REPORTED:** this is from the Times of India and Sakal (29 October), quoting guardian minister Girish Mahajan. We have not seen the committee's written decision.
+    en: `Update (9 November 2026): NMC has sent a revised proposal for 8,280 MCFT, with 635 MCFT for the Kumbh, and wants Nashik exempted from the 10% cut, the Times of India and Sarkarnama report. [Read the update](/blog/nmc-revises-water-demand-to-8280-mcft-635-mcft-for-kumbh-seeks-exemption-from-10-percent-cut).
+
+The question of whether Ramkund would be dry for the President's visit now has an answer. **REPORTED:** this is from the Times of India and Sakal (29 October), quoting guardian minister Girish Mahajan. We have not seen the committee's written decision.
 
 This is a follow-up to two earlier stories: [no dam water for the Dhwajarohan](${NODAM}) (20 October) and [NMC seeks 8,005 MCFT for Kumbh 2027](${NMC}) (15 October).
 
@@ -58,7 +62,9 @@ This is a follow-up to two earlier stories: [no dam water for the Dhwajarohan]($
 - **Water cut:** the Times of India quotes Mahajan suggesting that NMC **cut drinking water supply by one day a week**. Sakal quotes him saying **no water cut has been imposed in Nashik city for now** and asking people to use water carefully. Both can be true: a cut has been suggested, not ordered.
 
 Plan for the day itself on the [Dhwajarohan 2026 hub](${HUB}).`,
-    hi: `राष्ट्रपति के दौरे पर रामकुंड सूखा रहेगा या नहीं, इसका जवाब अब मिल गया है। **रिपोर्ट:** यह टाइम्स ऑफ इंडिया और सकाळ (29 अक्टूबर) से है, जिन्होंने अभिभावक मंत्री गिरीश महाजन का हवाला दिया। समिति का लिखित फ़ैसला हमने नहीं देखा है।
+    hi: `अपडेट (9 नवंबर 2026): टाइम्स ऑफ इंडिया और सरकारनामा के अनुसार मनपा ने 8,280 एमसीएफटी का संशोधित प्रस्ताव भेजा है, जिसमें कुंभ के लिए 635 एमसीएफटी है, और नाशिक को 10% कटौती से छूट माँगी है। [अपडेट पढ़ें](/blog/nmc-revises-water-demand-to-8280-mcft-635-mcft-for-kumbh-seeks-exemption-from-10-percent-cut)।
+
+राष्ट्रपति के दौरे पर रामकुंड सूखा रहेगा या नहीं, इसका जवाब अब मिल गया है। **रिपोर्ट:** यह टाइम्स ऑफ इंडिया और सकाळ (29 अक्टूबर) से है, जिन्होंने अभिभावक मंत्री गिरीश महाजन का हवाला दिया। समिति का लिखित फ़ैसला हमने नहीं देखा है।
 
 यह दो पुरानी ख़बरों का फ़ॉलो-अप है: [ध्वजारोहण के लिए बाँध का पानी नहीं](${NODAM}) (20 अक्टूबर) और [कुंभ 2027 के लिए NMC ने 8,005 एमसीएफटी माँगा](${NMC}) (15 अक्टूबर)।
 
@@ -76,7 +82,9 @@ Plan for the day itself on the [Dhwajarohan 2026 hub](${HUB}).`,
 - **पानी कटौती:** टाइम्स ऑफ इंडिया के अनुसार महाजन ने NMC को **हफ़्ते में एक दिन पीने के पानी की आपूर्ति बंद** करने का सुझाव दिया। सकाळ के अनुसार उन्होंने कहा कि **नाशिक शहर में अभी कोई कटौती लागू नहीं** है और लोगों से पानी बचाने को कहा। दोनों बातें सही हो सकती हैं: कटौती का सुझाव है, आदेश नहीं।
 
 उस दिन की योजना के लिए [ध्वजारोहण 2026 हब](${HUB}) देखें।`,
-    mr: `राष्ट्रपतींच्या दौऱ्याला रामकुंड कोरडे राहणार का, या प्रश्नाचे उत्तर आता मिळाले आहे. **वृत्त:** ही माहिती टाइम्स ऑफ इंडिया आणि सकाळ (२९ ऑक्टोबर) यांनी पालकमंत्री गिरीश महाजन यांच्या हवाल्याने दिली आहे. समितीचा लेखी निर्णय आम्ही पाहिलेला नाही.
+    mr: `अपडेट (९ नोव्हेंबर २०२६): टाइम्स ऑफ इंडिया आणि सरकारनामानुसार महापालिकेने ८,२८० दलघफूचा सुधारित प्रस्ताव पाठवला आहे, त्यात कुंभासाठी ६३५ दलघफू आहे, आणि नाशिकला १०% कपातीतून सूट मागितली आहे. [अपडेट वाचा](/blog/nmc-revises-water-demand-to-8280-mcft-635-mcft-for-kumbh-seeks-exemption-from-10-percent-cut).
+
+राष्ट्रपतींच्या दौऱ्याला रामकुंड कोरडे राहणार का, या प्रश्नाचे उत्तर आता मिळाले आहे. **वृत्त:** ही माहिती टाइम्स ऑफ इंडिया आणि सकाळ (२९ ऑक्टोबर) यांनी पालकमंत्री गिरीश महाजन यांच्या हवाल्याने दिली आहे. समितीचा लेखी निर्णय आम्ही पाहिलेला नाही.
 
 ही दोन आधीच्या बातम्यांचा पुढचा भाग आहे: [ध्वजारोहणासाठी धरणाचे पाणी नाही](${NODAM}) (२० ऑक्टोबर) आणि [कुंभ २०२७ साठी महापालिकेची ८,००५ दलघफू मागणी](${NMC}) (१५ ऑक्टोबर).
 

@@ -89,9 +89,18 @@ import { article as trimbakReviewPasses } from "./trimbakeshwar-review-flag-hois
 import { article as digitalTwinShortlist } from "./digital-twin-crowd-forecast-shortlist-12-november-meeting";
 import { article as railwaySpecials24 } from "./railways-plan-24-kumbh-special-trains-split-arrivals-across-five-nashik-stations";
 import { article as mahajanPawarReply } from "./girish-mahajan-replies-to-rohit-pawar-kumbh-corruption-allegations-jalgaon";
+import { article as godavariCrackdown } from "./chief-secretary-orders-godavari-pollution-crackdown-mpcb-raids-zld";
+import { article as waterDemand8280 } from "./nmc-revises-water-demand-8280-mcft-seeks-exemption-10-percent-cut";
+import { article as akhadaFund7Crore } from "./akhada-development-fund-raised-to-7-crore-each-works-by-july-2027";
+import { article as dwarkaDattaWidening } from "./dwarka-datta-mandir-highway-widening-10-lanes-after-diwali";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 and 31 October and 1, 2, 5, 6, 7 and 8 November 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 and 31 October and 1, 2, 5, 6, 7, 8 and 9 November 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 9 November 2026
+  godavariCrackdown,
+  waterDemand8280,
+  dwarkaDattaWidening,
+  akhadaFund7Crore,
   // 8 November 2026
   railwaySpecials24,
   mahajanPawarReply,

@@ -15,6 +15,8 @@ export const article: BlogArticle = {
     mr: "ध्वजारोहणानंतर खरी शर्यत: कुंभाची ५१ टक्के कामे पूर्ण, मार्च २०२७ ची मुदत, साधुग्रामची फक्त ९४ एकर जमीन ताब्यात",
   },
   date: "2026-11-01",
+  updated: "2026-11-09",
+  followUp: { slug: "dwarka-circle-datta-mandir-nashik-pune-highway-widening-to-10-lanes-after-diwali-221-crore", date: "2026-11-09" },
   originallyAnnounced: "2026-10-31",
   source: "Times of India",
   sources: [
@@ -42,7 +44,9 @@ export const article: BlogArticle = {
     mr: "टाइम्स ऑफ इंडियाने ३१ ऑक्टोबरला रात्री दिलेल्या वृत्तानुसार कुंभमेळा प्राधिकरणाचे आयुक्त शेखर सिंह म्हणाले की कुंभाची सुमारे ५१ टक्के कामे पूर्ण झाली असून मार्च २०२७ ही मुदत आहे. सर्वात मोठी अडचण तपोवन साधुग्रामची: १० लाखांपर्यंत साधूंसाठी नियोजित १,४०० हून अधिक एकरांपैकी महापालिकेकडे फक्त ९४ एकर आहे. महापालिका आयुक्त मनीषा खत्री आता मार्च २०२७ पर्यंत गोदावरीचे पाणी स्नानयोग्य करण्याचे आणि जानेवारी २०२७ पर्यंत सर्व काँक्रीट कामे पूर्ण करण्याचे लक्ष्य सांगत आहेत. हे वृत्त आहे.",
   },
   content: {
-    en: `With the flags up, the focus has moved to the work still left before the Amrit Snans of August and September 2027. **REPORTED:** this is from the Times of India (published 31 October, 11:45 PM IST). We have not seen an official progress report from NTKMA or NMC.
+    en: `Update (9 November 2026): The Times of India reports that widening of the Dwarka Circle to Datta Mandir stretch, listed below as not started, is set to begin after Diwali, with 40% planned by March 2027. [Read the update](/blog/dwarka-circle-datta-mandir-nashik-pune-highway-widening-to-10-lanes-after-diwali-221-crore).
+
+With the flags up, the focus has moved to the work still left before the Amrit Snans of August and September 2027. **REPORTED:** this is from the Times of India (published 31 October, 11:45 PM IST). We have not seen an official progress report from NTKMA or NMC.
 
 This is a follow-up to our 31 October story, [Seers warn they may stay away if Sadhugram shows no progress in a month](${BOYCOTT}).
 
@@ -65,7 +69,9 @@ This is a follow-up to our 31 October story, [Seers warn they may stay away if S
 The ghats, river quality and the Sadhugram decide how comfortable the 2027 snans will be. If you are planning a trip, the key dates to watch are January 2027 (concrete works) and March 2027 (overall deadline and river quality). Ring road progress: [earlier update](${RING}).
 
 More: [Dhwajarohan 2026 hub](${HUB})`,
-    hi: `ध्वज फहरने के बाद अब ध्यान उन कामों पर है जो अगस्त-सितंबर 2027 के अमृत स्नानों से पहले बाकी हैं। **रिपोर्ट:** यह टाइम्स ऑफ इंडिया (31 अक्टूबर, रात 11:45 बजे प्रकाशित) की ख़बर है। NTKMA या NMC की कोई आधिकारिक प्रगति रिपोर्ट हमने नहीं देखी।
+    hi: `अपडेट (9 नवंबर 2026): टाइम्स ऑफ इंडिया के अनुसार द्वारका सर्कल से दत्त मंदिर हिस्से का चौड़ीकरण, जिसे नीचे शुरू न हुआ बताया गया है, दिवाली के बाद शुरू होना है, और मार्च 2027 तक 40% की योजना है। [अपडेट पढ़ें](/blog/dwarka-circle-datta-mandir-nashik-pune-highway-widening-to-10-lanes-after-diwali-221-crore)।
+
+ध्वज फहरने के बाद अब ध्यान उन कामों पर है जो अगस्त-सितंबर 2027 के अमृत स्नानों से पहले बाकी हैं। **रिपोर्ट:** यह टाइम्स ऑफ इंडिया (31 अक्टूबर, रात 11:45 बजे प्रकाशित) की ख़बर है। NTKMA या NMC की कोई आधिकारिक प्रगति रिपोर्ट हमने नहीं देखी।
 
 यह हमारी 31 अक्टूबर की ख़बर [एक महीने में साधुग्राम में प्रगति नहीं तो कुंभ से दूरी की चेतावनी](${BOYCOTT}) का फ़ॉलो-अप है।
 
@@ -88,7 +94,9 @@ More: [Dhwajarohan 2026 hub](${HUB})`,
 घाट, नदी के पानी की गुणवत्ता और साधुग्राम तय करेंगे कि 2027 के स्नान कितने सुविधाजनक होंगे। यात्रा की योजना बना रहे हैं तो जनवरी 2027 (कंक्रीट काम) और मार्च 2027 (कुल समय-सीमा और नदी की गुणवत्ता) पर नज़र रखें। रिंग रोड की प्रगति: [पिछली अपडेट](${RING})।
 
 और पढ़ें: [ध्वजारोहण 2026 हब](${HUB})`,
-    mr: `ध्वज फडकल्यानंतर आता लक्ष ऑगस्ट-सप्टेंबर २०२७ मधील अमृतस्नानांपूर्वी उरलेल्या कामांकडे वळले आहे. **वृत्त:** ही बातमी टाइम्स ऑफ इंडियाची (३१ ऑक्टोबर, रात्री ११.४५ वाजता प्रसिद्ध) आहे. NTKMA किंवा महापालिकेचा अधिकृत प्रगती अहवाल आम्ही पाहिलेला नाही.
+    mr: `अपडेट (९ नोव्हेंबर २०२६): टाइम्स ऑफ इंडियानुसार द्वारका सर्कल ते दत्त मंदिर टप्प्याचे रुंदीकरण, जे खाली सुरू न झालेले म्हणून दिले आहे, दिवाळीनंतर सुरू होणार असून मार्च २०२७ पर्यंत ४०% चे नियोजन आहे. [अपडेट वाचा](/blog/dwarka-circle-datta-mandir-nashik-pune-highway-widening-to-10-lanes-after-diwali-221-crore).
+
+ध्वज फडकल्यानंतर आता लक्ष ऑगस्ट-सप्टेंबर २०२७ मधील अमृतस्नानांपूर्वी उरलेल्या कामांकडे वळले आहे. **वृत्त:** ही बातमी टाइम्स ऑफ इंडियाची (३१ ऑक्टोबर, रात्री ११.४५ वाजता प्रसिद्ध) आहे. NTKMA किंवा महापालिकेचा अधिकृत प्रगती अहवाल आम्ही पाहिलेला नाही.
 
 ही आमच्या ३१ ऑक्टोबरच्या [महिनाभरात साधुग्रामची प्रगती दिसली नाही तर कुंभावर बहिष्काराचा इशारा](${BOYCOTT}) या बातमीची पुढची अपडेट आहे.
 
