@@ -9,7 +9,8 @@ export const article: BlogArticle = {
     mr: "MPCB ला अंबड MIDC जवळ दत्तनगरच्या भूजलात ४५ mg/L क्रोमियम आढळले; १७ इलेक्ट्रोप्लेटिंग युनिट्सना बंदची नोटीस",
   },
   date: "2026-10-14",
-  updated: "2026-10-14",
+  updated: "2026-11-09",
+  followUp: { slug: "chief-secretary-orders-crackdown-on-industries-polluting-godavari-mpcb-raids-officials-accountable", date: "2026-11-09" },
   source: "Times of India",
   sources: [
     {
@@ -50,7 +51,9 @@ export const article: BlogArticle = {
     mr: "MPCB ला अंबड MIDC जवळील दत्तनगरच्या भूजलाच्या दोन नमुन्यांत ४५ mg/L एकूण क्रोमियम आढळले, तर मर्यादा ०.०५ mg/L आहे; १७ इलेक्ट्रोप्लेटिंग युनिट्सना बंदची नोटीस दिली आहे. स्वतंत्र खासगी प्रयोगशाळा चाचणीत ५०.५ mg/L एकूण क्रोमियम आढळले होते, त्यापैकी ५०.३ mg/L हेक्झाव्हॅलेंट.",
   },
   content: {
-    en: `**Update, 14 October:** The Maharashtra Pollution Control Board (**MPCB**) has now reported its own results. It found **total chromium of 45 ppm (45 mg/L)** in **two groundwater samples** from borewells and dug wells at **Dattanagar near Ambad MIDC**, the Times of India reported on 13 October. The permissible limit is **0.05 ppm**, so this is about 900 times the limit.
+    en: `Update (9 November 2026): The Times of India reports that Chief Secretary Rajesh Aggarwal has ordered MPCB to sample the Nandini and other tributaries, raid polluting units and fix responsibility on officials who allowed zero liquid discharge violations. [Read the update](/blog/chief-secretary-orders-crackdown-on-industries-polluting-godavari-mpcb-raids-officials-accountable).
+
+**Update, 14 October:** The Maharashtra Pollution Control Board (**MPCB**) has now reported its own results. It found **total chromium of 45 ppm (45 mg/L)** in **two groundwater samples** from borewells and dug wells at **Dattanagar near Ambad MIDC**, the Times of India reported on 13 October. The permissible limit is **0.05 ppm**, so this is about 900 times the limit.
 
 ## What MPCB found and did
 
@@ -76,7 +79,9 @@ The two results are not the same measurement. The private lab reported **50.5 mg
 Minister Girish Mahajan visited the area on Thursday. An official from Environment Minister Pankaja Munde's office said she had directed MPCB to take immediate action against polluting industries.
 
 None of these results are for water at the Godavari bathing ghats. See our [earlier report](/blog/godavari-water-sampled-for-bombay-high-court-pollution-case) on samples taken for the High Court case.`,
-    hi: `**अपडेट, 14 अक्टूबर:** महाराष्ट्र प्रदूषण नियंत्रण बोर्ड (**MPCB**) ने अब अपने नतीजे दिए हैं। टाइम्स ऑफ इंडिया ने 13 अक्टूबर को बताया कि **अंबड MIDC के पास दत्तनगर** के बोरवेल और कुओं से लिए गए **भूजल के दो नमूनों** में **45 ppm (45 mg/L) कुल क्रोमियम** मिला। अनुमत सीमा **0.05 ppm** है, यानी यह सीमा से लगभग 900 गुना है।
+    hi: `अपडेट (9 नवंबर 2026): टाइम्स ऑफ इंडिया के अनुसार मुख्य सचिव राजेश अग्रवाल ने MPCB को नंदिनी और अन्य सहायक नदियों के नमूने लेने, प्रदूषण करने वाली इकाइयों पर छापे मारने और शून्य तरल निर्वहन उल्लंघन होने देने वाले अधिकारियों की ज़िम्मेदारी तय करने का आदेश दिया है। [अपडेट पढ़ें](/blog/chief-secretary-orders-crackdown-on-industries-polluting-godavari-mpcb-raids-officials-accountable)।
+
+**अपडेट, 14 अक्टूबर:** महाराष्ट्र प्रदूषण नियंत्रण बोर्ड (**MPCB**) ने अब अपने नतीजे दिए हैं। टाइम्स ऑफ इंडिया ने 13 अक्टूबर को बताया कि **अंबड MIDC के पास दत्तनगर** के बोरवेल और कुओं से लिए गए **भूजल के दो नमूनों** में **45 ppm (45 mg/L) कुल क्रोमियम** मिला। अनुमत सीमा **0.05 ppm** है, यानी यह सीमा से लगभग 900 गुना है।
 
 ## MPCB को क्या मिला और क्या कार्रवाई हुई
 
@@ -102,7 +107,9 @@ None of these results are for water at the Godavari bathing ghats. See our [earl
 मंत्री गिरीश महाजन ने गुरुवार को इलाके का दौरा किया। पर्यावरण मंत्री पंकजा मुंडे के कार्यालय के एक अधिकारी ने बताया कि उन्होंने MPCB को प्रदूषण फैलाने वाले उद्योगों पर तुरंत कार्रवाई का निर्देश दिया है।
 
 इनमें से कोई भी नतीजा गोदावरी के स्नान घाटों के पानी का नहीं है। हाईकोर्ट मामले के नमूनों पर हमारी [पिछली खबर](/blog/godavari-water-sampled-for-bombay-high-court-pollution-case) देखें।`,
-    mr: `**अपडेट, १४ ऑक्टोबर:** महाराष्ट्र प्रदूषण नियंत्रण मंडळाने (**MPCB**) आता स्वतःचे निकाल दिले आहेत. टाइम्स ऑफ इंडियाने १३ ऑक्टोबरला दिलेल्या वृत्तानुसार, **अंबड MIDC जवळील दत्तनगर** येथील बोअरवेल आणि विहिरींतील **भूजलाच्या दोन नमुन्यांत** **४५ ppm (४५ mg/L) एकूण क्रोमियम** आढळले. परवानगीयोग्य मर्यादा **०.०५ ppm** आहे, म्हणजे हे प्रमाण मर्यादेच्या सुमारे ९०० पट आहे.
+    mr: `अपडेट (९ नोव्हेंबर २०२६): टाइम्स ऑफ इंडियानुसार मुख्य सचिव राजेश अग्रवाल यांनी MPCB ला नंदिनी आणि इतर उपनद्यांचे नमुने घेण्याचे, प्रदूषण करणाऱ्या उद्योगांवर छापे टाकण्याचे आणि शून्य द्रव विसर्ग उल्लंघन होऊ देणाऱ्या अधिकाऱ्यांची जबाबदारी निश्चित करण्याचे आदेश दिले आहेत. [अपडेट वाचा](/blog/chief-secretary-orders-crackdown-on-industries-polluting-godavari-mpcb-raids-officials-accountable).
+
+**अपडेट, १४ ऑक्टोबर:** महाराष्ट्र प्रदूषण नियंत्रण मंडळाने (**MPCB**) आता स्वतःचे निकाल दिले आहेत. टाइम्स ऑफ इंडियाने १३ ऑक्टोबरला दिलेल्या वृत्तानुसार, **अंबड MIDC जवळील दत्तनगर** येथील बोअरवेल आणि विहिरींतील **भूजलाच्या दोन नमुन्यांत** **४५ ppm (४५ mg/L) एकूण क्रोमियम** आढळले. परवानगीयोग्य मर्यादा **०.०५ ppm** आहे, म्हणजे हे प्रमाण मर्यादेच्या सुमारे ९०० पट आहे.
 
 ## MPCB ला काय आढळले आणि काय कारवाई झाली
 
