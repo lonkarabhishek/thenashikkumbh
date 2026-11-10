@@ -23,7 +23,7 @@ Vercel Web Analytics is enabled — server-side, cookie-less, IP anonymised at i
 
 - HTTPS only.
 - HSTS with `max-age=63072000; includeSubDomains; preload`.
-- `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: origin-when-cross-origin`, `Content-Security-Policy: upgrade-insecure-requests`.
+- `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: origin-when-cross-origin`, `Content-Security-Policy: upgrade-insecure-requests; frame-src 'self' https://www.google.com https://www.youtube-nocookie.com https://www.youtube.com`.
 
 ## Assistant safety
 

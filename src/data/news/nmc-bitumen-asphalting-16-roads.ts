@@ -10,6 +10,8 @@ export const article: BlogArticle = {
   },
   date: "2026-10-18",
   originallyAnnounced: "2026-10-16",
+  updated: "2026-11-06",
+  followUp: { slug: "nmc-to-start-large-scale-kumbh-road-asphalting-after-diwali", date: "2026-11-06" },
   source: "Times of India",
   sources: [
     {
@@ -29,7 +31,9 @@ export const article: BlogArticle = {
     mr: "कुंभमेळ्यासाठीच्या १६ प्रमुख रस्त्यांचे डांबरीकरण येत्या काही दिवसांत सुरू होईल, असे मनपा आयुक्त मनीषा खत्री यांनी सांगितले. याच महिन्यापासून BPCL, HPCL आणि IOCL कडून टप्प्याटप्प्याने सुमारे ६०,००० टन डांबर मिळणार आहे. रस्त्यांची कामे पूर्ण करण्यासाठी मनपाने मार्च २०२७ ही मुदत ठरवली आहे.",
   },
   content: {
-    en: `The Nashik Municipal Corporation (NMC) is about to start **asphalting 16 major roads** built for the Simhastha Kumbh Mela. The Times of India reported this on **16 October 2026**, quoting municipal commissioner **Manisha Khatri** by name. **The commissioner's statements are on record.**
+    en: `**Update, 6 November 2026:** The Times of India now reports that large-scale asphalting starts after Diwali, and cites nearly 32 roads, about 150 km and ₹1,400 crore. See [NMC to start Kumbh road asphalting after Diwali](/blog/nmc-to-start-large-scale-kumbh-road-asphalting-after-diwali).
+
+The Nashik Municipal Corporation (NMC) is about to start **asphalting 16 major roads** built for the Simhastha Kumbh Mela. The Times of India reported this on **16 October 2026**, quoting municipal commissioner **Manisha Khatri** by name. **The commissioner's statements are on record.**
 
 ## What NMC has said
 
@@ -52,7 +56,9 @@ On 4 October we reported, from Swarajya, that **18 major roads** were under cons
 Expect asphalting work and diversions on major Nashik roads over the coming months. Allow extra travel time, and see [How to reach Nashik](/how-to-reach).
 
 Related: [Kumbh status board](/kumbh-status), [Kumbh dates](/dates).`,
-    hi: `नाशिक महानगरपालिका (NMC) सिंहस्थ कुंभ मेले के लिए बनाई गई **16 बड़ी सड़कों का डामरीकरण** शुरू करने वाली है। टाइम्स ऑफ इंडिया ने **16 अक्टूबर 2026** को यह खबर दी और नगर आयुक्त **मनीषा खत्री** का नाम लेकर उनके बयान छापे। **आयुक्त के बयान ऑन-रिकॉर्ड हैं।**
+    hi: `**अपडेट, 6 नवंबर 2026:** टाइम्स ऑफ इंडिया अब रिपोर्ट करता है कि बड़े पैमाने पर डामरीकरण दिवाली के बाद शुरू होगा, और करीब 32 सड़कें, लगभग 150 किमी तथा ₹1,400 करोड़ बताता है। देखें: [दिवाली के बाद कुंभ सड़कों का डामरीकरण](/blog/nmc-to-start-large-scale-kumbh-road-asphalting-after-diwali)।
+
+नाशिक महानगरपालिका (NMC) सिंहस्थ कुंभ मेले के लिए बनाई गई **16 बड़ी सड़कों का डामरीकरण** शुरू करने वाली है। टाइम्स ऑफ इंडिया ने **16 अक्टूबर 2026** को यह खबर दी और नगर आयुक्त **मनीषा खत्री** का नाम लेकर उनके बयान छापे। **आयुक्त के बयान ऑन-रिकॉर्ड हैं।**
 
 ## NMC ने क्या कहा
 
@@ -75,7 +81,9 @@ TOI के अनुसार NMC करीब **₹1,400 करोड़** क�
 आने वाले महीनों में नाशिक की बड़ी सड़कों पर डामरीकरण और डायवर्ज़न मिल सकते हैं। सफर के लिए अतिरिक्त समय रखें। देखें: [नाशिक कैसे पहुँचें](/how-to-reach)।
 
 संबंधित: [कुंभ स्थिति बोर्ड](/kumbh-status), [कुंभ तिथियाँ](/dates)।`,
-    mr: `सिंहस्थ कुंभमेळ्यासाठी तयार होत असलेल्या **१६ प्रमुख रस्त्यांचे डांबरीकरण** नाशिक महानगरपालिका लवकरच सुरू करणार आहे. टाइम्स ऑफ इंडियाने **१६ ऑक्टोबर २०२६** रोजी हे वृत्त दिले असून त्यात मनपा आयुक्त **मनीषा खत्री** यांची नावानिशी विधाने आहेत. **आयुक्तांची विधाने अधिकृत आहेत.**
+    mr: `**अपडेट, ६ नोव्हेंबर २०२६:** टाइम्स ऑफ इंडिया आता म्हणतो की मोठ्या प्रमाणातील डांबरीकरण दिवाळीनंतर सुरू होईल, आणि जवळपास ३२ रस्ते, सुमारे १५० किमी व ₹१,४०० कोटी सांगतो. पाहा: [दिवाळीनंतर कुंभ रस्त्यांचे डांबरीकरण](/blog/nmc-to-start-large-scale-kumbh-road-asphalting-after-diwali).
+
+सिंहस्थ कुंभमेळ्यासाठी तयार होत असलेल्या **१६ प्रमुख रस्त्यांचे डांबरीकरण** नाशिक महानगरपालिका लवकरच सुरू करणार आहे. टाइम्स ऑफ इंडियाने **१६ ऑक्टोबर २०२६** रोजी हे वृत्त दिले असून त्यात मनपा आयुक्त **मनीषा खत्री** यांची नावानिशी विधाने आहेत. **आयुक्तांची विधाने अधिकृत आहेत.**
 
 ## मनपाने काय सांगितले
 

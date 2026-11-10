@@ -25,10 +25,9 @@ export default function PlanTool() {
 
   const items = ok
     ? statusItems.filter((i) => {
-        if (i.id === "ramkund-access" || i.id === "kushavarta-closed") return from <= FLAG_DAY;
-        if (i.id === "oct-events") return PRE_EVENT_DATES.some((d) => INSIDE(d, from, to));
-        if (i.id === "maha-aarti-godaghat") return INSIDE("2026-10-30", from, to) || INSIDE(FLAG_DAY, from, to);
-        return true; // hospital: good to know on any date
+        // Heliport flights may start on 2 November 2026; only show it for trips that reach that date.
+        if (i.id === "trimbak-heliport") return to >= "2026-11-02";
+        return true; // current access status, works progress and hospital: good to know on any date
       })
     : [];
   const events = ok

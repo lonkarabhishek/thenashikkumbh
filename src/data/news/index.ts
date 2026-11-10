@@ -57,6 +57,10 @@ import { article as kushavartaPuja } from "./kushavarta-flagstaff-puja-temple-cl
 import { article as sadhugramTrees } from "./sadhugram-without-cutting-trees";
 import { article as healthStaff } from "./nmc-1638-temporary-health-staff";
 import { article as shankhnaadToday } from "./shankhnaad-today-5-50-pm-251-conch-players-flag-hoisting-week-programme";
+import { article as godaAartiRecord } from "./maha-goda-aarti-guinness-world-record-6233-adjudicator-announced";
+import { article as worksFiftyOne } from "./kumbh-works-51-percent-done-march-2027-sadhugram-94-acres-godavari-march";
+import { article as vipWaterway } from "./vip-waterway-ramkund-kushavarta-purification-28-crore";
+import { article as ramkundBarricades } from "./ramkund-barricades-vip-anger-flag-hoisting-cost-16-crore";
 import { article as trimbakPresidentPlan } from "./trimbak-31-october-president-puja-shankaracharya-flag";
 import { article as ramkundGhatWorks } from "./ramkund-ghat-works-hc-order-allegation";
 import { article as shankhnaadRecord } from "./shankhnaad-guinness-world-record-517-conches-certificate-31-october";
@@ -73,9 +77,53 @@ import { article as trimbakTempleClosed } from "./trimbakeshwar-temple-closed-30
 import { article as presidentByRoad } from "./president-by-road-rain-71-schools-shut-godaghat-shops-1317-vips";
 import { article as gangapurEklahare } from "./gangapur-eklahare-release-nmc-6973-mcft-water-reservation";
 import { article as mahajanWorksPromise } from "./mahajan-works-before-amrit-snans-sanjay-das-ramkund-steps-warning";
+import { article as gramParikramaHeld } from "./gram-parikrama-held-30-october-president-programme-31-october-led-screens";
+import { article as akhadaBoycottWarning } from "./akhada-boycott-warning-sadhugram-one-month-mahajan-four-months";
+import { article as officialWebsiteCctvTrial } from "./official-kumbh-website-live-1500-cctv-trial-after-diwali";
+import { article as kushavartaOpenAgain } from "./kushavarta-open-again-10000-devotees-1-november-new-ghats-prayag-tirth";
+import { article as rohitPawarAllegations } from "./rohit-pawar-alleges-corruption-kumbh-works-mahajan-accounts-10-days-mpcb-midc-ultimatum";
+import { article as asphaltingAfterDiwali } from "./nmc-asphalting-after-diwali";
+import { article as sapkalAllegations } from "./sapkal-alleges-half-kumbh-funds-siphoned";
+import { article as parkingSadhugramDeadlines } from "./parking-eoi-sadhugram-plot-deadlines";
+import { article as trimbakReviewPasses } from "./trimbakeshwar-review-flag-hoisting-crowd-entry-passes-5-november";
+import { article as digitalTwinShortlist } from "./digital-twin-crowd-forecast-shortlist-12-november-meeting";
+import { article as railwaySpecials24 } from "./railways-plan-24-kumbh-special-trains-split-arrivals-across-five-nashik-stations";
+import { article as mahajanPawarReply } from "./girish-mahajan-replies-to-rohit-pawar-kumbh-corruption-allegations-jalgaon";
+import { article as godavariCrackdown } from "./chief-secretary-orders-godavari-pollution-crackdown-mpcb-raids-zld";
+import { article as waterDemand8280 } from "./nmc-revises-water-demand-8280-mcft-seeks-exemption-10-percent-cut";
+import { article as akhadaFund7Crore } from "./akhada-development-fund-raised-to-7-crore-each-works-by-july-2027";
+import { article as dwarkaDattaWidening } from "./dwarka-datta-mandir-highway-widening-10-lanes-after-diwali";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 and 30 October 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 and 31 October and 1, 2, 5, 6, 7, 8 and 9 November 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 9 November 2026
+  godavariCrackdown,
+  waterDemand8280,
+  dwarkaDattaWidening,
+  akhadaFund7Crore,
+  // 8 November 2026
+  railwaySpecials24,
+  mahajanPawarReply,
+  // 7 November 2026
+  trimbakReviewPasses,
+  digitalTwinShortlist,
+  // 6 November 2026
+  asphaltingAfterDiwali,
+  sapkalAllegations,
+  parkingSadhugramDeadlines,
+  // 5 November 2026
+  officialWebsiteCctvTrial,
+  kushavartaOpenAgain,
+  rohitPawarAllegations,
+  // 2 November 2026
+  ramkundBarricades,
+  vipWaterway,
+  // 1 November 2026
+  godaAartiRecord,
+  worksFiftyOne,
+  // 31 October 2026
+  gramParikramaHeld,
+  akhadaBoycottWarning,
   // 30 October 2026
   trimbakTempleClosed,
   presidentByRoad,

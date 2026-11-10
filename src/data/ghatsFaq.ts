@@ -35,6 +35,10 @@ export const GHATS_SOURCES: { label: string; url: string }[] = [
     url: "https://timesofindia.indiatimes.com/city/nashik/ramkund-closed-for-15-20-days-as-nashik-civic-body-races-to-wrap-up-kumbh-works/articleshow/134901215.cms",
   },
   {
+    label: "Times of India: Ramkund finds its rhythm again as Simhastha Kumbh begins (31 Oct 2026)",
+    url: "https://timesofindia.indiatimes.com/city/nashik/ramkund-finds-its-rhythm-again-as-simhastha-kumbh-begins/articleshow/135409498.cms",
+  },
+  {
     label: "Times of India: Kushavarta closed for renovation (29 Sep 2026)",
     url: "https://timesofindia.indiatimes.com/city/nashik/kushavarta-teerth-to-remain-closed-for-month-long-renovation/articleshow/134572629.cms",
   },
@@ -100,14 +104,14 @@ export function ghatsFaqs(locale: Locale): { q: L10n; a: L10n }[] {
     },
     {
       q: {
-        mr: "आत्ता (ऑक्टोबर २०२६) रामकुंड आणि कुशावर्तावर स्नान करता येते का?",
-        hi: "अभी (अक्टूबर 2026) रामकुंड और कुशावर्त पर स्नान कर सकते हैं?",
-        en: "Can I bathe at Ramkund and Kushavarta right now (October 2026)?",
+        mr: "आता (नोव्हेंबर २०२६) रामकुंड आणि कुशावर्तावर स्नान करता येते का?",
+        hi: "अभी (नवंबर 2026) रामकुंड और कुशावर्त पर स्नान कर सकते हैं?",
+        en: "Can I bathe at Ramkund and Kushavarta right now (November 2026)?",
       },
       a: {
-        mr: "पूर्णपणे नाही. १२ ऑक्टोबर २०२६ पासून महापालिकेने अहिल्याबाई होळकर पूल ते तालुकतेश्वर मंदिर या भागात १५–२० दिवसांसाठी प्रवेश मर्यादित केला आहे (टाइम्स ऑफ इंडिया, १३ ऑक्टोबर), जेणेकरून ३१ ऑक्टोबरच्या ध्वजारोहणापूर्वी कामे पूर्ण होतील. दशक्रिया विधी नेमलेल्या ठिकाणी सुरू आहेत. त्र्यंबकेश्वरचे कुशावर्त ३० सप्टेंबरपासून नूतनीकरणासाठी बंद आहे आणि साधारण ३१ ऑक्टोबरला खुले होणार आहे. निघण्यापूर्वी कुंभ स्थिती फलक पाहा.",
-        hi: "पूरी तरह नहीं। 12 अक्टूबर 2026 से NMC ने अहिल्याबाई होलकर पुल से तालुकतेश्वर मंदिर तक के हिस्से में 15–20 दिन के लिए प्रवेश सीमित किया है (टाइम्स ऑफ इंडिया, 13 अक्टूबर), ताकि 31 अक्टूबर के ध्वजारोहण से पहले काम पूरे हों। दशक्रिया विधि तय जगह पर जारी है। त्र्यंबकेश्वर का कुशावर्त 30 सितंबर से नवीनीकरण के लिए बंद है और लगभग 31 अक्टूबर को खुलना है। निकलने से पहले कुंभ स्टेटस बोर्ड देख लें।",
-        en: "Not fully. From 12 October 2026, NMC has restricted access between Ahilyabai Holkar bridge and Talukteshwar temple for 15–20 days (Times of India, 13 October) so works finish before the 31 October flag hoisting. Dashkriya rituals continue at the designated site. Kushavarta in Trimbakeshwar has been closed for renovation since 30 September and is due to reopen around 31 October. Check the Kumbh status board before you set out.",
+        mr: "रामकुंडावर बहुतांशी हो, कुशावर्ताबद्दल अजून स्पष्टता नाही. जवळपास तीन महिन्यांनी ३० ऑक्टोबरला गंगापूर धरणाचे पाणी रामकुंडात पोहोचले आणि ३१ ऑक्टोबरच्या ध्वजारोहणाला घाटांवर भाविकांची गर्दी होती (टाइम्स ऑफ इंडिया, ३१ ऑक्टोबर), मात्र महापालिकेने निर्बंध उठवल्याची अधिकृत सूचना काढलेली नाही आणि घाटांची कामे मार्च २०२७ पर्यंत सुरू आहेत. त्र्यंबकेश्वरचे कुशावर्त ३० सप्टेंबरपासून नूतनीकरणासाठी बंद होते; ३१ ऑक्टोबरला तेथे ध्वज फडकला, पण सर्वसामान्य स्नान पुन्हा सुरू झाल्याची सूचना अजून आलेली नाही. ताजी स्थिती कुंभ स्थिती फलकावर पाहा.",
+        hi: "रामकुंड पर ज़्यादातर हाँ, कुशावर्त पर अभी साफ़ नहीं। करीब तीन महीने बाद 30 अक्टूबर को गंगापुर बांध का पानी रामकुंड पहुँचा और 31 अक्टूबर के ध्वजारोहण पर घाटों पर श्रद्धालुओं की भीड़ थी (टाइम्स ऑफ इंडिया, 31 अक्टूबर), पर NMC ने प्रतिबंध हटाने की आधिकारिक सूचना नहीं दी है और घाटों का काम मार्च 2027 तक जारी है। त्र्यंबकेश्वर का कुशावर्त 30 सितंबर से नवीनीकरण के लिए बंद था; 31 अक्टूबर को वहाँ ध्वज फहराया गया, पर आम स्नान फिर शुरू होने की सूचना अभी नहीं आई है। ताज़ा स्थिति कुंभ स्टेटस बोर्ड पर देखें।",
+        en: "Mostly yes at Ramkund, still unclear at Kushavarta. Water from Gangapur dam reached Ramkund on 30 October after nearly three months, and devotees crowded the ghats for the 31 October flag hoisting (Times of India, 31 October), but NMC has not issued a notice formally lifting its restriction and ghat works continue to March 2027. Kushavarta in Trimbakeshwar was closed for renovation from 30 September; the flag was hoisted there on 31 October, but no notice says ordinary bathing has resumed. See the Kumbh status board for the latest.",
       },
     },
     {

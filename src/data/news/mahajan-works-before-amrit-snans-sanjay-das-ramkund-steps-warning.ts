@@ -13,6 +13,8 @@ export const article: BlogArticle = {
     mr: "अमृतस्नानांपूर्वी कुंभमेळ्याची सर्व कामे पूर्ण होतील: महाजन यांचे आश्वासन; मोठ्या गर्दीत रामकुंडाच्या पायऱ्यांवर अपघाताचा धोका, महंत संजय दास यांचा इशारा",
   },
   date: "2026-10-30",
+  updated: "2026-10-31",
+  followUp: { slug: "akhada-seers-warn-of-kumbh-boycott-if-no-sadhugram-progress-in-a-month-mahajan-says-works-done-in-four-months", date: "2026-10-31" },
   originallyAnnounced: "2026-10-29",
   source: "Times of India",
   sources: [

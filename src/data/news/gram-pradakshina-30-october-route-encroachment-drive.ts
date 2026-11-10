@@ -9,8 +9,8 @@ export const article: BlogArticle = {
     mr: "३० ऑक्टोबरची ग्रामप्रदक्षिणा: तपोवन ते रामकुंड मार्ग ठरला, महापालिका २४ ते २९ ऑक्टोबर अतिक्रमणे हटवणार, घाटांवर पोलिसांची रंगीत तालीम",
   },
   date: "2026-10-23",
-  updated: "2026-10-26",
-  followUp: { slug: "nashik-traffic-notice-30-31-october-godaghat-no-vehicle-zone-ramtirth-roads-shut-diversions-parking-iim-nagpur-crowd-plan", date: "2026-10-26" },
+  updated: "2026-10-31",
+  followUp: { slug: "dharma-dhwaj-gram-parikrama-held-30-october-tapovan-to-ramkund-president-programme-31-october-led-screens", date: "2026-10-31" },
   originallyAnnounced: "2026-10-21",
   source: "Times of India",
   sources: [

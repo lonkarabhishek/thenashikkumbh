@@ -8,9 +8,9 @@ export const page: InfoPageContent = {
     mr: "त्र्यंबकेश्वर कुंभमेळा 2027 कधी आहे: तारखा, कुशावर्त",
   },
   description: {
-    en: "Trimbakeshwar Kumbh 2027: flag hoisting at Kushavarta on 31 Oct 2026, Amrit Snans 2 Aug, 31 Aug and 12 Sep 2027, plus road closure and temple passes on 30-31 Oct.",
-    hi: "त्र्यंबकेश्वर कुंभ 2027: कुशावर्त पर ध्वजारोहण 31 अक्टूबर 2026, अमृत स्नान 2 अगस्त, 31 अगस्त और 12 सितंबर 2027; 30-31 अक्टूबर को सड़क बंद और दर्शन पास।",
-    mr: "त्र्यंबकेश्वर कुंभमेळा 2027: कुशावर्तावर ध्वजारोहण ३१ ऑक्टोबर २०२६, अमृत स्नान २ ऑगस्ट, ३१ ऑगस्ट व १२ सप्टेंबर २०२७; ३०-३१ ऑक्टोबरला रस्ता बंद, दर्शन पास.",
+    en: "Trimbakeshwar Kumbh 2027: flag hoisted at Kushavarta on 31 Oct 2026, Kushavarta open for bathing again from 1 Nov (reported), Amrit Snans 2 Aug, 31 Aug, 12 Sep 2027.",
+    hi: "त्र्यंबकेश्वर कुंभ 2027: 31 अक्टूबर 2026 को कुशावर्त पर ध्वजारोहण, 1 नवंबर से कुशावर्त में फिर स्नान (रिपोर्ट), अमृत स्नान 2 अगस्त, 31 अगस्त और 12 सितंबर 2027।",
+    mr: "त्र्यंबकेश्वर कुंभमेळा 2027: ३१ ऑक्टोबर २०२६ ला कुशावर्तावर ध्वजारोहण, १ नोव्हेंबरपासून कुशावर्तात पुन्हा स्नान (वृत्त), अमृत स्नान २ ऑगस्ट, ३१ ऑगस्ट व १२ सप्टेंबर २०२७.",
   },
   h1: {
     en: "Trimbakeshwar Kumbh 2027: a pilgrim's guide",
@@ -18,17 +18,17 @@ export const page: InfoPageContent = {
     mr: "त्र्यंबकेश्वर कुंभमेळा २०२७: भाविकांसाठी मार्गदर्शक",
   },
   intro: {
-    en: `In brief: Trimbakeshwar is the second venue of the Nashik-Trimbakeshwar Simhastha Kumbh Mela. The Kumbh opens with the flag hoisting at Kushavarta on Saturday 31 October 2026 at 12:02 PM. The three Amrit Snans at Kushavarta are on Monday 2 August, Tuesday 31 August and Sunday 12 September 2027 (the last one for the Shaiva akhadas), and the Simhastha closes in Trimbak on Monday 24 July 2028. On 30 and 31 October 2026 the Nashik-Trimbak road is closed and darshan at the temple is reported to be limited to 3,000 pass holders, so if you can, plan your Trimbak trip for another day.
+    en: `In brief (updated 5 November 2026): Trimbakeshwar is the second venue of the Nashik-Trimbakeshwar Simhastha Kumbh Mela, and the Kumbh has now formally begun. Chief Minister Devendra Fadnavis hoisted the flag at Kushavarta at 12:02 PM on Saturday 31 October 2026 (PTI). Kushavarta, closed for renovation since 30 September, was open to devotees again from Sunday 1 November, when more than 10,000 people bathed and took darshan, according to Pudhari (REPORTED: we have not seen an official notice on bathing timings). The three Amrit Snans at Kushavarta are on Monday 2 August, Tuesday 31 August and Sunday 12 September 2027 (the last one for the Shaiva akhadas), and the Simhastha closes in Trimbak on Monday 24 July 2028.
 
 The Simhastha Kumbh Mela is held in two places: Nashik and Trimbakeshwar. Trimbak, at the foot of Brahmagiri hill, is home to one of the 12 Jyotirlingas, and its Kushavarta kund is the main bathing spot on the Trimbak side.
 
 This independent guide puts together what is known so far about Trimbakeshwar Kumbh 2027: dates, the Kushavarta works, new ghats, buses and where to stay. We are not an official site. Every source is listed at the foot of this page.`,
-    hi: `संक्षेप में: त्र्यंबकेश्वर नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभ मेले का दूसरा स्थल है। कुंभ की शुरुआत शनिवार 31 अक्टूबर 2026 को दोपहर 12:02 बजे कुशावर्त पर ध्वजारोहण से होगी। कुशावर्त पर तीनों अमृत स्नान सोमवार 2 अगस्त, मंगलवार 31 अगस्त और रविवार 12 सितंबर 2027 को हैं (आखिरी स्नान शैव अखाड़ों का), और त्र्यंबक में सिंहस्थ का समापन सोमवार 24 जुलाई 2028 को होगा। 30 और 31 अक्टूबर 2026 को नाशिक-त्र्यंबक सड़क बंद रहेगी और खबरों के अनुसार मंदिर में दर्शन सिर्फ 3,000 पासधारकों को मिलेगा, इसलिए हो सके तो त्र्यंबक किसी और दिन जाएं।
+    hi: `संक्षेप में (अपडेट: 5 नवंबर 2026): त्र्यंबकेश्वर नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभ मेले का दूसरा स्थल है, और कुंभ की औपचारिक शुरुआत हो चुकी है। शनिवार 31 अक्टूबर 2026 को दोपहर 12:02 बजे मुख्यमंत्री देवेंद्र फडणवीस ने कुशावर्त पर ध्वजारोहण किया (PTI)। 30 सितंबर से मरम्मत के लिए बंद कुशावर्त रविवार 1 नवंबर से श्रद्धालुओं के लिए फिर खुल गया; पुढारी के अनुसार उस दिन 10,000 से ज़्यादा लोगों ने स्नान और दर्शन किया (रिपोर्ट: स्नान के समय पर कोई आधिकारिक सूचना हमें नहीं मिली)। कुशावर्त पर तीनों अमृत स्नान सोमवार 2 अगस्त, मंगलवार 31 अगस्त और रविवार 12 सितंबर 2027 को हैं (आखिरी स्नान शैव अखाड़ों का), और त्र्यंबक में सिंहस्थ का समापन सोमवार 24 जुलाई 2028 को होगा।
 
 सिंहस्थ कुंभ मेला दो स्थानों पर होता है: नाशिक और त्र्यंबकेश्वर। ब्रह्मगिरि पर्वत की तलहटी में बसा त्र्यंबक 12 ज्योतिर्लिंगों में से एक का स्थान है, और यहां का कुशावर्त कुंड त्र्यंबक की ओर का मुख्य स्नान स्थल है।
 
 यह स्वतंत्र गाइड त्र्यंबकेश्वर कुंभ 2027 के बारे में अब तक की जानकारी एक जगह देती है: तिथियां, कुशावर्त का काम, नए घाट, बसें और ठहरने की व्यवस्था। यह कोई सरकारी साइट नहीं है। सभी स्रोत पेज के नीचे दिए गए हैं।`,
-    mr: `थोडक्यात: त्र्यंबकेश्वर हे नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभमेळ्याचे दुसरे स्थान आहे. कुंभमेळ्याची सुरुवात शनिवार, ३१ ऑक्टोबर २०२६ रोजी दुपारी १२.०२ वाजता कुशावर्तावरील ध्वजारोहणाने होईल. कुशावर्तावरील तिन्ही अमृत स्नान सोमवार, २ ऑगस्ट; मंगळवार, ३१ ऑगस्ट आणि रविवार, १२ सप्टेंबर २०२७ रोजी आहेत (शेवटचे स्नान शैव आखाड्यांचे). त्र्यंबकमधील सिंहस्थाची समाप्ती सोमवार, २४ जुलै २०२८ रोजी होईल. ३० आणि ३१ ऑक्टोबर २०२६ ला नाशिक-त्र्यंबक रस्ता बंद असेल आणि वृत्तानुसार मंदिरात फक्त ३,००० पासधारकांनाच दर्शन मिळेल, त्यामुळे शक्य असल्यास त्र्यंबकची भेट दुसऱ्या दिवशी ठरवा.
+    mr: `थोडक्यात (अद्ययावत: ५ नोव्हेंबर २०२६): त्र्यंबकेश्वर हे नाशिक-त्र्यंबकेश्वर सिंहस्थ कुंभमेळ्याचे दुसरे स्थान असून कुंभपर्वाला आता औपचारिक सुरुवात झाली आहे. शनिवार, ३१ ऑक्टोबर २०२६ रोजी दुपारी १२.०२ वाजता मुख्यमंत्री देवेंद्र फडणवीस यांनी कुशावर्तावर ध्वजारोहण केले (PTI). ३० सप्टेंबरपासून नूतनीकरणासाठी बंद असलेले कुशावर्त रविवार, १ नोव्हेंबरपासून भाविकांसाठी पुन्हा खुले झाले; त्या दिवशी १० हजारांहून अधिक भाविकांनी स्नान आणि दर्शन घेतले, असे पुढारीचे वृत्त आहे (वृत्त: स्नानाच्या वेळांबाबत अधिकृत सूचना आमच्या पाहण्यात आलेली नाही). कुशावर्तावरील तिन्ही अमृत स्नान सोमवार, २ ऑगस्ट; मंगळवार, ३१ ऑगस्ट आणि रविवार, १२ सप्टेंबर २०२७ रोजी आहेत (शेवटचे स्नान शैव आखाड्यांचे). त्र्यंबकमधील सिंहस्थाची समाप्ती सोमवार, २४ जुलै २०२८ रोजी होईल.
 
 सिंहस्थ कुंभमेळा दोन ठिकाणी भरतो: नाशिक आणि त्र्यंबकेश्वर. ब्रह्मगिरीच्या पायथ्याशी वसलेले त्र्यंबक हे बारा ज्योतिर्लिंगांपैकी एकाचे स्थान आहे आणि येथील कुशावर्त कुंड हे त्र्यंबकमधील मुख्य स्नानस्थळ आहे.
 
@@ -37,38 +37,38 @@ This independent guide puts together what is known so far about Trimbakeshwar Ku
   sections: [
     {
       heading: {
-        en: "Trimbakeshwar on 30 and 31 October 2026: what is reported",
-        hi: "30 और 31 अक्टूबर 2026 को त्र्यंबकेश्वर: अब तक की खबरें",
-        mr: "३० आणि ३१ ऑक्टोबर २०२६ ला त्र्यंबकेश्वर: आतापर्यंतचे वृत्त",
+        en: "Trimbakeshwar after the flag hoisting: what has happened",
+        hi: "ध्वजारोहण के बाद त्र्यंबकेश्वर: अब तक क्या हुआ",
+        mr: "ध्वजारोहणानंतर त्र्यंबकेश्वर: आतापर्यंत काय घडले",
       },
       body: {
-        en: `The flag hoisting brings the President and the Chief Minister to Trimbak, and the town runs on special rules for two days. Everything below is **reported** by local papers. Rashtrapati Bhavan has not published the President's programme, and we have not seen the written orders ourselves.
+        en: `The two days of special rules for the flag hoisting are over. Here is what is known so far, with each item labelled.
 
-- **Temple and Kushavarta closed to outside devotees, 12 noon 30 October to 6 PM 31 October.** A Collector's order allows only Trimbak residents and official darshan-pass holders in (REPORTED, PTI, 29 October). This replaces the earlier report (Sakal, 21 October) that the temple would stay open for 3,000 pass holders. [Closure details](/blog/trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic)
-- **Nashik-Trimbak road closed from 8 AM on Friday 30 October to 8 PM on Saturday 31 October.** Traffic goes via Girnare, about 61 km instead of 30 km from Nashik, and the Ghoti-Trimbakeshwar road is also closed, according to the Times of India. [Detour routes for 30-31 October](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route)
-- **Flag hoisting at Kushavarta at 12:02 PM.** Sarkarnama reports that the Shringeri Shankaracharya, Vidhushekhara Bharati, will hoist the flag and that only about 100 people will fit at the ceremony. The President is to perform a 12-minute Godavari puja at Kushavarta at about 2 PM, then a 15-minute puja in the temple. Pudhari's account differs on who will be where. [The President's reported Trimbak plan](/blog/president-12-minute-godavari-puja-kushavarta-2-pm-trimbakeshwar-plan-31-october-shankaracharya-flag)
-- **Procession on Friday 30 October at 4 PM,** from Kushavarta via the temple to the municipal council office (Sarkarnama).
-- **No drones or paragliding** on 30 and 31 October in the Nashik rural district, which takes in Trimbakeshwar, under an order from Additional District Magistrate Rohitkumar Rajput (Prahaar). [The no-drone order](/blog/no-drone-zone-nashik-city-and-rural-district-30-31-october-paragliders-hot-air-balloons-banned-flag-hoisting)
+- **Flag hoisted at Kushavarta at 12:02 PM on 31 October.** Chief Minister Devendra Fadnavis hoisted the flag at the same moment as President Droupadi Murmu at Ramkund in Nashik (REPORTED, PTI). Free Press Journal reports he offered prayers in the presence of Jagadguru Sri Sri Bharati Tirtha Mahaswamiji of Sringeri Sharada Peeth, and PTI reports the President had darshan and puja at the Trimbakeshwar temple in the afternoon. [What happened at the 31 October flag hoisting](/blog/nashik-kumbh-2027-flag-hoisting)
+- **The closure order has ended.** The Collector's order kept outside devotees out of the temple and Kushavarta from 12 noon on 30 October to 6 PM on 31 October (CONFIRMED, Collector's release reported by PTI). We have not seen any new closure order since. [The 30-31 October temple and Kushavarta closure order](/blog/trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic)
+- **Bathing at Kushavarta again from 1 November.** More than 10,000 devotees bathed at Kushavarta and queued for darshan on Sunday 1 November, and flower sellers, hotels and shops in the town reopened (REPORTED, Pudhari, 2 November). [Kushavarta open again: the 1 November report](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi)
+- **New ghats near Prayag Tirth.** Because the old kund has little space, the administration has built new ghats in the Godavari bed near Prayag Tirth at Pegalwadi. The Chief Minister hoisted a flag there too, and some devotees now call it the "new Kushavarta". Works there are still in progress (REPORTED, Pudhari).
+- **Roads.** The Nashik-Trimbak road was closed only until 8 PM on 31 October, with traffic sent via Girnare (Times of India).
 
-For the whole day in Nashik and Trimbak, see our [Dhwajarohan 2026 live hub](/dhwajarohan-2026).`,
-        hi: `ध्वजारोहण के लिए राष्ट्रपति और मुख्यमंत्री त्र्यंबक आने वाले हैं, इसलिए दो दिन शहर में खास नियम लागू रहेंगे। नीचे दी गई सारी जानकारी स्थानीय अखबारों की **रिपोर्ट** पर आधारित है। राष्ट्रपति भवन ने राष्ट्रपति का कार्यक्रम जारी नहीं किया है और लिखित आदेश हमने खुद नहीं देखे हैं।
+For the current status of Kushavarta, the temple and the heliport, see our [Kumbh status board](/kumbh-status).`,
+        hi: `ध्वजारोहण के लिए लगे दो दिन के खास नियम अब खत्म हो चुके हैं। अब तक की जानकारी नीचे है, हर बात के साथ उसका स्रोत।
 
-- **मंदिर और कुशावर्त बाहरी श्रद्धालुओं के लिए बंद, 30 अक्टूबर दोपहर 12 बजे से 31 अक्टूबर शाम 6 बजे तक।** कलेक्टर के आदेश से सिर्फ़ त्र्यंबक के निवासी और आधिकारिक दर्शन पास वाले जा सकेंगे (रिपोर्ट, PTI, 29 अक्टूबर)। यह Sakal (21 अक्टूबर) की उस ख़बर की जगह है कि मंदिर 3,000 पासधारकों के लिए खुला रहेगा। [बंदी की पूरी खबर](/blog/trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic)
-- **नाशिक-त्र्यंबक सड़क शुक्रवार 30 अक्टूबर सुबह 8 बजे से शनिवार 31 अक्टूबर रात 8 बजे तक बंद।** Times of India के अनुसार गाड़ियां गिरणारे होकर जाएंगी, यानी नाशिक से 30 किमी की जगह करीब 61 किमी, और घोटी-त्र्यंबकेश्वर सड़क भी बंद रहेगी। [30-31 अक्टूबर के वैकल्पिक रास्ते](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route)
-- **कुशावर्त पर दोपहर 12:02 बजे ध्वजारोहण।** Sarkarnama के अनुसार ध्वज शृंगेरी के शंकराचार्य विधुशेखर भारती फहराएंगे और जगह कम होने से समारोह में करीब 100 लोग ही रह पाएंगे। राष्ट्रपति करीब 2 बजे कुशावर्त पर 12 मिनट की गोदावरी पूजा और फिर मंदिर में 15 मिनट की पूजा करेंगी। कौन कहां रहेगा, इस पर Pudhari की रिपोर्ट अलग है। [त्र्यंबक में राष्ट्रपति का प्रस्तावित कार्यक्रम](/blog/president-12-minute-godavari-puja-kushavarta-2-pm-trimbakeshwar-plan-31-october-shankaracharya-flag)
-- **शुक्रवार 30 अक्टूबर, शाम 4 बजे शोभायात्रा,** कुशावर्त से मंदिर होते हुए नगर परिषद कार्यालय तक (Sarkarnama)।
-- **ड्रोन और पैराग्लाइडिंग पर रोक:** 30 और 31 अक्टूबर को नाशिक ग्रामीण क्षेत्र में, जिसमें त्र्यंबकेश्वर भी आता है, अपर जिला दंडाधिकारी रोहितकुमार राजपूत के आदेश से (Prahaar)। [ड्रोन पर रोक का आदेश](/blog/no-drone-zone-nashik-city-and-rural-district-30-31-october-paragliders-hot-air-balloons-banned-flag-hoisting)
+- **31 अक्टूबर दोपहर 12:02 बजे कुशावर्त पर ध्वजारोहण।** मुख्यमंत्री देवेंद्र फडणवीस ने उसी समय कुशावर्त पर ध्वज फहराया जब राष्ट्रपति द्रौपदी मुर्मू ने नाशिक के रामकुंड पर ध्वज फहराया (रिपोर्ट, PTI)। Free Press Journal के अनुसार उन्होंने शृंगेरी शारदा पीठ के जगद्गुरु श्री श्री भारती तीर्थ महास्वामी की उपस्थिति में पूजा की, और PTI के अनुसार राष्ट्रपति ने दोपहर में त्र्यंबकेश्वर मंदिर में दर्शन और पूजा की। [31 अक्टूबर के ध्वजारोहण में क्या हुआ](/blog/nashik-kumbh-2027-flag-hoisting)
+- **बंदी का आदेश खत्म।** कलेक्टर के आदेश से मंदिर और कुशावर्त 30 अक्टूबर दोपहर 12 बजे से 31 अक्टूबर शाम 6 बजे तक बाहरी श्रद्धालुओं के लिए बंद थे (पुष्ट, कलेक्टर की विज्ञप्ति, PTI के हवाले से)। उसके बाद का कोई नया बंदी आदेश हमें नहीं मिला। [30-31 अक्टूबर को मंदिर और कुशावर्त बंदी का आदेश](/blog/trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic)
+- **1 नवंबर से कुशावर्त में फिर स्नान।** रविवार 1 नवंबर को 10,000 से ज़्यादा श्रद्धालुओं ने कुशावर्त में स्नान किया और दर्शन के लिए कतार में लगे, और शहर में फूल वाले, होटल और दुकानें फिर खुल गईं (रिपोर्ट, पुढारी, 2 नवंबर)। [कुशावर्त फिर खुला: 1 नवंबर की खबर](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi)
+- **प्रयाग तीर्थ के पास नए घाट।** पुराने कुंड में जगह कम होने के कारण प्रशासन ने पेगलवाड़ी में प्रयाग तीर्थ के पास गोदावरी पात्र में नए घाट बनाए हैं। वहां भी मुख्यमंत्री ने ध्वजारोहण किया, और कुछ श्रद्धालु इसे "नया कुशावर्त" कहने लगे हैं। वहां काम अभी जारी है (रिपोर्ट, पुढारी)।
+- **सड़क।** नाशिक-त्र्यंबक सड़क सिर्फ़ 31 अक्टूबर रात 8 बजे तक बंद थी और गाड़ियां गिरणारे होकर भेजी गई थीं (Times of India)।
 
-नाशिक और त्र्यंबक के पूरे दिन के कार्यक्रम के लिए हमारा [ध्वजारोहण 2026 लाइव हब](/dhwajarohan-2026) देखें।`,
-        mr: `ध्वजारोहणासाठी राष्ट्रपती आणि मुख्यमंत्री त्र्यंबकला येणार असल्याने दोन दिवस गावात विशेष नियम लागू असतील. खालील सर्व माहिती स्थानिक वृत्तपत्रांच्या **वृत्तांवर** आधारित आहे. राष्ट्रपती भवनाने राष्ट्रपतींचा कार्यक्रम जाहीर केलेला नाही आणि लेखी आदेश आम्ही स्वतः पाहिलेले नाहीत.
+कुशावर्त, मंदिर और हेलिपोर्ट की ताज़ा स्थिति के लिए हमारा [कुंभ स्टेटस बोर्ड](/kumbh-status) देखें।`,
+        mr: `ध्वजारोहणासाठी लागू असलेले दोन दिवसांचे विशेष निर्बंध आता संपले आहेत. आतापर्यंतची माहिती खाली दिली आहे, प्रत्येक मुद्द्यासोबत त्याचा स्रोत.
 
-- **मंदिर आणि कुशावर्त बाहेरगावच्या भाविकांसाठी बंद, ३० ऑक्टोबर दुपारी १२ ते ३१ ऑक्टोबर सायंकाळी ६.** जिल्हाधिकाऱ्यांच्या आदेशानुसार फक्त त्र्यंबकचे रहिवासी आणि अधिकृत दर्शन पासधारकांना प्रवेश (वृत्त, PTI, २९ ऑक्टोबर). मंदिर ३,००० पासधारकांसाठी खुले राहील, हे सकाळचे (२१ ऑक्टोबर) आधीचे वृत्त यामुळे मागे पडले. [बंदीची सविस्तर बातमी](/blog/trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic)
-- **नाशिक-त्र्यंबक रस्ता शुक्रवार, ३० ऑक्टोबर सकाळी ८ ते शनिवार, ३१ ऑक्टोबर रात्री ८ पर्यंत बंद.** Times of India नुसार वाहतूक गिरणारेमार्गे वळवली असून नाशिकहून ३० किमीऐवजी सुमारे ६१ किमी अंतर पडेल. घोटी-त्र्यंबकेश्वर रस्ताही बंद असेल. [३०-३१ ऑक्टोबरचे पर्यायी मार्ग](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route)
-- **कुशावर्तावर दुपारी १२.०२ वाजता ध्वजारोहण.** सरकारनामाच्या वृत्तानुसार शृंगेरीचे शंकराचार्य विधुशेखर भारती ध्वज फडकवतील आणि जागा कमी असल्याने सोहळ्याला सुमारे १०० जणच उपस्थित राहू शकतील. राष्ट्रपती दुपारी सुमारे २ वाजता कुशावर्तावर १२ मिनिटांची गोदावरी पूजा आणि नंतर मंदिरात १५ मिनिटांची पूजा करतील. कोण कुठे असेल, याबाबत पुढारीचे वृत्त वेगळे आहे. [राष्ट्रपतींचा त्र्यंबकमधील नियोजित कार्यक्रम](/blog/president-12-minute-godavari-puja-kushavarta-2-pm-trimbakeshwar-plan-31-october-shankaracharya-flag)
-- **शुक्रवार, ३० ऑक्टोबर, दुपारी ४ वाजता शोभायात्रा,** कुशावर्तापासून मंदिरमार्गे नगर परिषद कार्यालयापर्यंत (सरकारनामा).
-- **ड्रोन आणि पॅराग्लायडिंगला बंदी:** ३० आणि ३१ ऑक्टोबरला नाशिक ग्रामीण भागात, ज्यात त्र्यंबकेश्वरचाही समावेश आहे, अपर जिल्हादंडाधिकारी रोहितकुमार राजपूत यांच्या आदेशानुसार (प्रहार). [ड्रोन बंदीचा आदेश](/blog/no-drone-zone-nashik-city-and-rural-district-30-31-october-paragliders-hot-air-balloons-banned-flag-hoisting)
+- **३१ ऑक्टोबरला दुपारी १२.०२ वाजता कुशावर्तावर ध्वजारोहण.** नाशिकच्या रामकुंडावर राष्ट्रपती द्रौपदी मुर्मू यांनी धर्मध्वज फडकवला, त्याच क्षणी मुख्यमंत्री देवेंद्र फडणवीस यांनी कुशावर्तावर ध्वजारोहण केले (वृत्त, PTI). शृंगेरी शारदा पीठाचे जगद्गुरु श्री श्री भारती तीर्थ महास्वामी यांच्या उपस्थितीत त्यांनी पूजा केली, असे Free Press Journal चे वृत्त आहे, तर दुपारी राष्ट्रपतींनी त्र्यंबकेश्वर मंदिरात दर्शन व पूजा केली, असे PTI ने म्हटले आहे. [३१ ऑक्टोबरच्या ध्वजारोहणात काय घडले](/blog/nashik-kumbh-2027-flag-hoisting)
+- **बंदीचा आदेश संपला.** जिल्हाधिकाऱ्यांच्या आदेशानुसार मंदिर आणि कुशावर्त ३० ऑक्टोबर दुपारी १२ ते ३१ ऑक्टोबर सायंकाळी ६ पर्यंत बाहेरगावच्या भाविकांसाठी बंद होते (पुष्टी, जिल्हाधिकाऱ्यांचे प्रसिद्धिपत्रक, PTI च्या वृत्तानुसार). त्यानंतर नवा बंदी आदेश आमच्या पाहण्यात आलेला नाही. [३०-३१ ऑक्टोबरचा मंदिर व कुशावर्त बंदीचा आदेश](/blog/trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic)
+- **१ नोव्हेंबरपासून कुशावर्तात पुन्हा स्नान.** रविवार, १ नोव्हेंबरला १० हजारांहून अधिक भाविकांनी कुशावर्तात स्नान केले आणि दर्शनासाठी रांगा लावल्या; गावातील फूलविक्रेते, हॉटेल आणि दुकाने पुन्हा उघडली (वृत्त, पुढारी, २ नोव्हेंबर). [कुशावर्त पुन्हा खुले: १ नोव्हेंबरचे वृत्त](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi)
+- **प्रयाग तीर्थाजवळ नवे घाट.** जुन्या कुंडावर जागा कमी असल्याने प्रशासनाने पेगलवाडी येथे प्रयाग तीर्थाजवळ गोदावरी पात्रात नवे घाट बांधले आहेत. तेथेही मुख्यमंत्र्यांच्या हस्ते ध्वजारोहण झाले आणि काही भाविक या जागेला "नवे कुशावर्त" म्हणू लागले आहेत. तेथील कामे अजून सुरू आहेत (वृत्त, पुढारी).
+- **रस्ता.** नाशिक-त्र्यंबक रस्ता फक्त ३१ ऑक्टोबर रात्री ८ पर्यंत बंद होता आणि वाहतूक गिरणारेमार्गे वळवली होती (Times of India).
 
-नाशिक आणि त्र्यंबकमधील संपूर्ण दिवसाच्या कार्यक्रमासाठी आमचा [ध्वजारोहण २०२६ लाइव्ह हब](/dhwajarohan-2026) पाहा.`,
+कुशावर्त, मंदिर आणि हेलिपोर्टच्या सद्यस्थितीसाठी आमचा [कुंभ स्टेटस बोर्ड](/kumbh-status) पाहा.`,
       },
     },
     {
@@ -82,17 +82,17 @@ For the whole day in Nashik and Trimbak, see our [Dhwajarohan 2026 live hub](/dh
 
 According to the NTKMA Kumbh Mela Plan (June 2026), the Shaiva akhadas take their third Amrit Snan at Kushavarta on 12 September 2027, one day after the Vaishnav akhadas bathe at Ramkund in Nashik. "Amrit Snan" is the new official name for what was called "Shahi Snan".
 
-Trimbak also has its own closing date. The NTKMA plan gives Monday 24 July 2028 for Trimbakeshwar and Saturday 29 July 2028 for Nashik.`,
+Trimbak also has its own closing date. The NTKMA plan gives Monday 24 July 2028 for Trimbakeshwar and Saturday 29 July 2028 for Nashik. The Authority's official website, simhasthamahakumbh.maharashtra.gov.in, gives a single end date of 24 July 2028, which matches the Trimbak date. We are keeping the plan's separate Nashik date until the Authority clarifies.`,
         hi: `कुशावर्त को गोदावरी का प्रतीकात्मक उद्गम माना जाता है। अमृत स्नान नाशिक के रामकुंड और त्र्यंबक के कुशावर्त, दोनों जगह होते हैं।
 
 NTKMA की कुंभ मेला योजना (जून 2026) के अनुसार, शैव अखाड़े अपना तीसरा अमृत स्नान 12 सितंबर 2027 को कुशावर्त पर करेंगे, यानी नाशिक के रामकुंड पर वैष्णव अखाड़ों के स्नान के एक दिन बाद। "अमृत स्नान" उसी स्नान का नया आधिकारिक नाम है जिसे पहले "शाही स्नान" कहा जाता था।
 
-त्र्यंबक की समापन तिथि भी अलग है। NTKMA योजना में त्र्यंबकेश्वर के लिए सोमवार, 24 जुलाई 2028 और नाशिक के लिए शनिवार, 29 जुलाई 2028 दी गई है।`,
+त्र्यंबक की समापन तिथि भी अलग है। NTKMA योजना में त्र्यंबकेश्वर के लिए सोमवार, 24 जुलाई 2028 और नाशिक के लिए शनिवार, 29 जुलाई 2028 दी गई है। प्राधिकरण की आधिकारिक वेबसाइट simhasthamahakumbh.maharashtra.gov.in पर समापन की एक ही तारीख, 24 जुलाई 2028, दी गई है, जो त्र्यंबक की तारीख से मेल खाती है। प्राधिकरण के स्पष्ट करने तक हम नाशिक के लिए योजना की अलग तारीख ही रख रहे हैं।`,
         mr: `कुशावर्ताला गोदावरीचे प्रतीकात्मक उगमस्थान मानले जाते. अमृत स्नान नाशिकच्या रामकुंडावर आणि त्र्यंबकच्या कुशावर्तावर, अशा दोन्ही ठिकाणी होते.
 
 NTKMA च्या कुंभमेळा आराखड्यानुसार (जून २०२६) शैव आखाडे त्यांचे तिसरे अमृत स्नान १२ सप्टेंबर २०२७ रोजी कुशावर्तावर करतील, म्हणजे नाशिकमध्ये रामकुंडावर वैष्णव आखाड्यांच्या स्नानानंतर एका दिवसाने. पूर्वीच्या "शाही स्नाना"ला आता अधिकृतपणे "अमृत स्नान" म्हटले जाते.
 
-त्र्यंबकची समाप्ती तारीखही वेगळी आहे. NTKMA आराखड्यात त्र्यंबकेश्वरसाठी सोमवार, २४ जुलै २०२८ आणि नाशिकसाठी शनिवार, २९ जुलै २०२८ अशी तारीख आहे.`,
+त्र्यंबकची समाप्ती तारीखही वेगळी आहे. NTKMA आराखड्यात त्र्यंबकेश्वरसाठी सोमवार, २४ जुलै २०२८ आणि नाशिकसाठी शनिवार, २९ जुलै २०२८ अशी तारीख आहे. प्राधिकरणाच्या अधिकृत संकेतस्थळावर (simhasthamahakumbh.maharashtra.gov.in) समाप्तीची एकच तारीख, २४ जुलै २०२८, दिली आहे; ती त्र्यंबकच्या तारखेशी जुळते. प्राधिकरण स्पष्टीकरण देईपर्यंत नाशिकसाठी आराखड्यातील वेगळी तारीखच आम्ही कायम ठेवत आहोत.`,
       },
     },
     {
@@ -104,7 +104,7 @@ NTKMA च्या कुंभमेळा आराखड्यानुसा
       body: {
         en: `These dates are confirmed in the NTKMA plan and the schedule announced on 1 June 2025:
 
-- **Sat 31 October 2026, 12:02 PM: Dhwajarohan** (flag hoisting) at Kushavarta, at the same moment as at Ramkund in Nashik. Read our [Dhwajarohan 2026 guide](/dhwajarohan-2026).
+- **Sat 31 October 2026, 12:02 PM: Dhwajarohan** (flag hoisting) at Kushavarta, held at the same moment as at Ramkund in Nashik. Read our [Dhwajarohan 2026 guide](/dhwajarohan-2026).
 - **Mon 2 August 2027: 1st Amrit Snan**, Ashadh Somvati Amavasya, at Kushavarta.
 - **Tue 31 August 2027: 2nd Amrit Snan**, Shravan Amavasya, at Kushavarta.
 - **Sun 12 September 2027: 3rd Amrit Snan**, Bhadrapada Shuddha Dwadashi (Vaman Dwadashi), at Kushavarta, for the Shaiva akhadas.
@@ -121,7 +121,7 @@ The NTKMA plan's timeline graphic also lists these parvani (holy bathing) days f
 Amrit Snan timings (hours) have not been published yet. See the full calendar on our [Kumbh dates page](/dates) and the [parva snan calendar](/parva-snan-calendar).`,
         hi: `ये तिथियां NTKMA योजना और 1 जून 2025 को घोषित कार्यक्रम में पक्की हैं:
 
-- **शनिवार, 31 अक्टूबर 2026, दोपहर 12:02 बजे: ध्वजारोहण**, कुशावर्त पर, नाशिक के रामकुंड के साथ एक ही समय पर। हमारी [ध्वजारोहण 2026 गाइड](/dhwajarohan-2026) पढ़ें।
+- **शनिवार, 31 अक्टूबर 2026, दोपहर 12:02 बजे: ध्वजारोहण**, कुशावर्त पर, नाशिक के रामकुंड के साथ एक ही समय पर संपन्न। हमारी [ध्वजारोहण 2026 गाइड](/dhwajarohan-2026) पढ़ें।
 - **सोमवार, 2 अगस्त 2027: पहला अमृत स्नान**, आषाढ़ सोमवती अमावस्या, कुशावर्त पर।
 - **मंगलवार, 31 अगस्त 2027: दूसरा अमृत स्नान**, श्रावण अमावस्या, कुशावर्त पर।
 - **रविवार, 12 सितंबर 2027: तीसरा अमृत स्नान**, भाद्रपद शुद्ध द्वादशी (वामन द्वादशी), कुशावर्त पर, शैव अखाड़ों का।
@@ -138,7 +138,7 @@ NTKMA योजना के टाइमलाइन ग्राफिक म�
 अमृत स्नान का समय (घंटे) अभी जारी नहीं हुआ है। पूरा कैलेंडर हमारे [कुंभ तिथि पेज](/dates) और [पर्व स्नान कैलेंडर](/parva-snan-calendar) पर देखें।`,
         mr: `या तारखा NTKMA आराखडा आणि १ जून २०२५ रोजी जाहीर झालेल्या वेळापत्रकात निश्चित आहेत:
 
-- **शनिवार, ३१ ऑक्टोबर २०२६, दुपारी १२.०२: ध्वजारोहण**, कुशावर्तावर, नाशिकच्या रामकुंडासोबत एकाच वेळी. आमचे [ध्वजारोहण २०२६ मार्गदर्शक](/dhwajarohan-2026) वाचा.
+- **शनिवार, ३१ ऑक्टोबर २०२६, दुपारी १२.०२: ध्वजारोहण**, कुशावर्तावर, नाशिकच्या रामकुंडासोबत एकाच वेळी पार पडले. आमचे [ध्वजारोहण २०२६ मार्गदर्शक](/dhwajarohan-2026) वाचा.
 - **सोमवार, २ ऑगस्ट २०२७: पहिले अमृत स्नान**, आषाढ सोमवती अमावास्या, कुशावर्तावर.
 - **मंगळवार, ३१ ऑगस्ट २०२७: दुसरे अमृत स्नान**, श्रावण अमावास्या, कुशावर्तावर.
 - **रविवार, १२ सप्टेंबर २०२७: तिसरे अमृत स्नान**, भाद्रपद शुद्ध द्वादशी (वामन द्वादशी), कुशावर्तावर, शैव आखाड्यांचे.
@@ -184,32 +184,32 @@ We will update this when an official list of muhurats is published.`,
     },
     {
       heading: {
-        en: "Kushavarta: closed for renovation",
-        hi: "कुशावर्त: मरम्मत के लिए बंद",
-        mr: "कुशावर्त: नूतनीकरणासाठी बंद",
+        en: "Kushavarta: open again after renovation (reported)",
+        hi: "कुशावर्त: मरम्मत के बाद फिर खुला (रिपोर्ट)",
+        mr: "कुशावर्त: नूतनीकरणानंतर पुन्हा खुले (वृत्त)",
       },
       body: {
-        en: `Kushavarta Tirth has been closed to pilgrims since 30 September 2026. The work covers draining the kund, conserving the steps, a filtration plant and heritage lighting, with the State Archaeology Department leading. The renovated kund is to be inaugurated on 31 October.
+        en: `Kushavarta Tirth was closed to pilgrims from 30 September 2026 for renovation: draining the kund, conserving the steps, a filtration plant and heritage lighting, with the State Archaeology Department leading. Collector Ayush Prasad had said the closure would run to 30 October (Times of India, 29 September 2026), and Lokmat Times (4 October 2026) had reported it would reopen on 31 October. The kund, which holds about 9 lakh litres, was to be refilled from the Gangasagar lake (Sarkarnama, 24 October).
 
-Sources differ on the reopening date. Collector Ayush Prasad said on record the closure runs from 30 September to 30 October (Times of India, 29 September 2026). Lokmat Times (4 October 2026) reported that it "will reopen on October 31". Check before you travel for a bath.
+**Now (REPORTED):** devotees were bathing in Kushavarta again from Sunday 1 November, Pudhari reported on 2 November. We have not seen an official notice from the Collector, the Kumbh Mela Authority or the Trimbakeshwar Nagar Parishad giving bathing timings or rules after the renovation, and remaining works could close parts of the area again.
 
-New flag poles (Dhwaja Stambhas) are also being set up at Kushavarta and at the Sadhugram/Ghat in Trimbak before 31 October, according to the NTKMA plan.
+**Water cleaning:** the Kumbh Mela Authority has signed a ₹28 crore agreement with the Vishwaraj Foundation under which the kund's water is to be cleaned in about 6 hours and the kund refilled in 3 hours, Divya Marathi reported on 2 November. No start date has been published. [The ₹28 crore Kushavarta water deal](/blog/vips-to-reach-ramkund-by-boat-ktm-helipad-godavari-waterway-police-plan-kushavarta-water-cleaned-in-6-hours-28-crore-deal)
 
-**Update, 29 October:** at a review on 20 October the Collector ordered 32 works around Kushavarta to be finished by 25 October, according to Sakal. The kund, which holds about 9 lakh litres, is to be refilled from the Gangasagar lake (Sarkarnama, 24 October). We have not seen a notice on when the kund reopens for ordinary bathing after the ceremony.`,
-        hi: `कुशावर्त तीर्थ 30 सितंबर 2026 से श्रद्धालुओं के लिए बंद है। इसमें कुंड का पानी निकालना, सीढ़ियों का संरक्षण, फिल्ट्रेशन प्लांट और हेरिटेज लाइटिंग का काम शामिल है, जो राज्य पुरातत्व विभाग की अगुवाई में हो रहा है। नए रूप में कुंड का उद्घाटन 31 अक्टूबर को होना है।
+Planning a ritual bath? Go early in the day, expect crowds on weekends and festival days, and ask locally before you set out.`,
+        hi: `कुशावर्त तीर्थ 30 सितंबर 2026 से मरम्मत के लिए श्रद्धालुओं के लिए बंद था। इसमें कुंड का पानी निकालना, सीढ़ियों का संरक्षण, फिल्ट्रेशन प्लांट और हेरिटेज लाइटिंग का काम शामिल था, जो राज्य पुरातत्व विभाग की अगुवाई में हुआ। कलेक्टर आयुष प्रसाद ने कहा था कि बंदी 30 अक्टूबर तक रहेगी (Times of India, 29 सितंबर 2026), और Lokmat Times (4 अक्टूबर 2026) ने 31 अक्टूबर को फिर खुलने की बात कही थी। करीब 9 लाख लीटर क्षमता वाले कुंड को गंगासागर तालाब से भरा जाना था (Sarkarnama, 24 अक्टूबर)।
 
-दोबारा खुलने की तारीख पर स्रोत अलग हैं। कलेक्टर आयुष प्रसाद ने आधिकारिक रूप से कहा कि कुंड 30 सितंबर से 30 अक्टूबर तक बंद रहेगा (Times of India, 29 सितंबर 2026)। Lokmat Times (4 अक्टूबर 2026) की रिपोर्ट के अनुसार यह 31 अक्टूबर को फिर खुलेगा। स्नान के लिए निकलने से पहले जानकारी ले लें।
+**अभी (रिपोर्ट):** पुढारी ने 2 नवंबर को बताया कि रविवार 1 नवंबर से श्रद्धालु फिर कुशावर्त में स्नान कर रहे हैं। मरम्मत के बाद स्नान का समय या नियम बताने वाली कलेक्टर, कुंभ मेला प्राधिकरण या त्र्यंबकेश्वर नगर परिषद की कोई आधिकारिक सूचना हमें नहीं मिली है, और बाकी कामों के कारण परिसर के कुछ हिस्से फिर बंद हो सकते हैं।
 
-NTKMA योजना के अनुसार, 31 अक्टूबर से पहले कुशावर्त और त्र्यंबक के साधुग्राम/घाट पर नए ध्वज स्तंभ भी लगाए जा रहे हैं।
+**पानी की सफ़ाई:** दिव्य मराठी ने 2 नवंबर को बताया कि कुंभ मेला प्राधिकरण ने विश्वराज फाउंडेशन के साथ ₹28 करोड़ का करार किया है, जिसके तहत कुंड का पानी करीब 6 घंटे में साफ़ होगा और कुंड 3 घंटे में फिर भरा जा सकेगा। इसके शुरू होने की तारीख जारी नहीं हुई है। [कुशावर्त के पानी का ₹28 करोड़ का करार](/blog/vips-to-reach-ramkund-by-boat-ktm-helipad-godavari-waterway-police-plan-kushavarta-water-cleaned-in-6-hours-28-crore-deal)
 
-**29 अक्टूबर का अपडेट:** Sakal के अनुसार 20 अक्टूबर की समीक्षा बैठक में जिलाधिकारी ने कुशावर्त के आसपास के 32 काम 25 अक्टूबर तक पूरे करने के निर्देश दिए। करीब 9 लाख लीटर क्षमता वाले कुंड को गंगासागर तालाब से भरा जाएगा (Sarkarnama, 24 अक्टूबर)। समारोह के बाद आम श्रद्धालुओं के स्नान के लिए कुंड कब खुलेगा, इसकी कोई सूचना हमें अभी नहीं मिली है।`,
-        mr: `कुशावर्त तीर्थ ३० सप्टेंबर २०२६ पासून भाविकांसाठी बंद आहे. कुंडातील पाणी काढणे, पायऱ्यांचे संवर्धन, गाळणी यंत्रणा आणि हेरिटेज दिवाबत्ती ही कामे राज्य पुरातत्व विभागाच्या पुढाकाराने सुरू आहेत. नूतनीकृत कुंडाचे लोकार्पण ३१ ऑक्टोबरला होणार आहे.
+स्नान की योजना है? सुबह जल्दी जाएं, सप्ताहांत और त्योहारों पर भीड़ की तैयारी रखें, और निकलने से पहले स्थानीय स्तर पर पूछ लें।`,
+        mr: `कुशावर्त तीर्थ ३० सप्टेंबर २०२६ पासून नूतनीकरणासाठी भाविकांसाठी बंद होते. कुंडातील पाणी काढणे, पायऱ्यांचे संवर्धन, गाळणी यंत्रणा आणि हेरिटेज दिवाबत्ती ही कामे राज्य पुरातत्व विभागाच्या पुढाकाराने झाली. ही बंदी ३० ऑक्टोबरपर्यंत असेल, असे जिल्हाधिकारी आयुष प्रसाद यांनी सांगितले होते (Times of India, २९ सप्टेंबर २०२६), तर Lokmat Times ने (४ ऑक्टोबर २०२६) कुंड ३१ ऑक्टोबरला खुले होईल असे दिले होते. सुमारे ९ लाख लिटर क्षमतेचे कुंड गंगासागर तलावातून भरले जाणार होते (सरकारनामा, २४ ऑक्टोबर).
 
-कुंड पुन्हा कधी खुले होणार, याबाबत स्रोतांत फरक आहे. जिल्हाधिकारी आयुष प्रसाद यांनी अधिकृतपणे सांगितले की ते ३० सप्टेंबर ते ३० ऑक्टोबर बंद राहील (Times of India, २९ सप्टेंबर २०२६). Lokmat Times च्या (४ ऑक्टोबर २०२६) वृत्तानुसार ते ३१ ऑक्टोबरला खुले होईल. स्नानासाठी निघण्यापूर्वी खात्री करा.
+**सध्या (वृत्त):** रविवार, १ नोव्हेंबरपासून भाविक पुन्हा कुशावर्तात स्नान करत आहेत, असे पुढारीने २ नोव्हेंबरला दिले आहे. नूतनीकरणानंतर स्नानाच्या वेळा किंवा नियम सांगणारी जिल्हाधिकारी, कुंभमेळा प्राधिकरण किंवा त्र्यंबकेश्वर नगर परिषदेची अधिकृत सूचना आमच्या पाहण्यात आलेली नाही, आणि उर्वरित कामांमुळे परिसराचे काही भाग पुन्हा बंद राहू शकतात.
 
-NTKMA आराखड्यानुसार ३१ ऑक्टोबरपूर्वी कुशावर्त आणि त्र्यंबकमधील साधुग्राम/घाट येथे नवे ध्वजस्तंभही उभारले जात आहेत.
+**पाण्याची स्वच्छता:** कुंभमेळा प्राधिकरणाने विश्वराज फाउंडेशनसोबत ₹२८ कोटींचा करार केला असून त्यानुसार कुंडातील पाणी सुमारे ६ तासांत स्वच्छ होईल आणि कुंड ३ तासांत पुन्हा भरता येईल, असे दिव्य मराठीने २ नोव्हेंबरला दिले आहे. ही यंत्रणा कधी सुरू होणार, याची तारीख जाहीर झालेली नाही. [कुशावर्ताच्या पाण्यासाठीचा ₹२८ कोटींचा करार](/blog/vips-to-reach-ramkund-by-boat-ktm-helipad-godavari-waterway-police-plan-kushavarta-water-cleaned-in-6-hours-28-crore-deal)
 
-**२९ ऑक्टोबरचे अपडेट:** सकाळच्या वृत्तानुसार २० ऑक्टोबरच्या आढावा बैठकीत जिल्हाधिकाऱ्यांनी कुशावर्त परिसरातील ३२ कामे २५ ऑक्टोबरपर्यंत पूर्ण करण्याचे निर्देश दिले. सुमारे ९ लाख लिटर क्षमतेचे कुंड गंगासागर तलावातून भरले जाणार आहे (सरकारनामा, २४ ऑक्टोबर). सोहळ्यानंतर सर्वसामान्य भाविकांच्या स्नानासाठी कुंड कधी खुले होईल, याची सूचना आम्हाला अद्याप मिळालेली नाही.`,
+स्नानाचे नियोजन करताय? सकाळी लवकर जा, शनिवार-रविवार आणि सणांच्या दिवशी गर्दीची तयारी ठेवा, आणि निघण्यापूर्वी स्थानिक पातळीवर चौकशी करा.`,
       },
     },
     {
@@ -380,33 +380,33 @@ No official pilgrim e-pass or registration has been announced. See our [accommod
         mr: "त्र्यंबकेश्वरमध्ये कुंभमेळा कधी आहे?",
       },
       a: {
-        en: "The Simhastha opens with the flag hoisting at Kushavarta on Saturday 31 October 2026 at 12:02 PM. The Amrit Snans at Kushavarta are on Monday 2 August, Tuesday 31 August and Sunday 12 September 2027, and the Simhastha closes in Trimbakeshwar on Monday 24 July 2028, according to the NTKMA Kumbh Mela Plan.",
-        hi: "सिंहस्थ की शुरुआत शनिवार 31 अक्टूबर 2026 को दोपहर 12:02 बजे कुशावर्त पर ध्वजारोहण से होगी। NTKMA की कुंभ मेला योजना के अनुसार कुशावर्त पर अमृत स्नान सोमवार 2 अगस्त, मंगलवार 31 अगस्त और रविवार 12 सितंबर 2027 को हैं, और त्र्यंबकेश्वर में सिंहस्थ का समापन सोमवार 24 जुलाई 2028 को होगा।",
-        mr: "सिंहस्थाची सुरुवात शनिवार, ३१ ऑक्टोबर २०२६ रोजी दुपारी १२.०२ वाजता कुशावर्तावरील ध्वजारोहणाने होईल. NTKMA च्या कुंभमेळा आराखड्यानुसार कुशावर्तावरील अमृत स्नान सोमवार, २ ऑगस्ट; मंगळवार, ३१ ऑगस्ट आणि रविवार, १२ सप्टेंबर २०२७ रोजी आहेत आणि त्र्यंबकेश्वरमधील सिंहस्थाची समाप्ती सोमवार, २४ जुलै २०२८ रोजी होईल.",
+        en: "The Simhastha began with the flag hoisting at Kushavarta on Saturday 31 October 2026 at 12:02 PM. The Amrit Snans at Kushavarta are on Monday 2 August, Tuesday 31 August and Sunday 12 September 2027, and the Simhastha closes in Trimbakeshwar on Monday 24 July 2028, according to the NTKMA Kumbh Mela Plan. The official Kumbh website gives the same 24 July 2028 end date.",
+        hi: "सिंहस्थ की शुरुआत शनिवार 31 अक्टूबर 2026 को दोपहर 12:02 बजे कुशावर्त पर ध्वजारोहण से हुई। NTKMA की कुंभ मेला योजना के अनुसार कुशावर्त पर अमृत स्नान सोमवार 2 अगस्त, मंगलवार 31 अगस्त और रविवार 12 सितंबर 2027 को हैं, और त्र्यंबकेश्वर में सिंहस्थ का समापन सोमवार 24 जुलाई 2028 को होगा। कुंभ की आधिकारिक वेबसाइट पर भी समापन की यही तारीख, 24 जुलाई 2028, है।",
+        mr: "सिंहस्थाची सुरुवात शनिवार, ३१ ऑक्टोबर २०२६ रोजी दुपारी १२.०२ वाजता कुशावर्तावरील ध्वजारोहणाने झाली. NTKMA च्या कुंभमेळा आराखड्यानुसार कुशावर्तावरील अमृत स्नान सोमवार, २ ऑगस्ट; मंगळवार, ३१ ऑगस्ट आणि रविवार, १२ सप्टेंबर २०२७ रोजी आहेत आणि त्र्यंबकेश्वरमधील सिंहस्थाची समाप्ती सोमवार, २४ जुलै २०२८ रोजी होईल. कुंभमेळ्याच्या अधिकृत संकेतस्थळावरही समाप्तीची हीच तारीख, २४ जुलै २०२८, आहे.",
       },
     },
     {
       q: {
-        en: "Is Trimbakeshwar temple open on 31 October 2026?",
-        hi: "क्या 31 अक्टूबर 2026 को त्र्यंबकेश्वर मंदिर खुला रहेगा?",
-        mr: "३१ ऑक्टोबर २०२६ ला त्र्यंबकेश्वर मंदिर खुले असेल का?",
+        en: "Is Kushavarta open for bathing now?",
+        hi: "क्या कुशावर्त में अभी स्नान हो रहा है?",
+        mr: "कुशावर्तात सध्या स्नान करता येते का?",
       },
       a: {
-        en: "Not for outside devotees. A Collector's order reported by PTI on 29 October closes the temple and Kushavarta to outside devotees from 12 noon on 30 October to 6 PM on 31 October (or the end of the programme). Only Trimbak residents and official darshan-pass holders will be allowed. An earlier report (Sakal, 21 October) had said the temple would stay open for 3,000 pass holders.",
-        hi: "बाहरी श्रद्धालुओं के लिए नहीं। PTI ने 29 अक्टूबर को बताया कि कलेक्टर के आदेश से मंदिर और कुशावर्त 30 अक्टूबर दोपहर 12 बजे से 31 अक्टूबर शाम 6 बजे (या कार्यक्रम ख़त्म होने) तक बाहरी श्रद्धालुओं के लिए बंद रहेंगे। सिर्फ़ त्र्यंबक के निवासी और आधिकारिक दर्शन पास वाले जा सकेंगे। पहले Sakal (21 अक्टूबर) ने बताया था कि मंदिर 3,000 पासधारकों के लिए खुला रहेगा।",
-        mr: "बाहेरगावच्या भाविकांसाठी नाही. PTI ने २९ ऑक्टोबरला दिलेल्या वृत्तानुसार जिल्हाधिकाऱ्यांच्या आदेशाने मंदिर आणि कुशावर्त ३० ऑक्टोबर दुपारी १२ ते ३१ ऑक्टोबर सायंकाळी ६ (किंवा कार्यक्रम संपेपर्यंत) बाहेरगावच्या भाविकांसाठी बंद राहतील. फक्त त्र्यंबकचे रहिवासी आणि अधिकृत दर्शन पासधारकांना प्रवेश असेल. मंदिर ३,००० पासधारकांसाठी खुले राहील, असे सकाळने (२१ ऑक्टोबर) आधी दिले होते.",
+        en: "Reportedly yes. Pudhari reported on 2 November 2026 that more than 10,000 devotees bathed at Kushavarta on Sunday 1 November, once the flag hoisting restrictions were lifted. The kund had been closed for renovation since 30 September. We have not seen an official notice giving bathing timings or rules, so check locally before you travel.",
+        hi: "खबरों के अनुसार हां। पुढारी ने 2 नवंबर 2026 को बताया कि ध्वजारोहण की पाबंदियां हटते ही रविवार 1 नवंबर को 10,000 से ज़्यादा श्रद्धालुओं ने कुशावर्त में स्नान किया। कुंड 30 सितंबर से मरम्मत के लिए बंद था। स्नान का समय या नियम बताने वाली कोई आधिकारिक सूचना हमें नहीं मिली है, इसलिए निकलने से पहले स्थानीय स्तर पर पता कर लें।",
+        mr: "वृत्तानुसार हो. ध्वजारोहणाचे निर्बंध शिथिल होताच रविवार, १ नोव्हेंबरला १० हजारांहून अधिक भाविकांनी कुशावर्तात स्नान केले, असे पुढारीने २ नोव्हेंबर २०२६ ला दिले आहे. कुंड ३० सप्टेंबरपासून नूतनीकरणासाठी बंद होते. स्नानाच्या वेळा किंवा नियम सांगणारी अधिकृत सूचना आमच्या पाहण्यात आलेली नाही, त्यामुळे निघण्यापूर्वी स्थानिक पातळीवर खात्री करा.",
       },
     },
     {
       q: {
-        en: "Can I drive from Nashik to Trimbakeshwar on 30 and 31 October?",
-        hi: "क्या 30 और 31 अक्टूबर को नाशिक से त्र्यंबकेश्वर गाड़ी से जा सकते हैं?",
-        mr: "३० आणि ३१ ऑक्टोबरला नाशिकहून त्र्यंबकेश्वरला गाडीने जाता येईल का?",
+        en: "Is Trimbakeshwar temple open after the flag hoisting?",
+        hi: "क्या ध्वजारोहण के बाद त्र्यंबकेश्वर मंदिर खुला है?",
+        mr: "ध्वजारोहणानंतर त्र्यंबकेश्वर मंदिर खुले आहे का?",
       },
       a: {
-        en: "Not on the usual road. It is closed from 8 AM on 30 October to 8 PM on 31 October, and traffic is sent via Girnare, about 61 km instead of 30 km, according to the Times of India. Prahaar and Sakal reported the same notification. Allow at least twice the usual time.",
-        hi: "सामान्य रास्ते से नहीं। यह सड़क 30 अक्टूबर सुबह 8 बजे से 31 अक्टूबर रात 8 बजे तक बंद है और Times of India के अनुसार गाड़ियां गिरणारे होकर भेजी जाएंगी, यानी 30 किमी की जगह करीब 61 किमी। Prahaar और Sakal ने भी यही अधिसूचना बताई है। सामान्य से कम से कम दोगुना समय लेकर चलें।",
-        mr: "नेहमीच्या रस्त्याने नाही. तो ३० ऑक्टोबर सकाळी ८ ते ३१ ऑक्टोबर रात्री ८ पर्यंत बंद आहे आणि Times of India नुसार वाहतूक गिरणारेमार्गे वळवली आहे, म्हणजे ३० किमीऐवजी सुमारे ६१ किमी. प्रहार आणि सकाळनेही हीच अधिसूचना दिली आहे. नेहमीपेक्षा किमान दुप्पट वेळ हाताशी ठेवा.",
+        en: "Yes. The Collector's order that closed the temple and Kushavarta to outside devotees ran only from 12 noon on 30 October to 6 PM on 31 October 2026 (PTI), and we have not seen a new closure order. Pudhari reported devotees queuing for darshan on 1 November. For darshan timings and online booking, use the official Shri Trimbakeshwar Devasthan Trust website.",
+        hi: "हां। मंदिर और कुशावर्त को बाहरी श्रद्धालुओं के लिए बंद करने वाला कलेक्टर का आदेश सिर्फ़ 30 अक्टूबर दोपहर 12 बजे से 31 अक्टूबर 2026 शाम 6 बजे तक था (PTI), और कोई नया बंदी आदेश हमें नहीं मिला। पुढारी के अनुसार 1 नवंबर को श्रद्धालु दर्शन के लिए कतार में थे। दर्शन के समय और ऑनलाइन बुकिंग के लिए श्री त्र्यंबकेश्वर देवस्थान ट्रस्ट की आधिकारिक वेबसाइट देखें।",
+        mr: "हो. मंदिर आणि कुशावर्त बाहेरगावच्या भाविकांसाठी बंद ठेवणारा जिल्हाधिकाऱ्यांचा आदेश फक्त ३० ऑक्टोबर दुपारी १२ ते ३१ ऑक्टोबर २०२६ सायंकाळी ६ पर्यंत होता (PTI), आणि नवा बंदी आदेश आमच्या पाहण्यात आलेला नाही. १ नोव्हेंबरला भाविक दर्शनासाठी रांगेत होते, असे पुढारीचे वृत्त आहे. दर्शनवेळा आणि ऑनलाइन बुकिंगसाठी श्री त्र्यंबकेश्वर देवस्थान ट्रस्टचे अधिकृत संकेतस्थळ पाहा.",
       },
     },
     {
@@ -563,8 +563,50 @@ No official pilgrim e-pass or registration has been announced. See our [accommod
       url: "https://timesofindia.indiatimes.com/city/nashik/now-fly-directly-to-trimbakeshwar-for-quick-darshan/articleshow/135125239.cms",
       status: "reported",
     },
+    {
+      title: "President Murmu hoists flag to mark start of Nashik-Trimbakeshwar Simhastha Kumbh Mela",
+      publisher: "PTI",
+      date: "2026-10-31",
+      url: "https://www.ptinews.com/story/national/president-murmu-hoists-flag-to-mark-start-of-nashik-trimbakeshwar-simhastha-kumbh-mela/4217408",
+      status: "reported",
+    },
+    {
+      title: "Simhastha Kumbh Mela 2026 Begins: President Droupadi Murmu Hoists Religious Flag At Nashik's Ramkund, CM Fadnavis Performs Rituals In Trimbakeshwar",
+      publisher: "Free Press Journal",
+      date: "2026-10-31",
+      url: "https://www.freepressjournal.in/mumbai/simhastha-kumbh-mela-2026-begins-president-droupadi-murmu-hoists-religious-flag-at-nashiks-ramkund-cm-fadnavis-performs-rituals-in-trimbakeshwar-videos",
+      status: "reported",
+    },
+    {
+      title: "Nashik's Trimbakeshwar temple to remain closed on Oct 30-31 for Kumbh Mela flag hoisting",
+      publisher: "PTI via Moneycontrol",
+      date: "2026-10-29",
+      url: "https://www.moneycontrol.com/city/nashik-s-trimbakeshwar-temple-to-remain-closed-on-oct-30-31-for-kumbh-mela-flag-hoisting-article-14063676.html",
+      status: "confirmed",
+    },
+    {
+      title: "सिंहस्थाच्या ऐतिहासिक ध्वजारोहण सोहळ्यानंतर त्र्यंबकेश्वरमध्ये भाविकांचा महापूर; कुशावर्त परिसरात उसळली गर्दी",
+      publisher: "Pudhari",
+      date: "2026-11-02",
+      url: "https://pudhari.news/maharashtra/north-maharashtra/nashik/kushavarta-teerth-overflows-with-devotees-as-restrictions-lifted-after-historic-simhastha-flag-hoisting-sd22",
+      status: "reported",
+    },
+    {
+      title: "पहिल्यांदाच कुंभमेळ्यात जलमार्ग, रस्त्यांवरून व्हीआयपी वाहतूक बंद: व्हीआयपींना रामकुंडापर्यंत स्पेशल वॉटर-वे",
+      publisher: "Divya Marathi",
+      date: "2026-11-02",
+      url: "https://divyamarathi.bhaskar.com/local/maharashtra/nashik/news/for-the-first-time-vip-traffic-on-waterways-and-roads-will-be-closed-during-the-kumbh-mela-special-waterway-for-vips-to-reach-ramkunda-people-will-be-relieved-from-traffic-jams-dbp-139565377.html",
+      status: "reported",
+    },
+    {
+      title: "Nashik-Trimbakeshwar Simhastha Kumbh Mela 2027 | Official website",
+      publisher: "Nashik Trimbakeshwar Kumbh Mela Authority (Government of Maharashtra)",
+      date: "2026-11-05",
+      url: "https://simhasthamahakumbh.maharashtra.gov.in",
+      status: "confirmed",
+    },
   ],
-  updated: "2026-10-29",
+  updated: "2026-11-05",
   crumb: {
     en: "Trimbakeshwar Kumbh 2027",
     hi: "त्र्यंबकेश्वर कुंभ 2027",

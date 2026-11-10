@@ -9,8 +9,8 @@ export const article: BlogArticle = {
     mr: "ध्वजारोहणाच्या निमित्ताने दोन विश्वविक्रमांचा प्रयत्न: २५ ऑक्टोबरला ५०१ जणांचा शंखनाद, ३१ ऑक्टोबरला ६,५०० जनजातीय बांधवांची महा गोदा आरती",
   },
   date: "2026-10-19",
-  updated: "2026-10-26",
-  followUp: { slug: "shankhnaad-guinness-world-record-set-nashik-517-or-501-conches-certificate-on-31-october", date: "2026-10-26" },
+  updated: "2026-11-01",
+  followUp: { slug: "maha-goda-aarti-guinness-world-record-6233-tribal-devotees-ramkund-adjudicator-announced", date: "2026-11-01" },
   originallyAnnounced: "2026-10-18",
   source: "NTKMA press conference",
   sources: [

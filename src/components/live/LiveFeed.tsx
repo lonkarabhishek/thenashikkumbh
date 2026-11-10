@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "@/components/LocaleLink";
 import RichText from "@/components/RichText";
 import StatusBadge from "@/components/blog/StatusBadge";
+import YouTubeEmbed from "@/components/live/YouTubeEmbed";
 import type { Locale } from "@/i18n/translations";
 
 /** One timeline entry, already in the reader's language and stamped in IST. */
@@ -16,6 +17,8 @@ export interface LiveItem {
   body: string;
   status: "confirmed" | "reported";
   source: string;
+  /** Optional YouTube clip, caption already in the reader's language. */
+  media?: { type: "youtube"; id: string; caption: string; credit: string };
 }
 
 export interface RelatedStory {
@@ -113,6 +116,9 @@ export default function LiveFeed({
             <div className="mt-1">
               <RichText text={u.body} tone="light" compact />
             </div>
+            {u.media?.type === "youtube" && (
+              <YouTubeEmbed id={u.media.id} caption={u.media.caption} credit={u.media.credit} locale={locale} />
+            )}
             <p className="mt-1 text-xs text-temple-500">{u.source}</p>
           </li>
         ))}
