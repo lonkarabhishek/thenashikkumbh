@@ -133,16 +133,16 @@ export const statusItems: StatusItem[] = [
   {
     id: "trimbak-heliport",
     place: { en: "New heliport, Trimbakeshwar", hi: "नया हेलिपोर्ट, त्र्यंबकेश्वर", mr: "नवे हेलिपोर्ट, त्र्यंबकेश्वर" },
-    state: "upcoming",
+    state: "unsettled",
     headline: {
-      en: "Private helicopter flights may start from 2 November",
-      hi: "निजी हेलिकॉप्टर उड़ानें 2 नवंबर से शुरू हो सकती हैं",
-      mr: "खासगी हेलिकॉप्टर उड्डाणे २ नोव्हेंबरपासून सुरू होऊ शकतात",
+      en: "Heliport built; no report yet that private helicopter flights have started",
+      hi: "हेलिपोर्ट बना है; निजी हेलिकॉप्टर उड़ानें शुरू होने की कोई रिपोर्ट अभी नहीं",
+      mr: "हेलिपोर्ट उभारले आहे; खासगी हेलिकॉप्टर उड्डाणे सुरू झाल्याचे वृत्त अद्याप नाही",
     },
     detail: {
-      en: "The Kumbh Mela Authority has built a heliport at Trimbakeshwar that can take three helicopters at once. Collector Ayush Prasad told the Times of India on 22 October that private operators could start flights as early as 2 November, from cities such as Mumbai, Pune, Surat and Chhatrapati Sambhajinagar, with darshan and return in about three hours.",
-      hi: "कुंभ मेला प्राधिकरण ने त्र्यंबकेश्वर में हेलिपोर्ट बनाया है जहाँ एक साथ तीन हेलिकॉप्टर उतर सकते हैं। कलेक्टर आयुष प्रसाद ने 22 अक्टूबर को टाइम्स ऑफ इंडिया से कहा कि निजी ऑपरेटर 2 नवंबर से ही मुंबई, पुणे, सूरत और छत्रपति संभाजीनगर जैसे शहरों से उड़ानें शुरू कर सकते हैं, और दर्शन करके लौटने में करीब तीन घंटे लगेंगे।",
-      mr: "कुंभमेळा प्राधिकरणाने त्र्यंबकेश्वरमध्ये एकाच वेळी तीन हेलिकॉप्टर उतरू शकतील असे हेलिपोर्ट उभारले आहे. खासगी ऑपरेटर २ नोव्हेंबरपासूनच मुंबई, पुणे, सुरत, छत्रपती संभाजीनगर अशा शहरांतून उड्डाणे सुरू करू शकतात आणि दर्शन घेऊन सुमारे तीन तासांत परतता येईल, असे जिल्हाधिकारी आयुष प्रसाद यांनी २२ ऑक्टोबरला टाइम्स ऑफ इंडियाला सांगितले.",
+      en: "The Kumbh Mela Authority has built a heliport at Trimbakeshwar that can take three helicopters at once. Collector Ayush Prasad told the Times of India on 22 October that private operators could start flights from 2 November at the earliest, from cities such as Mumbai, Pune, Surat and Chhatrapati Sambhajinagar, with darshan and return in about three hours. As of 10 November we have found no report that any operator has started flights.",
+      hi: "कुंभ मेला प्राधिकरण ने त्र्यंबकेश्वर में हेलिपोर्ट बनाया है जहाँ एक साथ तीन हेलिकॉप्टर उतर सकते हैं। कलेक्टर आयुष प्रसाद ने 22 अक्टूबर को टाइम्स ऑफ इंडिया से कहा कि निजी ऑपरेटर 2 नवंबर से, यानी उससे पहले नहीं, मुंबई, पुणे, सूरत और छत्रपति संभाजीनगर जैसे शहरों से उड़ानें शुरू कर सकते हैं, और दर्शन करके लौटने में करीब तीन घंटे लगेंगे। 10 नवंबर तक हमें ऐसी कोई रिपोर्ट नहीं मिली कि किसी ऑपरेटर ने उड़ानें शुरू की हैं।",
+      mr: "कुंभमेळा प्राधिकरणाने त्र्यंबकेश्वरमध्ये एकाच वेळी तीन हेलिकॉप्टर उतरू शकतील असे हेलिपोर्ट उभारले आहे. खासगी ऑपरेटर २ नोव्हेंबरपासून, त्याआधी नाही, मुंबई, पुणे, सुरत, छत्रपती संभाजीनगर अशा शहरांतून उड्डाणे सुरू करू शकतात आणि दर्शन घेऊन सुमारे तीन तासांत परतता येईल, असे जिल्हाधिकारी आयुष प्रसाद यांनी २२ ऑक्टोबरला टाइम्स ऑफ इंडियाला सांगितले. १० नोव्हेंबरपर्यंत कोणत्याही ऑपरेटरने उड्डाणे सुरू केल्याचे वृत्त आम्हाला आढळलेले नाही.",
     },
     unknown: {
       en: "No operator, schedule, fare or booking link has been announced. Do not pay anyone for a helicopter darshan package until fares are officially published.",
@@ -151,11 +151,11 @@ export const statusItems: StatusItem[] = [
     },
     confidence: "reported",
     confidenceNote: {
-      en: "The 2 November date is a 'could start' statement from the Collector, carried by the Times of India, not a confirmed schedule.",
-      hi: "2 नवंबर की तारीख कलेक्टर का 'शुरू हो सकती है' वाला बयान है, जिसे टाइम्स ऑफ इंडिया ने छापा; यह पुष्ट समय-सारणी नहीं है।",
-      mr: "२ नोव्हेंबरची तारीख हे जिल्हाधिकाऱ्यांचे 'सुरू होऊ शकते' असे वक्तव्य आहे, जे टाइम्स ऑफ इंडियाने दिले; हे निश्चित वेळापत्रक नाही.",
+      en: "The 2 November date was a 'could start' statement from the Collector, carried by the Times of India, not a confirmed schedule, and we have found no report that flights began.",
+      hi: "2 नवंबर की तारीख कलेक्टर का 'शुरू हो सकती है' वाला बयान थी, जिसे टाइम्स ऑफ इंडिया ने छापा; यह पुष्ट समय-सारणी नहीं थी, और उड़ानें शुरू होने की कोई रिपोर्ट हमें नहीं मिली।",
+      mr: "२ नोव्हेंबरची तारीख हे जिल्हाधिकाऱ्यांचे 'सुरू होऊ शकते' असे वक्तव्य होते, जे टाइम्स ऑफ इंडियाने दिले; ते निश्चित वेळापत्रक नव्हते, आणि उड्डाणे सुरू झाल्याचे वृत्त आम्हाला आढळलेले नाही.",
     },
-    lastUpdated: "2026-11-01",
+    lastUpdated: "2026-11-10",
     sourceTitle: "Times of India, 22 Oct 2026",
     sourceUrl:
       "https://timesofindia.indiatimes.com/city/nashik/now-fly-directly-to-trimbakeshwar-for-quick-darshan/articleshow/135125239.cms",

@@ -9,6 +9,7 @@ export const article: BlogArticle = {
     mr: "ध्वजारोहणापूर्वी रामकुंड व परिसरातील घाट १५–२० दिवस बंद",
   },
   date: "2026-10-14",
+  updated: "2026-11-10",
   source: "Times of India",
   sources: [
     {
@@ -45,7 +46,7 @@ Khatri said, as quoted by the Times of India: "We have decided to restrict acces
 - **Dashkriya rituals** continue at the designated site.
 - On Monday NMC used five fire tenders to wash Ramkund.
 
-Kushavarta in Trimbakeshwar is also closed for renovation until about 31 October. See [Ghats](/ghats) and [Dates](/dates).`,
+Kushavarta has reopened: more than 10,000 devotees bathed there on 1 November 2026 (REPORTED, Pudhari, 2 November). We have not seen an official notice. [Kushavarta open again](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi). See [Ghats](/ghats) and [Dates](/dates).`,
     hi: `नाशिक महानगरपालिका (NMC) ने **रामकुंड क्षेत्र में 15 से 20 दिन** के लिए श्रद्धालुओं का प्रवेश रोक दिया है। **अहिल्याबाई होलकर पुल से तालुकतेश्वर मंदिर** तक के हिस्से में 31 अक्टूबर के ध्वजारोहण से पहले फ़र्श, कंक्रीट और अन्य काम पूरे होने हैं। NMC आयुक्त मनीषा खत्री ने 12 अक्टूबर को यह जानकारी दी। यह **आधिकारिक** जानकारी है।
 
 खत्री ने कहा (टाइम्स ऑफ इंडिया के अनुसार, अंग्रेज़ी में): "We have decided to restrict access to the Ramkund area for the next 15-20 days due to the various works that need to be completed before the flag-hoisting ceremony."
@@ -56,7 +57,7 @@ Kushavarta in Trimbakeshwar is also closed for renovation until about 31 October
 - **दशक्रिया विधि** तय जगह पर जारी रहेगी।
 - सोमवार को NMC ने पाँच दमकल गाड़ियों से रामकुंड धोया।
 
-कुशावर्त भी 31 अक्टूबर तक नवीनीकरण के लिए बंद है। [घाट](/ghats) और [तिथियाँ](/dates) देखें।`,
+कुशावर्त फिर खुल गया है: 1 नवंबर 2026 को वहाँ 10,000 से ज़्यादा श्रद्धालुओं ने स्नान किया (रिपोर्ट, पुढारी, 2 नवंबर)। इस पर कोई आधिकारिक सूचना हमें नहीं मिली। [कुशावर्त फिर खुला](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi)। [घाट](/ghats) और [तिथियाँ](/dates) देखें।`,
     mr: `नाशिक महापालिकेने (NMC) **रामकुंड परिसरात १५ ते २० दिवस** भाविकांचा प्रवेश बंद केला आहे. **अहिल्याबाई होळकर पूल ते तालुकतेश्वर मंदिर** या भागात ३१ ऑक्टोबरच्या ध्वजारोहणापूर्वी फरसबंदी, काँक्रीट आणि इतर कामे पूर्ण करायची आहेत. महापालिका आयुक्त मनीषा खत्री यांनी १२ ऑक्टोबरला ही माहिती दिली. ही **अधिकृत** माहिती आहे.
 
 खत्री म्हणाल्या (टाइम्स ऑफ इंडियानुसार, इंग्रजीत): "We have decided to restrict access to the Ramkund area for the next 15-20 days due to the various works that need to be completed before the flag-hoisting ceremony."
@@ -67,6 +68,6 @@ Kushavarta in Trimbakeshwar is also closed for renovation until about 31 October
 - **दशक्रिया विधी** नेमलेल्या ठिकाणी सुरू राहतील.
 - सोमवारी महापालिकेने पाच अग्निशमन बंबांनी रामकुंड धुतले.
 
-कुशावर्तही ३१ ऑक्टोबरपर्यंत नूतनीकरणासाठी बंद आहे. [घाट](/ghats) आणि [तारखा](/dates) पाहा.`,
+कुशावर्त पुन्हा खुले झाले आहे: १ नोव्हेंबर २०२६ रोजी तेथे १० हजारांहून अधिक भाविकांनी स्नान केले (वृत्त, पुढारी, २ नोव्हेंबर). याबाबत अधिकृत सूचना आमच्या पाहण्यात आलेली नाही. [कुशावर्त पुन्हा खुले](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi). [घाट](/ghats) आणि [तारखा](/dates) पाहा.`,
   },
 };

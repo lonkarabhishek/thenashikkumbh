@@ -60,6 +60,12 @@ const COPY = {
     hi: "शाही स्नान का नाम बदलकर अमृत स्नान कर दिया गया है; यह वही शाही स्नान है। समय IST में है।",
     mr: "शाही स्नानाचे नाव बदलून अमृत स्नान केले आहे; हे तेच शाही स्नान आहे. वेळ IST मध्ये आहे.",
   },
+  endNote: {
+    en: "Closing date conflict: the Authority's Kumbh Mela Plan (June 2026) closes the Simhastha on 24 July 2028 in Trimbakeshwar and 29 July 2028 in Nashik (CONFIRMED, official plan). The official website, simhasthamahakumbh.maharashtra.gov.in, gives a single end date of 24 July 2028 (CONFIRMED, checked 5 November 2026). We keep the plan's two dates until the Authority clarifies.",
+    hi: "समापन तिथि में अंतर: प्राधिकरण की कुंभ मेला योजना (जून 2026) के अनुसार सिंहस्थ त्र्यंबकेश्वर में 24 जुलाई 2028 और नाशिक में 29 जुलाई 2028 को समाप्त होता है (पुष्ट, आधिकारिक योजना)। आधिकारिक वेबसाइट simhasthamahakumbh.maharashtra.gov.in पर एक ही समापन तिथि, 24 जुलाई 2028, दी गई है (पुष्ट, 5 नवंबर 2026 को जाँची गई)। प्राधिकरण के स्पष्टीकरण तक हम योजना की दोनों तिथियाँ रख रहे हैं।",
+    mr: "समाप्तीच्या तारखेतील फरक: प्राधिकरणाच्या कुंभमेळा आराखड्यानुसार (जून २०२६) सिंहस्थ त्र्यंबकेश्वरमध्ये २४ जुलै २०२८ आणि नाशिकमध्ये २९ जुलै २०२८ रोजी संपतो (अधिकृत, अधिकृत आराखडा). अधिकृत संकेतस्थळ simhasthamahakumbh.maharashtra.gov.in वर एकच समाप्ती तारीख, २४ जुलै २०२८, दिली आहे (अधिकृत, ५ नोव्हेंबर २०२६ ला तपासले). प्राधिकरणाचे स्पष्टीकरण येईपर्यंत आम्ही आराखड्यातील दोन्ही तारखा ठेवत आहोत.",
+  },
+  endNoteLink: { en: "Read the website report", hi: "वेबसाइट की रिपोर्ट पढ़ें", mr: "संकेतस्थळाची बातमी वाचा" },
   colDate: { en: "Date", hi: "तिथि", mr: "तारीख" },
   colEvent: { en: "Event and place", hi: "कार्यक्रम और स्थान", mr: "कार्यक्रम आणि ठिकाण" },
   sources: { en: "Sources", hi: "स्रोत", mr: "स्रोत" },
@@ -133,6 +139,16 @@ export function DatesQuickAnswer() {
           </tbody>
         </table>
         <p className="mt-4 text-sm text-temple-500">{t(COPY.quickNote)}</p>
+        <p className="mt-2 text-sm text-temple-500">
+          {t(COPY.endNote)}{" "}
+          <Link
+            href="/blog/official-kumbh-website-live-simhasthamahakumbh-maharashtra-gov-in-1500-of-5500-cctv-cameras-trial-after-diwali"
+            className="font-semibold text-saffron-700 underline"
+          >
+            {t(COPY.endNoteLink)}
+          </Link>
+          .
+        </p>
         <p className="mt-2 text-xs text-temple-500">
           {t(COPY.sources)}:{" "}
           {QUICK_SOURCES.map((src, i) => (

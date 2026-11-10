@@ -2,7 +2,7 @@ import type { InfoPageContent } from "@/content/pages/types";
 
 export const page: InfoPageContent = {
   path: "/parva-snan-calendar",
-  updated: "2026-10-28",
+  updated: "2026-11-10",
   crumb: {
     en: "Parva snan calendar",
     hi: "पर्व स्नान कैलेंडर",
@@ -93,7 +93,7 @@ On Amrit Snan days, private vehicles will stop at outer parking and the Ramkund 
 - **Nashik-Trimbakeshwar road closed from 8 AM on 30 October to 8 PM on 31 October** (REPORTED, Prahaar, Sakal and Times of India, 26 Oct 2026). Traffic goes via Govardhan and Girnare instead. [Trimbak road closure and detour](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route)
 - **Trimbakeshwar temple and Kushavarta closed to outside devotees** from 12 noon on 30 October to 6 PM on 31 October; only Trimbak residents and official darshan-pass holders (REPORTED, PTI, 29 Oct 2026). This replaces the earlier 3,000-pass plan. [Trimbakeshwar closure on 30-31 October](/blog/trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic)
 
-Kushavarta Tirth has been closed to pilgrims for renovation since 30 September. Collector Ayush Prasad said the closure runs to 30 October (Times of India, 29 Sep 2026). Lokmat Times (4 Oct 2026) reported it will reopen on 31 October.
+Kushavarta has reopened: more than 10,000 devotees bathed there on 1 November 2026 (REPORTED, Pudhari, 2 November). We have not seen an official notice. [Kushavarta open again](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi).
 
 Parking, walking routes and changes on the day are on our [Dhwajarohan 2026 live updates page](/dhwajarohan-2026).`,
         hi: `- **शुक्रवार 30 अक्टूबर 2026: ग्राम प्रदक्षिणा**, नाशिक में, ध्वजारोहण से पहले। शोभायात्रा तपोवन से निकलकर शाम को रामकुंड (रामतीर्थ) पहुंचेगी। सकाळ के अनुसार यह दोपहर 2 बजे और नवभारत के अनुसार 3 बजे निकलेगी; सही मार्ग को लेकर भी रिपोर्टें अलग हैं। लोकमत टाइम्स (27 सितंबर 2026) की रिपोर्ट के अनुसार लगभग एक लाख श्रद्धालुओं के आने की उम्मीद है। रिपोर्ट के अनुसार 30 अक्टूबर से 1 नवंबर तक रामकुंड पर धार्मिक कार्यक्रम होंगे। [ग्राम प्रदक्षिणा का मार्ग और समय](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29)
@@ -102,7 +102,7 @@ Parking, walking routes and changes on the day are on our [Dhwajarohan 2026 live
 - **नाशिक-त्र्यंबकेश्वर मार्ग 30 अक्टूबर सुबह 8 बजे से 31 अक्टूबर रात 8 बजे तक बंद** (रिपोर्ट, प्रहार, सकाळ और टाइम्स ऑफ इंडिया, 26 अक्टूबर 2026)। वाहन गोवर्धन और गिरणारे होकर जाएंगे। [त्र्यंबक मार्ग बंद और वैकल्पिक रास्ता](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route)
 - **त्र्यंबकेश्वर मंदिर और कुशावर्त बाहरी श्रद्धालुओं के लिए बंद**, 30 अक्टूबर दोपहर 12 बजे से 31 अक्टूबर शाम 6 बजे तक; सिर्फ़ त्र्यंबक के निवासी और आधिकारिक दर्शन पास वाले (रिपोर्ट, PTI, 29 अक्टूबर 2026)। यह पहले की 3,000 पास योजना की जगह है। [30-31 अक्टूबर को त्र्यंबकेश्वर बंद](/blog/trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic)
 
-कुशावर्त तीर्थ 30 सितंबर से मरम्मत के लिए श्रद्धालुओं के लिए बंद है। कलेक्टर आयुष प्रसाद ने कहा कि यह 30 अक्टूबर तक बंद रहेगा (टाइम्स ऑफ इंडिया, 29 सितंबर 2026)। लोकमत टाइम्स (4 अक्टूबर 2026) की रिपोर्ट के अनुसार यह 31 अक्टूबर को खुलेगा।
+कुशावर्त फिर खुल गया है: 1 नवंबर 2026 को वहाँ 10,000 से ज़्यादा श्रद्धालुओं ने स्नान किया (रिपोर्ट, पुढारी, 2 नवंबर)। इस पर कोई आधिकारिक सूचना हमें नहीं मिली। [कुशावर्त फिर खुला](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi)
 
 पार्किंग, पैदल रास्ते और उस दिन के बदलाव हमारे [ध्वजारोहण 2026 लाइव अपडेट पेज](/dhwajarohan-2026) पर हैं।`,
         mr: `- **शुक्रवार, ३० ऑक्टोबर २०२६: ग्रामप्रदक्षिणा**, नाशिकमध्ये, ध्वजारोहणाआधी. मिरवणूक तपोवनातून निघून सायंकाळी रामकुंडावर (रामतीर्थ) पोहोचेल. सकाळच्या वृत्तानुसार ती दुपारी २ वाजता, तर नवभारतनुसार ३ वाजता निघेल; नेमक्या मार्गाबाबतही वृत्तांत फरक आहे. सुमारे एक लाख भाविक येण्याची अपेक्षा असल्याचे वृत्त लोकमत टाइम्सने (२७ सप्टेंबर २०२६) दिले. ३० ऑक्टोबर ते १ नोव्हेंबर रामकुंडावर धार्मिक कार्यक्रम होणार असल्याचे वृत्त आहे. [ग्रामप्रदक्षिणेचा मार्ग आणि वेळ](/blog/gram-pradakshina-30-october-route-tapovan-to-ramkund-nmc-encroachment-drive-october-24-29)
@@ -111,7 +111,7 @@ Parking, walking routes and changes on the day are on our [Dhwajarohan 2026 live
 - **नाशिक-त्र्यंबकेश्वर रस्ता ३० ऑक्टोबर सकाळी ८ ते ३१ ऑक्टोबर रात्री ८ पर्यंत बंद** (वृत्त, प्रहार, सकाळ आणि टाइम्स ऑफ इंडिया, २६ ऑक्टोबर २०२६). वाहतूक गोवर्धन, गिरणारेमार्गे वळवली आहे. [त्र्यंबक रस्ता बंद आणि पर्यायी मार्ग](/blog/nashik-trimbakeshwar-road-closed-30-31-october-girnare-detour-ghoti-route-shut-goda-aarti-entry-bans-president-route)
 - **त्र्यंबकेश्वर मंदिर आणि कुशावर्त बाहेरगावच्या भाविकांसाठी बंद**, ३० ऑक्टोबर दुपारी १२ ते ३१ ऑक्टोबर सायंकाळी ६; फक्त त्र्यंबकचे रहिवासी आणि अधिकृत दर्शन पासधारक (वृत्त, PTI, २९ ऑक्टोबर २०२६). हे आधीच्या ३,००० पास नियोजनाऐवजी आहे. [३०-३१ ऑक्टोबरला त्र्यंबकेश्वर बंद](/blog/trimbakeshwar-temple-kushavarta-closed-to-outside-devotees-noon-30-october-to-6-pm-31-october-collector-order-town-traffic)
 
-कुशावर्त तीर्थ ३० सप्टेंबरपासून नूतनीकरणासाठी भाविकांना बंद आहे. ते ३० ऑक्टोबरपर्यंत बंद राहील, असे जिल्हाधिकारी आयुष प्रसाद यांनी सांगितले (टाइम्स ऑफ इंडिया, २९ सप्टेंबर २०२६). ते ३१ ऑक्टोबरला खुले होईल, असे लोकमत टाइम्सचे (४ ऑक्टोबर २०२६) वृत्त आहे.
+कुशावर्त पुन्हा खुले झाले आहे: १ नोव्हेंबर २०२६ रोजी तेथे १० हजारांहून अधिक भाविकांनी स्नान केले (वृत्त, पुढारी, २ नोव्हेंबर). याबाबत अधिकृत सूचना आमच्या पाहण्यात आलेली नाही. [कुशावर्त पुन्हा खुले](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi)
 
 पार्किंग, पायी जाण्याचे मार्ग आणि त्या दिवशीचे बदल आमच्या [ध्वजारोहण २०२६ थेट अपडेट पानावर](/dhwajarohan-2026) आहेत.`,
       },

@@ -9,6 +9,7 @@ export const article: BlogArticle = {
     mr: "ध्वजारोहणापूर्वी रामकुंडाची कामे वेगाने पूर्ण करा: कुंभमेळा प्राधिकरणाचे मनपाला पत्र",
   },
   date: "2026-10-06",
+  updated: "2026-11-10",
   originallyAnnounced: "2026-10-05",
   source: "Times of India",
   sources: [
@@ -115,7 +116,7 @@ If you plan to visit Ramkund around 31 October:
 - Access near the kund may be limited during the main programme.
 - Watch for official notices on entry routes. These have not been published yet.
 
-If you also plan to go to Trimbakeshwar, note that Kushavarta Tirth has been closed to pilgrims since 30 September for renovation, and the renovated kund is to be inaugurated on 31 October. Collector Ayush Prasad said the closure runs from 30 September to 30 October (Times of India, 29 September 2026). Lokmat Times reported on 4 October that it will reopen on 31 October. Check locally before you travel.
+If you also plan to go to Trimbakeshwar, note that kushavarta has reopened: more than 10,000 devotees bathed there on 1 November 2026 (REPORTED, Pudhari, 2 November). We have not seen an official notice. [Kushavarta open again](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi). Check locally before you travel.
 
 Read more about the ceremony on our [Dhwajarohan 2026](/dhwajarohan-2026) page, see the ghats on our [ghats guide](/ghats) and the [Trimbakeshwar Kumbh 2027](/trimbakeshwar-kumbh-2027) page, and check every key date on the [Kumbh dates](/dates) page.`,
     hi: `सिंहस्थ की औपचारिक शुरुआत रामकुंड से होती है। 31 अक्टूबर 2026 को दोपहर 12:02 बजे पंचवटी के रामकुंड और त्र्यंबकेश्वर के कुशावर्त में एक साथ ध्वजारोहण होगा। लेकिन रामकुंड के काम अभी पूरे नहीं हुए हैं।
@@ -155,7 +156,7 @@ Read more about the ceremony on our [Dhwajarohan 2026](/dhwajarohan-2026) page, 
 - मुख्य कार्यक्रम के समय कुंड के पास जाना सीमित रह सकता है।
 - प्रवेश मार्गों के आधिकारिक निर्देशों पर नज़र रखें। ये अभी जारी नहीं हुए हैं।
 
-अगर आप त्र्यंबकेश्वर भी जा रहे हैं तो ध्यान दें: कुशावर्त तीर्थ नवीनीकरण के लिए 30 सितंबर से श्रद्धालुओं के लिए बंद है और नवीनीकृत कुंड का उद्घाटन 31 अक्टूबर को होना है। जिलाधिकारी आयुष प्रसाद ने कहा कि यह 30 सितंबर से 30 अक्टूबर तक बंद रहेगा (टाइम्स ऑफ इंडिया, 29 सितंबर 2026)। लोकमत टाइम्स ने 4 अक्टूबर को रिपोर्ट किया कि यह 31 अक्टूबर को खुलेगा। जाने से पहले स्थानीय स्तर पर पुष्टि कर लें।
+अगर आप त्र्यंबकेश्वर भी जा रहे हैं तो ध्यान दें: कुशावर्त फिर खुल गया है: 1 नवंबर 2026 को वहाँ 10,000 से ज़्यादा श्रद्धालुओं ने स्नान किया (रिपोर्ट, पुढारी, 2 नवंबर)। इस पर कोई आधिकारिक सूचना हमें नहीं मिली। [कुशावर्त फिर खुला](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi) जाने से पहले स्थानीय स्तर पर पुष्टि कर लें।
 
 समारोह की पूरी जानकारी हमारे [ध्वजारोहण 2026](/dhwajarohan-2026) पेज पर पढ़ें, घाटों के बारे में [घाट गाइड](/ghats) देखें और सभी मुख्य तिथियाँ [कुंभ तिथि](/dates) पेज पर देखें।`,
     mr: `सिंहस्थाची औपचारिक सुरुवात रामकुंडावरून होते. ३१ ऑक्टोबर २०२६ रोजी दुपारी १२:०२ वाजता पंचवटीतील रामकुंड आणि त्र्यंबकेश्वरमधील कुशावर्त येथे एकाच वेळी ध्वजारोहण होणार आहे. मात्र रामकुंडावरील कामे अजून पूर्ण झालेली नाहीत.
@@ -195,7 +196,7 @@ Read more about the ceremony on our [Dhwajarohan 2026](/dhwajarohan-2026) page, 
 - मुख्य कार्यक्रमावेळी कुंडाजवळ प्रवेश मर्यादित असू शकतो.
 - प्रवेश मार्गांबाबतच्या अधिकृत सूचनांकडे लक्ष ठेवा. त्या अजून प्रसिद्ध झालेल्या नाहीत.
 
-त्र्यंबकेश्वरलाही जाणार असाल तर लक्षात ठेवा: नूतनीकरणासाठी कुशावर्त तीर्थ ३० सप्टेंबरपासून भाविकांसाठी बंद आहे आणि नूतनीकृत कुंडाचे उद्घाटन ३१ ऑक्टोबरला होणार आहे. ३० सप्टेंबर ते ३० ऑक्टोबर दरम्यान कुंड बंद राहील, असे जिल्हाधिकारी आयुष प्रसाद यांनी सांगितले (टाइम्स ऑफ इंडिया, २९ सप्टेंबर २०२६). तर कुंड ३१ ऑक्टोबरला खुले होईल, असे लोकमत टाइम्सचे ४ ऑक्टोबरचे वृत्त आहे. जाण्यापूर्वी स्थानिक पातळीवर खात्री करून घ्या.
+त्र्यंबकेश्वरलाही जाणार असाल तर लक्षात ठेवा: कुशावर्त पुन्हा खुले झाले आहे: १ नोव्हेंबर २०२६ रोजी तेथे १० हजारांहून अधिक भाविकांनी स्नान केले (वृत्त, पुढारी, २ नोव्हेंबर). याबाबत अधिकृत सूचना आमच्या पाहण्यात आलेली नाही. [कुशावर्त पुन्हा खुले](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi) जाण्यापूर्वी स्थानिक पातळीवर खात्री करून घ्या.
 
 सोहळ्याची सविस्तर माहिती आमच्या [ध्वजारोहण 2026](/dhwajarohan-2026) पानावर वाचा, घाटांची माहिती [घाट मार्गदर्शिका](/ghats) येथे पाहा आणि सर्व महत्त्वाच्या तारखा [कुंभ तारखा](/dates) पानावर पाहा.`,
   },
