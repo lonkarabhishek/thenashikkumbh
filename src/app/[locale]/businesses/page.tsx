@@ -28,6 +28,8 @@ export function generateMetadata({ params }: { params: { locale: Locale } }): Me
     description:
       "The Nashik Kumbh site does not yet run a business directory or accept sponsorships. This page explains why, and what the standards will be if that changes.",
     path: "/businesses",
+    // No index while the directory does not exist yet (see the note above).
+    robots: { index: false, follow: true },
     image: "/images/og/kumbh-12.jpg",
   });
 }

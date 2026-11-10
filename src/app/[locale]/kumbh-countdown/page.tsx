@@ -12,7 +12,7 @@ const PATH = C.path;
 
 export function generateMetadata({ params }: Params): Metadata {
   const l = params.locale;
-  return pageMetadata({ locale: l, title: C.title[l], description: C.desc[l], path: PATH, absoluteTitle: true, image: "/images/og/kumbh-7.jpg", keywords: ["Nashik Kumbh 2027 countdown","Kumbh Mela countdown","Kumbh Mela 2027 countdown timer","Kumbh flag hoisting countdown","नाशिक कुंभ काउंटडाउन","कुंभ मेला काउंटडाउन","नाशिक कुंभ २०२७ काउंटडाउन"] });
+  return pageMetadata({ locale: l, title: C.title[l], description: C.desc[l], path: PATH, absoluteTitle: true, robots: { index: false, follow: true }, image: "/images/og/kumbh-7.jpg", keywords: ["Nashik Kumbh 2027 countdown","Kumbh Mela countdown","Kumbh Mela 2027 countdown timer","Kumbh flag hoisting countdown","नाशिक कुंभ काउंटडाउन","कुंभ मेला काउंटडाउन","नाशिक कुंभ २०२७ काउंटडाउन"] });
 }
 
 const RELATED = [

@@ -12,7 +12,7 @@ const PATH = C.path;
 
 export function generateMetadata({ params }: Params): Metadata {
   const l = params.locale;
-  return pageMetadata({ locale: l, title: C.title[l], description: C.desc[l], path: PATH, absoluteTitle: true, image: "/images/og/kumbh-7.jpg", keywords: ["Kumbh status","Ramkund open or closed","Kushavarta closed","Nashik Kumbh closures","Kumbh Mela status board","रामकुंड बंद","कुशावर्त बंद","कुंभ स्टेटस"] });
+  return pageMetadata({ locale: l, title: C.title[l], description: C.desc[l], path: PATH, absoluteTitle: true, robots: { index: false, follow: true }, image: "/images/og/kumbh-7.jpg", keywords: ["Kumbh status","Ramkund open or closed","Kushavarta closed","Nashik Kumbh closures","Kumbh Mela status board","रामकुंड बंद","कुशावर्त बंद","कुंभ स्टेटस"] });
 }
 
 const RELATED = [
