@@ -12,7 +12,7 @@ const PATH = C.path;
 
 export function generateMetadata({ params }: Params): Metadata {
   const l = params.locale;
-  return pageMetadata({ locale: l, title: C.title[l], description: C.desc[l], path: PATH, absoluteTitle: true, image: "/images/og/kumbh-7.jpg", keywords: ["Kumbh dates WhatsApp card","Nashik Kumbh 2027 share card","कुंभ तारखा WhatsApp","नाशिक कुंभ रिमाइंडर"] });
+  return pageMetadata({ locale: l, title: C.title[l], description: C.desc[l], path: PATH, absoluteTitle: true, robots: { index: false, follow: true }, image: "/images/og/kumbh-7.jpg", keywords: ["Kumbh dates WhatsApp card","Nashik Kumbh 2027 share card","कुंभ तारखा WhatsApp","नाशिक कुंभ रिमाइंडर"] });
 }
 
 const RELATED = [

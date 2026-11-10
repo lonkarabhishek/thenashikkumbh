@@ -39,12 +39,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...localized("/", "daily", 1),
     ...localized("/dates", "weekly", 0.95),
-    ...localized("/kumbh-countdown", "weekly", 0.85),
     ...localized("/map", "monthly", 0.7),
-    ...localized("/share-snan-card", "monthly", 0.6),
     ...localized("/family-card", "monthly", 0.7),
     ...localized("/plan-your-visit", "weekly", 0.8),
-    ...localized("/kumbh-status", "daily", 0.85),
     ...localized("/dhwajarohan-2026", "daily", 0.95),
     ...localized("/dhwajarohan-2026/live", "hourly", 0.95),
     ...localized("/nashik-30-31-october-disruptions", "daily", 0.9),
@@ -62,14 +59,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...localized("/credits", "monthly", 0.2),
     ...localized("/contact", "yearly", 0.3),
     ...localized("/blog", "daily", 0.85),
-    // Games and Kumbh Run are secondary interest surfaces, not part of the
-    // pilgrim's operational path, so they stay at low priority.
-    ...localized("/games", "monthly", 0.2),
-    ...localized("/kumbhrun", "monthly", 0.2),
+    // Not listed: /games, /kumbhrun, /kumbh-status, /kumbh-countdown,
+    // /share-snan-card and /businesses. They carry noindex (see each page's
+    // metadata) while AdSense reviews the site; restore them here together.
     englishOnly("/emergency", "monthly", 0.9),
     englishOnly("/policies", "monthly", 0.4),
     englishOnly("/changelog", "monthly", 0.3),
-    englishOnly("/businesses", "monthly", 0.3),
     ...trails.flatMap((trail) => localized(`/yatra/${trail.id}`, "monthly", 0.8, TRAILS_LASTMOD)),
     ...blogArticles.flatMap((article) =>
       localized(`/blog/${article.slug}`, "monthly", 0.7, article.updated ?? article.date)
