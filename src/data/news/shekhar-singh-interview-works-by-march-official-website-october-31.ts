@@ -99,7 +99,7 @@ PTI (via Lokmat Times) and UNI reported on 22 October that the Kumbh Mela Author
 - A **static version** with basic information will go live at the **31 October flag hoisting**.
 - It will start with the spiritual meaning of the Kumbh, its history, temples, ghats, akharas, and how to reach Nashik by air, rail and road.
 - **Parking, diversions, entry and exit points, shuttles and walking routes** will be added in phases, along with real-time updates.
-- **The web address has not been announced.** Be careful with sites that claim to be "official" before then. We will add the link here once it is live.
+- **The web address had not been announced when this story was published.** Be careful with sites that claim to be "official" before then. We will add the link here once it is live.
 - **Update (5 November 2026):** the official site is now live at [simhasthamahakumbh.maharashtra.gov.in](https://simhasthamahakumbh.maharashtra.gov.in), in Marathi, Hindi and English.
 
 ## Sadhugram link road goes to standing committee
@@ -170,7 +170,7 @@ PTI (लोकमत टाइम्स के ज़रिए) और UNI न�
 - बुनियादी जानकारी वाला **स्थिर संस्करण** **31 अक्टूबर के ध्वजारोहण** पर शुरू होगा।
 - शुरुआत में कुंभ का आध्यात्मिक महत्व, इतिहास, मंदिर, घाट, अखाड़े, और हवाई, रेल व सड़क से नाशिक पहुँचने की जानकारी होगी।
 - **पार्किंग, डायवर्ज़न, प्रवेश-निकास, शटल और पैदल मार्ग** की जानकारी रियल-टाइम अपडेट के साथ चरणों में जोड़ी जाएगी।
-- **वेबसाइट का पता अभी घोषित नहीं हुआ है।** तब तक ख़ुद को "आधिकारिक" बताने वाली साइटों से सावधान रहें। साइट शुरू होते ही हम लिंक यहाँ जोड़ देंगे।
+- **इस ख़बर के प्रकाशन के समय वेबसाइट का पता घोषित नहीं हुआ था।** तब तक ख़ुद को "आधिकारिक" बताने वाली साइटों से सावधान रहें। साइट शुरू होते ही हम लिंक यहाँ जोड़ देंगे।
 - **अपडेट (5 नवंबर 2026):** आधिकारिक साइट अब [simhasthamahakumbh.maharashtra.gov.in](https://simhasthamahakumbh.maharashtra.gov.in) पर मराठी, हिंदी और अंग्रेज़ी में चालू है।
 
 ## साधुग्राम लिंक रोड स्थायी समिति के पास
@@ -241,7 +241,7 @@ PTI (लोकमत टाइम्समार्फत) आणि UNI या�
 - प्राथमिक माहिती असलेली **स्थिर आवृत्ती** **३१ ऑक्टोबरच्या ध्वजारोहणाला** सुरू होईल.
 - सुरुवातीला कुंभमेळ्याचे आध्यात्मिक महत्त्व, इतिहास, मंदिरे, घाट, आखाडे, आणि विमान, रेल्वे व रस्त्याने नाशिकला कसे पोहोचायचे याची माहिती असेल.
 - **पार्किंग, वळवलेले मार्ग, प्रवेश-निर्गमन, शटल सेवा आणि पादचारी मार्ग** यांची माहिती थेट अपडेटसह टप्प्याटप्प्याने जोडली जाईल.
-- **संकेतस्थळाचा पत्ता अद्याप जाहीर झालेला नाही.** तोपर्यंत स्वतःला "अधिकृत" म्हणवणाऱ्या साइट्सपासून सावध राहा. संकेतस्थळ सुरू होताच आम्ही लिंक येथे देऊ.
+- **ही बातमी प्रसिद्ध झाली तेव्हा संकेतस्थळाचा पत्ता जाहीर झालेला नव्हता.** तोपर्यंत स्वतःला "अधिकृत" म्हणवणाऱ्या साइट्सपासून सावध राहा. संकेतस्थळ सुरू होताच आम्ही लिंक येथे देऊ.
 - **अपडेट (५ नोव्हेंबर २०२६):** अधिकृत संकेतस्थळ आता [simhasthamahakumbh.maharashtra.gov.in](https://simhasthamahakumbh.maharashtra.gov.in) येथे मराठी, हिंदी व इंग्रजीत सुरू आहे.
 
 ## साधुग्राम जोडरस्ता स्थायी समितीसमोर

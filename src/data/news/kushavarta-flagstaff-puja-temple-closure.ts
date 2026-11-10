@@ -9,7 +9,7 @@ export const article: BlogArticle = {
     mr: "कुशावर्तावर ध्वजस्तंभ पूजन झाले; त्र्यंबकेश्वर मंदिर बंद ठेवण्याचा निर्णय अद्याप नाही",
   },
   date: "2026-10-16",
-  updated: "2026-10-22",
+  updated: "2026-11-10",
   followUp: { slug: "trimbakeshwar-temple-open-on-31-october-3000-passes-kushavarta-works-by-october-25", date: "2026-10-22" },
   originallyAnnounced: "2026-10-15",
   source: "Times of India / PTI",
@@ -70,9 +70,9 @@ export const article: BlogArticle = {
 
 PTI reported that the new flagstaff is **31 feet tall** and carries a **Samudra Manthan** design.
 
-## Kushavarta is still closed
+## Kushavarta has reopened
 
-TOI says Kushavarta remains **closed to pilgrims** while work goes on. The kund is due to reopen around the 31 October ceremony. See [Kushavarta closed for renovation](/blog/kushavarta-tirth-closed-for-renovation-october-2026).
+TOI said on 15 October that Kushavarta was closed to pilgrims while work went on. Kushavarta has reopened: more than 10,000 devotees bathed there on 1 November 2026 (REPORTED, Pudhari, 2 November). We have not seen an official notice. [Kushavarta open again](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi). Earlier story: [Kushavarta closed for renovation](/blog/kushavarta-tirth-closed-for-renovation-october-2026).
 
 ## Will Trimbakeshwar temple close? Not decided
 
@@ -96,9 +96,9 @@ Related: [Trimbakeshwar Kumbh 2027 guide](/trimbakeshwar-kumbh-2027), [Amrit Sna
 
 पीटीआई के अनुसार नया ध्वजस्तंभ **31 फुट ऊँचा** है और उस पर **समुद्र मंथन** की थीम है।
 
-## कुशावर्त अभी बंद है
+## कुशावर्त फिर खुल गया है
 
-TOI के मुताबिक काम चलने की वजह से कुशावर्त अभी **श्रद्धालुओं के लिए बंद** है। 31 अक्टूबर के आसपास इसके फिर खुलने की उम्मीद है। देखें: [कुशावर्त जीर्णोद्धार के लिए बंद](/blog/kushavarta-tirth-closed-for-renovation-october-2026)।
+TOI ने 15 अक्टूबर को बताया था कि काम चलने की वजह से कुशावर्त श्रद्धालुओं के लिए बंद है। कुशावर्त फिर खुल गया है: 1 नवंबर 2026 को वहाँ 10,000 से ज़्यादा श्रद्धालुओं ने स्नान किया (रिपोर्ट, पुढारी, 2 नवंबर)। इस पर कोई आधिकारिक सूचना हमें नहीं मिली। [कुशावर्त फिर खुला](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi)। पुरानी ख़बर: [कुशावर्त जीर्णोद्धार के लिए बंद](/blog/kushavarta-tirth-closed-for-renovation-october-2026)।
 
 ## क्या त्र्यंबकेश्वर मंदिर बंद होगा? अभी तय नहीं
 
@@ -122,9 +122,9 @@ TOI के मुताबिक काम चलने की वजह से 
 
 पीटीआयनुसार नवा ध्वजस्तंभ **३१ फूट उंच** असून त्यावर **समुद्रमंथनाची** संकल्पना साकारली आहे.
 
-## कुशावर्त अजून बंदच
+## कुशावर्त पुन्हा खुले झाले
 
-कामे सुरू असल्याने कुशावर्त सध्या **भाविकांसाठी बंद** असल्याचे TOI ने म्हटले आहे. ३१ ऑक्टोबरच्या सोहळ्याच्या सुमारास ते पुन्हा खुले होणे अपेक्षित आहे. पाहा: [कुशावर्त नूतनीकरणासाठी बंद](/blog/kushavarta-tirth-closed-for-renovation-october-2026).
+कामे सुरू असल्याने कुशावर्त भाविकांसाठी बंद असल्याचे TOI ने १५ ऑक्टोबरला म्हटले होते. कुशावर्त पुन्हा खुले झाले आहे: १ नोव्हेंबर २०२६ रोजी तेथे १० हजारांहून अधिक भाविकांनी स्नान केले (वृत्त, पुढारी, २ नोव्हेंबर). याबाबत अधिकृत सूचना आमच्या पाहण्यात आलेली नाही. [कुशावर्त पुन्हा खुले](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi). जुनी बातमी: [कुशावर्त नूतनीकरणासाठी बंद](/blog/kushavarta-tirth-closed-for-renovation-october-2026).
 
 ## त्र्यंबकेश्वर मंदिर बंद राहणार का? अजून ठरलेले नाही
 

@@ -828,7 +828,7 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
       status: "reported",
     },
   ],
-  updated: "2026-11-06",
+  updated: "2026-11-10",
   crumb: {
     en: "Dhwajarohan 2026",
     hi: "ध्वजारोहण 2026",
@@ -1425,9 +1425,9 @@ Practical advice: do not drive into Panchavati. Park outside and walk, carry wat
         mr: "कुंभमेळ्याचे अधिकृत संकेतस्थळ ३१ ऑक्टोबरच्या ध्वजारोहणाला सुरू होणार",
       },
       body: {
-        en: "A basic, static version of NTKMA's official website is to be unveiled on 31 Oct; parking, diversions and shuttle details will be added in phases. The address has not been announced, so be wary of sites calling themselves official. Commissioner Shekhar Singh also told Prahaar most permanent works are due by about 1 March 2027. [Full story](/blog/kumbh-commissioner-shekhar-singh-works-by-1-march-5000-buses-official-website-october-31).",
-        hi: "NTKMA की आधिकारिक वेबसाइट का बुनियादी, स्थिर संस्करण 31 अक्टूबर को शुरू होगा; पार्किंग, डायवर्ज़न और शटल की जानकारी चरणों में जुड़ेगी। पता अभी घोषित नहीं हुआ, इसलिए ख़ुद को आधिकारिक बताने वाली साइटों से सावधान रहें। आयुक्त शेखर सिंह ने प्रहार से यह भी कहा कि ज़्यादातर स्थायी काम करीब 1 मार्च 2027 तक पूरे होंगे। [पूरी ख़बर](/blog/kumbh-commissioner-shekhar-singh-works-by-1-march-5000-buses-official-website-october-31)।",
-        mr: "NTKMA च्या अधिकृत संकेतस्थळाची प्राथमिक, स्थिर आवृत्ती ३१ ऑक्टोबरला सुरू होईल; पार्किंग, वळवलेले मार्ग व शटलची माहिती टप्प्याटप्प्याने जोडली जाईल. पत्ता अद्याप जाहीर नाही, त्यामुळे स्वतःला अधिकृत म्हणवणाऱ्या साइट्सपासून सावध राहा. बहुतेक कायमस्वरूपी कामे साधारण १ मार्च २०२७ पर्यंत पूर्ण होतील, असेही आयुक्त शेखर सिंह यांनी प्रहारला सांगितले. [सविस्तर बातमी](/blog/kumbh-commissioner-shekhar-singh-works-by-1-march-5000-buses-official-website-october-31).",
+        en: "A basic, static version of NTKMA's official website is to be unveiled on 31 Oct; parking, diversions and shuttle details will be added in phases. Update: the site is now live at simhasthamahakumbh.maharashtra.gov.in (CONFIRMED, ETV Bharat, 3 November); be wary of other sites calling themselves official. [Website is live](/blog/official-kumbh-website-live-simhasthamahakumbh-maharashtra-gov-in-1500-of-5500-cctv-cameras-trial-after-diwali). Commissioner Shekhar Singh also told Prahaar most permanent works are due by about 1 March 2027. [Full story](/blog/kumbh-commissioner-shekhar-singh-works-by-1-march-5000-buses-official-website-october-31).",
+        hi: "NTKMA की आधिकारिक वेबसाइट का बुनियादी, स्थिर संस्करण 31 अक्टूबर को शुरू होगा; पार्किंग, डायवर्ज़न और शटल की जानकारी चरणों में जुड़ेगी। अपडेट: साइट अब simhasthamahakumbh.maharashtra.gov.in पर चालू है (पुष्ट, ETV भारत, 3 नवंबर); ख़ुद को आधिकारिक बताने वाली दूसरी साइटों से सावधान रहें। [वेबसाइट चालू है](/blog/official-kumbh-website-live-simhasthamahakumbh-maharashtra-gov-in-1500-of-5500-cctv-cameras-trial-after-diwali)। आयुक्त शेखर सिंह ने प्रहार से यह भी कहा कि ज़्यादातर स्थायी काम करीब 1 मार्च 2027 तक पूरे होंगे। [पूरी ख़बर](/blog/kumbh-commissioner-shekhar-singh-works-by-1-march-5000-buses-official-website-october-31)।",
+        mr: "NTKMA च्या अधिकृत संकेतस्थळाची प्राथमिक, स्थिर आवृत्ती ३१ ऑक्टोबरला सुरू होईल; पार्किंग, वळवलेले मार्ग व शटलची माहिती टप्प्याटप्प्याने जोडली जाईल. अपडेट: संकेतस्थळ आता simhasthamahakumbh.maharashtra.gov.in वर सुरू आहे (अधिकृत, ईटीव्ही भारत, ३ नोव्हेंबर); स्वतःला अधिकृत म्हणवणाऱ्या इतर साइट्सपासून सावध राहा. [संकेतस्थळ सुरू](/blog/official-kumbh-website-live-simhasthamahakumbh-maharashtra-gov-in-1500-of-5500-cctv-cameras-trial-after-diwali). बहुतेक कायमस्वरूपी कामे साधारण १ मार्च २०२७ पर्यंत पूर्ण होतील, असेही आयुक्त शेखर सिंह यांनी प्रहारला सांगितले. [सविस्तर बातमी](/blog/kumbh-commissioner-shekhar-singh-works-by-1-march-5000-buses-official-website-october-31).",
       },
       status: "reported",
       source: "PTI (Lokmat Times), UNI, Prahaar",

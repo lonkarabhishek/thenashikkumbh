@@ -282,7 +282,7 @@ On Amrit Snan days, private vehicles will stop at outer parking hubs, and the Tr
 
 **Rail.** Five stations around Nashik are being developed, and a circuit train for three Jyotirlingas (Trimbakeshwar, Grishneshwar, Omkareshwar) is planned, according to PIB. The special-train timetable has not been published yet.
 
-**Helicopter.** A heliport built by the Kumbh Mela Authority at Trimbakeshwar can take three helicopters at once, and private operators could start flights as early as 2 November, Collector Ayush Prasad said (Times of India, 22 October). No operator, fare or booking link has been announced, so do not pay anyone for a "helicopter darshan package" yet. [Trimbakeshwar heliport report](/blog/trimbakeshwar-heliport-ready-private-helicopter-flights-may-start-2-november-mumbai-pune-surat)
+**Helicopter.** A heliport built by the Kumbh Mela Authority at Trimbakeshwar can take three helicopters at once, and private operators could start flights from 2 November at the earliest, Collector Ayush Prasad said (Times of India, 22 October, REPORTED). As of 10 November we have found no report that flights have started. No operator, fare or booking link has been announced, so do not pay anyone for a "helicopter darshan package" yet. [Trimbakeshwar heliport report](/blog/trimbakeshwar-heliport-ready-private-helicopter-flights-may-start-2-november-mumbai-pune-surat)
 
 More travel details are on our [how to reach page](/how-to-reach).`,
         hi: `जून 2026 में शेखर सिंह और MSRTC अधिकारियों द्वारा आधिकारिक रूप से बताई गई NTKMA परिवहन योजना के अनुसार MSRTC 4,500 बसें चलाएगा। त्र्यंबक के लिए इसमें शामिल हैं:
@@ -297,7 +297,7 @@ More travel details are on our [how to reach page](/how-to-reach).`,
 
 **रेल।** PIB के अनुसार नाशिक के आसपास पांच स्टेशन विकसित किए जा रहे हैं और तीन ज्योतिर्लिंगों (त्र्यंबकेश्वर, घृष्णेश्वर, ओंकारेश्वर) के लिए सर्किट ट्रेन की योजना है। स्पेशल ट्रेनों का टाइमटेबल अभी जारी नहीं हुआ है।
 
-**हेलिकॉप्टर।** कुंभ मेला प्राधिकरण ने त्र्यंबकेश्वर में हेलिपोर्ट बनाया है, जहां एक साथ तीन हेलिकॉप्टर उतर सकते हैं। जिलाधिकारी आयुष प्रसाद के अनुसार निजी कंपनियों की उड़ानें 2 नवंबर से शुरू हो सकती हैं (Times of India, 22 अक्टूबर)। अभी न कंपनी, न किराया, न बुकिंग लिंक घोषित हुआ है, इसलिए किसी "हेलिकॉप्टर दर्शन पैकेज" के लिए पैसे न दें। [त्र्यंबकेश्वर हेलिपोर्ट की खबर](/blog/trimbakeshwar-heliport-ready-private-helicopter-flights-may-start-2-november-mumbai-pune-surat)
+**हेलिकॉप्टर।** कुंभ मेला प्राधिकरण ने त्र्यंबकेश्वर में हेलिपोर्ट बनाया है, जहां एक साथ तीन हेलिकॉप्टर उतर सकते हैं। जिलाधिकारी आयुष प्रसाद के अनुसार निजी कंपनियों की उड़ानें 2 नवंबर से पहले शुरू नहीं हो सकतीं (Times of India, 22 अक्टूबर, रिपोर्ट)। 10 नवंबर तक हमें उड़ानें शुरू होने की कोई रिपोर्ट नहीं मिली। अभी न कंपनी, न किराया, न बुकिंग लिंक घोषित हुआ है, इसलिए किसी "हेलिकॉप्टर दर्शन पैकेज" के लिए पैसे न दें। [त्र्यंबकेश्वर हेलिपोर्ट की खबर](/blog/trimbakeshwar-heliport-ready-private-helicopter-flights-may-start-2-november-mumbai-pune-surat)
 
 यात्रा की और जानकारी हमारे [कैसे पहुंचें पेज](/how-to-reach) पर है।`,
         mr: `शेखर सिंह आणि एसटी (MSRTC) अधिकाऱ्यांनी जून २०२६ मध्ये अधिकृतपणे मांडलेल्या NTKMA वाहतूक आराखड्यानुसार एसटी महामंडळ ४,५०० बस चालवणार आहे. त्यापैकी त्र्यंबकसाठी:
@@ -312,7 +312,7 @@ More travel details are on our [how to reach page](/how-to-reach).`,
 
 **रेल्वे.** PIB नुसार नाशिक परिसरातील पाच स्थानके विकसित केली जात आहेत आणि तीन ज्योतिर्लिंगांसाठी (त्र्यंबकेश्वर, घृष्णेश्वर, ओंकारेश्वर) सर्किट रेल्वेचे नियोजन आहे. विशेष गाड्यांचे वेळापत्रक अजून जाहीर झालेले नाही.
 
-**हेलिकॉप्टर.** कुंभमेळा प्राधिकरणाने त्र्यंबकेश्वरमध्ये हेलिपोर्ट उभारले असून तेथे एकाच वेळी तीन हेलिकॉप्टर उतरू शकतात. खासगी कंपन्यांची उड्डाणे २ नोव्हेंबरपासून सुरू होऊ शकतात, असे जिल्हाधिकारी आयुष प्रसाद यांनी सांगितले (Times of India, २२ ऑक्टोबर). कंपनी, भाडे किंवा बुकिंग लिंक अजून जाहीर झालेली नाही, त्यामुळे कोणत्याही "हेलिकॉप्टर दर्शन पॅकेज"साठी पैसे भरू नका. [त्र्यंबकेश्वर हेलिपोर्टची बातमी](/blog/trimbakeshwar-heliport-ready-private-helicopter-flights-may-start-2-november-mumbai-pune-surat)
+**हेलिकॉप्टर.** कुंभमेळा प्राधिकरणाने त्र्यंबकेश्वरमध्ये हेलिपोर्ट उभारले असून तेथे एकाच वेळी तीन हेलिकॉप्टर उतरू शकतात. खासगी कंपन्यांची उड्डाणे २ नोव्हेंबरपूर्वी सुरू होऊ शकत नाहीत, असे जिल्हाधिकारी आयुष प्रसाद यांनी सांगितले (Times of India, २२ ऑक्टोबर, वृत्त). १० नोव्हेंबरपर्यंत उड्डाणे सुरू झाल्याचे वृत्त आम्हाला आढळलेले नाही. कंपनी, भाडे किंवा बुकिंग लिंक अजून जाहीर झालेली नाही, त्यामुळे कोणत्याही "हेलिकॉप्टर दर्शन पॅकेज"साठी पैसे भरू नका. [त्र्यंबकेश्वर हेलिपोर्टची बातमी](/blog/trimbakeshwar-heliport-ready-private-helicopter-flights-may-start-2-november-mumbai-pune-surat)
 
 प्रवासाची अधिक माहिती आमच्या [कसे पोहोचाल पानावर](/how-to-reach) आहे.`,
       },
@@ -606,7 +606,7 @@ No official pilgrim e-pass or registration has been announced. See our [accommod
       status: "confirmed",
     },
   ],
-  updated: "2026-11-05",
+  updated: "2026-11-10",
   crumb: {
     en: "Trimbakeshwar Kumbh 2027",
     hi: "त्र्यंबकेश्वर कुंभ 2027",

@@ -150,7 +150,7 @@ This page is for people who live and work in Nashik and Trimbak, not only for pi
 
 **Trimbakeshwar temple and Kushavarta: closed to outside devotees (REPORTED, citing a Collector's press release; PTI and Hindusthan Samachar, 29 October):** from **12 noon on Friday 30 October to 6 PM on Saturday 31 October**, or until the programme ends, only residents of Trimbakeshwar town and holders of an official darshan pass from the district administration or the temple trust are let in. This replaces the 21 October report that the temple would stay open on 31 October with 3,000 passes ([that earlier story](${TEMPLE})). How outside devotees can get a pass, and when normal darshan resumes, have not been announced. [Details](${TEMPLE_CLOSED})
 
-**Kushavarta's renovation:** the kund has been closed to pilgrims since 30 September for renovation, and the renovated kund is to be inaugurated on 31 October. Collector Ayush Prasad said on record that the renovation closure runs from 30 September to 30 October (CONFIRMED, Times of India, 29 September), while Lokmat Times reported on 4 October that it "will reopen on October 31" (REPORTED). With the new order above, no bath by outside devotees is possible before 6 PM on 31 October, and nothing about a public bath after that has been announced. [Kushavarta closure story](${KUSHAVARTA})`,
+**Kushavarta, update of 10 November:** Kushavarta has reopened: more than 10,000 devotees bathed there on 1 November 2026 (REPORTED, Pudhari, 2 November). We have not seen an official notice. [Kushavarta open again](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi).`,
         hi: `**31 अक्टूबर को रामकुंड में आम लोगों का सीधा प्रवेश नहीं (रिपोर्ट, नवभारत, 28 अक्टूबर):** दोपहर 12:02 बजे के ध्वजारोहण और शाम की गोदा आरती के दौरान रामकुंड परिसर में सिर्फ़ VVIP और विशेष अतिथि जाएँगे। नवभारत के अनुसार करीब 6,500 आरती प्रतिभागी और उनके परिवार तथा करीब 30,000 विशेष आमंत्रित होंगे।
 
 - **अनुमानित भीड़:** पुलिस को गोदावरी तट पर **80,000 से 1 लाख** लोगों की उम्मीद है, जबकि गोदाघाट की क्षमता करीब **30,000 से 35,000** है (नवभारत)।
@@ -165,7 +165,7 @@ This page is for people who live and work in Nashik and Trimbak, not only for pi
 
 **त्र्यंबकेश्वर मंदिर और कुशावर्त: बाहर के श्रद्धालुओं के लिए बंद (रिपोर्ट, कलेक्टर की प्रेस विज्ञप्ति के हवाले से; PTI और हिंदुस्थान समाचार, 29 अक्टूबर):** **शुक्रवार 30 अक्टूबर दोपहर 12 बजे से शनिवार 31 अक्टूबर शाम 6 बजे तक**, या कार्यक्रम ख़त्म होने तक, सिर्फ़ त्र्यंबकेश्वर शहर के निवासी और ज़िला प्रशासन या मंदिर ट्रस्ट के आधिकारिक दर्शन पासधारक ही अंदर जा सकेंगे। इससे 21 अक्टूबर की वह ख़बर बदल गई है कि मंदिर 31 अक्टूबर को 3,000 पासों के साथ खुला रहेगा ([वह पुरानी ख़बर](${TEMPLE}))। बाहर के श्रद्धालु पास कैसे लें और सामान्य दर्शन कब शुरू होंगे, यह घोषित नहीं हुआ। [विवरण](${TEMPLE_CLOSED})
 
-**कुशावर्त का नवीनीकरण:** कुंड 30 सितंबर से नवीनीकरण के लिए श्रद्धालुओं के लिए बंद है, और नए रूप में कुंड का उद्घाटन 31 अक्टूबर को होना है। कलेक्टर आयुष प्रसाद ने आधिकारिक तौर पर कहा कि नवीनीकरण की बंदी 30 सितंबर से 30 अक्टूबर तक है (पुष्ट, टाइम्स ऑफ़ इंडिया, 29 सितंबर), जबकि लोकमत टाइम्स ने 4 अक्टूबर को लिखा कि यह "31 अक्टूबर को खुलेगा" (रिपोर्ट)। ऊपर के नए आदेश के साथ, 31 अक्टूबर शाम 6 बजे से पहले बाहर के श्रद्धालुओं का स्नान संभव नहीं है, और उसके बाद आम स्नान की कोई घोषणा नहीं हुई। [कुशावर्त बंदी की ख़बर](${KUSHAVARTA})`,
+**कुशावर्त, 10 नवंबर का अपडेट:** कुशावर्त फिर खुल गया है: 1 नवंबर 2026 को वहाँ 10,000 से ज़्यादा श्रद्धालुओं ने स्नान किया (रिपोर्ट, पुढारी, 2 नवंबर)। इस पर कोई आधिकारिक सूचना हमें नहीं मिली। [कुशावर्त फिर खुला](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi)`,
         mr: `**३१ ऑक्टोबरला रामकुंडात सामान्यांना थेट प्रवेश नाही (वृत्त, नवभारत, २८ ऑक्टोबर):** दुपारी १२.०२ च्या ध्वजारोहणाच्या आणि सायंकाळच्या गोदा आरतीच्या वेळी रामकुंड परिसरात फक्त अतिमहत्त्वाच्या व्यक्ती आणि विशेष निमंत्रित असतील. नवभारतनुसार सुमारे ६,५०० आरती सहभागी व त्यांचे कुटुंबीय आणि सुमारे ३०,००० विशेष निमंत्रित.
 
 - **अपेक्षित गर्दी:** पोलिसांना गोदाकाठी **८०,००० ते १ लाख** लोकांचा अंदाज आहे, तर गोदाघाटाची क्षमता सुमारे **३०,००० ते ३५,०००** आहे (नवभारत).
@@ -180,7 +180,7 @@ This page is for people who live and work in Nashik and Trimbak, not only for pi
 
 **त्र्यंबकेश्वर मंदिर आणि कुशावर्त: बाहेरच्या भाविकांसाठी बंद (वृत्त, जिल्हाधिकाऱ्यांच्या प्रसिद्धिपत्रकाचा हवाला; PTI आणि हिंदुस्थान समाचार, २९ ऑक्टोबर):** **शुक्रवार ३० ऑक्टोबर दुपारी १२ ते शनिवार ३१ ऑक्टोबर सायंकाळी ६ पर्यंत**, किंवा कार्यक्रम संपेपर्यंत, फक्त त्र्यंबकेश्वर शहरातील रहिवासी आणि जिल्हा प्रशासन किंवा देवस्थान ट्रस्टच्या अधिकृत दर्शन पासधारकांनाच आत सोडले जाईल. यामुळे मंदिर ३१ ऑक्टोबरला ३,००० पासांसह खुले राहील हे २१ ऑक्टोबरचे वृत्त बदलले आहे ([ती आधीची बातमी](${TEMPLE})). बाहेरच्या भाविकांनी पास कसा घ्यावा आणि नेहमीचे दर्शन कधी सुरू होईल, हे जाहीर झालेले नाही. [तपशील](${TEMPLE_CLOSED})
 
-**कुशावर्ताचे नूतनीकरण:** कुंड ३० सप्टेंबरपासून नूतनीकरणासाठी भाविकांना बंद आहे, आणि नव्या रूपातील कुंडाचे लोकार्पण ३१ ऑक्टोबरला होणार आहे. जिल्हाधिकारी आयुष प्रसाद यांनी नूतनीकरणाची बंदी ३० सप्टेंबर ते ३० ऑक्टोबर असल्याचे जाहीरपणे सांगितले (अधिकृत, टाइम्स ऑफ इंडिया, २९ सप्टेंबर), तर लोकमत टाइम्सने ४ ऑक्टोबरला ते "३१ ऑक्टोबरला खुले होईल" असे लिहिले (वृत्त). वरील नव्या आदेशामुळे ३१ ऑक्टोबर सायंकाळी ६ पूर्वी बाहेरच्या भाविकांचे स्नान शक्य नाही, आणि त्यानंतरच्या सार्वजनिक स्नानाबाबत काहीही जाहीर झालेले नाही. [कुशावर्त बंदीची बातमी](${KUSHAVARTA})`,
+**कुशावर्त, १० नोव्हेंबरचे अपडेट:** कुशावर्त पुन्हा खुले झाले आहे: १ नोव्हेंबर २०२६ रोजी तेथे १० हजारांहून अधिक भाविकांनी स्नान केले (वृत्त, पुढारी, २ नोव्हेंबर). याबाबत अधिकृत सूचना आमच्या पाहण्यात आलेली नाही. [कुशावर्त पुन्हा खुले](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi)`,
       },
     },
     {
@@ -266,7 +266,7 @@ Photographers, YouTubers and wedding videographers: do not fly anywhere in the c
 - **The final programme:** it still needs the President's office's approval, and Rashtrapati Bhavan has not published her itinerary (Navbharat, 28 October). Timings at Ramkund and Kushavarta can still change.
 - **The detour distance:** only the Times of India gives 61 km; Prahaar and Sakal give none.
 - **The drone order's exact window:** Prahaar quotes 12:01 AM on 29 October to midnight on 31 October for the city; we have not seen the order.
-- **Kushavarta's reopening:** 30 October per the Collector's statement, 31 October per Lokmat Times, and no word on a public bath; the new order keeps outside devotees out until 6 PM on 31 October in any case.
+- **Kushavarta's reopening (settled):** Kushavarta has reopened: more than 10,000 devotees bathed there on 1 November 2026 (REPORTED, Pudhari, 2 November). We have not seen an official notice. [Kushavarta open again](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi).
 - **Road or helicopter for the President:** Sakal and Sarkarnama report the helicopter ban as decided; Pudhari and Maharashtra Mirror call the road route a likely change.
 - **How many schools shut:** 35 in Sakal's report of the first order, 71 in later reports.
 - **How many people at Ramkund:** Lokshahi (29 October) expects 15,000 to 20,000; the police estimate reported on 28 October was 80,000 to 1 lakh.
@@ -280,7 +280,7 @@ When any of these is settled we will post it on the [live page](${LIVE}) first a
 - **अंतिम कार्यक्रम:** राष्ट्रपति कार्यालय की मंज़ूरी बाकी है, और राष्ट्रपति भवन ने उनका कार्यक्रम प्रकाशित नहीं किया (नवभारत, 28 अक्टूबर)। रामकुंड और कुशावर्त के समय अभी बदल सकते हैं।
 - **वैकल्पिक मार्ग की दूरी:** सिर्फ़ टाइम्स ऑफ़ इंडिया 61 किमी बताता है; प्रहार और सकाळ कोई दूरी नहीं देते।
 - **ड्रोन आदेश की सही अवधि:** शहर के लिए प्रहार 29 अक्टूबर रात 12:01 से 31 अक्टूबर आधी रात बताता है; हमने आदेश नहीं देखा।
-- **कुशावर्त का दोबारा खुलना:** कलेक्टर के बयान के अनुसार 30 अक्टूबर, लोकमत टाइम्स के अनुसार 31 अक्टूबर, और आम स्नान पर कोई बात नहीं; नया आदेश वैसे भी बाहर के श्रद्धालुओं को 31 अक्टूबर शाम 6 बजे तक बाहर रखता है।
+- **कुशावर्त का दोबारा खुलना (तय हो गया):** कुशावर्त फिर खुल गया है: 1 नवंबर 2026 को वहाँ 10,000 से ज़्यादा श्रद्धालुओं ने स्नान किया (रिपोर्ट, पुढारी, 2 नवंबर)। इस पर कोई आधिकारिक सूचना हमें नहीं मिली। [कुशावर्त फिर खुला](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi)
 - **राष्ट्रपति सड़क से या हेलीकॉप्टर से:** सकाळ और सरकारनामा हेलीकॉप्टर पर रोक को तय बताते हैं; पुढारी और महाराष्ट्र मिरर सड़क मार्ग को संभावित बदलाव कहते हैं।
 - **कितने स्कूल बंद:** पहले आदेश पर सकाळ की रिपोर्ट में 35, बाद की रिपोर्टों में 71।
 - **रामकुंड पर कितने लोग:** लोकशाही (29 अक्टूबर) 15,000 से 20,000 की उम्मीद करता है; 28 अक्टूबर को रिपोर्ट किया गया पुलिस अनुमान 80,000 से 1 लाख था।
@@ -294,7 +294,7 @@ When any of these is settled we will post it on the [live page](${LIVE}) first a
 - **अंतिम कार्यक्रम:** राष्ट्रपती कार्यालयाची मंजुरी बाकी आहे, आणि राष्ट्रपती भवनाने दौरा प्रसिद्ध केलेला नाही (नवभारत, २८ ऑक्टोबर). रामकुंड आणि कुशावर्ताच्या वेळा अजून बदलू शकतात.
 - **पर्यायी मार्गाचे अंतर:** फक्त टाइम्स ऑफ इंडिया ६१ किमी सांगतो; प्रहार आणि सकाळ अंतर देत नाहीत.
 - **ड्रोन आदेशाचा नेमका कालावधी:** शहरासाठी प्रहार २९ ऑक्टोबर रात्री १२.०१ ते ३१ ऑक्टोबर मध्यरात्र सांगतो; आम्ही आदेश पाहिलेला नाही.
-- **कुशावर्त पुन्हा खुले होणे:** जिल्हाधिकाऱ्यांच्या विधानानुसार ३० ऑक्टोबर, लोकमत टाइम्सनुसार ३१ ऑक्टोबर, आणि सार्वजनिक स्नानाबाबत काहीच नाही; नवा आदेश कसाही बाहेरच्या भाविकांना ३१ ऑक्टोबर सायंकाळी ६ पर्यंत बाहेर ठेवतो.
+- **कुशावर्त पुन्हा खुले होणे (निश्चित):** कुशावर्त पुन्हा खुले झाले आहे: १ नोव्हेंबर २०२६ रोजी तेथे १० हजारांहून अधिक भाविकांनी स्नान केले (वृत्त, पुढारी, २ नोव्हेंबर). याबाबत अधिकृत सूचना आमच्या पाहण्यात आलेली नाही. [कुशावर्त पुन्हा खुले](/blog/kushavarta-open-again-over-10000-devotees-bathe-1-november-new-ghats-near-prayag-tirth-pegalwadi)
 - **राष्ट्रपती रस्त्याने की हेलिकॉप्टरने:** सकाळ आणि सरकारनामा हेलिकॉप्टर बंदी ठरल्याचे सांगतात; पुढारी आणि महाराष्ट्र मिरर रस्ता मार्गाला संभाव्य बदल म्हणतात.
 - **किती शाळा बंद:** पहिल्या आदेशावरील सकाळच्या वृत्तात ३५, नंतरच्या वृत्तांत ७१.
 - **रामकुंडावर किती लोक:** लोकशाही (२९ ऑक्टोबर) १५,००० ते २०,००० अपेक्षित म्हणतो; २८ ऑक्टोबरला आलेला पोलिसांचा अंदाज ८०,००० ते १ लाख होता.
@@ -423,9 +423,9 @@ When any of these is settled we will post it on the [live page](${LIVE}) first a
         mr: "३१ ऑक्टोबरला त्र्यंबकेश्वरचे कुशावर्त स्नानासाठी खुले आहे का?",
       },
       a: {
-        en: "No, not for outside devotees. A Collector's order reported by PTI and Hindusthan Samachar (29 October) closes Trimbakeshwar temple and Kushavarta to devotees from outside the town from 12 noon on 30 October to 6 PM on 31 October, or until the programme ends; only Trimbak residents and official darshan-pass holders get in. Kushavarta has also been closed since 30 September for renovation, with the renovated kund to be inaugurated on 31 October. No public bath after 6 PM on 31 October has been announced, and the Nashik to Trimbak road is closed until 8 PM that day.",
-        hi: "नहीं, बाहर के श्रद्धालुओं के लिए नहीं। PTI और हिंदुस्थान समाचार (29 अक्टूबर) में छपे कलेक्टर के आदेश से त्र्यंबकेश्वर मंदिर और कुशावर्त 30 अक्टूबर दोपहर 12 बजे से 31 अक्टूबर शाम 6 बजे तक, या कार्यक्रम ख़त्म होने तक, बाहर के श्रद्धालुओं के लिए बंद हैं; सिर्फ़ त्र्यंबक के निवासी और आधिकारिक दर्शन पासधारक अंदर जा सकेंगे। कुशावर्त 30 सितंबर से नवीनीकरण के लिए भी बंद है, और नए रूप में कुंड का उद्घाटन 31 अक्टूबर को होना है। 31 अक्टूबर शाम 6 बजे के बाद आम स्नान की कोई घोषणा नहीं हुई, और नाशिक-त्र्यंबक रोड उस दिन रात 8 बजे तक बंद है।",
-        mr: "नाही, बाहेरच्या भाविकांसाठी नाही. PTI आणि हिंदुस्थान समाचार (२९ ऑक्टोबर) यांनी दिलेल्या जिल्हाधिकाऱ्यांच्या आदेशाने त्र्यंबकेश्वर मंदिर आणि कुशावर्त ३० ऑक्टोबर दुपारी १२ ते ३१ ऑक्टोबर सायंकाळी ६ पर्यंत, किंवा कार्यक्रम संपेपर्यंत, बाहेरच्या भाविकांसाठी बंद आहेत; फक्त त्र्यंबकचे रहिवासी आणि अधिकृत दर्शन पासधारकच आत जाऊ शकतील. कुशावर्त ३० सप्टेंबरपासून नूतनीकरणासाठीही बंद आहे, आणि नव्या रूपातील कुंडाचे लोकार्पण ३१ ऑक्टोबरला होणार आहे. ३१ ऑक्टोबर सायंकाळी ६ नंतर सार्वजनिक स्नानाची घोषणा झालेली नाही, आणि नाशिक-त्र्यंबक रस्ता त्या दिवशी रात्री ८ पर्यंत बंद आहे.",
+        en: "No, not for outside devotees. A Collector's order reported by PTI and Hindusthan Samachar (29 October) closes Trimbakeshwar temple and Kushavarta to devotees from outside the town from 12 noon on 30 October to 6 PM on 31 October, or until the programme ends; only Trimbak residents and official darshan-pass holders get in. Update: Kushavarta has reopened, and more than 10,000 devotees bathed there on 1 November 2026 (REPORTED, Pudhari, 2 November). The Nashik to Trimbak road was closed until 8 PM on 31 October.",
+        hi: "नहीं, बाहर के श्रद्धालुओं के लिए नहीं। PTI और हिंदुस्थान समाचार (29 अक्टूबर) में छपे कलेक्टर के आदेश से त्र्यंबकेश्वर मंदिर और कुशावर्त 30 अक्टूबर दोपहर 12 बजे से 31 अक्टूबर शाम 6 बजे तक, या कार्यक्रम ख़त्म होने तक, बाहर के श्रद्धालुओं के लिए बंद हैं; सिर्फ़ त्र्यंबक के निवासी और आधिकारिक दर्शन पासधारक अंदर जा सकेंगे। अपडेट: कुशावर्त फिर खुल गया है, और 1 नवंबर 2026 को वहाँ 10,000 से ज़्यादा श्रद्धालुओं ने स्नान किया (रिपोर्ट, पुढारी, 2 नवंबर)। नाशिक-त्र्यंबक रोड 31 अक्टूबर को रात 8 बजे तक बंद था।",
+        mr: "नाही, बाहेरच्या भाविकांसाठी नाही. PTI आणि हिंदुस्थान समाचार (२९ ऑक्टोबर) यांनी दिलेल्या जिल्हाधिकाऱ्यांच्या आदेशाने त्र्यंबकेश्वर मंदिर आणि कुशावर्त ३० ऑक्टोबर दुपारी १२ ते ३१ ऑक्टोबर सायंकाळी ६ पर्यंत, किंवा कार्यक्रम संपेपर्यंत, बाहेरच्या भाविकांसाठी बंद आहेत; फक्त त्र्यंबकचे रहिवासी आणि अधिकृत दर्शन पासधारकच आत जाऊ शकतील. अपडेट: कुशावर्त पुन्हा खुले झाले आहे, आणि १ नोव्हेंबर २०२६ रोजी तेथे १० हजारांहून अधिक भाविकांनी स्नान केले (वृत्त, पुढारी, २ नोव्हेंबर). नाशिक-त्र्यंबक रस्ता ३१ ऑक्टोबरला रात्री ८ पर्यंत बंद होता.",
       },
     },
   ],
@@ -620,7 +620,7 @@ When any of these is settled we will post it on the [live page](${LIVE}) first a
       url: "https://www.lokmattimes.com/nashik/gram-pradakshina-on-october-30-1-lakh-devotees-expected/",
     },
   ],
-  updated: "2026-10-30",
+  updated: "2026-11-10",
   crumb: {
     en: "Nashik 30-31 October disruptions",
     hi: "नाशिक 30-31 अक्टूबर: बंदी",
