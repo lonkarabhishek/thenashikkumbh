@@ -10,6 +10,7 @@ export const article: BlogArticle = {
   },
   date: "2026-10-06",
   originallyAnnounced: "2026-09-17",
+  followUp: { slug: "nashik-ring-road-gawalwadi-alternative-route-inspection-25-percent-compensation-proposal", date: "2026-11-11" },
   source: "Times of India",
   sources: [
     {
