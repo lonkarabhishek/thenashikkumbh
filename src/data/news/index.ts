@@ -94,9 +94,12 @@ import { article as waterDemand8280 } from "./nmc-revises-water-demand-8280-mcft
 import { article as akhadaFund7Crore } from "./akhada-development-fund-raised-to-7-crore-each-works-by-july-2027";
 import { article as dwarkaDattaWidening } from "./dwarka-datta-mandir-highway-widening-10-lanes-after-diwali";
 import { article as templeThreatEmails } from "./threat-emails-trimbakeshwar-saptashrungi-kalaram-temples-security-tightened";
+import { article as ringRoadGawalwadi } from "./nashik-ring-road-gawalwadi-alternative-route-inspection-25-percent-compensation-proposal";
 
-/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 and 31 October and 1, 2, 5, 6, 7, 8, 9 and 10 November 2026 briefings, one file each. */
+/** News posts published from the 6, 7, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 and 31 October and 1, 2, 5, 6, 7, 8, 9, 10 and 11 November 2026 briefings, one file each. */
 export const latestNews: BlogArticle[] = [
+  // 11 November 2026
+  ringRoadGawalwadi,
   // 10 November 2026
   templeThreatEmails,
   // 9 November 2026
