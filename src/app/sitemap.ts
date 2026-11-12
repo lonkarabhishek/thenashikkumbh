@@ -41,6 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...localized("/dates", "weekly", 0.95),
     ...localized("/map", "monthly", 0.7),
     ...localized("/family-card", "monthly", 0.7),
+    ...localized("/day-picker", "weekly", 0.8),
     ...localized("/plan-your-visit", "weekly", 0.8),
     ...localized("/dhwajarohan-2026", "daily", 0.95),
     ...localized("/dhwajarohan-2026/live", "hourly", 0.95),

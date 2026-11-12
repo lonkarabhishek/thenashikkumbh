@@ -44,6 +44,7 @@ const GROUPS = [
     links: [
       { href: "/about", label: translations.nav.about },
       { href: "/dates", label: translations.nav.dates },
+      { href: "/day-picker", label: { en: "Which day to go", hi: "किस दिन जाएँ", mr: "कोणत्या दिवशी जायचे" } },
       { href: "/parva-snan-calendar", label: { en: "Parva Snan calendar", hi: "पर्व स्नान कैलेंडर", mr: "पर्व स्नान दिनदर्शिका" } },
       { href: "/kumbh-countdown", label: { en: "Kumbh countdown", hi: "कुंभ काउंटडाउन", mr: "कुंभ काउंटडाउन" } },
       { href: "/map", label: { en: "Kumbh map", hi: "कुंभ नक्शा", mr: "कुंभ नकाशा" } },

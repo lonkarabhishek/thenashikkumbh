@@ -121,6 +121,7 @@ const HOME_COPY = {
     mr: "आपत्कालीन क्रमांक इंटरनेटशिवाय चालतात: ११२ पोलीस, १०८ रुग्णवाहिका, १०१ अग्निशमन. खोलीतून निघण्यापूर्वी जतन करा.",
   },
   familyCard: { en: "Khoya-Paya card", hi: "खोया-पाया कार्ड", mr: "खोया-पाया कार्ड" },
+  whichDay: { en: "Which day should I go?", hi: "किस दिन जाएँ?", mr: "कोणत्या दिवशी जायचे?" },
 
   akhadaKicker: { en: "The orders", hi: "अखाड़े", mr: "आखाडे" },
   akhadaTitle: {
@@ -353,13 +354,22 @@ export default function HomePage({ news, glimpses, live }: { news: LatestItem[];
         </ol>
 
         <Reveal delay={120}>
-          <Link
-            href="/dates"
-            className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-saffron-700 hover:text-saffron-800"
-          >
-            {t(translations.home.viewAllDates)}
-            <ArrowRight className="h-4 w-4" />
-          </Link>
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
+            <Link
+              href="/dates"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-saffron-700 hover:text-saffron-800"
+            >
+              {t(translations.home.viewAllDates)}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/day-picker"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-saffron-700 hover:text-saffron-800"
+            >
+              {t(HOME_COPY.whichDay)}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </Reveal>
       </section>
 
